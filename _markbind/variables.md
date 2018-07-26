@@ -1,12 +1,12 @@
-<span id="module">CS2103</span>
+<span id="module">CS2113</span>
 
-<span id="module_pair">CS2103/T</span>
+<span id="module_pair">CS2113/T</span>
 
-<span id="module_name">Software Engineering</span>
+<span id="module_name">Software Engineering & Object-Oriented Programming</span>
 
-<span id="semester">AY1718S2</span>
+<span id="semester">AY1819S1</span>
 
-<span id="period">Aug '18</span>
+<span id="period">2018</span>
 
 <span id="module_org">https://github.com/nus-{{ module | lower }}-{{ semester }}</span>
 
