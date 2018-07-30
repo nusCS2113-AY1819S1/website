@@ -13,11 +13,11 @@
     <link rel="stylesheet" href="..\..\markbind\css\markbind.css">
     <link rel="stylesheet" href="..\..\markbind\css\site-nav.css">
     
-    <link rel="icon" href="/website-base/favicon.ico">
+    <link rel="icon" href="/website/favicon.ico">
 </head>
 <body>
 <div id="app" class="container-fluid">
-    <link rel="stylesheet" href="/website-base/book/css/textbook.css">
+    <link rel="stylesheet" href="/website/book/css/textbook.css">
 <div class="website-content">
   <div id="title">
     <div>
@@ -69,7 +69,7 @@
             <p><span class="fas fa-cube"></span> In the design given below, the behavior of the <code>CommandQueue</code> class can be altered by adding more concrete <code>Command</code> subclasses. For example, by including a <code>Delete</code> class
               alongside <code>List</code>, <code>Sort</code>, and <code>Reset</code>, the <code>CommandQueue</code> can now perform delete commands without modifying its code at all. That is, its behavior was extended without having to modify its code.
               Hence, it was open to extensions, but closed to modification.</p>
-            <img src="/website-base/book/principles/openClosedPrinciple/images/commandQueue.png" height="170">
+            <img src="/website/book/principles/openClosedPrinciple/images/commandQueue.png" height="170">
             <p></p>
           </tip-box>
           <tip-box>
@@ -103,7 +103,7 @@ ArrayList admins = <span class="hljs-keyword">new</span> ArrayList&lt; Admin &gt
             <div>
               <div>
                 <p>
-                  <panel src="/website-base\book\oop\inheritance\what\unit-inElsewhere-asFlat._include_.html" header="%%<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Design → Object Oriented Programming → Inheritance → What%%"></panel>
+                  <panel src="/website\book\oop\inheritance\what\unit-inElsewhere-asFlat._include_.html" header="%%<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Design → Object Oriented Programming → Inheritance → What%%"></panel>
                 </p>
               </div>
               <p></p>
@@ -120,7 +120,7 @@ ArrayList admins = <span class="hljs-keyword">new</span> ArrayList&lt; Admin &gt
                     <p><strong>Every instance of a subclass is an instance of the superclass, but not vice-versa.</strong> As a result, inheritance allows <em>substitutability</em> : the ability to substitute a child class object where a parent class object
                       is expected.</p>
                     <tip-box>
-                      <img src="/website-base/book/oop/inheritance/substitutability/images/staff.png" height="80">
+                      <img src="/website/book/oop/inheritance/substitutability/images/staff.png" height="80">
                       <p></p>
                       <p><span class="fas fa-cube"></span> an <code>Academic</code> is an instance of a <code>Staff</code>, but a <code>Staff</code> is not necessarily an instance of an <code>Academic</code>. i.e. wherever an object of the superclass is
                         expected, it can be substituted by an object of any of its subclasses.</p>
@@ -141,7 +141,7 @@ AcademicStaff academicStaff = staff; // Not OK
           </modal>
           <tip-box>
             <p><span class="fas fa-cube"></span> Suppose the <code>Payroll</code> class depends on the <code>adjustMySalary(int percent)</code> method of the <code>Staff</code> class. Furthermore, the <code>Staff</code> class states that the <code>adjustMySalary</code>              method will work for all positive percent values. Both <code>Admin</code> and <code>Academic</code> classes override the <code>adjustMySalary</code> method.</p>
-            <img src="/website-base/book/principles/liskovSubstitutionPrinciple/images/payroll.png" height="200">
+            <img src="/website/book/principles/liskovSubstitutionPrinciple/images/payroll.png" height="200">
             <p></p>
             <p>Now consider the following:</p>
             <ul>
@@ -158,7 +158,7 @@ AcademicStaff academicStaff = staff; // Not OK
             <panel type="seamless" header="%%Another example%%">
               <p><span class="fas fa-cube"></span> The <code>Rectangle#resize()</code> can take any integers for <code>height</code> and <code>width</code>. This contract is violated by the subclass <code>Square#resize()</code> because it does not accept
                 a <code>height</code> that is different from the <code>width</code>.</p>
-              <img src="/website-base/book/principles/liskovSubstitutionPrinciple/images/rectangleSquare.png" height="120">
+              <img src="/website/book/principles/liskovSubstitutionPrinciple/images/rectangleSquare.png" height="120">
               <p></p>
               <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Rectangle</span> </span>{
     ...
@@ -238,10 +238,10 @@ AcademicStaff academicStaff = staff; // Not OK
                 <div id="main">
                   <div>
                     <p><strong>In the <em>n-tier</em> style, higher layers make use of services provided by lower layers.</strong> Lower layers are independent of higher layers. Other names: <em>multi-layered</em>, <em>layered</em>.</p>
-                    <img src="/website-base/book/architecture/architecturalStyles/nTier/what/images/nTier.png" height="150">
+                    <img src="/website/book/architecture/architecturalStyles/nTier/what/images/nTier.png" height="150">
                     <tip-box>
                       <p><span class="fas fa-cube"></span> Operating systems and network communication software often use n-tier style.
-                        <img src="/website-base/book/architecture/architecturalStyles/nTier/what/images/nTierExamples.png" height="150"></p>
+                        <img src="/website/book/architecture/architecturalStyles/nTier/what/images/nTierExamples.png" height="150"></p>
                     </tip-box>
                     <p></p>
                   </div>
@@ -274,7 +274,7 @@ AcademicStaff academicStaff = staff; // Not OK
                     </ul>
                     <tip-box>
                       <p><span class="fas fa-cube"></span> In the example below, design <code>A</code> appears to have a more coupling between the components than design <code>B</code>.</p>
-                      <img src="/website-base/book/designFundamentals/coupling/what/images/playerPuzzleManager.png" height="220">
+                      <img src="/website/book/designFundamentals/coupling/what/images/playerPuzzleManager.png" height="220">
                       <p></p>
                     </tip-box>
                   </div>
@@ -286,7 +286,7 @@ AcademicStaff academicStaff = staff; // Not OK
                             <question has-input="true">
                               <p>Discuss the coupling levels of alternative designs <em>x</em> and <em>y</em>.</p>
                               <tip-box>
-                                <img src="/website-base/book/designFundamentals/coupling/what/images/alternativeDesigns.png" height="180">
+                                <img src="/website/book/designFundamentals/coupling/what/images/alternativeDesigns.png" height="180">
                                 <p></p>
                               </tip-box>
                               <div slot="answer">
@@ -438,7 +438,7 @@ AcademicStaff academicStaff = staff; // Not OK
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.9.2</a> at Mon, 30 Jul 2018 02:57:18 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.9.2</a> at Mon, 30 Jul 2018 03:17:38 GMT</small></div>
 </footer>
 </div>
 </body>
@@ -447,7 +447,7 @@ AcademicStaff academicStaff = staff; // Not OK
 <script src="..\..\markbind\js\polyfill.min.js"></script>
 <script src="..\..\markbind\js\bootstrap-vue.min.js"></script>
 <script>
-    const baseUrl = '/website-base'
+    const baseUrl = '/website'
 </script>
 <script src="..\..\markbind\js\setup.js"></script>
 </html>
