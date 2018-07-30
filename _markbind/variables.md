@@ -1,8 +1,8 @@
 <span id="module">CS2113</span>
 
-<span id="semester">BASE</span>
+<span id="semester">AY1819S1</span>
 
-<span id="period">2018</span>
+<span id="period">Aug-2018</span>
 
 <span id="module_org">https://github.com/nus-{{ module | lower }}-{{ semester }}</span>
 
