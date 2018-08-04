@@ -9,32 +9,23 @@
 
 {{ icon_important_big_red }} ==Our tutorials start on week 2== (even before CORS tutorial bidding is over), not in week 3 as other modules do. {{ module }} (not {{ module }}T) students need to choose a temporary tutorial slot for week 2 tutorial. We'll inform you the procedure to do so in due course.
 
-{{ icon_important_big_red }} Our tutorial IDs are different from CORS. Format: `W09` means `Wednesday` `0900` and so on.
+{{ icon_important_big_red }} Our tutorial IDs are different from CORS. Format: `W12` means `Wednesday` `1200` and so on.
 
 </tip-box>
 
-| Module | Tutorial ID %%(ID in CORS)%% | Time      | Venue            | Tutors ([contact details](https://docs.google.com/document/d/126YRkm4bWW1rai3u0Szc-4mLqhIyQUVL6EC54jM5f2g/pub?embed=true)) 
+| Module | Tutorial ID %%(ID in CORS)%% | Time      | Venue            | Tutors ([contact details](https://goo.gl/ZJKZNt)) 
 |---------------|----------------|------------------|------------------|----
-| CS2103T (CS)  | W09  %%(T1)%%  | **W**ed **09**00 | COM1-B103 (ALL<sup>*</sup>)  | TBD            
-| CS2103T (CS)  | W10  %%(T2)%%  | **W**ed **10**00 | COM1-B103 (ALL)  | TBD            
-| CS2103T (CS)  | W11  %%(T3)%%  | **W**ed **11**00 | COM1-B103 (ALL)  | TBD            
-| CS2103T (CS)  | W13  %%(T4)%%  | **W**ed **13**00 | COM1-0201 (SR5)  | TBD       
-| CS2103T (CS)  | W14  %%(T5)%%  | **W**ed **14**00 | COM1-0201 (SR5)  | TBD       
-| CS2103T (CS)  | W15  %%(T6)%%  | **W**ed **15**00 | COM1-0201 (SR5)  | TBD       
-| CS2103T (CEG) | T09  %%(C01)%% | **T**hu **09**00 | COM1-B103 (ALL)  | TBD            
-| CS2103T (CEG) | T10  %%(C04)%% | **T**hu **10**00 | COM1-B103 (ALL)  | TBD            
-| CS2103T (CEG) | T11  %%(C03)%% | **T**hu **11**00 | COM1-B103 (ALL)  | TBD            
-| CS2103        | T12  %%(5)%%   | **T**hu **12**00 | COM1-B103 (ALL)  | TBD            
-| CS2103        | T13  %%(6)%%   | **T**hu **13**00 | COM1-B103 (ALL)  | TBD            
-| CS2103        | T14  %%(4)%%   | **T**hu **14**00 | COM1-B103 (ALL)  | TBD            
-| CS2103T (CEG) | T15  %%(C02)%% | **T**hu **15**00 | COM1-0210 (SR10) | TBD 
-| CS2103T (CEG) | T16  %%(C06)%% | **T**hu **16**00 | COM1-0201 (SR5)  | TBD 
-| CS2103T (CEG) | T17  %%(C05)%% | **T**hu **17**00 | COM1-0210 (SR10) | TBD 
-| CS2103        | F09  %%(1)%%   | **F**ri **09**00 | COM1-B103 (ALL)  | TBD      
-| CS2103        | F10  %%(2)%%   | **F**ri **10**00 | COM1-B103 (ALL)  | TBD      
-| CS2103        | F11  %%(3)%%   | **F**ri **11**00 | COM1-B103 (ALL)  | TBD      
+| CS2113T       | W12  %%(1)%%   | **W**ed **12**00 | COM1-B103        | TBD            
+| CS2113T       | W13  %%(2)%%   | **W**ed **13**00 | COM1-B103        | TBD            
+| CS2113T       | T09  %%(3)%%   | **T**hu **09**00 | COM1-B103        | TBD            
+| CS2113T       | T12  %%(4)%%   | **T**hu **12**00 | COM1-B103        | TBD            
+| CS2113T       | F09  %%(5)%%   | **F**ri **09**00 | COM1-B103        | TBD            
+| CS2113T       | F10  %%(6)%%   | **F**ri **10**00 | COM1-B103        | TBD            
+| CS2113        | T13  %%(1)%%   | **T**hu **13**00 | COM1-B103        | TBD            
+| CS2113        | T16  %%(2)%%   | **T**hu **16**00 | COM1-B103        | TBD      
+| CS2113        | F11  %%(7)%%   | **F**ri **11**00 | COM1-B103        | TBD      
+| CS2113        | F14  %%(8)%%   | **F**ri **14**00 | COM1-B103        | TBD      
 
-%%*ALL: Active Learning Room%%
 </div>
 </panel>
 
@@ -46,7 +37,7 @@
 * A tutorial group is handled by two tutors. Each tutor will work with two teams.
 * The tutor will direct students to share/discuss evidence of achieving the weekly learning outcomes (LO). 
 * If some students have met with difficulties while achieving an LO, the tutor can direct those students to get help from those who have achieved the LO. **The number of LOs that can be covered in the tutorial session depends on how well-prepared you are.**
-* The tutor will observe, and give feedback on, how well you are achieving required LOs.
+* The tutor will observe, and give feedback on how well you are achieving the required LOs.
 * Please ==bring your laptop to tutorials.== You often need it to show evidence of LOs you achieved. At other times, we ask you to work on project related things with your team members, which too may require the laptop.
 
 <div class="indented-level2">
