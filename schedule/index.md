@@ -11,15 +11,8 @@ head: scheduleHead.md
     {num: "2", day:"Aug 20"},
     {num: "3", day:"Aug 27"}, 
     {num: "4", day:"Sep 3"},
-    {num: "5", day: "Sep 10" },
-    {num: "6", day: "Sep 17" },
-    {num: "7", day: "Oct 1" },
-    {num: "8", day: "Oct 8" },
-    {num: "9", day: "Oct 15" },
-    {num: "10", day: "Oct 22" },
-    {num: "11", day: "Oct 29" },
-    {num: "12", day: "Nov 5" },
-    {num: "13", day: "Nov 12" }
+    {num: "5", day: "Sep 10"},
+    {num: "6", day: "Sep 17"}
 ] %}
 
 
