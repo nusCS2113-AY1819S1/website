@@ -1,5 +1,5 @@
 <navbar placement="top" type="default">
-  <a slot="brand" href="{{baseUrl}}/index.html" title="Home" class="navbar-brand">{{ module }}/T <small>{{ period }}</small></a>
+  <a slot="brand" href="{{baseUrl}}/index.html" title="Home" class="navbar-brand">{{ module }}/T <small>{{ semester }}</small></a>
   <dropdown text="Nested" class="nav-link">
     <li><a href="{{baseUrl}}/index.html" class="dropdown-item"> {{ icon_tick }} Nested (current format)</a></li>
     <li><a href="{{baseUrl}}/index-flat.html" class="dropdown-item">&nbsp;&nbsp;&nbsp;&nbsp;Flat</a></li>
@@ -15,7 +15,7 @@
     <li><a href="{{ivle_announcements}}" target="_blank" class="dropdown-item">{{ glyphicon_bullhorn }} IVLE Announcements</a></li>
     <li><a href="{{ivle_files}}" target="_blank" class="dropdown-item">{{ fas_file_upload }} IVLE File Submissions</a></li>
     <li><a href="{{baseUrl}}/admin/tutorials.html" target="_blank" class="dropdown-item">{{ glyphicon_calendar }} Tutorial Schedule</a></li>
-    <li><a href="{{team_IDs_page}}" target="_blank" class="dropdown-item">{{ glyphicon_list_alt }} Team IDs</a></li>
+    <!-- <li><a href="{{team_IDs_page}}" target="_blank" class="dropdown-item">{{ glyphicon_list_alt }} Team IDs</a></li> -->
     <li><a href="{{java_coding_standard}}" target="_blank" class="dropdown-item">{{ fas_code }} Java Coding Standard</a></li>
     <li><a href="{{module_org}}/samplerepo-things" target="_blank" class="dropdown-item">{{ icon_repo }} samplerepo-things</a></li>
     <li><a href="{{module_org}}/addressbook-level1" target="_blank" class="dropdown-item">{{ icon_repo }} Addressbook-level1</a></li>
