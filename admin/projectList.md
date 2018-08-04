@@ -2,6 +2,8 @@
 title: "Project List"
 </frontmatter>
 
+**These are projects from previous year; this sheet will be updated later in the semester**
+
 <panel header="W09" expanded>
 
 
