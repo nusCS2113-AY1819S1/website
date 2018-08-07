@@ -112,7 +112,7 @@ For either direction, you need to define a target user profile and a value propo
       1. Work related to renaming the product
       1. Work related to changing the product icon
       1. Morphing the product into a different product
-   1. Setting up the GitHub, Travis, AppVeyor, etc.
+   1. Setting up the GitHub, Travis, AppVeyor, etc.,
    1. Maintaining the issue tracker
    1. Release management
    1. Updating user/developer docs that are not specific to a feature %%&nbsp;e.g. documenting the target user profile%%
