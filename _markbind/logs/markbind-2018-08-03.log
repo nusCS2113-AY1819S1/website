@@ -1,0 +1,80 @@
+2018-08-03T07:27:01.906Z - info: Pages built
+2018-08-03T07:27:02.008Z - info: Site data built
+2018-08-03T07:27:02.013Z - info: Generate Site durationMs=48795
+2018-08-03T07:27:02.235Z - info: Serving "E:\Teaching\aug2018\website\_site" at http://127.0.0.1:8080
+2018-08-03T07:27:02.235Z - info: Press CTRL+C to stop ...
+2018-08-03T07:40:35.654Z - info: Reload for file change: E:\Teaching\aug2018\website\schedule\index.md
+2018-08-03T07:40:36.657Z - verbose: Rebuild affected paths: E:\Teaching\aug2018\website\schedule\index.md
+2018-08-03T07:40:36.660Z - info: Rebuilding 2 pages
+2018-08-03T07:40:49.332Z - info: Pages rebuilt
+2018-08-03T07:40:49.348Z - info: Site data built
+2018-08-03T07:41:14.068Z - info: Reload for file change: E:\Teaching\aug2018\website\schedule\index.md
+2018-08-03T07:41:15.070Z - verbose: Rebuild affected paths: E:\Teaching\aug2018\website\schedule\index.md
+2018-08-03T07:41:15.070Z - info: Rebuilding 2 pages
+2018-08-03T07:41:19.893Z - info: Reload for file change: E:\Teaching\aug2018\website\schedule\index.md
+2018-08-03T07:41:22.124Z - info: Pages rebuilt
+2018-08-03T07:41:22.131Z - info: Site data built
+2018-08-03T07:41:22.162Z - verbose: Rebuild affected paths: E:\Teaching\aug2018\website\schedule\index.md
+2018-08-03T07:41:22.163Z - info: Rebuilding 2 pages
+2018-08-03T07:41:29.367Z - info: Pages rebuilt
+2018-08-03T07:41:29.376Z - info: Site data built
+2018-08-03T07:41:59.483Z - info: Reload for file change: E:\Teaching\aug2018\website\_markbind\variables.md
+2018-08-03T07:42:00.484Z - verbose: Rebuild affected paths: E:\Teaching\aug2018\website\_markbind\variables.md
+2018-08-03T07:42:00.484Z - info: Rebuilding 0 pages
+2018-08-03T07:42:00.484Z - info: Pages rebuilt
+2018-08-03T07:42:00.490Z - info: Site data built
+2018-08-03T09:15:59.213Z - info: Reload for file deletion: E:\Teaching\aug2018\website\admin\project-teams.md
+2018-08-03T09:16:00.214Z - verbose: Rebuild affected paths: E:\Teaching\aug2018\website\admin\project-teams.md
+2018-08-03T09:16:00.219Z - info: Rebuilding 6 pages
+2018-08-03T09:16:08.448Z - info: Pages rebuilt
+2018-08-03T09:16:08.465Z - info: Site data built
+2018-08-03T09:16:30.879Z - info: Reload for file add: E:\Teaching\aug2018\website\admin\project-teams.md
+2018-08-03T09:16:31.880Z - verbose: Rebuild affected paths: E:\Teaching\aug2018\website\admin\project-teams.md
+2018-08-03T09:16:31.882Z - info: Rebuilding 6 pages
+2018-08-03T09:16:39.629Z - info: Reload for file change: E:\Teaching\aug2018\website\admin\project-teams.md
+2018-08-03T09:16:40.291Z - info: Pages rebuilt
+2018-08-03T09:16:40.306Z - info: Site data built
+2018-08-03T09:16:40.639Z - verbose: Rebuild affected paths: E:\Teaching\aug2018\website\admin\project-teams.md
+2018-08-03T09:16:40.641Z - info: Rebuilding 6 pages
+2018-08-03T09:16:49.117Z - info: Pages rebuilt
+2018-08-03T09:16:49.130Z - info: Site data built
+2018-08-03T09:38:27.573Z - info: Reload for file change: E:\Teaching\aug2018\website\_markbind\variables.md
+2018-08-03T09:38:28.574Z - verbose: Rebuild affected paths: E:\Teaching\aug2018\website\_markbind\variables.md
+2018-08-03T09:38:28.576Z - info: Rebuilding 0 pages
+2018-08-03T09:38:28.577Z - info: Pages rebuilt
+2018-08-03T09:38:28.588Z - info: Site data built
+2018-08-03T09:50:14.285Z - info: Reload for file change: E:\Teaching\aug2018\website\_markbind\variables.md
+2018-08-03T09:50:15.287Z - verbose: Rebuild affected paths: E:\Teaching\aug2018\website\_markbind\variables.md
+2018-08-03T09:50:15.288Z - info: Rebuilding 0 pages
+2018-08-03T09:50:15.288Z - info: Pages rebuilt
+2018-08-03T09:50:15.294Z - info: Site data built
+2018-08-03T09:50:22.598Z - info: Reload for file change: E:\Teaching\aug2018\website\_markbind\variables.md
+2018-08-03T09:50:23.600Z - verbose: Rebuild affected paths: E:\Teaching\aug2018\website\_markbind\variables.md
+2018-08-03T09:50:23.603Z - info: Rebuilding 0 pages
+2018-08-03T09:50:23.605Z - info: Pages rebuilt
+2018-08-03T09:50:23.627Z - info: Site data built
+2018-08-03T09:50:41.398Z - info: Reload for file change: E:\Teaching\aug2018\website\_markbind\variables.md
+2018-08-03T09:50:42.398Z - verbose: Rebuild affected paths: E:\Teaching\aug2018\website\_markbind\variables.md
+2018-08-03T09:50:42.400Z - info: Rebuilding 0 pages
+2018-08-03T09:50:42.401Z - info: Pages rebuilt
+2018-08-03T09:50:42.416Z - info: Site data built
+2018-08-03T09:51:08.637Z - info: Reload for file change: E:\Teaching\aug2018\website\_markbind\variables.md
+2018-08-03T09:51:09.639Z - verbose: Rebuild affected paths: E:\Teaching\aug2018\website\_markbind\variables.md
+2018-08-03T09:51:09.642Z - info: Rebuilding 0 pages
+2018-08-03T09:51:09.644Z - info: Pages rebuilt
+2018-08-03T09:51:09.656Z - info: Site data built
+2018-08-03T09:54:20.790Z - info: Reload for file change: E:\Teaching\aug2018\website\_markbind\variables.md
+2018-08-03T09:54:21.791Z - verbose: Rebuild affected paths: E:\Teaching\aug2018\website\_markbind\variables.md
+2018-08-03T09:54:21.794Z - info: Rebuilding 0 pages
+2018-08-03T09:54:21.796Z - info: Pages rebuilt
+2018-08-03T09:54:21.802Z - info: Site data built
+2018-08-03T09:54:48.002Z - info: Reload for file change: E:\Teaching\aug2018\website\_markbind\variables.md
+2018-08-03T09:54:49.004Z - verbose: Rebuild affected paths: E:\Teaching\aug2018\website\_markbind\variables.md
+2018-08-03T09:54:49.006Z - info: Rebuilding 0 pages
+2018-08-03T09:54:49.008Z - info: Pages rebuilt
+2018-08-03T09:54:49.016Z - info: Site data built
+2018-08-03T09:54:52.312Z - info: Reload for file change: E:\Teaching\aug2018\website\_markbind\variables.md
+2018-08-03T09:54:53.313Z - verbose: Rebuild affected paths: E:\Teaching\aug2018\website\_markbind\variables.md
+2018-08-03T09:54:53.318Z - info: Rebuilding 0 pages
+2018-08-03T09:54:53.318Z - info: Pages rebuilt
+2018-08-03T09:54:53.324Z - info: Site data built

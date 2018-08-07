@@ -13,178 +13,176 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CS2113/T Website - Week 13 (flat version)</title>
-    <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
-    <link rel="stylesheet" href="../../markbind/css/font-awesome.min.css" >
-    <link rel="stylesheet" href="../../markbind/css/bootstrap-glyphicons.min.css" >
-    <link rel="stylesheet" href="../../markbind/css/github.min.css">
-    <link rel="stylesheet" href="../../markbind/css/markbind.css">
+    <link rel="stylesheet" href="..\..\markbind\css\bootstrap.min.css">
+    <link rel="stylesheet" href="..\..\markbind\css\bootstrap-vue.min.css">
+    <link rel="stylesheet" href="..\..\markbind\css\font-awesome.min.css" >
+    <link rel="stylesheet" href="..\..\markbind\css\bootstrap-glyphicons.min.css" >
+    <link rel="stylesheet" href="..\..\markbind\css\github.min.css">
+    <link rel="stylesheet" href="..\..\markbind\css\markbind.css">
     
     <link rel="stylesheet" href="/website/css/main.css">
 <link rel="stylesheet" href="/website/css/schedule.css">
     <link rel="icon" href="/website/favicon.ico">
 </head>
 <body>
-<div id="app">
-    <div id="content-wrapper">
-  <div>
-    <navbar placement="top" type="inverse">
-      <a slot="brand" href="/website/index-flat.html" title="Home" class="navbar-brand">CS2113/T <small>2018</small></a>
-      <dropdown text="Flat" class="nav-link">
-        <li><a href="/website/index-flat.html" class="dropdown-item"> <span class="fas fa-check"></span> Flat (current format)</a></li>
-        <li><a href="/website/index.html" class="dropdown-item">&nbsp;&nbsp;&nbsp;&nbsp;Nested</a></li>
-      </dropdown>
-      <li><a href="/website/index-flat.html" class="nav-link"><span><strong>Schedule</strong></span></a></li>
-      <li><a href="/website/se-book-adapted/index-flat.html" class="nav-link"><span><strong>Textbook</strong></span></a></li>
-      <li><a href="/website/admin/index-flat.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
-      <dropdown text="Links" class="nav-link">
-        <li><a href="https://github.com/nusCS2113-AY1819S1/website/issues" target="_blank" class="dropdown-item"> <span class="fas fa-bug"></span> Report Bugs</a></li>
-        <li><a href="https://nuscs2113-ay1819s1.slack.com" target="_blank" class="dropdown-item"><span class="fab fa-slack-hash"></span> Slack</a></li>
-        <li><a href="https://github.com/nusCS2113-AY1819S1/forum/issues" target="_blank" class="dropdown-item"><span class="fas fa-comment"></span> Forum</a></li>
-        <li><a href="https://docs.google.com/document/d/e/2PACX-1vTlgFILsldU6bgkCrXAt3-k_synfLY8orw-gdPxnhSWqkiU0nyYXidaYPSwEfuxysb5X8t3Vvb_78dV/pub?embedded=true" target="_blank" class="dropdown-item"><span class="fas fa-user-tie"></span> Instructors</a></li>
-        <li><a href="https://ivle.nus.edu.sg/v1/Announcement/default.aspx?CourseID=e3ecf866-dbc2-4b26-8873-82d371aa9b17" target="_blank" class="dropdown-item"><span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span> IVLE Announcements</a></li>
-        <li><a href="https://ivle.nus.edu.sg/v1/File/Student/default.aspx?CourseID=e3ecf866-dbc2-4b26-8873-82d371aa9b17&WorkbinID=208b1acf-7a65-45bf-a7a9-58c54556a0d3&FolderID=4a621f93-0732-42c6-9c25-bb39d3a94225" target="_blank" class="dropdown-item"><span class="fas fa-file-upload"></span> IVLE File Submissions</a></li>
-        <li><a href="/website/admin/tutorials.html" target="_blank" class="dropdown-item"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Tutorial Schedule</a></li>
-        <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSHbtOxheQPnskRMkD3C0n35FBPRAqABO_bh67_BgbA035bsV9WxRjqiJbBoJz1kBgLd5PLCYMUpWlZ/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" target="_blank" class="dropdown-item"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Team IDs</a></li>
-        <li><a href="https://oss-generic.github.io/process/codingStandards/CodingStandard-Java.html" target="_blank" class="dropdown-item"><span class="fas fa-code"></span> Java Coding Standard</a></li>
-        <li><a href="https://github.com/nusCS2113-AY1819S1/samplerepo-things" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> samplerepo-things</a></li>
-        <li><a href="https://github.com/nusCS2113-AY1819S1/addressbook-level1" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> Addressbook-level1</a></li>
-        <li><a href="https://github.com/nusCS2113-AY1819S1/addressbook-level2" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> Addressbook-level2</a></li>
-        <li><a href="https://github.com/nusCS2113-AY1819S1/addressbook-level3" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> Addressbook-level3</a></li>
-        <li><a href="https://github.com/nusCS2113-AY1819S1/addressbook-level4" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> Addressbook-level4</a></li>
-        <li><a href="/website/admin/projectList.html" target="_blank" class="dropdown-item"><span class="fas fa-th-list"></span> Projects List</a></li>
-      </dropdown>
-    </navbar>
-  </div>
-  <div class="website-content" id="main">
-    <h2 id="week-13">Week 13 []</h2>
+<div id="app" class="container-fluid">
+    <div>
+  <navbar placement="top" type="inverse">
+    <a slot="brand" href="/website/index-flat.html" title="Home" class="navbar-brand">CS2113/T <small>2018</small></a>
+    <dropdown text="Flat" class="nav-link">
+      <li><a href="/website/index-flat.html" class="dropdown-item"> <span class="fas fa-check"></span> Flat (current format)</a></li>
+      <li><a href="/website/index.html" class="dropdown-item">&nbsp;&nbsp;&nbsp;&nbsp;Nested</a></li>
+    </dropdown>
+    <li><a href="/website/index-flat.html" class="nav-link"><span><strong>Schedule</strong></span></a></li>
+    <li><a href="/website/se-book-adapted/index-flat.html" class="nav-link"><span><strong>Textbook</strong></span></a></li>
+    <li><a href="/website/admin/index-flat.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
+    <dropdown text="Links" class="nav-link">
+      <li><a href="https://github.com/nusCS2113-AY1819S1/website/issues" target="_blank" class="dropdown-item"> <span class="fas fa-bug"></span> Report Bugs</a></li>
+      <li><a href="https://nuscs2113-ay1819s1.slack.com" target="_blank" class="dropdown-item"><span class="fab fa-slack-hash"></span> Slack</a></li>
+      <li><a href="https://github.com/nusCS2113-AY1819S1/forum/issues" target="_blank" class="dropdown-item"><span class="fas fa-comment"></span> Forum</a></li>
+      <li><a href="https://docs.google.com/document/d/e/2PACX-1vTlgFILsldU6bgkCrXAt3-k_synfLY8orw-gdPxnhSWqkiU0nyYXidaYPSwEfuxysb5X8t3Vvb_78dV/pub?embedded=true" target="_blank" class="dropdown-item"><span class="fas fa-user-tie"></span> Instructors</a></li>
+      <li><a href="https://ivle.nus.edu.sg/v1/Announcement/default.aspx?CourseID=e3ecf866-dbc2-4b26-8873-82d371aa9b17" target="_blank" class="dropdown-item"><span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span> IVLE Announcements</a></li>
+      <li><a href="https://ivle.nus.edu.sg/v1/File/Student/default.aspx?CourseID=e3ecf866-dbc2-4b26-8873-82d371aa9b17&WorkbinID=208b1acf-7a65-45bf-a7a9-58c54556a0d3&FolderID=4a621f93-0732-42c6-9c25-bb39d3a94225" target="_blank" class="dropdown-item"><span class="fas fa-file-upload"></span> IVLE File Submissions</a></li>
+      <li><a href="/website/admin/tutorials.html" target="_blank" class="dropdown-item"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Tutorial Schedule</a></li>
+      <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSHbtOxheQPnskRMkD3C0n35FBPRAqABO_bh67_BgbA035bsV9WxRjqiJbBoJz1kBgLd5PLCYMUpWlZ/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" target="_blank" class="dropdown-item"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Team IDs</a></li>
+      <li><a href="https://oss-generic.github.io/process/codingStandards/CodingStandard-Java.html" target="_blank" class="dropdown-item"><span class="fas fa-code"></span> Java Coding Standard</a></li>
+      <li><a href="https://github.com/nusCS2113-AY1819S1/samplerepo-things" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> samplerepo-things</a></li>
+      <li><a href="https://github.com/nusCS2113-AY1819S1/addressbook-level1" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> Addressbook-level1</a></li>
+      <li><a href="https://github.com/nusCS2113-AY1819S1/addressbook-level2" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> Addressbook-level2</a></li>
+      <li><a href="https://github.com/nusCS2113-AY1819S1/addressbook-level3" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> Addressbook-level3</a></li>
+      <li><a href="https://github.com/nusCS2113-AY1819S1/addressbook-level4" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> Addressbook-level4</a></li>
+      <li><a href="/website/admin/projectList.html" target="_blank" class="dropdown-item"><span class="fas fa-th-list"></span> Projects List</a></li>
+    </dropdown>
+  </navbar>
+</div>
+<div class="website-content" id="main">
+  <h2 id="week-13">Week 13 []</h2>
+  <div class="indented">
+    <h3 id="todo"><span class="glyphicon glyphicon-check" aria-hidden="true"></span> Todo</h3>
     <div class="indented">
-      <h3 id="todo"><span class="glyphicon glyphicon-check" aria-hidden="true"></span> Todo</h3>
+      <div></div>
+      <p><span class="activity-desc">Admin info to read:<span></span></span>
+      </p>
       <div class="indented">
-        <div></div>
-        <p><span class="activity-desc">Admin info to read:<span></span></span>
-        </p>
-        <div class="indented">
-          <panel src="/website/admin/project-w13-v14._include_.html#main" type="dark" no-close="" expanded="" no-switch="" expandable="false" fragment="main">
-            <span slot="header" class="card-title"><span class="text-white"> Admin <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Project: v1.4 [week 13] <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-            <span
-              class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              </span>
-              </span>
-              </span>
-              </span>
-          </panel>
-          <p></p>
-        </div>
+        <panel src="/website\admin\project-w13-v14._include_.html#main" type="dark" no-close="" expanded="" no-switch="" expandable="false" fragment="main">
+          <span slot="header" class="card-title"><span class="text-white"> Admin <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Project: v1.4 [week 13] <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span
+            class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            </span>
+            </span>
+            </span>
+            </span>
+        </panel>
         <p></p>
       </div>
-      <h3 id="outcomes"><span class="fas fa-trophy"></span> Outcomes</h3>
+      <p></p>
+    </div>
+    <h3 id="outcomes"><span class="fas fa-trophy"></span> Outcomes</h3>
+    <div class="indented">
+      <p><span class="activity-desc">🅿️ Project</span></p>
       <div class="indented">
-        <p><span class="activity-desc">🅿️ Project</span></p>
-        <div class="indented">
-          <panel no-close="" expanded="" no-switch="" expandable="false">
-            <span slot="header" class="card-title"><span><code>W13.1</code> <strong>Can acceptance-test a product</strong> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+        <panel no-close="" expanded="" no-switch="" expandable="false">
+          <span slot="header" class="card-title"><span><code>W13.1</code> <strong>Can acceptance-test a product</strong> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+          </span>
+          </span>
+          <div>
+            <p>Covered by:</p>
+            <p>
+              <panel src="/website\admin\project-w13-v14._include_.html#main" header="%%Admin <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Project → v1.4%%" fragment="main"></panel>
+            </p>
+          </div>
+        </panel>
+        <panel no-close="" expanded="" no-switch="" expandable="false">
+          <span slot="header" class="card-title"><span><code>W13.2</code> <strong>Can evaluate a technical effort</strong> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+          </span>
+          </span>
+          <div>
+            <p>Covered by:</p>
+            <p>
+              <panel src="/website\admin\project-w13-v14._include_.html#main" header="%%Admin <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Project → v1.4%%" fragment="main"></panel>
+            </p>
+          </div>
+        </panel>
+        <panel no-close="" expanded="" no-switch="" expandable="false">
+          <span slot="header" class="card-title"><span><code>W13.3</code> <strong>Can demo a product</strong> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+          </span>
+          </span>
+          <div>
+            <p>Covered by:</p>
+            <p>
+              <panel src="/website\admin\project-w13-v14._include_.html#main" header="%%Admin <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Project → v1.4%%" fragment="main"></panel>
+            </p>
+          </div>
+        </panel>
+      </div>
+      <p></p>
+    </div>
+    <h3 id="tutorial-13"><span class="fas fa-chalkboard-teacher"></span> Tutorial 13</h3>
+    <div class="indented">
+      <div>
+        <br>
+        <panel type="seamless" header="##### Evidence for weekly LOs %%(for reference)%%">
+          <panel type="seamless" expanded="">
+            <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W13.1</code></span></big> Can acceptance-test a product <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
             </span>
             </span>
-            <div>
-              <p>Covered by:</p>
-              <p>
-                <panel src="/website/admin/project-w13-v14._include_.html#main" header="%%Admin <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Project → v1.4%%" fragment="main"></panel>
-              </p>
+            <div class="indented">
+              <div>
+                <p>Covered by:</p>
+                <p>
+                  <panel src="/website\admin\project-w13-v14._include_.html#main" header="%%Admin <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Project → v1.4%%" fragment="main"></panel>
+                </p>
+              </div>
             </div>
           </panel>
-          <panel no-close="" expanded="" no-switch="" expandable="false">
-            <span slot="header" class="card-title"><span><code>W13.2</code> <strong>Can evaluate a technical effort</strong> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+          <panel type="seamless" expanded="">
+            <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W13.2</code></span></big> Can evaluate a technical effort <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
             </span>
             </span>
-            <div>
-              <p>Covered by:</p>
-              <p>
-                <panel src="/website/admin/project-w13-v14._include_.html#main" header="%%Admin <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Project → v1.4%%" fragment="main"></panel>
-              </p>
+            <div class="indented">
+              <div>
+                <p>Covered by:</p>
+                <p>
+                  <panel src="/website\admin\project-w13-v14._include_.html#main" header="%%Admin <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Project → v1.4%%" fragment="main"></panel>
+                </p>
+              </div>
             </div>
           </panel>
-          <panel no-close="" expanded="" no-switch="" expandable="false">
-            <span slot="header" class="card-title"><span><code>W13.3</code> <strong>Can demo a product</strong> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+          <panel type="seamless" expanded="">
+            <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W13.3</code></span></big> Can demo a product <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
             </span>
             </span>
-            <div>
-              <p>Covered by:</p>
-              <p>
-                <panel src="/website/admin/project-w13-v14._include_.html#main" header="%%Admin <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Project → v1.4%%" fragment="main"></panel>
-              </p>
+            <div class="indented">
+              <div>
+                <p>Covered by:</p>
+                <p>
+                  <panel src="/website\admin\project-w13-v14._include_.html#main" header="%%Admin <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Project → v1.4%%" fragment="main"></panel>
+                </p>
+              </div>
             </div>
           </panel>
-        </div>
-        <p></p>
+        </panel>
       </div>
-      <h3 id="tutorial-13"><span class="fas fa-chalkboard-teacher"></span> Tutorial 13</h3>
-      <div class="indented">
-        <div>
-          <br>
-          <panel type="seamless" header="##### Evidence for weekly LOs %%(for reference)%%">
-            <panel type="seamless" expanded="">
-              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W13.1</code></span></big> Can acceptance-test a product <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-              </span>
-              </span>
-              <div class="indented">
-                <div>
-                  <p>Covered by:</p>
-                  <p>
-                    <panel src="/website/admin/project-w13-v14._include_.html#main" header="%%Admin <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Project → v1.4%%" fragment="main"></panel>
-                  </p>
-                </div>
-              </div>
-            </panel>
-            <panel type="seamless" expanded="">
-              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W13.2</code></span></big> Can evaluate a technical effort <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-              </span>
-              </span>
-              <div class="indented">
-                <div>
-                  <p>Covered by:</p>
-                  <p>
-                    <panel src="/website/admin/project-w13-v14._include_.html#main" header="%%Admin <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Project → v1.4%%" fragment="main"></panel>
-                  </p>
-                </div>
-              </div>
-            </panel>
-            <panel type="seamless" expanded="">
-              <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W13.3</code></span></big> Can demo a product <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-              </span>
-              </span>
-              <div class="indented">
-                <div>
-                  <p>Covered by:</p>
-                  <p>
-                    <panel src="/website/admin/project-w13-v14._include_.html#main" header="%%Admin <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Project → v1.4%%" fragment="main"></panel>
-                  </p>
-                </div>
-              </div>
-            </panel>
-          </panel>
-        </div>
-      </div>
-      <h3 id="lecture-13"><span class="glyphicon glyphicon-blackboard" aria-hidden="true"></span> Lecture 13</h3>
-      <div class="indented">
-        <div></div>
-      </div>
+    </div>
+    <h3 id="lecture-13"><span class="glyphicon glyphicon-blackboard" aria-hidden="true"></span> Lecture 13</h3>
+    <div class="indented">
+      <div></div>
     </div>
   </div>
 </div>
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Mon, 06 Aug 2018 05:01:34 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.10.1</a> at Tue, 07 Aug 2018 04:33:30 GMT</small></div>
 </footer>
 </div>
 </body>
-<script src="../../markbind/js/vue.min.js"></script>
-<script src="../../markbind/js/vue-strap.min.js"></script>
-<script src="../../markbind/js/polyfill.min.js"></script>
-<script src="../../markbind/js/bootstrap-vue.min.js"></script>
+<script src="..\..\markbind\js\vue.min.js"></script>
+<script src="..\..\markbind\js\vue-strap.min.js"></script>
+<script src="..\..\markbind\js\polyfill.min.js"></script>
+<script src="..\..\markbind\js\bootstrap-vue.min.js"></script>
 <script>
     const baseUrl = '/website'
 </script>
-<script src="../../markbind/js/setup.js"></script>
+<script src="..\..\markbind\js\setup.js"></script>
 </html>

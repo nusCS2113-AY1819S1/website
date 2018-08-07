@@ -13,18 +13,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CS2113/T Website - Text Book Chapter : Object-Oriented Programming</title>
-    <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
-    <link rel="stylesheet" href="../../markbind/css/font-awesome.min.css" >
-    <link rel="stylesheet" href="../../markbind/css/bootstrap-glyphicons.min.css" >
-    <link rel="stylesheet" href="../../markbind/css/github.min.css">
-    <link rel="stylesheet" href="../../markbind/css/markbind.css">
-    <link rel="stylesheet" href="../../markbind/css/site-nav.css">
+    <link rel="stylesheet" href="..\..\markbind\css\bootstrap.min.css">
+    <link rel="stylesheet" href="..\..\markbind\css\bootstrap-vue.min.css">
+    <link rel="stylesheet" href="..\..\markbind\css\font-awesome.min.css" >
+    <link rel="stylesheet" href="..\..\markbind\css\bootstrap-glyphicons.min.css" >
+    <link rel="stylesheet" href="..\..\markbind\css\github.min.css">
+    <link rel="stylesheet" href="..\..\markbind\css\markbind.css">
+    <link rel="stylesheet" href="..\..\markbind\css\site-nav.css">
     <link rel="stylesheet" href="/website/book/css/textbook.css">
     <link rel="icon" href="/website/favicon.ico">
 </head>
 <body>
-<div id="app">
+<div id="app" class="container-fluid">
     <div id="flex-body">
   <div id="site-nav">
     <ul style="list-style-type: none; margin-left:-1em">
@@ -153,170 +153,171 @@
     </div>
   </div>
   <div id="page-content">
-    <div id="content-wrapper">
-      <link rel="stylesheet" href="/website/book/css/textbook.css">
-      <div class="website-content">
-        <div>
-          <navbar placement="top" type="default">
-            <a slot="brand" href="/website/index.html" title="Home" class="navbar-brand">CS2113/T <small>AY1819S1</small></a>
-            <dropdown text="Nested" class="nav-link">
-              <li><a href="/website/index.html" class="dropdown-item"> <span class="fas fa-check"></span> Nested (current format)</a></li>
-              <li><a href="/website/index-flat.html" class="dropdown-item">&nbsp;&nbsp;&nbsp;&nbsp;Flat</a></li>
-            </dropdown>
-            <li><a href="/website/index.html" class="nav-link"><span><strong>Schedule</strong></span></a></li>
-            <li><a href="/website/se-book-adapted/index.html" class="nav-link"><span><strong>Textbook</strong></span></a></li>
-            <li><a href="/website/admin/index.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
-            <dropdown text="Links" class="nav-link">
-              <li><a href="https://github.com/nusCS2113-AY1819S1/website/issues" target="_blank" class="dropdown-item"> <span class="fas fa-bug"></span> Report Bugs</a></li>
-              <li><a href="https://nuscs2113-ay1819s1.slack.com" target="_blank" class="dropdown-item"><span class="fab fa-slack-hash"></span> Slack</a></li>
-              <li><a href="https://github.com/nusCS2113-AY1819S1/forum/issues" target="_blank" class="dropdown-item"><span class="fas fa-comment"></span> Forum</a></li>
-              <li><a href="/website/admin/instructors.html" class="dropdown-item"><span class="fas fa-user-tie"></span> Instructors</a></li>
-              <li><a href="https://ivle.nus.edu.sg/v1/Announcement/default.aspx?CourseID=e3ecf866-dbc2-4b26-8873-82d371aa9b17" target="_blank" class="dropdown-item"><span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span> IVLE Announcements</a></li>
-              <li><a href="https://ivle.nus.edu.sg/v1/File/Student/default.aspx?CourseID=e3ecf866-dbc2-4b26-8873-82d371aa9b17&WorkbinID=208b1acf-7a65-45bf-a7a9-58c54556a0d3&FolderID=4a621f93-0732-42c6-9c25-bb39d3a94225" target="_blank" class="dropdown-item"><span class="fas fa-file-upload"></span> IVLE File Submissions</a></li>
-              <li><a href="/website/admin/tutorials.html" target="_blank" class="dropdown-item"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Tutorial Schedule</a></li>
+    <link rel="stylesheet" href="/website/book/css/textbook.css">
+    <div class="website-content">
+      <div>
+        <navbar placement="top" type="default">
+          <a slot="brand" href="/website/index.html" title="Home" class="navbar-brand">CS2113/T <small>AY1819S1</small></a>
+          <dropdown text="Nested" class="nav-link">
+            <li><a href="/website/index.html" class="dropdown-item"> <span class="fas fa-check"></span> Nested (current format)</a></li>
+            <li><a href="/website/index-flat.html" class="dropdown-item">&nbsp;&nbsp;&nbsp;&nbsp;Flat</a></li>
+          </dropdown>
+          <li><a href="/website/index.html" class="nav-link"><span><strong>Schedule</strong></span></a></li>
+          <li><a href="/website/se-book-adapted/index.html" class="nav-link"><span><strong>Textbook</strong></span></a></li>
+          <li><a href="/website/admin/index.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
+          <dropdown text="Links" class="nav-link">
+            <li><a href="https://github.com/nusCS2113-AY1819S1/website/issues" target="_blank" class="dropdown-item"> <span class="fas fa-bug"></span> Report Bugs</a></li>
+            <li><a href="https://nuscs2113-ay1819s1.slack.com" target="_blank" class="dropdown-item"><span class="fab fa-slack-hash"></span> Slack</a></li>
+            <li><a href="https://github.com/nusCS2113-AY1819S1/forum/issues" target="_blank" class="dropdown-item"><span class="fas fa-comment"></span> Forum</a></li>
+            <li><a href="/website/admin/instructors.html" class="dropdown-item"><span class="fas fa-user-tie"></span> Instructors</a></li>
+            <li><a href="https://ivle.nus.edu.sg/v1/Announcement/default.aspx?CourseID=e3ecf866-dbc2-4b26-8873-82d371aa9b17" target="_blank" class="dropdown-item"><span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span> IVLE Announcements</a></li>
+            <li><a href="https://ivle.nus.edu.sg/v1/File/Student/default.aspx?CourseID=e3ecf866-dbc2-4b26-8873-82d371aa9b17&WorkbinID=208b1acf-7a65-45bf-a7a9-58c54556a0d3&FolderID=4a621f93-0732-42c6-9c25-bb39d3a94225" target="_blank" class="dropdown-item"><span class="fas fa-file-upload"></span> IVLE File Submissions</a></li>
+            <li><a href="/website/admin/tutorials.html" target="_blank" class="dropdown-item"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Tutorial Schedule</a></li>
 
-              <li><a href="https://oss-generic.github.io/process/codingStandards/CodingStandard-Java.html" target="_blank" class="dropdown-item"><span class="fas fa-code"></span> Java Coding Standard</a></li>
-              <li><a href="https://github.com/nusCS2113-AY1819S1/samplerepo-things" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> samplerepo-things</a></li>
-              <li><a href="https://github.com/nusCS2113-AY1819S1/addressbook-level1" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> Addressbook-level1</a></li>
-              <li><a href="https://github.com/nusCS2113-AY1819S1/addressbook-level2" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> Addressbook-level2</a></li>
-              <li><a href="https://github.com/nusCS2113-AY1819S1/addressbook-level3" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> Addressbook-level3</a></li>
-              <li><a href="https://github.com/nusCS2113-AY1819S1/addressbook-level4" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> Addressbook-level4</a></li>
-              <li><a href="/website/admin/projectList.html" target="_blank" class="dropdown-item"><span class="fas fa-th-list"></span> Projects List</a></li>
-            </dropdown>
-            <li slot="right" class="nav-link">
-              <form class="navbar-form">
-                <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right=""></searchbar>
-              </form>
-            </li>
-          </navbar>
+            <li><a href="https://oss-generic.github.io/process/codingStandards/CodingStandard-Java.html" target="_blank" class="dropdown-item"><span class="fas fa-code"></span> Java Coding Standard</a></li>
+            <li><a href="https://github.com/nusCS2113-AY1819S1/samplerepo-things" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> samplerepo-things</a></li>
+            <li><a href="https://github.com/nusCS2113-AY1819S1/addressbook-level1" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> Addressbook-level1</a></li>
+            <li><a href="https://github.com/nusCS2113-AY1819S1/addressbook-level2" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> Addressbook-level2</a></li>
+            <li><a href="https://github.com/nusCS2113-AY1819S1/addressbook-level3" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> Addressbook-level3</a></li>
+            <li><a href="https://github.com/nusCS2113-AY1819S1/addressbook-level4" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> Addressbook-level4</a></li>
+            <li><a href="/website/admin/projectList.html" target="_blank" class="dropdown-item"><span class="fas fa-th-list"></span> Projects List</a></li>
+          </dropdown>
+          <li slot="right" class="nav-link">
+            <form class="navbar-form">
+              <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right=""></searchbar>
+            </form>
+          </li>
+        </navbar>
+      </div>
+      <p><span class="dimmed"><strong><span></span></strong>
+        </span>
+      </p>
+      <div id="title">
+        <div>
+          <h1 id="object-oriented-programming">Object-Oriented Programming</h1>
         </div>
-        <p><span class="dimmed"><strong><span></span></strong>
-          </span>
-        </p>
-        <div id="title">
-          <div>
-            <h1 id="object-oriented-programming">Object-Oriented Programming</h1>
-          </div>
-        </div>
-        <panel type="seamless" expanded="">
-          <span slot="header" class="card-title"><div>
+      </div>
+      <panel type="seamless" expanded="">
+        <span slot="header" class="card-title"><div>
 <h2 id="introduction">Introduction</h2></div></span>
-          <panel type="seamless" header="#### What" expanded="">
-            <div class="indented">
-              <span class="badge badge-light">
-  <span><span class="dimmed"><font color="Black"><span class="glyphicon glyphicon-education" aria-hidden="true"></span><span class="glyphicon glyphicon-education" aria-hidden="true"></span></font> : <span class="glyphicon glyphicon-star"
-                aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></span>
-              </span>
-              </span>
-              <span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can describe OOP at a higher level</span>
-              </span>
-              </span>
-              </span>
-              <p></p>
-              <div>
-                <p><strong>Object-Oriented Programming (OOP) is a <em>programming paradigm</em>.</strong> A programming paradigm guides programmers to analyze programming problems, and structure programming solutions, in a specific way.</p>
-                <blockquote>
-                  <p>Programming languages have traditionally divided the world into two parts—data and operations on data. Data is static and immutable, except as the operations may change it. The procedures and functions that operate on data have no lasting
-                    state of their own; they’re useful only in their ability to affect data.</p>
-                  <p>This division is, of course, grounded in the way computers work, so it’s not one that you can easily ignore or push aside. Like the equally pervasive distinctions between matter and energy and between nouns and verbs, it forms the background
-                    against which we work. At some point, all programmers—even object-oriented programmers—must lay out the data structures that their programs will use and define the functions that will act on the data.</p>
-                  <p>With a procedural programming language like C, that’s about all there is to it. The language may offer various kinds of support for organizing data and functions, but it won’t divide the world any differently. Functions and data structures
-                    are the basic elements of design.</p>
-                  <p>Object-oriented programming doesn’t so much dispute this view of the world as restructure it at a higher level. It groups operations and data into modular units called objects and lets you combine objects into structured networks to
-                    form a complete program. In an object-oriented programming language, objects and object interactions are the basic elements of design.</p>
-                  <p><sub>-- <a href="https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/OOP_ObjC/">Object-Oriented Programming with Objective-C</a>, Apple</sub></p>
-                </blockquote>
-                <p>Some other examples of programming paradigms are:</p>
-                <div class="table-responsive">
-                  <table class="markbind-table table table-bordered table-striped">
-                    <thead>
-                      <tr>
-                        <th>Paradigm</th>
-                        <th>Programming Languages</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td><a href="https://en.wikipedia.org/wiki/Procedural_programming"><em>Procedural Programming</em> paradigm</a></td>
-                        <td>C</td>
-                      </tr>
-                      <tr>
-                        <td><a href="https://en.wikipedia.org/wiki/Functional_programming"><em>Functional Programming</em> paradigm</a></td>
-                        <td>F#, Haskel, Scala</td>
-                      </tr>
-                      <tr>
-                        <td><a href="https://en.wikipedia.org/wiki/Logic_programming"><em>Logic Programming</em> paradigm</a></td>
-                        <td>Prolog</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <p><strong>Some programming languages support multiple paradigms.</strong></p>
-                <tip-box>
-                  <p><span class="fas fa-cube"></span> Java is primarily an OOP language but it supports limited forms of functional programming and it can be used to (although not recommended) write procedural code. <span class="dimmed"> e.g. <a href="https://github.com/se-edu/addressbook-level1">se-edu/addressbook-level1</a></span></p>
-                  <p><span class="fas fa-cube"></span> JavaScript and Python support functional, procedural, and OOP programming.</p>
-                </tip-box>
+        <panel type="seamless" header="#### What" expanded="">
+          <div class="indented">
+            <span class="badge badge-light">
+  <span><span class="dimmed"><font color="Crimson"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty"
+              aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></span>
+            </span>
+            </span>
+            <span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can describe OOP at a higher level</span>
+            </span>
+            </span>
+            </span>
+            <p></p>
+            <div>
+              <p><strong>Object-Oriented Programming (OOP) is a <em>programming paradigm</em>.</strong> A programming paradigm guides programmers to analyze programming problems, and structure programming solutions, in a specific way.</p>
+              <blockquote>
+                <p>Programming languages have traditionally divided the world into two parts—data and operations on data. Data is static and immutable, except as the operations may change it. The procedures and functions that operate on data have no lasting
+                  state of their own; they’re useful only in their ability to affect data.</p>
+                <p>This division is, of course, grounded in the way computers work, so it’s not one that you can easily ignore or push aside. Like the equally pervasive distinctions between matter and energy and between nouns and verbs, it forms the background
+                  against which we work. At some point, all programmers—even object-oriented programmers—must lay out the data structures that their programs will use and define the functions that will act on the data.</p>
+                <p>With a procedural programming language like C, that’s about all there is to it. The language may offer various kinds of support for organizing data and functions, but it won’t divide the world any differently. Functions and data structures
+                  are the basic elements of design.</p>
+                <p>Object-oriented programming doesn’t so much dispute this view of the world as restructure it at a higher level. It groups operations and data into modular units called objects and lets you combine objects into structured networks to form
+                  a complete program. In an object-oriented programming language, objects and object interactions are the basic elements of design.</p>
+                <p><sub>-- <a href="https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/OOP_ObjC/">Object-Oriented Programming with Objective-C</a>, Apple</sub></p>
+              </blockquote>
+              <p>Some other examples of programming paradigms are:</p>
+              <div class="table-responsive">
+                <table class="markbind-table table table-bordered table-striped">
+                  <thead>
+                    <tr>
+                      <th>Paradigm</th>
+                      <th>Programming Languages</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><a href="https://en.wikipedia.org/wiki/Procedural_programming"><em>Procedural Programming</em> paradigm</a></td>
+                      <td>C</td>
+                    </tr>
+                    <tr>
+                      <td><a href="https://en.wikipedia.org/wiki/Functional_programming"><em>Functional Programming</em> paradigm</a></td>
+                      <td>F#, Haskel, Scala</td>
+                    </tr>
+                    <tr>
+                      <td><a href="https://en.wikipedia.org/wiki/Logic_programming"><em>Logic Programming</em> paradigm</a></td>
+                      <td>Prolog</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
+              <p><strong>Some programming languages support multiple paradigms.</strong></p>
+              <tip-box>
+                <p><span class="fas fa-cube"></span> Java is primarily an OOP language but it supports limited forms of functional programming and it can be used to (although not recommended) write procedural code. <span class="dimmed"> e.g. <a href="https://github.com/se-edu/addressbook-level1">se-edu/addressbook-level1</a></span></p>
+                <p><span class="fas fa-cube"></span> JavaScript and Python support functional, procedural, and OOP programming.</p>
+              </tip-box>
+            </div>
+            <div>
               <div>
-                <div>
-                  <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
-                    <div>
-                      <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> statements about OOP">
-                        <question>
-                          <p>A) Choose the correct statements</p>
-                          <ul class="task-list">
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. OO is a programming paradigm</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. OO guides us in how to structure the solution</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. OO is mainly an abstraction mechanism</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. OO is a programming language</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. OO is modeled after how the objects in real world work</li>
-                          </ul>
-                          <p>B) Choose the correct statements</p>
-                          <ul class="task-list">
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. Java and C++ are OO languages</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. C language follows the <em>Functional Programming</em> paradigm</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. Java can be used to write procedural code</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. Prolog follows the Logic Programming paradigm</li>
-                          </ul>
-                          <div slot="answer">
-                            <p>A) (a)(b)(c)(e)</p>
-                            <p>Explanation: While many languages support the OO paradigm, OO is not a language itself.</p>
-                            <p>B) Choose the correct statement</p>
-                            <p>(a)<s>(b)</s>(c)(d)</p>
-                            <p>Explanation: C follows the procedural paradigm. Yes, we can write procedural code using OO languages e.g., AddressBook-level1.</p>
-                          </div>
-                        </question>
-                      </panel>
-                    </div>
-                    <div>
-                      <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> procedural vs OOP">
-                        <question>
-                          <p>OO is a higher level mechanism than the procedural paradigm.</p>
-                          <ul radio-group="07027" class="radio-list">
-                            <li class="radio-list-item"><label><input class="radio-list-input" name="07027" type="radio"> True</label></li>
-                            <li class="radio-list-item"><label><input class="radio-list-input" name="07027" type="radio"> False</label></li>
-                          </ul>
-                          <div slot="answer">
-                            <p>True.</p>
-                            <p>Explanation: Procedural languages work at simple data structures (e.g., integers, arrays) and functions level. Because an object is an abstraction over data+related functions, OO works at a higher level.</p>
-                          </div>
-                        </question>
-                      </panel>
-                    </div>
-                  </panel>
-                </div>
+                <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                  <div>
+                    <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> statements about OOP">
+                      <question>
+                        <p>A) Choose the correct statements</p>
+                        <ul class="task-list">
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. OO is a programming paradigm</li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. OO guides us in how to structure the solution</li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. OO is mainly an abstraction mechanism</li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. OO is a programming language</li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. OO is modeled after how the objects in real world work</li>
+                        </ul>
+                        <p>B) Choose the correct statements</p>
+                        <ul class="task-list">
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. Java and C++ are OO languages</li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. C language follows the <em>Functional Programming</em> paradigm</li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. Java can be used to write procedural code</li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. Prolog follows the Logic Programming paradigm</li>
+                        </ul>
+                        <div slot="answer">
+                          <p>A) (a)(b)(c)(e)</p>
+                          <p>Explanation: While many languages support the OO paradigm, OO is not a language itself.</p>
+                          <p>B) Choose the correct statement</p>
+                          <p>(a)<s>(b)</s>(c)(d)</p>
+                          <p>Explanation: C follows the procedural paradigm. Yes, we can write procedural code using OO languages e.g., AddressBook-level1.</p>
+                        </div>
+                      </question>
+                    </panel>
+                  </div>
+                  <div>
+                    <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> procedural vs OOP">
+                      <question>
+                        <p>OO is a higher level mechanism than the procedural paradigm.</p>
+                        <ul radio-group="07027" class="radio-list">
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="07027" type="radio"> True</label></li>
+                          <li class="radio-list-item"><label><input class="radio-list-input" name="07027" type="radio"> False</label></li>
+                        </ul>
+                        <div slot="answer">
+                          <p>True.</p>
+                          <p>Explanation: Procedural languages work at simple data structures (e.g., integers, arrays) and functions level. Because an object is an abstraction over data+related functions, OO works at a higher level.</p>
+                        </div>
+                      </question>
+                    </panel>
+                  </div>
+                </panel>
               </div>
             </div>
-          </panel>
+          </div>
         </panel>
-        <panel type="seamless" expanded="">
-          <span slot="header" class="card-title"><div>
+      </panel>
+      <panel type="seamless" expanded="">
+        <span slot="header" class="card-title"><div>
 <h2 id="objects">Objects</h2></div></span>
-          <panel type="seamless" header="#### What" expanded="">
-            <div class="indented">
-              <span class="badge badge-light">
-  <span><span class="dimmed"><font color="Black"><span class="glyphicon glyphicon-education" aria-hidden="true"></span><span class="glyphicon glyphicon-education" aria-hidden="true"></span></font> : <span class="glyphicon glyphicon-star"
-                aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></span>
+        <panel type="seamless" header="#### What" expanded="">
+          <div class="indented">
+            <span class="badge badge-light">
+  <span><span class="dimmed"><font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+            <span
+              class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+              </span>
               </span>
               </span>
               <span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can describe how OOP relates to the real world</span>
@@ -592,13 +593,15 @@
                   </panel>
                 </div>
               </div>
-            </div>
-          </panel>
-          <panel type="seamless" header="#### Objects as Abstractions" expanded="">
-            <div class="indented">
-              <span class="badge badge-light">
-  <span><span class="dimmed"><font color="Black"><span class="glyphicon glyphicon-education" aria-hidden="true"></span><span class="glyphicon glyphicon-education" aria-hidden="true"></span></font> : <span class="glyphicon glyphicon-star"
-                aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></span>
+          </div>
+        </panel>
+        <panel type="seamless" header="#### Objects as Abstractions" expanded="">
+          <div class="indented">
+            <span class="badge badge-light">
+  <span><span class="dimmed"><font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+            <span
+              class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+              </span>
               </span>
               </span>
               <span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain the abstraction aspect of OOP</span>
@@ -615,13 +618,15 @@
                 </tip-box>
               </div>
               <div></div>
-            </div>
-          </panel>
-          <panel type="seamless" header="#### Encapsulation Of Objects" expanded="">
-            <div class="indented">
-              <span class="badge badge-light">
-  <span><span class="dimmed"><font color="Black"><span class="glyphicon glyphicon-education" aria-hidden="true"></span><span class="glyphicon glyphicon-education" aria-hidden="true"></span></font> : <span class="glyphicon glyphicon-star"
-                aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></span>
+          </div>
+        </panel>
+        <panel type="seamless" header="#### Encapsulation Of Objects" expanded="">
+          <div class="indented">
+            <span class="badge badge-light">
+  <span><span class="dimmed"><font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+            <span
+              class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+              </span>
               </span>
               </span>
               <span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain the encapsulation aspect of OOP</span>
@@ -662,107 +667,109 @@
                   </panel>
                 </div>
               </div>
-            </div>
-          </panel>
+          </div>
         </panel>
-        <panel type="seamless" expanded="">
-          <span slot="header" class="card-title"><div>
+      </panel>
+      <panel type="seamless" expanded="">
+        <span slot="header" class="card-title"><div>
 <h2 id="classes">Classes</h2></div></span>
-          <panel type="seamless" header="#### What" expanded="">
-            <div class="indented">
-              <span class="badge badge-light">
-  <span><span class="dimmed"><font color="Black"><span class="glyphicon glyphicon-education" aria-hidden="true"></span><span class="glyphicon glyphicon-education" aria-hidden="true"></span></font> : <span class="glyphicon glyphicon-star"
-                aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></span>
-              </span>
-              </span>
-              <span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain the relationship between classes and objects </span>
-              </span>
-              </span>
-              </span>
-              <p></p>
-              <div>
-                <p><strong>Writing an OOP program is essentially writing instructions that the computer uses to,</strong></p>
-                <ol>
-                  <li><strong>create the virtual world of object network, and</strong></li>
-                  <li><strong>provide it the inputs to produce the outcome we want.</strong></li>
-                </ol>
-                <p><strong>A <mark><em>class</em></mark> contains instructions for creating a specific kind of objects</strong>. It turns out sometimes multiple objects have the same behavior because they are of the same kind. Instructions for creating a
-                  one kind (or ‘class’) of objects can be done in one go and use that same instructions to instantiate (i.e. create) objects of that kind. We call such instructions a <em>Class</em>.</p>
-                <tip-box>
-                  <p><span class="fas fa-cube"></span> Classes and objects in an example scenario</p>
-                  <p>When writing an OOP program to calculate the average age of Adam, Beth, Charlie, and Daisy, instructions for creating objects <code>Adam</code>, <code>Beth</code>, <code>Charlie</code>, and <code>Daisy</code> will be very similar because
-                    they are all of the same kind : they all represent ‘persons’ with the same interface, the same kind of data (i.e. <code>name</code>, <code>DoB</code>, etc.), and the same kind of behavior (i.e. <code>getAge(Date)</code>, <code>getName()</code>,
-                    etc.). Therefore, we can have a class called <code>Person</code> containing instructions on how to create <code>Person</code> objects and use that class to instantiate objects <code>Adam</code>, <code>Beth</code>, <code>Charlie</code>,
-                    and <code>Daisy</code>. Similarly, we need classes <code>AgeList</code>, <code>Calculator</code>, and <code>Main</code> classes to instantiate one each of <code>AgeList</code>, <code>Calculator</code>, and <code>Main</code> objects.</p>
-                </tip-box>
-                <h5 id="implementing-classes"><big>Implementing Classes</big></h5>
-                <p>Given below are some resources on how to implement classes:</p>
-                <div class="alt-java">
+        <panel type="seamless" header="#### What" expanded="">
+          <div class="indented">
+            <span class="badge badge-light">
+  <span><span class="dimmed"><font color="Crimson"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty"
+              aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></span>
+            </span>
+            </span>
+            <span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain the relationship between classes and objects </span>
+            </span>
+            </span>
+            </span>
+            <p></p>
+            <div>
+              <p><strong>Writing an OOP program is essentially writing instructions that the computer uses to,</strong></p>
+              <ol>
+                <li><strong>create the virtual world of object network, and</strong></li>
+                <li><strong>provide it the inputs to produce the outcome we want.</strong></li>
+              </ol>
+              <p><strong>A <mark><em>class</em></mark> contains instructions for creating a specific kind of objects</strong>. It turns out sometimes multiple objects have the same behavior because they are of the same kind. Instructions for creating a one
+                kind (or ‘class’) of objects can be done in one go and use that same instructions to instantiate (i.e. create) objects of that kind. We call such instructions a <em>Class</em>.</p>
+              <tip-box>
+                <p><span class="fas fa-cube"></span> Classes and objects in an example scenario</p>
+                <p>When writing an OOP program to calculate the average age of Adam, Beth, Charlie, and Daisy, instructions for creating objects <code>Adam</code>, <code>Beth</code>, <code>Charlie</code>, and <code>Daisy</code> will be very similar because
+                  they are all of the same kind : they all represent ‘persons’ with the same interface, the same kind of data (i.e. <code>name</code>, <code>DoB</code>, etc.), and the same kind of behavior (i.e. <code>getAge(Date)</code>, <code>getName()</code>,
+                  etc.). Therefore, we can have a class called <code>Person</code> containing instructions on how to create <code>Person</code> objects and use that class to instantiate objects <code>Adam</code>, <code>Beth</code>, <code>Charlie</code>,
+                  and <code>Daisy</code>. Similarly, we need classes <code>AgeList</code>, <code>Calculator</code>, and <code>Main</code> classes to instantiate one each of <code>AgeList</code>, <code>Calculator</code>, and <code>Main</code> objects.</p>
+              </tip-box>
+              <h5 id="implementing-classes"><big>Implementing Classes</big></h5>
+              <p>Given below are some resources on how to implement classes:</p>
+              <div class="alt-java">
+                <ul>
+                  <li><a href="https://docs.oracle.com/javase/tutorial/java/javaOO/classdecl.html">Classes, methods, variables</a> – Start from the linked page and follow the next few steps in the tutorial</li>
+                </ul>
+              </div>
+              <div class="alt-python">
+                <div>
                   <ul>
-                    <li><a href="https://docs.oracle.com/javase/tutorial/java/javaOO/classdecl.html">Classes, methods, variables</a> – Start from the linked page and follow the next few steps in the tutorial</li>
+                    <li><a href="https://nus-te3201.github.io/website/programming/toc/oop.html#classes">Python Programming Basics: OOP: Classes</a> - Basics of writing classes using Python</li>
                   </ul>
                 </div>
-                <div class="alt-python">
-                  <div>
-                    <ul>
-                      <li><a href="https://nus-te3201.github.io/website/programming/toc/oop.html#classes">Python Programming Basics: OOP: Classes</a> - Basics of writing classes using Python</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div>
-                  <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
-                    <div>
-                      <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Identify Classes and Objects">
-                        <question>
-                          <p>Consider the following scenario. If you were to simulate this in an OOP program, what are the classes and the objects you would use? Use UML notation to give your answer.</p>
-                          <tip-box>
-                            John gave a checque to the Cashier to pay for the LoTR and GoT books he bought.
-                          </tip-box>
-                          <div slot="hint">
-                            <div class="table-responsive">
-                              <table class="markbind-table table table-bordered table-striped">
-                                <thead>
-                                  <tr>
-                                    <th>Class</th>
-                                    <th>Objects</th>
-                                  </tr>
-                                </thead>
-                                <tbody>
-                                  <tr>
-                                    <td><code>Customer</code></td>
-                                    <td><code>John</code></td>
-                                  </tr>
-                                  <tr>
-                                    <td><code>Book</code></td>
-                                    <td><code>LoTR</code> <code>GoT</code></td>
-                                  </tr>
-                                  <tr>
-                                    <td><code>Cheque</code></td>
-                                    <td><code>checqueJohnGave</code></td>
-                                  </tr>
-                                  <tr>
-                                    <td><code>Cashier</code></td>
-                                    <td><code>bookshopCashier</code></td>
-                                  </tr>
-                                </tbody>
-                              </table>
-                            </div>
-                          </div>
-                        </question>
-                      </panel>
-                    </div>
-                  </panel>
-                </div>
               </div>
             </div>
-          </panel>
-          <panel type="seamless" header="#### Class Level Members" expanded="">
-            <div class="indented">
-              <span class="badge badge-light">
-  <span><span class="dimmed"><font color="Black"><span class="glyphicon glyphicon-education" aria-hidden="true"></span><span class="glyphicon glyphicon-education" aria-hidden="true"></span></font> : <span class="glyphicon glyphicon-star"
-                aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></span>
+            <div>
+              <div>
+                <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                  <div>
+                    <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Identify Classes and Objects">
+                      <question>
+                        <p>Consider the following scenario. If you were to simulate this in an OOP program, what are the classes and the objects you would use? Use UML notation to give your answer.</p>
+                        <tip-box>
+                          John gave a checque to the Cashier to pay for the LoTR and GoT books he bought.
+                        </tip-box>
+                        <div slot="hint">
+                          <div class="table-responsive">
+                            <table class="markbind-table table table-bordered table-striped">
+                              <thead>
+                                <tr>
+                                  <th>Class</th>
+                                  <th>Objects</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td><code>Customer</code></td>
+                                  <td><code>John</code></td>
+                                </tr>
+                                <tr>
+                                  <td><code>Book</code></td>
+                                  <td><code>LoTR</code> <code>GoT</code></td>
+                                </tr>
+                                <tr>
+                                  <td><code>Cheque</code></td>
+                                  <td><code>checqueJohnGave</code></td>
+                                </tr>
+                                <tr>
+                                  <td><code>Cashier</code></td>
+                                  <td><code>bookshopCashier</code></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </question>
+                    </panel>
+                  </div>
+                </panel>
+              </div>
+            </div>
+          </div>
+        </panel>
+        <panel type="seamless" header="#### Class Level Members" expanded="">
+          <div class="indented">
+            <span class="badge badge-light">
+  <span><span class="dimmed"><font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+            <span
+              class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+              </span>
               </span>
               </span>
               <span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain class-level members</span>
@@ -827,13 +834,15 @@
                   </panel>
                 </div>
               </div>
-            </div>
-          </panel>
-          <panel type="seamless" header="#### Enumerations" expanded="">
-            <div class="indented">
-              <span class="badge badge-light">
-  <span><span class="dimmed"><font color="Black"><span class="glyphicon glyphicon-education" aria-hidden="true"></span><span class="glyphicon glyphicon-education" aria-hidden="true"></span></font> : <span class="glyphicon glyphicon-star"
-                aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></span>
+          </div>
+        </panel>
+        <panel type="seamless" header="#### Enumerations" expanded="">
+          <div class="indented">
+            <span class="badge badge-light">
+  <span><span class="dimmed"><font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+            <span
+              class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+              </span>
               </span>
               </span>
               <span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain the meaning of enumerations</span>
@@ -863,93 +872,93 @@
                   </panel>
                 </div>
               </div>
-            </div>
-          </panel>
+          </div>
         </panel>
-        <panel type="seamless" expanded="">
-          <span slot="header" class="card-title"><div>
+      </panel>
+      <panel type="seamless" expanded="">
+        <span slot="header" class="card-title"><div>
 <h2 id="associations">Associations</h2></div></span>
-          <panel type="seamless" header="#### What" expanded="">
-            <div class="indented">
-              <span class="badge badge-light">
+        <panel type="seamless" header="#### What" expanded="">
+          <div class="indented">
+            <span class="badge badge-light">
   <span><span class="dimmed"><font color="Crimson"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty"
-                aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></span>
+              aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></span>
+            </span>
+            </span>
+            <span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain associations</span>
+            </span>
+            </span>
+            </span>
+            <p></p>
+            <div>
+              <p>Objects in an OO solution need to be connected to each other to form a network so that they can interact with each other. Such <strong>connections between objects are called <em>associations</em>.</strong></p>
+              <tip-box>
+                <p><span class="fas fa-cube"></span> Suppose an OOP program for managing a learning management system creates an object structure to represent the related objects. In that object structure we can expect to have associations between a<code>Course</code>                  object that represents a specific course and <code>Student</code> objects that represents students taking that course.</p>
+              </tip-box>
+              <p><strong>Associations in an object structure can change over time</strong>.</p>
+              <tip-box>
+                <p><span class="fas fa-cube"></span> To continue the previous example, the associations between a <code>Course</code> object and <code>Student</code> objects can change as students enroll in the module or drop the module over time.</p>
+              </tip-box>
+              <p><strong>Associations among objects can be generalized as associations between the corresponding classles too.</strong></p>
+              <tip-box>
+                <p><span class="fas fa-cube"></span> In our example, as some <code>Course</code> objects can have associations with some <code>Student</code> objects, we can view it as an association between the <code>Course</code> class and the <code>Student</code>                  class.</p>
+              </tip-box>
+              <h5 id="implementing-associations"><big>Implementing associations</big></h5>
+              <p><strong>We use instance level variables to implement associations.</strong></p>
+            </div>
+            <div></div>
+          </div>
+        </panel>
+        <panel type="seamless" header="#### Navigability" expanded="">
+          <div class="indented">
+            <span class="badge badge-light">
+  <span><span class="dimmed"><font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+            <span
+              class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
               </span>
               </span>
-              <span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain associations</span>
+              </span>
+              <span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain the meaning of navigability</span>
               </span>
               </span>
               </span>
               <p></p>
               <div>
-                <p>Objects in an OO solution need to be connected to each other to form a network so that they can interact with each other. Such <strong>connections between objects are called <em>associations</em>.</strong></p>
-                <tip-box>
-                  <p><span class="fas fa-cube"></span> Suppose an OOP program for managing a learning management system creates an object structure to represent the related objects. In that object structure we can expect to have associations between a<code>Course</code>                    object that represents a specific course and <code>Student</code> objects that represents students taking that course.</p>
-                </tip-box>
-                <p><strong>Associations in an object structure can change over time</strong>.</p>
-                <tip-box>
-                  <p><span class="fas fa-cube"></span> To continue the previous example, the associations between a <code>Course</code> object and <code>Student</code> objects can change as students enroll in the module or drop the module over time.</p>
-                </tip-box>
-                <p><strong>Associations among objects can be generalized as associations between the corresponding classles too.</strong></p>
-                <tip-box>
-                  <p><span class="fas fa-cube"></span> In our example, as some <code>Course</code> objects can have associations with some <code>Student</code> objects, we can view it as an association between the <code>Course</code> class and the <code>Student</code>                    class.</p>
-                </tip-box>
-                <h5 id="implementing-associations"><big>Implementing associations</big></h5>
-                <p><strong>We use instance level variables to implement associations.</strong></p>
+                <p>When two classes are linked by an association, it does not necessarily mean both classes know about each other. <strong>The concept of which class in the association knows about the other class is called <em>navigability</em>.</strong></p>
               </div>
               <div></div>
-            </div>
-          </panel>
-          <panel type="seamless" header="#### Navigability" expanded="">
-            <div class="indented">
-              <span class="badge badge-light">
+          </div>
+        </panel>
+        <panel type="seamless" header="#### Multiplicity" expanded="">
+          <div class="indented">
+            <span class="badge badge-light">
   <span><span class="dimmed"><font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
-              <span
-                class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
-                </span>
-                </span>
-                </span>
-                <span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain the meaning of navigability</span>
-                </span>
-                </span>
-                </span>
-                <p></p>
-                <div>
-                  <p>When two classes are linked by an association, it does not necessarily mean both classes know about each other. <strong>The concept of which class in the association knows about the other class is called <em>navigability</em>.</strong></p>
-                </div>
-                <div></div>
-            </div>
-          </panel>
-          <panel type="seamless" header="#### Multiplicity" expanded="">
-            <div class="indented">
-              <span class="badge badge-light">
-  <span><span class="dimmed"><font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
-              <span
-                class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
-                </span>
-                </span>
-                </span>
-                <span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain the meaning of multiplicity</span>
-                </span>
-                </span>
-                </span>
-                <p></p>
-                <div>
-                  <p><strong><em>Multiplicity</em> is the aspect of an OOP solution that dictates how many objects take part in each association.</strong></p>
-                  <tip-box>
-                    <p><span class="fas fa-cube"></span> The navigability of the association between <code>Course</code> objects and <code>Student</code> objects tells you how many <code>Course</code> objects can be associated with one <code>Student</code>                      object and vice versa.</p>
-                  </tip-box>
-                  <h5 id="implementing-multiplicity"><big>Implementing multiplicity</big></h5>
-                  <p><strong>A normal instance-level variable gives us a <code>0..1</code> multiplicity</strong> (also called <em>optional associations</em>) because a variable can hold a reference to a single object or <code>null</code>.</p>
-                  <tip-box>
-                    <p><span class="fas fa-cube"></span> In the code below, the <code>Logic</code> class has a variable that can hold <code>0..1</code> <span class="dimmed">i.e., zero or one</span> <code>Minefield</code> objects.</p>
-                    <div>
-                      <table>
-                        <tr>
-                        
-                          <td>
-                            <p>Java <span class="fas fa-arrow-down"></span></p>
-                            <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span></span>{
+            <span
+              class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+              </span>
+              </span>
+              </span>
+              <span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain the meaning of multiplicity</span>
+              </span>
+              </span>
+              </span>
+              <p></p>
+              <div>
+                <p><strong><em>Multiplicity</em> is the aspect of an OOP solution that dictates how many objects take part in each association.</strong></p>
+                <tip-box>
+                  <p><span class="fas fa-cube"></span> The navigability of the association between <code>Course</code> objects and <code>Student</code> objects tells you how many <code>Course</code> objects can be associated with one <code>Student</code>                    object and vice versa.</p>
+                </tip-box>
+                <h5 id="implementing-multiplicity"><big>Implementing multiplicity</big></h5>
+                <p><strong>A normal instance-level variable gives us a <code>0..1</code> multiplicity</strong> (also called <em>optional associations</em>) because a variable can hold a reference to a single object or <code>null</code>.</p>
+                <tip-box>
+                  <p><span class="fas fa-cube"></span> In the code below, the <code>Logic</code> class has a variable that can hold <code>0..1</code> <span class="dimmed">i.e., zero or one</span> <code>Minefield</code> objects.</p>
+                  <div>
+                    <table>
+                      <tr>
+                      
+                        <td>
+                          <p>Java <span class="fas fa-arrow-down"></span></p>
+                          <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span></span>{
     Minefield minefield;
 }
 
@@ -960,14 +969,14 @@
 
 
 </code></pre>
-                            <p></p>
-                          </td>
-                        
-                          <td valign="bottom">  <br><br></td>
-                        
-                          <td valign="bottom">
-                            <p>Python <span class="fas fa-arrow-down"></span></p>
-                            <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span>:</span>
+                          <p></p>
+                        </td>
+                      
+                        <td valign="bottom">  <br><br></td>
+                      
+                        <td valign="bottom">
+                          <p>Python <span class="fas fa-arrow-down"></span></p>
+                          <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span>:</span>
   
   <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, minefield)</span>:</span>
     self.minefield = minefield
@@ -978,39 +987,39 @@
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Minefield</span>:</span>
   <span class="hljs-comment"># ...</span>
 </code></pre>
-                            <p></p>
-                          </td>
-                        </tr>
-                      </table>
-                    </div>
-                  </tip-box>
-                  <p><strong>A variable can be used to implement a <code>1</code> multiplicity too</strong> (also called <em>compulsory associations</em>).</p>
-                  <tip-box>
-                    <p><span class="fas fa-cube"></span> In the code below, the <code>Logic</code> class will always have a <code>ConfigGenerator</code> object, provided the variable is not set to null at some point.</p>
-                    <div class="alt-java">
-                      <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span> </span>{
+                          <p></p>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </tip-box>
+                <p><strong>A variable can be used to implement a <code>1</code> multiplicity too</strong> (also called <em>compulsory associations</em>).</p>
+                <tip-box>
+                  <p><span class="fas fa-cube"></span> In the code below, the <code>Logic</code> class will always have a <code>ConfigGenerator</code> object, provided the variable is not set to null at some point.</p>
+                  <div class="alt-java">
+                    <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span> </span>{
     ConfigGenerator cg = <span class="hljs-keyword">new</span> ConfigGenerator();
     ...
 }
 </code></pre>
-                    </div>
-                    <div class="alt-python">
-                      <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span>:</span>
+                  </div>
+                  <div class="alt-python">
+                    <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span>:</span>
 
   <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
     self.config_gen = ConfigGenerator()
 </code></pre>
-                    </div>
-                  </tip-box>
-                  <p><strong>Bi-directional associations require matching variables in both classes.</strong></p>
-                  <tip-box>
-                    <p><span class="fas fa-cube"></span> In the code below, the <code>Foo</code> class has a variable to hold a <code>Bar</code> object and vice versa <span class="dimmed">i.e., each object can have an association with an object of the other type</span>.</p>
-                    <table>
-                      <tr>
-                      
-                        <td>
-                          <p>Java <span class="fas fa-arrow-down"></span></p>
-                          <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span> </span>{
+                  </div>
+                </tip-box>
+                <p><strong>Bi-directional associations require matching variables in both classes.</strong></p>
+                <tip-box>
+                  <p><span class="fas fa-cube"></span> In the code below, the <code>Foo</code> class has a variable to hold a <code>Bar</code> object and vice versa <span class="dimmed">i.e., each object can have an association with an object of the other type</span>.</p>
+                  <table>
+                    <tr>
+                    
+                      <td>
+                        <p>Java <span class="fas fa-arrow-down"></span></p>
+                        <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span> </span>{
     Bar bar;
     <span class="hljs-comment">//...</span>
 }
@@ -1022,14 +1031,14 @@
 }
 
 </code></pre>
-                          <p></p>
-                        </td>
-                      
-                        <td valign="bottom">  <br><br></td>
-                      
-                        <td valign="bottom">
-                          <p>Python <span class="fas fa-arrow-down"></span></p>
-                          <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span>:</span>
+                        <p></p>
+                      </td>
+                    
+                      <td valign="bottom">  <br><br></td>
+                    
+                      <td valign="bottom">
+                        <p>Python <span class="fas fa-arrow-down"></span></p>
+                        <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span>:</span>
   
   <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, bar)</span>:</span>
     self.bar = bar;
@@ -1041,74 +1050,74 @@
     self.foo = foo;
     
 </code></pre>
-                          <p></p>
-                        </td>
-                      </tr>
-                    </table>
-                  </tip-box>
-                  <p><strong>To implement other multiplicities, choose a suitable data structure</strong> such as Arrays, ArrayLists, HashMaps, Sets, etc.</p>
-                  <tip-box>
-                    <table>
-                      <tr>
-                      
-                        <td>
-                          <p>Java <span class="fas fa-arrow-down"></span></p>
-                          <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Minefield</span> </span>{
+                        <p></p>
+                      </td>
+                    </tr>
+                  </table>
+                </tip-box>
+                <p><strong>To implement other multiplicities, choose a suitable data structure</strong> such as Arrays, ArrayLists, HashMaps, Sets, etc.</p>
+                <tip-box>
+                  <table>
+                    <tr>
+                    
+                      <td>
+                        <p>Java <span class="fas fa-arrow-down"></span></p>
+                        <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Minefield</span> </span>{
     Cell[][] cell;
     ...
 }
 </code></pre>
-                          <p></p>
-                        </td>
-                      
-                        <td valign="bottom">  <br><br></td>
-                      
-                        <td valign="bottom">
-                          <p>Python <span class="fas fa-arrow-down"></span></p>
-                          <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Minefield</span>:</span>
+                        <p></p>
+                      </td>
+                    
+                      <td valign="bottom">  <br><br></td>
+                    
+                      <td valign="bottom">
+                        <p>Python <span class="fas fa-arrow-down"></span></p>
+                        <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Minefield</span>:</span>
   
   <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
     self.cells = {<span class="hljs-number">1</span>:[], <span class="hljs-number">2</span>:[], <span class="hljs-number">3</span>:[]}
 </code></pre>
-                          <p></p>
-                        </td>
-                      </tr>
-                    </table>
-                  </tip-box>
-                </div>
-                <div></div>
-            </div>
-          </panel>
-          <panel type="seamless" header="#### Dependencies" expanded="">
-            <div class="indented">
-              <span class="badge badge-light">
+                        <p></p>
+                      </td>
+                    </tr>
+                  </table>
+                </tip-box>
+              </div>
+              <div></div>
+          </div>
+        </panel>
+        <panel type="seamless" header="#### Dependencies" expanded="">
+          <div class="indented">
+            <span class="badge badge-light">
   <span><span class="dimmed"><font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font>
-              <span
-                class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
-                </span>
-                </span>
-                </span>
-                <span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain dependencies among classes</span>
-                </span>
-                </span>
-                </span>
-                <p></p>
-                <div>
-                  <p>Dependencies are objects that are not directly linked in the object network can still interact with each other. These are a weaker form of associations we call <em>dependencies</em>.</p>
-                  <tip-box>
-                    <p><span class="fas fa-cube"></span> A <code>Course</code> object can have a dependency on a <code>Registrar</code> object to obtain the maximum number of students it can support.</p>
-                  </tip-box>
-                  <h5 id="implementing-dependencies"><big>Implementing dependencies</big></h5>
-                  <p>Dependencies result from interactions between objects that do not result in a long-term link between the said objects.</p>
-                  <tip-box>
-                    <p><span class="fas fa-cube"></span> In the code below, <code>Foo</code> has a dependency on <code>Bar</code> but it is not an association because it is only a
-                      <tooltip content="temporary">transient</tooltip> interaction and there is no long term relationship between a <code>Foo</code> object and a <code>Bar</code> object. <span class="dimmed">i.e. the <code>Foo</code> object does not keep the <code>Bar</code> object it receives as a parameter</span>.</p>
-                    <table>
-                      <tr>
-                      
-                        <td>
-                          <p>Java <span class="fas fa-arrow-down"></span></p>
-                          <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span></span>{
+            <span
+              class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+              </span>
+              </span>
+              </span>
+              <span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain dependencies among classes</span>
+              </span>
+              </span>
+              </span>
+              <p></p>
+              <div>
+                <p>Dependencies are objects that are not directly linked in the object network can still interact with each other. These are a weaker form of associations we call <em>dependencies</em>.</p>
+                <tip-box>
+                  <p><span class="fas fa-cube"></span> A <code>Course</code> object can have a dependency on a <code>Registrar</code> object to obtain the maximum number of students it can support.</p>
+                </tip-box>
+                <h5 id="implementing-dependencies"><big>Implementing dependencies</big></h5>
+                <p>Dependencies result from interactions between objects that do not result in a long-term link between the said objects.</p>
+                <tip-box>
+                  <p><span class="fas fa-cube"></span> In the code below, <code>Foo</code> has a dependency on <code>Bar</code> but it is not an association because it is only a
+                    <tooltip content="temporary">transient</tooltip> interaction and there is no long term relationship between a <code>Foo</code> object and a <code>Bar</code> object. <span class="dimmed">i.e. the <code>Foo</code> object does not keep the <code>Bar</code> object it receives as a parameter</span>.</p>
+                  <table>
+                    <tr>
+                    
+                      <td>
+                        <p>Java <span class="fas fa-arrow-down"></span></p>
+                        <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span></span>{
     
     <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">calculate</span><span class="hljs-params">(Bar bar)</span></span>{
         <span class="hljs-keyword">return</span> bar.getValue();
@@ -1123,14 +1132,14 @@
     }
 }
 </code></pre>
-                          <p></p>
-                        </td>
-                      
-                        <td>  <br><br></td>
-                      
-                        <td valign="top">
-                          <p>Python <span class="fas fa-arrow-down"></span></p>
-                          <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span>:</span>
+                        <p></p>
+                      </td>
+                    
+                      <td>  <br><br></td>
+                    
+                      <td valign="top">
+                        <p>Python <span class="fas fa-arrow-down"></span></p>
+                        <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span>:</span>
     
     <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate</span><span class="hljs-params">(self, bar)</span>:</span>
         <span class="hljs-keyword">return</span> bar.value;
@@ -1140,105 +1149,105 @@
     <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, value)</span>:</span>
       self.value = value
 </code></pre>
-                          <p></p>
-                        </td>
-                      </tr>
-                    </table>
-                    <p>The code above results in a dependency from <code>Foo</code> class to the <code>Bar</code> class.</p>
-                  </tip-box>
-                </div>
-                <div></div>
-            </div>
-          </panel>
-          <panel type="seamless" header="#### Composition" expanded="">
-            <div class="indented">
-              <span class="badge badge-light">
+                        <p></p>
+                      </td>
+                    </tr>
+                  </table>
+                  <p>The code above results in a dependency from <code>Foo</code> class to the <code>Bar</code> class.</p>
+                </tip-box>
+              </div>
+              <div></div>
+          </div>
+        </panel>
+        <panel type="seamless" header="#### Composition" expanded="">
+          <div class="indented">
+            <span class="badge badge-light">
   <span><span class="dimmed"><font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font>
-              <span
-                class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
-                </span>
-                </span>
-                </span>
-                <span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain the meaning of composition</span>
-                </span>
-                </span>
-                </span>
-                <p></p>
-                <div>
-                  <p><strong>A composition is an association that represents a strong <em>whole-part</em> relationship.</strong> When the <em>whole</em> is destroyed, <em>parts</em> are destroyed too.</p>
-                  <tip-box>
-                    <p><span class="fas fa-cube"></span> A <code>Board</code> (used for playing board games) consists of <code>Square</code> objects.</p>
-                  </tip-box>
-                  <p><strong>Composition also implies that there cannot be cyclical links</strong>.</p>
-                  <tip-box>
-                    <p><span class="fas fa-cube"></span> The ‘sub-folder’ association between <code>Folder</code> objects is a composition type association. That means if the <code>Folder</code> object <code>foo</code> is a sub folder of <code>Folder</code>                      object <code>bar</code>, <code>bar</code> cannot be a sub-folder of <code>foo</code>.</p>
-                  </tip-box>
-                  <h5 id="implementing-composition"><big>Implementing composition</big></h5>
-                  <p><strong>Composition too is implemented using a normal variable.</strong> If correctly implemented, the ‘part’ object will be deleted when the ‘whole’ object is deleted. Ideally, the ‘part’ object may not even be visible to clients of
-                    the ‘whole’ object.</p>
-                  <tip-box>
-                    <p><span class="fas fa-cube"></span> In the code below, the <code>Email</code> has a composition type relationship with the <code>Subject</code> class, in the sense that the subject is part of the email.</p>
-                    <table>
-                      <tr>
-                      
-                        <td valign="top">
-                          <p>Java <span class="fas fa-arrow-down"></span></p>
-                          <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Email</span> </span>{
+            <span
+              class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+              </span>
+              </span>
+              </span>
+              <span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain the meaning of composition</span>
+              </span>
+              </span>
+              </span>
+              <p></p>
+              <div>
+                <p><strong>A composition is an association that represents a strong <em>whole-part</em> relationship.</strong> When the <em>whole</em> is destroyed, <em>parts</em> are destroyed too.</p>
+                <tip-box>
+                  <p><span class="fas fa-cube"></span> A <code>Board</code> (used for playing board games) consists of <code>Square</code> objects.</p>
+                </tip-box>
+                <p><strong>Composition also implies that there cannot be cyclical links</strong>.</p>
+                <tip-box>
+                  <p><span class="fas fa-cube"></span> The ‘sub-folder’ association between <code>Folder</code> objects is a composition type association. That means if the <code>Folder</code> object <code>foo</code> is a sub folder of <code>Folder</code>                    object <code>bar</code>, <code>bar</code> cannot be a sub-folder of <code>foo</code>.</p>
+                </tip-box>
+                <h5 id="implementing-composition"><big>Implementing composition</big></h5>
+                <p><strong>Composition too is implemented using a normal variable.</strong> If correctly implemented, the ‘part’ object will be deleted when the ‘whole’ object is deleted. Ideally, the ‘part’ object may not even be visible to clients of the
+                  ‘whole’ object.</p>
+                <tip-box>
+                  <p><span class="fas fa-cube"></span> In the code below, the <code>Email</code> has a composition type relationship with the <code>Subject</code> class, in the sense that the subject is part of the email.</p>
+                  <table>
+                    <tr>
+                    
+                      <td valign="top">
+                        <p>Java <span class="fas fa-arrow-down"></span></p>
+                        <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Email</span> </span>{
     <span class="hljs-keyword">private</span> Subject subject;
   ...
 }
 </code></pre>
-                          <p></p>
-                        </td>
-                      
-                        <td>  <br><br></td>
-                      
-                        <td valign="top">
-                          <p>Python <span class="fas fa-arrow-down"></span></p>
-                          <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Email</span>:</span>
+                        <p></p>
+                      </td>
+                    
+                      <td>  <br><br></td>
+                    
+                      <td valign="top">
+                        <p>Python <span class="fas fa-arrow-down"></span></p>
+                        <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Email</span>:</span>
   
   <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
     self.__subject = Subject()
 </code></pre>
-                          <p></p>
-                        </td>
-                      </tr>
-                    </table>
-                  </tip-box>
-                </div>
-                <div></div>
-            </div>
-          </panel>
-          <panel type="seamless" header="#### Aggregation" expanded="">
-            <div class="indented">
-              <span class="badge badge-light">
+                        <p></p>
+                      </td>
+                    </tr>
+                  </table>
+                </tip-box>
+              </div>
+              <div></div>
+          </div>
+        </panel>
+        <panel type="seamless" header="#### Aggregation" expanded="">
+          <div class="indented">
+            <span class="badge badge-light">
   <span><span class="dimmed"><font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font>
-              <span
-                class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
-                </span>
-                </span>
-                </span>
-                <span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain the meaning of aggregations</span>
-                </span>
-                </span>
-                </span>
-                <p></p>
-                <div>
-                  <p><strong><em>Aggregation</em> represents a <em>container-contained</em> relationship.</strong> It is a weaker relationship than composition.</p>
-                  <tip-box>
-                    <p><span class="fas fa-cube"></span> <code>SportsClub</code> acts as a <em>container</em> for <code>Person</code> objects. <code>Person</code> objects can survive without a <code>SportsClub</code> object.</p>
-                  </tip-box>
-                  <h5 id="implementing-aggregation"><strong>Implementing aggregation</strong></h5>
-                  <p>Implementation is similar to that of composition except the <em>containee</em> object can exist even after the <em>container</em> object is deleted.</p>
-                  <tip-box>
-                    <p><span class="fas fa-cube"></span> In the code below, there is an aggregation association between the <code>Team</code> class and the <code>Person</code> in that a <code>Team</code> contains <code>Person</code> a object who is the leader
-                      of the team.</p>
-                    <table>
-                      <tr>
-                      
-                        <td valign="top">
-                          <p>Java <span class="fas fa-arrow-down"></span></p>
-                          <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Team</span> </span>{
+            <span
+              class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+              </span>
+              </span>
+              </span>
+              <span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain the meaning of aggregations</span>
+              </span>
+              </span>
+              </span>
+              <p></p>
+              <div>
+                <p><strong><em>Aggregation</em> represents a <em>container-contained</em> relationship.</strong> It is a weaker relationship than composition.</p>
+                <tip-box>
+                  <p><span class="fas fa-cube"></span> <code>SportsClub</code> acts as a <em>container</em> for <code>Person</code> objects. <code>Person</code> objects can survive without a <code>SportsClub</code> object.</p>
+                </tip-box>
+                <h5 id="implementing-aggregation"><strong>Implementing aggregation</strong></h5>
+                <p>Implementation is similar to that of composition except the <em>containee</em> object can exist even after the <em>container</em> object is deleted.</p>
+                <tip-box>
+                  <p><span class="fas fa-cube"></span> In the code below, there is an aggregation association between the <code>Team</code> class and the <code>Person</code> in that a <code>Team</code> contains <code>Person</code> a object who is the leader
+                    of the team.</p>
+                  <table>
+                    <tr>
+                    
+                      <td valign="top">
+                        <p>Java <span class="fas fa-arrow-down"></span></p>
+                        <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Team</span> </span>{
     Person leader;
     ...
     <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">drive</span><span class="hljs-params">(Person p)</span> </span>{
@@ -1246,14 +1255,14 @@
     }
 }
 </code></pre>
-                          <p></p>
-                        </td>
-                      
-                        <td>  <br><br></td>
-                      
-                        <td valign="top">
-                          <p>Python <span class="fas fa-arrow-down"></span></p>
-                          <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Team</span>:</span>
+                        <p></p>
+                      </td>
+                    
+                      <td>  <br><br></td>
+                    
+                      <td valign="top">
+                        <p>Python <span class="fas fa-arrow-down"></span></p>
+                        <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Team</span>:</span>
   
   <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
     self.__leader = <span class="hljs-keyword">None</span>
@@ -1261,42 +1270,41 @@
   <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">drive</span><span class="hljs-params">(self, person)</span>:</span>
     self.__leader = person
 </code></pre>
-                          <p></p>
-                        </td>
-                      </tr>
-                    </table>
-                  </tip-box>
-                </div>
-                <div></div>
-            </div>
-          </panel>
-          <panel type="seamless" header="#### Association Classes" expanded="">
-            <div class="indented">
-              <span class="badge badge-light">
+                        <p></p>
+                      </td>
+                    </tr>
+                  </table>
+                </tip-box>
+              </div>
+              <div></div>
+          </div>
+        </panel>
+        <panel type="seamless" header="#### Association Classes" expanded="">
+          <div class="indented">
+            <span class="badge badge-light">
   <span><span class="dimmed"><font color="ForestGreen"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              <span
-                class="glyphicon glyphicon-star" aria-hidden="true"></span>
-                </font>
-                </span>
-                </span>
-                </span>
-                <span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain the meaning of association classes</span>
-                </span>
-                </span>
-                </span>
-                <p></p>
-                <div>
-                  <p><strong>An <em>association class</em> represents additional information about an association.</strong> It is a normal class but plays a special role from a design point of view.</p>
-                  <tip-box>
-                    <p><span class="fas fa-cube"></span> A <code>Man</code> class and a <code>Woman</code> class is linked with a ‘married to’ association and there is a need to store the date of marriage. However, that data is related to the association
-                      rather than specifically owned by either the <code>Man</code> object or the <code>Woman</code> object. In such situations, an additional association class can be introduced, e.g. a <code>Marriage</code> class, to store such information.</p>
-                  </tip-box>
-                  <h5 id="implementing-association-classes"><big>Implementing association classes</big></h5>
-                  <p>There is no special way to implement an association class. It can be implemented as a normal class that has variables to represent the endpoint of the association it represents.</p>
-                  <tip-box>
-                    <p><span class="fas fa-cube"></span> In the code below, the <code>Transaction</code> class is an association class that represent a transaction between a <code>Person</code> who is the seller and another <code>Person</code> who is the
-                      buyer.</p>
-                    <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Transaction</span></span>{
+            <span
+              class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              </font>
+              </span>
+              </span>
+              </span>
+              <span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain the meaning of association classes</span>
+              </span>
+              </span>
+              </span>
+              <p></p>
+              <div>
+                <p><strong>An <em>association class</em> represents additional information about an association.</strong> It is a normal class but plays a special role from a design point of view.</p>
+                <tip-box>
+                  <p><span class="fas fa-cube"></span> A <code>Man</code> class and a <code>Woman</code> class is linked with a ‘married to’ association and there is a need to store the date of marriage. However, that data is related to the association rather
+                    than specifically owned by either the <code>Man</code> object or the <code>Woman</code> object. In such situations, an additional association class can be introduced, e.g. a <code>Marriage</code> class, to store such information.</p>
+                </tip-box>
+                <h5 id="implementing-association-classes"><big>Implementing association classes</big></h5>
+                <p>There is no special way to implement an association class. It can be implemented as a normal class that has variables to represent the endpoint of the association it represents.</p>
+                <tip-box>
+                  <p><span class="fas fa-cube"></span> In the code below, the <code>Transaction</code> class is an association class that represent a transaction between a <code>Person</code> who is the seller and another <code>Person</code> who is the buyer.</p>
+                  <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Transaction</span></span>{
     
     <span class="hljs-comment">//all fields are compulsory</span>
     Person seller;
@@ -1309,125 +1317,27 @@
     }
 }
 </code></pre>
-                  </tip-box>
-                </div>
-                <div>
-                  <div>
-                    <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
-                      <div>
-                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Which are suitable as an Association Class?">
-                          <question>
-                            <p>Which one of these is the suitable as an Association Class?</p>
-                            <img src="/website/book/oop/associations/associationClasses/images/exerciseDiagram.png" width="500">
-                            <p></p>
-                            <ul class="task-list">
-                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a</li>
-                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b</li>
-                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c</li>
-                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d</li>
-                            </ul>
-                            <div slot="answer">
-                              <p>(a)(b)<s>(c)</s>(d)</p>
-                              <p>Explanation: Mileage is a property of the car, and not specifically about the association between the Driver and the Car. If Mileage was defined as the total number of miles that car was driven by that driver, then it would
-                                be suitable as an association class.</p>
-                            </div>
-                          </question>
-                        </panel>
-                      </div>
-                    </panel>
-                  </div>
-                </div>
-            </div>
-          </panel>
-        </panel>
-        <panel type="seamless" expanded="">
-          <span slot="header" class="card-title"><div>
-<h2 id="inheritance">Inheritance</h2></div></span>
-          <panel type="seamless" header="#### What" expanded="">
-            <div class="indented">
-              <span class="badge badge-light">
-  <span><span class="dimmed"><font color="Black"><span class="glyphicon glyphicon-education" aria-hidden="true"></span><span class="glyphicon glyphicon-education" aria-hidden="true"></span></font> : <span class="glyphicon glyphicon-star"
-                aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></span>
-              </span>
-              </span>
-              <span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain the meaning of inheritance</span>
-              </span>
-              </span>
-              </span>
-              <p></p>
-              <div>
-                <p><strong>The OOP concept <em>Inheritance</em> allows you to define a new class based on an existing class.</strong></p>
-                <tip-box>
-                  <p><span class="fas fa-cube"></span> For example, you can use inheritance to define an <code>EvaluationReport</code> class based on an existing <code>Report</code> class so that the <code>EvaluationReport</code> class does not have to duplicate
-                    code that is already implemented in the <code>Report</code> class. The <code>EvaluationReport</code> can inherit the <code>wordCount</code> attribute and the <code>print()</code> method from the <em>base class</em> <code>Report</code>.</p>
                 </tip-box>
-                <ul>
-                  <li>Other names for Base class: <em>Parent</em> class, <em>Super</em> class</li>
-                  <li>Other names for Derived class: <em>Child</em> class, <em>Sub</em> class, <em>Extended</em> class</li>
-                </ul>
-                <p><strong>A super class is said to be <em>more general</em> than the sub class.</strong> Conversely, a sub class is said to be more <em>specialized</em> than the super class.</p>
-                <p><strong>Applying inheritance on a group of similar classes can result in the common parts among classes being extracted into more general classes.</strong></p>
-                <tip-box>
-                  <p><span class="fas fa-cube"></span> <code>Man</code> and <code>Woman</code> behaves the same way for certain things. However, the two classes cannot be simply replaced with a more general class <code>Person</code> because of the need to
-                    distinguish between <code>Man</code> and <code>Woman</code> for certain other things. A solution is to add the <code>Person</code> class as a super class (to contain the code common to men and woment) and let <code>Man</code> and <code>Woman</code>                    inherit from <code>Person</code> class.</p>
-                </tip-box>
-                <p><strong>Inheritance implies the derived class can be considered as a <em>sub-type</em> of the base class (and the base class is a <em>super-type</em> of the derived class), resulting in an <em>is a</em> relationship.</strong></p>
-                <tip-box type="info">
-                  <p>Inheritance does not necessarily mean a sub-type relationship exists. However, the two often go hand-in-hand. For simplicity, at this point let us assume inheritance implies a sub-type relationship.</p>
-                </tip-box>
-                <tip-box>
-                  <p><span class="fas fa-cube"></span> To continue the previous example,</p>
-                  <ul>
-                    <li><code>Woman</code> <em>is a</em> <code>Person</code></li>
-                    <li><code>Man</code> <em>is a</em> <code>Person</code></li>
-                  </ul>
-                </tip-box>
-                <p><strong>Inheritance relationships through a chain of classes can result in inheritance <em>hierarchies</em> (aka inheritance <em>trees</em>).</strong></p>
-                <tip-box>
-                  <p><span class="fas fa-cube"></span> Two inheritance hierarchies/trees are given below. Note that <code>Parrot</code> <em>is a</em> <code>Bird</code> as well as it <em>is an</em> <code>Animal</code>. Note that the triangle points to the
-                    parent class.</p>
-                  <img src="/website/book/oop/inheritance/what/images/inheritanceTreesExamples.png" width="500">
-                  <p></p>
-                </tip-box>
-                <p><strong><em>Multiple Inheritance</em> is when a class inherits <em>directly</em> from multiple classes.</strong> Multiple inheritance among classes is allowed in some languages (e.g., Python, C++) but not in other languages (e.g., Java,
-                  C#).</p>
-                <tip-box>
-                  <p><span class="fas fa-cube"></span> The <code>Honey</code> class inherits from the <code>Food</code> class <em>and</em> the <code>Medicine</code> class <span class="dimmed">because honey can be consumed as a food as well as a medicine (in some oriental medicine practices)</span>.</p>
-                </tip-box>
-                <h5 id="implementing-inheritance"><big>Implementing inheritance</big></h5>
-                <div class="alt-java">
-                  <p>To learn how to implement inheritance in Java, you can follow [<a href="https://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html">Oracle’s Java Tutorials: Inheritance</a>]</p>
-                  <panel type="seamless" header="<span class='glyphicon glyphicon-facetime-video' aria-hidden='true'></span> A very beginner-friendly video about implementing Java inheritance.">
-                    <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/9JpNY-XAseg" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
-                    <p></p>
-                  </panel>
-                  <p></p>
-                  <p>💡 Java requires all classes to have a parent class. If you do not specify a parent class, Java automatically assigns the <code>Object</code> class as the parent class.</p>
-                </div>
-                <div class="alt-python">
-                  <ul>
-                    <li><a href="https://nus-te3201.github.io/website/programming/toc/oop.html#inheritance">Python Programming Basics: OOP: Inheritance</a></li>
-                  </ul>
-                  <p>💡 Python automatically assigns the <code>object</code> class as the parent class.</p>
-                </div>
               </div>
               <div>
                 <div>
                   <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
                     <div>
-                      <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Which statements are correct">
+                      <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Which are suitable as an Association Class?">
                         <question>
-                          <p>Which of these are correct?</p>
+                          <p>Which one of these is the suitable as an Association Class?</p>
+                          <img src="/website/book/oop/associations/associationClasses/images/exerciseDiagram.png" width="500">
+                          <p></p>
                           <ul class="task-list">
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. Super class is more general than the sub class.</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. Child class is more specialized than the parent class.</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. A class can inherit behavior from its ancestor classes (ancestor classes = classes above it in the inheritance hierarchy).</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. Code reuse can be one benefit of inheritance.</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. A change to the super class will not affect its sub classes.</li>
+                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a</li>
+                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b</li>
+                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c</li>
+                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d</li>
                           </ul>
                           <div slot="answer">
-                            <p>(a) (b) (c) (d)</p>
-                            <p>Explanation: (e) is incorrect. Because sub classes inherit behavior from the super class, any changes to the super class could affect sub classes.</p>
+                            <p>(a)(b)<s>(c)</s>(d)</p>
+                            <p>Explanation: Mileage is a property of the car, and not specifically about the association between the Driver and the Car. If Mileage was defined as the total number of miles that car was driven by that driver, then it would
+                              be suitable as an association class.</p>
                           </div>
                         </question>
                       </panel>
@@ -1435,13 +1345,113 @@
                   </panel>
                 </div>
               </div>
+          </div>
+        </panel>
+      </panel>
+      <panel type="seamless" expanded="">
+        <span slot="header" class="card-title"><div>
+<h2 id="inheritance">Inheritance</h2></div></span>
+        <panel type="seamless" header="#### What" expanded="">
+          <div class="indented">
+            <span class="badge badge-light">
+  <span><span class="dimmed"><font color="Crimson"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty"
+              aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></span>
+            </span>
+            </span>
+            <span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain the meaning of inheritance</span>
+            </span>
+            </span>
+            </span>
+            <p></p>
+            <div>
+              <p><strong>The OOP concept <em>Inheritance</em> allows you to define a new class based on an existing class.</strong></p>
+              <tip-box>
+                <p><span class="fas fa-cube"></span> For example, you can use inheritance to define an <code>EvaluationReport</code> class based on an existing <code>Report</code> class so that the <code>EvaluationReport</code> class does not have to duplicate
+                  code that is already implemented in the <code>Report</code> class. The <code>EvaluationReport</code> can inherit the <code>wordCount</code> attribute and the <code>print()</code> method from the <em>base class</em> <code>Report</code>.</p>
+              </tip-box>
+              <ul>
+                <li>Other names for Base class: <em>Parent</em> class, <em>Super</em> class</li>
+                <li>Other names for Derived class: <em>Child</em> class, <em>Sub</em> class, <em>Extended</em> class</li>
+              </ul>
+              <p><strong>A super class is said to be <em>more general</em> than the sub class.</strong> Conversely, a sub class is said to be more <em>specialized</em> than the super class.</p>
+              <p><strong>Applying inheritance on a group of similar classes can result in the common parts among classes being extracted into more general classes.</strong></p>
+              <tip-box>
+                <p><span class="fas fa-cube"></span> <code>Man</code> and <code>Woman</code> behaves the same way for certain things. However, the two classes cannot be simply replaced with a more general class <code>Person</code> because of the need to
+                  distinguish between <code>Man</code> and <code>Woman</code> for certain other things. A solution is to add the <code>Person</code> class as a super class (to contain the code common to men and woment) and let <code>Man</code> and <code>Woman</code>                  inherit from <code>Person</code> class.</p>
+              </tip-box>
+              <p><strong>Inheritance implies the derived class can be considered as a <em>sub-type</em> of the base class (and the base class is a <em>super-type</em> of the derived class), resulting in an <em>is a</em> relationship.</strong></p>
+              <tip-box type="info">
+                <p>Inheritance does not necessarily mean a sub-type relationship exists. However, the two often go hand-in-hand. For simplicity, at this point let us assume inheritance implies a sub-type relationship.</p>
+              </tip-box>
+              <tip-box>
+                <p><span class="fas fa-cube"></span> To continue the previous example,</p>
+                <ul>
+                  <li><code>Woman</code> <em>is a</em> <code>Person</code></li>
+                  <li><code>Man</code> <em>is a</em> <code>Person</code></li>
+                </ul>
+              </tip-box>
+              <p><strong>Inheritance relationships through a chain of classes can result in inheritance <em>hierarchies</em> (aka inheritance <em>trees</em>).</strong></p>
+              <tip-box>
+                <p><span class="fas fa-cube"></span> Two inheritance hierarchies/trees are given below. Note that <code>Parrot</code> <em>is a</em> <code>Bird</code> as well as it <em>is an</em> <code>Animal</code>. Note that the triangle points to the parent
+                  class.</p>
+                <img src="/website/book/oop/inheritance/what/images/inheritanceTreesExamples.png" width="500">
+                <p></p>
+              </tip-box>
+              <p><strong><em>Multiple Inheritance</em> is when a class inherits <em>directly</em> from multiple classes.</strong> Multiple inheritance among classes is allowed in some languages (e.g., Python, C++) but not in other languages (e.g., Java,
+                C#).</p>
+              <tip-box>
+                <p><span class="fas fa-cube"></span> The <code>Honey</code> class inherits from the <code>Food</code> class <em>and</em> the <code>Medicine</code> class <span class="dimmed">because honey can be consumed as a food as well as a medicine (in some oriental medicine practices)</span>.</p>
+              </tip-box>
+              <h5 id="implementing-inheritance"><big>Implementing inheritance</big></h5>
+              <div class="alt-java">
+                <p>To learn how to implement inheritance in Java, you can follow [<a href="https://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html">Oracle’s Java Tutorials: Inheritance</a>]</p>
+                <panel type="seamless" header="<span class='glyphicon glyphicon-facetime-video' aria-hidden='true'></span> A very beginner-friendly video about implementing Java inheritance.">
+                  <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/9JpNY-XAseg" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
+                  <p></p>
+                </panel>
+                <p></p>
+                <p>💡 Java requires all classes to have a parent class. If you do not specify a parent class, Java automatically assigns the <code>Object</code> class as the parent class.</p>
+              </div>
+              <div class="alt-python">
+                <ul>
+                  <li><a href="https://nus-te3201.github.io/website/programming/toc/oop.html#inheritance">Python Programming Basics: OOP: Inheritance</a></li>
+                </ul>
+                <p>💡 Python automatically assigns the <code>object</code> class as the parent class.</p>
+              </div>
             </div>
-          </panel>
-          <panel type="seamless" header="#### Overriding" expanded="">
-            <div class="indented">
-              <span class="badge badge-light">
-  <span><span class="dimmed"><font color="Black"><span class="glyphicon glyphicon-education" aria-hidden="true"></span><span class="glyphicon glyphicon-education" aria-hidden="true"></span></font> : <span class="glyphicon glyphicon-star"
-                aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></span>
+            <div>
+              <div>
+                <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                  <div>
+                    <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Which statements are correct">
+                      <question>
+                        <p>Which of these are correct?</p>
+                        <ul class="task-list">
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. Super class is more general than the sub class.</li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. Child class is more specialized than the parent class.</li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. A class can inherit behavior from its ancestor classes (ancestor classes = classes above it in the inheritance hierarchy).</li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. Code reuse can be one benefit of inheritance.</li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. A change to the super class will not affect its sub classes.</li>
+                        </ul>
+                        <div slot="answer">
+                          <p>(a) (b) (c) (d)</p>
+                          <p>Explanation: (e) is incorrect. Because sub classes inherit behavior from the super class, any changes to the super class could affect sub classes.</p>
+                        </div>
+                      </question>
+                    </panel>
+                  </div>
+                </panel>
+              </div>
+            </div>
+          </div>
+        </panel>
+        <panel type="seamless" header="#### Overriding" expanded="">
+          <div class="indented">
+            <span class="badge badge-light">
+  <span><span class="dimmed"><font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+            <span
+              class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+              </span>
               </span>
               </span>
               <span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain method overriding</span>
@@ -1692,13 +1702,15 @@ Ben is a student
                   </panel>
                 </div>
               </div>
-            </div>
-          </panel>
-          <panel type="seamless" header="#### Overloading" expanded="">
-            <div class="indented">
-              <span class="badge badge-light">
-  <span><span class="dimmed"><font color="Black"><span class="glyphicon glyphicon-education" aria-hidden="true"></span><span class="glyphicon glyphicon-education" aria-hidden="true"></span></font> : <span class="glyphicon glyphicon-star"
-                aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></span>
+          </div>
+        </panel>
+        <panel type="seamless" header="#### Overloading" expanded="">
+          <div class="indented">
+            <span class="badge badge-light">
+  <span><span class="dimmed"><font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+            <span
+              class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+              </span>
               </span>
               </span>
               <span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain method overloading</span>
@@ -1790,13 +1802,15 @@ Ben is a student
                 </div>
               </div>
               <div></div>
-            </div>
-          </panel>
-          <panel type="seamless" header="#### Interfaces" expanded="">
-            <div class="indented">
-              <span class="badge badge-light">
-  <span><span class="dimmed"><font color="Black"><span class="glyphicon glyphicon-education" aria-hidden="true"></span><span class="glyphicon glyphicon-education" aria-hidden="true"></span></font> : <span class="glyphicon glyphicon-star"
-                aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></span>
+          </div>
+        </panel>
+        <panel type="seamless" header="#### Interfaces" expanded="">
+          <div class="indented">
+            <span class="badge badge-light">
+  <span><span class="dimmed"><font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font>
+            <span
+              class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+              </span>
               </span>
               </span>
               <span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain interfaces</span>
@@ -1889,13 +1903,15 @@ Ben is a student
                   </panel>
                 </div>
               </div>
-            </div>
-          </panel>
-          <panel type="seamless" header="#### Abstract Classes" expanded="">
-            <div class="indented">
-              <span class="badge badge-light">
-  <span><span class="dimmed"><font color="Black"><span class="glyphicon glyphicon-education" aria-hidden="true"></span><span class="glyphicon glyphicon-education" aria-hidden="true"></span></font> : <span class="glyphicon glyphicon-star"
-                aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></span>
+          </div>
+        </panel>
+        <panel type="seamless" header="#### Abstract Classes" expanded="">
+          <div class="indented">
+            <span class="badge badge-light">
+  <span><span class="dimmed"><font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font>
+            <span
+              class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+              </span>
               </span>
               </span>
               <span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can implement abstract classes</span>
@@ -1972,13 +1988,15 @@ Ben is a student
                   </panel>
                 </div>
               </div>
-            </div>
-          </panel>
-          <panel type="seamless" header="#### Substitutability" expanded="">
-            <div class="indented">
-              <span class="badge badge-light">
-  <span><span class="dimmed"><font color="Black"><span class="glyphicon glyphicon-education" aria-hidden="true"></span><span class="glyphicon glyphicon-education" aria-hidden="true"></span></font> : <span class="glyphicon glyphicon-star"
-                aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></span>
+          </div>
+        </panel>
+        <panel type="seamless" header="#### Substitutability" expanded="">
+          <div class="indented">
+            <span class="badge badge-light">
+  <span><span class="dimmed"><font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font>
+            <span
+              class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+              </span>
               </span>
               </span>
               <span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain substitutability</span>
@@ -2005,13 +2023,15 @@ AcademicStaff academicStaff = staff; // Not OK
                 </tip-box>
               </div>
               <div></div>
-            </div>
-          </panel>
-          <panel type="seamless" header="#### Dynamic and Static Binding" expanded="">
-            <div class="indented">
-              <span class="badge badge-light">
-  <span><span class="dimmed"><font color="Black"><span class="glyphicon glyphicon-education" aria-hidden="true"></span><span class="glyphicon glyphicon-education" aria-hidden="true"></span></font> : <span class="glyphicon glyphicon-star"
-                aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></span>
+          </div>
+        </panel>
+        <panel type="seamless" header="#### Dynamic and Static Binding" expanded="">
+          <div class="indented">
+            <span class="badge badge-light">
+  <span><span class="dimmed"><font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font>
+            <span
+              class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+              </span>
               </span>
               </span>
               <span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain dynamic and static binding</span>
@@ -2035,7 +2055,7 @@ AcademicStaff academicStaff = staff; // Not OK
                   <div>
                     <div>
                       <p>
-                        <panel src="/website/book/oop/inheritance/what/unit-inElsewhere-asFlat._include_.html" header="%%<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP → Inheritance → What%%"></panel>
+                        <panel src="/website\book\oop\inheritance\what\unit-inElsewhere-asFlat._include_.html" header="%%<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP → Inheritance → What%%"></panel>
                       </p>
                     </div>
                     <p></p>
@@ -2439,17 +2459,19 @@ void calculateGrade (String matric) { ... }
                 </tip-box>
               </div>
               <div></div>
-            </div>
-          </panel>
+          </div>
         </panel>
-        <panel type="seamless" expanded="">
-          <span slot="header" class="card-title"><div>
+      </panel>
+      <panel type="seamless" expanded="">
+        <span slot="header" class="card-title"><div>
 <h2 id="polymorphism">Polymorphism</h2></div></span>
-          <panel type="seamless" header="#### What" expanded="">
-            <div class="indented">
-              <span class="badge badge-light">
-  <span><span class="dimmed"><font color="Black"><span class="glyphicon glyphicon-education" aria-hidden="true"></span><span class="glyphicon glyphicon-education" aria-hidden="true"></span></font> : <span class="glyphicon glyphicon-star"
-                aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></span>
+        <panel type="seamless" header="#### What" expanded="">
+          <div class="indented">
+            <span class="badge badge-light">
+  <span><span class="dimmed"><font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font>
+            <span
+              class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+              </span>
               </span>
               </span>
               <span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain OOP polymorphism</span>
@@ -2517,13 +2539,15 @@ void calculateGrade (String matric) { ... }
                   or an <code>Academic</code> object.</p>
               </div>
               <div></div>
-            </div>
-          </panel>
-          <panel type="seamless" header="#### How" expanded="">
-            <div class="indented">
-              <span class="badge badge-light">
-  <span><span class="dimmed"><font color="Black"><span class="glyphicon glyphicon-education" aria-hidden="true"></span><span class="glyphicon glyphicon-education" aria-hidden="true"></span></font> : <span class="glyphicon glyphicon-star"
-                aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></span>
+          </div>
+        </panel>
+        <panel type="seamless" header="#### How" expanded="">
+          <div class="indented">
+            <span class="badge badge-light">
+  <span><span class="dimmed"><font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font>
+            <span
+              class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+              </span>
               </span>
               </span>
               <span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain how substitutability operation overriding, and dynamic binding relates to polymorphism</span>
@@ -2699,137 +2723,136 @@ void calculateGrade (String matric) { ... }
                   </panel>
                 </div>
               </div>
-            </div>
-          </panel>
+          </div>
         </panel>
-        <panel type="seamless" expanded="">
-          <span slot="header" class="card-title"><div>
+      </panel>
+      <panel type="seamless" expanded="">
+        <span slot="header" class="card-title"><div>
 <h2 id="more">More</h2></div></span>
-          <panel type="seamless" header="#### Miscellaneous" expanded="">
-            <div class="indented">
-              <span class="badge badge-light">
+        <panel type="seamless" header="#### Miscellaneous" expanded="">
+          <div class="indented">
+            <span class="badge badge-light">
   <span><span class="dimmed"><font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font>
-              <span
-                class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
-                </span>
-                </span>
-                </span>
-                <span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can answer frequently asked OOP questions</span>
-                </span>
-                </span>
-                </span>
-                <p></p>
-                <div>
-                  <p><strong>What’s the difference between a Class, an Abstract Class, and an Interface?</strong></p>
-                  <ul>
-                    <li>An interface is a behavior specification with no implementation.</li>
-                    <li>A class is a behavior specification + implementation.</li>
-                    <li>An abstract class is a behavior specification + a possibly incomplete implementation.</li>
-                  </ul>
-                  <p><strong>How does overriding differ from <em>overloading</em>?</strong></p>
-                  <p>Overloading is used to indicate that multiple operations do similar things but take different parameters. Overloaded methods have the same method name but different method signatures and possibly different return types.</p>
-                  <p>Overriding is when a sub-class redefines an operation using the same method name and the same type signature. Overridden methods have the same name, same method signature, and same return type.</p>
-                </div>
-                <div></div>
-            </div>
-          </panel>
-          <panel type="seamless" header="#### Review" expanded="">
-            <div class="indented">
-              <span class="badge badge-light">
-  <span><span class="dimmed"><font color="ForestGreen"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              <span
-                class="glyphicon glyphicon-star" aria-hidden="true"></span>
-                </font>
-                </span>
-                </span>
-                </span>
-                <span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can combine some OOP concepts</span>
-                </span>
-                </span>
-                </span>
-                <p></p>
-                <div>
-                  <p>...</p>
-                </div>
-                <div>
-                  <div>
-                    <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
-                      <div>
-                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> In the context of OOP, what is the relationship between abstraction and encapsulation?">
-                          <panel header="%%Prerequisites%%" expandable="" expanded="">
-                            <panel src="/website/book/oop/objects/encapsulation/unit-inElsewhere-asFlat._include_.html" header="OOP: Objects: Encapsulation"></panel>
-                            <panel src="/website/book/oop/objects/abstraction/unit-inElsewhere-asFlat._include_.html" header="OOP: Objects: Abstraction"></panel>
-                          </panel>
-                          <p></p>
-                          <question>
-                            In the context of OOP, what is the relationship between abstraction and encapsulation?
-                            <ul radio-group="ee8f2" class="radio-list">
-                              <li class="radio-list-item"><label><input class="radio-list-input" name="ee8f2" type="radio"> a. They are the same thing</label></li>
-                              <li class="radio-list-item"><label><input class="radio-list-input" name="ee8f2" type="radio"> b. They are opposites</label></li>
-                              <li class="radio-list-item"><label><input class="radio-list-input" name="ee8f2" type="radio"> c. Encapsulation strengthens abstraction</label></li>
-                              <li class="radio-list-item"><label><input class="radio-list-input" name="ee8f2" type="radio"> d. Abstraction strengthens encapsulation</label></li>
-                            </ul>
-                            <div slot="answer">
-                              <ul radio-group="a056c" class="radio-list">
-                                <li class="radio-list-item"><label><input class="radio-list-input" checked name="a056c" type="radio"> c. Encapsulation strengthens abstraction</label></li>
-                              </ul>
-                              <p>Explanation: We can have abstraction without encapsulation. For example, we can <em>think</em> in terms of student entities when we code in C (a procedural language). But when we use a language that has encapsulation too
-                                (e.g., in Java/C++/C#), we can package all student related data and functions into one construct (i.e. a class). This makes the ‘student’ abstraction stronger because now we can not only think in terms of students, the
-                                program can perform actions using objects that represent student entities.</p>
-                            </div>
-                          </question>
-                        </panel>
-                      </div>
-                      <div>
-                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Which of these do not belong to four main OO principles?">
-                          <panel header="%%Prerequisites%%" expandable="" expanded="">
-                            <panel src="/website/book/oop/objects/abstraction/unit-inElsewhere-asFlat._include_.html" header="OOP: Objects: Abstraction"></panel>
-                            <panel src="/website/book/oop/objects/encapsulation/unit-inElsewhere-asFlat._include_.html" header="OOP: Objects: Encapsulation"></panel>
-                            <panel src="/website/book/oop/inheritance/what/unit-inElsewhere-asFlat._include_.html" header="OOP: Inheritance: Basic"></panel>
-                            <panel src="/website/book/oop/inheritance/substitutability/unit-inElsewhere-asFlat._include_.html" header="OOP: Inheritance: Substitutability"></panel>
-                            <panel src="/website/book/oop/polymorphism/what/unit-inElsewhere-asFlat._include_.html" header="OOP: Polymorphism: Introduction"></panel>
-                          </panel>
-                          <p></p>
-                          <question>
-                            Which of these do not belong to four main OO principles?
-                            <ul radio-group="8d0f5" class="radio-list">
-                              <li class="radio-list-item"><label><input class="radio-list-input" name="8d0f5" type="radio"> a. Abstraction</label></li>
-                              <li class="radio-list-item"><label><input class="radio-list-input" name="8d0f5" type="radio"> b. Encapsulation</label></li>
-                              <li class="radio-list-item"><label><input class="radio-list-input" name="8d0f5" type="radio"> c. Inheritance</label></li>
-                              <li class="radio-list-item"><label><input class="radio-list-input" name="8d0f5" type="radio"> d. Substitutability</label></li>
-                              <li class="radio-list-item"><label><input class="radio-list-input" name="8d0f5" type="radio"> e. Polymorphism</label></li>
-                            </ul>
-                            <div slot="answer">
-                              <ul radio-group="30555" class="radio-list">
-                                <li class="radio-list-item"><label><input class="radio-list-input" checked name="30555" type="radio"> d. Substitutability</label></li>
-                              </ul>
-                            </div>
-                          </question>
-                        </panel>
-                      </div>
-                    </panel>
-                  </div>
-                </div>
-            </div>
-          </panel>
+            <span
+              class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+              </span>
+              </span>
+              </span>
+              <span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can answer frequently asked OOP questions</span>
+              </span>
+              </span>
+              </span>
+              <p></p>
+              <div>
+                <p><strong>What’s the difference between a Class, an Abstract Class, and an Interface?</strong></p>
+                <ul>
+                  <li>An interface is a behavior specification with no implementation.</li>
+                  <li>A class is a behavior specification + implementation.</li>
+                  <li>An abstract class is a behavior specification + a possibly incomplete implementation.</li>
+                </ul>
+                <p><strong>How does overriding differ from <em>overloading</em>?</strong></p>
+                <p>Overloading is used to indicate that multiple operations do similar things but take different parameters. Overloaded methods have the same method name but different method signatures and possibly different return types.</p>
+                <p>Overriding is when a sub-class redefines an operation using the same method name and the same type signature. Overridden methods have the same name, same method signature, and same return type.</p>
+              </div>
+              <div></div>
+          </div>
         </panel>
-      </div>
+        <panel type="seamless" header="#### Review" expanded="">
+          <div class="indented">
+            <span class="badge badge-light">
+  <span><span class="dimmed"><font color="ForestGreen"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span
+              class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              </font>
+              </span>
+              </span>
+              </span>
+              <span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can combine some OOP concepts</span>
+              </span>
+              </span>
+              </span>
+              <p></p>
+              <div>
+                <p>...</p>
+              </div>
+              <div>
+                <div>
+                  <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                    <div>
+                      <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> In the context of OOP, what is the relationship between abstraction and encapsulation?">
+                        <panel header="%%Prerequisites%%" expandable="" expanded="">
+                          <panel src="/website\book\oop\objects\encapsulation\unit-inElsewhere-asFlat._include_.html" header="OOP: Objects: Encapsulation"></panel>
+                          <panel src="/website\book\oop\objects\abstraction\unit-inElsewhere-asFlat._include_.html" header="OOP: Objects: Abstraction"></panel>
+                        </panel>
+                        <p></p>
+                        <question>
+                          In the context of OOP, what is the relationship between abstraction and encapsulation?
+                          <ul radio-group="ee8f2" class="radio-list">
+                            <li class="radio-list-item"><label><input class="radio-list-input" name="ee8f2" type="radio"> a. They are the same thing</label></li>
+                            <li class="radio-list-item"><label><input class="radio-list-input" name="ee8f2" type="radio"> b. They are opposites</label></li>
+                            <li class="radio-list-item"><label><input class="radio-list-input" name="ee8f2" type="radio"> c. Encapsulation strengthens abstraction</label></li>
+                            <li class="radio-list-item"><label><input class="radio-list-input" name="ee8f2" type="radio"> d. Abstraction strengthens encapsulation</label></li>
+                          </ul>
+                          <div slot="answer">
+                            <ul radio-group="a056c" class="radio-list">
+                              <li class="radio-list-item"><label><input class="radio-list-input" checked name="a056c" type="radio"> c. Encapsulation strengthens abstraction</label></li>
+                            </ul>
+                            <p>Explanation: We can have abstraction without encapsulation. For example, we can <em>think</em> in terms of student entities when we code in C (a procedural language). But when we use a language that has encapsulation too (e.g.,
+                              in Java/C++/C#), we can package all student related data and functions into one construct (i.e. a class). This makes the ‘student’ abstraction stronger because now we can not only think in terms of students, the program can
+                              perform actions using objects that represent student entities.</p>
+                          </div>
+                        </question>
+                      </panel>
+                    </div>
+                    <div>
+                      <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Which of these do not belong to four main OO principles?">
+                        <panel header="%%Prerequisites%%" expandable="" expanded="">
+                          <panel src="/website\book\oop\objects\abstraction\unit-inElsewhere-asFlat._include_.html" header="OOP: Objects: Abstraction"></panel>
+                          <panel src="/website\book\oop\objects\encapsulation\unit-inElsewhere-asFlat._include_.html" header="OOP: Objects: Encapsulation"></panel>
+                          <panel src="/website\book\oop\inheritance\what\unit-inElsewhere-asFlat._include_.html" header="OOP: Inheritance: Basic"></panel>
+                          <panel src="/website\book\oop\inheritance\substitutability\unit-inElsewhere-asFlat._include_.html" header="OOP: Inheritance: Substitutability"></panel>
+                          <panel src="/website\book\oop\polymorphism\what\unit-inElsewhere-asFlat._include_.html" header="OOP: Polymorphism: Introduction"></panel>
+                        </panel>
+                        <p></p>
+                        <question>
+                          Which of these do not belong to four main OO principles?
+                          <ul radio-group="8d0f5" class="radio-list">
+                            <li class="radio-list-item"><label><input class="radio-list-input" name="8d0f5" type="radio"> a. Abstraction</label></li>
+                            <li class="radio-list-item"><label><input class="radio-list-input" name="8d0f5" type="radio"> b. Encapsulation</label></li>
+                            <li class="radio-list-item"><label><input class="radio-list-input" name="8d0f5" type="radio"> c. Inheritance</label></li>
+                            <li class="radio-list-item"><label><input class="radio-list-input" name="8d0f5" type="radio"> d. Substitutability</label></li>
+                            <li class="radio-list-item"><label><input class="radio-list-input" name="8d0f5" type="radio"> e. Polymorphism</label></li>
+                          </ul>
+                          <div slot="answer">
+                            <ul radio-group="30555" class="radio-list">
+                              <li class="radio-list-item"><label><input class="radio-list-input" checked name="30555" type="radio"> d. Substitutability</label></li>
+                            </ul>
+                          </div>
+                        </question>
+                      </panel>
+                    </div>
+                  </panel>
+                </div>
+              </div>
+          </div>
+        </panel>
+      </panel>
     </div>
   </div>
 </div>
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Mon, 06 Aug 2018 05:01:34 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.10.1</a> at Tue, 07 Aug 2018 04:33:30 GMT</small></div>
 </footer>
 </div>
 </body>
-<script src="../../markbind/js/vue.min.js"></script>
-<script src="../../markbind/js/vue-strap.min.js"></script>
-<script src="../../markbind/js/polyfill.min.js"></script>
-<script src="../../markbind/js/bootstrap-vue.min.js"></script>
+<script src="..\..\markbind\js\vue.min.js"></script>
+<script src="..\..\markbind\js\vue-strap.min.js"></script>
+<script src="..\..\markbind\js\polyfill.min.js"></script>
+<script src="..\..\markbind\js\bootstrap-vue.min.js"></script>
 <script>
     const baseUrl = '/website'
 </script>
-<script src="../../markbind/js/setup.js"></script>
+<script src="..\..\markbind\js\setup.js"></script>
 </html>

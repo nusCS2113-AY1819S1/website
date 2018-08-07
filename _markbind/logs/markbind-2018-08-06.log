@@ -1,2 +1,38 @@
-2018-08-06T05:01:29.795Z - info: Website generation started at 13:01:29
-2018-08-06T05:01:30.298Z - info: Building assets...
+2018-08-06T02:12:21.539Z - info: Pages built
+2018-08-06T02:12:21.637Z - info: Site data built
+2018-08-06T02:12:21.643Z - info: Generate Site durationMs=51488
+2018-08-06T02:12:21.873Z - info: Serving "E:\Teaching\aug2018\website\_site" at http://127.0.0.1:8080
+2018-08-06T02:12:21.873Z - info: Press CTRL+C to stop ...
+2018-08-06T09:58:45.415Z - info: Pages built
+2018-08-06T09:58:45.542Z - info: Site data built
+2018-08-06T09:58:45.547Z - info: Generate Site durationMs=63655
+2018-08-06T09:58:45.784Z - info: Serving "E:\Teaching\aug2018\website\_site" at http://127.0.0.1:8080
+2018-08-06T09:58:45.784Z - info: Press CTRL+C to stop ...
+2018-08-06T09:59:00.179Z - info: Reload for file change: E:\Teaching\aug2018\website\admin\project-assessment.md
+2018-08-06T09:59:00.181Z - info: Reload for file change: E:\Teaching\aug2018\website\schedule\index.md
+2018-08-06T09:59:00.271Z - info: Reload for file deletion: E:\Teaching\aug2018\website\se-book-adapted\config.njk
+2018-08-06T09:59:01.181Z - verbose: Rebuild affected paths: E:\Teaching\aug2018\website\admin\project-assessment.md,E:\Teaching\aug2018\website\schedule\index.md
+2018-08-06T09:59:01.183Z - info: Rebuilding 14 pages
+2018-08-06T09:59:05.909Z - info: Assets removed
+2018-08-06T09:59:11.728Z - info: Pages rebuilt
+2018-08-06T09:59:11.745Z - info: Site data built
+2018-08-06T10:10:12.256Z - info: Reload for file change: E:\Teaching\aug2018\website\admin\project-assessment.md
+2018-08-06T10:10:13.257Z - verbose: Rebuild affected paths: E:\Teaching\aug2018\website\admin\project-assessment.md
+2018-08-06T10:10:13.258Z - info: Rebuilding 13 pages
+2018-08-06T10:10:23.010Z - info: Pages rebuilt
+2018-08-06T10:10:23.024Z - info: Site data built
+2018-08-06T10:13:36.875Z - info: Reload for file change: E:\Teaching\aug2018\website\admin\project-assessment.md
+2018-08-06T10:13:37.878Z - verbose: Rebuild affected paths: E:\Teaching\aug2018\website\admin\project-assessment.md
+2018-08-06T10:13:37.879Z - info: Rebuilding 13 pages
+2018-08-06T10:13:47.697Z - info: Pages rebuilt
+2018-08-06T10:13:47.712Z - info: Site data built
+2018-08-06T10:26:16.683Z - info: Reload for file change: E:\Teaching\aug2018\website\admin\project-assessment.md
+2018-08-06T10:26:17.685Z - verbose: Rebuild affected paths: E:\Teaching\aug2018\website\admin\project-assessment.md
+2018-08-06T10:26:17.690Z - info: Rebuilding 13 pages
+2018-08-06T10:26:28.045Z - info: Pages rebuilt
+2018-08-06T10:26:28.056Z - info: Site data built
+2018-08-06T10:28:04.599Z - info: Reload for file change: E:\Teaching\aug2018\website\admin\project-assessment.md
+2018-08-06T10:28:05.601Z - verbose: Rebuild affected paths: E:\Teaching\aug2018\website\admin\project-assessment.md
+2018-08-06T10:28:05.603Z - info: Rebuilding 13 pages
+2018-08-06T10:28:15.341Z - info: Pages rebuilt
+2018-08-06T10:28:15.358Z - info: Site data built
