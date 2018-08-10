@@ -203,9 +203,10 @@
         <panel type="seamless" header="#### What" expanded="">
           <div class="indented">
             <span class="badge badge-light">
-  <span><span class="dimmed"><font color="Black"><span class="glyphicon glyphicon-education" aria-hidden="true"></span><span class="glyphicon glyphicon-education" aria-hidden="true"></span></font> : <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+  <span><span class="dimmed"><font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
             <span
-              class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></span>
+              class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+              </span>
               </span>
               </span>
               <span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain error handling</span>
@@ -229,111 +230,110 @@
         <panel type="seamless" header="#### What" expanded="">
           <div class="indented">
             <span class="badge badge-light">
-  <span><span class="dimmed"><font color="Black"><span class="glyphicon glyphicon-education" aria-hidden="true"></span><span class="glyphicon glyphicon-education" aria-hidden="true"></span></font> : <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-            <span
-              class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></span>
-              </span>
-              </span>
-              <span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain exceptions</span>
-              </span>
-              </span>
-              </span>
-              <p></p>
-              <div>
-                <p><strong>Exceptions are used to deal with <em>'unusual' but not entirely unexpected</em> situations</strong> that the program might encounter at run time.</p>
-                <tip-box type="definition">
-                  <div>
-                    <p><strong>Exception</strong>:</p>
-                    <blockquote>
-                      <p>The term <em>exception</em> is shorthand for the phrase &quot;exceptional event.&quot; An <em>exception</em> is an event, which occurs during the execution of a program, that disrupts the normal flow of the program's instructions.
-                        –- Java Tutorial (Oracle Inc.)</p>
-                    </blockquote>
-                  </div>
-                </tip-box>
-                <tip-box>
-                  <p><span class="fas fa-cube"></span> Examples:</p>
-                  <ul>
-                    <li>A network connection encounters a timeout due to a slow server.</li>
-                    <li>The code tries to read a file from the hard disk but the file is corrupted and cannot be read.</li>
-                  </ul>
-                </tip-box>
-              </div>
-              <div></div>
+  <span><span class="dimmed"><font color="Crimson"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty"
+              aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></span>
+            </span>
+            </span>
+            <span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain exceptions</span>
+            </span>
+            </span>
+            </span>
+            <p></p>
+            <div>
+              <p><strong>Exceptions are used to deal with <em>'unusual' but not entirely unexpected</em> situations</strong> that the program might encounter at run time.</p>
+              <tip-box type="definition">
+                <div>
+                  <p><strong>Exception</strong>:</p>
+                  <blockquote>
+                    <p>The term <em>exception</em> is shorthand for the phrase &quot;exceptional event.&quot; An <em>exception</em> is an event, which occurs during the execution of a program, that disrupts the normal flow of the program's instructions.
+                      –- Java Tutorial (Oracle Inc.)</p>
+                  </blockquote>
+                </div>
+              </tip-box>
+              <tip-box>
+                <p><span class="fas fa-cube"></span> Examples:</p>
+                <ul>
+                  <li>A network connection encounters a timeout due to a slow server.</li>
+                  <li>The code tries to read a file from the hard disk but the file is corrupted and cannot be read.</li>
+                </ul>
+              </tip-box>
+            </div>
+            <div></div>
           </div>
         </panel>
         <panel type="seamless" header="#### How" expanded="">
           <div class="indented">
             <span class="badge badge-light">
-  <span><span class="dimmed"><font color="Black"><span class="glyphicon glyphicon-education" aria-hidden="true"></span><span class="glyphicon glyphicon-education" aria-hidden="true"></span></font> : <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-            <span
-              class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></span>
-              </span>
-              </span>
-              <span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can do exception handling in code</span>
-              </span>
-              </span>
-              </span>
-              <p></p>
+  <span><span class="dimmed"><font color="Crimson"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty"
+              aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></span>
+            </span>
+            </span>
+            <span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can do exception handling in code</span>
+            </span>
+            </span>
+            </span>
+            <p></p>
+            <div>
+              <p><strong>Most languages allow a method/function to encapsulate the unusual situation in an Exception object and 'throw'/'raise' that object so that another piece of code can 'catch' it and deal with it.</strong> This is especially useful
+                when code segment that encountered the unusual situation does not know how to deal with it.</p>
+              <p><strong>Exception objects can propagate up the function call hierarchy until it is dealt with.</strong> Usually, an exception thrown by a function is caught by the caller function. If the called function does not know how to deal with the
+                exception it caught, it can throw/raise the Exception object to its own caller. If none of the callers is prepared to deal with the exception, the exceptions can propagate through the
+                <tooltip content="the hieararchy of function calls">function call stack</tooltip> until it is received by the main function and thrown to the runtime, thus halting the system.</p>
+              <tip-box>
+                <div class="alt-java">
+                  <p><span class="fas fa-cube"></span> In the code given below, <code>processArray</code> can potentially throw an <code>InvalidInputException</code>. Because of that, <code>processInput</code> method invokes <code>processArray</code> method
+                    inside a <code>try{ }</code> block and has a <code>catch{ }</code> block to specify what to do if the exception is actually thrown.</p>
+                  <img src="/website/book/errorHandling/exceptions/how/images/processInput.png" width="400">
+                  <p></p>
+                </div>
+                <div class="alt-python">
+                  <p><span class="fas fa-cube"></span> In the code given below, <code>process_array</code> function can potentially raise a <code>ValueError</code> exception. Because of that, <code>process_input</code> function invokes <code>process_array</code>                    function inside a <code>try</code> clause and has a <code>except</code> clause to specify what to do if the exception is actually raised.</p>
+                  <img src="/website/book/errorHandling/exceptions/how/images/example-python.png" width="400"></div>
+              </tip-box>
+              <p>Advantages of exception handling in this way:</p>
+              <ul>
+                <li>The ability to propagate error information through the call stack.</li>
+                <li>The separation of code that deals with 'unusual' situations from the code that does the 'usual' work.</li>
+              </ul>
+            </div>
+            <div>
               <div>
-                <p><strong>Most languages allow a method/function to encapsulate the unusual situation in an Exception object and 'throw'/'raise' that object so that another piece of code can 'catch' it and deal with it.</strong> This is especially useful
-                  when code segment that encountered the unusual situation does not know how to deal with it.</p>
-                <p><strong>Exception objects can propagate up the function call hierarchy until it is dealt with.</strong> Usually, an exception thrown by a function is caught by the caller function. If the called function does not know how to deal with
-                  the exception it caught, it can throw/raise the Exception object to its own caller. If none of the callers is prepared to deal with the exception, the exceptions can propagate through the
-                  <tooltip content="the hieararchy of function calls">function call stack</tooltip> until it is received by the main function and thrown to the runtime, thus halting the system.</p>
-                <tip-box>
-                  <div class="alt-java">
-                    <p><span class="fas fa-cube"></span> In the code given below, <code>processArray</code> can potentially throw an <code>InvalidInputException</code>. Because of that, <code>processInput</code> method invokes <code>processArray</code> method
-                      inside a <code>try{ }</code> block and has a <code>catch{ }</code> block to specify what to do if the exception is actually thrown.</p>
-                    <img src="/website/book/errorHandling/exceptions/how/images/processInput.png" width="400">
-                    <p></p>
+                <panel header="<span class='fas fa-paperclip'></span> Resources" expandable="">
+                  <ul>
+                    <li><a href="https://docs.oracle.com/javase/tutorial/essential/exceptions/">Java Exceptions Tutorial from Oracle</a></li>
+                  </ul>
+                </panel>
+              </div>
+              <div>
+                <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                  <div>
+                    <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Benefit of exceptions">
+                      <question>
+                        <p>Which are benefits of exceptions?</p>
+                        <ul class="task-list">
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. Exceptions allow us to separate normal code from error handling code.</li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. Exceptions can prevent problems that happen in the environment.</li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. Exceptions allow us to handle in one location an error raised in another location.</li>
+                        </ul>
+                        <div slot="answer">
+                          <p>(a) (c)</p>
+                          <p>Explanation: Exceptions cannot <em>prevent</em> problems in the environment. They can only be used to handle and recover from such problems.</p>
+                        </div>
+                      </question>
+                    </panel>
                   </div>
-                  <div class="alt-python">
-                    <p><span class="fas fa-cube"></span> In the code given below, <code>process_array</code> function can potentially raise a <code>ValueError</code> exception. Because of that, <code>process_input</code> function invokes <code>process_array</code>                      function inside a <code>try</code> clause and has a <code>except</code> clause to specify what to do if the exception is actually raised.</p>
-                    <img src="/website/book/errorHandling/exceptions/how/images/example-python.png" width="400"></div>
-                </tip-box>
-                <p>Advantages of exception handling in this way:</p>
-                <ul>
-                  <li>The ability to propagate error information through the call stack.</li>
-                  <li>The separation of code that deals with 'unusual' situations from the code that does the 'usual' work.</li>
-                </ul>
+                </panel>
               </div>
-              <div>
-                <div>
-                  <panel header="<span class='fas fa-paperclip'></span> Resources" expandable="">
-                    <ul>
-                      <li><a href="https://docs.oracle.com/javase/tutorial/essential/exceptions/">Java Exceptions Tutorial from Oracle</a></li>
-                    </ul>
-                  </panel>
-                </div>
-                <div>
-                  <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
-                    <div>
-                      <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Benefit of exceptions">
-                        <question>
-                          <p>Which are benefits of exceptions?</p>
-                          <ul class="task-list">
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. Exceptions allow us to separate normal code from error handling code.</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. Exceptions can prevent problems that happen in the environment.</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. Exceptions allow us to handle in one location an error raised in another location.</li>
-                          </ul>
-                          <div slot="answer">
-                            <p>(a) (c)</p>
-                            <p>Explanation: Exceptions cannot <em>prevent</em> problems in the environment. They can only be used to handle and recover from such problems.</p>
-                          </div>
-                        </question>
-                      </panel>
-                    </div>
-                  </panel>
-                </div>
-              </div>
+            </div>
           </div>
         </panel>
         <panel type="seamless" header="#### When" expanded="">
           <div class="indented">
             <span class="badge badge-light">
-  <span><span class="dimmed"><font color="Black"><span class="glyphicon glyphicon-education" aria-hidden="true"></span><span class="glyphicon glyphicon-education" aria-hidden="true"></span></font> : <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+  <span><span class="dimmed"><font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
             <span
-              class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></span>
+              class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+              </span>
               </span>
               </span>
               <span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can avoid using exceptions to control normal workflow</span>
@@ -1368,7 +1368,7 @@ r1.setPlayer(p2);
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.10.1</a> at Tue, 07 Aug 2018 10:51:18 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.10.1</a> at Fri, 10 Aug 2018 11:20:02 GMT</small></div>
 </footer>
 </div>
 </body>

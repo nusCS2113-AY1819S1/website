@@ -1,0 +1,15 @@
+2018-08-08T09:28:04.313Z - info: Pages built
+2018-08-08T09:28:04.450Z - info: Site data built
+2018-08-08T09:28:04.456Z - info: Generate Site durationMs=52542
+2018-08-08T09:28:04.713Z - info: Serving "E:\Teaching\aug2018\website\_site" at http://127.0.0.1:8080
+2018-08-08T09:28:04.713Z - info: Press CTRL+C to stop ...
+2018-08-08T09:39:08.828Z - info: Reload for file change: E:\Teaching\aug2018\website\admin\project-teams.md
+2018-08-08T09:39:09.830Z - verbose: Rebuild affected paths: E:\Teaching\aug2018\website\admin\project-teams.md
+2018-08-08T09:39:09.832Z - info: Rebuilding 8 pages
+2018-08-08T09:39:20.917Z - info: Pages rebuilt
+2018-08-08T09:39:20.927Z - info: Site data built
+2018-08-08T09:39:53.783Z - info: Reload for file change: E:\Teaching\aug2018\website\schedule\week3\tutorial.md
+2018-08-08T09:39:54.786Z - verbose: Rebuild affected paths: E:\Teaching\aug2018\website\schedule\week3\tutorial.md
+2018-08-08T09:39:54.790Z - info: Rebuilding 2 pages
+2018-08-08T09:40:01.769Z - info: Pages rebuilt
+2018-08-08T09:40:01.777Z - info: Site data built

@@ -18,7 +18,15 @@
 </head>
 <body>
 <div id="app" class="container-fluid">
-    <link rel="stylesheet" href="/website/book/css/textbook.css">
+    <div>
+  <navbar placement="top" type="inverse">
+    <a slot="brand" href="/" title="Home" class="navbar-brand">Software Engineering for Self-Directed Learners</a>
+    <li slot="right">
+      <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right=""></searchbar>
+    </li>
+  </navbar>
+</div>
+<link rel="stylesheet" href="/website/book/css/textbook.css">
 <div class="website-content">
   <div id="body">
     <h1 id="acknowledgements">Acknowledgements</h1>
@@ -40,6 +48,11 @@
     </div>
   </div>
 </div>
+<div id="flex-div"></div>
+<footer>
+  <div class="text-center">
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.10.1</a> at Fri, 10 Aug 2018 11:20:02 GMT</small></div>
+</footer>
 </div>
 </body>
 <script src="..\..\markbind\js\vue.min.js"></script>

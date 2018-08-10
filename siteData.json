@@ -600,6 +600,7 @@
         "acknowledgements": "Acknowledgements"
       },
       "title": "About: Acknowledgements",
+      "footer": "footer.md",
       "src": "book/about/acknowledgements.md"
     },
     {
@@ -715,6 +716,7 @@
         "break-and-continue": "break and continue",
         "enhanced-for-loops": "Enhanced for loops",
         "defining-methods": "Defining methods",
+        "parameters": "Parameters",
         "return-statements": "return statements",
         "overloading": "Overloading",
         "recursion": "Recursion",
