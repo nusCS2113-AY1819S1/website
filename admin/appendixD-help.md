@@ -1,7 +1,7 @@
 {% macro show_main_text() %}
 <div id="main">
 
-%%{{ icon_info }} This guide is mostly about getting tech help, but it applies to getting clarifications on module topics too. e.g. what is the difference between _refactoring_ and _rewriting_?%%
+%%{{ icon_info }} This guide is mostly about getting tech help, but it also applies to getting clarifications on module topics too. e.g. what is the difference between _refactoring_ and _rewriting_?%%
 
 <img src="{{baseUrl}}/admin/images/how to get help.png" width="200px"><br/>
 
