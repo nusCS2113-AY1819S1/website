@@ -233,10 +233,10 @@ At the end of the project each student is required to submit a _Project Portfoli
    * **E. Quality of developer docs** [{{ icon_individual }}]: Evaluate based on the developer docs cited/reproduced in the respective project portfolio page. ==Evaluate from the perspective of a new developer trying to understand how the features are implemented.== 
      * `low`: One of these
        * Very small amount of content (i.e., 0.5 - 1 page).
-       * Hardly any use to the reader (i.e., content doesn't make much sense or redundant). 
+       * Hardly any use to the reader (i.e., content doesn't make much sense or redundant).
        * Uses ad-hoc diagrams where UML diagrams could have been used instead.
        * Multiple notation errors in UML diagrams.
-     * `medium`: _Some_ diagrams, _some_ descriptions, but does not help the reader that much %%&nbsp;e.g. overly complicated diagrams%%
+     * `medium`: _Some_ diagrams, _some_ descriptions, but does not help the reader that much %%&nbsp;e.g. overly complicated diagrams%%.
      * `high`: Enough diagrams (at lest two kinds of UML diagrams used) and enough descriptions (about 2 pages worth) but explanations are not always easy to follow.
      * `excellent`: Easy to follow. Just enough information (not too much). Minimum repetition of content/diagrams. Good use of diagrams to complement text descriptions. Easy to understand diagrams with just enough details rather than very complicated diagrams that are hard to understand.
      * `unable to judge`: One of these
