@@ -67,8 +67,8 @@ The question you should always ask yourself is, 'how do I solve this problem if 
 
 * **Raise your question during a tutorial**. Some questions can be discussed with the tutor and tutorial-mates.
   What kind of questions are suitable to discuss with the tutor? Consider these two questions you might want to ask a tutor:
-  * :white_check_mark: *This is how I understood/applied coupling. Is that correct?* - Such questions are welcome. %%**Reason**:This question shows you have put in some effort to learn the topic and seeking further clarification from the tutor.%%
-  * :no_entry_sign: *What is coupling?* - Such questions are discouraged. %%**Reason**: This question implies you haven’t done what you could to learn the topic in concern.%%
+  * {{ good }} *This is how I understood/applied coupling. Is that correct?* - Such questions are welcome. %%**Reason**:This question shows you have put in some effort to learn the topic and seeking further clarification from the tutor.%%
+  * {{ bad }} *What is coupling?* - Such questions are discouraged. %%**Reason**: This question implies you haven’t done what you could to learn the topic in concern.%%
   
 </span>
 
