@@ -40,7 +40,7 @@ You will be given OCR forms to indicate your answers for Part 1.
 **The paper is open-book**: you may bring any printed or written materials to the exam in hard copy format. 
 However, given the fast pace required by Part 1, you will not have time left to refer notes during that part of the exam. 
 
-:bulb: **Mark the OCR form as you go**, rather than planning to transfer your answers to the OCR form near the end. %%&nbsp;Reason: Given there are 130+ questions, it will be hard to estimate how much time you need to mass-transfer all answers to OCR forms.%%
+:bulb: **Mark the OCR form as you go**, rather than planning to transfer your answers to the OCR form near the end. %%&nbsp;Reason: Given there are 50 questions and only 30 mins, it will be hard to estimate how much time you need to mass-transfer all answers to OCR forms.%%
 
 :bulb: **Write the answer in the exam paper as well** as marking it in the OCR form. %%&nbsp;Reason: It will reduce the chance of missing a question. Furthermore, in case you missed a question, it will help you correct the OCR form quickly.%%
 
@@ -57,7 +57,6 @@ Yes, **you may use pencils** when answering part 2.
 [[Answers to the sample paper](http://www.comp.nus.edu.sg/~{{ module | lower }}/AY1819S1/Practice%20Exam%20Paper%20-%20Part%202%20(answers).pdf)]
 
 </div>
-  
 
 
 {% endmacro %}
