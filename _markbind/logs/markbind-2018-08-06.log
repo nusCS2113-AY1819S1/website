@@ -1,0 +1,35 @@
+2018-08-06T05:01:29.795Z - info: Website generation started at 13:01:29
+2018-08-06T05:01:30.298Z - info: Building assets...
+2018-08-06T05:01:34.192Z - info: Assets built
+2018-08-06T05:01:34.194Z - info: Generating pages...
+2018-08-06T05:02:30.207Z - info: Pages built
+2018-08-06T05:02:30.612Z - info: Site data built
+2018-08-06T05:02:30.613Z - info: Website generation complete! Total build time: 61.109s
+2018-08-06T05:02:30.613Z - info: Build success!
+2018-08-06T05:02:30.613Z - info: Generate Site durationMs=61109
+2018-08-06T05:03:58.284Z - info: Deployed!
+2018-08-06T05:26:38.821Z - info: Website generation started at 13:26:38
+2018-08-06T05:26:38.969Z - info: Building assets...
+2018-08-06T05:26:39.229Z - info: Assets built
+2018-08-06T05:26:39.229Z - info: Generating pages...
+2018-08-06T05:27:27.368Z - info: Pages built
+2018-08-06T05:27:27.375Z - info: Site data built
+2018-08-06T05:27:27.375Z - info: Website generation complete! Total build time: 48.691s
+2018-08-06T05:27:27.383Z - info: Generate Site durationMs=48699
+2018-08-06T05:27:27.482Z - info: Serving "/home/anarayan/workspace/CS2113/aug2018/website/_site" at http://127.0.0.1:8080
+2018-08-06T05:27:27.482Z - info: Press CTRL+C to stop ...
+2018-08-06T07:12:22.451Z - info: [15:12:22] Reload for file change: /home/anarayan/workspace/CS2113/aug2018/website/se-book-adapted/config.njk
+2018-08-06T07:12:23.644Z - info: Assets built
+2018-08-06T07:14:16.708Z - info: [15:14:16] Reload for file change: /home/anarayan/workspace/CS2113/aug2018/website/se-book-adapted/config.njk
+2018-08-06T07:14:17.711Z - info: Assets built
+2018-08-06T07:26:30.880Z - info: [15:26:30] Reload for file change: /home/anarayan/workspace/CS2113/aug2018/website/se-book-adapted/config.njk
+2018-08-06T07:26:31.887Z - info: Assets built
+2018-08-06T09:07:57.186Z - info: [17:07:57] Reload for file change: /home/anarayan/workspace/CS2113/aug2018/website/se-book-adapted/config.njk
+2018-08-06T09:07:58.192Z - info: Assets built
+2018-08-06T09:21:47.717Z - info: [17:21:47] Reload for file change: /home/anarayan/workspace/CS2113/aug2018/website/se-book-adapted/config.njk
+2018-08-06T09:21:48.725Z - info: Assets built
+2018-08-06T09:26:01.676Z - info: [17:26:01] Reload for file change: /home/anarayan/workspace/CS2113/aug2018/website/admin/project-assessment.md
+2018-08-06T09:26:02.682Z - verbose: Rebuild affected paths: /home/anarayan/workspace/CS2113/aug2018/website/admin/project-assessment.md
+2018-08-06T09:26:02.751Z - info: Rebuilding 13 pages
+2018-08-06T09:26:13.999Z - info: Pages rebuilt
+2018-08-06T09:26:14.018Z - info: Site data built

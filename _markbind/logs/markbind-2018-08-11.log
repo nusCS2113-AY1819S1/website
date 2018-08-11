@@ -1,0 +1,52 @@
+2018-08-11T01:21:10.337Z - info: Website generation started at 09:21:07
+2018-08-11T01:21:13.381Z - info: Building assets...
+2018-08-11T01:21:18.590Z - info: Assets built
+2018-08-11T01:21:18.678Z - info: Generating pages...
+2018-08-11T01:25:29.654Z - error:  Error: ENOENT: no such file or directory, open '/home/anarayan/workspace/CS2113/aug2018/website/_markbind/head/scheduleHead-flat.md'
+    at Object.fs.openSync (fs.js:646:18)
+    at Object.fs.readFileSync (fs.js:551:33)
+    at Page.collectHeadFiles (/home/anarayan/.npm-global/lib/node_modules/markbind-cli/lib/Page.js:368:30)
+    at markbinder.includeFile.then.then.then.then.then.then.then.then.then (/home/anarayan/.npm-global/lib/node_modules/markbind-cli/lib/Page.js:420:14)
+    at tryCatcher (/home/anarayan/.npm-global/lib/node_modules/markbind-cli/node_modules/bluebird/js/release/util.js:16:23)
+    at Promise._settlePromiseFromHandler (/home/anarayan/.npm-global/lib/node_modules/markbind-cli/node_modules/bluebird/js/release/promise.js:512:31)
+    at Promise._settlePromise (/home/anarayan/.npm-global/lib/node_modules/markbind-cli/node_modules/bluebird/js/release/promise.js:569:18)
+    at Promise._settlePromise0 (/home/anarayan/.npm-global/lib/node_modules/markbind-cli/node_modules/bluebird/js/release/promise.js:614:10)
+    at Promise._settlePromises (/home/anarayan/.npm-global/lib/node_modules/markbind-cli/node_modules/bluebird/js/release/promise.js:693:18)
+    at Async._drainQueue (/home/anarayan/.npm-global/lib/node_modules/markbind-cli/node_modules/bluebird/js/release/async.js:133:16)
+    at Async._drainQueues (/home/anarayan/.npm-global/lib/node_modules/markbind-cli/node_modules/bluebird/js/release/async.js:143:10)
+    at Immediate.Async.drainQueues (/home/anarayan/.npm-global/lib/node_modules/markbind-cli/node_modules/bluebird/js/release/async.js:17:14)
+    at runCallback (timers.js:810:20)
+    at tryOnImmediate (timers.js:768:5)
+    at processImmediate [as _immediateCallback] (timers.js:745:5)
+2018-08-11T01:25:29.661Z - warn:  Error: Error while generating /home/anarayan/workspace/CS2113/aug2018/website/schedule/index-flat.md
+    at processingFiles.push.page.generate.then.catch (/home/anarayan/.npm-global/lib/node_modules/markbind-cli/lib/Site.js:558:31)
+    at tryCatcher (/home/anarayan/.npm-global/lib/node_modules/markbind-cli/node_modules/bluebird/js/release/util.js:16:23)
+    at Promise._settlePromiseFromHandler (/home/anarayan/.npm-global/lib/node_modules/markbind-cli/node_modules/bluebird/js/release/promise.js:512:31)
+    at Promise._settlePromise (/home/anarayan/.npm-global/lib/node_modules/markbind-cli/node_modules/bluebird/js/release/promise.js:569:18)
+    at Promise._settlePromise0 (/home/anarayan/.npm-global/lib/node_modules/markbind-cli/node_modules/bluebird/js/release/promise.js:614:10)
+    at Promise._settlePromises (/home/anarayan/.npm-global/lib/node_modules/markbind-cli/node_modules/bluebird/js/release/promise.js:689:18)
+    at Async._drainQueue (/home/anarayan/.npm-global/lib/node_modules/markbind-cli/node_modules/bluebird/js/release/async.js:133:16)
+    at Async._drainQueues (/home/anarayan/.npm-global/lib/node_modules/markbind-cli/node_modules/bluebird/js/release/async.js:143:10)
+    at Immediate.Async.drainQueues (/home/anarayan/.npm-global/lib/node_modules/markbind-cli/node_modules/bluebird/js/release/async.js:17:14)
+    at runCallback (timers.js:810:20)
+    at tryOnImmediate (timers.js:768:5)
+    at processImmediate [as _immediateCallback] (timers.js:745:5)
+2018-08-11T01:25:50.661Z - error:  Error: ENOENT: no such file or directory, open '/home/anarayan/workspace/CS2113/aug2018/website/.temp/schedule/week3/index.md'
+2018-08-11T01:25:54.337Z - error:  Error: ENOENT: no such file or directory, open '/home/anarayan/workspace/CS2113/aug2018/website/_site/book/uml/activityDiagrams/basicNotations/linearPaths/unit-inElsewhere-asFlat._include_.html'
+2018-08-11T01:25:55.399Z - warn:  Error: Error while generating /home/anarayan/workspace/CS2113/aug2018/website/schedule/index-flat.md
+    at processingFiles.push.page.generate.then.catch (/home/anarayan/.npm-global/lib/node_modules/markbind-cli/lib/Site.js:558:31)
+    at tryCatcher (/home/anarayan/.npm-global/lib/node_modules/markbind-cli/node_modules/bluebird/js/release/util.js:16:23)
+    at Promise._settlePromiseFromHandler (/home/anarayan/.npm-global/lib/node_modules/markbind-cli/node_modules/bluebird/js/release/promise.js:512:31)
+    at Promise._settlePromise (/home/anarayan/.npm-global/lib/node_modules/markbind-cli/node_modules/bluebird/js/release/promise.js:569:18)
+    at Promise._settlePromise0 (/home/anarayan/.npm-global/lib/node_modules/markbind-cli/node_modules/bluebird/js/release/promise.js:614:10)
+    at Promise._settlePromises (/home/anarayan/.npm-global/lib/node_modules/markbind-cli/node_modules/bluebird/js/release/promise.js:689:18)
+    at Async._drainQueue (/home/anarayan/.npm-global/lib/node_modules/markbind-cli/node_modules/bluebird/js/release/async.js:133:16)
+    at Async._drainQueues (/home/anarayan/.npm-global/lib/node_modules/markbind-cli/node_modules/bluebird/js/release/async.js:143:10)
+    at Immediate.Async.drainQueues (/home/anarayan/.npm-global/lib/node_modules/markbind-cli/node_modules/bluebird/js/release/async.js:17:14)
+    at runCallback (timers.js:810:20)
+    at tryOnImmediate (timers.js:768:5)
+    at processImmediate [as _immediateCallback] (timers.js:745:5)
+2018-08-11T01:25:55.401Z - info: Generate Site durationMs=287581
+2018-08-11T01:25:55.403Z - error: Error while generating /home/anarayan/workspace/CS2113/aug2018/website/schedule/index-flat.md
+2018-08-11T01:27:35.791Z - info: Website generation started at 09:27:35
+2018-08-11T01:27:36.578Z - info: Building assets...
