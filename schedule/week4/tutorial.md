@@ -14,11 +14,6 @@ Therefore, we **strongly encourage you to achieve the `W4.1 Can create PRs on Gi
 * This week we don't join teams during discussions, to give you more time to work with your own team members in preparation for the upcoming peer review in week 6.
 * As before, discuss evidence of achieving LOs as directed by the tutor.
 
-**Suggested question to discuss:**
-
-<include src="../../book/modeling/modelingStructures/classDiagramsBasic/q-essay-explainClassDiagram.md" />
-<include src="../../book/uml/classDiagrams/combine/basic/q-essay-objectDiagramsForClassDiagram.md" />
-
 
 {% from "schedule/index.md" import all_outcomes with context %}
 {% from "common/tutorial.njk" import  show_week_evidences with context %}

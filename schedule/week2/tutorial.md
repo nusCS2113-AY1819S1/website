@@ -11,6 +11,13 @@
 
 * Starting with learning outcomes at {{ macros.show_stars("1") }} level, share/discuss/demo evidence of (as directed by the tutor) weekly learning outcomes.
 
+
+**Suggested question to discuss:**
+
+<include src="../../book/modeling/modelingStructures/classDiagramsBasic/q-essay-explainClassDiagram.md" />
+<include src="../../book/uml/classDiagrams/combine/basic/q-essay-objectDiagramsForClassDiagram.md" />
+
+
 {% from "schedule/index.md" import all_outcomes with context %}
 {% from "common/tutorial.njk" import  show_week_evidences with context %}
 {{ show_week_evidences("2", all_outcomes) }}
