@@ -1,0 +1,42 @@
+2018-08-12T02:24:28.093Z - info: Website generation started at 10:24:27
+2018-08-12T02:24:28.442Z - info: Building assets...
+2018-08-12T02:24:32.518Z - info: Assets built
+2018-08-12T02:24:32.570Z - info: Generating pages...
+2018-08-12T02:25:49.168Z - info: Pages built
+2018-08-12T02:25:49.581Z - info: Site data built
+2018-08-12T02:25:49.583Z - info: Website generation complete! Total build time: 81.938s
+2018-08-12T02:25:49.612Z - info: Generate Site durationMs=81968
+2018-08-12T02:25:49.686Z - info: Serving "/home/anarayan/workspace/CS2113/aug2018/website/_site" at http://127.0.0.1:8080
+2018-08-12T02:25:49.687Z - info: Press CTRL+C to stop ...
+2018-08-12T02:26:53.989Z - info: [10:26:53] Reload for file change: /home/anarayan/workspace/CS2113/aug2018/website/schedule/index.md
+2018-08-12T02:26:54.994Z - verbose: Rebuild affected paths: /home/anarayan/workspace/CS2113/aug2018/website/schedule/index.md
+2018-08-12T02:26:54.998Z - info: Rebuilding 2 pages
+2018-08-12T02:27:03.321Z - info: Pages rebuilt
+2018-08-12T02:27:03.337Z - info: Site data built
+2018-08-12T02:33:43.832Z - info: [10:33:43] Reload for file change: /home/anarayan/workspace/CS2113/aug2018/website/schedule/index.md
+2018-08-12T02:33:44.834Z - verbose: Rebuild affected paths: /home/anarayan/workspace/CS2113/aug2018/website/schedule/index.md
+2018-08-12T02:33:44.836Z - info: Rebuilding 2 pages
+2018-08-12T02:33:52.868Z - info: Pages rebuilt
+2018-08-12T02:33:52.871Z - info: Site data built
+2018-08-12T02:34:47.810Z - info: [10:34:47] Reload for file change: /home/anarayan/workspace/CS2113/aug2018/website/schedule/index.md
+2018-08-12T02:34:48.818Z - verbose: Rebuild affected paths: /home/anarayan/workspace/CS2113/aug2018/website/schedule/index.md
+2018-08-12T02:34:48.821Z - info: Rebuilding 2 pages
+2018-08-12T02:34:57.402Z - info: Pages rebuilt
+2018-08-12T02:34:57.407Z - info: Site data built
+2018-08-12T02:35:51.383Z - info: [10:35:51] Reload for file change: /home/anarayan/workspace/CS2113/aug2018/website/schedule/index.md
+2018-08-12T02:35:52.386Z - verbose: Rebuild affected paths: /home/anarayan/workspace/CS2113/aug2018/website/schedule/index.md
+2018-08-12T02:35:52.388Z - info: Rebuilding 2 pages
+2018-08-12T02:36:00.696Z - info: Pages rebuilt
+2018-08-12T02:36:00.699Z - info: Site data built
+2018-08-12T02:40:10.010Z - info: Website generation started at 10:40:09
+2018-08-12T02:40:12.749Z - info: Building assets...
+2018-08-12T02:40:16.775Z - info: Assets built
+2018-08-12T02:40:16.777Z - info: Generating pages...
+2018-08-12T02:41:17.714Z - info: Pages built
+2018-08-12T02:41:18.119Z - info: Site data built
+2018-08-12T02:41:18.121Z - info: Website generation complete! Total build time: 68.385s
+2018-08-12T02:41:18.151Z - info: Generate Site durationMs=68416
+2018-08-12T02:41:18.264Z - info: Serving "/home/anarayan/workspace/CS2113/aug2018/website/_site" at http://127.0.0.1:8080
+2018-08-12T02:41:18.265Z - info: Press CTRL+C to stop ...
+2018-08-12T02:48:07.554Z - info: Website generation started at 10:48:07
+2018-08-12T02:48:07.731Z - info: Building assets...

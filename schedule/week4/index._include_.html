@@ -60,10 +60,10 @@
 <panel type="seamless" popup-url="/website/schedule/week4/outcomes.html" expanded="" no-close="">
   <span slot="header" class="card-title activity-type"><span class="fas fa-trophy"></span> Outcomes</span>
   <div class="indented">
-    <p><span class="activity-desc">Requirements</span></p>
+    <p><span class="activity-desc">Testing</span></p>
     <div class="indented">
       <panel no-close="" expandable="true">
-        <span slot="header" class="card-title"><span><code>W4.1</code> <strong>Can explain requirements</strong> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+        <span slot="header" class="card-title"><span><code>W4.1</code> <strong>Can automate simple regression testing of text UIs</strong> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
         <span
           class="glyphicon glyphicon-star" aria-hidden="true"></span>
           </span>
@@ -71,7 +71,359 @@
           </span>
           </span>
           <panel type="warning" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.1a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain requirements</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.1a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain testing</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span
+              class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              </span>
+              </span>
+              </span>
+              </span>
+              <div>
+                <div></div>
+                <p></p>
+                <p><span class="dimmed"><strong><span>Quality Assurance → Testing → Introduction →
+</span></strong>
+                  </span>
+                </p>
+                <div id="title-and-body">
+                  <div>
+                    <h4 id="what">What</h4>
+                  </div>
+                  <div id="main">
+                    <div>
+                      <tip-box type="definition">
+                        <div>
+                          <p><strong>Testing</strong>: Testing is operating a system or component under specified conditions, observing or recording the results, and making an evaluation of some aspect of the system or component. –- source: IEEE</p>
+                        </div>
+                      </tip-box>
+                      <img src="/website/book/testing/introduction/what/images/diagram.png" height="220">
+                      <p></p>
+                      <p><strong>When testing, we execute a set of <em>test cases</em>.</strong> A test case specifies how to perform a test. At a minimum, it specifies the input to the <em>software under test (SUT)</em> and the expected behavior.</p>
+                      <tip-box>
+                        <p><span class="fas fa-cube"></span> Example: A minimal test case for testing a browser:</p>
+                        <ul>
+                          <li><strong>Input</strong> – Start the browser using a blank page (vertical scrollbar disabled). Then, load <code>longfile.html</code> located in the <code>test data</code> folder.</li>
+                          <li><strong>Expected behavior</strong> – The scrollbar should be automatically enabled upon loading <code>longfile.html</code>.</li>
+                        </ul>
+                      </tip-box>
+                      <p><strong>Test cases can be determined based on the specification, reviewing similar existing systems, or comparing to the past behavior of the SUT.</strong></p>
+                      <panel header="%%Other details a test case can contain%%" type="seamless">
+                        <p>A more elaborate test case can have other details such as those given below.</p>
+                        <ul>
+                          <li>A unique identifier : <span class="dimmed">e.g. TC0034-a</span></li>
+                          <li>A descriptive name: <span class="dimmed">e.g. vertical scrollbar activation for long web pages</span></li>
+                          <li>Objectives: <span class="dimmed">e.g. to check whether the vertical scrollbar is correctly activated when a long web page is loaded to the browser</span></li>
+                          <li>Classification information: <span class="dimmed">e.g. priority - medium, category - UI features</span></li>
+                          <li>Cleanup, if any: <span class="dimmed">e.g. empty the browser cache.</span></li>
+                        </ul>
+                        <p></p>
+                      </panel>
+                      <p></p>
+                      <p>For each test case we do the following:</p>
+                      <ol>
+                        <li>Feed the input to the SUT</li>
+                        <li>Observe the actual output</li>
+                        <li>Compare actual output with the expected output</li>
+                      </ol>
+                      <p><strong>A test case <em>failure</em> is a mismatch between the expected behavior and the actual behavior. A failure is caused by a <em>defect</em> (or a bug).</strong></p>
+                      <tip-box>
+                        <p><span class="fas fa-cube"></span> Example: In the browser example above, a test case failure is implied if the scrollbar remains disabled after loading <code>longfile.html</code>. The defect/bug causing that failure could be an
+                          uninitialized variable.</p>
+                      </tip-box>
+                      <panel header="%%A deeper look at the definition of testing%%" type="seamless">
+                        <p>Here is another definition of testing:</p>
+                        <blockquote>
+                          <p>Software testing consists of the <em>dynamic</em> verification that a program provides <em>expected</em> behaviors on a <em>finite</em> set of test cases, suitably <em>selected</em> from the usually infinite execution domain.
+                            <sub>-– source: <a href="https://www.computer.org/web/swebok/v3">Software Engineering Book of Knowledge V3</a></sub></p>
+                        </blockquote>
+                        <p>Some things to note (indicated by keywords in the above definition):</p>
+                        <ul>
+                          <li><em>Dynamic</em>: Testing involves executing the software. It is not by examining the code statically.</li>
+                          <li><em>Finite</em>: In most non-trivial cases there are potentially infinite test scenarios but resource constraints dictate that we can test only a finite number of scenarios.</li>
+                          <li><em>Selected</em>: In most cases it is not possible to test all scenarios. That means we need to select what scenarios to test.</li>
+                          <li><em>Expected</em>: Testing requires some knowledge of how the software is expected to behave.</li>
+                        </ul>
+                        <p></p>
+                      </panel>
+                      <p></p>
+                    </div>
+                    <div>
+                      <div>
+                        <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                          <div>
+                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Relate testing, test cases, failure, and defect">
+                              <question has-input="">
+                                <p>Explain how the concepts of <em>testing</em>, <em>test case</em>, <em>test failure</em>, and <em>defect</em> are related to each other.</p>
+                              </question>
+                            </panel>
+                          </div>
+                        </panel>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr style="border-top: dashed 1px; border-color:grey">
+              <p><big><span class="fas fa-briefcase"></span> Evidence:</big></p>
+              <div>
+                <div>
+                  <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Relate testing, test cases, failure, and defect">
+                    <question has-input="">
+                      <p>Explain how the concepts of <em>testing</em>, <em>test case</em>, <em>test failure</em>, and <em>defect</em> are related to each other.</p>
+                    </question>
+                  </panel>
+                </div>
+              </div>
+          </panel>
+          <panel type="warning" expanded="" no-close="" epxandable="true">
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.1b</code></span></big> <span><span class="fas fa-trophy"></span> Can explain regression testing</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span
+              class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              </span>
+              </span>
+              </span>
+              </span>
+              <div>
+                <div></div>
+                <p></p>
+                <p><span class="dimmed"><strong><span>Quality Assurance → Testing → Regression Testing →
+</span></strong>
+                  </span>
+                </p>
+                <div id="title-and-body">
+                  <div>
+                    <h4 id="what-2">What</h4>
+                  </div>
+                  <div id="main">
+                    <div>
+                      <p><strong>When we modify a system, the modification may result in some unintended and undesirable effects on the system. Such an effect is called a <em>regression</em>.</strong></p>
+                      <p><strong><em>Regression testing</em> is re-testing the software to detect regressions.</strong> Note that to detect regressions, we need to retest all related components, even if they were tested before.</p>
+                      <p>Regression testing is more effective when it is done frequently, after each small change. However, doing so can be prohibitively expensive if testing is done manually. Hence, <strong>regression testing is more practical when it is automated</strong>.</p>
+                    </div>
+                    <div>
+                      <div>
+                        <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                          <div>
+                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Regression Testing defintion T/F?">
+                              <question>
+                                <p>Regression testing is the automated re-testing of a software after it has been modified.</p>
+                                <ul radio-group="63d56" class="radio-list">
+                                  <li class="radio-list-item"><label><input class="radio-list-input" name="63d56" type="radio"> a. True</label></li>
+                                  <li class="radio-list-item"><label><input class="radio-list-input" name="63d56" type="radio"> b. False</label></li>
+                                  <li class="radio-list-item"><label><input class="radio-list-input" name="63d56" type="radio"> c. Partially true</label></li>
+                                </ul>
+                                <div slot="answer">
+                                  <p>c.</p>
+                                  <p>Explanation: Regression testing <mark>need not be automated</mark> but automation is highly recommended.</p>
+                                </div>
+                              </question>
+                            </panel>
+                          </div>
+                          <div>
+                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Explain regression testing">
+                              <question has-input="">
+                                <p>Explain why and when you would do regression testing in a software project.</p>
+                              </question>
+                            </panel>
+                          </div>
+                        </panel>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr style="border-top: dashed 1px; border-color:grey">
+              <p><big><span class="fas fa-briefcase"></span> Evidence:</big></p>
+              <div>
+                <div>
+                  <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Explain regression testing">
+                    <question has-input="">
+                      <p>Explain why and when you would do regression testing in a software project.</p>
+                    </question>
+                  </panel>
+                </div>
+              </div>
+          </panel>
+          <panel type="warning" expanded="" no-close="" epxandable="true">
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.1c</code></span></big> <span><span class="fas fa-trophy"></span> Can explain test automation</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span
+              class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              </span>
+              </span>
+              </span>
+              </span>
+              <div>
+                <div></div>
+                <p></p>
+                <p><span class="dimmed"><strong><span>Quality Assurance → Testing → Test Automation →
+</span></strong>
+                  </span>
+                </p>
+                <div id="title-and-body">
+                  <div>
+                    <h4 id="what-3">What</h4>
+                  </div>
+                  <div id="main">
+                    <div>
+                      <tabs>
+                      
+                        <tab header="<span class='far fa-file-alt'></span>">
+                          <p><strong>An automated test case can be run programmatically and the result of the test case (pass or fail) is determined programmatically.</strong> Compared to manual testing, automated testing reduces the effort required to run
+                            tests repeatedly and increases precision of testing (because manual testing is susceptible to human errors).</p>
+                          <p>
+                            <hr>
+                          </p>
+                        </tab>
+                      
+                        <tab header="<span class='glyphicon glyphicon-facetime-video' aria-hidden='true'></span>">
+                          <iframe width="560" height="315" src="https://www.youtube.com/embed/RbSlW8jZFe8?end=79&version=3" frameborder="0" allowfullscreen></iframe>
+                          <p>
+                            <hr>
+                          </p>
+                        </tab>
+                      </tabs>
+                    </div>
+                    <div>
+                      <div>
+                        <panel header="<span class='fas fa-paperclip'></span> Resources">
+                          <p><strong>Side readings:</strong></p>
+                          <ul>
+                            <li>[Quora post] <a href="http://www.quora.com/What-are-good-ways-to-avoid-bugs-while-programming/answer/Mattias-Petter-Johansson">What is the best way to avoid bugs</a></li>
+                            <li>[Quora post] <a href="http://www.quora.com/What-kind-of-automated-testing-should-a-startup-have-from-the-beginning-through-the-first-six-months-of-live-operation/answer/Zach-Brock">Is automated testing relevant to startups?</a></li>
+                          </ul>
+                        </panel>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </panel>
+          <panel type="warning" expanded="" no-close="" epxandable="true">
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.1d</code></span></big> <span><span class="fas fa-trophy"></span> Can semi-automate testing of CLIs</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span
+              class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              </span>
+              </span>
+              </span>
+              </span>
+              <div>
+                <div></div>
+                <p></p>
+                <p><span class="dimmed"><strong><span>Quality Assurance → Testing → Test Automation →
+</span></strong>
+                  </span>
+                </p>
+                <div id="title-and-body">
+                  <div>
+                    <h4 id="automated-testing-of-cli-apps">Automated Testing of CLI Apps</h4>
+                  </div>
+                  <div id="main">
+                    <div>
+                      <p><strong>A simple way to semi-automate testing of a CLI(Command Line Interface) app is by using input/output re-direction.</strong></p>
+                      <ul>
+                        <li>First, we feed the app with a sequence of test inputs that is stored in a file while redirecting the output to another file.</li>
+                        <li>Next, we compare the actual output file with another file containing the expected output.</li>
+                      </ul>
+                      <p>Let us assume we are testing a CLI app called <code>AddressBook</code>. Here are the detailed steps:</p>
+                      <ol>
+                        <li>
+                          <p>Store the test input in the text file <code>input.txt</code>.</p>
+                          <panel header="%%<span class='fas fa-cube'></span> Example `input.txt`%%" type="seamless">
+                            <pre class="hljs"><code>add Valid Name p/12345 valid@email.butNoPrefix
+add Valid Name 12345 e/valid@email.butPhonePrefixMissing
+</code></pre>
+                          </panel>
+                        </li>
+                        <li>
+                          <p>Store the output we expect from the SUT in another text file <code>expected.txt</code>.</p>
+                          <panel header="%%<span class='fas fa-cube'></span> Example `expected.txt`%%" type="seamless">
+                            <pre class="hljs"><code>Command: || [add Valid Name p/12345 valid@email.butNoPrefix]
+Invalid command format: add 
+
+Command: || [add Valid Name 12345 e/valid@email.butPhonePrefixMissing]
+Invalid command format: add 
+</code></pre>
+                          </panel>
+                        </li>
+                        <li>
+                          <p>Run the program as given below, which will redirect the text in <code>input.txt</code> as the input to <code>AddressBook</code> and similarly, will redirect the output of AddressBook to a text file <code>output.txt</code>.
+                            <span
+                              class="dimmed">Note that this does not require any code changes to <code>AddressBook</code>.</span>
+                          </p>
+                          <pre><code class="hljs sh">java AddressBook &lt; input.txt &gt; output.txt
+</code></pre>
+                          <ul>
+                            <li>
+                              <p>💡 The way to run a CLI program differs based on the language.<br> e.g., In Python, assuming the code is in <code>AddressBook.py</code> file, use the command<br>
+                                <code>python AddressBook.py &lt; input.txt &gt; output.txt</code></p>
+                            </li>
+                            <li>
+                              <p>💡 If you are using Windows, use a normal command window to run the app, not a Power Shell window.</p>
+                            </li>
+                          </ul>
+                          <panel header="" minimized="">
+                            <span slot="header" class="card-title"><span>More on the <code>&gt;</code> operator and the <code>&lt;</code> operator. <span class="badge badge-pill badge-secondary">tangential</span></span>
+                            </span>
+                            <p>A CLI program takes input from the keyboard and outputs to the console. That is because those two are default input and output streams, respectively. But you can change that behavior using <code>&lt;</code> and <code>&gt;</code>                              operators. For example, if you run <code>AddressBook</code> in a command window, the output will be shown in the console, but if you run it like this,</p>
+                            <pre><code class="hljs sh">java AddressBook &gt; output.txt 
+</code></pre>
+                            <p>the Operating System then creates a file <code>output.txt</code> and stores the output in that file instead of displaying it in the console. No file I/O coding is required. Similarly, adding <code>&lt; input.txt</code> (or
+                              any other filename) makes the OS redirect the contents of the file as input to the program, as if the user typed the content of the file one line at a time.</p>
+                            <tip-box>
+                              <p><span class="fas fa-paperclip"></span> Resources:</p>
+                              <ul>
+                                <li><a href="http://technet.microsoft.com/en-us/library/bb490982.aspx">Using command redirection operators in Windows</a></li>
+                              </ul>
+                            </tip-box>
+                            <p></p>
+                          </panel>
+                          <p></p>
+                        </li>
+                        <li>
+                          <p>Next, we compare <code>output.txt</code> with the <code>expected.txt</code>. This can be done using a utility such as Windows <code>FC</code> (i.e. File Compare) command, Unix <code>diff</code> command, or a GUI tool such as
+                            <em>WinMerge</em>.</p>
+                          <pre class="hljs"><code>FC output.txt expected.txt
+</code></pre>
+                        </li>
+                      </ol>
+                      <p>Note that the above technique is only suitable when testing CLI apps, and only if the exact output can be predetermined. <span class="dimmed">If the output varies from one run to the other (e.g. it contains a time stamp), this technique will not work. In those cases we need more sophisticated ways of automating tests.</span></p>
+                      <div>
+                        <popover id="pop:cli" placement="top">
+                          <div slot="content">
+                            <div>
+                              <p><strong>CLI App</strong>: An application that has a <em>Command Line Interface</em>. i.e. user interacts with the app by typing in commands.</p>
+                            </div>
+                          </div>
+                        </popover>
+                      </div>
+                    </div>
+                    <div></div>
+                  </div>
+                </div>
+              </div>
+              <hr style="border-top: dashed 1px; border-color:grey">
+              <p><big><span class="fas fa-briefcase"></span> Evidence:</big></p>
+              <div>
+                <p><strong>Acceptable</strong>: Any project where you use the I/O redirection method to test a CLI.</p>
+                <p><strong>Suggested</strong>: Do the exercise given in <a href="https://github.com/nusCS2113-AY1819S1/addressbook-level1/blob/master/docs/LearningOutcomes.adoc#automate-cli-testing-code-lo-automatedclitesting-code">AddressBook - Level1 : LO-AutomatedCliTesting</a></p>
+                <p><strong>Submission</strong>: Demo the test during the tutorial.</p>
+              </div>
+          </panel>
+      </panel>
+    </div>
+    <p></p>
+    <p><span class="activity-desc">Requirements</span></p>
+    <div class="indented">
+      <panel no-close="" expandable="true">
+        <span slot="header" class="card-title"><span><code>W4.2</code> <strong>Can explain requirements</strong> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+        <span
+          class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          </span>
+          </span>
+          </span>
+          </span>
+          <panel type="warning" expanded="" no-close="" epxandable="true">
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.2a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain requirements</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span>
               </span>
@@ -113,7 +465,7 @@
               </div>
           </panel>
           <panel type="warning" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.1b</code></span></big> <span><span class="fas fa-trophy"></span> Can explain non-functional requirements</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.2b</code></span></big> <span><span class="fas fa-trophy"></span> Can explain non-functional requirements</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span>
               </span>
@@ -197,7 +549,7 @@
               </div>
           </panel>
           <panel type="info" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.1c</code></span></big> <span><span class="fas fa-trophy"></span> Can explain prioritizing requirements</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.2c</code></span></big> <span><span class="fas fa-trophy"></span> Can explain prioritizing requirements</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
@@ -245,7 +597,7 @@
               </div>
           </panel>
           <panel type="info" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.1d</code></span></big> <span><span class="fas fa-trophy"></span> Can explain quality of requirements</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.2d</code></span></big> <span><span class="fas fa-trophy"></span> Can explain quality of requirements</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
@@ -300,13 +652,13 @@
           </panel>
       </panel>
       <panel no-close="" expandable="true">
-        <span slot="header" class="card-title"><span><code>W4.2</code> <strong>Can explain some techniques for gathering requirements</strong> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+        <span slot="header" class="card-title"><span><code>W4.3</code> <strong>Can explain some techniques for gathering requirements</strong> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
         <span
           class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
           </span>
           </span>
           <panel type="info" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.2a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain brainstorming</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.3a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain brainstorming</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
@@ -359,7 +711,7 @@
               </div>
           </panel>
           <panel type="info" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.2b</code></span></big> <span><span class="fas fa-trophy"></span> Can explain product surveys</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.3b</code></span></big> <span><span class="fas fa-trophy"></span> Can explain product surveys</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
@@ -389,7 +741,7 @@
               </div>
           </panel>
           <panel type="info" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.2c</code></span></big> <span><span class="fas fa-trophy"></span> Can explain observation</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.3c</code></span></big> <span><span class="fas fa-trophy"></span> Can explain observation</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
@@ -416,7 +768,7 @@
               </div>
           </panel>
           <panel type="info" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.2d</code></span></big> <span><span class="fas fa-trophy"></span> Can explain user surveys</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.3d</code></span></big> <span><span class="fas fa-trophy"></span> Can explain user surveys</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
@@ -442,7 +794,7 @@
               </div>
           </panel>
           <panel type="info" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.2e</code></span></big> <span><span class="fas fa-trophy"></span> Can explain interviews</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.3e</code></span></big> <span><span class="fas fa-trophy"></span> Can explain interviews</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
@@ -476,7 +828,7 @@
               </div>
           </panel>
           <panel type="info" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.2f</code></span></big> <span><span class="fas fa-trophy"></span> Can explain focus groups</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.3f</code></span></big> <span><span class="fas fa-trophy"></span> Can explain focus groups</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
@@ -514,7 +866,7 @@
               </div>
           </panel>
           <panel type="info" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.2g</code></span></big> <span><span class="fas fa-trophy"></span> Can explain prototyping</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.3g</code></span></big> <span><span class="fas fa-trophy"></span> Can explain prototyping</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
@@ -571,13 +923,13 @@
           </panel>
       </panel>
       <panel no-close="" expandable="true">
-        <span slot="header" class="card-title"><span><code>W4.3</code> <strong>Can use some techniques for specifying requirements</strong> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+        <span slot="header" class="card-title"><span><code>W4.4</code> <strong>Can use some techniques for specifying requirements</strong> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
         </span>
         </span>
         <br>
         <p><span class="dimmed"><strong>Prose</strong></span></p>
         <panel type="info" expanded="" no-close="" epxandable="true">
-          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.3a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain prose</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.4a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain prose</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
           <span
             class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
             </span>
@@ -591,7 +943,7 @@
               </p>
               <div id="title-and-body">
                 <div>
-                  <h4 id="what">What</h4>
+                  <h4 id="what-4">What</h4>
                 </div>
                 <div id="main">
                   <div>
@@ -613,7 +965,7 @@
         <br>
         <p><span class="dimmed"><strong>Feature Lists</strong></span></p>
         <panel type="warning" expanded="" no-close="" epxandable="true">
-          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.3b</code></span></big> <span><span class="fas fa-trophy"></span> Can explain feature list</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.4b</code></span></big> <span><span class="fas fa-trophy"></span> Can explain feature list</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
           <span
             class="glyphicon glyphicon-star" aria-hidden="true"></span>
             </span>
@@ -629,7 +981,7 @@
               </p>
               <div id="title-and-body">
                 <div>
-                  <h4 id="what-2">What</h4>
+                  <h4 id="what-5">What</h4>
                 </div>
                 <div id="main">
                   <div>
@@ -662,7 +1014,7 @@
         <br>
         <p><span class="dimmed"><strong>User Stories</strong></span></p>
         <panel type="danger" expanded="" no-close="" epxandable="true">
-          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.3c</code></span></big> <span><span class="fas fa-trophy"></span> Can write simple user stories</span> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.4c</code></span></big> <span><span class="fas fa-trophy"></span> Can write simple user stories</span> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
           </span>
           </span>
           <div>
@@ -790,7 +1142,7 @@
           </div>
         </panel>
         <panel type="warning" expanded="" no-close="" epxandable="true">
-          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.3d</code></span></big> <span><span class="fas fa-trophy"></span> Can write more detailed user stories</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.4d</code></span></big> <span><span class="fas fa-trophy"></span> Can write more detailed user stories</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
           <span
             class="glyphicon glyphicon-star" aria-hidden="true"></span>
             </span>
@@ -909,7 +1261,7 @@
             </div>
         </panel>
         <panel type="warning" expanded="" no-close="" epxandable="true">
-          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.3e</code></span></big> <span><span class="fas fa-trophy"></span> Can use user stories to manage requirements of project</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.4e</code></span></big> <span><span class="fas fa-trophy"></span> Can use user stories to manage requirements of project</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
           <span
             class="glyphicon glyphicon-star" aria-hidden="true"></span>
             </span>
@@ -1052,7 +1404,7 @@
         <br>
         <p><span class="dimmed"><strong>Use Cases</strong></span></p>
         <panel type="danger" expanded="" no-close="" epxandable="true">
-          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.3f</code></span></big> <span><span class="fas fa-trophy"></span> Can explain use cases</span> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.4f</code></span></big> <span><span class="fas fa-trophy"></span> Can explain use cases</span> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
           </span>
           </span>
           <div>
@@ -1141,7 +1493,7 @@
           </div>
         </panel>
         <panel type="warning" expanded="" no-close="" epxandable="true">
-          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.3g</code></span></big> <span><span class="fas fa-trophy"></span> Can use use cases to list functional requirements of a simple system</span>
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.4g</code></span></big> <span><span class="fas fa-trophy"></span> Can use use cases to list functional requirements of a simple system</span>
           <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
           </span>
           </span>
@@ -1277,7 +1629,7 @@
           </div>
         </panel>
         <panel type="warning" expanded="" no-close="" epxandable="true">
-          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.3h</code></span></big> <span><span class="fas fa-trophy"></span> Can specify details of a use case in a structured format</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.4h</code></span></big> <span><span class="fas fa-trophy"></span> Can specify details of a use case in a structured format</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
           <span
             class="glyphicon glyphicon-star" aria-hidden="true"></span>
             </span>
@@ -1800,7 +2152,7 @@
             </div>
         </panel>
         <panel type="info" expanded="" no-close="" epxandable="true">
-          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.3i</code></span></big> <span><span class="fas fa-trophy"></span> Can optimize the use of use cases</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.4i</code></span></big> <span><span class="fas fa-trophy"></span> Can optimize the use of use cases</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
           <span
             class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
             </span>
@@ -1887,7 +2239,7 @@
         <br>
         <p><span class="dimmed"><strong>Glossary</strong></span></p>
         <panel type="info" expanded="" no-close="" epxandable="true">
-          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.3j</code></span></big> <span><span class="fas fa-trophy"></span> Can explain glossary</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.4j</code></span></big> <span><span class="fas fa-trophy"></span> Can explain glossary</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
           <span
             class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
             </span>
@@ -1901,7 +2253,7 @@
               </p>
               <div id="title-and-body">
                 <div>
-                  <h4 id="what-3">What</h4>
+                  <h4 id="what-6">What</h4>
                 </div>
                 <div id="main">
                   <div>
@@ -1926,7 +2278,7 @@
         <br>
         <p><span class="dimmed"><strong>Supplementary Requirements</strong></span></p>
         <panel type="info" expanded="" no-close="" epxandable="true">
-          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.3k</code></span></big> <span><span class="fas fa-trophy"></span> Can explain supplementary requirements</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.4k</code></span></big> <span><span class="fas fa-trophy"></span> Can explain supplementary requirements</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
           <span
             class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
             </span>
@@ -1940,7 +2292,7 @@
               </p>
               <div id="title-and-body">
                 <div>
-                  <h4 id="what-4">What</h4>
+                  <h4 id="what-7">What</h4>
                 </div>
                 <div id="main">
                   <div>
@@ -2037,7 +2389,7 @@
     <p><span class="activity-desc">Documentation</span></p>
     <div class="indented">
       <panel no-close="" expandable="true">
-        <span slot="header" class="card-title"><span><code>W4.4</code> <strong>Can use some common documentation tools</strong> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+        <span slot="header" class="card-title"><span><code>W4.5</code> <strong>Can use some common documentation tools</strong> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
         <span
           class="glyphicon glyphicon-star" aria-hidden="true"></span>
           </span>
@@ -2047,7 +2399,7 @@
           <br>
           <p><span class="dimmed"><strong>Javadoc</strong></span></p>
           <panel type="warning" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.4a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain JavaDoc</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.5a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain JavaDoc</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span>
               </span>
@@ -2063,7 +2415,7 @@
                 </p>
                 <div id="title-and-body">
                   <div>
-                    <h4 id="what-5">What</h4>
+                    <h4 id="what-8">What</h4>
                   </div>
                   <div id="main">
                     <div>
@@ -2109,7 +2461,7 @@
               </div>
           </panel>
           <panel type="info" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.4b</code></span></big> <span><span class="fas fa-trophy"></span> Can write Javadoc comments</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.5b</code></span></big> <span><span class="fas fa-trophy"></span> Can write Javadoc comments</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
@@ -2137,7 +2489,7 @@
           <br>
           <p><span class="dimmed"><strong>Markdown</strong></span></p>
           <panel type="success" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.4c</code></span></big> <span><span class="fas fa-trophy"></span> Can explain Markdown</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.5c</code></span></big> <span><span class="fas fa-trophy"></span> Can explain Markdown</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
@@ -2151,7 +2503,7 @@
                 </p>
                 <div id="title-and-body">
                   <div>
-                    <h4 id="what-6">What</h4>
+                    <h4 id="what-9">What</h4>
                   </div>
                   <div id="main">
                     <div>
@@ -2163,7 +2515,7 @@
               </div>
           </panel>
           <panel type="success" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.4d</code></span></big> <span><span class="fas fa-trophy"></span> Can write documents in Markdown format</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.5d</code></span></big> <span><span class="fas fa-trophy"></span> Can write documents in Markdown format</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
@@ -2191,7 +2543,7 @@
           <br>
           <p><span class="dimmed"><strong>AsciiDoc</strong></span></p>
           <panel type="warning" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.4e</code></span></big> <span><span class="fas fa-trophy"></span> Can explain AsciiDoc</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.5e</code></span></big> <span><span class="fas fa-trophy"></span> Can explain AsciiDoc</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span>
               </span>
@@ -2207,7 +2559,7 @@
                 </p>
                 <div id="title-and-body">
                   <div>
-                    <h4 id="what-7">What</h4>
+                    <h4 id="what-10">What</h4>
                   </div>
                   <div id="main">
                     <div>
@@ -2224,17 +2576,290 @@
     <p><span class="activity-desc">Implementation</span></p>
     <div class="indented">
       <panel no-close="" expandable="true">
-        <span slot="header" class="card-title"><span><code>W4.5</code> <strong>Can implement classes</strong> <span class="badge badge-pill badge-secondary"><span class="glyphicon glyphicon-education" aria-hidden="true"></span><span class="glyphicon glyphicon-education"
-          aria-hidden="true"></span></span>
-        </span>
-        </span>
+        <span slot="header" class="card-title"><span><code>W4.6</code> <strong>Can use Java Collections</strong> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+        <span
+          class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          </span>
+          </span>
+          </span>
+          </span>
+          <panel type="info" expanded="" no-close="" epxandable="true">
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.6a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain the Collections framework</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span
+              class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+              </span>
+              </span>
+              <div>
+                <div></div>
+                <p></p>
+                <p><span class="dimmed"><strong><span>C++ to Java → Collections →
+</span></strong>
+                  </span>
+                </p>
+                <div id="title-and-body">
+                  <div>
+                    <h4 id="the-collections-framework">The Collections Framework</h4>
+                  </div>
+                  <div id="main">
+                    <div>
+                      <p>Given below is an extract from the <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small>, with slight adaptations.</p>
+                      <blockquote>
+                        <p><strong>A <em>collection</em> — sometimes called a <em>container</em> — is simply an object that groups multiple elements into a single unit.</strong> Collections are used to store, retrieve, manipulate, and communicate aggregate
+                          data. Typically, they represent data items that form a natural group, such as a poker hand (a collection of cards), a mail folder (a collection of letters), or a telephone directory (a mapping of names to phone numbers). If you
+                          have used the Java programming language — or just about any other programming language — you are already familiar with collections.</p>
+                        <p><strong>A collections framework is a unified architecture for representing and manipulating collections.</strong> All collections frameworks contain the following:</p>
+                        <ul>
+                          <li><strong>Interfaces</strong>: These are abstract data types that represent collections. Interfaces allow collections to be manipulated independently of the details of their representation. In object-oriented languages, interfaces
+                            generally form a hierarchy.</li>
+                          <li><strong>Implementations</strong>: These are the concrete implementations of the collection interfaces. In essence, they are reusable data structures.</li>
+                          <li><strong>Algorithms</strong>: These are the methods that perform useful computations, such as searching and sorting, on objects that implement collection interfaces. The algorithms are said to be polymorphic: that is, the same
+                            method can be used on many different implementations of the appropriate collection interface. In essence, algorithms are reusable functionality.</li>
+                        </ul>
+                        <p>Apart from the Java Collections Framework, <strong>the best-known examples of collections frameworks are the C++ Standard Template Library (STL)</strong> and Smalltalk's collection hierarchy.</p>
+                        <p>The following list describes the core collection interfaces:</p>
+                        <ul>
+                          <li>
+                            <p><code>Collection</code> — the root of the collection hierarchy. A collection represents a group of objects known as its elements. The Collection interface is the least common denominator that all collections implement and is
+                              used to pass collections around and to manipulate them when maximum generality is desired. Some types of collections allow duplicate elements, and others do not. Some are ordered and others are unordered. The Java platform
+                              doesn't provide any direct implementations of this interface but provides implementations of more specific subinterfaces, such as Set and List. Also see The Collection Interface section.</p>
+                          </li>
+                          <li>
+                            <p><code>Set</code> — a collection that cannot contain duplicate elements. This interface models the mathematical set abstraction and is used to represent sets, such as the cards comprising a poker hand, the courses making up
+                              a student's schedule, or the processes running on a machine. See also The Set Interface section.</p>
+                          </li>
+                          <li>
+                            <p><code>List</code> — an ordered collection (sometimes called a sequence). Lists can contain duplicate elements. The user of a List generally has precise control over where in the list each element is inserted and can access
+                              elements by their integer index (position). If you've used Vector, you're familiar with the general flavor of List. Also see The List Interface section.</p>
+                          </li>
+                          <li>
+                            <p><code>Queue</code> — a collection used to hold multiple elements prior to processing. Besides basic Collection operations, a Queue provides additional insertion, extraction, and inspection operations.</p>
+                          </li>
+                          <li>
+                            <p><code>Map</code> — an object that maps keys to values. A Map cannot contain duplicate keys; each key can map to at most one value. If you've used Hashtable, you're already familiar with the basics of Map. Also see The Map Interface
+                              section.</p>
+                          </li>
+                          <li>
+                            <p>Others: <code>Deque</code>, <code>SortedSet</code>, <code>SortedMap</code></p>
+                          </li>
+                        </ul>
+                      </blockquote>
+                    </div>
+                    <div></div>
+                  </div>
+                </div>
+              </div>
+              <hr style="border-top: dashed 1px; border-color:grey">
+              <p><big><span class="fas fa-briefcase"></span> Evidence:</big></p>
+              <div>
+                <p><strong>Acceptable</strong>: Some code that you have written that uses some Java Collection classes.</p>
+                <p><strong>Suggested</strong>: Do the exercise given in <a href="https://github.com/nusCS2113-AY1819S1/addressbook-level1/blob/master/docs/LearningOutcomes.adoc#use-collections-code-lo-collections-code">AddressBook - Level1 : LO-Collections</a></p>
+                <p><strong>Submission</strong>: Show your code to the tutor during the tutorial.</p>
+              </div>
+          </panel>
+          <panel type="warning" expanded="" no-close="" epxandable="true">
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.6b</code></span></big> <span><span class="fas fa-trophy"></span> Can use the ArrayList class</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span
+              class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              </span>
+              </span>
+              </span>
+              </span>
+              <div>
+                <div></div>
+                <p></p>
+                <p><span class="dimmed"><strong><span>C++ to Java → Collections →
+</span></strong>
+                  </span>
+                </p>
+                <div id="title-and-body">
+                  <div>
+                    <h4 id="the-arraylist-class">The <code>ArrayList</code> Class</h4>
+                  </div>
+                  <div id="main">
+                    <div>
+                      <p>The <code>ArrayList</code> class is a resizable-array implementation of the <code>List</code> interface. Unlike a normal <code>array</code>, an <code>ArrayList</code> can grow in size as you add more items to it. The example below
+                        illustrate some of the useful methods of the <code>ArrayList</code> class using an <code>ArrayList</code> of <code>String</code> objects.</p>
+                      <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.ArrayList;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ArrayListDemo</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String args[])</span> </span>{
+        ArrayList&lt;String&gt; items = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+
+        System.out.println(<span class="hljs-string">"Before adding any items:"</span> + items);
+
+        items.add(<span class="hljs-string">"Apple"</span>);
+        items.add(<span class="hljs-string">"Box"</span>);
+        items.add(<span class="hljs-string">"Cup"</span>);
+        items.add(<span class="hljs-string">"Dart"</span>);
+        print(<span class="hljs-string">"After adding four items: "</span> + items);
+
+        items.remove(<span class="hljs-string">"Box"</span>); <span class="hljs-comment">// remove item "Box"</span>
+        print(<span class="hljs-string">"After removing Box: "</span> + items);
+
+        items.add(<span class="hljs-number">1</span>, <span class="hljs-string">"Banana"</span>); <span class="hljs-comment">// add "Banana" at index 1</span>
+        print(<span class="hljs-string">"After adding Banana: "</span> + items);
+
+        items.add(<span class="hljs-string">"Egg"</span>); <span class="hljs-comment">// add "Egg", will be added to the end</span>
+        items.add(<span class="hljs-string">"Cup"</span>); <span class="hljs-comment">// add another "Cup"</span>
+        print(<span class="hljs-string">"After adding Egg: "</span> + items);
+
+        print(<span class="hljs-string">"Number of items: "</span> + items.size());
+
+        print(<span class="hljs-string">"Index of Cup: "</span> + items.indexOf(<span class="hljs-string">"Cup"</span>));
+        print(<span class="hljs-string">"Index of Zebra: "</span> + items.indexOf(<span class="hljs-string">"Zebra"</span>));
+
+        print(<span class="hljs-string">"Item at index 3 is: "</span> + items.get(<span class="hljs-number">2</span>));
+
+        print(<span class="hljs-string">"Do we have a Box?: "</span> + items.contains(<span class="hljs-string">"Box"</span>));
+        print(<span class="hljs-string">"Do we have an Apple?: "</span> + items.contains(<span class="hljs-string">"Apple"</span>));
+
+        items.clear();
+        print(<span class="hljs-string">"After clearing: "</span> + items);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">(String text)</span> </span>{
+        System.out.println(text);
+    }
+}
+</code></pre>
+                      <p><span class="fas fa-arrow-down"></span></p>
+                      <pre class="hljs"><code>Before adding any items:[]
+After adding four items: [Apple, Box, Cup, Dart]
+After removing Box: [Apple, Cup, Dart]
+After adding Banana: [Apple, Banana, Cup, Dart]
+After adding Egg: [Apple, Banana, Cup, Dart, Egg, Cup]
+Number of items: 6
+Index of Cup: 2
+Index of Zebra: -1
+Item at index 3 is: Cup
+Do we have a Box?: false
+Do we have an Apple?: true
+After clearing: []
+</code></pre>
+                      <p><small>[<a href="https://repl.it/@seedu/Demo-ArrayList">Try the above code on Repl.it</a>]</small></p>
+                    </div>
+                    <div>
+                      <div>
+                        <panel header="<span class='fas fa-paperclip'></span> Resources" expanded="">
+                          <div>
+                            <ul>
+                              <li><a href="https://docs.oracle.com/javase/9/docs/api/java/util/ArrayList.html"><code>ArrayList</code> API</a></li>
+                              <li><a href="https://beginnersbook.com/2013/12/java-arraylist/">A tutorial on ArrayLists</a> from <a href="http://beginnersbook.com">beginnersbook.com</a></li>
+                            </ul>
+                          </div>
+                        </panel>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </panel>
+          <panel type="info" expanded="" no-close="" epxandable="true">
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.6c</code></span></big> <span><span class="fas fa-trophy"></span> Can use the HashMap class</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span
+              class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+              </span>
+              </span>
+              <div>
+                <div></div>
+                <p></p>
+                <p><span class="dimmed"><strong><span>C++ to Java → Collections →
+</span></strong>
+                  </span>
+                </p>
+                <div id="title-and-body">
+                  <div>
+                    <h4 id="the-hashmap-class">The <code>HashMap</code> Class</h4>
+                  </div>
+                  <div id="main">
+                    <div>
+                      <p><code>HashMap</code> is an implementation of the <code>Map</code> interface. It allows you to store a collection of <em>key-value pairs</em>. The example below illustrates how to use a <code>HashMap&lt;String, Point&gt;</code> to
+                        maintain a list of coordinates and their identifiers e.g., the identifier <code>x1</code> is used to identify the point <code>0,0</code> where <code>x1</code> is the <em>key</em> and <code>0,0</code> is the <em>value</em>.</p>
+                      <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.awt.Point;
+<span class="hljs-keyword">import</span> java.util.HashMap;
+<span class="hljs-keyword">import</span> java.util.Map;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HashMapDemo</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        HashMap&lt;String, Point&gt; points = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();
+
+        <span class="hljs-comment">// put the key-value pairs in the HashMap</span>
+        points.put(<span class="hljs-string">"x1"</span>, <span class="hljs-keyword">new</span> Point(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>));
+        points.put(<span class="hljs-string">"x2"</span>, <span class="hljs-keyword">new</span> Point(<span class="hljs-number">0</span>, <span class="hljs-number">5</span>));
+        points.put(<span class="hljs-string">"x3"</span>, <span class="hljs-keyword">new</span> Point(<span class="hljs-number">5</span>, <span class="hljs-number">5</span>));
+        points.put(<span class="hljs-string">"x4"</span>, <span class="hljs-keyword">new</span> Point(<span class="hljs-number">5</span>, <span class="hljs-number">0</span>));
+
+        <span class="hljs-comment">// retrieve a value for a key using the get method</span>
+        print(<span class="hljs-string">"Coordinates of x1: "</span> + pointAsString(points.get(<span class="hljs-string">"x1"</span>)));
+
+        <span class="hljs-comment">// check if a key or a value exists</span>
+        print(<span class="hljs-string">"Key x1 exists? "</span> + points.containsKey(<span class="hljs-string">"x1"</span>));
+        print(<span class="hljs-string">"Key x1 exists? "</span> + points.containsKey(<span class="hljs-string">"y1"</span>));
+        print(<span class="hljs-string">"Value (0,0) exists? "</span> + points.containsValue(<span class="hljs-keyword">new</span> Point(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>)));
+        print(<span class="hljs-string">"Value (1,2) exists? "</span> + points.containsValue(<span class="hljs-keyword">new</span> Point(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>)));
+
+        <span class="hljs-comment">// update the value of a key to a new value</span>
+        points.put(<span class="hljs-string">"x1"</span>, <span class="hljs-keyword">new</span> Point(-<span class="hljs-number">1</span>,-<span class="hljs-number">1</span>));
+
+        <span class="hljs-comment">// iterate over the entries</span>
+        <span class="hljs-keyword">for</span> (Map.Entry&lt;String, Point&gt; entry : points.entrySet()) {
+            print(entry.getKey() + <span class="hljs-string">" = "</span> + pointAsString(entry.getValue()));
+        }
+
+        print(<span class="hljs-string">"Number of keys: "</span> + points.size());
+        points.clear();
+        print(<span class="hljs-string">"Number of keys after clearing: "</span> + points.size());
+
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String <span class="hljs-title">pointAsString</span><span class="hljs-params">(Point p)</span> </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-string">"["</span> + p.x + <span class="hljs-string">","</span> + p.y + <span class="hljs-string">"]"</span>;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">(String s)</span> </span>{
+        System.out.println(s);
+    }
+}
+</code></pre>
+                      <p><span class="fas fa-arrow-down"></span></p>
+                      <pre class="hljs"><code>Coordinates of x1: [0,0]
+Key x1 exists? true
+Key x1 exists? false
+Value (0,0) exists? true
+Value (1,2) exists? false
+x1 = [-1,-1]
+x2 = [0,5]
+x3 = [5,5]
+x4 = [5,0]
+Number of keys: 4
+Number of keys after clearing: 0
+</code></pre>
+                      <p><small>[<a href="https://repl.it/@seedu/Demo-HashMap">Try the above code on Repl.it</a>]</small></p>
+                    </div>
+                    <div>
+                      <div>
+                        <panel header="<span class='fas fa-paperclip'></span> Resources" expanded="">
+                          <div>
+                            <ul>
+                              <li><a href="https://docs.oracle.com/javase/9/docs/api/java/util/HashMap.html"><code>HashMap</code> API</a></li>
+                              <li><a href="https://www.journaldev.com/11560/java-hashmap">A tutorial on HashMaps</a> from <a href="http://journaldev.com">journaldev.com</a></li>
+                            </ul>
+                          </div>
+                        </panel>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </panel>
       </panel>
       <panel no-close="" expandable="true">
-        <span slot="header" class="card-title"><span><code>W4.6</code> <strong>Can do exception handling in code</strong> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+        <span slot="header" class="card-title"><span><code>W4.7</code> <strong>Can use Java enumerations</strong> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
         </span>
         </span>
         <panel type="warning" expanded="" no-close="" epxandable="true">
-          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.6a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain error handling</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.7a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain the meaning of enumerations</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
           <span
             class="glyphicon glyphicon-star" aria-hidden="true"></span>
             </span>
@@ -2244,182 +2869,96 @@
             <div>
               <div></div>
               <p></p>
-              <p><span class="dimmed"><strong><span>Implementation → Error Handling → Introduction →
+              <p><span class="dimmed"><strong><span>Paradigms → Object Oriented Programming → Classes →
 </span></strong>
                 </span>
               </p>
               <div id="title-and-body">
                 <div>
-                  <h4 id="what-8">What</h4>
+                  <h4 id="enumerations">Enumerations</h4>
                 </div>
                 <div id="main">
                   <div>
-                    <blockquote>
-                      <p>Well-written applications include error-handling code that allows them to recover gracefully from unexpected errors. When an error occurs, the application may need to request user intervention, or it may be able to recover on its
-                        own. In extreme cases, the application may log the user off or shut down the system. --<sub><a href="https://msdn.microsoft.com/en-us/library/windows/desktop/ms679320(v=vs.85).aspx">(source)</a></sub></p>
-                    </blockquote>
+                    <p><strong>An <em>Enumeration</em> is a fixed set of values that can be considered as a data type.</strong></p>
+                    <p>An enumeration is often useful when using a regular data type such as <code>int</code> or <code>String</code> would allow invalid values to be assigned to a variable. <span class="dimmed">e.g. if a variable can only take values <code>0</code> and <code>1</code>, declaring it as an <code>int</code> would allow invalid values such as <code>2</code> to be assigned to it. But if you define an enumeration called <code>Binary</code> that has values <code>0</code> and <code>1</code> only, a variable of type <code>Binary</code> will never be assigned an invalid value such as <code>2</code> because the compiler is able to catch the error.</span></p>
+                    <tip-box>
+                      <p><span class="fas fa-cube"></span> <code>Priority</code> can be considered an enumeration because it has only three values.</p>
+                      <p><code>Priority</code>: <code>HIGH</code>, <code>MEDIUM</code>, <code>LOW</code></p>
+                    </tip-box>
                   </div>
-                  <div></div>
+                  <div>
+                    <div>
+                      <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                      
+                        <div>
+                          <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Define WeekDay Enum">
+                            <question has-input="true">
+                              <p>Show (in UML notation) an enumeration called <code>WeekDay</code> to use when the value can only be <code>Monday</code> ... <code>Friday</code>.</p>
+                            </question>
+                          </panel>
+                        </div>
+                      </panel>
+                    </div>
+                  </div>
                 </div>
+              </div>
+            </div>
+            <hr style="border-top: dashed 1px; border-color:grey">
+            <p><big><span class="fas fa-briefcase"></span> Evidence:</big></p>
+            <div>
+              <div>
+                <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Define WeekDay Enum">
+                  <question has-input="true">
+                    <p>Show (in UML notation) an enumeration called <code>WeekDay</code> to use when the value can only be <code>Monday</code> ... <code>Friday</code>.</p>
+                  </question>
+                </panel>
               </div>
             </div>
         </panel>
         <panel type="danger" expanded="" no-close="" epxandable="true">
-          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.6b</code></span></big> <span><span class="fas fa-trophy"></span> Can explain exceptions</span> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.7b</code></span></big> <span><span class="fas fa-trophy"></span> Can use Java enumerations</span> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
           </span>
           </span>
           <div>
             <div></div>
             <p></p>
-            <p><span class="dimmed"><strong><span>Implementation → Error Handling → Exceptions →
+            <p><span class="dimmed"><strong><span>Tools → Java →
 </span></strong>
               </span>
             </p>
             <div id="title-and-body">
               <div>
-                <h4 id="what-9">What</h4>
+                <h4 id="enums">Enums</h4>
               </div>
               <div id="main">
                 <div>
-                  <p><strong>Exceptions are used to deal with <em>'unusual' but not entirely unexpected</em> situations</strong> that the program might encounter at run time.</p>
-                  <tip-box type="definition">
-                    <div>
-                      <p><strong>Exception</strong>:</p>
-                      <blockquote>
-                        <p>The term <em>exception</em> is shorthand for the phrase &quot;exceptional event.&quot; An <em>exception</em> is an event, which occurs during the execution of a program, that disrupts the normal flow of the program's instructions.
-                          –- Java Tutorial (Oracle Inc.)</p>
-                      </blockquote>
-                    </div>
-                  </tip-box>
-                  <tip-box>
-                    <p><span class="fas fa-cube"></span> Examples:</p>
-                    <ul>
-                      <li>A network connection encounters a timeout due to a slow server.</li>
-                      <li>The code tries to read a file from the hard disk but the file is corrupted and cannot be read.</li>
-                    </ul>
-                  </tip-box>
+                  <blockquote>
+                    <p>An enum type is a special data type that enables for a variable to be a set of predefined constants. The variable must be equal to one of the values that have been predefined for it. Common examples include compass directions (values
+                      of <code>NORTH</code>, <code>SOUTH</code>, <code>EAST</code>, and <code>WEST</code>) and the days of the week.</p>
+                    <p>Because they are constants, the names of an enum type's fields are in uppercase letters. In the Java programming language, you define an enum type by using the <code>enum</code> keyword. For example, you would specify a days-of-the-week
+                      enum type as:</p>
+                    <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">enum</span> Day {
+   SUNDAY, MONDAY, TUESDAY, WEDNESDAY,
+   THURSDAY, FRIDAY, SATURDAY
+}
+</code></pre>
+                    <p>You should use enum types any time you need to represent a fixed set of constants. That includes natural enum types such as the planets in our solar system and data sets where you know all possible values at compile time—for example,
+                      the choices on a menu, command line flags, and so on.
+                      <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small></p>
+                  </blockquote>
+                  <p>Note that while enumerations are usually a simple set of fixed values, Java enumerations can have behaviors too. To learn how to implement enumerations, read <a href="https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html">this tutorial (from Oracle)</a></p>
                 </div>
                 <div></div>
-              </div>
-            </div>
-          </div>
-        </panel>
-        <panel type="danger" expanded="" no-close="" epxandable="true">
-          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.6c</code></span></big> <span><span class="fas fa-trophy"></span> Can do exception handling in code</span> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-          </span>
-          </span>
-          <div>
-            <div></div>
-            <p></p>
-            <p><span class="dimmed"><strong><span>Implementation → Error Handling → Exceptions →
-</span></strong>
-              </span>
-            </p>
-            <div id="title-and-body">
-              <div>
-                <h4 id="how-3">How</h4>
-              </div>
-              <div id="main">
-                <div>
-                  <p><strong>Most languages allow a method/function to encapsulate the unusual situation in an Exception object and 'throw'/'raise' that object so that another piece of code can 'catch' it and deal with it.</strong> This is especially useful
-                    when code segment that encountered the unusual situation does not know how to deal with it.</p>
-                  <p><strong>Exception objects can propagate up the function call hierarchy until it is dealt with.</strong> Usually, an exception thrown by a function is caught by the caller function. If the called function does not know how to deal with
-                    the exception it caught, it can throw/raise the Exception object to its own caller. If none of the callers is prepared to deal with the exception, the exceptions can propagate through the
-                    <tooltip content="the hieararchy of function calls">function call stack</tooltip> until it is received by the main function and thrown to the runtime, thus halting the system.</p>
-                  <tip-box>
-                    <div class="alt-java">
-                      <p><span class="fas fa-cube"></span> In the code given below, <code>processArray</code> can potentially throw an <code>InvalidInputException</code>. Because of that, <code>processInput</code> method invokes <code>processArray</code>                        method inside a <code>try{ }</code> block and has a <code>catch{ }</code> block to specify what to do if the exception is actually thrown.</p>
-                      <img src="/website/book/errorHandling/exceptions/how/images/processInput.png" width="400">
-                      <p></p>
-                    </div>
-                    <div class="alt-python">
-                      <p><span class="fas fa-cube"></span> In the code given below, <code>process_array</code> function can potentially raise a <code>ValueError</code> exception. Because of that, <code>process_input</code> function invokes <code>process_array</code>                        function inside a <code>try</code> clause and has a <code>except</code> clause to specify what to do if the exception is actually raised.</p>
-                      <img src="/website/book/errorHandling/exceptions/how/images/example-python.png" width="400"></div>
-                  </tip-box>
-                  <p>Advantages of exception handling in this way:</p>
-                  <ul>
-                    <li>The ability to propagate error information through the call stack.</li>
-                    <li>The separation of code that deals with 'unusual' situations from the code that does the 'usual' work.</li>
-                  </ul>
-                </div>
-                <div>
-                  <div>
-                    <panel header="<span class='fas fa-paperclip'></span> Resources" expandable="">
-                      <ul>
-                        <li><a href="https://docs.oracle.com/javase/tutorial/essential/exceptions/">Java Exceptions Tutorial from Oracle</a></li>
-                      </ul>
-                    </panel>
-                  </div>
-                  <div>
-                    <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
-                      <div>
-                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Benefit of exceptions">
-                          <question>
-                            <p>Which are benefits of exceptions?</p>
-                            <ul class="task-list">
-                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. Exceptions allow us to separate normal code from error handling code.</li>
-                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. Exceptions can prevent problems that happen in the environment.</li>
-                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. Exceptions allow us to handle in one location an error raised in another location.</li>
-                            </ul>
-                            <div slot="answer">
-                              <p>(a) (c)</p>
-                              <p>Explanation: Exceptions cannot <em>prevent</em> problems in the environment. They can only be used to handle and recover from such problems.</p>
-                            </div>
-                          </question>
-                        </panel>
-                      </div>
-                    </panel>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
           <hr style="border-top: dashed 1px; border-color:grey">
           <p><big><span class="fas fa-briefcase"></span> Evidence:</big></p>
           <div>
-            <p><strong>Acceptable</strong>: Some code you wrote that involves exception handling.</p>
-            <p><strong>Suggested</strong>: Do the exercise in <a href="https://github.com/nusCS2113-AY1819S1/addressbook-level2/blob/master/docs/LearningOutcomes.adoc#handle-exceptions-code-lo-exceptions-code">addressbook-level2: LO-Exceptions</a>.</p>
-            <div>
-              <p><strong>Submission</strong>:</p>
-              <ul>
-                <li>Options 1 (discouraged): Show the relevant code during the tutorial.</li>
-                <li>Options 2 (preferred): Create a pull request by following the instructions below.</li>
-              </ul>
-              <p>
-                <panel src="/website/admin/appendixE-gitHub._include_.html#tutorial-pr-instructions" header="%%Admin <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Appendix E: Using GitHub Project Hosting → Submitting Pull Requests as evidence of an LO%%"
-                  fragment="tutorial-pr-instructions"></panel>
-              </p>
-              <p>If you choose option 2, we recommend that you complete this week's <em>Project Management</em> LOs first; there are many ways to create PRs but we expect you to create PRs in a specific way, as specified in the LOs.</p>
-            </div>
+            <p><strong>Acceptable</strong>: Any code you have written that uses Java enumerations.</p>
+            <p><strong>Suggested</strong>: The exercise in <a href="https://github.com/nusCS2113-AY1819S1/addressbook-level1/blob/master/docs/LearningOutcomes.adoc/#use-enums-code-lo-enums-code">AddressBook-Level1: LO-Enums</a></p>
+            <p><strong>Submission</strong>: Show your code during tutorial</p>
           </div>
-        </panel>
-        <panel type="warning" expanded="" no-close="" epxandable="true">
-          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.6d</code></span></big> <span><span class="fas fa-trophy"></span> Can avoid using exceptions to control normal workflow</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-          <span
-            class="glyphicon glyphicon-star" aria-hidden="true"></span>
-            </span>
-            </span>
-            </span>
-            </span>
-            <div>
-              <div></div>
-              <p></p>
-              <p><span class="dimmed"><strong><span>Implementation → Error Handling → Exceptions →
-</span></strong>
-                </span>
-              </p>
-              <div id="title-and-body">
-                <div>
-                  <h4 id="when">When</h4>
-                </div>
-                <div id="main">
-                  <div>
-                    <p>In general, use exceptions only for 'unusual' conditions. Use normal <code>return</code> statements to pass control to the caller for conditions that are 'normal'.</p>
-                  </div>
-                  <div></div>
-                </div>
-              </div>
-            </div>
         </panel>
       </panel>
     </div>
@@ -2427,11 +2966,11 @@
     <p><span class="activity-desc">Project Management</span></p>
     <div class="indented">
       <panel no-close="" expandable="true">
-        <span slot="header" class="card-title"><span><code>W4.7</code> <strong>Can create PRs on GitHub</strong> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+        <span slot="header" class="card-title"><span><code>W4.8</code> <strong>Can create PRs on GitHub</strong> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
         </span>
         </span>
         <panel type="warning" expanded="" no-close="" epxandable="true">
-          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.7a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain branching</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.8a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain branching</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
           <span
             class="glyphicon glyphicon-star" aria-hidden="true"></span>
             </span>
@@ -2502,7 +3041,7 @@
             </div>
         </panel>
         <panel type="warning" expanded="" no-close="" epxandable="true">
-          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.7b</code></span></big> <span><span class="fas fa-trophy"></span> Can use Git branching</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.8b</code></span></big> <span><span class="fas fa-trophy"></span> Can use Git branching</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
           <span
             class="glyphicon glyphicon-star" aria-hidden="true"></span>
             </span>
@@ -2675,7 +3214,7 @@ git checkout feature1
             </div>
         </panel>
         <panel type="danger" expanded="" no-close="" epxandable="true">
-          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.7c</code></span></big> <span><span class="fas fa-trophy"></span> Can create PRs on GitHub</span> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W4.8c</code></span></big> <span><span class="fas fa-trophy"></span> Can create PRs on GitHub</span> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
           </span>
           </span>
           <div>
@@ -2775,7 +3314,7 @@ This repo can be used to practice creating PRs.
     <p><span class="activity-desc">🅿️ Project</span></p>
     <div class="indented">
       <panel no-close="" expandable="true">
-        <span slot="header" class="card-title"><span><code>W4.8</code> <strong>Can define requirements of a product</strong> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+        <span slot="header" class="card-title"><span><code>W4.9</code> <strong>Can define requirements of a product</strong> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
         </span>
         </span>
         <div>
@@ -2851,7 +3390,309 @@ This repo can be used to practice creating PRs.
       <br>
       <panel type="seamless" header="##### Evidence for weekly LOs %%(for reference)%%">
         <panel type="seamless" expanded="">
-          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W4.3c</code></span></big> <span><span class="fas fa-trophy"></span> Can write simple user stories</span>
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W4.1a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain testing</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span
+            class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            </span>
+            </span>
+            </span>
+            </span>
+            <div class="indented">
+              <panel minimized="">
+                <span slot="header" class="card-title">Details of the LO</span>
+                <div>
+                  <div></div>
+                  <p></p>
+                  <p><span class="dimmed"><strong><span>Quality Assurance → Testing → Introduction →
+</span></strong>
+                    </span>
+                  </p>
+                  <div id="title-and-body">
+                    <div>
+                      <h4 id="what-11">What</h4>
+                    </div>
+                    <div id="main">
+                      <div>
+                        <tip-box type="definition">
+                          <div>
+                            <p><strong>Testing</strong>: Testing is operating a system or component under specified conditions, observing or recording the results, and making an evaluation of some aspect of the system or component. –- source: IEEE</p>
+                          </div>
+                        </tip-box>
+                        <img src="/website/book/testing/introduction/what/images/diagram.png" height="220">
+                        <p></p>
+                        <p><strong>When testing, we execute a set of <em>test cases</em>.</strong> A test case specifies how to perform a test. At a minimum, it specifies the input to the <em>software under test (SUT)</em> and the expected behavior.</p>
+                        <tip-box>
+                          <p><span class="fas fa-cube"></span> Example: A minimal test case for testing a browser:</p>
+                          <ul>
+                            <li><strong>Input</strong> – Start the browser using a blank page (vertical scrollbar disabled). Then, load <code>longfile.html</code> located in the <code>test data</code> folder.</li>
+                            <li><strong>Expected behavior</strong> – The scrollbar should be automatically enabled upon loading <code>longfile.html</code>.</li>
+                          </ul>
+                        </tip-box>
+                        <p><strong>Test cases can be determined based on the specification, reviewing similar existing systems, or comparing to the past behavior of the SUT.</strong></p>
+                        <panel header="%%Other details a test case can contain%%" type="seamless">
+                          <p>A more elaborate test case can have other details such as those given below.</p>
+                          <ul>
+                            <li>A unique identifier : <span class="dimmed">e.g. TC0034-a</span></li>
+                            <li>A descriptive name: <span class="dimmed">e.g. vertical scrollbar activation for long web pages</span></li>
+                            <li>Objectives: <span class="dimmed">e.g. to check whether the vertical scrollbar is correctly activated when a long web page is loaded to the browser</span></li>
+                            <li>Classification information: <span class="dimmed">e.g. priority - medium, category - UI features</span></li>
+                            <li>Cleanup, if any: <span class="dimmed">e.g. empty the browser cache.</span></li>
+                          </ul>
+                          <p></p>
+                        </panel>
+                        <p></p>
+                        <p>For each test case we do the following:</p>
+                        <ol>
+                          <li>Feed the input to the SUT</li>
+                          <li>Observe the actual output</li>
+                          <li>Compare actual output with the expected output</li>
+                        </ol>
+                        <p><strong>A test case <em>failure</em> is a mismatch between the expected behavior and the actual behavior. A failure is caused by a <em>defect</em> (or a bug).</strong></p>
+                        <tip-box>
+                          <p><span class="fas fa-cube"></span> Example: In the browser example above, a test case failure is implied if the scrollbar remains disabled after loading <code>longfile.html</code>. The defect/bug causing that failure could be
+                            an uninitialized variable.</p>
+                        </tip-box>
+                        <panel header="%%A deeper look at the definition of testing%%" type="seamless">
+                          <p>Here is another definition of testing:</p>
+                          <blockquote>
+                            <p>Software testing consists of the <em>dynamic</em> verification that a program provides <em>expected</em> behaviors on a <em>finite</em> set of test cases, suitably <em>selected</em> from the usually infinite execution domain.
+                              <sub>-– source: <a href="https://www.computer.org/web/swebok/v3">Software Engineering Book of Knowledge V3</a></sub></p>
+                          </blockquote>
+                          <p>Some things to note (indicated by keywords in the above definition):</p>
+                          <ul>
+                            <li><em>Dynamic</em>: Testing involves executing the software. It is not by examining the code statically.</li>
+                            <li><em>Finite</em>: In most non-trivial cases there are potentially infinite test scenarios but resource constraints dictate that we can test only a finite number of scenarios.</li>
+                            <li><em>Selected</em>: In most cases it is not possible to test all scenarios. That means we need to select what scenarios to test.</li>
+                            <li><em>Expected</em>: Testing requires some knowledge of how the software is expected to behave.</li>
+                          </ul>
+                          <p></p>
+                        </panel>
+                        <p></p>
+                      </div>
+                      <div>
+                        <div>
+                          <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                            <div>
+                              <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Relate testing, test cases, failure, and defect">
+                                <question has-input="">
+                                  <p>Explain how the concepts of <em>testing</em>, <em>test case</em>, <em>test failure</em>, and <em>defect</em> are related to each other.</p>
+                                </question>
+                              </panel>
+                            </div>
+                          </panel>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </panel><br><br>
+              <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span>
+              </p>
+              <div class="indented">
+                <div>
+                  <div>
+                    <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Relate testing, test cases, failure, and defect">
+                      <question has-input="">
+                        <p>Explain how the concepts of <em>testing</em>, <em>test case</em>, <em>test failure</em>, and <em>defect</em> are related to each other.</p>
+                      </question>
+                    </panel>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </panel>
+        <panel type="seamless" expanded="">
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W4.1b</code></span></big> <span><span class="fas fa-trophy"></span> Can explain regression testing</span>
+          <span
+            class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+            </span>
+            </span>
+            </span>
+            <div class="indented">
+              <panel minimized="">
+                <span slot="header" class="card-title">Details of the LO</span>
+                <div>
+                  <div></div>
+                  <p></p>
+                  <p><span class="dimmed"><strong><span>Quality Assurance → Testing → Regression Testing →
+</span></strong>
+                    </span>
+                  </p>
+                  <div id="title-and-body">
+                    <div>
+                      <h4 id="what-12">What</h4>
+                    </div>
+                    <div id="main">
+                      <div>
+                        <p><strong>When we modify a system, the modification may result in some unintended and undesirable effects on the system. Such an effect is called a <em>regression</em>.</strong></p>
+                        <p><strong><em>Regression testing</em> is re-testing the software to detect regressions.</strong> Note that to detect regressions, we need to retest all related components, even if they were tested before.</p>
+                        <p>Regression testing is more effective when it is done frequently, after each small change. However, doing so can be prohibitively expensive if testing is done manually. Hence, <strong>regression testing is more practical when it is automated</strong>.</p>
+                      </div>
+                      <div>
+                        <div>
+                          <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                            <div>
+                              <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Regression Testing defintion T/F?">
+                                <question>
+                                  <p>Regression testing is the automated re-testing of a software after it has been modified.</p>
+                                  <ul radio-group="63d56" class="radio-list">
+                                    <li class="radio-list-item"><label><input class="radio-list-input" name="63d56" type="radio"> a. True</label></li>
+                                    <li class="radio-list-item"><label><input class="radio-list-input" name="63d56" type="radio"> b. False</label></li>
+                                    <li class="radio-list-item"><label><input class="radio-list-input" name="63d56" type="radio"> c. Partially true</label></li>
+                                  </ul>
+                                  <div slot="answer">
+                                    <p>c.</p>
+                                    <p>Explanation: Regression testing <mark>need not be automated</mark> but automation is highly recommended.</p>
+                                  </div>
+                                </question>
+                              </panel>
+                            </div>
+                            <div>
+                              <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Explain regression testing">
+                                <question has-input="">
+                                  <p>Explain why and when you would do regression testing in a software project.</p>
+                                </question>
+                              </panel>
+                            </div>
+                          </panel>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </panel><br><br>
+              <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span>
+              </p>
+              <div class="indented">
+                <div>
+                  <div>
+                    <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Explain regression testing">
+                      <question has-input="">
+                        <p>Explain why and when you would do regression testing in a software project.</p>
+                      </question>
+                    </panel>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </panel>
+        <panel type="seamless" expanded="">
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W4.1d</code></span></big> <span><span class="fas fa-trophy"></span> Can semi-automate testing of CLIs</span>
+          <span
+            class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+            </span>
+            </span>
+            </span>
+            <div class="indented">
+              <panel minimized="">
+                <span slot="header" class="card-title">Details of the LO</span>
+                <div>
+                  <div></div>
+                  <p></p>
+                  <p><span class="dimmed"><strong><span>Quality Assurance → Testing → Test Automation →
+</span></strong>
+                    </span>
+                  </p>
+                  <div id="title-and-body">
+                    <div>
+                      <h4 id="automated-testing-of-cli-apps-2">Automated Testing of CLI Apps</h4>
+                    </div>
+                    <div id="main">
+                      <div>
+                        <p><strong>A simple way to semi-automate testing of a CLI(Command Line Interface) app is by using input/output re-direction.</strong></p>
+                        <ul>
+                          <li>First, we feed the app with a sequence of test inputs that is stored in a file while redirecting the output to another file.</li>
+                          <li>Next, we compare the actual output file with another file containing the expected output.</li>
+                        </ul>
+                        <p>Let us assume we are testing a CLI app called <code>AddressBook</code>. Here are the detailed steps:</p>
+                        <ol>
+                          <li>
+                            <p>Store the test input in the text file <code>input.txt</code>.</p>
+                            <panel header="%%<span class='fas fa-cube'></span> Example `input.txt`%%" type="seamless">
+                              <pre class="hljs"><code>add Valid Name p/12345 valid@email.butNoPrefix
+add Valid Name 12345 e/valid@email.butPhonePrefixMissing
+</code></pre>
+                            </panel>
+                          </li>
+                          <li>
+                            <p>Store the output we expect from the SUT in another text file <code>expected.txt</code>.</p>
+                            <panel header="%%<span class='fas fa-cube'></span> Example `expected.txt`%%" type="seamless">
+                              <pre class="hljs"><code>Command: || [add Valid Name p/12345 valid@email.butNoPrefix]
+Invalid command format: add 
+
+Command: || [add Valid Name 12345 e/valid@email.butPhonePrefixMissing]
+Invalid command format: add 
+</code></pre>
+                            </panel>
+                          </li>
+                          <li>
+                            <p>Run the program as given below, which will redirect the text in <code>input.txt</code> as the input to <code>AddressBook</code> and similarly, will redirect the output of AddressBook to a text file <code>output.txt</code>.
+                              <span class="dimmed">Note that this does not require any code changes to <code>AddressBook</code>.</span></p>
+                            <pre><code class="hljs sh">java AddressBook &lt; input.txt &gt; output.txt
+</code></pre>
+                            <ul>
+                              <li>
+                                <p>💡 The way to run a CLI program differs based on the language.<br> e.g., In Python, assuming the code is in <code>AddressBook.py</code> file, use the command<br>
+                                  <code>python AddressBook.py &lt; input.txt &gt; output.txt</code></p>
+                              </li>
+                              <li>
+                                <p>💡 If you are using Windows, use a normal command window to run the app, not a Power Shell window.</p>
+                              </li>
+                            </ul>
+                            <panel header="" minimized="">
+                              <span slot="header" class="card-title"><span>More on the <code>&gt;</code> operator and the <code>&lt;</code> operator. <span class="badge badge-pill badge-secondary">tangential</span></span>
+                              </span>
+                              <p>A CLI program takes input from the keyboard and outputs to the console. That is because those two are default input and output streams, respectively. But you can change that behavior using <code>&lt;</code> and <code>&gt;</code>                                operators. For example, if you run <code>AddressBook</code> in a command window, the output will be shown in the console, but if you run it like this,</p>
+                              <pre><code class="hljs sh">java AddressBook &gt; output.txt 
+</code></pre>
+                              <p>the Operating System then creates a file <code>output.txt</code> and stores the output in that file instead of displaying it in the console. No file I/O coding is required. Similarly, adding <code>&lt; input.txt</code> (or
+                                any other filename) makes the OS redirect the contents of the file as input to the program, as if the user typed the content of the file one line at a time.</p>
+                              <tip-box>
+                                <p><span class="fas fa-paperclip"></span> Resources:</p>
+                                <ul>
+                                  <li><a href="http://technet.microsoft.com/en-us/library/bb490982.aspx">Using command redirection operators in Windows</a></li>
+                                </ul>
+                              </tip-box>
+                              <p></p>
+                            </panel>
+                            <p></p>
+                          </li>
+                          <li>
+                            <p>Next, we compare <code>output.txt</code> with the <code>expected.txt</code>. This can be done using a utility such as Windows <code>FC</code> (i.e. File Compare) command, Unix <code>diff</code> command, or a GUI tool such as
+                              <em>WinMerge</em>.</p>
+                            <pre class="hljs"><code>FC output.txt expected.txt
+</code></pre>
+                          </li>
+                        </ol>
+                        <p>Note that the above technique is only suitable when testing CLI apps, and only if the exact output can be predetermined. <span class="dimmed">If the output varies from one run to the other (e.g. it contains a time stamp), this technique will not work. In those cases we need more sophisticated ways of automating tests.</span></p>
+                        <div>
+                          <popover id="pop:cli" placement="top">
+                            <div slot="content">
+                              <div>
+                                <p><strong>CLI App</strong>: An application that has a <em>Command Line Interface</em>. i.e. user interacts with the app by typing in commands.</p>
+                              </div>
+                            </div>
+                          </popover>
+                        </div>
+                      </div>
+                      <div></div>
+                    </div>
+                  </div>
+                </div>
+              </panel><br><br>
+              <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span>
+              </p>
+              <div class="indented">
+                <div>
+                  <p><strong>Acceptable</strong>: Any project where you use the I/O redirection method to test a CLI.</p>
+                  <p><strong>Suggested</strong>: Do the exercise given in <a href="https://github.com/nusCS2113-AY1819S1/addressbook-level1/blob/master/docs/LearningOutcomes.adoc#automate-cli-testing-code-lo-automatedclitesting-code">AddressBook - Level1 : LO-AutomatedCliTesting</a></p>
+                  <p><strong>Submission</strong>: Demo the test during the tutorial.</p>
+                </div>
+              </div>
+            </div>
+        </panel>
+        <panel type="seamless" expanded="">
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W4.4c</code></span></big> <span><span class="fas fa-trophy"></span> Can write simple user stories</span>
           <span
             class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
             </span>
@@ -2988,7 +3829,7 @@ This repo can be used to practice creating PRs.
             </div>
         </panel>
         <panel type="seamless" expanded="">
-          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W4.3e</code></span></big> <span><span class="fas fa-trophy"></span> Can use user stories to manage requirements
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W4.4e</code></span></big> <span><span class="fas fa-trophy"></span> Can use user stories to manage requirements
           of project</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
           </span>
           </span>
@@ -3134,7 +3975,7 @@ This repo can be used to practice creating PRs.
           </div>
         </panel>
         <panel type="seamless" expanded="">
-          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W4.3h</code></span></big> <span><span class="fas fa-trophy"></span> Can specify details of a use case in a structured
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W4.4h</code></span></big> <span><span class="fas fa-trophy"></span> Can specify details of a use case in a structured
           format</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
           </span>
           </span>
@@ -3662,105 +4503,200 @@ This repo can be used to practice creating PRs.
           </div>
         </panel>
         <panel type="seamless" expanded="">
-          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W4.6c</code></span></big> <span><span class="fas fa-trophy"></span> Can do exception handling in code</span>
-          <span
-            class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-            </span>
-            </span>
-            <div class="indented">
-              <panel minimized="">
-                <span slot="header" class="card-title">Details of the LO</span>
-                <div>
-                  <div></div>
-                  <p></p>
-                  <p><span class="dimmed"><strong><span>Implementation → Error Handling → Exceptions →
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W4.6a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain the Collections framework</span>
+          <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+          </span>
+          </span>
+          <div class="indented">
+            <panel minimized="">
+              <span slot="header" class="card-title">Details of the LO</span>
+              <div>
+                <div></div>
+                <p></p>
+                <p><span class="dimmed"><strong><span>C++ to Java → Collections →
 </span></strong>
-                    </span>
-                  </p>
-                  <div id="title-and-body">
-                    <div>
-                      <h4 id="how-4">How</h4>
-                    </div>
-                    <div id="main">
-                      <div>
-                        <p><strong>Most languages allow a method/function to encapsulate the unusual situation in an Exception object and 'throw'/'raise' that object so that another piece of code can 'catch' it and deal with it.</strong> This is especially
-                          useful when code segment that encountered the unusual situation does not know how to deal with it.</p>
-                        <p><strong>Exception objects can propagate up the function call hierarchy until it is dealt with.</strong> Usually, an exception thrown by a function is caught by the caller function. If the called function does not know how to deal
-                          with the exception it caught, it can throw/raise the Exception object to its own caller. If none of the callers is prepared to deal with the exception, the exceptions can propagate through the
-                          <tooltip content="the hieararchy of function calls">function call stack</tooltip> until it is received by the main function and thrown to the runtime, thus halting the system.</p>
-                        <tip-box>
-                          <div class="alt-java">
-                            <p><span class="fas fa-cube"></span> In the code given below, <code>processArray</code> can potentially throw an <code>InvalidInputException</code>. Because of that, <code>processInput</code> method invokes <code>processArray</code>                              method inside a <code>try{ }</code> block and has a <code>catch{ }</code> block to specify what to do if the exception is actually thrown.</p>
-                            <img src="/website/book/errorHandling/exceptions/how/images/processInput.png" width="400">
-                            <p></p>
-                          </div>
-                          <div class="alt-python">
-                            <p><span class="fas fa-cube"></span> In the code given below, <code>process_array</code> function can potentially raise a <code>ValueError</code> exception. Because of that, <code>process_input</code> function invokes <code>process_array</code>                              function inside a <code>try</code> clause and has a <code>except</code> clause to specify what to do if the exception is actually raised.</p>
-                            <img src="/website/book/errorHandling/exceptions/how/images/example-python.png" width="400"></div>
-                        </tip-box>
-                        <p>Advantages of exception handling in this way:</p>
-                        <ul>
-                          <li>The ability to propagate error information through the call stack.</li>
-                          <li>The separation of code that deals with 'unusual' situations from the code that does the 'usual' work.</li>
-                        </ul>
-                      </div>
-                      <div>
-                        <div>
-                          <panel header="<span class='fas fa-paperclip'></span> Resources" expandable="">
-                            <ul>
-                              <li><a href="https://docs.oracle.com/javase/tutorial/essential/exceptions/">Java Exceptions Tutorial from Oracle</a></li>
-                            </ul>
-                          </panel>
-                        </div>
-                        <div>
-                          <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
-                            <div>
-                              <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Benefit of exceptions">
-                                <question>
-                                  <p>Which are benefits of exceptions?</p>
-                                  <ul class="task-list">
-                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. Exceptions allow us to separate normal code from error handling code.</li>
-                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. Exceptions can prevent problems that happen in the environment.</li>
-                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. Exceptions allow us to handle in one location an error raised in another location.</li>
-                                  </ul>
-                                  <div slot="answer">
-                                    <p>(a) (c)</p>
-                                    <p>Explanation: Exceptions cannot <em>prevent</em> problems in the environment. They can only be used to handle and recover from such problems.</p>
-                                  </div>
-                                </question>
-                              </panel>
-                            </div>
-                          </panel>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </panel><br><br>
-              <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span>
-              </p>
-              <div class="indented">
-                <div>
-                  <p><strong>Acceptable</strong>: Some code you wrote that involves exception handling.</p>
-                  <p><strong>Suggested</strong>: Do the exercise in <a href="https://github.com/nusCS2113-AY1819S1/addressbook-level2/blob/master/docs/LearningOutcomes.adoc#handle-exceptions-code-lo-exceptions-code">addressbook-level2: LO-Exceptions</a>.</p>
+                  </span>
+                </p>
+                <div id="title-and-body">
                   <div>
-                    <p><strong>Submission</strong>:</p>
-                    <ul>
-                      <li>Options 1 (discouraged): Show the relevant code during the tutorial.</li>
-                      <li>Options 2 (preferred): Create a pull request by following the instructions below.</li>
-                    </ul>
-                    <p>
-                      <panel src="/website/admin/appendixE-gitHub._include_.html#tutorial-pr-instructions" header="%%Admin <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Appendix E: Using GitHub Project Hosting → Submitting Pull Requests as evidence of an LO%%"
-                        fragment="tutorial-pr-instructions"></panel>
-                    </p>
-                    <p>If you choose option 2, we recommend that you complete this week's <em>Project Management</em> LOs first; there are many ways to create PRs but we expect you to create PRs in a specific way, as specified in the LOs.</p>
+                    <h4 id="the-collections-framework-2">The Collections Framework</h4>
+                  </div>
+                  <div id="main">
+                    <div>
+                      <p>Given below is an extract from the <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small>, with slight adaptations.</p>
+                      <blockquote>
+                        <p><strong>A <em>collection</em> — sometimes called a <em>container</em> — is simply an object that groups multiple elements into a single unit.</strong> Collections are used to store, retrieve, manipulate, and communicate aggregate
+                          data. Typically, they represent data items that form a natural group, such as a poker hand (a collection of cards), a mail folder (a collection of letters), or a telephone directory (a mapping of names to phone numbers). If you
+                          have used the Java programming language — or just about any other programming language — you are already familiar with collections.</p>
+                        <p><strong>A collections framework is a unified architecture for representing and manipulating collections.</strong> All collections frameworks contain the following:</p>
+                        <ul>
+                          <li><strong>Interfaces</strong>: These are abstract data types that represent collections. Interfaces allow collections to be manipulated independently of the details of their representation. In object-oriented languages, interfaces
+                            generally form a hierarchy.</li>
+                          <li><strong>Implementations</strong>: These are the concrete implementations of the collection interfaces. In essence, they are reusable data structures.</li>
+                          <li><strong>Algorithms</strong>: These are the methods that perform useful computations, such as searching and sorting, on objects that implement collection interfaces. The algorithms are said to be polymorphic: that is, the same
+                            method can be used on many different implementations of the appropriate collection interface. In essence, algorithms are reusable functionality.</li>
+                        </ul>
+                        <p>Apart from the Java Collections Framework, <strong>the best-known examples of collections frameworks are the C++ Standard Template Library (STL)</strong> and Smalltalk's collection hierarchy.</p>
+                        <p>The following list describes the core collection interfaces:</p>
+                        <ul>
+                          <li>
+                            <p><code>Collection</code> — the root of the collection hierarchy. A collection represents a group of objects known as its elements. The Collection interface is the least common denominator that all collections implement and is
+                              used to pass collections around and to manipulate them when maximum generality is desired. Some types of collections allow duplicate elements, and others do not. Some are ordered and others are unordered. The Java platform
+                              doesn't provide any direct implementations of this interface but provides implementations of more specific subinterfaces, such as Set and List. Also see The Collection Interface section.</p>
+                          </li>
+                          <li>
+                            <p><code>Set</code> — a collection that cannot contain duplicate elements. This interface models the mathematical set abstraction and is used to represent sets, such as the cards comprising a poker hand, the courses making up
+                              a student's schedule, or the processes running on a machine. See also The Set Interface section.</p>
+                          </li>
+                          <li>
+                            <p><code>List</code> — an ordered collection (sometimes called a sequence). Lists can contain duplicate elements. The user of a List generally has precise control over where in the list each element is inserted and can access
+                              elements by their integer index (position). If you've used Vector, you're familiar with the general flavor of List. Also see The List Interface section.</p>
+                          </li>
+                          <li>
+                            <p><code>Queue</code> — a collection used to hold multiple elements prior to processing. Besides basic Collection operations, a Queue provides additional insertion, extraction, and inspection operations.</p>
+                          </li>
+                          <li>
+                            <p><code>Map</code> — an object that maps keys to values. A Map cannot contain duplicate keys; each key can map to at most one value. If you've used Hashtable, you're already familiar with the basics of Map. Also see The Map Interface
+                              section.</p>
+                          </li>
+                          <li>
+                            <p>Others: <code>Deque</code>, <code>SortedSet</code>, <code>SortedMap</code></p>
+                          </li>
+                        </ul>
+                      </blockquote>
+                    </div>
+                    <div></div>
                   </div>
                 </div>
               </div>
+            </panel><br><br>
+            <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span>
+            </p>
+            <div class="indented">
+              <div>
+                <p><strong>Acceptable</strong>: Some code that you have written that uses some Java Collection classes.</p>
+                <p><strong>Suggested</strong>: Do the exercise given in <a href="https://github.com/nusCS2113-AY1819S1/addressbook-level1/blob/master/docs/LearningOutcomes.adoc#use-collections-code-lo-collections-code">AddressBook - Level1 : LO-Collections</a></p>
+                <p><strong>Submission</strong>: Show your code to the tutor during the tutorial.</p>
+              </div>
             </div>
+          </div>
         </panel>
         <panel type="seamless" expanded="">
-          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W4.7a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain branching</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W4.7a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain the meaning of enumerations</span>
+          <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+          </span>
+          </span>
+          </span>
+          <div class="indented">
+            <panel minimized="">
+              <span slot="header" class="card-title">Details of the LO</span>
+              <div>
+                <div></div>
+                <p></p>
+                <p><span class="dimmed"><strong><span>Paradigms → Object Oriented Programming → Classes →
+</span></strong>
+                  </span>
+                </p>
+                <div id="title-and-body">
+                  <div>
+                    <h4 id="enumerations-2">Enumerations</h4>
+                  </div>
+                  <div id="main">
+                    <div>
+                      <p><strong>An <em>Enumeration</em> is a fixed set of values that can be considered as a data type.</strong></p>
+                      <p>An enumeration is often useful when using a regular data type such as <code>int</code> or <code>String</code> would allow invalid values to be assigned to a variable. <span class="dimmed">e.g. if a variable can only take values <code>0</code> and <code>1</code>, declaring it as an <code>int</code> would allow invalid values such as <code>2</code> to be assigned to it. But if you define an enumeration called <code>Binary</code> that has values <code>0</code> and <code>1</code> only, a variable of type <code>Binary</code> will never be assigned an invalid value such as <code>2</code> because the compiler is able to catch the error.</span></p>
+                      <tip-box>
+                        <p><span class="fas fa-cube"></span> <code>Priority</code> can be considered an enumeration because it has only three values.</p>
+                        <p><code>Priority</code>: <code>HIGH</code>, <code>MEDIUM</code>, <code>LOW</code></p>
+                      </tip-box>
+                    </div>
+                    <div>
+                      <div>
+                        <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                        
+                          <div>
+                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Define WeekDay Enum">
+                              <question has-input="true">
+                                <p>Show (in UML notation) an enumeration called <code>WeekDay</code> to use when the value can only be <code>Monday</code> ... <code>Friday</code>.</p>
+                              </question>
+                            </panel>
+                          </div>
+                        </panel>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </panel><br><br>
+            <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span>
+            </p>
+            <div class="indented">
+              <div>
+                <div>
+                  <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Define WeekDay Enum">
+                    <question has-input="true">
+                      <p>Show (in UML notation) an enumeration called <code>WeekDay</code> to use when the value can only be <code>Monday</code> ... <code>Friday</code>.</p>
+                    </question>
+                  </panel>
+                </div>
+              </div>
+            </div>
+          </div>
+        </panel>
+        <panel type="seamless" expanded="">
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W4.7b</code></span></big> <span><span class="fas fa-trophy"></span> Can use Java enumerations</span> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+          </span>
+          </span>
+          <div class="indented">
+            <panel minimized="">
+              <span slot="header" class="card-title">Details of the LO</span>
+              <div>
+                <div></div>
+                <p></p>
+                <p><span class="dimmed"><strong><span>Tools → Java →
+</span></strong>
+                  </span>
+                </p>
+                <div id="title-and-body">
+                  <div>
+                    <h4 id="enums-2">Enums</h4>
+                  </div>
+                  <div id="main">
+                    <div>
+                      <blockquote>
+                        <p>An enum type is a special data type that enables for a variable to be a set of predefined constants. The variable must be equal to one of the values that have been predefined for it. Common examples include compass directions (values
+                          of <code>NORTH</code>, <code>SOUTH</code>, <code>EAST</code>, and <code>WEST</code>) and the days of the week.</p>
+                        <p>Because they are constants, the names of an enum type's fields are in uppercase letters. In the Java programming language, you define an enum type by using the <code>enum</code> keyword. For example, you would specify a days-of-the-week
+                          enum type as:</p>
+                        <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">enum</span> Day {
+   SUNDAY, MONDAY, TUESDAY, WEDNESDAY,
+   THURSDAY, FRIDAY, SATURDAY
+}
+</code></pre>
+                        <p>You should use enum types any time you need to represent a fixed set of constants. That includes natural enum types such as the planets in our solar system and data sets where you know all possible values at compile time—for example,
+                          the choices on a menu, command line flags, and so on.
+                          <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small></p>
+                      </blockquote>
+                      <p>Note that while enumerations are usually a simple set of fixed values, Java enumerations can have behaviors too. To learn how to implement enumerations, read <a href="https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html">this tutorial (from Oracle)</a></p>
+                    </div>
+                    <div></div>
+                  </div>
+                </div>
+              </div>
+            </panel><br><br>
+            <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span>
+            </p>
+            <div class="indented">
+              <div>
+                <p><strong>Acceptable</strong>: Any code you have written that uses Java enumerations.</p>
+                <p><strong>Suggested</strong>: The exercise in <a href="https://github.com/nusCS2113-AY1819S1/addressbook-level1/blob/master/docs/LearningOutcomes.adoc/#use-enums-code-lo-enums-code">AddressBook-Level1: LO-Enums</a></p>
+                <p><strong>Submission</strong>: Show your code during tutorial</p>
+              </div>
+            </div>
+          </div>
+        </panel>
+        <panel type="seamless" expanded="">
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W4.8a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain branching</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
           <span
             class="glyphicon glyphicon-star" aria-hidden="true"></span>
             </span>
@@ -3838,7 +4774,7 @@ This repo can be used to practice creating PRs.
             </div>
         </panel>
         <panel type="seamless" expanded="">
-          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W4.7b</code></span></big> <span><span class="fas fa-trophy"></span> Can use Git branching</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W4.8b</code></span></big> <span><span class="fas fa-trophy"></span> Can use Git branching</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
           <span
             class="glyphicon glyphicon-star" aria-hidden="true"></span>
             </span>
@@ -4018,7 +4954,7 @@ git checkout feature1
             </div>
         </panel>
         <panel type="seamless" expanded="">
-          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W4.7c</code></span></big> <span><span class="fas fa-trophy"></span> Can create PRs on GitHub</span> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W4.8c</code></span></big> <span><span class="fas fa-trophy"></span> Can create PRs on GitHub</span> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
           </span>
           </span>
           <div class="indented">
@@ -4120,7 +5056,7 @@ This repo can be used to practice creating PRs.
           </div>
         </panel>
         <panel type="seamless" expanded="">
-          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W4.8</code></span></big> Can define requirements of a product <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+          <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W4.9</code></span></big> Can define requirements of a product <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
           </span>
           </span>
           <div class="indented">
