@@ -2139,6 +2139,57 @@ logger.log(Level.INFO, <span class="hljs-string">"end of processing"</span>);
       <h3 id="tutorial-7"><span class="fas fa-chalkboard-teacher"></span> Tutorial 7</h3>
       <div class="indented">
         <div>
+          <p><strong>An activity to do during tutorial:</strong><br></p>
+          <table>
+            <tr>
+              <td width="40%">
+                <div>
+                  <p>Consider the code below:</p>
+                  <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span></span>{
+    Tag tag;
+    String name;
+
+    Person(String personName, String tagName){
+        name = personName;
+        tag = <span class="hljs-keyword">new</span> Tag(tagName);
+    }
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Tag</span></span>{
+    Tag(String value){
+        <span class="hljs-comment">//...</span>
+    }
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PersonList</span></span>{
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">addPerson</span><span class="hljs-params">(Person p)</span></span>{
+        <span class="hljs-comment">//...</span>
+    }
+}
+</code></pre>
+                  <p>Draw a sequence diagram to illustrate the object interactions that happen in the code snippet below:</p>
+                  <pre><code class="hljs java">PersonList personList = <span class="hljs-keyword">new</span> PersonList();
+<span class="hljs-keyword">while</span> (hasRoom){
+    Person p = <span class="hljs-keyword">new</span> Person(<span class="hljs-string">"Adam"</span>, <span class="hljs-string">"friend"</span>);
+    personList.addPerson(p);
+}
+</code></pre>
+                </div>
+                <p>After that, draw a class diagram to match the code. Then, draw an object diagram to show the state of the objects after the code has executed one loop.</p>
+              </td>
+              <td>
+                &nbsp;
+              </td>
+              <td>
+                <tip-box>
+                  <p>Here are some sample diagrams to use as references:<br>
+                    <img src="/website/book/modeling/modelingBehaviors/sequenceDiagramsBasic/images/Machine.png" width="500">
+                    <img src="/website/book/modeling/modelingStructures/classDiagramsBasic/images/typicalClasssStructure.png" width="400"><br></p>
+                </tip-box>
+              </td>
+              <tr></tr>
+            </tr>
+          </table>
           <p><strong>Questions to discuss during tutorial:</strong></p>
           <div>
             <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Explain Sequence Diagram (ParserFactory)">
@@ -3571,7 +3622,7 @@ logger.log(Level.INFO, <span class="hljs-string">"end of processing"</span>);
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 12 Aug 2018 02:48:08 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 12 Aug 2018 03:16:05 GMT</small></div>
 </footer>
 </div>
 </body>
