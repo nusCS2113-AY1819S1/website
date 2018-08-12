@@ -6,6 +6,12 @@
 * Confirm your team ID with the tutor. It should be of the form `TUTORIAL_ID-TEAM_NUMBER` e.g. `W12-2` (`W`ed `12`00 slot, team `2`)
 * As before, discuss evidence of achieving LOs as directed by the tutor.
 
+**Suggested activity to do in the tutorial:**
+
+<include src="../../book/uml/classDiagrams/combine/basic/q-essay-objectDiagramsForClassDiagram.md" />
+
+* Write code to implement the classes given in the class diagram
+
 {% from "schedule/index.md" import all_outcomes with context %}
 {% from "common/tutorial.njk" import  show_week_evidences with context %}
 {{ show_week_evidences("3", all_outcomes) }}
