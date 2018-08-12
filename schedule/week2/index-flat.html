@@ -413,127 +413,123 @@
             <span slot="header" class="card-title"><span><code>W2.2</code> <strong>Can use Git to save history</strong> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
             </span>
             </span>
-            <panel type="warning" expanded="" no-close="" no-switch="" epxandable="false">
-              <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W2.2a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain revision control</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              <span
-                class="glyphicon glyphicon-star" aria-hidden="true"></span>
-                </span>
-                </span>
-                </span>
-                </span>
-                <div>
-                  <div></div>
-                  <p></p>
-                  <p><span class="dimmed"><strong><span>Project Management → Revision Control →
+            <panel type="danger" expanded="" no-close="" no-switch="" epxandable="false">
+              <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W2.2a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain revision control</span> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+              </span>
+              </span>
+              <div>
+                <div></div>
+                <p></p>
+                <p><span class="dimmed"><strong><span>Project Management → Revision Control →
 </span></strong>
-                    </span>
-                  </p>
-                  <div id="title-and-body">
-                    <div>
-                      <h4 id="what">What</h4>
-                    </div>
-                    <div id="main">
-                      <div>
-                        <p><strong><em>Revision Control Software (RCS)</em> are the software tools that automate the process of <em>Revision Control</em> i.e. managing revisions of software artifacts.</strong></p>
-                        <p>Revision control is also known as <em>Version Control Software (VCS)</em>, and a few other names. Here, we use the terms <em>revision</em> and <em>version</em> interchangeably.</p>
-                        <tabs>
-                          <tab header="<span class='far fa-file-alt'></span>">
-                            <blockquote>
-                              <p><em>Revision control</em> is the process of managing multiple versions of a piece of information. In its simplest form, this is something that many people do by hand: every time you modify a file, save it under a new name
-                                that contains a number, each one higher than the number of the preceding version.</p>
-                              <p>Manually managing multiple versions of even a single file is an error-prone task, though, so software tools to help automate this process have long been available. The earliest automated revision control tools were intended
-                                to help a single user to manage revisions of a single file. Over the past few decades, the scope of revision control tools has expanded greatly; they now manage multiple files, and help multiple people to work together.
-                                The best modern revision control tools have no problem coping with thousands of people working together on projects that consist of hundreds of thousands of files.</p>
-                              <p>There are a number of reasons why you or your team might want to use an automated revision control tool for a project. It will track the history and evolution of your project, so you don't have to. For every change, you'll
-                                have a log of who made it; why they made it; when they made it; and what the change was.</p>
-                              <p>When you're working with other people, <strong>revision control software makes it easier for you to collaborate</strong>. For example, when people more or less simultaneously make potentially incompatible changes, the software
-                                will help you to identify and resolve those conflicts.</p>
-                              <p><strong>It can help you to recover from mistakes</strong>. If you make a change that later turns out to be an error, you can revert to an earlier version of one or more files. In fact, a really good revision control tool
-                                will even help you to efficiently figure out exactly when a problem was introduced.</p>
-                              <p><strong>It will help you to work simultaneously on, and manage the drift between, multiple versions of your project.</strong> Most of these reasons are equally valid, at least in theory, whether you're working on a project
-                                by yourself, or with a hundred other people.</p>
-                              <p>-- [adapted from
-                                <trigger for="pop:bryan-mercurial-guide">bryan-mercurial-guide</trigger>]</p>
-                            </blockquote>
-                            <hr>
-                          </tab>
-                          <tab header="<span class='glyphicon glyphicon-facetime-video' aria-hidden='true'></span>">
-                            <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/M-O8ZNW9icQ" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
-                            <hr>
-                          </tab>
-                        </tabs>
-                        <popover id="pop:bryan-mercurial-guide" title="bryan-mercurial-guide <span class='glyphicon glyphicon-eye-open' aria-hidden='true'></span>" placement="right">
-                          <div slot="content">
-                            <div>
-                              <p><a href="http://hgbook.red-bean.com/">Mercurial: The Definitive Guide</a> by Bryan O'Sullivan retrieved on 2012/07/11</p>
-                            </div>
-                          </div>
-                        </popover>
-                      </div>
-                      <div>
-                        <div>
-                          <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
-                            <div>
-                              <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> What does RCS stand for?">
-                                <question has-input="true">
-                                  <div slot="answer">
-                                    <p>Revision Control Software</p>
-                                  </div>
-                                </question>
-                              </panel>
-                            </div>
-                            <div>
-                              <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> What is a Revision?">
-                                <question has-input="true">
-                                  <p>In the context of RCS, what is a <em>Revision</em>? Give an example.</p>
-                                  <div slot="answer">
-                                    <p>Versions of a piece of information. For example, take a file containing program code. If you modify the code and save the file, you have a new version of that file.</p>
-                                  </div>
-                                </question>
-                              </panel>
-                            </div>
-                            <div>
-                              <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Which of these is not considered a benefit of a typical RCS?">
-                                <question>
-                                  <ul class="task-list">
-                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. Help a single user manage revisions of a single file</li>
-                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. Help a developer recover from a incorrect modification to a code file</li>
-                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. Makes it easier for a group of developers to collaborate on a project</li>
-                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. Manage the drift between multiple versions of your project</li>
-                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. Detect when multiple developers make incompatible changes to the same file</li>
-                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> f. All of them are benefits of RCS</li>
-                                  </ul>
-                                  <div slot="answer">
-                                    <p>f</p>
-                                  </div>
-                                </question>
-                              </panel>
-                            </div>
-                            <div>
-                              <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Explain RCS in a team project context">
-                                <question has-input="true">
-                                  <p>Suppose You are doing a team project with Tom, Dick, and Harry but those three have not even heard the term RCS. How do you explain RCS to them as briefly as possible, using the project as an example?</p>
-                                </question>
-                              </panel>
-                            </div>
-                          </panel>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <hr style="border-top: dashed 1px; border-color:grey">
-                <p><big><span class="fas fa-briefcase"></span> Evidence:</big></p>
-                <div>
-                  <p>Be able to answer questions such as these:</p>
+                  </span>
+                </p>
+                <div id="title-and-body">
                   <div>
-                    <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Explain RCS in a team project context">
-                      <question has-input="true">
-                        <p>Suppose You are doing a team project with Tom, Dick, and Harry but those three have not even heard the term RCS. How do you explain RCS to them as briefly as possible, using the project as an example?</p>
-                      </question>
-                    </panel>
+                    <h4 id="what">What</h4>
+                  </div>
+                  <div id="main">
+                    <div>
+                      <p><strong><em>Revision Control Software (RCS)</em> are the software tools that automate the process of <em>Revision Control</em> i.e. managing revisions of software artifacts.</strong></p>
+                      <p>Revision control is also known as <em>Version Control Software (VCS)</em>, and a few other names. Here, we use the terms <em>revision</em> and <em>version</em> interchangeably.</p>
+                      <tabs>
+                        <tab header="<span class='far fa-file-alt'></span>">
+                          <blockquote>
+                            <p><em>Revision control</em> is the process of managing multiple versions of a piece of information. In its simplest form, this is something that many people do by hand: every time you modify a file, save it under a new name that
+                              contains a number, each one higher than the number of the preceding version.</p>
+                            <p>Manually managing multiple versions of even a single file is an error-prone task, though, so software tools to help automate this process have long been available. The earliest automated revision control tools were intended
+                              to help a single user to manage revisions of a single file. Over the past few decades, the scope of revision control tools has expanded greatly; they now manage multiple files, and help multiple people to work together. The
+                              best modern revision control tools have no problem coping with thousands of people working together on projects that consist of hundreds of thousands of files.</p>
+                            <p>There are a number of reasons why you or your team might want to use an automated revision control tool for a project. It will track the history and evolution of your project, so you don't have to. For every change, you'll
+                              have a log of who made it; why they made it; when they made it; and what the change was.</p>
+                            <p>When you're working with other people, <strong>revision control software makes it easier for you to collaborate</strong>. For example, when people more or less simultaneously make potentially incompatible changes, the software
+                              will help you to identify and resolve those conflicts.</p>
+                            <p><strong>It can help you to recover from mistakes</strong>. If you make a change that later turns out to be an error, you can revert to an earlier version of one or more files. In fact, a really good revision control tool will
+                              even help you to efficiently figure out exactly when a problem was introduced.</p>
+                            <p><strong>It will help you to work simultaneously on, and manage the drift between, multiple versions of your project.</strong> Most of these reasons are equally valid, at least in theory, whether you're working on a project
+                              by yourself, or with a hundred other people.</p>
+                            <p>-- [adapted from
+                              <trigger for="pop:bryan-mercurial-guide">bryan-mercurial-guide</trigger>]</p>
+                          </blockquote>
+                          <hr>
+                        </tab>
+                        <tab header="<span class='glyphicon glyphicon-facetime-video' aria-hidden='true'></span>">
+                          <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/M-O8ZNW9icQ" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
+                          <hr>
+                        </tab>
+                      </tabs>
+                      <popover id="pop:bryan-mercurial-guide" title="bryan-mercurial-guide <span class='glyphicon glyphicon-eye-open' aria-hidden='true'></span>" placement="right">
+                        <div slot="content">
+                          <div>
+                            <p><a href="http://hgbook.red-bean.com/">Mercurial: The Definitive Guide</a> by Bryan O'Sullivan retrieved on 2012/07/11</p>
+                          </div>
+                        </div>
+                      </popover>
+                    </div>
+                    <div>
+                      <div>
+                        <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                          <div>
+                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> What does RCS stand for?">
+                              <question has-input="true">
+                                <div slot="answer">
+                                  <p>Revision Control Software</p>
+                                </div>
+                              </question>
+                            </panel>
+                          </div>
+                          <div>
+                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> What is a Revision?">
+                              <question has-input="true">
+                                <p>In the context of RCS, what is a <em>Revision</em>? Give an example.</p>
+                                <div slot="answer">
+                                  <p>Versions of a piece of information. For example, take a file containing program code. If you modify the code and save the file, you have a new version of that file.</p>
+                                </div>
+                              </question>
+                            </panel>
+                          </div>
+                          <div>
+                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Which of these is not considered a benefit of a typical RCS?">
+                              <question>
+                                <ul class="task-list">
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. Help a single user manage revisions of a single file</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. Help a developer recover from a incorrect modification to a code file</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. Makes it easier for a group of developers to collaborate on a project</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. Manage the drift between multiple versions of your project</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. Detect when multiple developers make incompatible changes to the same file</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> f. All of them are benefits of RCS</li>
+                                </ul>
+                                <div slot="answer">
+                                  <p>f</p>
+                                </div>
+                              </question>
+                            </panel>
+                          </div>
+                          <div>
+                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Explain RCS in a team project context">
+                              <question has-input="true">
+                                <p>Suppose You are doing a team project with Tom, Dick, and Harry but those three have not even heard the term RCS. How do you explain RCS to them as briefly as possible, using the project as an example?</p>
+                              </question>
+                            </panel>
+                          </div>
+                        </panel>
+                      </div>
+                    </div>
                   </div>
                 </div>
+              </div>
+              <hr style="border-top: dashed 1px; border-color:grey">
+              <p><big><span class="fas fa-briefcase"></span> Evidence:</big></p>
+              <div>
+                <p>Be able to answer questions such as these:</p>
+                <div>
+                  <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Explain RCS in a team project context">
+                    <question has-input="true">
+                      <p>Suppose You are doing a team project with Tom, Dick, and Harry but those three have not even heard the term RCS. How do you explain RCS to them as briefly as possible, using the project as an example?</p>
+                    </question>
+                  </panel>
+                </div>
+              </div>
             </panel>
             <panel type="danger" expanded="" no-close="" no-switch="" epxandable="false">
               <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W2.2b</code></span></big> <span><span class="fas fa-trophy"></span> Can explain repositories</span> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
@@ -1848,118 +1844,122 @@ index 15b57f7..17f4528 100644
             <span slot="header" class="card-title"><span><code>W2.6</code> <strong>Can explain OOP</strong> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
             </span>
             </span>
-            <panel type="danger" expanded="" no-close="" no-switch="" epxandable="false">
-              <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W2.6a</code></span></big> <span><span class="fas fa-trophy"></span> Can describe OOP at a higher level</span> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-              </span>
-              </span>
-              <div>
-                <div></div>
-                <p></p>
-                <p><span class="dimmed"><strong><span>Paradigms → Object Oriented Programming → Introduction →
+            <panel type="warning" expanded="" no-close="" no-switch="" epxandable="false">
+              <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W2.6a</code></span></big> <span><span class="fas fa-trophy"></span> Can describe OOP at a higher level</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              <span
+                class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                </span>
+                </span>
+                </span>
+                </span>
+                <div>
+                  <div></div>
+                  <p></p>
+                  <p><span class="dimmed"><strong><span>Paradigms → Object Oriented Programming → Introduction →
 </span></strong>
-                  </span>
-                </p>
-                <div id="title-and-body">
-                  <div>
-                    <h4 id="what-4">What</h4>
-                  </div>
-                  <div id="main">
+                    </span>
+                  </p>
+                  <div id="title-and-body">
                     <div>
-                      <p><strong>Object-Oriented Programming (OOP) is a <em>programming paradigm</em>.</strong> A programming paradigm guides programmers to analyze programming problems, and structure programming solutions, in a specific way.</p>
-                      <blockquote>
-                        <p>Programming languages have traditionally divided the world into two parts—data and operations on data. Data is static and immutable, except as the operations may change it. The procedures and functions that operate on data have
-                          no lasting state of their own; they’re useful only in their ability to affect data.</p>
-                        <p>This division is, of course, grounded in the way computers work, so it’s not one that you can easily ignore or push aside. Like the equally pervasive distinctions between matter and energy and between nouns and verbs, it forms
-                          the background against which we work. At some point, all programmers—even object-oriented programmers—must lay out the data structures that their programs will use and define the functions that will act on the data.</p>
-                        <p>With a procedural programming language like C, that’s about all there is to it. The language may offer various kinds of support for organizing data and functions, but it won’t divide the world any differently. Functions and data
-                          structures are the basic elements of design.</p>
-                        <p>Object-oriented programming doesn’t so much dispute this view of the world as restructure it at a higher level. It groups operations and data into modular units called objects and lets you combine objects into structured networks
-                          to form a complete program. In an object-oriented programming language, objects and object interactions are the basic elements of design.</p>
-                        <p><sub>-- <a href="https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/OOP_ObjC/">Object-Oriented Programming with Objective-C</a>, Apple</sub></p>
-                      </blockquote>
-                      <p>Some other examples of programming paradigms are:</p>
-                      <div class="table-responsive">
-                        <table class="markbind-table table table-bordered table-striped">
-                          <thead>
-                            <tr>
-                              <th>Paradigm</th>
-                              <th>Programming Languages</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td><a href="https://en.wikipedia.org/wiki/Procedural_programming"><em>Procedural Programming</em> paradigm</a></td>
-                              <td>C</td>
-                            </tr>
-                            <tr>
-                              <td><a href="https://en.wikipedia.org/wiki/Functional_programming"><em>Functional Programming</em> paradigm</a></td>
-                              <td>F#, Haskel, Scala</td>
-                            </tr>
-                            <tr>
-                              <td><a href="https://en.wikipedia.org/wiki/Logic_programming"><em>Logic Programming</em> paradigm</a></td>
-                              <td>Prolog</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <p><strong>Some programming languages support multiple paradigms.</strong></p>
-                      <tip-box>
-                        <p><span class="fas fa-cube"></span> Java is primarily an OOP language but it supports limited forms of functional programming and it can be used to (although not recommended) write procedural code. <span class="dimmed"> e.g. <a href="https://github.com/se-edu/addressbook-level1">se-edu/addressbook-level1</a></span></p>
-                        <p><span class="fas fa-cube"></span> JavaScript and Python support functional, procedural, and OOP programming.</p>
-                      </tip-box>
+                      <h4 id="what-4">What</h4>
                     </div>
-                    <div>
+                    <div id="main">
                       <div>
-                        <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
-                          <div>
-                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> statements about OOP">
-                              <question>
-                                <p>A) Choose the correct statements</p>
-                                <ul class="task-list">
-                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. OO is a programming paradigm</li>
-                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. OO guides us in how to structure the solution</li>
-                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. OO is mainly an abstraction mechanism</li>
-                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. OO is a programming language</li>
-                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. OO is modeled after how the objects in real world work</li>
-                                </ul>
-                                <p>B) Choose the correct statements</p>
-                                <ul class="task-list">
-                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. Java and C++ are OO languages</li>
-                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. C language follows the <em>Functional Programming</em> paradigm</li>
-                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. Java can be used to write procedural code</li>
-                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. Prolog follows the Logic Programming paradigm</li>
-                                </ul>
-                                <div slot="answer">
-                                  <p>A) (a)(b)(c)(e)</p>
-                                  <p>Explanation: While many languages support the OO paradigm, OO is not a language itself.</p>
-                                  <p>B) Choose the correct statement</p>
-                                  <p>(a)<s>(b)</s>(c)(d)</p>
-                                  <p>Explanation: C follows the procedural paradigm. Yes, we can write procedural code using OO languages e.g., AddressBook-level1.</p>
-                                </div>
-                              </question>
-                            </panel>
-                          </div>
-                          <div>
-                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> procedural vs OOP">
-                              <question>
-                                <p>OO is a higher level mechanism than the procedural paradigm.</p>
-                                <ul radio-group="07027" class="radio-list">
-                                  <li class="radio-list-item"><label><input class="radio-list-input" name="07027" type="radio"> True</label></li>
-                                  <li class="radio-list-item"><label><input class="radio-list-input" name="07027" type="radio"> False</label></li>
-                                </ul>
-                                <div slot="answer">
-                                  <p>True.</p>
-                                  <p>Explanation: Procedural languages work at simple data structures (e.g., integers, arrays) and functions level. Because an object is an abstraction over data+related functions, OO works at a higher level.</p>
-                                </div>
-                              </question>
-                            </panel>
-                          </div>
-                        </panel>
+                        <p><strong>Object-Oriented Programming (OOP) is a <em>programming paradigm</em>.</strong> A programming paradigm guides programmers to analyze programming problems, and structure programming solutions, in a specific way.</p>
+                        <blockquote>
+                          <p>Programming languages have traditionally divided the world into two parts—data and operations on data. Data is static and immutable, except as the operations may change it. The procedures and functions that operate on data have
+                            no lasting state of their own; they’re useful only in their ability to affect data.</p>
+                          <p>This division is, of course, grounded in the way computers work, so it’s not one that you can easily ignore or push aside. Like the equally pervasive distinctions between matter and energy and between nouns and verbs, it forms
+                            the background against which we work. At some point, all programmers—even object-oriented programmers—must lay out the data structures that their programs will use and define the functions that will act on the data.</p>
+                          <p>With a procedural programming language like C, that’s about all there is to it. The language may offer various kinds of support for organizing data and functions, but it won’t divide the world any differently. Functions and data
+                            structures are the basic elements of design.</p>
+                          <p>Object-oriented programming doesn’t so much dispute this view of the world as restructure it at a higher level. It groups operations and data into modular units called objects and lets you combine objects into structured networks
+                            to form a complete program. In an object-oriented programming language, objects and object interactions are the basic elements of design.</p>
+                          <p><sub>-- <a href="https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/OOP_ObjC/">Object-Oriented Programming with Objective-C</a>, Apple</sub></p>
+                        </blockquote>
+                        <p>Some other examples of programming paradigms are:</p>
+                        <div class="table-responsive">
+                          <table class="markbind-table table table-bordered table-striped">
+                            <thead>
+                              <tr>
+                                <th>Paradigm</th>
+                                <th>Programming Languages</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td><a href="https://en.wikipedia.org/wiki/Procedural_programming"><em>Procedural Programming</em> paradigm</a></td>
+                                <td>C</td>
+                              </tr>
+                              <tr>
+                                <td><a href="https://en.wikipedia.org/wiki/Functional_programming"><em>Functional Programming</em> paradigm</a></td>
+                                <td>F#, Haskel, Scala</td>
+                              </tr>
+                              <tr>
+                                <td><a href="https://en.wikipedia.org/wiki/Logic_programming"><em>Logic Programming</em> paradigm</a></td>
+                                <td>Prolog</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <p><strong>Some programming languages support multiple paradigms.</strong></p>
+                        <tip-box>
+                          <p><span class="fas fa-cube"></span> Java is primarily an OOP language but it supports limited forms of functional programming and it can be used to (although not recommended) write procedural code. <span class="dimmed"> e.g. <a href="https://github.com/se-edu/addressbook-level1">se-edu/addressbook-level1</a></span></p>
+                          <p><span class="fas fa-cube"></span> JavaScript and Python support functional, procedural, and OOP programming.</p>
+                        </tip-box>
+                      </div>
+                      <div>
+                        <div>
+                          <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                            <div>
+                              <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> statements about OOP">
+                                <question>
+                                  <p>A) Choose the correct statements</p>
+                                  <ul class="task-list">
+                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. OO is a programming paradigm</li>
+                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. OO guides us in how to structure the solution</li>
+                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. OO is mainly an abstraction mechanism</li>
+                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. OO is a programming language</li>
+                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. OO is modeled after how the objects in real world work</li>
+                                  </ul>
+                                  <p>B) Choose the correct statements</p>
+                                  <ul class="task-list">
+                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. Java and C++ are OO languages</li>
+                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. C language follows the <em>Functional Programming</em> paradigm</li>
+                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. Java can be used to write procedural code</li>
+                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. Prolog follows the Logic Programming paradigm</li>
+                                  </ul>
+                                  <div slot="answer">
+                                    <p>A) (a)(b)(c)(e)</p>
+                                    <p>Explanation: While many languages support the OO paradigm, OO is not a language itself.</p>
+                                    <p>B) Choose the correct statement</p>
+                                    <p>(a)<s>(b)</s>(c)(d)</p>
+                                    <p>Explanation: C follows the procedural paradigm. Yes, we can write procedural code using OO languages e.g., AddressBook-level1.</p>
+                                  </div>
+                                </question>
+                              </panel>
+                            </div>
+                            <div>
+                              <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> procedural vs OOP">
+                                <question>
+                                  <p>OO is a higher level mechanism than the procedural paradigm.</p>
+                                  <ul radio-group="07027" class="radio-list">
+                                    <li class="radio-list-item"><label><input class="radio-list-input" name="07027" type="radio"> True</label></li>
+                                    <li class="radio-list-item"><label><input class="radio-list-input" name="07027" type="radio"> False</label></li>
+                                  </ul>
+                                  <div slot="answer">
+                                    <p>True.</p>
+                                    <p>Explanation: Procedural languages work at simple data structures (e.g., integers, arrays) and functions level. Because an object is an abstraction over data+related functions, OO works at a higher level.</p>
+                                  </div>
+                                </question>
+                              </panel>
+                            </div>
+                          </panel>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
             </panel>
             <panel type="warning" expanded="" no-close="" no-switch="" epxandable="false">
               <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W2.6b</code></span></big> <span><span class="fas fa-trophy"></span> Can describe how OOP relates to the real world</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
@@ -3133,8 +3133,7 @@ index 15b57f7..17f4528 100644
             <panel type="seamless" expanded="">
               <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W2.2a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain revision control</span>
               <span
-                class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-                </span>
+                class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
                 </span>
                 </span>
                 <div class="indented">
@@ -4986,7 +4985,7 @@ index 15b57f7..17f4528 100644
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 12 Aug 2018 03:16:05 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 12 Aug 2018 06:51:15 GMT</small></div>
 </footer>
 </div>
 </body>

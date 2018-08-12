@@ -34,7 +34,7 @@
     </div>
     <div class="indented-less">
       <div class="indented-less">
-        <h4 id="what">What <span class="badge badge-light"><small><small><font color="Crimson"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty"
+        <h4 id="what">What <span class="badge badge-light"><small><small><font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty"
             aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></small>
           </small>
           </span>
@@ -697,66 +697,13 @@
           </div>
         </div>
       </div>
-      <div class="indented-less">
-        <h4 id="aggregation">Aggregation <span class="badge badge-light"><small><small><font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star"
-            aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></small>
-          </small>
-          </span>
-        </h4>
-        <div class="indented-less">
-          <div>
-            <p><strong><em>Aggregation</em> represents a <em>container-contained</em> relationship.</strong> It is a weaker relationship than composition.</p>
-            <tip-box>
-              <p><span class="fas fa-cube"></span> <code>SportsClub</code> acts as a <em>container</em> for <code>Person</code> objects. <code>Person</code> objects can survive without a <code>SportsClub</code> object.</p>
-            </tip-box>
-            <h5 id="implementing-aggregation"><strong>Implementing aggregation</strong></h5>
-            <p>Implementation is similar to that of composition except the <em>containee</em> object can exist even after the <em>container</em> object is deleted.</p>
-            <tip-box>
-              <p><span class="fas fa-cube"></span> In the code below, there is an aggregation association between the <code>Team</code> class and the <code>Person</code> in that a <code>Team</code> contains <code>Person</code> a object who is the leader
-                of the team.</p>
-              <table>
-                <tr>
-                
-                  <td valign="top">
-                    <p>Java <span class="fas fa-arrow-down"></span></p>
-                    <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Team</span> </span>{
-    Person leader;
-    ...
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">drive</span><span class="hljs-params">(Person p)</span> </span>{
-        leader = p;
-    }
-}
-</code></pre>
-                    <p></p>
-                  </td>
-                
-                  <td>  <br><br></td>
-                
-                  <td valign="top">
-                    <p>Python <span class="fas fa-arrow-down"></span></p>
-                    <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Team</span>:</span>
-  
-  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
-    self.__leader = <span class="hljs-keyword">None</span>
-    
-  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">drive</span><span class="hljs-params">(self, person)</span>:</span>
-    self.__leader = person
-</code></pre>
-                    <p></p>
-                  </td>
-                </tr>
-              </table>
-            </tip-box>
-          </div>
-        </div>
-      </div>
     </div>
     <div>
       <h2 id="inheritance">Inheritance</h2>
     </div>
     <div class="indented-less">
       <div class="indented-less">
-        <h4 id="what-5">What <span class="badge badge-light"><small><small><font color="Crimson"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty"
+        <h4 id="what-5">What <span class="badge badge-light"><small><small><font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty"
             aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></small>
           </small>
           </span>
@@ -1723,8 +1670,8 @@ void calculateGrade (String matric) { ... }
     </div>
     <div class="indented-less">
       <div class="indented-less">
-        <h4 id="what-6">What <span class="badge badge-light"><small><small><font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star"
-            aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></small>
+        <h4 id="what-6">What <span class="badge badge-light"><small><small><font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty"
+            aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></small>
           </small>
           </span>
         </h4>
@@ -1965,7 +1912,7 @@ void calculateGrade (String matric) { ... }
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 12 Aug 2018 03:16:05 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Sun, 12 Aug 2018 06:51:15 GMT</small></div>
 </footer>
 </div>
 </body>
