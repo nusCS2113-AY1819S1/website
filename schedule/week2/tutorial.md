@@ -1,5 +1,10 @@
 {% import "common/macros.njk" as macros with context %}
 
+<big>**Wednesday, August 22, 2018**</big>
+
+* Wednesday is a public holiday.
+* Students in Wednesday tutorials are requested to attend any other CS2113T tutorials as per convenience.
+
 <big>**Tutorial selection and seating arrangement**</big>
 
 * **{{ module }}** students: As you don't have a confirmed tutorial yet, attend the slot you chose in the 'Temporary Tutorial Registration' on IVLE. Team forming will be done in the following week. You are free to sit with anyone this week.
