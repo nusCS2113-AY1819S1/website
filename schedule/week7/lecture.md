@@ -1,1 +1,1 @@
-[[slides](http://www.comp.nus.edu.sg/~{{ module | lower }}/{{ semester }}/slides/L7.pptx)]
+**Slides**: Will be uploaded after the lecture
