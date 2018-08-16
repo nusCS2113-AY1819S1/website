@@ -54,4 +54,4 @@ Some relevant points:
 </question>
 </panel>
 
-[[slides](http://www.comp.nus.edu.sg/~{{ module | lower }}/{{ semester }}/slides/L3.pptx)]
+**Slides**: Will be uploaded after the lecture
