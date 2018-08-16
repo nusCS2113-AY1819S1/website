@@ -60,4 +60,4 @@
 
 **Talk on getting ready for internships**
 
-* [[slides](http://www.comp.nus.edu.sg/~{{ module | lower }}/{{ semester }}/slides/L12.pptx)]
+**Slides**: Will be uploaded after the lecture
