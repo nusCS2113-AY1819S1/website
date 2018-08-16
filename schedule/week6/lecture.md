@@ -22,4 +22,4 @@ TeamFormer is a system for helping {{ module_pair }} students during team formin
 
 <include src="../../book/modeling/modelingBehaviors/sequenceDiagramsBasic/q-essay-findNotationMistakes.md" />
 
-[[slides](http://www.comp.nus.edu.sg/~{{ module | lower }}/{{ semester }}/slides/L6.pptx)]
+**Slides**: Will be uploaded after the lecture
