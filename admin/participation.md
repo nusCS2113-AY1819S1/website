@@ -7,8 +7,7 @@
   * Criteria for professional conduct (1 mark for each criterion, max 7)
   * Competency criteria (2 marks for each, max 6)
 * In-lecture quizzes
-  * In-lecture quizzes (0.5 each, max 5 marks)
-  * Post-lecture quizzes (0.5 each, max 5 marks)
+  * In-lecture quizzes, roughly two questions each week (0.5 each, max 10 marks)
 * Module admin tasks done _on time_ and _as instructed_
   * Peer evaluations (1 marks each)
   * Pre-module survey (0.5 marks)
