@@ -20,6 +20,10 @@
 
 <span id="slack_team">https://nus{{ module | lower }}-{{ semester | lower }}.slack.com</span>
 
+<span id="forum_link">{{ module_org | safe }}/forum/issues</span>
+
+<span id="schedule_link"><span class="flat"><md>[Schedule page]({{baseUrl}}/index-flat.html)</md></span><span class="nested"><md>[Schedule page]({{baseUrl}}/index.html)</md></span></span>
+
 <span id="java_coding_standard">https://oss-generic.github.io/process/codingStandards/CodingStandard-Java.html</span>
 
 <span id="pagebreak"><p style="page-break-after: always;">&nbsp;</p></span>
