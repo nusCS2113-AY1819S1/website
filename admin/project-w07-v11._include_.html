@@ -83,10 +83,63 @@
           </tbody>
         </table>
       </div>
-      <p>❗️ Reminder: Reaching individual and team milestones are considered for grading the <em>project management</em> component of your project grade (expand the panel below for more info).</p>
       <p>
-        <panel src="/website\admin\project-assessment._include_.html#project-management-grading" header="Admin <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Project Assessment → Project Management" class="embedding" minimized="" fragment="project-management-grading"></panel>
-      </p>
+        <font color="red"><big><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span></big></font> Reminder: Reaching individual and team milestones are considered for
+        <trigger trigger="click" for="modal:v11-projectMgtGrading">grading the <em>project management</em> component</trigger> of your project grade.</p>
+      <modal large="" title="Admin <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Project Assessment → Project Management" id="modal:v11-projectMgtGrading">
+      
+        <div>
+          <p><strong>A. Process:</strong></p>
+          <p>Evaluates: How well you did in project management related aspects of the project, as an individual and as a team</p>
+          <p>Based on: Supervisor observations of project milestones and GitHub data.</p>
+          <p>Milestones <mark>need to be reached the midnight before of the tutorial</mark> for it to be counted as achieved. To get a good grade this aspect, achieve recommended weekly progress in at least 6/10 weeks.</p>
+          <p>Other criteria:</p>
+          <ul>
+            <li>Good use of GitHub milestones</li>
+            <li>Good use of GitHub release mechanism</li>
+            <li>Good version control, based on the repo</li>
+            <li>Reasonable attempt to use the forking workflow</li>
+            <li>Good task definition, assignment and tracking, based on the issue tracker</li>
+            <li>Good use of buffers <span class="dimmed">(opposite: everything at the last minute)</span></li>
+            <li>Project done iteratively and incrementally <span class="dimmed">(opposite: doing most of the work in one big burst)</span></li>
+          </ul>
+          <p><strong>B. Team-based tasks</strong>:</p>
+          <p>Evaluates: How much you contributed to common team-based tasks</p>
+          <p>Based on: peer evaluations and tutor observations</p>
+          <div class="flat">
+            <div>
+              <p><span class="dimmed">Relevant: [<trigger trigger="click" for="modal:projectAssessment-exmapleTeamTasks">Admin <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Project Scope → Examples of team tasks</trigger> <span class="glyphicon glyphicon-star"
+                  aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>]</span>
+              </p>
+            </div>
+          </div>
+          <modal large="" title="Admin <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Project Scope → Examples of team tasks  <span class='glyphicon glyphicon-star' aria-hidden='true'></span><span class='glyphicon glyphicon-star' aria-hidden='true'></span><span class='glyphicon glyphicon-star' aria-hidden='true'></span>"
+            id="modal:projectAssessment-exmapleTeamTasks">
+          
+            <div>
+              <p>Here is a non-exhaustive list of team-tasks:</p>
+              <ol>
+                <li>Necessary general code enhancements e.g.,
+                  <ol>
+                    <li>Work related to renaming the product</li>
+                    <li>Work related to changing the product icon</li>
+                    <li>Morphing the product into a different product</li>
+                  </ol>
+                </li>
+                <li>Setting up the GitHub, Travis, AppVeyor, etc.,</li>
+                <li>Maintaining the issue tracker</li>
+                <li>Release management</li>
+                <li>Updating user/developer docs that are not specific to a feature <span class="dimmed"> e.g. documenting the target user profile</span></li>
+                <li>Incorporating more useful tools/libraries/frameworks into the product or the project workflow <span class="dimmed">(e.g. automate more aspects of the project workflow using a GitHub plugin)</span></li>
+              </ol>
+            </div>
+          </modal>
+          <p>
+            <panel src="/website\admin\project-scope._include_.html#example-team-tasks" header="Admin <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Project Scope → Examples of team tasks  <span class='glyphicon glyphicon-star' aria-hidden='true'></span><span class='glyphicon glyphicon-star' aria-hidden='true'></span><span class='glyphicon glyphicon-star' aria-hidden='true'></span>"
+              class="embedding" minimized="" fragment="example-team-tasks"></panel>
+          </p>
+        </div>
+      </modal>
       <div id="documentation">
         <h3 id="v11-project-management">v1.1 Project Management</h3>
         <ul>
