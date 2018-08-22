@@ -11,7 +11,7 @@ Evaluates: How well do your features fit together to form a cohesive product (no
 
 Based on: user guide and the product demo. The **quality of the demo will be factored in** as well.
 
-:exclamation: Feature that fit well with the other features will earn more marks. 
+:exclamation: Feature that fits well with the other features will earn more marks. 
 
 </panel>
 
@@ -102,9 +102,9 @@ Other criteria:
 
 **B. Team-based tasks**: 
 
-  Evaluates: how much you contributed to common [team-based tasks]({{baseUrl}}/admin/index-flat.html#scope-example-team-tasks)</span>
+  Evaluates: How much you contributed to common team-based tasks</span>
 
-Based on: peer evaluations and tutor observations
+  Based on: peer evaluations and tutor observations
 
 {{ embed_topic("project-scope.md#example-team-tasks", "Admin " + icon_embedding + " Project Scope → Examples of team tasks", "projectAssessment-exmapleTeamTasks", "3") }}
 
