@@ -16,7 +16,7 @@ The question you should always ask yourself is, 'how do I solve this problem if 
 
 <big>{{ icon_dislike }} **What not to do:**</big> 
 
-* When faced with a technical problem or a doubt about a concept, don't fire off an email lecturer/tutor immediately after you encounter a problem or a doubt, unless it is something only the lecturer/tutor is supposed to know.
+* When faced with a technical problem or a doubt about a concept, don't fire off an email lecturer/tutor immediately, unless it is something only the lecturer/tutor is supposed to know.
 
 <big>{{ icon_like }} **What to do:**</big>
 
