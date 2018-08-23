@@ -82,7 +82,6 @@ head: scheduleHead.md
       {location: ["cppToJava", "classes", "gettersAndSetters"], omit_evidence: true},
     {heading: "Can implement class-level members"},
       {location: ["oop", "classes", "classLevelMembers"], omit_evidence: true},
-      {location: ["oop", "inheritance", "overloading"], omit_evidence: true},
     {heading: "Can use Java varargs feature"},
       {location: ["javaTools", "varargs"]},
   {name: ":parking: Project"},
