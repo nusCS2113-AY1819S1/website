@@ -12637,54 +12637,6 @@ send()
   <span slot="header" class="card-title activity-type"><span class="glyphicon glyphicon-blackboard" aria-hidden="true"></span> Lecture 3</span>
   <div class="indented">
     <div>
-      <p><strong>Questions to discuss during the lecture:</strong></p>
-      <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Review code for quality">
-        <question has-input="true">
-          <p>Suggest ways to improve the quality of the code below.</p>
-          <pre><code class="hljs java">...
-<span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String MESSAGE_COMMAND_HELP_PARAMETERS = <span class="hljs-string">"Parameters: %1$s"</span>;
-<span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String MESSAGE_COMMAND_HELP_EXAMPLE = <span class="hljs-string">"Example: %1$s"</span>;
-<span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String MESSAGE_DISPLAY_PERSON_DATA = <span class="hljs-string">"%1$s  Phone Number: %2$s  Email: %3$s"</span>;
-<span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String GOODBYE_MESSAGE = <span class="hljs-string">"Exiting Address Book... Good bye!"</span>;
-<span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String MESSAGE_INVALID_COMMAND_FORMAT = <span class="hljs-string">"Invalid command format: %1$s"</span>;
-...
-<span class="hljs-comment">/** List of all persons in the address book. */</span>
-<span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> ArrayList&lt;String&gt; person = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
-...
-<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
-    showWelcomeMessage();
-    processProgramArgs(args);
-    loadDataFromStorage();
-    <span class="hljs-keyword">while</span> (<span class="hljs-keyword">true</span>) {
-        System.out.print(<span class="hljs-string">"Enter command: "</span>);
-        String userCommand = SCANNER.nextLine();
-        userCommand = userCommand.trim();
-        showToUser(userCommand);
-        String feedback = executeCommand(userCommand);
-        showResultToUser(feedback);
-    }
-}
-...
-<span class="hljs-comment">/**
- * Show a message to the user
- */</span>
-<span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">showToUser</span><span class="hljs-params">(String message)</span> </span>{
-  System.out.println(LINE_PREFIX + m);
-}
-</code></pre>
-          <div slot="hint">
-            <p>Some relevant points:</p>
-            <ul>
-              <li>Similar things should be named similarly (consistency helps readability)</li>
-              <li>Use singular names for variables that handle single values</li>
-              <li>SLAP: The code of a method should be written as high-level as possible, and at the same level of abstraction</li>
-              <li>The first sentence of a method header comment should follow a certain phrasing (refer to coding standard)</li>
-              <li>Constant names don't follow camelCase (refer coding standard)</li>
-              <li>Indentation should be consistent</li>
-            </ul>
-          </div>
-        </question>
-      </panel>
       <p><strong>Slides</strong>: Will be uploaded after the lecture</p>
     </div>
   </div>
@@ -12700,7 +12652,7 @@ send()
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.10.1</a> at Fri, 24 Aug 2018 11:00:38 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.10.1</a> at Fri, 24 Aug 2018 11:13:56 GMT</small></div>
 </footer>
 </div>
 </body>
