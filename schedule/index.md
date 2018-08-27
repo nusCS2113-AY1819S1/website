@@ -150,7 +150,7 @@ head: scheduleHead.md
       {location: ["gitAndGithub", "branch"]},
       {location: ["gitAndGithub", "createPRs"]},
   {name: ":parking: Project"},
-    {heading: "Can define requirements of a product", priority: "1", file: "project.md#v10"},
+    {heading: "Can define requirements of a product", priority: "1", file: "project.md#mid-v10"},
 {week: "5"},
   {name: "Design"},
     {heading: "Can explain single responsibility principle"},
