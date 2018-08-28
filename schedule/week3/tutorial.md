@@ -4,11 +4,19 @@
 
 **All students**: 
 * Confirm your team ID with the tutor. It should be of the form `TUTORIAL_ID-TEAM_NUMBER` e.g. `W12-2` (`W`ed `12`00 slot, team `2`)
+<br>
+* Create an organization on GitHub using your team ID.
+
+<panel src="../../admin/appendixE-gitHub.md#organization-setup" header="Using GitHub {{ icon_embedding }} Organization setup :star:" minimized />
+
+<br>
+
 * As before, discuss evidence of achieving LOs as directed by the tutor.
 
 **Suggested activity to do in the tutorial:**
 
 <include src="../../book/uml/classDiagrams/combine/basic/q-essay-objectDiagramsForClassDiagram.md" />
+<br>
 
 * Write code to implement the classes given in the class diagram
 
