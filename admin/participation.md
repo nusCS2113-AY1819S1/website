@@ -9,9 +9,9 @@
 * In-lecture quizzes
   * In-lecture quizzes, roughly two questions each week (0.5 each, max 10 marks)
 * Module admin tasks done _on time_ and _as instructed_
-  * Peer evaluations (1 marks each)
-  * Pre-module survey (0.5 marks)
-* Enhanced AB1-AB3: 1 mark each
+  * Peer evaluations (1 mark each)
+  * Pre-module survey (1 mark)
+* Enhanced AB1-AB3: 2 mark each
 
 {{ embed_topic("peerEvaluations.md#peerEvaluation-criteria", "Admin " + icon_embedding + " Peer Evaluations → Criteria", "participation-peerEvals", "3") }}
 
