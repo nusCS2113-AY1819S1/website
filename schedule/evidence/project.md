@@ -1,6 +1,6 @@
 <div id="1kloc">
 
-{{ icon_important_big_red }} This LO can earn you <trigger trigger="click" for="modal:project1kloc-participation">1 participation mark</trigger>. 
+{{ icon_important_big_red }} This LO can earn you <trigger trigger="click" for="modal:project1kloc-participation">2 participation mark</trigger>. 
  
 <modal large title="%%Admin {{ icon_embedding }} Participation Marks%%" id="modal:project1kloc-participation">
   <include src="../../admin/participation.md#main"/>
