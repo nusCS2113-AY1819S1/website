@@ -9,17 +9,6 @@ function scrollToUrlAnchorHeading() {
   }
 }
 
-function flattenModals() {
-  jQuery('.modal').each((index, modal) => {
-    jQuery(modal).detach().appendTo(jQuery('#app'));
-  });
-}
-
-function executeAfterMountedRoutines() {
-  flattenModals();
-  scrollToUrlAnchorHeading();
-}
-
 function setupSiteNav() {
   // Add event listener for site-nav-btn to toggle itself and site navigation elements.
   const siteNavBtn = document.getElementById('site-nav-btn');
@@ -48,7 +37,7 @@ function setup() {
   const vm = new Vue({
     el: '#app',
     mounted() {
-      executeAfterMountedRoutines();
+      scrollToUrlAnchorHeading();
     },
   });
   setupSiteNav();
@@ -75,7 +64,7 @@ function setupWithSearch(siteData) {
       },
     },
     mounted() {
-      executeAfterMountedRoutines();
+      scrollToUrlAnchorHeading();
     },
   });
   setupSiteNav();

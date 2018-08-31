@@ -1,0 +1,122 @@
+2018-08-30T03:25:27.795Z - info: Pages built
+2018-08-30T03:25:27.911Z - info: Site data built
+2018-08-30T03:25:27.917Z - info: Generate Site durationMs=64431
+2018-08-30T03:25:28.164Z - info: Serving "E:\Teaching\aug2018\website\_site" at http://127.0.0.1:8080
+2018-08-30T03:25:28.164Z - info: Press CTRL+C to stop ...
+2018-08-30T03:40:26.978Z - info: Reload for file add: E:\Teaching\aug2018\website\book\codeQuality\followStandard\basic\exercises.md
+2018-08-30T03:40:26.979Z - info: Reload for file add: E:\Teaching\aug2018\website\book\codeQuality\followStandard\basic\q-listViolations.md
+2018-08-30T03:40:26.980Z - info: Reload for file change: E:\Teaching\aug2018\website\book\codeQuality\followStandard\basic\text.md
+2018-08-30T03:40:26.987Z - info: Reload for file change: E:\Teaching\aug2018\website\book\codeQuality\followStandard\intermediate\exercises.md
+2018-08-30T03:40:26.988Z - info: Reload for file add: E:\Teaching\aug2018\website\book\codeQuality\followStandard\intermediate\q-listViolations.md
+2018-08-30T03:40:26.993Z - info: Reload for file change: E:\Teaching\aug2018\website\book\codeQuality\followStandard\intermediate\q-tick-naming.md
+2018-08-30T03:40:26.994Z - info: Reload for file change: E:\Teaching\aug2018\website\book\codeQuality\followStandard\intermediate\text.md
+2018-08-30T03:40:26.999Z - info: Reload for file change: E:\Teaching\aug2018\website\book\codeQuality\followStandard\introduction\text.md
+2018-08-30T03:40:27.003Z - info: Reload for file add: E:\Teaching\aug2018\website\book\cppToJava\inheritance\basic\exercises.md
+2018-08-30T03:40:27.008Z - info: Reload for file change: E:\Teaching\aug2018\website\book\cppToJava\inheritance\basic\text.md
+2018-08-30T03:40:27.008Z - info: Reload for file add: E:\Teaching\aug2018\website\book\cppToJava\inheritance\basic\q-inheritTaskClass.md
+2018-08-30T03:40:27.011Z - info: Reload for file add: E:\Teaching\aug2018\website\book\cppToJava\inheritance\objectClass\exercises.md
+2018-08-30T03:40:27.011Z - info: Reload for file add: E:\Teaching\aug2018\website\book\cppToJava\inheritance\objectClass\q-overrideToStringMethod.md
+2018-08-30T03:40:27.012Z - info: Reload for file change: E:\Teaching\aug2018\website\book\cppToJava\inheritance\objectClass\text.md
+2018-08-30T03:40:27.019Z - info: Reload for file change: E:\Teaching\aug2018\website\book\cppToJava\usefulClasses\arraysClass\q-filterEmailsMethod.md
+2018-08-30T03:40:27.025Z - info: Reload for file change: E:\Teaching\aug2018\website\book\cppToJava\usefulClasses\scannerClass\exercises.md
+2018-08-30T03:40:27.031Z - info: Reload for file change: E:\Teaching\aug2018\website\book\cppToJava\usefulClasses\stringClass\text.md
+2018-08-30T03:40:27.036Z - info: Reload for file change: E:\Teaching\aug2018\website\book\cppToJava\usefulClasses\wrapperClasses\text.md
+2018-08-30T03:40:27.979Z - verbose: Rebuild affected paths: E:\Teaching\aug2018\website\book\codeQuality\followStandard\basic\exercises.md,E:\Teaching\aug2018\website\book\codeQuality\followStandard\basic\q-listViolations.md,E:\Teaching\aug2018\website\book\codeQuality\followStandard\basic\text.md,E:\Teaching\aug2018\website\book\codeQuality\followStandard\intermediate\exercises.md,E:\Teaching\aug2018\website\book\codeQuality\followStandard\intermediate\q-listViolations.md,E:\Teaching\aug2018\website\book\codeQuality\followStandard\intermediate\q-tick-naming.md,E:\Teaching\aug2018\website\book\codeQuality\followStandard\intermediate\text.md,E:\Teaching\aug2018\website\book\codeQuality\followStandard\introduction\text.md,E:\Teaching\aug2018\website\book\cppToJava\inheritance\basic\exercises.md,E:\Teaching\aug2018\website\book\cppToJava\inheritance\basic\text.md,E:\Teaching\aug2018\website\book\cppToJava\inheritance\basic\q-inheritTaskClass.md,E:\Teaching\aug2018\website\book\cppToJava\inheritance\objectClass\exercises.md,E:\Teaching\aug2018\website\book\cppToJava\inheritance\objectClass\q-overrideToStringMethod.md,E:\Teaching\aug2018\website\book\cppToJava\inheritance\objectClass\text.md,E:\Teaching\aug2018\website\book\cppToJava\usefulClasses\arraysClass\q-filterEmailsMethod.md,E:\Teaching\aug2018\website\book\cppToJava\usefulClasses\scannerClass\exercises.md,E:\Teaching\aug2018\website\book\cppToJava\usefulClasses\stringClass\text.md,E:\Teaching\aug2018\website\book\cppToJava\usefulClasses\wrapperClasses\text.md
+2018-08-30T03:40:27.988Z - info: Rebuilding 17 pages
+2018-08-30T03:40:43.389Z - info: Reload for file change: E:\Teaching\aug2018\website\book\documentation\tools\asciiDoc\what\text.md
+2018-08-30T03:40:43.389Z - info: Reload for file change: E:\Teaching\aug2018\website\book\documentation\tools\javaDoc\how\text.md
+2018-08-30T03:40:43.390Z - info: Reload for file change: E:\Teaching\aug2018\website\book\documentation\tools\javaDoc\what\text.md
+2018-08-30T03:40:43.390Z - info: Reload for file change: E:\Teaching\aug2018\website\book\documentation\tools\markdown\how\text.md
+2018-08-30T03:40:43.390Z - info: Reload for file change: E:\Teaching\aug2018\website\book\gatheringRequirements\interviews\text.md
+2018-08-30T03:40:43.390Z - info: Reload for file change: E:\Teaching\aug2018\website\book\gitAndGithub\branch\text.md
+2018-08-30T03:40:43.391Z - info: Reload for file change: E:\Teaching\aug2018\website\book\gitAndGithub\pull\sourcetree_1.md
+2018-08-30T03:40:43.391Z - info: Reload for file change: E:\Teaching\aug2018\website\book\oop\inheritance\overriding\text.md
+2018-08-30T03:40:43.391Z - info: Reload for file change: E:\Teaching\aug2018\website\book\oop\inheritance\what\text.md
+2018-08-30T03:40:43.391Z - info: Reload for file change: E:\Teaching\aug2018\website\book\refactoring\what\text.md
+2018-08-30T03:40:43.392Z - info: Reload for file change: E:\Teaching\aug2018\website\book\requirements\introduction\text.md
+2018-08-30T03:40:43.392Z - info: Reload for file change: E:\Teaching\aug2018\website\book\requirements\nonFunctionalRequirements\text.md
+2018-08-30T03:40:43.392Z - info: Reload for file change: E:\Teaching\aug2018\website\book\revisionControl\branching\text.md
+2018-08-30T03:40:43.392Z - info: Reload for file change: E:\Teaching\aug2018\website\book\specifyingRequirements\prose\what\text.md
+2018-08-30T03:40:43.392Z - info: Reload for file change: E:\Teaching\aug2018\website\book\specifyingRequirements\supplementaryRequirements\what\text.md
+2018-08-30T03:40:43.393Z - info: Reload for file change: E:\Teaching\aug2018\website\book\specifyingRequirements\useCases\details\extensions.md
+2018-08-30T03:40:43.393Z - info: Reload for file change: E:\Teaching\aug2018\website\book\specifyingRequirements\useCases\identifying\q-use-case-diagram-qa-system.md
+2018-08-30T03:40:43.393Z - info: Reload for file change: E:\Teaching\aug2018\website\book\specifyingRequirements\useCases\introduction\text.md
+2018-08-30T03:40:43.393Z - info: Reload for file change: E:\Teaching\aug2018\website\book\specifyingRequirements\userStories\details\text.md
+2018-08-30T03:40:43.393Z - info: Reload for file change: E:\Teaching\aug2018\website\book\specifyingRequirements\userStories\introduction\text.md
+2018-08-30T03:40:43.394Z - info: Reload for file change: E:\Teaching\aug2018\website\book\specifyingRequirements\userStories\usage\text.md
+2018-08-30T03:40:43.982Z - info: Reload for file change: E:\Teaching\aug2018\website\book\gitAndGithub\pull\sourcetree_2.md
+2018-08-30T03:40:43.983Z - info: Reload for file change: E:\Teaching\aug2018\website\book\specifyingRequirements\useCases\details\inclusions.md
+2018-08-30T03:40:43.983Z - info: Reload for file change: E:\Teaching\aug2018\website\book\specifyingRequirements\useCases\details\useCaseSteps.md
+2018-08-30T03:40:43.983Z - info: Reload for file change: E:\Teaching\aug2018\website\book\specifyingRequirements\useCases\identifying\q-use-case-diagram-ticket-machine.md
+2018-08-30T03:40:43.983Z - info: Reload for file change: E:\Teaching\aug2018\website\book\specifyingRequirements\useCases\identifying\text.md
+2018-08-30T03:40:52.568Z - info: Reload for file add: E:\Teaching\aug2018\website\book\diagrams\oop\inheritance\what\multipleInheritanceExamples.pptx
+2018-08-30T03:40:52.569Z - info: Reload for file add: E:\Teaching\aug2018\website\book\oop\inheritance\what\images\multipleInheritanceExamples.png
+2018-08-30T03:40:53.987Z - info: Assets built
+2018-08-30T03:40:54.191Z - info: Pages rebuilt
+2018-08-30T03:40:54.200Z - info: Site data built
+2018-08-30T03:40:54.251Z - verbose: Rebuild affected paths: E:\Teaching\aug2018\website\book\documentation\tools\asciiDoc\what\text.md,E:\Teaching\aug2018\website\book\documentation\tools\javaDoc\how\text.md,E:\Teaching\aug2018\website\book\documentation\tools\javaDoc\what\text.md,E:\Teaching\aug2018\website\book\documentation\tools\markdown\how\text.md,E:\Teaching\aug2018\website\book\gatheringRequirements\interviews\text.md,E:\Teaching\aug2018\website\book\gitAndGithub\branch\text.md,E:\Teaching\aug2018\website\book\gitAndGithub\pull\sourcetree_1.md,E:\Teaching\aug2018\website\book\oop\inheritance\overriding\text.md,E:\Teaching\aug2018\website\book\oop\inheritance\what\text.md,E:\Teaching\aug2018\website\book\refactoring\what\text.md,E:\Teaching\aug2018\website\book\requirements\introduction\text.md,E:\Teaching\aug2018\website\book\requirements\nonFunctionalRequirements\text.md,E:\Teaching\aug2018\website\book\revisionControl\branching\text.md,E:\Teaching\aug2018\website\book\specifyingRequirements\prose\what\text.md,E:\Teaching\aug2018\website\book\specifyingRequirements\supplementaryRequirements\what\text.md,E:\Teaching\aug2018\website\book\specifyingRequirements\useCases\details\extensions.md,E:\Teaching\aug2018\website\book\specifyingRequirements\useCases\identifying\q-use-case-diagram-qa-system.md,E:\Teaching\aug2018\website\book\specifyingRequirements\useCases\introduction\text.md,E:\Teaching\aug2018\website\book\specifyingRequirements\userStories\details\text.md,E:\Teaching\aug2018\website\book\specifyingRequirements\userStories\introduction\text.md,E:\Teaching\aug2018\website\book\specifyingRequirements\userStories\usage\text.md,E:\Teaching\aug2018\website\book\gitAndGithub\pull\sourcetree_2.md,E:\Teaching\aug2018\website\book\specifyingRequirements\useCases\details\inclusions.md,E:\Teaching\aug2018\website\book\specifyingRequirements\useCases\details\useCaseSteps.md,E:\Teaching\aug2018\website\book\specifyingRequirements\useCases\identifying\q-use-case-diagram-ticket-machine.md,E:\Teaching\aug2018\website\book\specifyingRequirements\useCases\identifying\text.md
+2018-08-30T03:40:54.257Z - info: Rebuilding 35 pages
+2018-08-30T03:41:26.981Z - info: Pages rebuilt
+2018-08-30T03:41:26.988Z - info: Site data built
+2018-08-30T03:42:21.192Z - info: Reload for file change: E:\Teaching\aug2018\website\schedule\index.md
+2018-08-30T03:42:22.193Z - verbose: Rebuild affected paths: E:\Teaching\aug2018\website\schedule\index.md
+2018-08-30T03:42:22.196Z - info: Rebuilding 2 pages
+2018-08-30T03:42:30.975Z - info: Pages rebuilt
+2018-08-30T03:42:30.989Z - info: Site data built
+2018-08-30T03:54:32.145Z - info: Reload for file change: E:\Teaching\aug2018\website\admin\exams.md
+2018-08-30T03:54:33.148Z - verbose: Rebuild affected paths: E:\Teaching\aug2018\website\admin\exams.md
+2018-08-30T03:54:33.149Z - info: Rebuilding 9 pages
+2018-08-30T03:54:51.657Z - info: Pages rebuilt
+2018-08-30T03:54:51.667Z - info: Site data built
+2018-08-30T09:29:32.680Z - info: Reload for file change: E:\Teaching\aug2018\website\schedule\index.md
+2018-08-30T09:29:32.685Z - info: Reload for file change: E:\Teaching\aug2018\website\se-book-adapted\config.njk
+2018-08-30T09:29:33.684Z - verbose: Rebuild affected paths: E:\Teaching\aug2018\website\schedule\index.md
+2018-08-30T09:29:33.689Z - info: Rebuilding 2 pages
+2018-08-30T09:29:33.710Z - error:  Template render error: (unknown path) [Line 127, Column 7]
+  parseAggregate: expected comma after expression
+Error while preprocessing 'E:\Teaching\aug2018\website\index.md'
+    at Object._prettifyError (C:\Users\dcsaksh\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\nunjucks\src\lib.js:36:11)
+    at Template.render (C:\Users\dcsaksh\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\nunjucks\src\environment.js:524:21)
+    at Environment.renderString (C:\Users\dcsaksh\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\nunjucks\src\environment.js:362:17)
+    at Object.renderString (C:\Users\dcsaksh\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\nunjucks\index.js:98:14)
+    at Parser._preprocess (C:\Users\dcsaksh\AppData\Roaming\npm\node_modules\markbind-cli\lib\markbind\lib\parser.js:192:28)
+    at dom.map (C:\Users\dcsaksh\AppData\Roaming\npm\node_modules\markbind-cli\lib\markbind\lib\parser.js:345:28)
+    at Array.map (<anonymous>)
+    at DomHandler.htmlparser.DomHandler [as _callback] (C:\Users\dcsaksh\AppData\Roaming\npm\node_modules\markbind-cli\lib\markbind\lib\parser.js:342:25)
+    at DomHandler._handleCallback.DomHandler.onerror (C:\Users\dcsaksh\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\domhandler\index.js:52:8)
+    at DomHandler.onend (C:\Users\dcsaksh\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\domhandler\index.js:46:7)
+    at Parser.onend (C:\Users\dcsaksh\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\htmlparser2\lib\Parser.js:310:32)
+    at Tokenizer._finish (C:\Users\dcsaksh\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\htmlparser2\lib\Tokenizer.js:853:12)
+    at Tokenizer.end (C:\Users\dcsaksh\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\htmlparser2\lib\Tokenizer.js:844:25)
+    at Parser.end (C:\Users\dcsaksh\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\htmlparser2\lib\Parser.js:338:18)
+    at Parser.parseComplete (C:\Users\dcsaksh\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\htmlparser2\lib\Parser.js:330:7)
+    at fs.readFile (C:\Users\dcsaksh\AppData\Roaming\npm\node_modules\markbind-cli\lib\markbind\lib\parser.js:381:16)
+2018-08-30T09:29:33.749Z - error: uncaughtException: (unknown path) [Line 127, Column 7]
+  parseAggregate: expected comma after expression date=Thu Aug 30 2018 17:29:33 GMT+0800 (Malay Peninsula Standard Time), pid=22860, uid=null, gid=null, cwd=E:\Teaching\aug2018\website, execPath=C:\Program Files\nodejs\node.exe, version=v8.11.3, argv=[C:\Program Files\nodejs\node.exe, C:\Users\dcsaksh\AppData\Roaming\npm\node_modules\markbind-cli\index.js, serve], rss=41050112, heapTotal=135065600, heapUsed=114072920, external=251756, loadavg=[0, 0, 0], uptime=614052.2483309
+Template render error: (unknown path) [Line 127, Column 7]
+  parseAggregate: expected comma after expression
+    at Object._prettifyError (C:\Users\dcsaksh\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\nunjucks\src\lib.js:36:11)
+    at Template.render (C:\Users\dcsaksh\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\nunjucks\src\environment.js:524:21)
+    at Environment.renderString (C:\Users\dcsaksh\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\nunjucks\src\environment.js:362:17)
+    at Object.renderString (C:\Users\dcsaksh\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\nunjucks\index.js:98:14)
+    at fs.readFile (C:\Users\dcsaksh\AppData\Roaming\npm\node_modules\markbind-cli\lib\markbind\lib\parser.js:377:36)
+    at FSReqWrap.readFileAfterClose [as oncomplete] (fs.js:511:3)
+2018-08-30T09:29:33.758Z - info: Assets built
+2018-08-30T09:32:04.976Z - info: Reload for file change: E:\Teaching\aug2018\website\schedule\index.md
+2018-08-30T09:33:57.326Z - info: Pages built
+2018-08-30T09:33:57.422Z - info: Site data built
+2018-08-30T09:33:57.427Z - info: Generate Site durationMs=62939
+2018-08-30T09:33:57.676Z - info: Serving "E:\Teaching\aug2018\website\_site" at http://127.0.0.1:8080
+2018-08-30T09:33:57.677Z - info: Press CTRL+C to stop ...
+2018-08-30T09:37:42.773Z - info: Reload for file change: E:\Teaching\aug2018\website\schedule\index.md
+2018-08-30T09:37:43.775Z - verbose: Rebuild affected paths: E:\Teaching\aug2018\website\schedule\index.md
+2018-08-30T09:37:43.780Z - info: Rebuilding 2 pages
+2018-08-30T09:37:52.636Z - info: Pages rebuilt
+2018-08-30T09:37:52.654Z - info: Site data built
+2018-08-30T09:38:25.285Z - info: Reload for file change: E:\Teaching\aug2018\website\schedule\index.md
+2018-08-30T09:38:26.285Z - verbose: Rebuild affected paths: E:\Teaching\aug2018\website\schedule\index.md
+2018-08-30T09:38:26.286Z - info: Rebuilding 2 pages
+2018-08-30T09:38:35.044Z - info: Pages rebuilt
+2018-08-30T09:38:35.057Z - info: Site data built
+2018-08-30T09:58:17.709Z - info: Reload for file change: E:\Teaching\aug2018\website\se-book-adapted\config.njk
+2018-08-30T09:58:18.713Z - info: Assets built

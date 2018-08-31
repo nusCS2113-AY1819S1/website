@@ -17,73 +17,71 @@
     <link rel="icon" href="/website/favicon.ico">
 </head>
 <body>
-<div id="app">
-    <div id="content-wrapper">
-  <link rel="stylesheet" href="/website/book/css/textbook.css">
-  <link rel="stylesheet" href="/website/book/css/print.css">
-  <div class="website-content">
-    <div id="title">
-      <div>
-        <h1 id="java">Java</h1>
-      </div>
-    </div>
+<div id="app" class="container-fluid">
+    <link rel="stylesheet" href="/website/book/css/textbook.css">
+<link rel="stylesheet" href="/website/book/css/print.css">
+<div class="website-content">
+  <div id="title">
     <div>
-      <p><small><span class="dimmed"><span class="glyphicon glyphicon-print" aria-hidden="true"></span> This is a <strong>printer-friendly</strong> version. It omits exercises, optional topics (i.e., four-star topics), and other extra content such as learning outcomes.</span></small></p>
+      <h1 id="java">Java</h1>
     </div>
+  </div>
+  <div>
+    <p><small><span class="dimmed"><span class="glyphicon glyphicon-print" aria-hidden="true"></span> This is a <strong>printer-friendly</strong> version. It omits exercises, optional topics (i.e., four-star topics), and other extra content such as learning outcomes.</span></small></p>
+  </div>
+  <div class="indented-less">
     <div class="indented-less">
+      <h4 id="collections">Collections <span class="badge badge-light"><small><small><font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty"
+          aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></small>
+        </small>
+        </span>
+      </h4>
       <div class="indented-less">
-        <h4 id="collections">Collections <span class="badge badge-light"><small><small><font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty"
-            aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></small>
-          </small>
-          </span>
-        </h4>
-        <div class="indented-less">
-          <div>
-            <p><span class="fas fa-paperclip"></span> Resources:</p>
-            <ul>
-              <li><a href="http://www.javatpoint.com/ArrayList-in-collection-framework">ArrayList class tutorial (from javaTpoint.com)</a></li>
-              <li><a href="http://beginnersbook.com/2013/12/hashmap-in-java-with-example/">HashMap tutorial (from beginnersbook.com)</a></li>
-            </ul>
-          </div>
+        <div>
+          <p><span class="fas fa-paperclip"></span> Resources:</p>
+          <ul>
+            <li><a href="http://www.javatpoint.com/ArrayList-in-collection-framework">ArrayList class tutorial (from javaTpoint.com)</a></li>
+            <li><a href="http://beginnersbook.com/2013/12/hashmap-in-java-with-example/">HashMap tutorial (from beginnersbook.com)</a></li>
+          </ul>
         </div>
       </div>
+    </div>
+    <div class="indented-less">
+      <h4 id="enums">Enums <span class="badge badge-light"><small><small><font color="Crimson"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty"
+          aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></small>
+        </small>
+        </span>
+      </h4>
       <div class="indented-less">
-        <h4 id="enums">Enums <span class="badge badge-light"><small><small><font color="Crimson"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty"
-            aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></small>
-          </small>
-          </span>
-        </h4>
-        <div class="indented-less">
-          <div>
-            <blockquote>
-              <p>An enum type is a special data type that enables for a variable to be a set of predefined constants. The variable must be equal to one of the values that have been predefined for it. Common examples include compass directions (values of
-                <code>NORTH</code>, <code>SOUTH</code>, <code>EAST</code>, and <code>WEST</code>) and the days of the week.</p>
-              <p>Because they are constants, the names of an enum type's fields are in uppercase letters. In the Java programming language, you define an enum type by using the <code>enum</code> keyword. For example, you would specify a days-of-the-week
-                enum type as:</p>
-              <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">enum</span> Day {
+        <div>
+          <blockquote>
+            <p>An enum type is a special data type that enables for a variable to be a set of predefined constants. The variable must be equal to one of the values that have been predefined for it. Common examples include compass directions (values of <code>NORTH</code>,
+              <code>SOUTH</code>, <code>EAST</code>, and <code>WEST</code>) and the days of the week.</p>
+            <p>Because they are constants, the names of an enum type's fields are in uppercase letters. In the Java programming language, you define an enum type by using the <code>enum</code> keyword. For example, you would specify a days-of-the-week enum
+              type as:</p>
+            <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">enum</span> Day {
    SUNDAY, MONDAY, TUESDAY, WEDNESDAY,
    THURSDAY, FRIDAY, SATURDAY
 }
 </code></pre>
-              <p>You should use enum types any time you need to represent a fixed set of constants. That includes natural enum types such as the planets in our solar system and data sets where you know all possible values at compile time—for example, the
-                choices on a menu, command line flags, and so on.
-                <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small></p>
-            </blockquote>
-            <p>Note that while enumerations are usually a simple set of fixed values, Java enumerations can have behaviors too. To learn how to implement enumerations, read <a href="https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html">this tutorial (from Oracle)</a></p>
-          </div>
+            <p>You should use enum types any time you need to represent a fixed set of constants. That includes natural enum types such as the planets in our solar system and data sets where you know all possible values at compile time—for example, the choices
+              on a menu, command line flags, and so on.
+              <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small></p>
+          </blockquote>
+          <p>Note that while enumerations are usually a simple set of fixed values, Java enumerations can have behaviors too. To learn how to implement enumerations, read <a href="https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html">this tutorial (from Oracle)</a></p>
         </div>
       </div>
+    </div>
+    <div class="indented-less">
+      <h4 id="streams-basic">Streams: Basic <span class="badge badge-light"><small><small><font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star"
+          aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></small>
+        </small>
+        </span>
+      </h4>
       <div class="indented-less">
-        <h4 id="streams-basic">Streams: Basic <span class="badge badge-light"><small><small><font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star"
-            aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></small>
-          </small>
-          </span>
-        </h4>
-        <div class="indented-less">
-          <div>
-            <p><strong>Java 8 introduced a number of new features (e.g. Lambdas, Streams)</strong> that are not trivial to learn but also extremely useful to know.</p>
-            <p><a href="http://winterbe.com/posts/2014/03/16/java-8-tutorial/">Here</a> is an overview of new Java 8 features .<span class="dimmed"> (written by Benjamin Winterberg)</span></p>
-          </div>
+        <div>
+          <p><strong>Java 8 introduced a number of new features (e.g. Lambdas, Streams)</strong> that are not trivial to learn but also extremely useful to know.</p>
+          <p><a href="http://winterbe.com/posts/2014/03/16/java-8-tutorial/">Here</a> is an overview of new Java 8 features .<span class="dimmed"> (written by Benjamin Winterberg)</span></p>
         </div>
       </div>
     </div>
@@ -92,7 +90,7 @@
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.12.0</a> at Tue, 28 Aug 2018 14:06:50 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.10.1</a> at Fri, 31 Aug 2018 02:08:11 GMT</small></div>
 </footer>
 </div>
 </body>

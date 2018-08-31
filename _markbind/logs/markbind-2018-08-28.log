@@ -1,12 +1,50 @@
-2018-08-28T13:52:51.214Z - info: Website generation started at 21:52:45
-2018-08-28T13:52:52.839Z - info: Building assets...
-2018-08-28T13:52:56.602Z - info: Assets built
-2018-08-28T13:52:56.603Z - info: Generating pages...
-2018-08-28T13:55:11.573Z - info: Pages built
-2018-08-28T13:55:11.784Z - info: Site data built
-2018-08-28T13:55:11.785Z - info: Website generation complete! Total build time: 146.316s
-2018-08-28T13:55:11.785Z - info: Build success!
-2018-08-28T13:55:11.786Z - info: Generate Site durationMs=146317
-2018-08-28T13:56:04.838Z - info: Deployed!
-2018-08-28T14:06:46.419Z - info: Website generation started at 22:06:40
-2018-08-28T14:06:47.531Z - info: Building assets...
+2018-08-28T02:30:41.159Z - info: Pages built
+2018-08-28T02:30:41.296Z - info: Site data built
+2018-08-28T02:30:41.303Z - info: Generate Site durationMs=64206
+2018-08-28T02:30:41.547Z - info: Serving "E:\Teaching\aug2018\website\_site" at http://127.0.0.1:8080
+2018-08-28T02:30:41.548Z - info: Press CTRL+C to stop ...
+2018-08-28T02:37:28.126Z - info: Reload for file change: E:\Teaching\aug2018\website\schedule\week3\tutorial.md
+2018-08-28T02:37:29.128Z - verbose: Rebuild affected paths: E:\Teaching\aug2018\website\schedule\week3\tutorial.md
+2018-08-28T02:37:29.129Z - info: Rebuilding 5 pages
+2018-08-28T02:37:44.882Z - info: Pages rebuilt
+2018-08-28T02:37:44.894Z - info: Site data built
+2018-08-28T02:38:34.697Z - info: Reload for file change: E:\Teaching\aug2018\website\schedule\week3\tutorial.md
+2018-08-28T02:38:35.697Z - verbose: Rebuild affected paths: E:\Teaching\aug2018\website\schedule\week3\tutorial.md
+2018-08-28T02:38:35.698Z - info: Rebuilding 5 pages
+2018-08-28T02:38:44.495Z - info: Reload for file change: E:\Teaching\aug2018\website\schedule\week3\tutorial.md
+2018-08-28T02:38:52.775Z - info: Pages rebuilt
+2018-08-28T02:38:52.783Z - info: Site data built
+2018-08-28T02:38:52.870Z - verbose: Rebuild affected paths: E:\Teaching\aug2018\website\schedule\week3\tutorial.md
+2018-08-28T02:38:52.871Z - info: Rebuilding 5 pages
+2018-08-28T02:39:09.555Z - info: Pages rebuilt
+2018-08-28T02:39:09.567Z - info: Site data built
+2018-08-28T02:39:27.037Z - info: Reload for file change: E:\Teaching\aug2018\website\schedule\week3\tutorial.md
+2018-08-28T02:39:28.037Z - verbose: Rebuild affected paths: E:\Teaching\aug2018\website\schedule\week3\tutorial.md
+2018-08-28T02:39:28.038Z - info: Rebuilding 5 pages
+2018-08-28T02:39:43.635Z - info: Pages rebuilt
+2018-08-28T02:39:43.651Z - info: Site data built
+2018-08-28T02:40:39.742Z - info: Reload for file change: E:\Teaching\aug2018\website\schedule\week3\tutorial.md
+2018-08-28T02:40:40.742Z - verbose: Rebuild affected paths: E:\Teaching\aug2018\website\schedule\week3\tutorial.md
+2018-08-28T02:40:40.743Z - info: Rebuilding 5 pages
+2018-08-28T02:40:56.553Z - info: Pages rebuilt
+2018-08-28T02:40:56.574Z - info: Site data built
+2018-08-28T02:41:24.728Z - info: Reload for file deletion: E:\Teaching\aug2018\website\schedule\week3\tutorial.md
+2018-08-28T02:41:25.730Z - verbose: Rebuild affected paths: E:\Teaching\aug2018\website\schedule\week3\tutorial.md
+2018-08-28T02:41:25.734Z - info: Rebuilding 5 pages
+2018-08-28T02:41:36.455Z - info: Reload for file add: E:\Teaching\aug2018\website\schedule\week3\tutorial.md
+2018-08-28T02:41:41.536Z - info: Pages rebuilt
+2018-08-28T02:41:41.558Z - info: Site data built
+2018-08-28T02:41:41.648Z - verbose: Rebuild affected paths: E:\Teaching\aug2018\website\schedule\week3\tutorial.md
+2018-08-28T02:41:41.648Z - info: Rebuilding 5 pages
+2018-08-28T02:41:51.782Z - info: Reload for file change: E:\Teaching\aug2018\website\schedule\week3\tutorial.md
+2018-08-28T02:41:59.098Z - info: Pages rebuilt
+2018-08-28T02:41:59.112Z - info: Site data built
+2018-08-28T02:41:59.195Z - verbose: Rebuild affected paths: E:\Teaching\aug2018\website\schedule\week3\tutorial.md
+2018-08-28T02:41:59.196Z - info: Rebuilding 5 pages
+2018-08-28T02:42:15.825Z - info: Pages rebuilt
+2018-08-28T02:42:15.839Z - info: Site data built
+2018-08-28T02:42:53.597Z - info: Reload for file change: E:\Teaching\aug2018\website\schedule\week3\tutorial.md
+2018-08-28T02:42:54.598Z - verbose: Rebuild affected paths: E:\Teaching\aug2018\website\schedule\week3\tutorial.md
+2018-08-28T02:42:54.599Z - info: Rebuilding 5 pages
+2018-08-28T02:43:09.906Z - info: Pages rebuilt
+2018-08-28T02:43:09.920Z - info: Site data built
