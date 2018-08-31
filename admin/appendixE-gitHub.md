@@ -94,7 +94,7 @@ You can create your GitHub account after receiving your team ID. Here are the in
 
 Only one team member:
 
-1. Fork [Address Book Level 4]({{module_org}}/addressbook-level4) to your team org.
+1. Fork either [Address Book Level 3]({{module_org}}/addressbook-level3) or [Address Book Level 4]({{module_org}}/addressbook-level4) to your team org.
 1. Rename the forked repo as `main`. This repo is to be used as the repo for your project.
 1. Ensure your team members have the desired level of access to your team repo
 
