@@ -1371,222 +1371,218 @@
         <panel type="seamless" header="#### What" expanded="">
           <div class="indented">
             <span class="badge badge-light">
-  <span><span class="dimmed"><font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
-            <span
-              class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
-              </span>
-              </span>
-              </span>
-              <span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain the meaning of inheritance</span>
-              </span>
-              </span>
-              </span>
-              <p></p>
-              <div>
-                <p><strong>The OOP concept <em>Inheritance</em> allows you to define a new class based on an existing class.</strong></p>
-                <tip-box>
-                  <p><span class="fas fa-cube"></span> For example, you can use inheritance to define an <code>EvaluationReport</code> class based on an existing <code>Report</code> class so that the <code>EvaluationReport</code> class does not have to duplicate
-                    code that is already implemented in the <code>Report</code> class. The <code>EvaluationReport</code> can inherit the <code>wordCount</code> attribute and the <code>print()</code> method from the <em>base class</em> <code>Report</code>.</p>
-                </tip-box>
+  <span><span class="dimmed"><font color="Crimson"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty"
+              aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></span>
+            </span>
+            </span>
+            <span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain the meaning of inheritance</span>
+            </span>
+            </span>
+            </span>
+            <p></p>
+            <div>
+              <p><strong>The OOP concept <em>Inheritance</em> allows you to define a new class based on an existing class.</strong></p>
+              <tip-box>
+                <p><span class="fas fa-cube"></span> For example, you can use inheritance to define an <code>EvaluationReport</code> class based on an existing <code>Report</code> class so that the <code>EvaluationReport</code> class does not have to duplicate
+                  code that is already implemented in the <code>Report</code> class. The <code>EvaluationReport</code> can inherit the <code>wordCount</code> attribute and the <code>print()</code> method from the <em>base class</em> <code>Report</code>.</p>
+              </tip-box>
+              <ul>
+                <li>Other names for Base class: <em>Parent</em> class, <em>Super</em> class</li>
+                <li>Other names for Derived class: <em>Child</em> class, <em>Sub</em> class, <em>Extended</em> class</li>
+              </ul>
+              <p><strong>A super class is said to be <em>more general</em> than the sub class.</strong> Conversely, a sub class is said to be more <em>specialized</em> than the super class.</p>
+              <p><strong>Applying inheritance on a group of similar classes can result in the common parts among classes being extracted into more general classes.</strong></p>
+              <tip-box>
+                <p><span class="fas fa-cube"></span> <code>Man</code> and <code>Woman</code> behaves the same way for certain things. However, the two classes cannot be simply replaced with a more general class <code>Person</code> because of the need to
+                  distinguish between <code>Man</code> and <code>Woman</code> for certain other things. A solution is to add the <code>Person</code> class as a super class (to contain the code common to men and woment) and let <code>Man</code> and <code>Woman</code>                  inherit from <code>Person</code> class.</p>
+              </tip-box>
+              <p><strong>Inheritance implies the derived class can be considered as a <em>sub-type</em> of the base class (and the base class is a <em>super-type</em> of the derived class), resulting in an <em>is a</em> relationship.</strong></p>
+              <p><span class="dimmed"><span class="fas fa-info-circle"></span> Inheritance does not necessarily mean a sub-type relationship exists. However, the two often go hand-in-hand. For simplicity, at this point let us assume inheritance implies a
+                sub-type relationship.</span>
+              </p>
+              <tip-box>
+                <p><span class="fas fa-cube"></span> To continue the previous example,</p>
                 <ul>
-                  <li>Other names for Base class: <em>Parent</em> class, <em>Super</em> class</li>
-                  <li>Other names for Derived class: <em>Child</em> class, <em>Sub</em> class, <em>Extended</em> class</li>
+                  <li><code>Woman</code> <em>is a</em> <code>Person</code></li>
+                  <li><code>Man</code> <em>is a</em> <code>Person</code></li>
                 </ul>
-                <p><strong>A super class is said to be <em>more general</em> than the sub class.</strong> Conversely, a sub class is said to be more <em>specialized</em> than the super class.</p>
-                <p><strong>Applying inheritance on a group of similar classes can result in the common parts among classes being extracted into more general classes.</strong></p>
-                <tip-box>
-                  <p><span class="fas fa-cube"></span> <code>Man</code> and <code>Woman</code> behaves the same way for certain things. However, the two classes cannot be simply replaced with a more general class <code>Person</code> because of the need to
-                    distinguish between <code>Man</code> and <code>Woman</code> for certain other things. A solution is to add the <code>Person</code> class as a super class (to contain the code common to men and woment) and let <code>Man</code> and <code>Woman</code>                    inherit from <code>Person</code> class.</p>
-                </tip-box>
-                <p><strong>Inheritance implies the derived class can be considered as a <em>sub-type</em> of the base class (and the base class is a <em>super-type</em> of the derived class), resulting in an <em>is a</em> relationship.</strong></p>
-                <p><span class="dimmed"><span class="fas fa-info-circle"></span> Inheritance does not necessarily mean a sub-type relationship exists. However, the two often go hand-in-hand. For simplicity, at this point let us assume inheritance implies
-                  a sub-type relationship.</span>
-                </p>
-                <tip-box>
-                  <p><span class="fas fa-cube"></span> To continue the previous example,</p>
-                  <ul>
-                    <li><code>Woman</code> <em>is a</em> <code>Person</code></li>
-                    <li><code>Man</code> <em>is a</em> <code>Person</code></li>
-                  </ul>
-                </tip-box>
-                <p><strong>Inheritance relationships through a chain of classes can result in inheritance <em>hierarchies</em> (aka inheritance <em>trees</em>).</strong></p>
-                <tip-box>
-                  <p><span class="fas fa-cube"></span> Two inheritance hierarchies/trees are given below. <span class="dimmed">Note that the triangle points to the parent class.</span> Observe how the <code>Parrot</code> <em>is a</em> <code>Bird</code> as
-                    well as it <em>is an</em> <code>Animal</code>.</p>
-                  <img src="/website/book/oop/inheritance/what/images/inheritanceTreesExamples.png" width="500">
-                  <p></p>
-                </tip-box>
-                <p><strong><em>Multiple Inheritance</em> is when a class inherits <em>directly</em> from multiple classes.</strong> Multiple inheritance among classes is allowed in some languages (e.g., Python, C++) but not in other languages (e.g., Java,
-                  C#).</p>
-                <tip-box>
-                  <p><span class="fas fa-cube"></span> The <code>Honey</code> class inherits from the <code>Food</code> class <em>and</em> the <code>Medicine</code> class <span class="dimmed">because honey can be consumed as a food as well as a medicine (in some oriental medicine practices)</span>.
-                    Similarly, a <code>Car</code> is an <code>Vehicle</code>, an <code>Asset</code> and a <code>Liability</code>.</p>
-                  <img src="/website/book/oop/inheritance/what/images/multipleInheritanceExamples.png" width="440"></tip-box>
-              </div>
+              </tip-box>
+              <p><strong>Inheritance relationships through a chain of classes can result in inheritance <em>hierarchies</em> (aka inheritance <em>trees</em>).</strong></p>
+              <tip-box>
+                <p><span class="fas fa-cube"></span> Two inheritance hierarchies/trees are given below. <span class="dimmed">Note that the triangle points to the parent class.</span> Observe how the <code>Parrot</code> <em>is a</em> <code>Bird</code> as
+                  well as it <em>is an</em> <code>Animal</code>.</p>
+                <img src="/website/book/oop/inheritance/what/images/inheritanceTreesExamples.png" width="500">
+                <p></p>
+              </tip-box>
+              <p><strong><em>Multiple Inheritance</em> is when a class inherits <em>directly</em> from multiple classes.</strong> Multiple inheritance among classes is allowed in some languages (e.g., Python, C++) but not in other languages (e.g., Java,
+                C#).</p>
+              <tip-box>
+                <p><span class="fas fa-cube"></span> The <code>Honey</code> class inherits from the <code>Food</code> class <em>and</em> the <code>Medicine</code> class <span class="dimmed">because honey can be consumed as a food as well as a medicine (in some oriental medicine practices)</span>.
+                  Similarly, a <code>Car</code> is an <code>Vehicle</code>, an <code>Asset</code> and a <code>Liability</code>.</p>
+                <img src="/website/book/oop/inheritance/what/images/multipleInheritanceExamples.png" width="440"></tip-box>
+            </div>
+            <div>
               <div>
-                <div>
-                  <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
-                    <div>
-                      <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Which statements are correct">
-                        <question>
-                          <p>Which of these are correct?</p>
-                          <ul class="task-list">
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. Super class is more general than the sub class.</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. Child class is more specialized than the parent class.</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. A class can inherit behavior from its ancestor classes (ancestor classes = classes above it in the inheritance hierarchy).</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. Code reuse can be one benefit of inheritance.</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. A change to the super class will not affect its sub classes.</li>
-                          </ul>
-                          <div slot="answer">
-                            <p>(a) (b) (c) (d)</p>
-                            <p>Explanation: (e) is incorrect. Because sub classes inherit behavior from the super class, any changes to the super class could affect sub classes.</p>
-                          </div>
-                        </question>
-                      </panel>
-                    </div>
-                  </panel>
-                </div>
+                <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                  <div>
+                    <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Which statements are correct">
+                      <question>
+                        <p>Which of these are correct?</p>
+                        <ul class="task-list">
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. Super class is more general than the sub class.</li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. Child class is more specialized than the parent class.</li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. A class can inherit behavior from its ancestor classes (ancestor classes = classes above it in the inheritance hierarchy).</li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. Code reuse can be one benefit of inheritance.</li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. A change to the super class will not affect its sub classes.</li>
+                        </ul>
+                        <div slot="answer">
+                          <p>(a) (b) (c) (d)</p>
+                          <p>Explanation: (e) is incorrect. Because sub classes inherit behavior from the super class, any changes to the super class could affect sub classes.</p>
+                        </div>
+                      </question>
+                    </panel>
+                  </div>
+                </panel>
               </div>
+            </div>
           </div>
         </panel>
         <panel type="seamless" header="#### Overriding" expanded="">
           <div class="indented">
             <span class="badge badge-light">
-  <span><span class="dimmed"><font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
-            <span
-              class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
-              </span>
-              </span>
-              </span>
-              <span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain method overriding</span>
-              </span>
-              </span>
-              </span>
-              <p></p>
-              <div>
-                <p><strong>Method <em>overriding</em> is when a sub-class changes the behavior inherited from the parent class</strong> by re-implementing the method. Overridden methods have the same name, same type signature, and same return type.</p>
-                <tip-box>
-                  <p><span class="fas fa-cube"></span> Consider the following case of <code>EvaluationReport</code> class inheriting the <code>Report</code> class:</p>
-                  <div class="table-responsive">
-                    <table class="markbind-table table table-bordered table-striped">
-                      <thead>
-                        <tr>
-                          <th><code>Report</code> methods</th>
-                          <th><code>EvaluationReport</code> methods</th>
-                          <th>Overrides?</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td><code>print()</code></td>
-                          <td><code>print()</code></td>
-                          <td>Yes</td>
-                        </tr>
-                        <tr>
-                          <td><code>write(String)</code></td>
-                          <td><code>write(String)</code></td>
-                          <td>Yes</td>
-                        </tr>
-                        <tr>
-                          <td><code>read():String</code></td>
-                          <td><code>read(int):String</code></td>
-                          <td>No. <span class="dimmed"> Reason: the two methods have different signatures; This is a case of <trigger trigger="click" for="modal:overriding-overloading"> <em>overloading</em></trigger> (rather than overriding).</span></td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                  <modal title="**Overloading**" id="modal:overriding-overloading">
-                    <div>
-                      <div></div>
-                      <p></p>
-                      <p><span class="dimmed"><strong><span>Paradigms → Object Oriented Programming → Inheritance →
+  <span><span class="dimmed"><font color="Crimson"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty"
+              aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></span>
+            </span>
+            </span>
+            <span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain method overriding</span>
+            </span>
+            </span>
+            </span>
+            <p></p>
+            <div>
+              <p><strong>Method <em>overriding</em> is when a sub-class changes the behavior inherited from the parent class</strong> by re-implementing the method. Overridden methods have the same name, same type signature, and same return type.</p>
+              <tip-box>
+                <p><span class="fas fa-cube"></span> Consider the following case of <code>EvaluationReport</code> class inheriting the <code>Report</code> class:</p>
+                <div class="table-responsive">
+                  <table class="markbind-table table table-bordered table-striped">
+                    <thead>
+                      <tr>
+                        <th><code>Report</code> methods</th>
+                        <th><code>EvaluationReport</code> methods</th>
+                        <th>Overrides?</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><code>print()</code></td>
+                        <td><code>print()</code></td>
+                        <td>Yes</td>
+                      </tr>
+                      <tr>
+                        <td><code>write(String)</code></td>
+                        <td><code>write(String)</code></td>
+                        <td>Yes</td>
+                      </tr>
+                      <tr>
+                        <td><code>read():String</code></td>
+                        <td><code>read(int):String</code></td>
+                        <td>No. <span class="dimmed"> Reason: the two methods have different signatures; This is a case of <trigger trigger="click" for="modal:overriding-overloading"> <em>overloading</em></trigger> (rather than overriding).</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <modal title="**Overloading**" id="modal:overriding-overloading">
+                  <div>
+                    <div></div>
+                    <p></p>
+                    <p><span class="dimmed"><strong><span>Paradigms → Object Oriented Programming → Inheritance →
 </span></strong>
-                        </span>
-                      </p>
-                      <div id="title-and-body">
+                      </span>
+                    </p>
+                    <div id="title-and-body">
+                      <div>
+                        <h4 id="overloading">Overloading</h4>
+                      </div>
+                      <div id="main">
                         <div>
-                          <h4 id="overloading">Overloading</h4>
+                          <p><strong>Method overloading is when there are multiple methods with the same name but different type signatures.</strong> Overloading is used to indicate that multiple operations do similar things but take different parameters.</p>
+                          <tip-box type="primary">
+                            <div>
+                              <p><strong>Type Signature</strong>: The <em>type signature</em> of an operation is the type sequence of the parameters. The return type and parameter names are not part of the type signature. However, the parameter order is
+                                significant.</p>
+                              <panel type="seamless" header="%%Examples%%">
+                                <div class="table-responsive">
+                                  <table class="markbind-table table table-bordered table-striped">
+                                    <thead>
+                                      <tr>
+                                        <th style="text-align:center">Method</th>
+                                        <th style="text-align:center">Type Signature</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td style="text-align:center"><code>int add(int X, int Y)</code></td>
+                                        <td style="text-align:center"><code>(int, int)</code></td>
+                                      </tr>
+                                      <tr>
+                                        <td style="text-align:center"><code>void add(int A, int B)</code></td>
+                                        <td style="text-align:center"><code>(int, int)</code></td>
+                                      </tr>
+                                      <tr>
+                                        <td style="text-align:center"><code>void m(int X, double Y)</code></td>
+                                        <td style="text-align:center"><code>(int, double)</code></td>
+                                      </tr>
+                                      <tr>
+                                        <td style="text-align:center"><code>void m(double X, int Y)</code></td>
+                                        <td style="text-align:center"><code>(double, int)</code></td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </panel>
+                            </div>
+                          </tip-box>
+                          <tip-box>
+                            <p><span class="fas fa-cube"></span> In the case below, the <code>calculate</code> method is overloaded because the two methods have the same name but different type signatures <code>(String)</code> and <code>(int)</code></p>
+                            <ul>
+                              <li><code>calculate(String): void</code></li>
+                              <li><code>calculate(int): void</code></li>
+                            </ul>
+                          </tip-box>
                         </div>
-                        <div id="main">
-                          <div>
-                            <p><strong>Method overloading is when there are multiple methods with the same name but different type signatures.</strong> Overloading is used to indicate that multiple operations do similar things but take different parameters.</p>
-                            <tip-box type="primary">
-                              <div>
-                                <p><strong>Type Signature</strong>: The <em>type signature</em> of an operation is the type sequence of the parameters. The return type and parameter names are not part of the type signature. However, the parameter order is
-                                  significant.</p>
-                                <panel type="seamless" header="%%Examples%%">
-                                  <div class="table-responsive">
-                                    <table class="markbind-table table table-bordered table-striped">
-                                      <thead>
-                                        <tr>
-                                          <th style="text-align:center">Method</th>
-                                          <th style="text-align:center">Type Signature</th>
-                                        </tr>
-                                      </thead>
-                                      <tbody>
-                                        <tr>
-                                          <td style="text-align:center"><code>int add(int X, int Y)</code></td>
-                                          <td style="text-align:center"><code>(int, int)</code></td>
-                                        </tr>
-                                        <tr>
-                                          <td style="text-align:center"><code>void add(int A, int B)</code></td>
-                                          <td style="text-align:center"><code>(int, int)</code></td>
-                                        </tr>
-                                        <tr>
-                                          <td style="text-align:center"><code>void m(int X, double Y)</code></td>
-                                          <td style="text-align:center"><code>(int, double)</code></td>
-                                        </tr>
-                                        <tr>
-                                          <td style="text-align:center"><code>void m(double X, int Y)</code></td>
-                                          <td style="text-align:center"><code>(double, int)</code></td>
-                                        </tr>
-                                      </tbody>
-                                    </table>
-                                  </div>
-                                </panel>
-                              </div>
-                            </tip-box>
-                            <tip-box>
-                              <p><span class="fas fa-cube"></span> In the case below, the <code>calculate</code> method is overloaded because the two methods have the same name but different type signatures <code>(String)</code> and <code>(int)</code></p>
-                              <ul>
-                                <li><code>calculate(String): void</code></li>
-                                <li><code>calculate(int): void</code></li>
-                              </ul>
-                            </tip-box>
-                          </div>
-                          <div></div>
-                        </div>
+                        <div></div>
                       </div>
                     </div>
-                  </modal>
-                </tip-box>
-              </div>
+                  </div>
+                </modal>
+              </tip-box>
+            </div>
+            <div>
               <div>
-                <div>
-                  <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
-                    <div>
-                      <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Which methods override?">
-                        <question>
-                          <p>Which of these methods override another method? <span class="dimmed"><code>A</code> is the parent class. <code>B</code> inherits <code>A</code>.</span></p>
-                          <img src="/website/book/oop/inheritance/overriding/images/overriding.png" height="220">
-                          <p></p>
-                          <ul class="task-list">
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e</li>
-                          </ul>
-                          <div slot="answer">
-                            <p>d</p>
-                            <p>Explanation: Method overriding requires a method in a <em>child class</em> to use the same method name and same parameter sequence used by one of its ancestors</p>
-                          </div>
-                        </question>
-                      </panel>
-                    </div>
-                  </panel>
-                </div>
+                <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                  <div>
+                    <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Which methods override?">
+                      <question>
+                        <p>Which of these methods override another method? <span class="dimmed"><code>A</code> is the parent class. <code>B</code> inherits <code>A</code>.</span></p>
+                        <img src="/website/book/oop/inheritance/overriding/images/overriding.png" height="220">
+                        <p></p>
+                        <ul class="task-list">
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a</li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b</li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c</li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d</li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e</li>
+                        </ul>
+                        <div slot="answer">
+                          <p>d</p>
+                          <p>Explanation: Method overriding requires a method in a <em>child class</em> to use the same method name and same parameter sequence used by one of its ancestors</p>
+                        </div>
+                      </question>
+                    </panel>
+                  </div>
+                </panel>
               </div>
+            </div>
           </div>
         </panel>
         <panel type="seamless" header="#### Overloading" expanded="">
@@ -2062,31 +2058,29 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
         <panel type="seamless" header="#### What" expanded="">
           <div class="indented">
             <span class="badge badge-light">
-  <span><span class="dimmed"><font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
-            <span
-              class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
-              </span>
-              </span>
-              </span>
-              <span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain OOP polymorphism</span>
-              </span>
-              </span>
-              </span>
-              <p></p>
-              <div>
-                <tip-box type="primary">
-                  <div>
-                    <p><strong>Polymorphism</strong>:</p>
-                    <blockquote>
-                      <p>The ability of different objects to respond, each in its own way, to identical messages is called polymorphism. <sub>-- <a href="https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/OOP_ObjC/">Object-Oriented Programming with Objective-C</a>, Apple</sub></p>
-                    </blockquote>
-                  </div>
-                </tip-box>
-                <p>Take the example of writing a payroll application for a university to facilitate payroll processing of university staff. Suppose an <code>adjustSalary(int)</code> operation adjusts the salaries of all staff members. This operation will
-                  be executed whenever the university initiates a salary adjustment for its staff. However, the adjustment formula is different for different staff categories, say admin and academic. Here is one possible way of designing the classes in
-                  the <code>Payroll</code> system.</p>
-                <p>Here is the implementation of the <code>adjustSalary(int)</code> operation.</p>
-                <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Payroll1</span> </span>{
+  <span><span class="dimmed"><font color="Crimson"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty"
+              aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></span>
+            </span>
+            </span>
+            <span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain OOP polymorphism</span>
+            </span>
+            </span>
+            </span>
+            <p></p>
+            <div>
+              <tip-box type="primary">
+                <div>
+                  <p><strong>Polymorphism</strong>:</p>
+                  <blockquote>
+                    <p>The ability of different objects to respond, each in its own way, to identical messages is called polymorphism. <sub>-- <a href="https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/OOP_ObjC/">Object-Oriented Programming with Objective-C</a>, Apple</sub></p>
+                  </blockquote>
+                </div>
+              </tip-box>
+              <p>Take the example of writing a payroll application for a university to facilitate payroll processing of university staff. Suppose an <code>adjustSalary(int)</code> operation adjusts the salaries of all staff members. This operation will be
+                executed whenever the university initiates a salary adjustment for its staff. However, the adjustment formula is different for different staff categories, say admin and academic. Here is one possible way of designing the classes in the
+                <code>Payroll</code> system.</p>
+              <p>Here is the implementation of the <code>adjustSalary(int)</code> operation.</p>
+              <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Payroll1</span> </span>{
     ArrayList&lt;Admin&gt; admins;
     ArrayList&lt;Academic&gt; academics;
     <span class="hljs-comment">// ...</span>
@@ -2101,9 +2095,9 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
     }
 }
 </code></pre>
-                <p>Note how processing is similar for the two staff types. It is as if the type of staff members is irrelevant to how they are processed inside this operation! If that is the case, can the staff type be &quot;abstracted away&quot; from this
-                  method? Here is such an implementation of <code>adjustSalary(int)</code>:</p>
-                <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Payroll2</span> </span>{
+              <p>Note how processing is similar for the two staff types. It is as if the type of staff members is irrelevant to how they are processed inside this operation! If that is the case, can the staff type be &quot;abstracted away&quot; from this
+                method? Here is such an implementation of <code>adjustSalary(int)</code>:</p>
+              <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Payroll2</span> </span>{
     ArrayList&lt;Staff&gt; staff;
     <span class="hljs-comment">// ...</span>
 
@@ -2114,25 +2108,25 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
     }
 }
 </code></pre>
-                <p>Notice the following:</p>
-                <ul>
-                  <li>Only one data structure <code>ArrayList&lt;Staff&gt;</code>. It contains both <code>Admin</code> and <code>Academic</code> objects but treats them as <code>Staff</code> objects</li>
-                  <li>Only one loop</li>
-                  <li>Outcome of the <code>s.adjustSalary(byPercent)</code> method call depends on whether <code>s</code> is an <code>Academic</code> or <code>Admin</code> object</li>
-                </ul>
-                <p>The above code is better in several ways:</p>
-                <ul>
-                  <li>It is shorter.</li>
-                  <li>It is simpler.</li>
-                  <li>It is more flexible (this code will remain the same even if more staff types are added).</li>
-                </ul>
-                <p>This does not mean we are getting rid of the <code>Academic</code> and <code>Admin</code> classes completely and replacing them with a more general class called <code>Staff</code>. Rather, this part of the code “treats” both <code>Admin</code>                  and <code>Academic</code> objects as one type called <code>Staff</code>.</p>
-                <p>For example, <code>ArrayList</code> staff contains both <code>Admin</code> and <code>Academic</code> objects although it treats all of them as <code>Staff</code> objects. However, when the <code>adjustSalary(int)</code> operation of these
-                  objects is called, the resulting salary adjustment will be different for <code>Admin</code> objects and <code>Academic</code> objects. Therefore, different types of objects are treated as a single general type, but yet each type of object
-                  exhibits a different kind of behavior. This is called <em>polymorphism</em> (literally, it means “ability to take many forms”). In this example, an object that is perceived as type <code>Staff</code> can be an <code>Admin</code> object
-                  or an <code>Academic</code> object.</p>
-              </div>
-              <div></div>
+              <p>Notice the following:</p>
+              <ul>
+                <li>Only one data structure <code>ArrayList&lt;Staff&gt;</code>. It contains both <code>Admin</code> and <code>Academic</code> objects but treats them as <code>Staff</code> objects</li>
+                <li>Only one loop</li>
+                <li>Outcome of the <code>s.adjustSalary(byPercent)</code> method call depends on whether <code>s</code> is an <code>Academic</code> or <code>Admin</code> object</li>
+              </ul>
+              <p>The above code is better in several ways:</p>
+              <ul>
+                <li>It is shorter.</li>
+                <li>It is simpler.</li>
+                <li>It is more flexible (this code will remain the same even if more staff types are added).</li>
+              </ul>
+              <p>This does not mean we are getting rid of the <code>Academic</code> and <code>Admin</code> classes completely and replacing them with a more general class called <code>Staff</code>. Rather, this part of the code “treats” both <code>Admin</code>                and <code>Academic</code> objects as one type called <code>Staff</code>.</p>
+              <p>For example, <code>ArrayList</code> staff contains both <code>Admin</code> and <code>Academic</code> objects although it treats all of them as <code>Staff</code> objects. However, when the <code>adjustSalary(int)</code> operation of these
+                objects is called, the resulting salary adjustment will be different for <code>Admin</code> objects and <code>Academic</code> objects. Therefore, different types of objects are treated as a single general type, but yet each type of object
+                exhibits a different kind of behavior. This is called <em>polymorphism</em> (literally, it means “ability to take many forms”). In this example, an object that is perceived as type <code>Staff</code> can be an <code>Admin</code> object
+                or an <code>Academic</code> object.</p>
+            </div>
+            <div></div>
           </div>
         </panel>
         <panel type="seamless" header="#### How" expanded="">
@@ -2302,7 +2296,7 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.10.1</a> at Fri, 31 Aug 2018 03:41:58 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.10.1</a> at Wed, 05 Sep 2018 10:51:08 GMT</small></div>
 </footer>
 </div>
 </body>

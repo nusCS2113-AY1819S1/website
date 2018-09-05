@@ -1,0 +1,130 @@
+2018-09-05T07:40:45.468Z - info: Pages built
+2018-09-05T07:40:45.584Z - info: Site data built
+2018-09-05T07:40:45.591Z - info: Generate Site durationMs=68278
+2018-09-05T07:40:45.821Z - info: Serving "E:\Teaching\aug2018\website\_site" at http://127.0.0.1:8080
+2018-09-05T07:40:45.822Z - info: Press CTRL+C to stop ...
+2018-09-05T07:41:25.086Z - info: Reload for file change: E:\Teaching\aug2018\website\schedule\index.md
+2018-09-05T07:41:26.088Z - verbose: Rebuild affected paths: E:\Teaching\aug2018\website\schedule\index.md
+2018-09-05T07:41:26.089Z - info: Rebuilding 2 pages
+2018-09-05T07:41:37.375Z - info: Pages rebuilt
+2018-09-05T07:41:37.390Z - info: Site data built
+2018-09-05T07:41:42.296Z - info: Reload for file change: E:\Teaching\aug2018\website\schedule\index.md
+2018-09-05T07:41:43.298Z - verbose: Rebuild affected paths: E:\Teaching\aug2018\website\schedule\index.md
+2018-09-05T07:41:43.298Z - info: Rebuilding 2 pages
+2018-09-05T07:41:50.695Z - info: Pages rebuilt
+2018-09-05T07:41:50.710Z - info: Site data built
+2018-09-05T07:46:41.403Z - info: Reload for file change: E:\Teaching\aug2018\website\schedule\index.md
+2018-09-05T07:46:42.405Z - verbose: Rebuild affected paths: E:\Teaching\aug2018\website\schedule\index.md
+2018-09-05T07:46:42.410Z - info: Rebuilding 2 pages
+2018-09-05T07:46:42.427Z - error:  Template render error: (unknown path) [Line 175, Column 7]
+  expected name as lookup value, got {
+Error while preprocessing 'E:\Teaching\aug2018\website\index.md'
+    at Object._prettifyError (C:\Users\dcsaksh\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\nunjucks\src\lib.js:36:11)
+    at Template.render (C:\Users\dcsaksh\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\nunjucks\src\environment.js:524:21)
+    at Environment.renderString (C:\Users\dcsaksh\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\nunjucks\src\environment.js:362:17)
+    at Object.renderString (C:\Users\dcsaksh\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\nunjucks\index.js:98:14)
+    at Parser._preprocess (C:\Users\dcsaksh\AppData\Roaming\npm\node_modules\markbind-cli\lib\markbind\lib\parser.js:192:28)
+    at dom.map (C:\Users\dcsaksh\AppData\Roaming\npm\node_modules\markbind-cli\lib\markbind\lib\parser.js:345:28)
+    at Array.map (<anonymous>)
+    at DomHandler.htmlparser.DomHandler [as _callback] (C:\Users\dcsaksh\AppData\Roaming\npm\node_modules\markbind-cli\lib\markbind\lib\parser.js:342:25)
+    at DomHandler._handleCallback.DomHandler.onerror (C:\Users\dcsaksh\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\domhandler\index.js:52:8)
+    at DomHandler.onend (C:\Users\dcsaksh\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\domhandler\index.js:46:7)
+    at Parser.onend (C:\Users\dcsaksh\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\htmlparser2\lib\Parser.js:310:32)
+    at Tokenizer._finish (C:\Users\dcsaksh\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\htmlparser2\lib\Tokenizer.js:853:12)
+    at Tokenizer.end (C:\Users\dcsaksh\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\htmlparser2\lib\Tokenizer.js:844:25)
+    at Parser.end (C:\Users\dcsaksh\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\htmlparser2\lib\Parser.js:338:18)
+    at Parser.parseComplete (C:\Users\dcsaksh\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\htmlparser2\lib\Parser.js:330:7)
+    at fs.readFile (C:\Users\dcsaksh\AppData\Roaming\npm\node_modules\markbind-cli\lib\markbind\lib\parser.js:381:16)
+2018-09-05T07:46:42.461Z - error: uncaughtException: (unknown path) [Line 175, Column 7]
+  expected name as lookup value, got { date=Wed Sep 05 2018 15:46:42 GMT+0800 (Malay Peninsula Standard Time), pid=12708, uid=null, gid=null, cwd=E:\Teaching\aug2018\website, execPath=C:\Program Files\nodejs\node.exe, version=v8.11.3, argv=[C:\Program Files\nodejs\node.exe, C:\Users\dcsaksh\AppData\Roaming\npm\node_modules\markbind-cli\index.js, serve], rss=180158464, heapTotal=130445312, heapUsed=115161760, external=185878, loadavg=[0, 0, 0], uptime=195976.9594463
+Template render error: (unknown path) [Line 175, Column 7]
+  expected name as lookup value, got {
+    at Object._prettifyError (C:\Users\dcsaksh\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\nunjucks\src\lib.js:36:11)
+    at Template.render (C:\Users\dcsaksh\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\nunjucks\src\environment.js:524:21)
+    at Environment.renderString (C:\Users\dcsaksh\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\nunjucks\src\environment.js:362:17)
+    at Object.renderString (C:\Users\dcsaksh\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\nunjucks\index.js:98:14)
+    at fs.readFile (C:\Users\dcsaksh\AppData\Roaming\npm\node_modules\markbind-cli\lib\markbind\lib\parser.js:377:36)
+    at FSReqWrap.readFileAfterClose [as oncomplete] (fs.js:511:3)
+2018-09-05T07:46:50.534Z - info: Reload for file change: E:\Teaching\aug2018\website\schedule\index.md
+2018-09-05T08:53:51.555Z - info: Pages built
+2018-09-05T08:53:51.673Z - info: Site data built
+2018-09-05T08:53:51.679Z - info: Generate Site durationMs=63983
+2018-09-05T08:53:51.929Z - info: Serving "E:\Teaching\aug2018\website\_site" at http://127.0.0.1:8080
+2018-09-05T08:53:51.929Z - info: Press CTRL+C to stop ...
+2018-09-05T09:19:08.470Z - info: Reload for file change: E:\Teaching\aug2018\website\schedule\evidence\oop.md
+2018-09-05T09:19:09.473Z - verbose: Rebuild affected paths: E:\Teaching\aug2018\website\schedule\evidence\oop.md
+2018-09-05T09:19:09.477Z - info: Rebuilding 14 pages
+2018-09-05T09:19:25.671Z - info: Pages rebuilt
+2018-09-05T09:19:25.683Z - info: Site data built
+2018-09-05T09:20:17.385Z - info: Reload for file change: E:\Teaching\aug2018\website\schedule\evidence\oop.md
+2018-09-05T09:20:18.387Z - verbose: Rebuild affected paths: E:\Teaching\aug2018\website\schedule\evidence\oop.md
+2018-09-05T09:20:18.394Z - info: Rebuilding 14 pages
+2018-09-05T09:20:34.532Z - info: Pages rebuilt
+2018-09-05T09:20:34.541Z - info: Site data built
+2018-09-05T09:36:19.621Z - info: Reload for file change: E:\Teaching\aug2018\website\schedule\evidence\oop.md
+2018-09-05T09:36:20.623Z - verbose: Rebuild affected paths: E:\Teaching\aug2018\website\schedule\evidence\oop.md
+2018-09-05T09:36:20.626Z - info: Rebuilding 14 pages
+2018-09-05T09:36:30.183Z - info: Reload for file change: E:\Teaching\aug2018\website\schedule\evidence\oop.md
+2018-09-05T09:36:36.742Z - info: Pages rebuilt
+2018-09-05T09:36:36.750Z - info: Site data built
+2018-09-05T09:36:36.794Z - verbose: Rebuild affected paths: E:\Teaching\aug2018\website\schedule\evidence\oop.md
+2018-09-05T09:36:36.796Z - info: Rebuilding 14 pages
+2018-09-05T09:36:52.380Z - info: Pages rebuilt
+2018-09-05T09:36:52.387Z - info: Site data built
+2018-09-05T09:38:10.806Z - info: Reload for file change: E:\Teaching\aug2018\website\schedule\index.md
+2018-09-05T09:38:11.807Z - verbose: Rebuild affected paths: E:\Teaching\aug2018\website\schedule\index.md
+2018-09-05T09:38:11.809Z - info: Rebuilding 2 pages
+2018-09-05T09:38:19.315Z - info: Pages rebuilt
+2018-09-05T09:38:19.324Z - info: Site data built
+2018-09-05T09:41:03.143Z - info: Reload for file change: E:\Teaching\aug2018\website\se-book-adapted\config.njk
+2018-09-05T09:41:04.158Z - info: Assets built
+2018-09-05T09:41:34.854Z - info: Reload for file change: E:\Teaching\aug2018\website\se-book-adapted\config.njk
+2018-09-05T09:41:35.860Z - info: Assets built
+2018-09-05T09:42:19.073Z - info: Reload for file change: E:\Teaching\aug2018\website\se-book-adapted\config.njk
+2018-09-05T09:42:20.079Z - info: Assets built
+2018-09-05T09:46:29.497Z - info: Reload for file change: E:\Teaching\aug2018\website\schedule\evidence\cppToJava.md
+2018-09-05T09:46:30.499Z - verbose: Rebuild affected paths: E:\Teaching\aug2018\website\schedule\evidence\cppToJava.md
+2018-09-05T09:46:30.500Z - info: Rebuilding 8 pages
+2018-09-05T09:46:42.108Z - info: Pages rebuilt
+2018-09-05T09:46:42.118Z - info: Site data built
+2018-09-05T09:48:06.220Z - info: Reload for file change: E:\Teaching\aug2018\website\schedule\evidence\cppToJava.md
+2018-09-05T09:48:07.222Z - verbose: Rebuild affected paths: E:\Teaching\aug2018\website\schedule\evidence\cppToJava.md
+2018-09-05T09:48:07.223Z - info: Rebuilding 8 pages
+2018-09-05T09:48:18.188Z - info: Pages rebuilt
+2018-09-05T09:48:18.201Z - info: Site data built
+2018-09-05T09:49:12.335Z - info: Reload for file change: E:\Teaching\aug2018\website\schedule\evidence\cppToJava.md
+2018-09-05T09:49:13.336Z - verbose: Rebuild affected paths: E:\Teaching\aug2018\website\schedule\evidence\cppToJava.md
+2018-09-05T09:49:13.337Z - info: Rebuilding 8 pages
+2018-09-05T09:49:24.523Z - info: Pages rebuilt
+2018-09-05T09:49:24.534Z - info: Site data built
+2018-09-05T09:55:19.856Z - info: Reload for file change: E:\Teaching\aug2018\website\schedule\index.md
+2018-09-05T09:55:19.861Z - info: Reload for file change: E:\Teaching\aug2018\website\schedule\evidence\cppToJava.md
+2018-09-05T09:55:20.857Z - verbose: Rebuild affected paths: E:\Teaching\aug2018\website\schedule\index.md,E:\Teaching\aug2018\website\schedule\evidence\cppToJava.md
+2018-09-05T09:55:20.862Z - info: Rebuilding 8 pages
+2018-09-05T09:55:32.288Z - info: Pages rebuilt
+2018-09-05T09:55:32.298Z - info: Site data built
+2018-09-05T09:59:15.898Z - info: Reload for file change: E:\Teaching\aug2018\website\schedule\week3\lecture.md
+2018-09-05T09:59:16.900Z - verbose: Rebuild affected paths: E:\Teaching\aug2018\website\schedule\week3\lecture.md
+2018-09-05T09:59:16.901Z - info: Rebuilding 2 pages
+2018-09-05T09:59:25.911Z - info: Pages rebuilt
+2018-09-05T09:59:25.919Z - info: Site data built
+2018-09-05T10:18:48.680Z - info: Reload for file change: E:\Teaching\aug2018\website\schedule\index.md
+2018-09-05T10:18:49.681Z - verbose: Rebuild affected paths: E:\Teaching\aug2018\website\schedule\index.md
+2018-09-05T10:18:49.682Z - info: Rebuilding 2 pages
+2018-09-05T10:18:57.493Z - info: Reload for file change: E:\Teaching\aug2018\website\schedule\index.md
+2018-09-05T10:18:57.945Z - info: Pages rebuilt
+2018-09-05T10:18:57.956Z - info: Site data built
+2018-09-05T10:18:58.498Z - verbose: Rebuild affected paths: E:\Teaching\aug2018\website\schedule\index.md
+2018-09-05T10:18:58.498Z - info: Rebuilding 2 pages
+2018-09-05T10:19:05.546Z - info: Pages rebuilt
+2018-09-05T10:19:05.554Z - info: Site data built
+2018-09-05T10:19:36.849Z - info: Reload for file change: E:\Teaching\aug2018\website\se-book-adapted\config.njk
+2018-09-05T10:19:37.863Z - info: Assets built
+2018-09-05T10:48:54.605Z - info: Reload for file change: E:\Teaching\aug2018\website\schedule\evidence\project.md
+2018-09-05T10:48:55.606Z - verbose: Rebuild affected paths: E:\Teaching\aug2018\website\schedule\evidence\project.md
+2018-09-05T10:48:55.608Z - info: Rebuilding 26 pages
+2018-09-05T10:49:19.710Z - info: Pages rebuilt
+2018-09-05T10:49:19.723Z - info: Site data built
+2018-09-05T10:50:48.560Z - info: Reload for file change: E:\Teaching\aug2018\website\schedule\index.md
+2018-09-05T10:50:49.561Z - verbose: Rebuild affected paths: E:\Teaching\aug2018\website\schedule\index.md
+2018-09-05T10:50:49.564Z - info: Rebuilding 2 pages
