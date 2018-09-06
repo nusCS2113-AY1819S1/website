@@ -6,3 +6,25 @@
 
 **Submission**: Show your code to the tutor during the tutorial.
 </div>
+
+
+<div id="inheritance_abstractClassesAndMethods">
+
+**Acceptable**: Using abstract classes in any past project.
+
+**Suggested**: Do the exercise in [[Addressbook-Level3: LO-Abstract]({{module_org}}/addressbook-level3/blob/master/docs/LearningOutcomes.adoc#use-abstract-classes-methods-code-lo-abstract-code)]
+   
+<include src="project.md#PR_to_AB3" />
+
+</div>
+
+
+<div id="inheritance_interfaces">
+
+**Acceptable**: Using interfaces in any past project.
+
+**Suggested**: Do the exercise in [[Addressbook-Level3: LO-Interfaces]({{module_org}}/addressbook-level3/blob/master/docs/LearningOutcomes.adoc#use-interfaces-code-lo-interfaces-code)]
+   
+<include src="project.md#PR_to_AB3" />
+
+</div>
