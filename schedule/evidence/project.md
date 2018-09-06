@@ -77,7 +77,7 @@ The team component is ==to be done by all members==, including those who didn't 
 
 **Submission**: 
 * Options 1 (discouraged): Show the relevant code during the tutorial.
-* Options 2 (preferred): Create a pull request by following the instructions below.
+* Options 2 (**preferred**): Create a PR against [Addressbook-Level2]({{module_org}}/addressbook-level2) by following the instructions below.
 
 <panel src="../../admin/appendixE-gitHub.md#tutorial-pr-instructions" header="%%Admin {{ icon_embedding }} Appendix E: Using GitHub Project Hosting → Submitting Pull Requests as evidence of an LO%%" />
 
