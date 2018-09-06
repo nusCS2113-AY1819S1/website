@@ -97,14 +97,472 @@
       </panel>
     </div>
     <p></p>
-    <p><span class="activity-desc">Implementation</span></p>
+    <p><span class="activity-desc">OOP</span></p>
     <div class="indented">
       <panel no-close="" expandable="true">
-        <span slot="header" class="card-title"><span><code>W5.2</code> <strong>Can implement inheritance</strong> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+        <span slot="header" class="card-title"><span><code>W5.2</code> <strong>Can explain associations</strong> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
         </span>
         </span>
         <panel type="danger" expanded="" no-close="" epxandable="true">
-          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W5.2a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain the meaning of inheritance</span> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W5.2a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain associations</span> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+          </span>
+          </span>
+          <div>
+            <div></div>
+            <p></p>
+            <p><span class="dimmed"><strong><span>Paradigms → Object Oriented Programming → Associations →
+</span></strong>
+              </span>
+            </p>
+            <div id="title-and-body">
+              <div>
+                <h4 id="basic">Basic</h4>
+              </div>
+              <div id="main">
+                <div>
+                  <p>Objects in an OO solution need to be connected to each other to form a network so that they can interact with each other. Such <strong>connections between objects are called <em>associations</em>.</strong></p>
+                  <tip-box>
+                    <p><span class="fas fa-cube"></span> Suppose an OOP program for managing a learning management system creates an object structure to represent the related objects. In that object structure we can expect to have associations between a<code>Course</code>                      object that represents a specific course and <code>Student</code> objects that represents students taking that course.</p>
+                  </tip-box>
+                  <p><strong>Associations in an object structure can change over time</strong>.</p>
+                  <tip-box>
+                    <p><span class="fas fa-cube"></span> To continue the previous example, the associations between a <code>Course</code> object and <code>Student</code> objects can change as students enroll in the module or drop the module over time.</p>
+                  </tip-box>
+                  <p><strong>Associations among objects can be generalized as associations between the corresponding classles too.</strong></p>
+                  <tip-box>
+                    <p><span class="fas fa-cube"></span> In our example, as some <code>Course</code> objects can have associations with some <code>Student</code> objects, we can view it as an association between the <code>Course</code> class and the <code>Student</code>                      class.</p>
+                  </tip-box>
+                  <h5 id="implementing-associations">Implementing associations</h5>
+                  <p><strong>We use instance level variables to implement associations.</strong></p>
+                </div>
+                <div></div>
+              </div>
+            </div>
+          </div>
+          <hr style="border-top: dashed 1px; border-color:grey">
+          <p><big><span class="fas fa-briefcase"></span> Evidence:</big></p>
+          <div>
+            <p>Covered in:</p>
+            <div>
+              <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Object Diagrams for Class Diagram">
+                <question>
+                  <p>Suppose we wrote a program to follow the class structure given in this class diagram:</p>
+                  <img src="/website/book/modeling/modelingStructures/classDiagramsBasic/images/typicalClasssStructure.png" width="400">
+                  <p></p>
+                  <p>Draw object diagrams to represent the object structures after each of these steps below. Assume that we are trying to minimize the number of total objects.</p>
+                  <p>i.e. apply step 1 → [diagram 1] → apply step 2 on diagarm 1 → [diagarm 2] and so on.</p>
+                  <ol>
+                    <li>
+                      <p>There are no persons.</p>
+                    </li>
+                    <li>
+                      <p><code>Alfred</code> is the Guardian of <code>Bruce</code>.</p>
+                    </li>
+                    <li>
+                      <p><code>Bruce</code>'s contact number is the same as <code>Alfred</code>'s.</p>
+                    </li>
+                    <li>
+                      <p><code>Alfred</code> is also the guardian of another person. That person lists <code>Alfred</code>s home address as his home address as well as office address.</p>
+                    </li>
+                    <li>
+                      <p><code>Alfred</code> has a an office address at <code>Wayne Industries</code> building which is different from his home address (i.e. <code>Bat Cave</code>).</p>
+                    </li>
+                  </ol>
+                  <div slot="hint">
+                    <p>After step 2, the diagram should be like this:</p>
+                    <img src="/website/book/uml/classDiagrams/combine/basic/images/objectDiagramsForClassDiagramHint.png" width="600"></div>
+                </question>
+              </panel>
+            </div>
+          </div>
+        </panel>
+        <panel type="danger" expanded="" no-close="" epxandable="true">
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W5.2b</code></span></big> <span><span class="fas fa-trophy"></span> Can interpret simple associations in a class diagram</span> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+          </span>
+          </span>
+          <div>
+            <div></div>
+            <p></p>
+            <p><span class="dimmed"><strong><span>Tools → UML → Class Diagrams → Associations →
+</span></strong>
+              </span>
+            </p>
+            <div id="title-and-body">
+              <div>
+                <h4 id="what">What</h4>
+              </div>
+              <div id="main">
+                <div>
+                  <p>We use a solid line to show an association between two classes.</p>
+                  <img src="/website/book/uml/classDiagrams/associations/what/images/notation.png" width="300">
+                  <p></p>
+                  <tip-box>
+                    <p><span class="fas fa-cube"></span> This example shows an association between the <code>Admin</code> class and the <code>Student</code> class:<br>
+                      <img src="/website/book/uml/classDiagrams/associations/what/images/example.png" width="300"></p>
+                  </tip-box>
+                </div>
+                <div></div>
+              </div>
+            </div>
+          </div>
+        </panel>
+      </panel>
+      <panel no-close="" expandable="true">
+        <span slot="header" class="card-title"><span><code>W5.3</code> <strong>Can explain dependencies among classes</strong> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star"
+          aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+        </span>
+        </span>
+        <panel type="info" expanded="" no-close="" epxandable="true">
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W5.3a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain dependencies among classes</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span
+            class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+            </span>
+            </span>
+            <div>
+              <div></div>
+              <p></p>
+              <p><span class="dimmed"><strong><span>Paradigms → Object Oriented Programming → Associations →
+</span></strong>
+                </span>
+              </p>
+              <div id="title-and-body">
+                <div>
+                  <h4 id="dependencies">Dependencies</h4>
+                </div>
+                <div id="main">
+                  <div>
+                    <p>Dependencies are objects that are not directly linked in the object network can still interact with each other. These are a weaker form of associations we call <em>dependencies</em>.</p>
+                    <tip-box>
+                      <p><span class="fas fa-cube"></span> A <code>Course</code> object can have a dependency on a <code>Registrar</code> object to obtain the maximum number of students it can support.</p>
+                    </tip-box>
+                    <h5 id="implementing-dependencies">Implementing dependencies</h5>
+                    <p>Dependencies result from interactions between objects that do not result in a long-term link between the said objects.</p>
+                    <tip-box>
+                      <p><span class="fas fa-cube"></span> In the code below, <code>Foo</code> has a dependency on <code>Bar</code> but it is not an association because it is only a
+                        <tooltip content="temporary">transient</tooltip> interaction and there is no long term relationship between a <code>Foo</code> object and a <code>Bar</code> object. <span class="dimmed">i.e. the <code>Foo</code> object does not keep the <code>Bar</code> object it receives as a parameter</span>.</p>
+                      <table>
+                        <tr>
+                        
+                          <td>
+                            <p>Java <span class="fas fa-arrow-down"></span></p>
+                            <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span></span>{
+    
+    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">calculate</span><span class="hljs-params">(Bar bar)</span></span>{
+        <span class="hljs-keyword">return</span> bar.getValue();
+    }
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bar</span></span>{
+    <span class="hljs-keyword">int</span> value;
+    
+    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">getValue</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-keyword">return</span> value;
+    }
+}
+</code></pre>
+                            <p></p>
+                          </td>
+                        
+                          <td>  <br><br></td>
+                        
+                          <td valign="top">
+                            <p>Python <span class="fas fa-arrow-down"></span></p>
+                            <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span>:</span>
+    
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate</span><span class="hljs-params">(self, bar)</span>:</span>
+        <span class="hljs-keyword">return</span> bar.value;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bar</span>:</span>
+    
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, value)</span>:</span>
+      self.value = value
+</code></pre>
+                            <p></p>
+                          </td>
+                        </tr>
+                      </table>
+                      <p>The code above results in a dependency from <code>Foo</code> class to the <code>Bar</code> class.</p>
+                    </tip-box>
+                  </div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+        </panel>
+        <panel type="info" expanded="" no-close="" epxandable="true">
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W5.3b</code></span></big> <span><span class="fas fa-trophy"></span> Can use dependencies in a class diagram</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span
+            class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+            </span>
+            </span>
+            <div>
+              <div></div>
+              <p></p>
+              <p><span class="dimmed"><strong><span>Tools → UML → Class Diagrams → Dependencies →
+</span></strong>
+                </span>
+              </p>
+              <div id="title-and-body">
+                <div>
+                  <h4 id="dependencies-2">Dependencies</h4>
+                </div>
+                <div id="main">
+                  <div>
+                    <p>In a UML class diagram, a <strong>dependency is a weaker form of an association where there is an interactions between objects that do not result in a long-term relationship</strong> between the said objects.</p>
+                    <p><strong>UML uses a dashed arrow to show dependencies.</strong></p>
+                    <img src="/website/book/uml/classDiagrams/dependencies/what/images/notation.png" width="350">
+                    <tip-box>
+                      <p><span class="fas fa-cube"></span> Two examples of dependencies:</p>
+                      <img src="/website/book/uml/classDiagrams/dependencies/what/images/examples.png" width="450">
+                      <p></p>
+                    </tip-box>
+                  </div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+        </panel>
+      </panel>
+      <panel no-close="" expandable="true">
+        <span slot="header" class="card-title"><span><code>W5.4</code> <strong>Can implement composition</strong> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star"
+          aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+        </span>
+        </span>
+        <panel type="info" expanded="" no-close="" epxandable="true">
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W5.4a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain the meaning of composition</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span
+            class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+            </span>
+            </span>
+            <div>
+              <div></div>
+              <p></p>
+              <p><span class="dimmed"><strong><span>Paradigms → Object Oriented Programming → Associations →
+</span></strong>
+                </span>
+              </p>
+              <div id="title-and-body">
+                <div>
+                  <h4 id="composition">Composition</h4>
+                </div>
+                <div id="main">
+                  <div>
+                    <p><strong>A composition is an association that represents a strong <em>whole-part</em> relationship.</strong> When the <em>whole</em> is destroyed, <em>parts</em> are destroyed too.</p>
+                    <tip-box>
+                      <p><span class="fas fa-cube"></span> A <code>Board</code> (used for playing board games) consists of <code>Square</code> objects.</p>
+                    </tip-box>
+                    <p><strong>Composition also implies that there cannot be cyclical links</strong>.</p>
+                    <tip-box>
+                      <p><span class="fas fa-cube"></span> The ‘sub-folder’ association between <code>Folder</code> objects is a composition type association. That means if the <code>Folder</code> object <code>foo</code> is a sub folder of <code>Folder</code>                        object <code>bar</code>, <code>bar</code> cannot be a sub-folder of <code>foo</code>.</p>
+                    </tip-box>
+                    <h5 id="implementing-composition">Implementing composition</h5>
+                    <p><strong>Composition too is implemented using a normal variable.</strong> If correctly implemented, the ‘part’ object will be deleted when the ‘whole’ object is deleted. Ideally, the ‘part’ object may not even be visible to clients
+                      of the ‘whole’ object.</p>
+                    <tip-box>
+                      <p><span class="fas fa-cube"></span> In the code below, the <code>Email</code> has a composition type relationship with the <code>Subject</code> class, in the sense that the subject is part of the email.</p>
+                      <table>
+                        <tr>
+                        
+                          <td valign="top">
+                            <p>Java <span class="fas fa-arrow-down"></span></p>
+                            <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Email</span> </span>{
+    <span class="hljs-keyword">private</span> Subject subject;
+  ...
+}
+</code></pre>
+                            <p></p>
+                          </td>
+                        
+                          <td>  <br><br></td>
+                        
+                          <td valign="top">
+                            <p>Python <span class="fas fa-arrow-down"></span></p>
+                            <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Email</span>:</span>
+  
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
+    self.__subject = Subject()
+</code></pre>
+                            <p></p>
+                          </td>
+                        </tr>
+                      </table>
+                    </tip-box>
+                  </div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+        </panel>
+        <panel type="info" expanded="" no-close="" epxandable="true">
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W5.4b</code></span></big> <span><span class="fas fa-trophy"></span> Can interpret composition in class diagrams</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span
+            class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+            </span>
+            </span>
+            <div>
+              <div></div>
+              <p></p>
+              <p><span class="dimmed"><strong><span>Tools → UML → Class Diagrams → Composition →
+</span></strong>
+                </span>
+              </p>
+              <div id="title-and-body">
+                <div>
+                  <h4 id="composition-2">Composition</h4>
+                </div>
+                <div id="main">
+                  <div>
+                    <p><strong>UML uses a solid diamond symbol to denote composition.</strong></p>
+                    <p>Notation:</p>
+                    <img src="/website/book/uml/classDiagrams/composition/what/images/notation.png" width="220">
+                    <p></p>
+                    <tip-box>
+                      <p><span class="fas fa-cube"></span> A <code>Book</code> consists of <code>Chapter</code> objects. When the <code>Book</code> object is destroyed, its <code>Chapter</code> objects are destroyed too.</p>
+                      <img src="/website/book/uml/classDiagrams/composition/what/images/bookChapter.png" width="220">
+                      <p></p>
+                    </tip-box>
+                  </div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+        </panel>
+      </panel>
+      <panel no-close="" expandable="true">
+        <span slot="header" class="card-title"><span><code>W5.5</code> <strong>Can implement aggregation</strong> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star"
+          aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+        </span>
+        </span>
+        <panel type="success" expanded="" no-close="" epxandable="true">
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W5.5a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain the meaning of aggregations</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span
+            class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+            </span>
+            </span>
+            <div>
+              <div></div>
+              <p></p>
+              <p><span class="dimmed"><strong><span>Paradigms → Object Oriented Programming → Associations →
+</span></strong>
+                </span>
+              </p>
+              <div id="title-and-body">
+                <div>
+                  <h4 id="aggregation">Aggregation</h4>
+                </div>
+                <div id="main">
+                  <div>
+                    <p><strong><em>Aggregation</em> represents a <em>container-contained</em> relationship.</strong> It is a weaker relationship than composition.</p>
+                    <tip-box>
+                      <p><span class="fas fa-cube"></span> <code>SportsClub</code> acts as a <em>container</em> for <code>Person</code> objects. <code>Person</code> objects can survive without a <code>SportsClub</code> object.</p>
+                    </tip-box>
+                    <h5 id="implementing-aggregation">Implementing aggregation</h5>
+                    <p>Implementation is similar to that of composition except the <em>containee</em> object can exist even after the <em>container</em> object is deleted.</p>
+                    <tip-box>
+                      <p><span class="fas fa-cube"></span> In the code below, there is an aggregation association between the <code>Team</code> class and the <code>Person</code> in that a <code>Team</code> contains <code>Person</code> a object who is the
+                        leader of the team.</p>
+                      <table>
+                        <tr>
+                        
+                          <td valign="top">
+                            <p>Java <span class="fas fa-arrow-down"></span></p>
+                            <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Team</span> </span>{
+    Person leader;
+    ...
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">drive</span><span class="hljs-params">(Person p)</span> </span>{
+        leader = p;
+    }
+}
+</code></pre>
+                            <p></p>
+                          </td>
+                        
+                          <td>  <br><br></td>
+                        
+                          <td valign="top">
+                            <p>Python <span class="fas fa-arrow-down"></span></p>
+                            <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Team</span>:</span>
+  
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
+    self.__leader = <span class="hljs-keyword">None</span>
+    
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">drive</span><span class="hljs-params">(self, person)</span>:</span>
+    self.__leader = person
+</code></pre>
+                            <p></p>
+                          </td>
+                        </tr>
+                      </table>
+                    </tip-box>
+                  </div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+        </panel>
+        <panel type="success" expanded="" no-close="" epxandable="true">
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W5.5b</code></span></big> <span><span class="fas fa-trophy"></span> Can interpret aggregation in class diagrams</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span
+            class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+            </span>
+            </span>
+            <div>
+              <div></div>
+              <p></p>
+              <p><span class="dimmed"><strong><span>Tools → UML → Class Diagrams → Aggregation →
+</span></strong>
+                </span>
+              </p>
+              <div id="title-and-body">
+                <div>
+                  <h4 id="aggregation-2">Aggregation</h4>
+                </div>
+                <div id="main">
+                  <div>
+                    <p><strong>UML uses a hollow diamond is used to indicate an aggregation.</strong></p>
+                    <p>Notation:</p>
+                    <img src="/website/book/uml/classDiagrams/aggregation/what/images/notation.png" height="45">
+                    <tip-box>
+                      <p><span class="fas fa-cube"></span> Example:</p>
+                      <img src="/website/book/uml/classDiagrams/aggregation/what/images/clubPerson.png" height="85">
+                      <p></p>
+                    </tip-box>
+                    <box>
+                      <p><strong>Aggregation vs Composition</strong></p>
+                      <p>💡 The distinction between composition (◆) and aggregation (◇) is rather blurred. Martin Fowler’s famous book <em>UML Distilled</em> advocates omitting the aggregation symbol altogether because using it adds more confusion than clarity.</p>
+                    </box>
+                  </div>
+                  <div>
+                    <div>
+                      <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                        <div>
+                          <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Which one is not recommended to use?">
+                            <question>
+                              <p>Which one of these is recommended not to use in UML diagrams because it adds more confusion than clarity?</p>
+                              <ul radio-group="29b56" class="radio-list">
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="29b56" type="radio"> a. Composition symbol</label></li>
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="29b56" type="radio"> b. Aggregation symbol</label></li>
+                              </ul>
+                              <div slot="answer">
+                                <p>(b)</p>
+                              </div>
+                            </question>
+                          </panel>
+                        </div>
+                      </panel>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </panel>
+      </panel>
+      <panel no-close="" expandable="true">
+        <span slot="header" class="card-title"><span><code>W5.6</code> <strong>Can implement inheritance</strong> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+        </span>
+        </span>
+        <panel type="danger" expanded="" no-close="" epxandable="true">
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W5.6a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain the meaning of inheritance</span> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
           </span>
           </span>
           <div>
@@ -116,7 +574,7 @@
             </p>
             <div id="title-and-body">
               <div>
-                <h4 id="what">What</h4>
+                <h4 id="what-2">What</h4>
               </div>
               <div id="main">
                 <div>
@@ -200,336 +658,8 @@
             </div>
           </div>
         </panel>
-      </panel>
-      <panel no-close="" expandable="true">
-        <span slot="header" class="card-title"><span><code>W5.3</code> <strong>Can implement overloading</strong> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-        <span
-          class="glyphicon glyphicon-star" aria-hidden="true"></span>
-          </span>
-          </span>
-          </span>
-          </span>
-          <panel type="warning" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W5.3a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain method overloading</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-            <span
-              class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              </span>
-              </span>
-              </span>
-              </span>
-              <div>
-                <div></div>
-                <p></p>
-                <p><span class="dimmed"><strong><span>Paradigms → Object Oriented Programming → Inheritance →
-</span></strong>
-                  </span>
-                </p>
-                <div id="title-and-body">
-                  <div>
-                    <h4 id="overloading">Overloading</h4>
-                  </div>
-                  <div id="main">
-                    <div>
-                      <p><strong>Method overloading is when there are multiple methods with the same name but different type signatures.</strong> Overloading is used to indicate that multiple operations do similar things but take different parameters.</p>
-                      <tip-box type="primary">
-                        <div>
-                          <p><strong>Type Signature</strong>: The <em>type signature</em> of an operation is the type sequence of the parameters. The return type and parameter names are not part of the type signature. However, the parameter order is significant.</p>
-                          <panel type="seamless" header="%%Examples%%">
-                            <div class="table-responsive">
-                              <table class="markbind-table table table-bordered table-striped">
-                                <thead>
-                                  <tr>
-                                    <th style="text-align:center">Method</th>
-                                    <th style="text-align:center">Type Signature</th>
-                                  </tr>
-                                </thead>
-                                <tbody>
-                                  <tr>
-                                    <td style="text-align:center"><code>int add(int X, int Y)</code></td>
-                                    <td style="text-align:center"><code>(int, int)</code></td>
-                                  </tr>
-                                  <tr>
-                                    <td style="text-align:center"><code>void add(int A, int B)</code></td>
-                                    <td style="text-align:center"><code>(int, int)</code></td>
-                                  </tr>
-                                  <tr>
-                                    <td style="text-align:center"><code>void m(int X, double Y)</code></td>
-                                    <td style="text-align:center"><code>(int, double)</code></td>
-                                  </tr>
-                                  <tr>
-                                    <td style="text-align:center"><code>void m(double X, int Y)</code></td>
-                                    <td style="text-align:center"><code>(double, int)</code></td>
-                                  </tr>
-                                </tbody>
-                              </table>
-                            </div>
-                          </panel>
-                        </div>
-                      </tip-box>
-                      <tip-box>
-                        <p><span class="fas fa-cube"></span> In the case below, the <code>calculate</code> method is overloaded because the two methods have the same name but different type signatures <code>(String)</code> and <code>(int)</code></p>
-                        <ul>
-                          <li><code>calculate(String): void</code></li>
-                          <li><code>calculate(int): void</code></li>
-                        </ul>
-                      </tip-box>
-                    </div>
-                    <div></div>
-                  </div>
-                </div>
-              </div>
-          </panel>
-      </panel>
-      <panel no-close="" expandable="true">
-        <span slot="header" class="card-title"><span><code>W5.4</code> <strong>Can implement polymorphism</strong> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-        </span>
-        </span>
-        <br>
-        <p><span class="dimmed"><strong>Method Overriding</strong></span></p>
-        <panel type="danger" expanded="" no-close="" epxandable="true">
-          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W5.4a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain method overriding</span> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-          </span>
-          </span>
-          <div>
-            <div>
-              <p>
-                <panel src="/website\book\oop\inheritance\what\unit-inElsewhere-asFlat._include_.html" header="%%<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP → Inheritance → What%%"></panel>
-              </p>
-            </div>
-            <p></p>
-            <p><span class="dimmed"><strong><span>Paradigms → Object Oriented Programming → Inheritance →
-</span></strong>
-              </span>
-            </p>
-            <div id="title-and-body">
-              <div>
-                <h4 id="overriding">Overriding</h4>
-              </div>
-              <div id="main">
-                <div>
-                  <p><strong>Method <em>overriding</em> is when a sub-class changes the behavior inherited from the parent class</strong> by re-implementing the method. Overridden methods have the same name, same type signature, and same return type.</p>
-                  <tip-box>
-                    <p><span class="fas fa-cube"></span> Consider the following case of <code>EvaluationReport</code> class inheriting the <code>Report</code> class:</p>
-                    <div class="table-responsive">
-                      <table class="markbind-table table table-bordered table-striped">
-                        <thead>
-                          <tr>
-                            <th><code>Report</code> methods</th>
-                            <th><code>EvaluationReport</code> methods</th>
-                            <th>Overrides?</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td><code>print()</code></td>
-                            <td><code>print()</code></td>
-                            <td>Yes</td>
-                          </tr>
-                          <tr>
-                            <td><code>write(String)</code></td>
-                            <td><code>write(String)</code></td>
-                            <td>Yes</td>
-                          </tr>
-                          <tr>
-                            <td><code>read():String</code></td>
-                            <td><code>read(int):String</code></td>
-                            <td>No. <span class="dimmed"> Reason: the two methods have different signatures; This is a case of <trigger trigger="click" for="modal:overriding-overloading"> <em>overloading</em></trigger> (rather than overriding).</span></td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                    <modal title="**Overloading**" id="modal:overriding-overloading">
-                      <div>
-                        <div></div>
-                        <p></p>
-                        <p><span class="dimmed"><strong><span>Paradigms → Object Oriented Programming → Inheritance →
-</span></strong>
-                          </span>
-                        </p>
-                        <div id="title-and-body">
-                          <div>
-                            <h4 id="overloading-2">Overloading</h4>
-                          </div>
-                          <div id="main">
-                            <div>
-                              <p><strong>Method overloading is when there are multiple methods with the same name but different type signatures.</strong> Overloading is used to indicate that multiple operations do similar things but take different parameters.</p>
-                              <tip-box type="primary">
-                                <div>
-                                  <p><strong>Type Signature</strong>: The <em>type signature</em> of an operation is the type sequence of the parameters. The return type and parameter names are not part of the type signature. However, the parameter order
-                                    is significant.</p>
-                                  <panel type="seamless" header="%%Examples%%">
-                                    <div class="table-responsive">
-                                      <table class="markbind-table table table-bordered table-striped">
-                                        <thead>
-                                          <tr>
-                                            <th style="text-align:center">Method</th>
-                                            <th style="text-align:center">Type Signature</th>
-                                          </tr>
-                                        </thead>
-                                        <tbody>
-                                          <tr>
-                                            <td style="text-align:center"><code>int add(int X, int Y)</code></td>
-                                            <td style="text-align:center"><code>(int, int)</code></td>
-                                          </tr>
-                                          <tr>
-                                            <td style="text-align:center"><code>void add(int A, int B)</code></td>
-                                            <td style="text-align:center"><code>(int, int)</code></td>
-                                          </tr>
-                                          <tr>
-                                            <td style="text-align:center"><code>void m(int X, double Y)</code></td>
-                                            <td style="text-align:center"><code>(int, double)</code></td>
-                                          </tr>
-                                          <tr>
-                                            <td style="text-align:center"><code>void m(double X, int Y)</code></td>
-                                            <td style="text-align:center"><code>(double, int)</code></td>
-                                          </tr>
-                                        </tbody>
-                                      </table>
-                                    </div>
-                                  </panel>
-                                </div>
-                              </tip-box>
-                              <tip-box>
-                                <p><span class="fas fa-cube"></span> In the case below, the <code>calculate</code> method is overloaded because the two methods have the same name but different type signatures <code>(String)</code> and <code>(int)</code></p>
-                                <ul>
-                                  <li><code>calculate(String): void</code></li>
-                                  <li><code>calculate(int): void</code></li>
-                                </ul>
-                              </tip-box>
-                            </div>
-                            <div></div>
-                          </div>
-                        </div>
-                      </div>
-                    </modal>
-                  </tip-box>
-                </div>
-                <div>
-                  <div>
-                    <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
-                      <div>
-                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Which methods override?">
-                          <question>
-                            <p>Which of these methods override another method? <span class="dimmed"><code>A</code> is the parent class. <code>B</code> inherits <code>A</code>.</span></p>
-                            <img src="/website/book/oop/inheritance/overriding/images/overriding.png" height="220">
-                            <p></p>
-                            <ul class="task-list">
-                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a</li>
-                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b</li>
-                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c</li>
-                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d</li>
-                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e</li>
-                            </ul>
-                            <div slot="answer">
-                              <p>d</p>
-                              <p>Explanation: Method overriding requires a method in a <em>child class</em> to use the same method name and same parameter sequence used by one of its ancestors</p>
-                            </div>
-                          </question>
-                        </panel>
-                      </div>
-                    </panel>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </panel>
-        <br>
-        <p><span class="dimmed"><strong>Polymorphism</strong></span></p>
-        <panel type="danger" expanded="" no-close="" epxandable="true">
-          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W5.4b</code></span></big> <span><span class="fas fa-trophy"></span> Can explain OOP polymorphism</span> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-          </span>
-          </span>
-          <div>
-            <div></div>
-            <p></p>
-            <p><span class="dimmed"><strong><span>Paradigms → Object Oriented Programming → Polymorphism →
-</span></strong>
-              </span>
-            </p>
-            <div id="title-and-body">
-              <div>
-                <h4 id="what-2">What</h4>
-              </div>
-              <div id="main">
-                <div>
-                  <tip-box type="primary">
-                    <div>
-                      <p><strong>Polymorphism</strong>:</p>
-                      <blockquote>
-                        <p>The ability of different objects to respond, each in its own way, to identical messages is called polymorphism. <sub>-- <a href="https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/OOP_ObjC/">Object-Oriented Programming with Objective-C</a>, Apple</sub></p>
-                      </blockquote>
-                    </div>
-                  </tip-box>
-                  <p>Take the example of writing a payroll application for a university to facilitate payroll processing of university staff. Suppose an <code>adjustSalary(int)</code> operation adjusts the salaries of all staff members. This operation will
-                    be executed whenever the university initiates a salary adjustment for its staff. However, the adjustment formula is different for different staff categories, say admin and academic. Here is one possible way of designing the classes
-                    in the <code>Payroll</code> system.</p>
-                  <p>Here is the implementation of the <code>adjustSalary(int)</code> operation.</p>
-                  <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Payroll1</span> </span>{
-    ArrayList&lt;Admin&gt; admins;
-    ArrayList&lt;Academic&gt; academics;
-    <span class="hljs-comment">// ...</span>
-
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">adjustSalary</span><span class="hljs-params">(<span class="hljs-keyword">int</span> byPercent)</span> </span>{
-        <span class="hljs-keyword">for</span> (Admin ad: admins) {
-            ad.adjustSalary(byPercent);
-        }
-        <span class="hljs-keyword">for</span> (Academic ac: academics) {
-            ac.adjustSalary(byPercent);
-        }
-    }
-}
-</code></pre>
-                  <p>Note how processing is similar for the two staff types. It is as if the type of staff members is irrelevant to how they are processed inside this operation! If that is the case, can the staff type be &quot;abstracted away&quot; from
-                    this method? Here is such an implementation of <code>adjustSalary(int)</code>:</p>
-                  <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Payroll2</span> </span>{
-    ArrayList&lt;Staff&gt; staff;
-    <span class="hljs-comment">// ...</span>
-
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">adjustSalary</span><span class="hljs-params">(<span class="hljs-keyword">int</span> byPercent)</span> </span>{
-        <span class="hljs-keyword">for</span> (Staff s: staff) {
-            s.adjustSalary(byPercent);
-        }
-    }
-}
-</code></pre>
-                  <p>Notice the following:</p>
-                  <ul>
-                    <li>Only one data structure <code>ArrayList&lt;Staff&gt;</code>. It contains both <code>Admin</code> and <code>Academic</code> objects but treats them as <code>Staff</code> objects</li>
-                    <li>Only one loop</li>
-                    <li>Outcome of the <code>s.adjustSalary(byPercent)</code> method call depends on whether <code>s</code> is an <code>Academic</code> or <code>Admin</code> object</li>
-                  </ul>
-                  <p>The above code is better in several ways:</p>
-                  <ul>
-                    <li>It is shorter.</li>
-                    <li>It is simpler.</li>
-                    <li>It is more flexible (this code will remain the same even if more staff types are added).</li>
-                  </ul>
-                  <p>This does not mean we are getting rid of the <code>Academic</code> and <code>Admin</code> classes completely and replacing them with a more general class called <code>Staff</code>. Rather, this part of the code “treats” both <code>Admin</code>                    and <code>Academic</code> objects as one type called <code>Staff</code>.</p>
-                  <p>For example, <code>ArrayList</code> staff contains both <code>Admin</code> and <code>Academic</code> objects although it treats all of them as <code>Staff</code> objects. However, when the <code>adjustSalary(int)</code> operation of
-                    these objects is called, the resulting salary adjustment will be different for <code>Admin</code> objects and <code>Academic</code> objects. Therefore, different types of objects are treated as a single general type, but yet each type
-                    of object exhibits a different kind of behavior. This is called <em>polymorphism</em> (literally, it means “ability to take many forms”). In this example, an object that is perceived as type <code>Staff</code> can be an <code>Admin</code>                    object or an <code>Academic</code> object.</p>
-                </div>
-                <div></div>
-              </div>
-            </div>
-          </div>
-          <hr style="border-top: dashed 1px; border-color:grey">
-          <p><big><span class="fas fa-briefcase"></span> Evidence:</big></p>
-          <div>
-            <p><strong>Acceptable</strong>: Using polymorphism in any past project.</p>
-            <p><strong>Suggested</strong>: Do the exercise in [<a href="https://github.com/nusCS2113-AY1819S1/addressbook-level3/blob/master/docs/LearningOutcomes.adoc#use-polymorphism-code-lo-polymorphism-code">Addressbook-Level3: LO-Polymorphism</a>]</p>
-            <div>
-              <p><strong>Submission</strong>: Create a PR against <a href="https://github.com/nusCS2113-AY1819S1/addressbook-level3">Addressbook-Level3</a>. <mark>Remember to use team ID</mark> (e.g. <em>W09-2</em>) in your PR name.</p>
-              <p>
-                <panel src="/website\admin\appendixE-gitHub._include_.html#tutorial-pr-instructions" header="%%Admin <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Appendix E: Using GitHub Project Hosting → Submitting Pull Requests as evidence of an LO%%"
-                  fragment="tutorial-pr-instructions"></panel>
-              </p>
-            </div>
-          </div>
-        </panel>
         <panel type="warning" expanded="" no-close="" epxandable="true">
-          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W5.4c</code></span></big> <span><span class="fas fa-trophy"></span> Can use polymorphism in Java</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W5.6b</code></span></big> <span><span class="fas fa-trophy"></span> Can interpret class inheritance in class diagrams</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
           <span
             class="glyphicon glyphicon-star" aria-hidden="true"></span>
             </span>
@@ -539,180 +669,122 @@
             <div>
               <div></div>
               <p></p>
-              <p><span class="dimmed"><strong><span>C++ to Java → Inheritance →
+              <p><span class="dimmed"><strong><span>Tools → UML → Class Diagrams → Inheritance →
 </span></strong>
                 </span>
               </p>
               <div id="title-and-body">
                 <div>
-                  <h4 id="polymorphism">Polymorphism</h4>
+                  <h4 id="inheritance">Inheritance</h4>
                 </div>
                 <div id="main">
                   <div>
-                    <p>Given below is an extract from the <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small>, with slight adaptations.</p>
-                    <blockquote>
-                      <p>Consider the <code>Bicycle</code> class below:</p>
-                      <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bicycle</span> </span>{
-
-    <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> gear;
-    <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> speed;
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Bicycle</span><span class="hljs-params">(<span class="hljs-keyword">int</span> startSpeed, <span class="hljs-keyword">int</span> startGear)</span> </span>{
-        gear = startGear;
-        speed = startSpeed;
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setGear</span><span class="hljs-params">(<span class="hljs-keyword">int</span> newValue)</span> </span>{
-        gear = newValue;
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">applyBrake</span><span class="hljs-params">(<span class="hljs-keyword">int</span> decrement)</span> </span>{
-        speed -= decrement;
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">speedUp</span><span class="hljs-params">(<span class="hljs-keyword">int</span> increment)</span> </span>{
-        speed += increment;
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printDescription</span><span class="hljs-params">()</span> </span>{
-        System.out.println(<span class="hljs-string">"Bike is in gear "</span> + gear + <span class="hljs-string">" and travelling at a speed of "</span> + speed + <span class="hljs-string">"."</span>);
-    }
-
-}
-</code></pre>
-                      <p>To demonstrate <em>polymorphic</em> features in the Java language, let's extend the <code>Bicycle</code> class with a <code>MountainBike</code> and a <code>RoadBike</code> class. For <code>MountainBike</code>, let's add a field for
-                        <code>suspension</code>, which is a <code>String</code> value that indicates if the bike has a front shock absorber, <code>Front</code>. Or, the bike has a front and back shock absorber, <code>Dual</code>.</p>
-                      <p>Here is the updated class:</p>
-                      <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MountainBike</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Bicycle</span> </span>{
-    <span class="hljs-keyword">private</span> String suspension;
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">MountainBike</span><span class="hljs-params">(<span class="hljs-keyword">int</span> startSpeed, <span class="hljs-keyword">int</span> startGear, String suspensionType)</span></span>{
-        <span class="hljs-keyword">super</span>(startSpeed, startGear);
-        <span class="hljs-keyword">this</span>.setSuspension(suspensionType);
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getSuspension</span><span class="hljs-params">()</span></span>{
-      <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.suspension;
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setSuspension</span><span class="hljs-params">(String suspensionType)</span> </span>{
-        <span class="hljs-keyword">this</span>.suspension = suspensionType;
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printDescription</span><span class="hljs-params">()</span> </span>{
-        <span class="hljs-keyword">super</span>.printDescription();
-        System.out.println(<span class="hljs-string">"The "</span> + <span class="hljs-string">"MountainBike has a"</span> + getSuspension() + <span class="hljs-string">" suspension."</span>);
-    }
-}
-</code></pre>
-                      <p>Note the overridden <code>printDescription</code> method. In addition to the information provided before, additional data about the suspension is included to the output.</p>
-                      <p>Next, let's create the <code>RoadBike</code> class. Because road or racing bikes have skinny tires, add an attribute to track the tire width. Here is the <code>RoadBike</code> class:</p>
-                      <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">RoadBike</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Bicycle</span></span>{
-    <span class="hljs-comment">// In millimeters (mm)</span>
-    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> tireWidth;
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">RoadBike</span><span class="hljs-params">(<span class="hljs-keyword">int</span> startSpeed, <span class="hljs-keyword">int</span> startGear, <span class="hljs-keyword">int</span> newTireWidth)</span></span>{
-        <span class="hljs-keyword">super</span>(startSpeed, startGear);
-        <span class="hljs-keyword">this</span>.setTireWidth(newTireWidth);
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getTireWidth</span><span class="hljs-params">()</span></span>{
-      <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.tireWidth;
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setTireWidth</span><span class="hljs-params">(<span class="hljs-keyword">int</span> newTireWidth)</span></span>{
-        <span class="hljs-keyword">this</span>.tireWidth = newTireWidth;
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printDescription</span><span class="hljs-params">()</span></span>{
-        <span class="hljs-keyword">super</span>.printDescription();
-        System.out.println(<span class="hljs-string">"The RoadBike"</span> + <span class="hljs-string">" has "</span> + getTireWidth() + <span class="hljs-string">" MM tires."</span>);
-    }
-}
-</code></pre>
-                      <p>Note that once again, the <code>printDescription</code> method has been overridden. This time, information about the tire width is displayed.</p>
-                      <p>To summarize, there are three classes: <code>Bicycle</code>, <code>MountainBike</code>, and <code>RoadBike</code>. The two subclasses override the <code>printDescription</code> method and print unique information.</p>
-                      <p>Here is a test program that creates three Bicycle variables. Each variable is assigned to one of the three bicycle classes. Each variable is then printed.</p>
-                      <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TestBikes</span> </span>{
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
-        Bicycle bike01, bike02, bike03;
-
-        bike01 = <span class="hljs-keyword">new</span> Bicycle(<span class="hljs-number">10</span>, <span class="hljs-number">1</span>);
-        bike02 = <span class="hljs-keyword">new</span> MountainBike(<span class="hljs-number">10</span>, <span class="hljs-number">5</span>, <span class="hljs-string">"Dual"</span>);
-        bike03 = <span class="hljs-keyword">new</span> RoadBike(<span class="hljs-number">20</span>, <span class="hljs-number">8</span>, <span class="hljs-number">23</span>);
-
-        bike01.printDescription();
-        bike02.printDescription();
-        bike03.printDescription();
-    }
-}
-</code></pre>
-                      <p><span class="fas fa-arrow-down"></span></p>
-                      <pre class="hljs"><code>Bike is in gear 1 and travelling at a speed of 10.
-Bike is in gear 5 and travelling at a speed of 10.
-The MountainBike has aDual suspension.
-Bike is in gear 8 and travelling at a speed of 20.
-The RoadBike has 23 MM tires.
-</code></pre>
-                      <p>The Java virtual machine (JVM) calls the appropriate method for the object that is referred to in each variable. It does not call the method that is defined by the variable's type. This behavior is referred to as <em>virtual method invocation</em>                        and demonstrates an aspect of the important polymorphism features in the Java language.</p>
-                    </blockquote>
+                    <p>You can use a triangle and a solid line (not to be confused with an arrow) to indicate class inheritance.</p>
+                    <p>Notation:</p>
+                    <img src="/website/book/uml/classDiagrams/classInheritance/what/images/notation.png" height="120">
+                    <p></p>
+                    <tip-box>
+                      <p><span class="fas fa-cube"></span> Examples: The <code>Car</code> class <em>inherits</em> from the <code>Vehicle</code> class. The <code>Cat</code> and <code>Dog</code> classes <em>inherit</em> from the <code>Pet</code> class.</p>
+                      <img src="/website/book/uml/classDiagrams/classInheritance/what/images/examples.png" height="120">
+                      <p></p>
+                    </tip-box>
                   </div>
                   <div></div>
                 </div>
               </div>
             </div>
         </panel>
-        <br>
-        <p><span class="dimmed"><strong>Abstract Classes</strong></span></p>
-        <panel type="info" expanded="" no-close="" epxandable="true">
-          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W5.4d</code></span></big> <span><span class="fas fa-trophy"></span> Can implement abstract classes</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+      </panel>
+    </div>
+    <p></p>
+    <p><span class="activity-desc">Implementation</span></p>
+    <div class="indented">
+      <panel no-close="" expandable="true">
+        <span slot="header" class="card-title"><span><code>W5.7</code> <strong>Can follow a simple style guide</strong> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+        </span>
+        </span>
+        <panel type="danger" expanded="" no-close="" epxandable="true">
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W5.7a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain the importance of code quality</span> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+          </span>
+          </span>
+          <div>
+            <div></div>
+            <p></p>
+            <p><span class="dimmed"><strong><span>Implementation → Code Quality → Introduction →
+</span></strong>
+              </span>
+            </p>
+            <div id="title-and-body">
+              <div>
+                <h4 id="basic-2">Basic</h4>
+              </div>
+              <div id="main">
+                <div>
+                  <blockquote>
+                    <p>Always code as if the person who ends up maintaining your code will be a violent psychopath who knows where you live. <sub>-- Martin Golding</sub></p>
+                  </blockquote>
+                  <p><strong><trigger for="pop:production-code">Production code</trigger> needs to be of high quality</strong>. Given how the world is becoming increasingly dependent of software, poor quality code is something we cannot afford to tolerate.</p>
+                  <popover id="pop:production-code" title="<span class='glyphicon glyphicon-eye-open' aria-hidden='true'></span> Production Code" placement="top">
+                    <div slot="content">
+                      Code being used in an actual product with actual users
+                    </div>
+                  </popover>
+                </div>
+                <div></div>
+              </div>
+            </div>
+          </div>
+        </panel>
+        <panel type="warning" expanded="" no-close="" epxandable="true">
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W5.7b</code></span></big> <span><span class="fas fa-trophy"></span> Can explain the need for following a standard</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
           <span
-            class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+            class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            </span>
+            </span>
             </span>
             </span>
             <div>
               <div></div>
               <p></p>
-              <p><span class="dimmed"><strong><span>Paradigms → Object Oriented Programming → Inheritance →
+              <p><span class="dimmed"><strong><span>Implementation → Code Quality → Style →
 </span></strong>
                 </span>
               </p>
               <div id="title-and-body">
                 <div>
-                  <h4 id="abstract-classes">Abstract Classes</h4>
+                  <h4 id="introduction">Introduction</h4>
                 </div>
                 <div id="main">
                   <div>
-                    <tip-box type="definition">
-                      <div>
-                        <p><strong>Abstract Class</strong>:</p>
-                        <p>An <em>abstract class</em> is a class that is declared <code>abstract</code>—it may or may not include abstract methods. Abstract classes cannot be instantiated, but they can be subclassed. <sub>-- <a href="https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html">Oracle's Java Documentation</a></sub></p>
-                      </div>
-                    </tip-box>
-                    <p><strong>An abstract method is simply the method interface without the implementation.</strong></p>
-                    <tip-box>
-                      <p><span class="fas fa-cube"></span> The <code>Account</code> class has an abstract method (<code>addInterest()</code>).</p>
-                    </tip-box>
-                    <p><strong>A class that has an abstract method becomes an abstract class</strong>. Evan a class that does not have any abstract method can be declared as an abstract class. Abstract classes cannot be instantiated.</p>
+                    <p><strong>One essential way to improve code quality is to follow a consistent style. That is why software engineers follow a strict coding standard (aka <em>style guide</em>).</strong></p>
+                    <p><strong>The aim of a coding standard is to make the entire code base look like it was written by one person</strong>. A coding standard is usually specific to a programming language and specifies guidelines such as the location of
+                      opening and closing braces, indentation styles and naming styles (e.g. whether to use <em>Hungarian style</em>, <em>Pascal casing</em>, <em>Camel casing</em>, etc.). It is important that the whole team/company use the same coding
+                      standard and that standard is not generally inconsistent with typical industry practices. <span class="dimmed">If a company's coding standards is very different from what is used typically in the industry, new recruits will take longer to get used to the company's coding style.</span></p>
+                    <p>💡 IDEs can help to enforce some parts of a coding standard e.g. indentation rules.</p>
                   </div>
                   <div>
                     <div>
                       <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
                         <div>
-                          <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Statements about abstract classes">
+                          <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> What is the recommended approach regarding coding standards?">
                             <question>
-                              <p>Choose the correct statements about Java abstract classes and
-                                <tooltip content="classes that are not abstract">concrete classes</tooltip>.</p>
-                              <ul class="task-list">
-                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. A concrete class can contain an abstract method.</li>
-                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. An abstract class can contain concrete methods.</li>
-                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. An abstract class need not contain any concrete methods.</li>
-                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. An abstract class cannot be instantiated.</li>
+                              <p>What is the recommended approach regarding coding standards?</p>
+                              <ul radio-group="5c5a1" class="radio-list">
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="5c5a1" type="radio"> a. Each developer should find a suitable coding standard and follow it in their coding.</label></li>
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="5c5a1" type="radio"> b. A developer should understand the importance of following a coding standard. However, there is no need to follow one.</label></li>
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="5c5a1" type="radio"> c. A developer should find out the coding standards currently used by the project and follow that closely.</label></li>
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="5c5a1" type="radio"> d. Coding standards are lame. Real programmers develop their own individual styles.</label></li>
                               </ul>
                               <div slot="answer">
-                                <p>(b)(c)(d)</p>
-                                <p>Explanation: A concrete class cannot contain even a single abstract method.</p>
+                                <p>c</p>
                               </div>
+                            </question>
+                          </panel>
+                        </div>
+                        <div>
+                          <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> What is the aim? What is the value?">
+                            <question has-input="">
+                              <p>What is the aim of using a coding standard? How does it help?</p>
                             </question>
                           </panel>
                         </div>
@@ -722,9 +794,20 @@ The RoadBike has 23 MM tires.
                 </div>
               </div>
             </div>
+            <hr style="border-top: dashed 1px; border-color:grey">
+            <p><big><span class="fas fa-briefcase"></span> Evidence:</big></p>
+            <div>
+              <div>
+                <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> What is the aim? What is the value?">
+                  <question has-input="">
+                    <p>What is the aim of using a coding standard? How does it help?</p>
+                  </question>
+                </panel>
+              </div>
+            </div>
         </panel>
         <panel type="info" expanded="" no-close="" epxandable="true">
-          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W5.4e</code></span></big> <span><span class="fas fa-trophy"></span> Can use abstract classes and methods</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W5.7c</code></span></big> <span><span class="fas fa-trophy"></span> Can follow simple mechanical style rules</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
           <span
             class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
             </span>
@@ -732,240 +815,940 @@ The RoadBike has 23 MM tires.
             <div>
               <div></div>
               <p></p>
-              <p><span class="dimmed"><strong><span>C++ to Java → Inheritance →
+              <p><span class="dimmed"><strong><span>Implementation → Code Quality → Style →
 </span></strong>
                 </span>
               </p>
               <div id="title-and-body">
                 <div>
-                  <h4 id="abstract-classes-and-methods">Abstract Classes and Methods</h4>
+                  <h4 id="basic-3">Basic</h4>
                 </div>
                 <div id="main">
                   <div>
-                    <p>Given below is an extract from the <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small>, with slight adaptations.</p>
-                    <blockquote>
-                      <ul>
-                        <li>An <em>abstract class</em> is a class that is declared <code>abstract</code>—it may or may not include abstract methods. Abstract classes cannot be instantiated, but they can be subclassed.</li>
-                        <li>An <em>abstract method</em> is a method that is declared without an implementation (without braces, and followed by a semicolon), like this:<br>
-                          <code>abstract void moveTo(double deltaX, double deltaY);</code></li>
-                      </ul>
-                      <p>If a class includes abstract methods, then the class itself must be declared abstract, as in:</p>
-                      <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">GraphicObject</span> </span>{
-   <span class="hljs-comment">// declare fields</span>
-   <span class="hljs-comment">// declare nonabstract methods</span>
-   <span class="hljs-function"><span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title">draw</span><span class="hljs-params">()</span></span>;
-}
-</code></pre>
-                      <p>When an abstract class is subclassed, the subclass usually provides implementations for all of the abstract methods in its parent class. However, if it does not, then the subclass must also be declared abstract.</p>
-                      <p>In an object-oriented drawing application, you can draw circles, rectangles, lines, Bezier curves, and many other graphic objects. These objects all have certain states (for example: position, orientation, line color, fill color)
-                        and behaviors (for example: moveTo, rotate, resize, draw) in common. Some of these states and behaviors are the same for all graphic objects (for example: position, fill color, and moveTo). Others require different implementations
-                        (for example, resize or draw). All <code>GraphicObjects</code> must be able to draw or resize themselves; they just differ in how they do it. This is a perfect situation for an abstract superclass. You can take advantage of the
-                        similarities and declare all the graphic objects to inherit from the same abstract parent object (for example, <code>GraphicObject</code>). Classes <code>Rectangle</code>, <code>Line</code>, <code>Bezier</code>, and <code>Circle</code>                        inherit from <code>GraphicObject</code>.</p>
-                      <p>First, you declare an abstract class, <code>GraphicObject</code>, to provide member variables and methods that are wholly shared by all subclasses, such as the current position and the <code>moveTo</code> method. <code>GraphicObject</code>                        also declares abstract methods for methods, such as draw or resize, that need to be implemented by all subclasses but must be implemented in different ways. The <code>GraphicObject</code> class can look something like this:</p>
-                      <pre><code class="hljs java"><span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">GraphicObject</span> </span>{
-    <span class="hljs-keyword">int</span> x, y;
-    ...
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">moveTo</span><span class="hljs-params">(<span class="hljs-keyword">int</span> newX, <span class="hljs-keyword">int</span> newY)</span> </span>{
-        ...
-    }
-    <span class="hljs-function"><span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title">draw</span><span class="hljs-params">()</span></span>;
-    <span class="hljs-function"><span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title">resize</span><span class="hljs-params">()</span></span>;
-}
-</code></pre>
-                      <p>Each subclass of <code>GraphicObject</code>, such as <code>Circle</code> and <code>Rectangle</code>, must provide implementations for the <code>draw</code> and <code>resize</code> methods or else must be declared <code>abstract</code>                        themselves:</p>
-                      <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Circle</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">GraphicObject</span> </span>{
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span><span class="hljs-params">()</span> </span>{
-        ...
-    }
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">resize</span><span class="hljs-params">()</span> </span>{
-        ...
-    }
-}
+                    <div class="alt-java">
+                      <p>Learn <em>basic</em> guidelines of the <a href="https://oss-generic.github.io/process/codingStandards/CodingStandard-Java.html"><strong>Java</strong> coding standard (by OSS-Generic)</a></p>
+                    </div>
+                    <div class="alt-python">
+                      <p>Sample coding standard: <a href="https://www.python.org/dev/peps/pep-0008/">PEP 8 <strong>Python</strong> Style Guide -- by Python.org</a></p>
+                    </div>
+                  </div>
+                  <div>
+                    <div>
+                      <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                        <div>
+                          <div>
+                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Find basic coding standard violations">
+                              <question>
+                                <p>Consider the code given below:</p>
+                                <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.*;
 
-<span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Rectangle</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">GraphicObject</span> </span>{
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span><span class="hljs-params">()</span> </span>{
-        ...
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Task</span> </span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String descriptionPrefix = <span class="hljs-string">"description: "</span>;
+    <span class="hljs-keyword">private</span> String description;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">boolean</span> important;
+    List&lt;String&gt; pastDescription = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;(); <span class="hljs-comment">// a list of past descriptions</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Task</span><span class="hljs-params">(String d)</span> </span>{
+      <span class="hljs-keyword">this</span>.description = d;
+      <span class="hljs-keyword">if</span> (!d.isEmpty())
+          <span class="hljs-keyword">this</span>.important = <span class="hljs-keyword">true</span>;
     }
-}
-</code></pre>
-                      <p>The <code>Rectangle</code> class above is abstract because it does not provide an implementation for the <code>resize</code> method.</p>
-                    </blockquote>
-                    <panel type="seamless" header="<span class='fas fa-cube'></span> Another example of an abstract class" minimized="">
-                      <pre><code class="hljs java"><span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
 
-    <span class="hljs-keyword">int</span> number;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getAsXML</span><span class="hljs-params">()</span> </span>{ <span class="hljs-keyword">return</span> <span class="hljs-string">"&lt;task&gt;"</span>+description+<span class="hljs-string">"&lt;/task&gt;"</span>; }
 
-    <span class="hljs-function"><span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addInterest</span><span class="hljs-params">()</span></span>;
-
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">close</span><span class="hljs-params">()</span></span>{
-        <span class="hljs-comment">//...</span>
-    }
-}
-
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CurrentAccount</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Account</span></span>{
+    <span class="hljs-comment">/**
+     * Print the description as a string.
+     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printingDescription</span><span class="hljs-params">()</span></span>{ System.out.println(<span class="hljs-keyword">this</span>); }
 
     <span class="hljs-meta">@Override</span>
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">addInterest</span><span class="hljs-params">()</span> </span>{
-        <span class="hljs-comment">//...</span>
-    }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{ <span class="hljs-keyword">return</span> descriptionPrefix + description; }
 }
 </code></pre>
-                    </panel>
+                                <p>In what ways the code violate the <em>basic</em> guidelines (i.e., those marked with one ⭐️) of the OSS-Generic Java Coding Standard given <a href="https://oss-generic.github.io/process/codingStandards/CodingStandard-Java.html">here</a>?</p>
+                                <div slot="hint">
+                                  <p>Here are three:</p>
+                                  <ul>
+                                    <li><code>descriptionPrefix</code> is a constant and should be named <code>DESCRIPTION_PREFIX</code></li>
+                                    <li>method name <code>printingDescription()</code> should be named as <code>printDescription()</code></li>
+                                    <li>boolean variable <code>important</code> should be named to sound boolean e.g., <code>isImportant</code></li>
+                                  </ul>
+                                  <p>There are many more.</p>
+                                </div>
+                              </question>
+                            </panel>
+                          </div>
+                        </div>
+                      </panel>
+                    </div>
                   </div>
-                  <div></div>
                 </div>
               </div>
             </div>
-            <hr style="border-top: dashed 1px; border-color:grey">
-            <p><big><span class="fas fa-briefcase"></span> Evidence:</big></p>
+        </panel>
+        <panel type="success" expanded="" no-close="" epxandable="true">
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W5.7d</code></span></big> <span><span class="fas fa-trophy"></span> Can follow intermediate style rules</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span
+            class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+            </span>
+            </span>
             <div>
-              <p><strong>Acceptable</strong>: Using abstract classes in any past project.</p>
-              <p><strong>Suggested</strong>: Do the exercise in [<a href="https://github.com/nusCS2113-AY1819S1/addressbook-level3/blob/master/docs/LearningOutcomes.adoc#use-abstract-classes-methods-code-lo-abstract-code">Addressbook-Level3: LO-Abstract</a>]</p>
+              <div></div>
+              <p></p>
+              <p><span class="dimmed"><strong><span>Implementation → Code Quality → Style →
+</span></strong>
+                </span>
+              </p>
+              <div id="title-and-body">
+                <div>
+                  <h4 id="intermediate">Intermediate</h4>
+                </div>
+                <div id="main">
+                  <div>
+                    <p>Go through the <a href="https://oss-generic.github.io/process/codingStandards/CodingStandard-Java.html">provided Java coding standard</a> and learn the <em>intermediate</em> style rules.</p>
+                  </div>
+                  <div>
+                    <div>
+                      <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                        <div>
+                          <div>
+                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Unsuitable variable name">
+                              <question>
+                                <p>According to the given Java coding standard, which one of these is not a good name?</p>
+                                <ul radio-group="d008b" class="radio-list">
+                                  <li class="radio-list-item"><label><input class="radio-list-input" name="d008b" type="radio"> a. integer variable name: <code>totalPeople</code></label></li>
+                                  <li class="radio-list-item"><label><input class="radio-list-input" name="d008b" type="radio"> b. boolean variable name: <code>checkWeight</code></label></li>
+                                  <li class="radio-list-item"><label><input class="radio-list-input" name="d008b" type="radio"> c. method name (returns integer): <code>getPeopleCount</code></label></li>
+                                  <li class="radio-list-item"><label><input class="radio-list-input" name="d008b" type="radio"> d. method name (returns boolean): <code>isValidAddress</code></label></li>
+                                  <li class="radio-list-item"><label><input class="radio-list-input" name="d008b" type="radio"> e. String variable name: <code>description</code></label></li>
+                                </ul>
+                                <div slot="answer">
+                                  <p>b</p>
+                                  <p>Explanation: <code>checkWeight</code> is an action. Naming variables as actions makes the code harder to follow. <code>isWeightValid</code> may be a better name.</p>
+                                </div>
+                              </question>
+                            </panel>
+                          </div>
+                          <div>
+                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Find intermediate coding standard violations">
+                              <question>
+                                <p>Repeat the exercise in the panel below but also find violations of <em>intermediate</em> level guidelines.</p>
+                                <div>
+                                  <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Find basic coding standard violations">
+                                    <question>
+                                      <p>Consider the code given below:</p>
+                                      <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.*;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Task</span> </span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String descriptionPrefix = <span class="hljs-string">"description: "</span>;
+    <span class="hljs-keyword">private</span> String description;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">boolean</span> important;
+    List&lt;String&gt; pastDescription = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;(); <span class="hljs-comment">// a list of past descriptions</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Task</span><span class="hljs-params">(String d)</span> </span>{
+      <span class="hljs-keyword">this</span>.description = d;
+      <span class="hljs-keyword">if</span> (!d.isEmpty())
+          <span class="hljs-keyword">this</span>.important = <span class="hljs-keyword">true</span>;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getAsXML</span><span class="hljs-params">()</span> </span>{ <span class="hljs-keyword">return</span> <span class="hljs-string">"&lt;task&gt;"</span>+description+<span class="hljs-string">"&lt;/task&gt;"</span>; }
+
+    <span class="hljs-comment">/**
+     * Print the description as a string.
+     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printingDescription</span><span class="hljs-params">()</span></span>{ System.out.println(<span class="hljs-keyword">this</span>); }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{ <span class="hljs-keyword">return</span> descriptionPrefix + description; }
+}
+</code></pre>
+                                      <p>In what ways the code violate the <em>basic</em> guidelines (i.e., those marked with one ⭐️) of the OSS-Generic Java Coding Standard given <a href="https://oss-generic.github.io/process/codingStandards/CodingStandard-Java.html">here</a>?</p>
+                                      <div slot="hint">
+                                        <p>Here are three:</p>
+                                        <ul>
+                                          <li><code>descriptionPrefix</code> is a constant and should be named <code>DESCRIPTION_PREFIX</code></li>
+                                          <li>method name <code>printingDescription()</code> should be named as <code>printDescription()</code></li>
+                                          <li>boolean variable <code>important</code> should be named to sound boolean e.g., <code>isImportant</code></li>
+                                        </ul>
+                                        <p>There are many more.</p>
+                                      </div>
+                                    </question>
+                                  </panel>
+                                </div>
+                                <div slot="hint">
+                                  <p>Here's one you are more likely to miss:</p>
+                                  <ul>
+                                    <li><code>* Print the description as a string.</code> → <code>* Prints the description as a string.</code></li>
+                                  </ul>
+                                  <p>There are more.</p>
+                                </div>
+                              </question>
+                            </panel>
+                          </div>
+                        </div>
+                      </panel>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </panel>
+      </panel>
+      <panel no-close="" expandable="true">
+        <span slot="header" class="card-title"><span><code>W5.8</code> <strong>Can improve code readability</strong> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+        </span>
+        </span>
+        <panel type="danger" expanded="" no-close="" epxandable="true">
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W5.8a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain the importance of readability</span> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+          </span>
+          </span>
+          <div>
+            <div></div>
+            <p></p>
+            <p><span class="dimmed"><strong><span>Implementation → Code Quality → Readability →
+</span></strong>
+              </span>
+            </p>
+            <div id="title-and-body">
               <div>
-                <p><strong>Submission</strong>: Create a PR against <a href="https://github.com/nusCS2113-AY1819S1/addressbook-level3">Addressbook-Level3</a>. <mark>Remember to use team ID</mark> (e.g. <em>W09-2</em>) in your PR name.</p>
-                <p>
-                  <panel src="/website\admin\appendixE-gitHub._include_.html#tutorial-pr-instructions" header="%%Admin <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Appendix E: Using GitHub Project Hosting → Submitting Pull Requests as evidence of an LO%%"
-                    fragment="tutorial-pr-instructions"></panel>
-                </p>
+                <h4 id="introduction-2">Introduction</h4>
+              </div>
+              <div id="main">
+                <div>
+                  <blockquote>
+                    <p>Programs should be written and polished until they acquire publication quality. <sub>--<a href="https://en.wikipedia.org/wiki/Niklaus_Wirth">Niklaus Wirth</a></sub></p>
+                  </blockquote>
+                  <p><strong>Among various dimensions of code quality, such as run-time efficiency, security, and robustness, one of the most important is understandability.</strong> This is because in any non-trivial software project, code needs to be read,
+                    understood, and modified by other developers later on. Even if we do not intend to pass the code to someone else, code quality is still important because we all become 'strangers' to our own code someday.</p>
+                  <tip-box>
+                    <p><span class="fas fa-cube"></span> The two code samples given below achieve the same functionality, but one is easier to read.</p>
+                    <div class="alt-java">
+                      <div>
+                        <table>
+                          <tr>
+                          
+                            <td>
+                              <p>
+                                <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong>
+                                  </span>
+                                </font>
+                              </p>
+                              <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">subsidy</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">int</span> subsidy;
+    <span class="hljs-keyword">if</span> (!age) {
+        <span class="hljs-keyword">if</span> (!sub) {
+            <span class="hljs-keyword">if</span> (!notFullTime) {
+                subsidy = <span class="hljs-number">500</span>;
+            } <span class="hljs-keyword">else</span> {
+                subsidy = <span class="hljs-number">250</span>;
+            }
+        } <span class="hljs-keyword">else</span> {
+            subsidy = <span class="hljs-number">250</span>;
+        }
+    } <span class="hljs-keyword">else</span> {
+        subsidy = -<span class="hljs-number">1</span>;
+    }
+    <span class="hljs-keyword">return</span> subsidy;
+}
+</code></pre>
+                              <p></p>
+                            </td>
+                          
+                            <td>  <br><br></td>
+                          
+                            <td valign="top">
+                              <p>
+                                <font color="green"><span><strong><span class="fas fa-thumbs-up"></span> Good</strong>
+                                  </span>
+                                </font>
+                              </p>
+                              <pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">calculateSubsidy</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">int</span> subsidy;
+    <span class="hljs-keyword">if</span> (isSenior) {
+        subsidy = REJECT_SENIOR;
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (isAlreadySubsidised) {
+        subsidy = SUBSIDISED_SUBSIDY;
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (isPartTime) {
+        subsidy = FULLTIME_SUBSIDY * RATIO;
+    } <span class="hljs-keyword">else</span> {
+        subsidy = FULLTIME_SUBSIDY;
+    }
+    <span class="hljs-keyword">return</span> subsidy;
+}
+</code></pre>
+                              <p></p>
+                            </td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="alt-python">
+                      <div>
+                        <table>
+                          <tr>
+                          
+                            <td>
+                              <p>
+                                <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong>
+                                  </span>
+                                </font>
+                              </p>
+                              <pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate_subs</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> age:
+        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> sub:
+            <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> not_fulltime:
+                subsidy = <span class="hljs-number">500</span>
+            <span class="hljs-keyword">else</span>:
+                subsidy = <span class="hljs-number">250</span>
+        <span class="hljs-keyword">else</span>:
+            subsidy = <span class="hljs-number">250</span>
+    <span class="hljs-keyword">else</span>:
+        subsidy = <span class="hljs-number">-1</span>
+    <span class="hljs-keyword">return</span> subsidy
+</code></pre>
+                              <p></p>
+                            </td>
+                          
+                            <td>  <br><br></td>
+                          
+                            <td valign="top">
+                              <p>
+                                <font color="green"><span><strong><span class="fas fa-thumbs-up"></span> Good</strong>
+                                  </span>
+                                </font>
+                              </p>
+                              <pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate_subsidy</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-keyword">if</span> is_senior:
+        <span class="hljs-keyword">return</span> REJECT_SENIOR
+    <span class="hljs-keyword">elif</span> is_already_subsidised:
+        <span class="hljs-keyword">return</span> SUBSIDISED_SUBSIDY
+    <span class="hljs-keyword">elif</span> is_parttime:
+        <span class="hljs-keyword">return</span> FULLTIME_SUBSIDY * RATIO
+    <span class="hljs-keyword">else</span>:
+        <span class="hljs-keyword">return</span> FULLTIME_SUBSIDY
+</code></pre>
+                              <p></p>
+                            </td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                  </tip-box>
+                </div>
+                <div></div>
               </div>
             </div>
+          </div>
         </panel>
-        <br>
-        <p><span class="dimmed"><strong>Interfaces</strong></span></p>
-        <panel type="info" expanded="" no-close="" epxandable="true">
-          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W5.4f</code></span></big> <span><span class="fas fa-trophy"></span> Can explain interfaces</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+        <panel type="warning" expanded="" no-close="" epxandable="true">
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W5.8b</code></span></big> <span><span class="fas fa-trophy"></span> Can improve code quality using technique: avoid long methods </span>
           <span
-            class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+            class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+            </span>
             </span>
             </span>
             <div>
               <div></div>
               <p></p>
-              <p><span class="dimmed"><strong><span>Paradigms → Object Oriented Programming → Inheritance →
+              <p><span class="dimmed"><strong><span>Implementation → Code Quality → Readability → Basic →
 </span></strong>
                 </span>
               </p>
               <div id="title-and-body">
                 <div>
-                  <h4 id="interfaces">Interfaces</h4>
+                  <h4 id="avoid-long-methods">Avoid Long Methods</h4>
                 </div>
                 <div id="main">
                   <div>
-                    <p><strong>An <em>interface</em> is a behavior specification</strong> i.e. a collection of
-                      <tooltip content="Just the method signature without any implementation">method specifications</tooltip>. If a class
-                      <tooltip content="implements all methods specified in an interface">implements the interface</tooltip>, it means the class is able to support the behaviors specified by the said interface.</p>
-                    <blockquote>
-                      <p>There are a number of situations in software engineering when it is important for disparate groups of programmers to agree to a &quot;contract&quot; that spells out how their software interacts. Each group should be able to write
-                        their code without any knowledge of how the other group's code is written. Generally speaking, interfaces are such contracts. <sub>--<a href="https://docs.oracle.com/javase/tutorial/java/IandI/createinterface.html">Oracle Docs on Java</a><sub></sub></sub>
-                      </p>
-                    </blockquote>
-                    <tip-box>
-                      <p><span class="fas fa-cube"></span> Suppose <code>SalariedStaff</code> is an interface that contains two methods <code>setSalary(int)</code> and <code>getSalary()</code>. <code>AcademicStaff</code> can declare itself as <em>implementing</em>                        the <code>SalariedStaff</code> interface, which means the <code>AcademicStaff</code> class must implement all the methods specified by the <code>SalariedStaff</code> interface i.e., <code>setSalary(int)</code> and <code>getSalary()</code>.</p>
-                    </tip-box>
-                    <p><strong>A class implementing an interface results in an <em>is-a</em> relationship</strong>, just like in class inheritance.</p>
-                    <tip-box>
-                      <p><span class="fas fa-cube"></span> In the example above, <code>AcademicStaff</code> <em>is a</em> <code>SalariedStaff</code>. An <code>AcademicStaff</code> object can be used anywhere a <code>SalariedStaff</code> object is expected
-                        e.g. <code>SalariedStaff ss = new AcademicStaff()</code>.</p>
-                    </tip-box>
-                    <p></p>
+                    <p>Be wary when a method is longer than the computer screen, and take corrective action when it goes beyond 30 LOC (lines of code). The bigger the haystack, the harder it is to find a needle.</p>
                   </div>
                   <div></div>
                 </div>
               </div>
             </div>
         </panel>
-        <panel type="info" expanded="" no-close="" epxandable="true">
-          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W5.4g</code></span></big> <span><span class="fas fa-trophy"></span> Can use interfaces in Java</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+        <panel type="warning" expanded="" no-close="" epxandable="true">
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W5.8c</code></span></big> <span><span class="fas fa-trophy"></span> Can improve code quality using technique: avoid deep nesting </span>
           <span
-            class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+            class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+            </span>
             </span>
             </span>
             <div>
               <div></div>
               <p></p>
-              <p><span class="dimmed"><strong><span>C++ to Java → Inheritance →
+              <p><span class="dimmed"><strong><span>Implementation → Code Quality → Readability → Basic →
 </span></strong>
                 </span>
               </p>
               <div id="title-and-body">
                 <div>
-                  <h4 id="interfaces-2">Interfaces</h4>
+                  <h4 id="avoid-deep-nesting">Avoid Deep Nesting</h4>
                 </div>
                 <div id="main">
                   <div>
-                    <p>Given below is an extract from the <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small>, with slight adaptations.</p>
                     <blockquote>
-                      <p>In the Java programming language, <strong>an <em>interface</em> is a reference type, similar to a class, that can contain only constants, method signatures, default methods, static methods, and nested types.</strong> Method bodies
-                        exist only for default methods and static methods. Interfaces cannot be instantiated—they can only be implemented by classes or extended by other interfaces. Defining an interface is similar to creating a new class:</p>
-                      <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">OperateCar</span> </span>{
-
-   <span class="hljs-comment">// constant declarations, if any</span>
-
-   <span class="hljs-comment">// method signatures</span>
-   <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">turn</span><span class="hljs-params">(Direction direction, <span class="hljs-keyword">double</span> radius, <span class="hljs-keyword">double</span> startSpeed, <span class="hljs-keyword">double</span> endSpeed)</span></span>;
-   <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">changeLanes</span><span class="hljs-params">(Direction direction, <span class="hljs-keyword">double</span> startSpeed, <span class="hljs-keyword">double</span> endSpeed)</span></span>;
-   <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">signalTurn</span><span class="hljs-params">(Direction direction, <span class="hljs-keyword">boolean</span> signalOn)</span></span>;
-   <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">getRadarFront</span><span class="hljs-params">(<span class="hljs-keyword">double</span> distanceToCar, <span class="hljs-keyword">double</span> speedOfCar)</span></span>;
-   <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">getRadarRear</span><span class="hljs-params">(<span class="hljs-keyword">double</span> distanceToCar, <span class="hljs-keyword">double</span> speedOfCar)</span></span>;
-         ......
-   <span class="hljs-comment">// more method signatures</span>
-}
-</code></pre>
-                      <p>Note that the method signatures have no braces and are terminated with a semicolon.</p>
-                      <p>To use an interface, you write a class that implements the interface. When an instantiable class implements an interface, it provides a method body for each of the methods declared in the interface. For example,</p>
-                      <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">OperateBMW760i</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">OperateCar</span> </span>{
-
-    <span class="hljs-comment">// the OperateCar method signatures, with implementation --</span>
-    <span class="hljs-comment">// for example:</span>
-    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">signalTurn</span><span class="hljs-params">(Direction direction, <span class="hljs-keyword">boolean</span> signalOn)</span> </span>{
-       <span class="hljs-comment">// code to turn BMW's LEFT turn indicator lights on</span>
-       <span class="hljs-comment">// code to turn BMW's LEFT turn indicator lights off</span>
-       <span class="hljs-comment">// code to turn BMW's RIGHT turn indicator lights on</span>
-       <span class="hljs-comment">// code to turn BMW's RIGHT turn indicator lights off</span>
-    }
-
-    <span class="hljs-comment">// other members, as needed -- for example, helper classes not</span>
-    <span class="hljs-comment">// visible to clients of the interface</span>
-}
-</code></pre>
-                      <p>In the robotic car example above, it is the automobile manufacturers who will implement the interface. Chevrolet's implementation will be substantially different from that of Toyota, of course, but both manufacturers will adhere
-                        to the same interface. The guidance manufacturers, who are the clients of the interface, will build systems that use GPS data on a car's location, digital street maps, and traffic data to drive the car. In so doing, the guidance
-                        systems will invoke the interface methods: turn, change lanes, brake, accelerate, and so forth.</p>
+                      <p>If you need more than 3 levels of indentation, you're screwed anyway, and should fix your program. <sub>--Linux 1.3.53 CodingStyle</sub></p>
                     </blockquote>
-                    <p><strong>Java allows multiple inheritance among interfaces. A Java class can <em>implement</em> multiple interfaces</strong> (and inherit from one class).</p>
+                    <p>In particular, avoid <a href="https://blog.codinghorror.com/flattening-arrow-code/"><em>arrowhead</em> style code</a>.</p>
                     <tip-box>
-                      <p><span class="fas fa-cube"></span> The design below is allowed by Java. <span class="dimmed">In case you are not familiar with UML notation used: solid lines indicate normal inheritance; dashed lines indicate interface inheritance; the triangle points to pare parent.</span></p>
-                      <img src="/website/book/oop/inheritance/interfaces/images/studentStaff.png" height="250">
+                      <p>Example:</p>
+                      <img src="/website/book/codeQuality/maximiseReadability/basic/avoidDeepNesting/images/arrowheadStyle.png" height="250">
                       <p></p>
-                      <ol>
-                        <li><code>Staff</code> interface inherits (note the solid lines) the interfaces <code>TaxPayer</code> and <code>Citizen</code>.</li>
-                        <li><code>TA</code> class implements both <code>Student</code> interface and the <code>Staff</code> interface.</li>
-                        <li>Because of point 1 above, <code>TA</code> class has to implement all methods in the interfaces <code>TaxPayer</code> and <code>Citizen</code>.</li>
-                        <li>Because of points 1,2,3, a <code>TA</code> <em>is a</em> <code>Staff</code>, <em>is a</em> <code>TaxPayer</code> and <em>is a</em> <code>Citizen</code>.</li>
-                      </ol>
-                      <p><strong>An interface can be used as a type.</strong></p>
-                      <pre><code class="hljs java">Staff s = <span class="hljs-keyword">new</span> TA();
-</code></pre>
-                      <p><strong>A Java interface can contain <a href="https://docs.oracle.com/javase/tutorial/java/IandI/defaultmethods.html"><em>default</em> method implementations</a>.</strong></p>
                     </tip-box>
                   </div>
                   <div></div>
                 </div>
               </div>
             </div>
-            <hr style="border-top: dashed 1px; border-color:grey">
-            <p><big><span class="fas fa-briefcase"></span> Evidence:</big></p>
-            <div>
-              <p><strong>Acceptable</strong>: Using interfaces in any past project.</p>
-              <p><strong>Suggested</strong>: Do the exercise in [<a href="https://github.com/nusCS2113-AY1819S1/addressbook-level3/blob/master/docs/LearningOutcomes.adoc#use-interfaces-code-lo-interfaces-code">Addressbook-Level3: LO-Interfaces</a>]</p>
+        </panel>
+        <panel type="warning" expanded="" no-close="" epxandable="true">
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W5.8d</code></span></big> <span><span class="fas fa-trophy"></span> Can improve code quality using technique: avoid complicated expressions </span>
+          <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+          </span>
+          </span>
+          </span>
+          <div>
+            <div></div>
+            <p></p>
+            <p><span class="dimmed"><strong><span>Implementation → Code Quality → Readability → Basic →
+</span></strong>
+              </span>
+            </p>
+            <div id="title-and-body">
               <div>
-                <p><strong>Submission</strong>: Create a PR against <a href="https://github.com/nusCS2113-AY1819S1/addressbook-level3">Addressbook-Level3</a>. <mark>Remember to use team ID</mark> (e.g. <em>W09-2</em>) in your PR name.</p>
-                <p>
-                  <panel src="/website\admin\appendixE-gitHub._include_.html#tutorial-pr-instructions" header="%%Admin <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Appendix E: Using GitHub Project Hosting → Submitting Pull Requests as evidence of an LO%%"
-                    fragment="tutorial-pr-instructions"></panel>
-                </p>
+                <h4 id="avoid-complicated-expressions">Avoid Complicated Expressions</h4>
+              </div>
+              <div id="main">
+                <div>
+                  <p>Avoid complicated expressions, especially those having many negations and nested parentheses. If you must evaluate complicated expressions, have it done in steps (i.e. calculate some intermediate values first and use them to calculate
+                    the final value).</p>
+                  <div class="alt-java">
+                    <div>
+                      <tip-box>
+                        <p><span class="fas fa-cube"></span> Example:</p>
+                        <p>
+                          <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong>
+                            </span>
+                          </font>
+                        </p>
+                        <pre><code class="hljs java"><span class="hljs-keyword">return</span> ((length &lt; MAX_LENGTH) || (previousSize != length)) &amp;&amp; (typeCode == URGENT);
+</code></pre>
+                        <p>
+                          <font color="green"><span><strong><span class="fas fa-thumbs-up"></span> Good</strong>
+                            </span>
+                          </font>
+                        </p>
+                        <pre><code class="hljs java">
+<span class="hljs-keyword">boolean</span> isWithinSizeLimit = length &lt; MAX_LENGTH;
+<span class="hljs-keyword">boolean</span> isSameSize = previousSize != length;
+<span class="hljs-keyword">boolean</span> isValidCode = isWithinSizeLimit || isSameSize;
+
+<span class="hljs-keyword">boolean</span> isUrgent = typeCode == URGENT;
+
+<span class="hljs-keyword">return</span> isValidCode &amp;&amp; isUrgent;
+</code></pre>
+                      </tip-box>
+                    </div>
+                  </div>
+                  <div class="alt-python">
+                    <div>
+                      <tip-box>
+                        <p><span class="fas fa-cube"></span> Example:</p>
+                        <p>
+                          <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong>
+                            </span>
+                          </font>
+                        </p>
+                        <pre><code class="hljs python"><span class="hljs-keyword">return</span> ((length &lt; MAX_LENGTH) <span class="hljs-keyword">or</span> (previous_size != length)) <span class="hljs-keyword">and</span> (type_code == URGENT)
+</code></pre>
+                        <p>
+                          <font color="green"><span><strong><span class="fas fa-thumbs-up"></span> Good</strong>
+                            </span>
+                          </font>
+                        </p>
+                        <pre><code class="hljs python">is_within_size_limit = length &lt; MAX_LENGTH
+is_same_size = previous_size != length
+is_valid_code = is_within_size_limit <span class="hljs-keyword">or</span> is_same_size
+
+is_urgent = type_code == URGENT
+
+<span class="hljs-keyword">return</span> is_valid_code <span class="hljs-keyword">and</span> is_urgent
+</code></pre>
+                      </tip-box>
+                    </div>
+                  </div>
+                  <blockquote>
+                    <p>The competent programmer is fully aware of the strictly limited size of his own skull; therefore he approaches the programming task in full humility, and among other things he avoids clever tricks like the plague. <sub>-- Edsger Dijkstra</sub></p>
+                  </blockquote>
+                </div>
+                <div></div>
               </div>
             </div>
+          </div>
+        </panel>
+        <panel type="warning" expanded="" no-close="" epxandable="true">
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W5.8e</code></span></big> <span><span class="fas fa-trophy"></span> Can improve code quality using technique: avoid magic numbers </span>
+          <span
+            class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+            </span>
+            </span>
+            </span>
+            <div>
+              <div></div>
+              <p></p>
+              <p><span class="dimmed"><strong><span>Implementation → Code Quality → Readability → Basic →
+</span></strong>
+                </span>
+              </p>
+              <div id="title-and-body">
+                <div>
+                  <h4 id="avoid-magic-numbers">Avoid Magic Numbers</h4>
+                </div>
+                <div id="main">
+                  <div>
+                    <p>When the code has a number that does not explain the meaning of the number, we call that a magic number (as in “the number appears as if by magic”). Using a
+                      <tooltip content="e.g., `PI`"><em>named constant</em></tooltip> makes the code easier to understand because the name tells us more about the meaning of the number.</p>
+                    <tip-box>
+                      <p><span class="fas fa-cube"></span> Example:</p>
+                      <div class="alt-java">
+                        <div>
+                          <table>
+                            <tr>
+                            
+                              <td valign="top">
+                                <p>
+                                  <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong>
+                                    </span>
+                                  </font>
+                                </p>
+                                <pre><code class="hljs java"><span class="hljs-keyword">return</span> <span class="hljs-number">3.14236</span>;
+...
+<span class="hljs-keyword">return</span> <span class="hljs-number">9</span>;
+</code></pre>
+                                <p></p>
+                              </td>
+                            
+                              <td>  <br><br></td>
+                            
+                              <td valign="top">
+                                <p>
+                                  <font color="green"><span><strong><span class="fas fa-thumbs-up"></span> Good</strong>
+                                    </span>
+                                  </font>
+                                </p>
+                                <pre><code class="hljs java"><span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">double</span> PI = <span class="hljs-number">3.14236</span>;
+<span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> MAX_SIZE = <span class="hljs-number">10</span>;
+...
+<span class="hljs-keyword">return</span> PI;
+...
+<span class="hljs-keyword">return</span> MAX_SIZE-<span class="hljs-number">1</span>;
+</code></pre>
+                                <p></p>
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
+                      </div>
+                      <div class="alt-python">
+                        <div>
+                          <p>Note: Python does not have a way to make a variable a constant. However, you can use a normal variable with an <code>ALL_CAPS</code> name to simulate a constant.</p>
+                          <table>
+                            <tr>
+                            
+                              <td valign="top">
+                                <p>
+                                  <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong>
+                                    </span>
+                                  </font>
+                                </p>
+                                <pre><code class="hljs python"><span class="hljs-keyword">return</span> <span class="hljs-number">3.14236</span>
+...
+<span class="hljs-keyword">return</span> <span class="hljs-number">9</span>
+</code></pre>
+                                <p></p>
+                              </td>
+                            
+                              <td>  <br><br></td>
+                            
+                              <td valign="top">
+                                <p>
+                                  <font color="green"><span><strong><span class="fas fa-thumbs-up"></span> Good</strong>
+                                    </span>
+                                  </font>
+                                </p>
+                                <pre><code class="hljs python">PI = <span class="hljs-number">3.14236</span>
+MAX_SIZE = <span class="hljs-number">10</span>
+...
+<span class="hljs-keyword">return</span> PI
+...
+<span class="hljs-keyword">return</span> MAX_SIZE<span class="hljs-number">-1</span>
+</code></pre>
+                                <p></p>
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
+                      </div>
+                    </tip-box>
+                    <p>Similarly, we can have ‘magic’ values of other data types.</p>
+                    <tip-box>
+                      <p>
+                        <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong>
+                          </span>
+                        </font>
+                      </p>
+                      <pre><code class="hljs java"><span class="hljs-string">"Error 1432"</span>  <span class="hljs-comment">// A magic string!</span>
+</code></pre>
+                    </tip-box>
+                  </div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+        </panel>
+        <panel type="warning" expanded="" no-close="" epxandable="true">
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W5.8f</code></span></big> <span><span class="fas fa-trophy"></span> Can improve code quality using technique: make the code obvious </span>
+          <span
+            class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+            </span>
+            </span>
+            </span>
+            <div>
+              <div></div>
+              <p></p>
+              <p><span class="dimmed"><strong><span>Implementation → Code Quality → Readability → Basic →
+</span></strong>
+                </span>
+              </p>
+              <div id="title-and-body">
+                <div>
+                  <h4 id="make-the-code-obvious">Make the Code Obvious</h4>
+                </div>
+                <div id="main">
+                  <div>
+                    <p>Make the code as explicit as possible, even if the language syntax allows them to be implicit. Here are some examples:</p>
+                    <ul>
+                      <li>[<code>Java</code>] Use explicit type conversion instead of implicit type conversion.</li>
+                      <li>[<code>Java</code>, <code>Python</code>] Use parentheses/braces to show grouping even when they can be skipped.</li>
+                      <li>[<code>Java</code>, <code>Python</code>] Use
+                        <trigger trigger="click" for="modal:obviousCode-enums">enumerations</trigger> when a certain variable can take only a small number of finite values. For example, instead of declaring the variable 'state' as an integer and using values 0,1,2 to denote the states 'starting', 'enabled',
+                        and 'disabled' respectively, declare 'state' as type <code>SystemState</code> and define an enumeration <code>SystemState</code> that has values <code>'STARTING'</code>, <code>'ENABLED'</code>, and <code>'DISABLED'</code>.</li>
+                    </ul>
+                    <modal title="More about enumerations" id="modal:obviousCode-enums">
+                      <ul>
+                        <li><a href="https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html">More about Java enumerations</a></li>
+                        <li><a href="https://docs.python.org/3/library/enum.html">More about Python enumerations</a></li>
+                      </ul>
+                    </modal>
+                  </div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+        </panel>
+        <panel type="info" expanded="" no-close="" epxandable="true">
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W5.8g</code></span></big> <span><span class="fas fa-trophy"></span> Can improve code quality using technique: structure code logically </span>
+          <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+          </span>
+          </span>
+          <div>
+            <div></div>
+            <p></p>
+            <p><span class="dimmed"><strong><span>Implementation → Code Quality → Readability → Intermediate →
+</span></strong>
+              </span>
+            </p>
+            <div id="title-and-body">
+              <div>
+                <h4 id="structure-code-logically">Structure Code Logically</h4>
+              </div>
+              <div id="main">
+                <div>
+                  <p>Lay out the code so that it adheres to the logical structure. The code should read like a story. Just like we use section breaks, chapters and paragraphs to organize a story, use classes, methods, indentation and line spacing in your
+                    code to group related segments of the code. For example, you can use blank lines to group related statements together. Sometimes, the correctness of your code does not depend on the order in which you perform certain intermediary steps.
+                    Nevertheless, this order may affect the clarity of the story you are trying to tell. Choose the order that makes the story most readable.</p>
+                </div>
+                <div></div>
+              </div>
+            </div>
+          </div>
+        </panel>
+        <panel type="info" expanded="" no-close="" epxandable="true">
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W5.8h</code></span></big> <span><span class="fas fa-trophy"></span> Can improve code quality using technique: do not 'trip up' reader </span>
+          <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+          </span>
+          </span>
+          <div>
+            <div></div>
+            <p></p>
+            <p><span class="dimmed"><strong><span>Implementation → Code Quality → Readability → Intermediate →
+</span></strong>
+              </span>
+            </p>
+            <div id="title-and-body">
+              <div>
+                <h4 id="do-not-trip-up-reader">Do Not 'Trip Up' Reader</h4>
+              </div>
+              <div id="main">
+                <div>
+                  <p>Avoid things that would make the reader go ‘huh?’, such as,</p>
+                  <ul>
+                    <li>unused parameters in the method signature</li>
+                    <li>similar things look different</li>
+                    <li>different things that look similar</li>
+                    <li>multiple statements in the same line</li>
+                    <li>data flow anomalies such as, pre-assigning values to variables and modifying it without any use of the pre-assigned value</li>
+                  </ul>
+                </div>
+                <div></div>
+              </div>
+            </div>
+          </div>
+        </panel>
+        <panel type="info" expanded="" no-close="" epxandable="true">
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W5.8i</code></span></big> <span><span class="fas fa-trophy"></span> Can improve code quality using technique: practice kissing </span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span
+            class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+            </span>
+            </span>
+            <div>
+              <div></div>
+              <p></p>
+              <p><span class="dimmed"><strong><span>Implementation → Code Quality → Readability → Intermediate →
+</span></strong>
+                </span>
+              </p>
+              <div id="title-and-body">
+                <div>
+                  <h4 id="practice-kissing">Practice KISSing</h4>
+                </div>
+                <div id="main">
+                  <div>
+                    <p>As the old adage goes, <strong>&quot;keep it simple, stupid” (KISS).  Do not try to write ‘clever’ code.</strong> For example, do not dismiss the brute-force yet simple solution in favor of a complicated one because of some ‘supposed
+                      benefits’ such as 'better reusability' unless you have a strong justification.</p>
+                    <blockquote>
+                      <p>Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it. <sub>--Brian W. Kernighan </sub></p>
+                    </blockquote>
+                    <blockquote>
+                      <p>Programs must be written for people to read, and only incidentally for machines to execute. <sub>--Abelson and Sussman</sub></p>
+                    </blockquote>
+                  </div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+        </panel>
+        <panel type="info" expanded="" no-close="" epxandable="true">
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W5.8j</code></span></big> <span><span class="fas fa-trophy"></span> Can improve code quality using technique: avoid premature optimizations </span>
+          <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+          </span>
+          </span>
+          <div>
+            <div></div>
+            <p></p>
+            <p><span class="dimmed"><strong><span>Implementation → Code Quality → Readability → Intermediate →
+</span></strong>
+              </span>
+            </p>
+            <div id="title-and-body">
+              <div>
+                <h4 id="avoid-premature-optimizations">Avoid Premature Optimizations</h4>
+              </div>
+              <div id="main">
+                <div>
+                  <p><strong>Optimizing code prematurely has several drawbacks</strong>:</p>
+                  <ul>
+                    <li><strong>We may not know which parts are the real performance bottlenecks</strong>. This is especially the case when the code undergoes transformations (e.g. compiling, minifying, transpiling, etc.) before it becomes an executable.
+                      Ideally, you should use a profiler tool to identify the actual bottlenecks of the code first, and optimize only those parts.</li>
+                    <li><strong>Optimizing can complicate the code</strong>, affecting correctness and understandability</li>
+                    <li><strong>Hand-optimized code can be harder for the compiler to optimize</strong> (the simpler the code, the easier for the compiler to optimize it). In many cases a compiler can do a better job of optimizing the runtime code if you
+                      don't get in the way by trying to hand-optimize the source code.</li>
+                  </ul>
+                  <p>A popular saying in the industry is <strong><em>make it work, make it right, make it fast</em></strong> which means in most cases getting the code to perform correctly should take priority over optimizing it. If the code doesn't work
+                    correctly, it has no value on matter how fast/efficient it it.</p>
+                  <blockquote>
+                    <p>Premature optimization is the root of all evil in programming. <sub>--<a href="https://en.wikipedia.org/wiki/Donald_Knuth">Donald Knuth</a></sub></p>
+                  </blockquote>
+                  <p>Note that <strong>there are cases where optimizing takes priority over other things</strong> <span class="dimmed">e.g. when writing code for resource-constrained environments</span>. This guideline simply a caution that you should optimize
+                    only when it is really needed.</p>
+                </div>
+                <div></div>
+              </div>
+            </div>
+          </div>
+        </panel>
+        <panel type="warning" expanded="" no-close="" epxandable="true">
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W5.8k</code></span></big> <span><span class="fas fa-trophy"></span> Can improve code quality using technique: slap hard </span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span
+            class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            </span>
+            </span>
+            </span>
+            </span>
+            <div>
+              <div></div>
+              <p></p>
+              <p><span class="dimmed"><strong><span>Implementation → Code Quality → Readability → Intermediate →
+</span></strong>
+                </span>
+              </p>
+              <div id="title-and-body">
+                <div>
+                  <h4 id="slap-hard">SLAP Hard</h4>
+                </div>
+                <div id="main">
+                  <div>
+                    <p>Avoid varying the level of
+                      <trigger trigger="click" for="modal:slap-abstraction">abstraction</trigger> within a code fragment. Note: The <em>Productive Programmer</em> (by Neal Ford) calls this the <em>SLAP principle</em> i.e. Single Level of Abstraction Per method.</p>
+                    <tip-box>
+                      <p>Example:</p>
+                      <p>
+                        <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong>
+                          </span>
+                        </font>
+                      </p>
+                      <pre><code class="hljs java">readData();
+salary = basic*rise+<span class="hljs-number">1000</span>;
+tax = (taxable?salary*<span class="hljs-number">0.07</span>:<span class="hljs-number">0</span>);
+displayResult();
+</code></pre>
+                      <p>
+                        <font color="green"><span><strong><span class="fas fa-thumbs-up"></span> Good</strong>
+                          </span>
+                        </font>
+                      </p>
+                      <pre><code class="hljs java">readData();
+processData();
+displayResult();
+</code></pre>
+                    </tip-box>
+                    <modal title="" id="modal:slap-abstraction">
+                    
+                      <div>
+                        <div></div>
+                        <p></p>
+                        <p><span class="dimmed"><strong><span>Design → Design Fundamentals → Abstraction →
+</span></strong>
+                          </span>
+                        </p>
+                        <div id="title-and-body">
+                          <div>
+                            <h4 id="what-3">What</h4>
+                          </div>
+                          <div id="main">
+                            <div>
+                              <tip-box type="definition">
+                                <div>
+                                  <p><strong>Abstraction</strong> is a technique for dealing with complexity. It works by establishing a level of complexity (or an aspect) we are interested in, and suppressing the more complex details below that level (or
+                                    irrelevant to that aspect).</p>
+                                </div>
+                              </tip-box>
+                              <p>Most programs are written to solve complex problems involving large amounts of intricate details. It is impossible to deal with all these details at the same time. The guiding principle of abstraction stipulates that we capture
+                                only details that are relevant to the current perspective or the task at hand.</p>
+                              <p><strong>Ignoring lower level data items and thinking in terms of bigger entities is called <em>data abstraction</em>.</strong></p>
+                              <tip-box>
+                                <p><span class="fas fa-cube"></span> Within a certain software component, we might deal with a <em>user</em> data type, while ignoring the details contained in the user data item such as <em>name</em>, and <em>date of birth</em>.
+                                  These details have been ‘abstracted away’ as they do not affect the task of that software component.</p>
+                              </tip-box>
+                              <p><strong><em>Control abstraction</em> abstracts away details of the actual control flow to focus on tasks at a simplified level.</strong></p>
+                              <tip-box>
+                                <p><span class="fas fa-cube"></span> <code>print(“Hello”)</code> is an abstraction of the actual output mechanism within the computer.</p>
+                              </tip-box>
+                              <p><strong>Abstraction can be applied repeatedly to obtain progressively <em>higher levels of abstractions</em>.</strong></p>
+                              <tip-box>
+                                <p><span class="fas fa-cube"></span> An example of different levels of data abstraction: a <code>File</code> is a data item that is at a higher level than an array and an array is at a higher level than a bit.</p>
+                                <p><span class="fas fa-cube"></span> An example of different levels of control abstraction: <code>execute(Game)</code> is at a higher level than <code>print(Char)</code> which is at a higher than an Assembly language instruction
+                                  <code>MOV</code>.</p>
+                              </tip-box>
+                            </div>
+                            <div></div>
+                          </div>
+                        </div>
+                      </div>
+                    </modal>
+                  </div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+        </panel>
+        <panel type="info" expanded="" no-close="" epxandable="true">
+          <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W5.8l</code></span></big> <span><span class="fas fa-trophy"></span> Can improve code quality using technique: make the happy path prominent </span>
+          <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+          </span>
+          </span>
+          <div>
+            <div></div>
+            <p></p>
+            <p><span class="dimmed"><strong><span>Implementation → Code Quality → Readability → Advanced →
+</span></strong>
+              </span>
+            </p>
+            <div id="title-and-body">
+              <div>
+                <h4 id="make-the-happy-path-prominent">Make the Happy Path Prominent</h4>
+              </div>
+              <div id="main">
+                <div>
+                  <p>The happy path (i.e. the execution path taken when everything goes well) should be clear and prominent in your code. Restructure the code to make the happy path unindented as much as possible. It is the ‘unusual’ cases that should be
+                    indented. Someone reading the code should not get distracted by alternative paths taken when error conditions happen. One technique that could help in this regard is the use of <a href="http://wiki.c2.com/?GuardClause">guard clauses</a>.</p>
+                  <tip-box>
+                    <p>Example:</p>
+                    <p>
+                      <font color="red"><span><strong><span class="fas fa-thumbs-down"></span> Bad</strong>
+                        </span>
+                      </font>
+                    </p>
+                    <pre><code class="hljs java"><span class="hljs-keyword">if</span> (!isUnusualCase) {  <span class="hljs-comment">//detecting an unusual condition</span>
+    <span class="hljs-keyword">if</span> (!isErrorCase) {
+        start();    <span class="hljs-comment">//main path</span>
+        process();
+        cleanup();
+        exit();
+    } <span class="hljs-keyword">else</span> {
+        handleError();
+    }
+} <span class="hljs-keyword">else</span> {
+    handleUnusualCase(); <span class="hljs-comment">//handling that unusual condition</span>
+}
+</code></pre>
+                    <p>In the code above,</p>
+                    <ul>
+                      <li>Unusual condition detection is separated from their handling.</li>
+                      <li>Main path is nested deeply.</li>
+                    </ul>
+                    <p>
+                      <font color="green"><span><strong><span class="fas fa-thumbs-up"></span> Good</strong>
+                        </span>
+                      </font>
+                    </p>
+                    <pre><code class="hljs java"><span class="hljs-keyword">if</span> (isUnusualCase) { <span class="hljs-comment">//Guard Clause</span>
+    handleUnusualCase();
+    <span class="hljs-keyword">return</span>;
+}
+
+<span class="hljs-keyword">if</span> (isErrorCase) { <span class="hljs-comment">//Guard Clause</span>
+    handleError();
+    <span class="hljs-keyword">return</span>;
+}
+
+start();
+process();
+cleanup();
+exit();
+</code></pre>
+                    <p>In contrast, the above code</p>
+                    <ul>
+                      <li>deals with unusual conditions as soon as they are detected so that the reader doesn't have to remember them for long.</li>
+                      <li>keeps the main path un-indented.</li>
+                    </ul>
+                  </tip-box>
+                </div>
+                <div></div>
+              </div>
+            </div>
+          </div>
         </panel>
       </panel>
     </div>
@@ -973,7 +1756,7 @@ The RoadBike has 23 MM tires.
     <p><span class="activity-desc">Project Management</span></p>
     <div class="indented">
       <panel no-close="" expandable="true">
-        <span slot="header" class="card-title"><span><code>W5.5</code> <strong>Can follow Forking Workflow</strong> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+        <span slot="header" class="card-title"><span><code>W5.9</code> <strong>Can follow Forking Workflow</strong> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
         <span
           class="glyphicon glyphicon-star" aria-hidden="true"></span>
           </span>
@@ -981,7 +1764,7 @@ The RoadBike has 23 MM tires.
           </span>
           </span>
           <panel type="warning" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W5.5a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain forking workflow</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W5.9a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain forking workflow</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span>
               </span>
@@ -1030,7 +1813,7 @@ The RoadBike has 23 MM tires.
               </div>
           </panel>
           <panel type="info" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W5.5b</code></span></big> <span><span class="fas fa-trophy"></span> Can follow Forking Workflow</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W5.9b</code></span></big> <span><span class="fas fa-trophy"></span> Can follow Forking Workflow</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
@@ -1111,7 +1894,7 @@ The RoadBike has 23 MM tires.
               </div>
           </panel>
           <panel type="info" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W5.5c</code></span></big> <span><span class="fas fa-trophy"></span> Can explain DRCS vs CRCS</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W5.9c</code></span></big> <span><span class="fas fa-trophy"></span> Can explain DRCS vs CRCS</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
@@ -1132,12 +1915,14 @@ The RoadBike has 23 MM tires.
                       <p><strong>RCS can be done in two ways: the <em>centralized</em> way and the <em>distributed</em> way.</strong></p>
                       <p><strong>Centralized RCS (CRCS for short)uses a central remote repo that is shared by the team.</strong> Team members download (‘pull’) and upload (‘push’) changes between their own local repositories and the central repository. Older
                         RCS tools such as CVS and SVN support only this model. Note that these older RCS do not support the notion of a local repo either. Instead, they force users to do all the versioning with the remote repo.</p>
-                      <pic src="/website/book/revisionControl/drcsVsCrcs/images/crcsDiagram.png" height="180">
-                        <strong>The centralized RCS approach without any local repos (e.g., CVS, SVN)</strong></pic>
+                      <pic src="/website/book/revisionControl/drcsVsCrcs/images/crcsDiagram.png" width="300">
+                        <p><em>The centralized RCS approach without any local repos (e.g., CVS, SVN)</em></p>
+                      </pic>
                       <p><strong>Distributed RCS (DRCS for short, also known as Decentralized RCS) allows multiple remote repos</strong> and pulling and pushing can be done among them in arbitrary ways. The workflow can vary differently from team to team.
                         For example, every team member can have his/her own remote repository in addition to their own local repository, as shown in the diagram below. Git and Mercurial are some prominent RCS tools that support the distributed approach.</p>
-                      <pic src="/website/book/revisionControl/drcsVsCrcs/images/drcsDiagram.png" height="240">
-                        <strong>The decentralized RCS approach</strong></pic>
+                      <pic src="/website/book/revisionControl/drcsVsCrcs/images/drcsDiagram.png" width="300">
+                        <p><em>The decentralized RCS approach</em></p>
+                      </pic>
                     </div>
                     <div></div>
                   </div>
@@ -1145,7 +1930,7 @@ The RoadBike has 23 MM tires.
               </div>
           </panel>
           <panel type="success" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W5.5d</code></span></big> <span><span class="fas fa-trophy"></span> Can explain feature branch flow</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W5.9d</code></span></big> <span><span class="fas fa-trophy"></span> Can explain feature branch flow</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
@@ -1167,8 +1952,8 @@ The RoadBike has 23 MM tires.
                   </div>
                   <div id="main">
                     <div>
-                      <p><strong><em>Feature branch</em> workflow is similar to forking workflow except there are no forks or PRs.</strong> Everyone is pushing/pulling from the same remote repo. The phrase <em>feature branch</em> is used because each new
-                        feature (or bug fix, or any other modification) is done in a separate branch.</p>
+                      <p><strong><em>Feature branch</em> workflow is similar to forking workflow except there are no forks.</strong> Everyone is pushing/pulling from the same remote repo. The phrase <em>feature branch</em> is used because each new feature
+                        (or bug fix, or any other modification) is done in a separate branch and merged to <code>master</code> branch when ready.</p>
                       <img src="/website/book/revisionControl/featureBranchFlow/images/diagram.png" height="330">
                       <p></p>
                     </div>
@@ -1186,7 +1971,7 @@ The RoadBike has 23 MM tires.
               </div>
           </panel>
           <panel type="success" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W5.5e</code></span></big> <span><span class="fas fa-trophy"></span> Can explain centralized flow</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W5.9e</code></span></big> <span><span class="fas fa-trophy"></span> Can explain centralized flow</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
@@ -1208,7 +1993,7 @@ The RoadBike has 23 MM tires.
                   </div>
                   <div id="main">
                     <div>
-                      <p><strong>The <em>centralized workflow</em> is similar to the feature branch workflow except all changes are done in the master branch.</strong></p>
+                      <p><strong>The <em>centralized workflow</em> is similar to the feature branch workflow except all changes are done in the <code>master</code> branch.</strong></p>
                     </div>
                     <div>
                       <div>
@@ -1225,7 +2010,7 @@ The RoadBike has 23 MM tires.
           </panel>
       </panel>
       <panel no-close="" expandable="true">
-        <span slot="header" class="card-title"><span><code>W5.6</code> <strong>Can use GitHub PRs in a workflow</strong> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+        <span slot="header" class="card-title"><span><code>W5.10</code> <strong>Can use GitHub PRs in a workflow</strong> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
         <span
           class="glyphicon glyphicon-star" aria-hidden="true"></span>
           </span>
@@ -1233,7 +2018,7 @@ The RoadBike has 23 MM tires.
           </span>
           </span>
           <panel type="warning" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W5.6a</code></span></big> <span><span class="fas fa-trophy"></span> Can use Git to resolve merge conflicts</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W5.10a</code></span></big> <span><span class="fas fa-trophy"></span> Can use Git to resolve merge conflicts</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span>
               </span>
@@ -1314,7 +2099,7 @@ white
               </div>
           </panel>
           <panel type="warning" expanded="" no-close="" epxandable="true">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W5.6b</code></span></big> <span><span class="fas fa-trophy"></span> Can review and merge PRs on GitHub</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W5.10b</code></span></big> <span><span class="fas fa-trophy"></span> Can review and merge PRs on GitHub</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span>
               </span>
@@ -1433,17 +2218,15 @@ This repo can be used to practice creating PRs.
 git pull origin master
 </code></pre>
                       <p>Observe how the <code>add-intro</code> branch is now merged to the <code>master</code> branch in your local repo as well.</p>
-                      <p><strong>5. De-conflict the <code>add-summary</code> PR.</strong> Note that GitHub page for the <code>add-summary</code> PR is now showing a conflict <span class="dimmed">(when you scroll to the bottom of that page, you should see a message <code>This branch has conflicts that must be resolved</code>)</span>.
+                      <p><strong>5. De-conflict the <code>add-summary</code> PR</strong>
+                        <trigger trigger="click" for="modal:managePrs-createPrs">that you created earlier</trigger>. Note that GitHub page for the <code>add-summary</code> PR is now showing a conflict <span class="dimmed">(when you scroll to the bottom of that page, you should see a message <code>This branch has conflicts that must be resolved</code>)</span>.
                         You can resolve it locally and update the PR accordingly, as explained below.</p>
                       <p>5a. Switch to the <code>add-summary</code> branch. To make that branch up-to-date with the <code>master</code> branch, merge the <code>master</code> branch to it, which will surface the merge conflict. Resolve it and complete the
                         merge.</p>
                       <p>5b. Push the updated <code>add-summary</code> branch to the fork. That will remove the 'merge conflicts' warning in the GitHub page of the PR.</p>
                       <p><strong>6. Merge the <code>add-summary</code> PR</strong> using the GitHub interface, similar to how you merged the previous PR.</p>
-                      <tip-box type="info">
-                        <p>Note that you could have merged the <code>add-summary</code> branch to the <code>master</code> branch locally before pushing it to GitHub. In that case, the PR will be merged on GitHub automatically to reflect that the branch has
-                          been merged already.
-                        </p>
-                      </tip-box>
+                      <p><span class="fas fa-info-circle"></span> Note that you could have merged the <code>add-summary</code> branch to the <code>master</code> branch locally before pushing it to GitHub. In that case, the PR will be merged on GitHub automatically
+                        to reflect that the branch has been merged already.</p>
                     </div>
                     <div></div>
                   </div>
@@ -1463,7 +2246,7 @@ git pull origin master
     <p><span class="activity-desc">🅿️ Project</span></p>
     <div class="indented">
       <panel no-close="" expandable="true">
-        <span slot="header" class="card-title"><span><code>W5.7</code> <strong>Can work with a 2KLoC code base</strong> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+        <span slot="header" class="card-title"><span><code>W5.11</code> <strong>Can work with a 2KLoC code base</strong> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
         </span>
         </span>
         <div>
@@ -1497,7 +2280,7 @@ git pull origin master
             <p><strong>Submission</strong>:</p>
             <ul>
               <li>Options 1 (discouraged): Show the relevant code during the tutorial.</li>
-              <li>Options 2 (preferred): Create a pull request by following the instructions below.</li>
+              <li>Options 2 (<strong>preferred</strong>): Create a PR against <a href="https://github.com/nusCS2113-AY1819S1/addressbook-level2">Addressbook-Level2</a> by following the instructions below.</li>
             </ul>
             <p>
               <panel src="/website\admin\appendixE-gitHub._include_.html#tutorial-pr-instructions" header="%%Admin <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Appendix E: Using GitHub Project Hosting → Submitting Pull Requests as evidence of an LO%%"
@@ -1522,7 +2305,7 @@ git pull origin master
         </div>
       </panel>
       <panel no-close="" expandable="true">
-        <span slot="header" class="card-title"><span><code>W5.8</code> <strong>Can conceptualize a product</strong> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+        <span slot="header" class="card-title"><span><code>W5.12</code> <strong>Can conceptualize a product</strong> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
         </span>
         </span>
         <div>
@@ -1539,7 +2322,7 @@ git pull origin master
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.10.1</a> at Wed, 05 Sep 2018 10:51:08 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.10.1</a> at Thu, 06 Sep 2018 09:48:37 GMT</small></div>
 </footer>
 </div>
 </body>

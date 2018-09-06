@@ -513,7 +513,7 @@
           <tip-box>
             <p><span class="fas fa-cube"></span> In our example, as some <code>Course</code> objects can have associations with some <code>Student</code> objects, we can view it as an association between the <code>Course</code> class and the <code>Student</code>              class.</p>
           </tip-box>
-          <h5 id="implementing-associations"><big>Implementing associations</big></h5>
+          <h5 id="implementing-associations">Implementing associations</h5>
           <p><strong>We use instance level variables to implement associations.</strong></p>
         </div>
       </div>
@@ -543,7 +543,7 @@
             <p><span class="fas fa-cube"></span> The navigability of the association between <code>Course</code> objects and <code>Student</code> objects tells you how many <code>Course</code> objects can be associated with one <code>Student</code> object
               and vice versa.</p>
           </tip-box>
-          <h5 id="implementing-multiplicity"><big>Implementing multiplicity</big></h5>
+          <h5 id="implementing-multiplicity">Implementing multiplicity</h5>
           <p><strong>A normal instance-level variable gives us a <code>0..1</code> multiplicity</strong> (also called <em>optional associations</em>) because a variable can hold a reference to a single object or <code>null</code>.</p>
           <tip-box>
             <p><span class="fas fa-cube"></span> In the code below, the <code>Logic</code> class has a variable that can hold <code>0..1</code> <span class="dimmed">i.e., zero or one</span> <code>Minefield</code> objects.</p>
@@ -694,7 +694,7 @@
           <tip-box>
             <p><span class="fas fa-cube"></span> A <code>Course</code> object can have a dependency on a <code>Registrar</code> object to obtain the maximum number of students it can support.</p>
           </tip-box>
-          <h5 id="implementing-dependencies"><big>Implementing dependencies</big></h5>
+          <h5 id="implementing-dependencies">Implementing dependencies</h5>
           <p>Dependencies result from interactions between objects that do not result in a long-term link between the said objects.</p>
           <tip-box>
             <p><span class="fas fa-cube"></span> In the code below, <code>Foo</code> has a dependency on <code>Bar</code> but it is not an association because it is only a
@@ -762,7 +762,7 @@
             <p><span class="fas fa-cube"></span> The ‘sub-folder’ association between <code>Folder</code> objects is a composition type association. That means if the <code>Folder</code> object <code>foo</code> is a sub folder of <code>Folder</code> object
               <code>bar</code>, <code>bar</code> cannot be a sub-folder of <code>foo</code>.</p>
           </tip-box>
-          <h5 id="implementing-composition"><big>Implementing composition</big></h5>
+          <h5 id="implementing-composition">Implementing composition</h5>
           <p><strong>Composition too is implemented using a normal variable.</strong> If correctly implemented, the ‘part’ object will be deleted when the ‘whole’ object is deleted. Ideally, the ‘part’ object may not even be visible to clients of the ‘whole’
             object.</p>
           <tip-box>
@@ -1046,17 +1046,27 @@
       </h4>
       <div class="indented-less">
         <div>
-          <tip-box type="definition">
+          <box type="definition">
             <div>
-              <p><strong>Abstract Class</strong>:</p>
-              <p>An <em>abstract class</em> is a class that is declared <code>abstract</code>—it may or may not include abstract methods. Abstract classes cannot be instantiated, but they can be subclassed. <sub>-- <a href="https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html">Oracle's Java Documentation</a></sub></p>
+              <p><strong>Abstract Class</strong>: A class declared as an <em>abstract class</em> cannot be instantiated, but they can be subclassed.</p>
             </div>
-          </tip-box>
-          <p><strong>An abstract method is simply the method interface without the implementation.</strong></p>
-          <tip-box>
-            <p><span class="fas fa-cube"></span> The <code>Account</code> class has an abstract method (<code>addInterest()</code>).</p>
-          </tip-box>
-          <p><strong>A class that has an abstract method becomes an abstract class</strong>. Evan a class that does not have any abstract method can be declared as an abstract class. Abstract classes cannot be instantiated.</p>
+          </box>
+          <p><strong>You can use declare a class as abstract when a class is merely a representation of commonalities among its subclasses</strong> in which case it does not make sense to instantiate objects of that class.</p>
+          <box>
+            <p><span class="fas fa-cube"></span> The <code>Animal</code> class that exist as a generalization of its subclasses <code>Cat</code>, <code>Dog</code>, <code>Horse</code>, <code>Tiger</code> etc. can be declared as abstract because it does not
+              make sense to instantiate an <code>Animal</code> object.</p>
+          </box>
+          <box type="definition">
+            <div>
+              <p><strong>Abstract Method</strong>: An <em>abstract method</em> is a method signature without a method implementation.</p>
+            </div>
+          </box>
+          <box>
+            <p><span class="fas fa-cube"></span> The <code>move</code> method of the <code>Animal</code> class is likely to be an abstract method as it is not possible to implement a <code>move</code> method at the <code>Animal</code> class level to fit
+              all subclasses <span class="dimmed">because each animal type can move in a different way</span>.</p>
+          </box>
+          <p><strong>A class that has an abstract method becomes an abstract class</strong> because the class definition is incomplete (due to the missing method body) and it is not possible to create objects using an incomplete class definition.</p>
+          <p>Evan <strong>a class that does not have any abstract methods <em>can</em> be declared as an abstract class.</strong></p>
         </div>
       </div>
     </div>
@@ -1368,7 +1378,7 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
       </h4>
       <div class="indented-less">
         <div>
-          <tip-box type="primary">
+          <tip-box type="definition">
             <div>
               <p><strong>Polymorphism</strong>:</p>
               <blockquote>
@@ -1376,53 +1386,20 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
               </blockquote>
             </div>
           </tip-box>
-          <p>Take the example of writing a payroll application for a university to facilitate payroll processing of university staff. Suppose an <code>adjustSalary(int)</code> operation adjusts the salaries of all staff members. This operation will be executed
-            whenever the university initiates a salary adjustment for its staff. However, the adjustment formula is different for different staff categories, say admin and academic. Here is one possible way of designing the classes in the <code>Payroll</code>            system.</p>
-          <p>Here is the implementation of the <code>adjustSalary(int)</code> operation.</p>
-          <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Payroll1</span> </span>{
-    ArrayList&lt;Admin&gt; admins;
-    ArrayList&lt;Academic&gt; academics;
-    <span class="hljs-comment">// ...</span>
+          <p><strong><em>Polymorphism</em> allows you to write code targeting superclass objects, use that code on subclass objects, and achieve possibly different results based on the actual class of the object.</strong></p>
+          <box>
+            <p><span class="fas fa-cube"></span> Assume classes <code>Cat</code> and <code>Dog</code> are both subclasses of the <code>Animal</code> class. You can write code targeting <code>Animal</code> objects and use that code on <code>Cat</code> and
+              <code>Dog</code> objects, achieving possibly different results based on whether it is a <code>Cat</code> object or a <code>Dog</code> object. Some examples:</p>
+            <ul>
+              <li>Declare an array of type <code>Animal</code> and still be able to store <code>Dog</code> and <code>Cat</code> objects in it.</li>
+              <li>Define a method that takes an <code>Animal</code> object as a parameter and yet be able to pass <code>Dog</code> and <code>Cat</code> objects to it.</li>
+              <li>Call a method on a <code>Dog</code> or a <code>Cat</code> object as if it is an <code>Animal</code> object <span class="dimmed">(i.e., without knowing whether it is a <code>Dog</code> object or a <code>Cat</code> object)</span> and get a
+                different response from it based on its actual class <span class="dimmed">e.g., call the <code>Animal</code> class' method <code>speak()</code> on object <code>a</code> and get a <code>Meow</code> as the return value if <code>a</code> is a <code>Cat</code> object and <code>Woof</code> if it is a <code>Dog</code> object</span>.
+              </li>
+            </ul>
+          </box>
 
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">adjustSalary</span><span class="hljs-params">(<span class="hljs-keyword">int</span> byPercent)</span> </span>{
-        <span class="hljs-keyword">for</span> (Admin ad: admins) {
-            ad.adjustSalary(byPercent);
-        }
-        <span class="hljs-keyword">for</span> (Academic ac: academics) {
-            ac.adjustSalary(byPercent);
-        }
-    }
-}
-</code></pre>
-          <p>Note how processing is similar for the two staff types. It is as if the type of staff members is irrelevant to how they are processed inside this operation! If that is the case, can the staff type be &quot;abstracted away&quot; from this method?
-            Here is such an implementation of <code>adjustSalary(int)</code>:</p>
-          <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Payroll2</span> </span>{
-    ArrayList&lt;Staff&gt; staff;
-    <span class="hljs-comment">// ...</span>
-
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">adjustSalary</span><span class="hljs-params">(<span class="hljs-keyword">int</span> byPercent)</span> </span>{
-        <span class="hljs-keyword">for</span> (Staff s: staff) {
-            s.adjustSalary(byPercent);
-        }
-    }
-}
-</code></pre>
-          <p>Notice the following:</p>
-          <ul>
-            <li>Only one data structure <code>ArrayList&lt;Staff&gt;</code>. It contains both <code>Admin</code> and <code>Academic</code> objects but treats them as <code>Staff</code> objects</li>
-            <li>Only one loop</li>
-            <li>Outcome of the <code>s.adjustSalary(byPercent)</code> method call depends on whether <code>s</code> is an <code>Academic</code> or <code>Admin</code> object</li>
-          </ul>
-          <p>The above code is better in several ways:</p>
-          <ul>
-            <li>It is shorter.</li>
-            <li>It is simpler.</li>
-            <li>It is more flexible (this code will remain the same even if more staff types are added).</li>
-          </ul>
-          <p>This does not mean we are getting rid of the <code>Academic</code> and <code>Admin</code> classes completely and replacing them with a more general class called <code>Staff</code>. Rather, this part of the code “treats” both <code>Admin</code>            and <code>Academic</code> objects as one type called <code>Staff</code>.</p>
-          <p>For example, <code>ArrayList</code> staff contains both <code>Admin</code> and <code>Academic</code> objects although it treats all of them as <code>Staff</code> objects. However, when the <code>adjustSalary(int)</code> operation of these objects
-            is called, the resulting salary adjustment will be different for <code>Admin</code> objects and <code>Academic</code> objects. Therefore, different types of objects are treated as a single general type, but yet each type of object exhibits
-            a different kind of behavior. This is called <em>polymorphism</em> (literally, it means “ability to take many forms”). In this example, an object that is perceived as type <code>Staff</code> can be an <code>Admin</code> object or an <code>Academic</code>            object.</p>
+          <p><em>Polymorphism</em> literally means &quot;ability to take many forms&quot;.</p>
         </div>
       </div>
     </div>
@@ -3015,14 +2992,23 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
       </h4>
       <div class="indented-less">
         <div>
-          <p><strong>Classes form the basis of class diagrams. <em>Associations</em> among objects/classes play an important role in an OO solution.</strong></p>
+          <p>
+            <panel type="seamless" src="/website\book\uml\classDiagrams\introduction\what\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Class Diagrams → Introduction → What"
+              alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/ClassDiagrams" fragment="main"></panel>
+          </p>
+          <p><strong>Classes form the basis of class diagrams.</strong></p>
           <p>
             <panel type="seamless" src="/website\book\uml\classDiagrams\classes\what\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Class Diagrams → Classes → What"
               alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Classes" fragment="main"></panel>
             <panel type="seamless" src="/website\book\uml\classDiagrams\classLevelMembers\what\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Class Diagrams → Class-Level Members → What"
               alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Class-Level Members" fragment="main"></panel>
+          </p>
+          <p><strong><em>Associations</em> are the main connections among the classes in a class diagram.</strong></p>
+          <p>
+            <panel type="seamless" src="/website\book\oop\associations\what\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Associations → What"
+              alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP/Associations" fragment="main"></panel>
             <panel type="seamless" src="/website\book\uml\classDiagrams\associations\what\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Class Diagrams → Associations → What"
-              alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Associations" fragment="main"></panel>
+              alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/Associations" fragment="main"></panel>
           </p>
           <p>The most basic class diagram is a bunch of classes with some solid lines among them to represent associations, such as this one.</p>
           <tip-box>
@@ -3036,9 +3022,13 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
               alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Labels" fragment="main"></panel>
             <panel type="seamless" src="/website\book\uml\classDiagrams\associations\roles\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Class Diagrams → Associations → Roles"
               alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Roles" fragment="main"></panel>
+            <panel type="seamless" src="/website\book\oop\associations\multiplicity\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Associations → Multiplicity"
+              alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP/Multiplicity" fragment="main"></panel>
             <panel type="seamless" src="/website\book\uml\classDiagrams\associations\multiplicity\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Class Diagrams → Associations → Multiplicity"
-              alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Multiplicity" fragment="main"></panel>
-            <panel type="seamless" src="/website\book\uml\classDiagrams\associations\navigability\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Class Diagrams → Associations → Navigability"
+              alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/Multiplicity" fragment="main"></panel>
+            <panel type="seamless" src="/website\book\oop\associations\navigability\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Associations → Navigability"
+              alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP/Navigability" fragment="main"></panel>
+            <panel type="seamless" src="/website\book\uml\classDiagrams\associations\navigability\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Class Diagrams → Associations → UML/Navigability"
               alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Navigability" fragment="main"></panel>
           </p>
           <tip-box>
@@ -3072,17 +3062,68 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
       </h4>
       <div class="indented-less">
         <div>
-          <p><strong>Compositions and Aggregations are stronger forms of associations while Dependencies are a weaker form of associations. Inheritance is another strong type of association between classes.</strong></p>
-          <p>
-            <panel src="/website\book\uml\classDiagrams\composition\what\unit-inElsewhere-asFlat._include_.html#title-and-body" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML → Class Diagrams → Composition → What"
-              alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Composition" minimized="" fragment="title-and-body"></panel>
-            <panel src="/website\book\uml\classDiagrams\aggregation\what\unit-inElsewhere-asFlat._include_.html#title-and-body" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML → Class Diagrams → Aggregation → What" alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Aggregation"
-              minimized="" fragment="title-and-body"></panel>
-            <panel src="/website\book\uml\classDiagrams\dependencies\what\unit-inElsewhere-asFlat._include_.html#title-and-body" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML → Class Diagrams → Dependencies → What" alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Dependencies"
-              minimized="" fragment="title-and-body"></panel>
-            <panel src="/website\book\uml\classDiagrams\classInheritance\what\unit-inElsewhere-asFlat._include_.html#title-and-body" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML → Class Diagrams → Inheritance → What" alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Inheritance"
-              minimized="" fragment="title-and-body"></panel>
-          </p>
+          <p><strong>A class diagram can also show different types of associations: inheritance, compositions, aggregations, dependencies.</strong></p>
+          <div class="indented">
+            <h5 id="modeling-inheritance">Modeling inheritance</h5>
+            <p>
+              <panel type="seamless" src="/website\book\oop\inheritance\what\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP → Inheritance → What" alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP/Inheritance"
+                fragment="main"></panel>
+              <panel type="seamless" src="/website\book\uml\classDiagrams\classInheritance\what\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML → Class Diagrams → Inheritance → What"
+                alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/Inheritance" fragment="main"></panel>
+            </p>
+            <h5 id="modeling-composition">Modeling composition</h5>
+            <p>
+              <panel type="seamless" src="/website\book\oop\associations\composition\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP → Associations → Composition" alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP/Composition"
+                fragment="main"></panel>
+              <panel type="seamless" src="/website\book\uml\classDiagrams\composition\what\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML → Class Diagrams → Composition → What"
+                alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/Composition" fragment="main"></panel>
+            </p>
+            <h5 id="modeling-aggregation">Modeling aggregation</h5>
+            <p>
+              <panel type="seamless" src="/website\book\oop\associations\aggregation\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP → Associations → Aggregation" alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP/Aggregation"
+                fragment="main"></panel>
+              <panel type="seamless" src="/website\book\uml\classDiagrams\aggregation\what\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML → Class Diagrams → Aggregation → What"
+                alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/Aggregation" fragment="main"></panel>
+            </p>
+            <h5 id="modeling-dependencies">Modeling dependencies</h5>
+            <p>
+              <panel type="seamless" src="/website\book\oop\associations\dependencies\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP → Associations → Dependencies" alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP/Dependencies"
+                fragment="main"></panel>
+              <panel type="seamless" src="/website\book\uml\classDiagrams\dependencies\what\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML → Class Diagrams → Dependencies → What"
+                alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/Dependencies" fragment="main"></panel>
+            </p>
+          </div>
+          <p><strong>A class diagram can also show different types of class-like entities:</strong></p>
+          <div class="indented">
+            <h5 id="modeling-enumerations">Modeling enumerations</h5>
+            <p>
+              <panel type="seamless" src="/website\book\oop\classes\enumerations\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP → Classes → Enumerations" alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP/Enumerations"
+                fragment="main"></panel>
+              <panel type="seamless" src="/website\book\uml\classDiagrams\enumerations\what\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML → Class Diagrams → Enumerations → What"
+                alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/Enumerations" fragment="main"></panel>
+            </p>
+            <h5 id="modeling-abstract-classes">Modeling abstract classes</h5>
+            <p>
+              <panel type="seamless" src="/website\book\oop\inheritance\abstractClasses\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP → Inheritance → Abstract Classes"
+                alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP/AbstractClasses" fragment="main"></panel>
+              <panel type="seamless" src="/website\book\uml\classDiagrams\abstractClasses\what\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML → Class Diagrams → Abstract Classes → What"
+                alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/AbstractClasses" fragment="main"></panel>
+            </p>
+            <h5 id="modeling-interfaces">Modeling interfaces</h5>
+            <p>
+              <panel type="seamless" src="/website\book\oop\inheritance\interfaces\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP → Inheritance → Interfaces" alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP/Interfaces"
+                fragment="main"></panel>
+              <panel type="seamless" src="/website\book\uml\classDiagrams\interfaces\what\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML → Class Diagrams → Interfaces → What" alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/Interfaces"
+                fragment="main"></panel>
+            </p>
+            <h5 id="modeling-association-classes">Modeling association classes</h5>
+            <p>
+              <panel type="seamless" src="/website\book\oop\associations\associationClasses\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP → Associations → Association Classes"
+                alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP/AssociationClasses" fragment="main"></panel>
+              <panel type="seamless" src="/website\book\uml\classDiagrams\associationClasses\what\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML → Class Diagrams → Association Classes → What"
+                alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/AssociationsClasses" fragment="main"></panel>
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -3094,17 +3135,16 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
       </h4>
       <div class="indented-less">
         <div>
-          <p><strong>An object diagrams shows the object structure (i.e., objects and their associations) at a specific time.</strong></p>
-          <div>
-            <p><strong>An object diagram shows an object structure at a given point of time.</strong></p>
-            <tip-box>
-              <img src="/website/book/oop/associations/what/images/completeStructure.png" height="120"></tip-box>
-          </div>
           <p>
-            <panel src="/website\book\uml\objectDiagrams\objects\unit-inElsewhere-asFlat._include_.html#title-and-body" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML → Object Diagrams → Objects" alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Objects"
-              minimized="" fragment="title-and-body"></panel>
-            <panel src="/website\book\uml\objectDiagrams\associations\unit-inElsewhere-asFlat._include_.html#title-and-body" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML → Object Diagrams → Associations → What" alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Associations"
-              minimized="" fragment="title-and-body"></panel>
+            <panel type="seamless" src="/website\book\uml\objectDiagrams\introduction\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML → Object Diagrams → Introduction"
+              alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Object Diagrams" fragment="main"></panel>
+          </p>
+          <p><strong>Object diagrams can be used to complement class diagrams.</strong> For example, you can use object diagrams to model different object structures that can result from a design represented by a given class diagram.</p>
+          <p>
+            <panel type="seamless" src="/website\book\uml\objectDiagrams\objects\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML → Object Diagrams → Objects" alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OD/Objects"
+              fragment="main"></panel>
+            <panel type="seamless" src="/website\book\uml\objectDiagrams\associations\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML → Object Diagrams → Associations" alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OD/Associations"
+              fragment="main"></panel>
           </p>
         </div>
       </div>
@@ -4704,8 +4744,8 @@ MAX_SIZE = <span class="hljs-number">10</span>
       </div>
     </div>
     <div class="indented-less">
-      <h4 id="slap-hard">SLAP Hard <span class="badge badge-light"><small><small><font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star"
-          aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></small>
+      <h4 id="slap-hard">SLAP Hard <span class="badge badge-light"><small><small><font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty"
+          aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></small>
         </small>
         </span>
       </h4>
@@ -6076,7 +6116,7 @@ send()
         <div>
           <blockquote>
             <p>Well-written applications include error-handling code that allows them to recover gracefully from unexpected errors. When an error occurs, the application may need to request user intervention, or it may be able to recover on its own. In extreme
-              cases, the application may log the user off or shut down the system. --<sub><a href="https://msdn.microsoft.com/en-us/library/windows/desktop/ms679320(v=vs.85).aspx">(source)</a></sub></p>
+              cases, the application may log the user off or shut down the system. --<sub><a href="https://msdn.microsoft.com/en-us/library/windows/desktop/ms679320(v=vs.85).aspx">Microsoft</a></sub></p>
           </blockquote>
         </div>
       </div>
@@ -6122,11 +6162,16 @@ send()
       </h4>
       <div class="indented-less">
         <div>
-          <p><strong>Most languages allow a method/function to encapsulate the unusual situation in an Exception object and 'throw'/'raise' that object so that another piece of code can 'catch' it and deal with it.</strong> This is especially useful when
-            code segment that encountered the unusual situation does not know how to deal with it.</p>
-          <p><strong>Exception objects can propagate up the function call hierarchy until it is dealt with.</strong> Usually, an exception thrown by a function is caught by the caller function. If the called function does not know how to deal with the exception
-            it caught, it can throw/raise the Exception object to its own caller. If none of the callers is prepared to deal with the exception, the exceptions can propagate through the
-            <tooltip content="the hieararchy of function calls">function call stack</tooltip> until it is received by the main function and thrown to the runtime, thus halting the system.</p>
+          <p><strong>Most languages allow code that encountered an &quot;exceptional&quot; situation to encapsulate details of the situation in an <em>Exception</em> object and <em>throw</em>/<em>raise</em> that object so that another piece of code can <em>catch</em> it and deal with it.</strong>            This is especially useful when the code that encountered the unusual situation does not know how to deal with it.</p>
+          <p>The extract below from the <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small> (with slight adaptations) explains how exceptions are typically handled.</p>
+          <div class="indented">
+            <p><strong>When an error occurs at some point in the execution, the code being executed creates an <em>exception object</em> and hands it off to the runtime system.</strong> The exception object contains information about the error, including
+              its type and the state of the program when the error occurred. Creating an exception object and handing it to the runtime system is called <em>throwing</em> an exception.</p>
+            <p><strong>After a method throws an exception, the runtime system attempts to find something to handle it in the <tooltip content="the ordered list of methods that had been called to get to the method where the error occurred"><em>call stack</em></tooltip>.</strong>              The runtime system searches the call stack for a method that contains a block of code that can handle the exception. This block of code is called an <em>exception handler</em>. The search begins with the method in which the error occurred
+              and proceeds through the call stack in the reverse order in which the methods were called. When an appropriate handler is found, the runtime system passes the exception to the handler. An exception handler is considered appropriate if the
+              type of the exception object thrown matches the type that can be handled by the handler.</p>
+            <p><strong>The exception handler chosen is said to <em>catch</em> the exception.</strong> If the runtime system exhaustively searches all the methods on the call stack without finding an appropriate exception handler, the program terminates.</p>
+          </div>
           <p>Advantages of exception handling in this way:</p>
           <ul>
             <li>The ability to propagate error information through the call stack.</li>
@@ -9789,12 +9834,14 @@ String name = logic.getName(<span class="hljs-number">23</span>);
           <p><strong>RCS can be done in two ways: the <em>centralized</em> way and the <em>distributed</em> way.</strong></p>
           <p><strong>Centralized RCS (CRCS for short)uses a central remote repo that is shared by the team.</strong> Team members download (‘pull’) and upload (‘push’) changes between their own local repositories and the central repository. Older RCS tools
             such as CVS and SVN support only this model. Note that these older RCS do not support the notion of a local repo either. Instead, they force users to do all the versioning with the remote repo.</p>
-          <pic src="/website/book/revisionControl/drcsVsCrcs/images/crcsDiagram.png" height="180">
-            <strong>The centralized RCS approach without any local repos (e.g., CVS, SVN)</strong></pic>
+          <pic src="/website/book/revisionControl/drcsVsCrcs/images/crcsDiagram.png" width="300">
+            <p><em>The centralized RCS approach without any local repos (e.g., CVS, SVN)</em></p>
+          </pic>
           <p><strong>Distributed RCS (DRCS for short, also known as Decentralized RCS) allows multiple remote repos</strong> and pulling and pushing can be done among them in arbitrary ways. The workflow can vary differently from team to team. For example,
             every team member can have his/her own remote repository in addition to their own local repository, as shown in the diagram below. Git and Mercurial are some prominent RCS tools that support the distributed approach.</p>
-          <pic src="/website/book/revisionControl/drcsVsCrcs/images/drcsDiagram.png" height="240">
-            <strong>The decentralized RCS approach</strong></pic>
+          <pic src="/website/book/revisionControl/drcsVsCrcs/images/drcsDiagram.png" width="300">
+            <p><em>The decentralized RCS approach</em></p>
+          </pic>
         </div>
       </div>
     </div>
@@ -10805,8 +10852,8 @@ String name = logic.getName(<span class="hljs-number">23</span>);
       <h3 id="composition-2">Composition</h3>
     </div>
     <div class="indented-less">
-      <h4 id="composition-3">Composition <span class="badge badge-light"><small><small><font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty"
-          aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></small>
+      <h4 id="composition-3">Composition <span class="badge badge-light"><small><small><font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star"
+          aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></small>
         </small>
         </span>
       </h4>
@@ -10828,29 +10875,6 @@ String name = logic.getName(<span class="hljs-number">23</span>);
   <div class="indented-less">
     <div>
       <h3 id="aggregation">Aggregation</h3>
-    </div>
-    <div class="indented-less">
-      <h4 id="aggregation-2">Aggregation <span class="badge badge-light"><small><small><font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star"
-          aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></small>
-        </small>
-        </span>
-      </h4>
-      <div class="indented-less">
-        <div>
-          <p><strong>UML uses a hollow diamond is used to indicate an aggregation.</strong></p>
-          <p>Notation:</p>
-          <img src="/website/book/uml/classDiagrams/aggregation/what/images/notation.png" height="45">
-          <tip-box>
-            <p><span class="fas fa-cube"></span> Example:</p>
-            <img src="/website/book/uml/classDiagrams/aggregation/what/images/clubPerson.png" height="85">
-            <p></p>
-          </tip-box>
-          <tip-box type="tip">
-            <p><strong>Aggregation vs Composition</strong></p>
-            <p>The distinction between composition (◆) and aggregation (◇) is rather blurred. Martin Fowler’s famous book <em>UML Distilled</em> advocates omitting the aggregation symbol altogether because using it adds more confusion than clarity.</p>
-          </tip-box>
-        </div>
-      </div>
     </div>
   </div>
   <div class="indented-less">
@@ -10883,8 +10907,8 @@ String name = logic.getName(<span class="hljs-number">23</span>);
       <h3 id="interfaces-2">Interfaces</h3>
     </div>
     <div class="indented-less">
-      <h4 id="interfaces-3">Interfaces <span class="badge badge-light"><small><small><font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty"
-          aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></small>
+      <h4 id="interfaces-3">Interfaces <span class="badge badge-light"><small><small><font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star"
+          aria-hidden="true"></span></font><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></small>
         </small>
         </span>
       </h4>
@@ -11153,8 +11177,9 @@ String name = logic.getName(<span class="hljs-number">23</span>);
       <div class="indented-less">
         <div>
           <p><strong>An object diagram shows an object structure at a given point of time.</strong></p>
-          <tip-box>
-            <img src="/website/book/oop/associations/what/images/completeStructure.png" height="120"></tip-box>
+          <box>
+            <p><span class="fas fa-cube"></span> An example object diagram:</p>
+            <img src="/website/book/modeling/modelingStructures/ooStructures/images/objectDiagram.png" height="120"></box>
         </div>
       </div>
     </div>
@@ -12450,16 +12475,14 @@ This repo can be used to practice creating PRs.
 git pull origin master
 </code></pre>
           <p>Observe how the <code>add-intro</code> branch is now merged to the <code>master</code> branch in your local repo as well.</p>
-          <p><strong>5. De-conflict the <code>add-summary</code> PR.</strong> Note that GitHub page for the <code>add-summary</code> PR is now showing a conflict <span class="dimmed">(when you scroll to the bottom of that page, you should see a message <code>This branch has conflicts that must be resolved</code>)</span>.
+          <p><strong>5. De-conflict the <code>add-summary</code> PR</strong>
+            <trigger trigger="click" for="modal:managePrs-createPrs">that you created earlier</trigger>. Note that GitHub page for the <code>add-summary</code> PR is now showing a conflict <span class="dimmed">(when you scroll to the bottom of that page, you should see a message <code>This branch has conflicts that must be resolved</code>)</span>.
             You can resolve it locally and update the PR accordingly, as explained below.</p>
           <p>5a. Switch to the <code>add-summary</code> branch. To make that branch up-to-date with the <code>master</code> branch, merge the <code>master</code> branch to it, which will surface the merge conflict. Resolve it and complete the merge.</p>
           <p>5b. Push the updated <code>add-summary</code> branch to the fork. That will remove the 'merge conflicts' warning in the GitHub page of the PR.</p>
           <p><strong>6. Merge the <code>add-summary</code> PR</strong> using the GitHub interface, similar to how you merged the previous PR.</p>
-          <tip-box type="info">
-            <p>Note that you could have merged the <code>add-summary</code> branch to the <code>master</code> branch locally before pushing it to GitHub. In that case, the PR will be merged on GitHub automatically to reflect that the branch has been merged
-              already.
-            </p>
-          </tip-box>
+          <p><span class="fas fa-info-circle"></span> Note that you could have merged the <code>add-summary</code> branch to the <code>master</code> branch locally before pushing it to GitHub. In that case, the PR will be merged on GitHub automatically to
+            reflect that the branch has been merged already.</p>
         </div>
       </div>
     </div>
@@ -13036,7 +13059,7 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.10.1</a> at Wed, 05 Sep 2018 10:51:08 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.10.1</a> at Thu, 06 Sep 2018 09:48:37 GMT</small></div>
 </footer>
 </div>
 </body>

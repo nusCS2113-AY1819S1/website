@@ -516,12 +516,14 @@
               <p><strong>RCS can be done in two ways: the <em>centralized</em> way and the <em>distributed</em> way.</strong></p>
               <p><strong>Centralized RCS (CRCS for short)uses a central remote repo that is shared by the team.</strong> Team members download (‘pull’) and upload (‘push’) changes between their own local repositories and the central repository. Older RCS
                 tools such as CVS and SVN support only this model. Note that these older RCS do not support the notion of a local repo either. Instead, they force users to do all the versioning with the remote repo.</p>
-              <pic src="/website/book/revisionControl/drcsVsCrcs/images/crcsDiagram.png" height="180">
-                <strong>The centralized RCS approach without any local repos (e.g., CVS, SVN)</strong></pic>
+              <pic src="/website/book/revisionControl/drcsVsCrcs/images/crcsDiagram.png" width="300">
+                <p><em>The centralized RCS approach without any local repos (e.g., CVS, SVN)</em></p>
+              </pic>
               <p><strong>Distributed RCS (DRCS for short, also known as Decentralized RCS) allows multiple remote repos</strong> and pulling and pushing can be done among them in arbitrary ways. The workflow can vary differently from team to team. For example,
                 every team member can have his/her own remote repository in addition to their own local repository, as shown in the diagram below. Git and Mercurial are some prominent RCS tools that support the distributed approach.</p>
-              <pic src="/website/book/revisionControl/drcsVsCrcs/images/drcsDiagram.png" height="240">
-                <strong>The decentralized RCS approach</strong></pic>
+              <pic src="/website/book/revisionControl/drcsVsCrcs/images/drcsDiagram.png" width="300">
+                <p><em>The decentralized RCS approach</em></p>
+              </pic>
             </div>
             <div></div>
         </div>
@@ -582,8 +584,8 @@
             </span>
             <p></p>
             <div>
-              <p><strong><em>Feature branch</em> workflow is similar to forking workflow except there are no forks or PRs.</strong> Everyone is pushing/pulling from the same remote repo. The phrase <em>feature branch</em> is used because each new feature
-                (or bug fix, or any other modification) is done in a separate branch.</p>
+              <p><strong><em>Feature branch</em> workflow is similar to forking workflow except there are no forks.</strong> Everyone is pushing/pulling from the same remote repo. The phrase <em>feature branch</em> is used because each new feature (or bug
+                fix, or any other modification) is done in a separate branch and merged to <code>master</code> branch when ready.</p>
               <img src="/website/book/revisionControl/featureBranchFlow/images/diagram.png" height="330">
               <p></p>
             </div>
@@ -614,7 +616,7 @@
             </span>
             <p></p>
             <div>
-              <p><strong>The <em>centralized workflow</em> is similar to the feature branch workflow except all changes are done in the master branch.</strong></p>
+              <p><strong>The <em>centralized workflow</em> is similar to the feature branch workflow except all changes are done in the <code>master</code> branch.</strong></p>
             </div>
             <div>
               <div>
@@ -633,7 +635,7 @@
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.10.1</a> at Wed, 05 Sep 2018 10:51:08 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.10.1</a> at Thu, 06 Sep 2018 09:48:37 GMT</small></div>
 </footer>
 </div>
 </body>
