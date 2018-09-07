@@ -1,74 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'UA-122519234-1');
-</script>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CS2113/T Website - Week 3 (flat version)</title>
-    <link rel="stylesheet" href="..\..\markbind\css\bootstrap.min.css">
-    <link rel="stylesheet" href="..\..\markbind\css\bootstrap-vue.min.css">
-    <link rel="stylesheet" href="..\..\markbind\css\font-awesome.min.css" >
-    <link rel="stylesheet" href="..\..\markbind\css\bootstrap-glyphicons.min.css" >
-    <link rel="stylesheet" href="..\..\markbind\css\github.min.css">
-    <link rel="stylesheet" href="..\..\markbind\css\markbind.css">
-    
-    <link rel="stylesheet" href="/website/css/main.css">
-<link rel="stylesheet" href="/website/css/schedule.css">
-    <link rel="icon" href="/website/favicon.ico">
-</head>
-<body>
-<div id="app" class="container-fluid">
-    <div>
-  <navbar placement="top" type="inverse">
-    <a slot="brand" href="/website/index-flat.html" title="Home" class="navbar-brand">CS2113/T <small>2018</small></a>
-    <dropdown text="Flat" class="nav-link">
-      <li><a href="/website/index-flat.html" class="dropdown-item"> <span class="fas fa-check"></span> Flat (current format)</a></li>
-      <li><a href="/website/index.html" class="dropdown-item">&nbsp;&nbsp;&nbsp;&nbsp;Nested</a></li>
-    </dropdown>
-    <li><a href="/website/index-flat.html" class="nav-link"><span><strong>Schedule</strong></span></a></li>
-    <li><a href="/website/se-book-adapted/index-flat.html" class="nav-link"><span><strong>Textbook</strong></span></a></li>
-    <li><a href="/website/admin/index-flat.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
-    <dropdown text="Links" class="nav-link">
-      <li><a href="https://github.com/nusCS2113-AY1819S1/website/issues" target="_blank" class="dropdown-item"> <span class="fas fa-bug"></span> Report Bugs</a></li>
-      <li><a href="https://nuscs2113-ay1819s1.slack.com" target="_blank" class="dropdown-item"><span class="fab fa-slack-hash"></span> Slack</a></li>
-      <li><a href="https://github.com/nusCS2113-AY1819S1/forum/issues" target="_blank" class="dropdown-item"><span class="fas fa-comment"></span> Forum</a></li>
-      <li><a href="https://docs.google.com/document/d/e/2PACX-1vTlgFILsldU6bgkCrXAt3-k_synfLY8orw-gdPxnhSWqkiU0nyYXidaYPSwEfuxysb5X8t3Vvb_78dV/pub?embedded=true" target="_blank" class="dropdown-item"><span class="fas fa-user-tie"></span> Instructors</a></li>
-      <li><a href="https://ivle.nus.edu.sg/v1/Announcement/default.aspx?CourseID=e3ecf866-dbc2-4b26-8873-82d371aa9b17" target="_blank" class="dropdown-item"><span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span> IVLE Announcements</a></li>
-      <li><a href="https://ivle.nus.edu.sg/v1/File/Student/default.aspx?CourseID=e3ecf866-dbc2-4b26-8873-82d371aa9b17&WorkbinID=208b1acf-7a65-45bf-a7a9-58c54556a0d3&FolderID=4a621f93-0732-42c6-9c25-bb39d3a94225" target="_blank" class="dropdown-item"><span class="fas fa-file-upload"></span> IVLE File Submissions</a></li>
-      <li><a href="/website/admin/tutorials.html" target="_blank" class="dropdown-item"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Tutorial Schedule</a></li>
-      <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSHbtOxheQPnskRMkD3C0n35FBPRAqABO_bh67_BgbA035bsV9WxRjqiJbBoJz1kBgLd5PLCYMUpWlZ/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" target="_blank" class="dropdown-item"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Team IDs</a></li>
-      <li><a href="https://oss-generic.github.io/process/codingStandards/CodingStandard-Java.html" target="_blank" class="dropdown-item"><span class="fas fa-code"></span> Java Coding Standard</a></li>
-      <li><a href="https://github.com/nusCS2113-AY1819S1/samplerepo-things" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> samplerepo-things</a></li>
-      <li><a href="https://github.com/nusCS2113-AY1819S1/addressbook-level1" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> Addressbook-level1</a></li>
-      <li><a href="https://github.com/nusCS2113-AY1819S1/addressbook-level2" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> Addressbook-level2</a></li>
-      <li><a href="https://github.com/nusCS2113-AY1819S1/addressbook-level3" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> Addressbook-level3</a></li>
-      <li><a href="https://github.com/nusCS2113-AY1819S1/addressbook-level4" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> Addressbook-level4</a></li>
-      <li><a href="/website/admin/projectList.html" target="_blank" class="dropdown-item"><span class="fas fa-th-list"></span> Projects List</a></li>
-    </dropdown>
-  </navbar>
-</div>
-<div class="website-content" id="main">
-  <h2 id="week-3-aug-27">Week 3 [Aug 27]</h2>
+<panel type="seamless" expanded="" no-close="">
+  <span slot="header" class="card-title activity-type"><span class="glyphicon glyphicon-check" aria-hidden="true"></span> Todo</span>
   <div class="indented">
-    <h3 id="todo"><span class="glyphicon glyphicon-check" aria-hidden="true"></span> Todo</h3>
-    <div class="indented">
-      <div></div>
+    <div>
+      <div id="additional"></div>
       <p><span class="activity-desc">Admin info to read:<span></span></span>
       </p>
       <div class="indented">
-        <panel type="dark" no-close="" expanded="" no-switch="" expandable="false">
-          <span slot="header" class="card-title"><span class="text-white"> Admin <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Project: Assessment <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+        <panel type="default" no-close="" expandable="true">
+          <span slot="header" class="card-title"> Admin <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Project: Assessment <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
           <span
             class="glyphicon glyphicon-star" aria-hidden="true"></span>
-            </span>
             </span>
             </span>
             </span>
@@ -2254,11 +2195,10 @@ compact(input);
             </div>
         </panel>
         <p></p>
-        <panel type="dark" no-close="" expanded="" no-switch="" expandable="false">
-          <span slot="header" class="card-title"><span class="text-white"> Admin <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Appendix B (Policies) → Policy on following instructions <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+        <panel type="default" no-close="" expandable="true">
+          <span slot="header" class="card-title"> Admin <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Appendix B (Policies) → Policy on following instructions <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
           <span
             class="glyphicon glyphicon-star" aria-hidden="true"></span>
-            </span>
             </span>
             </span>
             </span>
@@ -2274,11 +2214,10 @@ compact(input);
             </div>
         </panel>
         <p></p>
-        <panel type="dark" no-close="" expanded="" no-switch="" expandable="false">
-          <span slot="header" class="card-title"><span class="text-white"> Admin <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Peer Evaluations <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+        <panel type="default" no-close="" expandable="true">
+          <span slot="header" class="card-title"> Admin <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Peer Evaluations <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
           <span
             class="glyphicon glyphicon-star" aria-hidden="true"></span>
-            </span>
             </span>
             </span>
             </span>
@@ -2348,11 +2287,10 @@ compact(input);
               <img src="/website/admin/images/peer evaluations.png" width="600px"></div>
         </panel>
         <p></p>
-        <panel type="dark" no-close="" expanded="" no-switch="" expandable="false">
-          <span slot="header" class="card-title"><span class="text-white"> Admin <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Grade Breakdown <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+        <panel type="default" no-close="" expandable="true">
+          <span slot="header" class="card-title"> Admin <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Grade Breakdown <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
           <span
             class="glyphicon glyphicon-star" aria-hidden="true"></span>
-            </span>
             </span>
             </span>
             </span>
@@ -4694,11 +4632,10 @@ compact(input);
       </div>
       </panel>
       <p></p>
-      <panel type="dark" no-close="" expanded="" no-switch="" expandable="false">
-        <span slot="header" class="card-title"><span class="text-white"> Admin <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Participation Marks <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+      <panel type="default" no-close="" expandable="true">
+        <span slot="header" class="card-title"> Admin <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Participation Marks <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
         <span
           class="glyphicon glyphicon-star" aria-hidden="true"></span>
-          </span>
           </span>
           </span>
           </span>
@@ -4771,11 +4708,10 @@ compact(input);
           </div>
       </panel>
       <p></p>
-      <panel type="dark" no-close="" expanded="" no-switch="" expandable="false">
-        <span slot="header" class="card-title"><span class="text-white"> Admin <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Project: Supervision <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+      <panel type="default" no-close="" expandable="true">
+        <span slot="header" class="card-title"> Admin <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Project: Supervision <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
         <span
           class="glyphicon glyphicon-star" aria-hidden="true"></span>
-          </span>
           </span>
           </span>
           </span>
@@ -4788,11 +4724,10 @@ compact(input);
           </div>
       </panel>
       <p></p>
-      <panel type="dark" no-close="" expanded="" no-switch="" expandable="false">
-        <span slot="header" class="card-title"><span class="text-white"> Admin <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Appendix C (FAQs) → What if I don’t carry around a laptop? <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+      <panel type="default" no-close="" expandable="true">
+        <span slot="header" class="card-title"> Admin <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Appendix C (FAQs) → What if I don’t carry around a laptop? <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
         <span
           class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-          </span>
           </span>
           <div>
             <h3 id="what-if-i-dont-carry-around-a-laptop">What if I don’t carry around a laptop? <small><small><span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></small></small>
@@ -4810,15 +4745,18 @@ compact(input);
     </div>
     <p></p>
   </div>
-  <h3 id="outcomes"><span class="fas fa-trophy"></span> Outcomes</h3>
+  </div>
+</panel>
+<panel type="seamless" popup-url="/website/schedule/week3/outcomes.html" expanded="" no-close="">
+  <span slot="header" class="card-title activity-type"><span class="fas fa-trophy"></span> Outcomes</span>
   <div class="indented">
     <p><span class="activity-desc">IDEs</span></p>
     <div class="indented">
-      <panel no-close="" expanded="" no-switch="" expandable="false">
+      <panel no-close="" expandable="true">
         <span slot="header" class="card-title"><span><code>W3.1</code> <strong>Can use basic features of an IDE</strong> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
         </span>
         </span>
-        <panel type="warning" expanded="" no-close="" no-switch="" epxandable="false">
+        <panel type="warning" expanded="" no-close="" epxandable="true">
           <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W3.1a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain IDEs</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
           <span
             class="glyphicon glyphicon-star" aria-hidden="true"></span>
@@ -4895,7 +4833,7 @@ compact(input);
               <p>Install <a href="https://www.jetbrains.com/idea/">Intellij IDEA</a> on your computer. Either the <em>Community Edition</em> (free) or the <em>Ultimate Edition</em> (free for students) is fine.</p>
             </div>
         </panel>
-        <panel type="danger" expanded="" no-close="" no-switch="" epxandable="false">
+        <panel type="danger" expanded="" no-close="" epxandable="true">
           <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W3.1b</code></span></big> <span><span class="fas fa-trophy"></span> Can setup a project in an IDE</span> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
           </span>
           </span>
@@ -4948,7 +4886,7 @@ compact(input);
             <p><strong>Submission</strong>: Demo the test during the tutorial.</p>
           </div>
         </panel>
-        <panel type="warning" expanded="" no-close="" no-switch="" epxandable="false">
+        <panel type="warning" expanded="" no-close="" epxandable="true">
           <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W3.1c</code></span></big> <span><span class="fas fa-trophy"></span> Can navigate code effectively using IDE features</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
           <span
             class="glyphicon glyphicon-star" aria-hidden="true"></span>
@@ -4997,12 +4935,12 @@ compact(input);
             </div>
         </panel>
       </panel>
-      <panel no-close="" expanded="" no-switch="" expandable="false">
+      <panel no-close="" expandable="true">
         <span slot="header" class="card-title"><span><code>W3.2</code> <strong>Can use intermediate level features of an IDE</strong> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star"
           aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
         </span>
         </span>
-        <panel type="info" expanded="" no-close="" no-switch="" epxandable="false">
+        <panel type="info" expanded="" no-close="" epxandable="true">
           <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W3.2a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain debugging</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
           <span
             class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
@@ -5059,7 +4997,7 @@ compact(input);
               </div>
             </div>
         </panel>
-        <panel type="info" expanded="" no-close="" no-switch="" epxandable="false">
+        <panel type="info" expanded="" no-close="" epxandable="true">
           <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W3.2b</code></span></big> <span><span class="fas fa-trophy"></span> Can step through a program using a debugger</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
           <span
             class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
@@ -5096,7 +5034,7 @@ compact(input);
               <p><strong>Submission</strong>: Demo debugging features of Intellij during the tutorial.</p>
             </div>
         </panel>
-        <panel type="info" expanded="" no-close="" no-switch="" epxandable="false">
+        <panel type="info" expanded="" no-close="" epxandable="true">
           <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W3.2c</code></span></big> <span><span class="fas fa-trophy"></span> Can use some useful IDE productivity shortcuts</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
           <span
             class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
@@ -5135,7 +5073,7 @@ compact(input);
     <p></p>
     <p><span class="activity-desc">Refactoring</span></p>
     <div class="indented">
-      <panel no-close="" expanded="" no-switch="" expandable="false">
+      <panel no-close="" expandable="true">
         <span slot="header" class="card-title"><span><code>W3.3</code> <strong>Can refactor code at a basic level</strong> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
         <span
           class="glyphicon glyphicon-star" aria-hidden="true"></span>
@@ -5143,7 +5081,7 @@ compact(input);
           </span>
           </span>
           </span>
-          <panel type="warning" expanded="" no-close="" no-switch="" epxandable="false">
+          <panel type="warning" expanded="" no-close="" epxandable="true">
             <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W3.3a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain refactoring</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span>
@@ -5381,7 +5319,7 @@ send()
                 </div>
               </div>
           </panel>
-          <panel type="warning" expanded="" no-close="" no-switch="" epxandable="false">
+          <panel type="warning" expanded="" no-close="" epxandable="true">
             <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W3.3b</code></span></big> <span><span class="fas fa-trophy"></span> Can use automated refactoring features of the IDE</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span>
@@ -5428,7 +5366,7 @@ send()
                 <p><strong>Submission</strong>: Demo during the tutorial.</p>
               </div>
           </panel>
-          <panel type="info" expanded="" no-close="" no-switch="" epxandable="false">
+          <panel type="info" expanded="" no-close="" epxandable="true">
             <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W3.3c</code></span></big> <span><span class="fas fa-trophy"></span> Can apply some basic refactoring</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
@@ -5485,7 +5423,7 @@ send()
                 <p><strong>Submission</strong>: Show the relevant commits during the tutorial.</p>
               </div>
           </panel>
-          <panel type="success" expanded="" no-close="" no-switch="" epxandable="false">
+          <panel type="success" expanded="" no-close="" epxandable="true">
             <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W3.3d</code></span></big> <span><span class="fas fa-trophy"></span> Can decide when to apply a given refactoring</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
@@ -5540,13 +5478,13 @@ send()
     <p></p>
     <p><span class="activity-desc">Implementation</span></p>
     <div class="indented">
-      <panel no-close="" expanded="" no-switch="" expandable="false">
+      <panel no-close="" expandable="true">
         <span slot="header" class="card-title"><span><code>W3.4</code> <strong>C++ to Java</strong> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star"
           aria-hidden="true"></span></span>
         </span>
         </span>
         </span>
-        <panel type="warning" expanded="" no-close="" no-switch="" epxandable="false">
+        <panel type="warning" expanded="" no-close="" epxandable="true">
           <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W3.4a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain what Java is</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
           <span
             class="glyphicon glyphicon-star" aria-hidden="true"></span>
@@ -5584,7 +5522,7 @@ send()
               </div>
             </div>
         </panel>
-        <panel type="success" expanded="" no-close="" no-switch="" epxandable="false">
+        <panel type="success" expanded="" no-close="" epxandable="true">
           <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W3.4b</code></span></big> <span><span class="fas fa-trophy"></span> Can explain how Java works at a higher-level</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
           <span
             class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
@@ -5616,7 +5554,7 @@ send()
               </div>
             </div>
         </panel>
-        <panel type="success" expanded="" no-close="" no-switch="" epxandable="false">
+        <panel type="success" expanded="" no-close="" epxandable="true">
           <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W3.4c</code></span></big> <span><span class="fas fa-trophy"></span> Can explain Java editions</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
           <span
             class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
@@ -5658,12 +5596,12 @@ send()
             </div>
         </panel>
       </panel>
-      <panel no-close="" expanded="" no-switch="" expandable="false">
+      <panel no-close="" expandable="true">
         <span slot="header" class="card-title"><span><code>W3.5</code> <strong>Can implement classes</strong> <span class="badge badge-pill badge-secondary"><span class="glyphicon glyphicon-education" aria-hidden="true"></span><span class="glyphicon glyphicon-education"
           aria-hidden="true"></span></span>
         </span>
         </span>
-        <panel type="default" expanded="" no-close="" no-switch="" epxandable="false">
+        <panel type="default" expanded="" no-close="" epxandable="true">
           <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W3.5a</code></span></big> <span><span class="fas fa-trophy"></span> Can define Java classes</span> <span class="badge badge-pill badge-secondary"><span class="glyphicon glyphicon-education" aria-hidden="true"></span>
           <span
             class="glyphicon glyphicon-education" aria-hidden="true"></span> : <span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
@@ -5861,7 +5799,7 @@ System.out.println(t.secondsSinceMidnight() + <span class="hljs-string">" second
               </div>
             </div>
         </panel>
-        <panel type="default" expanded="" no-close="" no-switch="" epxandable="false">
+        <panel type="default" expanded="" no-close="" epxandable="true">
           <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W3.5b</code></span></big> <span><span class="fas fa-trophy"></span> Can define getters and setters</span> <span class="badge badge-pill badge-secondary"><span class="glyphicon glyphicon-education" aria-hidden="true"></span>
           <span
             class="glyphicon glyphicon-education" aria-hidden="true"></span> : <span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
@@ -5996,7 +5934,7 @@ radius : 0.0
             </div>
         </panel>
       </panel>
-      <panel no-close="" expanded="" no-switch="" expandable="false">
+      <panel no-close="" expandable="true">
         <span slot="header" class="card-title"><span><code>W3.6</code> <strong>Can implement class-level members</strong> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
         <span
           class="glyphicon glyphicon-star" aria-hidden="true"></span>
@@ -6004,7 +5942,7 @@ radius : 0.0
           </span>
           </span>
           </span>
-          <panel type="warning" expanded="" no-close="" no-switch="" epxandable="false">
+          <panel type="warning" expanded="" no-close="" epxandable="true">
             <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W3.6a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain class-level members</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span>
@@ -6074,12 +6012,12 @@ radius : 0.0
               </div>
           </panel>
       </panel>
-      <panel no-close="" expanded="" no-switch="" expandable="false">
+      <panel no-close="" expandable="true">
         <span slot="header" class="card-title"><span><code>W3.7</code> <strong>Can use Java varargs feature</strong> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star"
           aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
         </span>
         </span>
-        <panel type="success" expanded="" no-close="" no-switch="" epxandable="false">
+        <panel type="success" expanded="" no-close="" epxandable="true">
           <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W3.7a</code></span></big> <span><span class="fas fa-trophy"></span> Can use Java varargs feature</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
           <span
             class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
@@ -6121,7 +6059,7 @@ radius : 0.0
     <p></p>
     <p><span class="activity-desc">🅿️ Project</span></p>
     <div class="indented">
-      <panel no-close="" expanded="" no-switch="" expandable="false">
+      <panel no-close="" expandable="true">
         <span slot="header" class="card-title"><span><code>W3.8</code> <strong>Can define the target of a product</strong> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
         </span>
         </span>
@@ -6132,7 +6070,7 @@ radius : 0.0
           </p>
         </div>
       </panel>
-      <panel no-close="" expanded="" no-switch="" expandable="false">
+      <panel no-close="" expandable="true">
         <span slot="header" class="card-title"><span><code>W3.9</code> <strong>Can work with a 1KLoC code base</strong> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
         </span>
         </span>
@@ -6242,7 +6180,9 @@ radius : 0.0
     </div>
     <p></p>
   </div>
-  <h3 id="tutorial-3"><span class="fas fa-chalkboard-teacher"></span> Tutorial 3</h3>
+</panel>
+<panel type="seamless" expanded="" no-close="">
+  <span slot="header" class="card-title activity-type"><span class="fas fa-chalkboard-teacher"></span> Tutorial 3</span>
   <div class="indented">
     <div>
       <p><strong>CS2113 students only</strong>: Form teams at the beginning of the tutorial. Be sure to conform to team forming constrains.</p>
@@ -7171,27 +7111,12 @@ send()
       </panel>
     </div>
   </div>
-  <h3 id="lecture-3"><span class="glyphicon glyphicon-blackboard" aria-hidden="true"></span> Lecture 3</h3>
+</panel>
+<panel type="seamless" expanded="" no-close="">
+  <span slot="header" class="card-title activity-type"><span class="glyphicon glyphicon-blackboard" aria-hidden="true"></span> Lecture 3</span>
   <div class="indented">
     <div>
       <p><strong>Slides</strong>: Uploaded on IVLE.</p>
     </div>
   </div>
-</div>
-</div>
-<div id="flex-div"></div>
-<footer>
-  <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.10.1</a> at Fri, 07 Sep 2018 06:01:50 GMT</small></div>
-</footer>
-</div>
-</body>
-<script src="..\..\markbind\js\vue.min.js"></script>
-<script src="..\..\markbind\js\vue-strap.min.js"></script>
-<script src="..\..\markbind\js\polyfill.min.js"></script>
-<script src="..\..\markbind\js\bootstrap-vue.min.js"></script>
-<script>
-    const baseUrl = '/website'
-</script>
-<script src="..\..\markbind\js\setup.js"></script>
-</html>
+</panel>
