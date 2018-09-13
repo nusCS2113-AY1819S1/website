@@ -56,7 +56,7 @@
   </navbar>
 </div>
 <div class="website-content" id="main">
-  <h2 id="week-7">Week 7 []</h2>
+  <h2 id="week-7-oct-1">Week 7 [Oct 1]</h2>
   <div class="indented">
     <h3 id="todo"><span class="glyphicon glyphicon-check" aria-hidden="true"></span> Todo</h3>
     <div class="indented">
@@ -1381,14 +1381,195 @@ logger.log(Level.INFO, <span class="hljs-string">"end of processing"</span>);
             </panel>
         </panel>
         <panel no-close="" expanded="" no-switch="" expandable="false">
-          <span slot="header" class="card-title"><span><code>W7.6</code> <strong>Can use Java8 streams</strong> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star"
-            aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+          <span slot="header" class="card-title"><span><code>W7.6</code> <strong>Can do exception handling in code</strong> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
           </span>
           </span>
-          <panel type="info" expanded="" no-close="" no-switch="" epxandable="false">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W7.6a</code></span></big> <span><span class="fas fa-trophy"></span> Can use Java8 streams</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <panel type="warning" expanded="" no-close="" no-switch="" epxandable="false">
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W7.6a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain error handling</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
-              class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+              class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              </span>
+              </span>
+              </span>
+              </span>
+              <div>
+                <div></div>
+                <p></p>
+                <p><span class="dimmed"><strong><span>Implementation → Error Handling → Introduction →
+</span></strong>
+                  </span>
+                </p>
+                <div id="title-and-body">
+                  <div>
+                    <h4 id="what-4">What</h4>
+                  </div>
+                  <div id="main">
+                    <div>
+                      <blockquote>
+                        <p>Well-written applications include error-handling code that allows them to recover gracefully from unexpected errors. When an error occurs, the application may need to request user intervention, or it may be able to recover on its
+                          own. In extreme cases, the application may log the user off or shut down the system. --<sub><a href="https://msdn.microsoft.com/en-us/library/windows/desktop/ms679320(v=vs.85).aspx">Microsoft</a></sub></p>
+                      </blockquote>
+                    </div>
+                    <div></div>
+                  </div>
+                </div>
+              </div>
+          </panel>
+          <panel type="danger" expanded="" no-close="" no-switch="" epxandable="false">
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W7.6b</code></span></big> <span><span class="fas fa-trophy"></span> Can explain exceptions</span> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+            </span>
+            </span>
+            <div>
+              <div></div>
+              <p></p>
+              <p><span class="dimmed"><strong><span>Implementation → Error Handling → Exceptions →
+</span></strong>
+                </span>
+              </p>
+              <div id="title-and-body">
+                <div>
+                  <h4 id="what-5">What</h4>
+                </div>
+                <div id="main">
+                  <div>
+                    <p><strong>Exceptions are used to deal with <em>'unusual' but not entirely unexpected</em> situations</strong> that the program might encounter at run time.</p>
+                    <tip-box type="definition">
+                      <div>
+                        <p><strong>Exception</strong>:</p>
+                        <blockquote>
+                          <p>The term <em>exception</em> is shorthand for the phrase &quot;exceptional event.&quot; An <em>exception</em> is an event, which occurs during the execution of a program, that disrupts the normal flow of the program's instructions.
+                            –- Java Tutorial (Oracle Inc.)</p>
+                        </blockquote>
+                      </div>
+                    </tip-box>
+                    <tip-box>
+                      <p><span class="fas fa-cube"></span> Examples:</p>
+                      <ul>
+                        <li>A network connection encounters a timeout due to a slow server.</li>
+                        <li>The code tries to read a file from the hard disk but the file is corrupted and cannot be read.</li>
+                      </ul>
+                    </tip-box>
+                  </div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+          </panel>
+          <panel type="danger" expanded="" no-close="" no-switch="" epxandable="false">
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W7.6c</code></span></big> <span><span class="fas fa-trophy"></span> Can explain how exception handling is done typically</span> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+            </span>
+            </span>
+            <div>
+              <div></div>
+              <p></p>
+              <p><span class="dimmed"><strong><span>Implementation → Error Handling → Exceptions →
+</span></strong>
+                </span>
+              </p>
+              <div id="title-and-body">
+                <div>
+                  <h4 id="how-3">How</h4>
+                </div>
+                <div id="main">
+                  <div>
+                    <p><strong>Most languages allow code that encountered an &quot;exceptional&quot; situation to encapsulate details of the situation in an <em>Exception</em> object and <em>throw</em>/<em>raise</em> that object so that another piece of code can <em>catch</em> it and deal with it.</strong>                      This is especially useful when the code that encountered the unusual situation does not know how to deal with it.</p>
+                    <p>The extract below from the <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small> (with slight adaptations) explains how exceptions are typically handled.</p>
+                    <div class="indented">
+                      <p><strong>When an error occurs at some point in the execution, the code being executed creates an <em>exception object</em> and hands it off to the runtime system.</strong> The exception object contains information about the error,
+                        including its type and the state of the program when the error occurred. Creating an exception object and handing it to the runtime system is called <em>throwing</em> an exception.</p>
+                      <p><strong>After a method throws an exception, the runtime system attempts to find something to handle it in the <tooltip content="the ordered list of methods that had been called to get to the method where the error occurred"><em>call stack</em></tooltip>.</strong>                        The runtime system searches the call stack for a method that contains a block of code that can handle the exception. This block of code is called an <em>exception handler</em>. The search begins with the method in which the error
+                        occurred and proceeds through the call stack in the reverse order in which the methods were called. When an appropriate handler is found, the runtime system passes the exception to the handler. An exception handler is considered
+                        appropriate if the type of the exception object thrown matches the type that can be handled by the handler.</p>
+                      <p><strong>The exception handler chosen is said to <em>catch</em> the exception.</strong> If the runtime system exhaustively searches all the methods on the call stack without finding an appropriate exception handler, the program terminates.</p>
+                    </div>
+                    <p>Advantages of exception handling in this way:</p>
+                    <ul>
+                      <li>The ability to propagate error information through the call stack.</li>
+                      <li>The separation of code that deals with 'unusual' situations from the code that does the 'usual' work.</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <div>
+                      <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                        <div>
+                          <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Benefit of exceptions">
+                            <question>
+                              <p>Which are benefits of exceptions?</p>
+                              <ul class="task-list">
+                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. Exceptions allow us to separate normal code from error handling code.</li>
+                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. Exceptions can prevent problems that happen in the environment.</li>
+                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. Exceptions allow us to handle in one location an error raised in another location.</li>
+                              </ul>
+                              <div slot="answer">
+                                <p>(a) (c)</p>
+                                <p>Explanation: Exceptions cannot <em>prevent</em> problems in the environment. They can only be used to handle and recover from such problems.</p>
+                              </div>
+                            </question>
+                          </panel>
+                        </div>
+                      </panel>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr style="border-top: dashed 1px; border-color:grey">
+            <p><big><span class="fas fa-briefcase"></span> Evidence:</big></p>
+            <div>
+              <p><strong>Acceptable</strong>: Some code you wrote that involves exception handling.</p>
+              <p><strong>Suggested</strong>: Do the exercise in <a href="https://github.com/nusCS2113-AY1819S1/addressbook-level2/blob/master/docs/LearningOutcomes.adoc#handle-exceptions-code-lo-exceptions-code">addressbook-level2: LO-Exceptions</a>.</p>
+              <div>
+                <p><strong>Submission</strong>:</p>
+                <ul>
+                  <li>Options 1 (discouraged): Show the relevant code during the tutorial.</li>
+                  <li>Options 2 (<strong>preferred</strong>): Create a PR against <a href="https://github.com/nusCS2113-AY1819S1/addressbook-level2">Addressbook-Level2</a> by following the instructions below.</li>
+                </ul>
+                <p>
+                  <panel src="/website\admin\appendixE-gitHub._include_.html#tutorial-pr-instructions" header="%%Admin <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Appendix E: Using GitHub Project Hosting → Submitting Pull Requests as evidence of an LO%%"
+                    fragment="tutorial-pr-instructions"></panel>
+                </p>
+                <p>If you choose option 2, we recommend that you complete this week's <em>Project Management</em> LOs first; there are many ways to create PRs but we expect you to create PRs in a specific way, as specified in the LOs.</p>
+              </div>
+            </div>
+          </panel>
+          <panel type="warning" expanded="" no-close="" no-switch="" epxandable="false">
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W7.6d</code></span></big> <span><span class="fas fa-trophy"></span> Can avoid using exceptions to control normal workflow</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span
+              class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              </span>
+              </span>
+              </span>
+              </span>
+              <div>
+                <div></div>
+                <p></p>
+                <p><span class="dimmed"><strong><span>Implementation → Error Handling → Exceptions →
+</span></strong>
+                  </span>
+                </p>
+                <div id="title-and-body">
+                  <div>
+                    <h4 id="when-2">When</h4>
+                  </div>
+                  <div id="main">
+                    <div>
+                      <p>In general, use exceptions only for 'unusual' conditions. Use normal <code>return</code> statements to pass control to the caller for conditions that are 'normal'.</p>
+                    </div>
+                    <div></div>
+                  </div>
+                </div>
+              </div>
+          </panel>
+        </panel>
+        <panel no-close="" expanded="" no-switch="" expandable="false">
+          <span slot="header" class="card-title"><span><code>W7.7</code> <strong>Can use Java8 streams</strong> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star"
+            aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+          </span>
+          </span>
+          <panel type="success" expanded="" no-close="" no-switch="" epxandable="false">
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W7.7a</code></span></big> <span><span class="fas fa-trophy"></span> Can use Java8 streams</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span
+              class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
               </span>
               <div>
@@ -1450,12 +1631,12 @@ logger.log(Level.INFO, <span class="hljs-string">"end of processing"</span>);
           </panel>
         </panel>
         <panel no-close="" expanded="" no-switch="" expandable="false">
-          <span slot="header" class="card-title"><span><code>W7.7</code> <strong>Can use JavaFX to build a simple GUI</strong> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star"
+          <span slot="header" class="card-title"><span><code>W7.8</code> <strong>Can use JavaFX to build a simple GUI</strong> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star"
             aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
           </span>
           </span>
           <panel type="success" expanded="" no-close="" no-switch="" epxandable="false">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W7.7a</code></span></big> <span><span class="fas fa-trophy"></span> Can use JavaFX to build a simple GUI</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W7.8a</code></span></big> <span><span class="fas fa-trophy"></span> Can use JavaFX to build a simple GUI</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
@@ -2217,7 +2398,7 @@ Caused by: java.lang.IllegalAccessException: class javafx.fxml.FXMLLoader$ValueE
       <p><span class="activity-desc">🅿️ Project</span></p>
       <div class="indented">
         <panel no-close="" expanded="" no-switch="" expandable="false">
-          <span slot="header" class="card-title"><span><code>W7.8</code> <strong>Can do small changes to an existing software</strong> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+          <span slot="header" class="card-title"><span><code>W7.9</code> <strong>Can do small changes to an existing software</strong> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
           </span>
           </span>
           <div>
@@ -2298,17 +2479,6 @@ Caused by: java.lang.IllegalAccessException: class javafx.fxml.FXMLLoader$ValueE
           </panel>
         </div>
         <p></p>
-        <ol>
-          <li>What is the profile of the target user of your product?. Describe the problem you are solving for that target user. Give some representative must-have user stories for your product that are not already present in
-            <tooltip content="AddressBook-Level4">AB4</tooltip>.</li>
-          <li>What’s the use of assertions?</li>
-          <li>Demonstrate an assertion failure using Intellij.</li>
-          <li>What is a multi-level design? How is it used in AB4?</li>
-          <li>What is an API? How is it used in AB4?</li>
-          <li>Why do we need logging? What’s the purpose of logging levels? What are the available logging levels in AB4?</li>
-          <li>Explain what Gradle is. How is it used in AB4?</li>
-          <li>Explain what Travis is. How is it used in AB4?</li>
-        </ol>
         <br>
         <panel type="seamless" header="##### Evidence for weekly LOs %%(for reference)%%">
           <panel type="seamless" expanded="">
@@ -2489,7 +2659,7 @@ Caused by: java.lang.IllegalAccessException: class javafx.fxml.FXMLLoader$ValueE
                     </p>
                     <div id="title-and-body">
                       <div>
-                        <h4 id="what-4">What</h4>
+                        <h4 id="what-6">What</h4>
                       </div>
                       <div id="main">
                         <div>
@@ -2667,7 +2837,7 @@ Caused by: java.lang.IllegalAccessException: class javafx.fxml.FXMLLoader$ValueE
                     </p>
                     <div id="title-and-body">
                       <div>
-                        <h4 id="how-3">How</h4>
+                        <h4 id="how-4">How</h4>
                       </div>
                       <div id="main">
                         <div>
@@ -2755,7 +2925,7 @@ logger.log(Level.INFO, <span class="hljs-string">"end of processing"</span>);
                     </p>
                     <div id="title-and-body">
                       <div>
-                        <h4 id="how-4">How</h4>
+                        <h4 id="how-5">How</h4>
                       </div>
                       <div id="main">
                         <div>
@@ -2835,7 +3005,7 @@ logger.log(Level.INFO, <span class="hljs-string">"end of processing"</span>);
                     </p>
                     <div id="title-and-body">
                       <div>
-                        <h4 id="when-2">When</h4>
+                        <h4 id="when-3">When</h4>
                       </div>
                       <div id="main">
                         <div>
@@ -2908,9 +3078,95 @@ logger.log(Level.INFO, <span class="hljs-string">"end of processing"</span>);
               </div>
           </panel>
           <panel type="seamless" expanded="">
-            <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.6a</code></span></big> <span><span class="fas fa-trophy"></span> Can use Java8 streams</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.6c</code></span></big> <span><span class="fas fa-trophy"></span> Can explain how exception handling is done
+            typically</span> <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+            </span>
+            </span>
+            <div class="indented">
+              <panel minimized="">
+                <span slot="header" class="card-title">Details of the LO</span>
+                <div>
+                  <div></div>
+                  <p></p>
+                  <p><span class="dimmed"><strong><span>Implementation → Error Handling → Exceptions →
+</span></strong>
+                    </span>
+                  </p>
+                  <div id="title-and-body">
+                    <div>
+                      <h4 id="how-6">How</h4>
+                    </div>
+                    <div id="main">
+                      <div>
+                        <p><strong>Most languages allow code that encountered an &quot;exceptional&quot; situation to encapsulate details of the situation in an <em>Exception</em> object and <em>throw</em>/<em>raise</em> that object so that another piece of code can <em>catch</em> it and deal with it.</strong>                          This is especially useful when the code that encountered the unusual situation does not know how to deal with it.</p>
+                        <p>The extract below from the <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small> (with slight adaptations) explains how exceptions are typically handled.</p>
+                        <div class="indented">
+                          <p><strong>When an error occurs at some point in the execution, the code being executed creates an <em>exception object</em> and hands it off to the runtime system.</strong> The exception object contains information about the error,
+                            including its type and the state of the program when the error occurred. Creating an exception object and handing it to the runtime system is called <em>throwing</em> an exception.</p>
+                          <p><strong>After a method throws an exception, the runtime system attempts to find something to handle it in the <tooltip content="the ordered list of methods that had been called to get to the method where the error occurred"><em>call stack</em></tooltip>.</strong>                            The runtime system searches the call stack for a method that contains a block of code that can handle the exception. This block of code is called an <em>exception handler</em>. The search begins with the method in which the
+                            error occurred and proceeds through the call stack in the reverse order in which the methods were called. When an appropriate handler is found, the runtime system passes the exception to the handler. An exception handler is
+                            considered appropriate if the type of the exception object thrown matches the type that can be handled by the handler.</p>
+                          <p><strong>The exception handler chosen is said to <em>catch</em> the exception.</strong> If the runtime system exhaustively searches all the methods on the call stack without finding an appropriate exception handler, the program
+                            terminates.</p>
+                        </div>
+                        <p>Advantages of exception handling in this way:</p>
+                        <ul>
+                          <li>The ability to propagate error information through the call stack.</li>
+                          <li>The separation of code that deals with 'unusual' situations from the code that does the 'usual' work.</li>
+                        </ul>
+                      </div>
+                      <div>
+                        <div>
+                          <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                            <div>
+                              <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Benefit of exceptions">
+                                <question>
+                                  <p>Which are benefits of exceptions?</p>
+                                  <ul class="task-list">
+                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. Exceptions allow us to separate normal code from error handling code.</li>
+                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. Exceptions can prevent problems that happen in the environment.</li>
+                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. Exceptions allow us to handle in one location an error raised in another location.</li>
+                                  </ul>
+                                  <div slot="answer">
+                                    <p>(a) (c)</p>
+                                    <p>Explanation: Exceptions cannot <em>prevent</em> problems in the environment. They can only be used to handle and recover from such problems.</p>
+                                  </div>
+                                </question>
+                              </panel>
+                            </div>
+                          </panel>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </panel><br><br>
+              <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span>
+              </p>
+              <div class="indented">
+                <div>
+                  <p><strong>Acceptable</strong>: Some code you wrote that involves exception handling.</p>
+                  <p><strong>Suggested</strong>: Do the exercise in <a href="https://github.com/nusCS2113-AY1819S1/addressbook-level2/blob/master/docs/LearningOutcomes.adoc#handle-exceptions-code-lo-exceptions-code">addressbook-level2: LO-Exceptions</a>.</p>
+                  <div>
+                    <p><strong>Submission</strong>:</p>
+                    <ul>
+                      <li>Options 1 (discouraged): Show the relevant code during the tutorial.</li>
+                      <li>Options 2 (<strong>preferred</strong>): Create a PR against <a href="https://github.com/nusCS2113-AY1819S1/addressbook-level2">Addressbook-Level2</a> by following the instructions below.</li>
+                    </ul>
+                    <p>
+                      <panel src="/website\admin\appendixE-gitHub._include_.html#tutorial-pr-instructions" header="%%Admin <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Appendix E: Using GitHub Project Hosting → Submitting Pull Requests as evidence of an LO%%"
+                        fragment="tutorial-pr-instructions"></panel>
+                    </p>
+                    <p>If you choose option 2, we recommend that you complete this week's <em>Project Management</em> LOs first; there are many ways to create PRs but we expect you to create PRs in a specific way, as specified in the LOs.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </panel>
+          <panel type="seamless" expanded="">
+            <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.7a</code></span></big> <span><span class="fas fa-trophy"></span> Can use Java8 streams</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
-              class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+              class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
               </span>
               <div class="indented">
@@ -2978,7 +3234,7 @@ logger.log(Level.INFO, <span class="hljs-string">"end of processing"</span>);
               </div>
           </panel>
           <panel type="seamless" expanded="">
-            <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.7a</code></span></big> <span><span class="fas fa-trophy"></span> Can use JavaFX to build a simple GUI</span>
+            <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.8a</code></span></big> <span><span class="fas fa-trophy"></span> Can use JavaFX to build a simple GUI</span>
             <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
               class="glyphicon glyphicon-star" aria-hidden="true"></span>
@@ -3744,7 +4000,7 @@ Caused by: java.lang.IllegalAccessException: class javafx.fxml.FXMLLoader$ValueE
               </div>
           </panel>
           <panel type="seamless" expanded="">
-            <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.8</code></span></big> Can do small changes to an existing software <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+            <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W7.9</code></span></big> Can do small changes to an existing software <span class="badge badge-pill badge-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
             </span>
             </span>
             <div class="indented">
@@ -3770,7 +4026,7 @@ Caused by: java.lang.IllegalAccessException: class javafx.fxml.FXMLLoader$ValueE
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.10.1</a> at Tue, 11 Sep 2018 06:01:15 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.10.1</a> at Thu, 13 Sep 2018 09:23:50 GMT</small></div>
 </footer>
 </div>
 </body>
