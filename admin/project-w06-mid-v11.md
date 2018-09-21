@@ -16,7 +16,7 @@ Overview: <include src="project-timeline.md#mid-v11-overview" inline />
 **<big>Project Management:</big>**
 
 * One team member: <trigger trigger="click" for="modal:v10-setuporg">Set up the team org</trigger> and <trigger trigger="click" for="modal:v10-setuprepo">team repo</trigger> for your team if you haven't done that already.
-  * Set up [auto-publishing of docs](https://nus-{{ module | lower }}-{{ semester | lower }}.github.io/addressbook-level4/UsingTravis.html#enabling-auto-publishing-of-documentation)
+  * Set up [auto-publishing of docs](https://nus{{ module | lower }}-{{ semester | lower }}.github.io/addressbook-level4/UsingTravis.html#enabling-auto-publishing-of-documentation)
 
 <modal large title="Admin {{ icon_embedding }} Appendix E: Using GitHub Project Hosting → Organization Setup" id="modal:v10-setuporg">
   <include src="appendixE-gitHub.md#organization-setup"/>
@@ -48,7 +48,7 @@ Overview: <include src="project-timeline.md#mid-v11-overview" inline />
 
 1. Divide among yourselves who will update which parts of the document(s).
 1. Update the team repo by following the <trigger trigger="click" for="modal:v10-forkingworkflow">forking workflow</trigger>.
-1. One member: create a PR from your ==team repo `master` branch== to [[nus-{{ module | lower }}-{{ semester }}/addressbook-level4]({{module_org}}/addressbook-level4)] `master` branch. PR name: `[v1.x][Team ID] Product Name` e.g., `[v1.x][T09-B2] Contact List Pro`. %%&nbsp;As you merge code to your team repo's `master` branch, this PR will auto-update to reflect how much your team's product has progressed (that's why we use `v1.x` instead of `v1.0` in the PR title).%% In the PR description <tooltip content="use @githubUserName">mention</tooltip> the other team members so that they get notified when the tutor adds comments to the PR.
+1. One member: create a PR from your ==team repo `master` branch== to [[addressbook-level4]({{module_org}}/addressbook-level4)] (or [[addressbook-level3]({{module_org}}/addressbook-level3)]) `master` branch. PR name: `[Team ID] Product Name` e.g., `[W12-2] Contact List Pro`. In the PR description <tooltip content="use @githubUserName">mention</tooltip> the other team members so that they get notified when the tutor adds comments to the PR.
 
 <modal large title="TextBook {{ icon_embedding }}" id="modal:v10-forkingworkflow">
   <include src="../book/revisionControl/forkingWorkflow/unit-inElsewhere-asFlat.md" boilerplate/>
@@ -65,7 +65,7 @@ Overview: <include src="project-timeline.md#mid-v11-overview" inline />
   This page is used for module admin purposes. ==Please follow the format closely to avoid penalties==. 
   * Replace info of SE-EDU developers with info of your team, including a ==suitable photo== as described <trigger trigger="click" for="modal:mid-v12-photo">here</trigger>.  
   * Including the name/photo of the supervisor/lecturer is optional. 
-  * The photo of a team member should be `doc/images/githbub_username_in_lower_case.png` %%e.g. `docs/images/damithc.png`%%.
+  * The photo of a team member should be `doc/images/githbub_username_in_lower_case.png` %%e.g. `docs/images/akshay.png`%%.
 
 <modal large title="Admin {{ icon_embedding }} Choosing a profile photo" id="modal:mid-v12-photo">
   <include src="project-deliverables.md#profile-photo"/>
@@ -93,11 +93,11 @@ Overview: <include src="project-timeline.md#mid-v11-overview" inline />
 
   **Objective**: To familiarize yourself with at least one component the code.
 
-  **Description**: Divide the <tooltip content="components as stated in the [Developer Guide: Architecture]">components</tooltip> among yourselves. Each member can do some small enhancements to their component(s) to learn the code of that component. Some suggested enhancements are given in the [AddressBook-Level4 developer guide](https://nus-{{ module | lower }}-{{ semester }}.github.io/addressbook-level4/DeveloperGuide.html#improving-each-component).
+  **Description**: Divide the <tooltip content="components as stated in the [Developer Guide: Architecture]">components</tooltip> among yourselves. Each member can do some small enhancements to their component(s) to learn the code of that component. Some suggested enhancements are given in the [AddressBook-Level4 developer guide](https://nus{{ module | lower }}-{{ semester }}.github.io/addressbook-level4/DeveloperGuide.html#improving-each-component).
 
   **Submission**: Create PRs from your own fork to your team repo. Get it merged by following your team's workflow.
   
-  {{ icon_important_big_red }} Before you start coding, please read <trigger trigger="click" for="modal:midv11-reusePolicy">our reuse policy %%(in Admin: Appendix B)%%</trigger>, in particular, ==how to give credit when you reuse code from Internet or classmates==:
+  {{ icon_important_big_red }} Before you start coding, please read <trigger trigger="click" for="modal:midv11-reusePolicy">our reuse policy %%(in Admin: Appendix B)%%</trigger>, in particular, ==how to give credit when you reuse code from Internet or classmates.==
 
 <modal large title="Admin {{ icon_embedding }} Appendix B: Policies → Policy on Reuse" id="modal:midv11-reusePolicy">
   <include src="appendixB-policies.md#policy-reuse"/>

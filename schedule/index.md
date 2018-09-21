@@ -12,11 +12,18 @@ head: scheduleHead.md
     {num: "3", day:"Aug 27"}, 
     {num: "4", day:"Sep 3"},
     {num: "5", day: "Sep 10"},
-    {num: "6", day: "Sep 17"}
+    {num: "6", day: "Sep 17"},
+    {num: "7", day: "Oct 1"},
+    {num: "8", day: "Oct 8"},
+    {num: "9", day: "Oct 15"},
+    {num: "10", day: "Oct 22"},
+    {num: "11", day: "Oct 29"},
+    {num: "12", day: "Nov 5"},
+    {num: "13", day: "Nov 12"}
 ] %}
 
 
-{% set current_weeks = ["4", "5"] %}
+{% set current_weeks = ["5", "6"] %}
 
 
 {% set all_outcomes = [
@@ -243,13 +250,6 @@ head: scheduleHead.md
       {location: ["uml", "notes", "notes"], omit_evidence: true},
       {location: ["uml", "notes", "constraints"], omit_evidence: true},
       {location: ["uml", "classDiagrams", "associationsAsAttributes", "what"], omit_evidence: true},
-  {name: "Quality Assurance"},
-    {heading: "Can use simple JUnit tests"},
-      {location: ["testing", "testingTypes", "developerTesting", "what"], omit_evidence: true},
-      {location: ["testing", "testingTypes", "developerTesting", "why"]},
-      {location: ["testing", "testAutomation", "usingTestDrivers"], omit_evidence: true},
-      {location: ["testing", "testAutomation", "tools"], omit_evidence: true},
-      {location: ["junit", "basic"]},
   {name: "Coding best practices"},
     {heading: "Can use good naming"},
       {location: ["codeQuality", "nameWell", "introduction"], omit_evidence: true},
@@ -271,12 +271,6 @@ head: scheduleHead.md
       {location: ["codeQuality", "commentMinimally", "basic", "dontRepeatObvious"], omit_evidence: true},
       {location: ["codeQuality", "commentMinimally", "basic", "writeToReader"], omit_evidence: true},
       {location: ["codeQuality", "commentMinimally", "intermediate", "explainWhatWhyNotHow"], omit_evidence: true},
-  {name: "Implementaton"},
-    {heading: "Can do exception handling in code"},
-      {location: ["errorHandling", "introduction", "what"], omit_evidence: true},
-      {location: ["errorHandling", "exceptions", "what"], omit_evidence: true},
-      {location: ["errorHandling", "exceptions", "how"]},
-      {location: ["errorHandling", "exceptions", "when"], omit_evidence: true},
   {name: "Project Management"},
     {heading: "Can explain continuous integration and continuous deployment"},
       {location: ["integration", "introduction", "what"], omit_evidence: true},
@@ -311,6 +305,11 @@ head: scheduleHead.md
       {location: ["errorHandling", "assertions", "what"], omit_evidence: true},
       {location: ["errorHandling", "assertions", "how"]},
       {location: ["errorHandling", "assertions", "when"]},
+    {heading: "Can do exception handling in code"},
+      {location: ["errorHandling", "introduction", "what"], omit_evidence: true},
+      {location: ["errorHandling", "exceptions", "what"], omit_evidence: true},
+      {location: ["errorHandling", "exceptions", "how"]},
+      {location: ["errorHandling", "exceptions", "when"], omit_evidence: true},
     {heading: "Can use Java8 streams"},
       {location: ["javaTools", "streamsBasic"]},
     {heading: "Can use JavaFX to build a simple GUI"},
@@ -357,6 +356,12 @@ head: scheduleHead.md
         {location: ["testing", "testingTypes", "acceptanceTesting", "acceptanceVsSystemTesting"]},
       {subheading: "Alpha/Beta Testing"},
         {location: ["testing", "testingTypes", "alphaBetaTesting", "what"]},
+    {heading: "Can write simple JUnit tests"},
+      {location: ["testing", "testingTypes", "developerTesting", "what"], omit_evidence: true},
+      {location: ["testing", "testingTypes", "developerTesting", "why"]},
+      {location: ["testing", "testAutomation", "usingTestDrivers"], omit_evidence: true},
+      {location: ["testing", "testAutomation", "tools"], omit_evidence: true},
+      {location: ["junit", "basic"]},
   {name: "Project Management"},
     {heading: "Can use basic scheduling and tracking tools"},
       {location: ["projectPlanning", "milestones"]},

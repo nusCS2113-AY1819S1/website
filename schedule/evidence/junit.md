@@ -1,8 +1,8 @@
 <div id="basic">
 
-**Acceptable**: Evidence of having written JUnit tests in some project.
+**Acceptable**: Evidence of having written JUnit tests your projects.
 
-**Suggested**: Do the exercise in [[Addressbook-Level2: LO-JUnit]({{module_org}}/addressbook-level2/blob/master/docs/LearningOutcomes.adoc#use-junit-to-implement-unit-tests-code-lo-junit-code)]
+**Suggested Refresher**: Do the exercise in [[Addressbook-Level2: LO-JUnit]({{module_org}}/addressbook-level2/blob/master/docs/LearningOutcomes.adoc#use-junit-to-implement-unit-tests-code-lo-junit-code)]
 
 <include src="project.md#PR_to_AB2" />
 
