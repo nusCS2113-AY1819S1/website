@@ -253,10 +253,28 @@ enhancements</mark>, touching as many other components as possible. Refer to the
                 <div>
                   <p><strong>A UML sequence diagram <em>captures the interactions between multiple objects for a given scenario.</em></strong></p>
                   <tip-box>
-                    <p><span class="fas fa-cube"></span> Some exmaple sequence diagrams:</p>
-                    <img src="/website/book/uml/sequenceDiagrams/introduction/images/textLogic.png" height="300">
-                    <p></p>
-                    <img src="/website/book/uml/sequenceDiagrams/introduction/images/logicMinefield.png" height="300">
+                    <p><span class="fas fa-cube"></span> Consider the code below.</p>
+                    <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Machine</span> </span>{
+
+    <span class="hljs-function">Unit <span class="hljs-title">producePrototype</span><span class="hljs-params">()</span> </span>{
+        Unit prototype = <span class="hljs-keyword">new</span> Unit();
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">5</span>; i++) {
+            prototype.stressTest();
+        }
+        <span class="hljs-keyword">return</span> prototype;
+    }
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Unit</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">stressTest</span><span class="hljs-params">()</span> </span>{
+
+    }
+}
+
+</code></pre>
+                    <p>Here is the sequence diagram to model the interactions for the method call <code>producePrototype()</code> on a <code>Machine</code> object.</p>
+                    <img src="/website/book/uml/sequenceDiagrams/introduction/images/Machine.png" width="450">
                     <p></p>
                   </tip-box>
                 </div>
@@ -295,11 +313,13 @@ enhancements</mark>, touching as many other components as possible. Refer to the
                   </tip-box>
                   <p>The <code>:TextUi</code> in the above example denotes <em>an unnamed instance of the class TextUi</em>. If there were two instances of <code>TextUi</code> in the diagram, they can be distinguished by naming them e.g. <code>TextUi1:TextUi</code>                    and <code>TextUi2:TextUi</code>.</p>
                   <p><strong>Arrows representing method calls should be solid arrows while those representing method returns should be dashed arrows</strong>.</p>
-                  <p>Note that unlike in Object Diagrams, the <strong>class/object name is not underlined in sequence diagrams</strong>.</p>
+                  <p>Note that unlike in object diagrams, the <strong>class/object name is not underlined in sequence diagrams</strong>.</p>
                   <tip-box>
-                    <p>❌ <strong>[Common notation error] Activation bar too long:</strong> The activation bar of a method cannot start before the method call arrives and a method cannot remain active after the method had returned. <span class="dimmed"> In the two sequence diagrams below, the one on the left commits this error because the activation bar starts <em>before</em> the method <code>Foo#xyz()</code> is called and remains active <em>after</em> the method returns.</span></p>
+                    <p><span style="color:red"><span class="fas fa-times"></span></span> <strong>[Common notation error] Activation bar too long:</strong> The activation bar of a method cannot start before the method call arrives and a method cannot remain
+                      active after the method had returned. <span class="dimmed"> In the two sequence diagrams below, the one on the left commits this error because the activation bar starts <em>before</em> the method <code>Foo#xyz()</code> is called and remains active <em>after</em> the method returns.</span></p>
                     <img src="/website/book/uml/sequenceDiagrams/basic/images/commonError-activationBarTooLong.png" height="120">
-                    <p>❌ <strong>[Common notation error] Broken activation bar:</strong> The activation bar should remain unbroken from the point the method is called until the method returns. <span class="dimmed"> In the two sequence diagrams below, the one on the left commits this error because the activation bar for the method <code>Foo#abc()</code> is not contiguous, but appears as two pieces instead.</span></p>
+                    <p><span style="color:red"><span class="fas fa-times"></span></span> <strong>[Common notation error] Broken activation bar:</strong> The activation bar should remain unbroken from the point the method is called until the method returns.
+                      <span class="dimmed"> In the two sequence diagrams below, the one on the left commits this error because the activation bar for the method <code>Foo#abc()</code> is not contiguous, but appears as two pieces instead.</span></p>
                     <img src="/website/book/uml/sequenceDiagrams/basic/images/commonError-brokenActivationBar.png" height="120"></tip-box>
                 </div>
                 <div></div>
@@ -423,14 +443,7 @@ enhancements</mark>, touching as many other components as possible. Refer to the
             </span>
             </span>
             <div>
-              <div>
-                <p>
-                  <panel src="/website\book\uml\sequenceDiagrams\basic\unit-inElsewhere-asFlat._include_.html" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> %%UML → Sequence Diagrams → Basic%%"></panel>
-                  <panel src="/website\book\uml\sequenceDiagrams\loops\unit-inElsewhere-asFlat._include_.html" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> %%UML → Sequence Diagrams → Loops%%"></panel>
-                  <panel src="/website\book\uml\sequenceDiagrams\objectCreation\unit-inElsewhere-asFlat._include_.html" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> %%UML → Sequence Diagrams → Object Creation%%"></panel>
-                  <panel src="/website\book\uml\sequenceDiagrams\minimalNotation\unit-inElsewhere-asFlat._include_.html" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> %%UML → Sequence Diagrams → Minimal Notation%%"></panel>
-                </p>
-              </div>
+              <div></div>
               <p></p>
               <p><span class="dimmed"><strong><span>Design → Modelling → Modelling Behaviors
 </span></strong>
@@ -442,42 +455,44 @@ enhancements</mark>, touching as many other components as possible. Refer to the
                 </div>
                 <div id="main">
                   <div>
-                    <p><strong>Sequence diagrams model interactions between entities for a given scenario.</strong></p>
-                    <tip-box>
-                      <p><span class="fas fa-cube"></span> Consider the code below.</p>
-                      <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Machine</span> </span>{
-
-    <span class="hljs-function">Unit <span class="hljs-title">producePrototype</span><span class="hljs-params">()</span> </span>{
-        Unit prototype = <span class="hljs-keyword">new</span> Unit();
-        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">5</span>; i++) {
-            prototype.stressTest();
-        }
-        <span class="hljs-keyword">return</span> prototype;
-    }
-}
-
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Unit</span> </span>{
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">stressTest</span><span class="hljs-params">()</span> </span>{
-
-    }
-}
-
-</code></pre>
-                      <p>Here is the sequence diagram to model the interactions for the method call <code>prouducePrototype()</code> on a <code>Machine</code> object.</p>
-                      <img src="/website/book/modeling/modelingBehaviors/sequenceDiagramsBasic/images/Machine.png" width="450">
-                      <p></p>
-                    </tip-box>
+                    <p>
+                      <panel type="seamless" src="/website\book\uml\sequenceDiagrams\introduction\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Introduction"
+                        alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SequenceDiagrams" fragment="main"></panel>
+                    </p>
+                    <p>
+                      <panel type="seamless" src="/website\book\uml\sequenceDiagrams\basic\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Basic Notation"
+                        alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SD/Basic" fragment="main"></panel>
+                    </p>
+                    <p>
+                      <panel type="seamless" src="/website\book\uml\sequenceDiagrams\loops\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Loops"
+                        alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SD/Loops" fragment="main"></panel>
+                      <panel type="seamless" src="/website\book\uml\sequenceDiagrams\objectCreation\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Object Creation"
+                        alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SD/Creation" fragment="main"></panel>
+                    </p>
+                    <p>
+                      <panel type="seamless" src="/website\book\uml\sequenceDiagrams\minimalNotation\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Minimal Notation"
+                        alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SD/Minimal" fragment="main"></panel>
+                    </p>
                   </div>
                   <div>
                     <div>
                       <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
                         <div>
-                          <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Draw a Sequence Diagram for code snippet">
-                            <question>
-                              <div>
+                          <div>
+                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Explain Sequence Diagram about Machine">
+                              <question>
+                                <p>Explain in your own words the interactions illustrated by this Sequence Diagram:</p>
+                                <img src="/website/book/uml/sequenceDiagrams/introduction/images/Machine.png" width="500"></question>
+                            </panel>
+                          </div>
+                          <div>
+                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Draw a Sequence Diagram for code snippet">
+                              <question>
                                 <p>Consider the code below:</p>
-                                <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span></span>{
+                                <div class="row">
+                                
+                                  <div class="col-sm-7">
+                                    <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span></span>{
     Tag tag;
     String name;
 
@@ -486,8 +501,12 @@ enhancements</mark>, touching as many other components as possible. Refer to the
         tag = <span class="hljs-keyword">new</span> Tag(tagName);
     }
 }
-
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Tag</span></span>{
+</code></pre>
+                                    <p></p>
+                                  </div>
+                                
+                                  <div class="col-sm-5">
+                                    <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Tag</span></span>{
     Tag(String value){
         <span class="hljs-comment">//...</span>
     }
@@ -499,6 +518,9 @@ enhancements</mark>, touching as many other components as possible. Refer to the
     }
 }
 </code></pre>
+                                    <p></p>
+                                  </div>
+                                </div>
                                 <p>Draw a sequence diagram to illustrate the object interactions that happen in the code snippet below:</p>
                                 <pre><code class="hljs java">PersonList personList = <span class="hljs-keyword">new</span> PersonList();
 <span class="hljs-keyword">while</span> (hasRoom){
@@ -506,16 +528,16 @@ enhancements</mark>, touching as many other components as possible. Refer to the
     personList.addPerson(p);
 }
 </code></pre>
-                              </div>
-                            </question>
-                          </panel>
-                        </div>
-                        <div>
-                          <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Find notation errors in sequence diagram">
-                            <question>
-                              <p>Find notation mistakes in the sequence diagram below:</p>
-                              <img src="/website/book/modeling/modelingBehaviors/sequenceDiagramsBasic/images/notationMistakes.png" width="700"></question>
-                          </panel>
+                              </question>
+                            </panel>
+                          </div>
+                          <div>
+                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Find notation errors in sequence diagram">
+                              <question>
+                                <p>Find notation mistakes in the sequence diagram below:</p>
+                                <img src="/website/book/modeling/modelingBehaviors/sequenceDiagramsBasic/images/notationMistakes.png" width="500"></question>
+                            </panel>
+                          </div>
                         </div>
                       </panel>
                     </div>
@@ -529,9 +551,11 @@ enhancements</mark>, touching as many other components as possible. Refer to the
               <div>
                 <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Draw a Sequence Diagram for code snippet">
                   <question>
-                    <div>
-                      <p>Consider the code below:</p>
-                      <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span></span>{
+                    <p>Consider the code below:</p>
+                    <div class="row">
+                    
+                      <div class="col-sm-7">
+                        <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span></span>{
     Tag tag;
     String name;
 
@@ -540,8 +564,12 @@ enhancements</mark>, touching as many other components as possible. Refer to the
         tag = <span class="hljs-keyword">new</span> Tag(tagName);
     }
 }
-
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Tag</span></span>{
+</code></pre>
+                        <p></p>
+                      </div>
+                    
+                      <div class="col-sm-5">
+                        <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Tag</span></span>{
     Tag(String value){
         <span class="hljs-comment">//...</span>
     }
@@ -553,14 +581,16 @@ enhancements</mark>, touching as many other components as possible. Refer to the
     }
 }
 </code></pre>
-                      <p>Draw a sequence diagram to illustrate the object interactions that happen in the code snippet below:</p>
-                      <pre><code class="hljs java">PersonList personList = <span class="hljs-keyword">new</span> PersonList();
+                        <p></p>
+                      </div>
+                    </div>
+                    <p>Draw a sequence diagram to illustrate the object interactions that happen in the code snippet below:</p>
+                    <pre><code class="hljs java">PersonList personList = <span class="hljs-keyword">new</span> PersonList();
 <span class="hljs-keyword">while</span> (hasRoom){
     Person p = <span class="hljs-keyword">new</span> Person(<span class="hljs-string">"Adam"</span>, <span class="hljs-string">"friend"</span>);
     personList.addPerson(p);
 }
 </code></pre>
-                    </div>
                   </question>
                 </panel>
               </div>
@@ -597,7 +627,7 @@ enhancements</mark>, touching as many other components as possible. Refer to the
                   <div>
                     <p><strong>An <em>Application Programming Interface (API)</em> specifies the interface through which other programs can interact with a software component.</strong> It is a contract between the component and its clients.</p>
                     <tip-box>
-                      <p><span class="fas fa-cube"></span> A class has an API (e.g., <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html">API of the Java <code>String</code> class</a>, <a href="https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str">API of the Python <code>str</code> class</a>)
+                      <p><span class="fas fa-cube"></span> A class has an API (e.g., <a href="https://docs.oracle.com/javase/9/docs/api/java/lang/String.html">API of the Java <code>String</code> class</a>, <a href="https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str">API of the Python <code>str</code> class</a>)
                         which is a collection of public methods that you can invoke to make use of the class.</p>
                       <p><span class="fas fa-cube"></span> The <a href="https://developer.github.com/v3/">GitHub API</a> is a collection of Web request formats GitHub server accepts and the corresponding responses. We can write a program that interacts with
                         GitHub through that API.</p>
@@ -846,15 +876,7 @@ enhancements</mark>, touching as many other components as possible. Refer to the
             </span>
             </span>
             <div>
-              <div>
-                <p>
-                  <panel src="/website\book\uml\sequenceDiagrams\referenceFrames\unit-inElsewhere-asFlat._include_.html" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> %%UML → Sequence Diagrams → Reference Frames%%"></panel>
-                  <panel src="/website\book\uml\sequenceDiagrams\objectDeletion\unit-inElsewhere-asFlat._include_.html" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> %%UML :→ Sequence Diagrams → Object Deletion%%"></panel>
-                  <panel src="/website\book\uml\sequenceDiagrams\selfInvocation\unit-inElsewhere-asFlat._include_.html" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> %%UML :→ Sequence Diagrams → Self-Invocation%%"></panel>
-                  <panel src="/website\book\uml\sequenceDiagrams\alternativePaths\unit-inElsewhere-asFlat._include_.html" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> %%UML → Sequence Diagrams → Alternative Paths%%"></panel>
-                  <panel src="/website\book\uml\sequenceDiagrams\optionalPaths\unit-inElsewhere-asFlat._include_.html" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> %%UML → Sequence Diagrams → Optional Paths%%"></panel>
-                </p>
-              </div>
+              <div></div>
               <p></p>
               <p><span class="dimmed"><strong><span>Design → Modelling → Modelling Behaviors
 </span></strong>
@@ -865,40 +887,89 @@ enhancements</mark>, touching as many other components as possible. Refer to the
                   <h4 id="sequence-diagrams-intermediate">Sequence Diagrams - Intermediate</h4>
                 </div>
                 <div id="main">
-                  <div></div>
+                  <div>
+                    <p>
+                      <panel type="seamless" src="/website\book\uml\sequenceDiagrams\objectDeletion\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Object Deletion"
+                        alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SD/Deletion" fragment="main"></panel>
+                      <panel type="seamless" src="/website\book\uml\sequenceDiagrams\selfInvocation\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Self-Invocation"
+                        alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SD/Self-Invocation" fragment="main"></panel>
+                      <panel type="seamless" src="/website\book\uml\sequenceDiagrams\alternativePaths\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Alternative Paths"
+                        alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SD/Alternative" fragment="main"></panel>
+                      <panel type="seamless" src="/website\book\uml\sequenceDiagrams\optionalPaths\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Optional Paths"
+                        alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SD/Optional" fragment="main"></panel>
+                    </p>
+                  </div>
                   <div>
                     <div>
                       <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
                         <div>
-                          <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> What’s going on here?">
-                            <question>
-                              <p>What’s going on here?</p>
-                              <img src="/website/book/modeling/modelingBehaviors/sequenceDiagramsIntermediate/images/exerciseDiagram.png" height="170">
-                              <p></p>
-                              <ul class="task-list">
-                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. <code>Logic</code> object is executing a parallel thread.</li>
-                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. <code>Logic</code> object is executing a loop.</li>
-                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. <code>Logic</code> object is creating another <code>Logic</code> instance.</li>
-                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. One of <code>Logic</code> object’s methods is calling another of its methods.</li>
-                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. <code>Minefield</code> object is calling a method of <code>Logic</code>.</li>
-                              </ul>
-                              <div slot="answer">
-                                <p>(d)</p>
-                              </div>
-                            </question>
-                          </panel>
-                        </div>
-                        <div>
-                          <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Explain Sequence Diagram (ParserFactory)">
-                            <question>
-                              <p>Explain the interactions depicted in this sequence diagram.</p>
-                              <img src="/website/book/modeling/modelingBehaviors/sequenceDiagramsIntermediate/images/parserFactory.png" height="300">
-                              <p></p>
-                              <div slot="hint">
-                                <p>First, the <code>createParser()</code> method of an existing <code>ParserFactory</code> object is called. Then, ...</p>
-                              </div>
-                            </question>
-                          </panel>
+                          <div>
+                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> What’s going on here?">
+                              <question>
+                                <p>What’s going on here?</p>
+                                <img src="/website/book/modeling/modelingBehaviors/sequenceDiagramsIntermediate/images/exerciseDiagram.png" height="170">
+                                <p></p>
+                                <ul class="task-list">
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. <code>Logic</code> object is executing a parallel thread.</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. <code>Logic</code> object is executing a loop.</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. <code>Logic</code> object is creating another <code>Logic</code> instance.</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. One of <code>Logic</code> object’s methods is calling another of its methods.</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. <code>Minefield</code> object is calling a method of <code>Logic</code>.</li>
+                                </ul>
+                                <div slot="answer">
+                                  <p>(d)</p>
+                                </div>
+                              </question>
+                            </panel>
+                          </div>
+                          <div>
+                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Explain Sequence Diagram (ParserFactory)">
+                              <question>
+                                <p>Explain the interactions depicted in this sequence diagram.</p>
+                                <img src="/website/book/modeling/modelingBehaviors/sequenceDiagramsIntermediate/images/parserFactory.png" height="300">
+                                <p></p>
+                                <div slot="hint">
+                                  <p>First, the <code>createParser()</code> method of an existing <code>ParserFactory</code> object is called. Then, ...</p>
+                                </div>
+                              </question>
+                            </panel>
+                          </div>
+                          <div>
+                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Draw Sequence Diagram for printing a quote">
+                              <question>
+                                <p>Draw a sequence diagram to represent this code snippet.</p>
+                                <pre><code class="hljs java"><span class="hljs-keyword">if</span> (isFirstPage) {
+    <span class="hljs-keyword">new</span> Quote().print();
+}
+</code></pre>
+                                <p>The <code>Quote</code> class:</p>
+                                <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Quote</span></span>{
+
+    String q;
+
+    Quote(){
+        q = generate();
+    }
+
+    <span class="hljs-function">String <span class="hljs-title">generate</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-comment">// ...</span>
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span></span>{
+        System.out.println(q);
+    }
+
+}
+</code></pre>
+                                <div slot="hint">
+                                  <ul>
+                                    <li>Show <code>new Quote().print();</code> as two method calls.</li>
+                                    <li>As the created Quote object is not assigned to a variable, it can be considered as 'deleted' soon after its <code>print()</code> method is called.</li>
+                                  </ul>
+                                </div>
+                              </question>
+                            </panel>
+                          </div>
                         </div>
                       </panel>
                     </div>
@@ -1198,13 +1269,9 @@ logger.log(Level.INFO, <span class="hljs-string">"end of processing"</span>);
                       <p><strong>Java disables assertions by default.</strong> This could create a situation where you think all assertions are being verified as <code>true</code> while in fact they are not being verified at all. Therefore, remember to enable
                         assertions when you run the program if you want them to be in effect.</p>
                     </tip-box>
-                    <tip-box>
-                      <p>💡 Enable assertions in Intellij (<a href="https://stackoverflow.com/questions/18168257/where-to-add-compiler-options-like-ea-in-intellij-idea">how?</a>) and get an assertion to fail temporarily (e.g. insert an <code>assert false</code>                        into the code temporarily) to confirm assertions are being verified.</p>
-                    </tip-box>
-                    <tip-box type="info">
-                      <p><strong>Java <code>assert</code> vs JUnit assertions</strong>: They are similar in purpose but JUnit assertions are more powerful and customized for testing. In addition, JUnit assertions are not disabled by default. We recommend
-                        you use JUnit assertions in test code and Java <code>assert</code> in functional code.</p>
-                    </tip-box>
+                    <p>💡 Enable assertions in Intellij (<a href="https://stackoverflow.com/questions/18168257/where-to-add-compiler-options-like-ea-in-intellij-idea">how?</a>) and get an assertion to fail temporarily (e.g. insert an <code>assert false</code>                      into the code temporarily) to confirm assertions are being verified.</p>
+                    <p><span class="fas fa-info-circle"></span> <strong>Java <code>assert</code> vs JUnit assertions: They are similar in purpose but JUnit assertions are more powerful and customized for testing.</strong> In addition, JUnit assertions are
+                      not disabled by default. We recommend you use JUnit assertions in test code and Java <code>assert</code> in functional code.</p>
                   </div>
                   <div>
                     <div>
@@ -2435,14 +2502,7 @@ Caused by: java.lang.IllegalAccessException: class javafx.fxml.FXMLLoader$ValueE
               <panel minimized="">
                 <span slot="header" class="card-title">Details of the LO</span>
                 <div>
-                  <div>
-                    <p>
-                      <panel src="/website\book\uml\sequenceDiagrams\basic\unit-inElsewhere-asFlat._include_.html" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> %%UML → Sequence Diagrams → Basic%%"></panel>
-                      <panel src="/website\book\uml\sequenceDiagrams\loops\unit-inElsewhere-asFlat._include_.html" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> %%UML → Sequence Diagrams → Loops%%"></panel>
-                      <panel src="/website\book\uml\sequenceDiagrams\objectCreation\unit-inElsewhere-asFlat._include_.html" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> %%UML → Sequence Diagrams → Object Creation%%"></panel>
-                      <panel src="/website\book\uml\sequenceDiagrams\minimalNotation\unit-inElsewhere-asFlat._include_.html" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> %%UML → Sequence Diagrams → Minimal Notation%%"></panel>
-                    </p>
-                  </div>
+                  <div></div>
                   <p></p>
                   <p><span class="dimmed"><strong><span>Design → Modelling → Modelling Behaviors
 </span></strong>
@@ -2454,42 +2514,44 @@ Caused by: java.lang.IllegalAccessException: class javafx.fxml.FXMLLoader$ValueE
                     </div>
                     <div id="main">
                       <div>
-                        <p><strong>Sequence diagrams model interactions between entities for a given scenario.</strong></p>
-                        <tip-box>
-                          <p><span class="fas fa-cube"></span> Consider the code below.</p>
-                          <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Machine</span> </span>{
-
-    <span class="hljs-function">Unit <span class="hljs-title">producePrototype</span><span class="hljs-params">()</span> </span>{
-        Unit prototype = <span class="hljs-keyword">new</span> Unit();
-        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">5</span>; i++) {
-            prototype.stressTest();
-        }
-        <span class="hljs-keyword">return</span> prototype;
-    }
-}
-
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Unit</span> </span>{
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">stressTest</span><span class="hljs-params">()</span> </span>{
-
-    }
-}
-
-</code></pre>
-                          <p>Here is the sequence diagram to model the interactions for the method call <code>prouducePrototype()</code> on a <code>Machine</code> object.</p>
-                          <img src="/website/book/modeling/modelingBehaviors/sequenceDiagramsBasic/images/Machine.png" width="450">
-                          <p></p>
-                        </tip-box>
+                        <p>
+                          <panel type="seamless" src="/website\book\uml\sequenceDiagrams\introduction\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Introduction"
+                            alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SequenceDiagrams" fragment="main"></panel>
+                        </p>
+                        <p>
+                          <panel type="seamless" src="/website\book\uml\sequenceDiagrams\basic\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Basic Notation"
+                            alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SD/Basic" fragment="main"></panel>
+                        </p>
+                        <p>
+                          <panel type="seamless" src="/website\book\uml\sequenceDiagrams\loops\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Loops"
+                            alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SD/Loops" fragment="main"></panel>
+                          <panel type="seamless" src="/website\book\uml\sequenceDiagrams\objectCreation\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Object Creation"
+                            alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SD/Creation" fragment="main"></panel>
+                        </p>
+                        <p>
+                          <panel type="seamless" src="/website\book\uml\sequenceDiagrams\minimalNotation\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Minimal Notation"
+                            alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SD/Minimal" fragment="main"></panel>
+                        </p>
                       </div>
                       <div>
                         <div>
                           <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
                             <div>
-                              <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Draw a Sequence Diagram for code snippet">
-                                <question>
-                                  <div>
+                              <div>
+                                <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Explain Sequence Diagram about Machine">
+                                  <question>
+                                    <p>Explain in your own words the interactions illustrated by this Sequence Diagram:</p>
+                                    <img src="/website/book/uml/sequenceDiagrams/introduction/images/Machine.png" width="500"></question>
+                                </panel>
+                              </div>
+                              <div>
+                                <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Draw a Sequence Diagram for code snippet">
+                                  <question>
                                     <p>Consider the code below:</p>
-                                    <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span></span>{
+                                    <div class="row">
+                                    
+                                      <div class="col-sm-7">
+                                        <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span></span>{
     Tag tag;
     String name;
 
@@ -2498,8 +2560,12 @@ Caused by: java.lang.IllegalAccessException: class javafx.fxml.FXMLLoader$ValueE
         tag = <span class="hljs-keyword">new</span> Tag(tagName);
     }
 }
-
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Tag</span></span>{
+</code></pre>
+                                        <p></p>
+                                      </div>
+                                    
+                                      <div class="col-sm-5">
+                                        <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Tag</span></span>{
     Tag(String value){
         <span class="hljs-comment">//...</span>
     }
@@ -2511,6 +2577,9 @@ Caused by: java.lang.IllegalAccessException: class javafx.fxml.FXMLLoader$ValueE
     }
 }
 </code></pre>
+                                        <p></p>
+                                      </div>
+                                    </div>
                                     <p>Draw a sequence diagram to illustrate the object interactions that happen in the code snippet below:</p>
                                     <pre><code class="hljs java">PersonList personList = <span class="hljs-keyword">new</span> PersonList();
 <span class="hljs-keyword">while</span> (hasRoom){
@@ -2518,16 +2587,16 @@ Caused by: java.lang.IllegalAccessException: class javafx.fxml.FXMLLoader$ValueE
     personList.addPerson(p);
 }
 </code></pre>
-                                  </div>
-                                </question>
-                              </panel>
-                            </div>
-                            <div>
-                              <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Find notation errors in sequence diagram">
-                                <question>
-                                  <p>Find notation mistakes in the sequence diagram below:</p>
-                                  <img src="/website/book/modeling/modelingBehaviors/sequenceDiagramsBasic/images/notationMistakes.png" width="700"></question>
-                              </panel>
+                                  </question>
+                                </panel>
+                              </div>
+                              <div>
+                                <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Find notation errors in sequence diagram">
+                                  <question>
+                                    <p>Find notation mistakes in the sequence diagram below:</p>
+                                    <img src="/website/book/modeling/modelingBehaviors/sequenceDiagramsBasic/images/notationMistakes.png" width="500"></question>
+                                </panel>
+                              </div>
                             </div>
                           </panel>
                         </div>
@@ -2543,9 +2612,11 @@ Caused by: java.lang.IllegalAccessException: class javafx.fxml.FXMLLoader$ValueE
                   <div>
                     <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Draw a Sequence Diagram for code snippet">
                       <question>
-                        <div>
-                          <p>Consider the code below:</p>
-                          <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span></span>{
+                        <p>Consider the code below:</p>
+                        <div class="row">
+                        
+                          <div class="col-sm-7">
+                            <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span></span>{
     Tag tag;
     String name;
 
@@ -2554,8 +2625,12 @@ Caused by: java.lang.IllegalAccessException: class javafx.fxml.FXMLLoader$ValueE
         tag = <span class="hljs-keyword">new</span> Tag(tagName);
     }
 }
-
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Tag</span></span>{
+</code></pre>
+                            <p></p>
+                          </div>
+                        
+                          <div class="col-sm-5">
+                            <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Tag</span></span>{
     Tag(String value){
         <span class="hljs-comment">//...</span>
     }
@@ -2567,14 +2642,16 @@ Caused by: java.lang.IllegalAccessException: class javafx.fxml.FXMLLoader$ValueE
     }
 }
 </code></pre>
-                          <p>Draw a sequence diagram to illustrate the object interactions that happen in the code snippet below:</p>
-                          <pre><code class="hljs java">PersonList personList = <span class="hljs-keyword">new</span> PersonList();
+                            <p></p>
+                          </div>
+                        </div>
+                        <p>Draw a sequence diagram to illustrate the object interactions that happen in the code snippet below:</p>
+                        <pre><code class="hljs java">PersonList personList = <span class="hljs-keyword">new</span> PersonList();
 <span class="hljs-keyword">while</span> (hasRoom){
     Person p = <span class="hljs-keyword">new</span> Person(<span class="hljs-string">"Adam"</span>, <span class="hljs-string">"friend"</span>);
     personList.addPerson(p);
 }
 </code></pre>
-                        </div>
                       </question>
                     </panel>
                   </div>
@@ -2609,7 +2686,7 @@ Caused by: java.lang.IllegalAccessException: class javafx.fxml.FXMLLoader$ValueE
                       <div>
                         <p><strong>An <em>Application Programming Interface (API)</em> specifies the interface through which other programs can interact with a software component.</strong> It is a contract between the component and its clients.</p>
                         <tip-box>
-                          <p><span class="fas fa-cube"></span> A class has an API (e.g., <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html">API of the Java <code>String</code> class</a>, <a href="https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str">API of the Python <code>str</code> class</a>)
+                          <p><span class="fas fa-cube"></span> A class has an API (e.g., <a href="https://docs.oracle.com/javase/9/docs/api/java/lang/String.html">API of the Java <code>String</code> class</a>, <a href="https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str">API of the Python <code>str</code> class</a>)
                             which is a collection of public methods that you can invoke to make use of the class.</p>
                           <p><span class="fas fa-cube"></span> The <a href="https://developer.github.com/v3/">GitHub API</a> is a collection of Web request formats GitHub server accepts and the corresponding responses. We can write a program that interacts
                             with GitHub through that API.</p>
@@ -2677,15 +2754,7 @@ Caused by: java.lang.IllegalAccessException: class javafx.fxml.FXMLLoader$ValueE
             <panel minimized="">
               <span slot="header" class="card-title">Details of the LO</span>
               <div>
-                <div>
-                  <p>
-                    <panel src="/website\book\uml\sequenceDiagrams\referenceFrames\unit-inElsewhere-asFlat._include_.html" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> %%UML → Sequence Diagrams → Reference Frames%%"></panel>
-                    <panel src="/website\book\uml\sequenceDiagrams\objectDeletion\unit-inElsewhere-asFlat._include_.html" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> %%UML :→ Sequence Diagrams → Object Deletion%%"></panel>
-                    <panel src="/website\book\uml\sequenceDiagrams\selfInvocation\unit-inElsewhere-asFlat._include_.html" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> %%UML :→ Sequence Diagrams → Self-Invocation%%"></panel>
-                    <panel src="/website\book\uml\sequenceDiagrams\alternativePaths\unit-inElsewhere-asFlat._include_.html" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> %%UML → Sequence Diagrams → Alternative Paths%%"></panel>
-                    <panel src="/website\book\uml\sequenceDiagrams\optionalPaths\unit-inElsewhere-asFlat._include_.html" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> %%UML → Sequence Diagrams → Optional Paths%%"></panel>
-                  </p>
-                </div>
+                <div></div>
                 <p></p>
                 <p><span class="dimmed"><strong><span>Design → Modelling → Modelling Behaviors
 </span></strong>
@@ -2696,40 +2765,89 @@ Caused by: java.lang.IllegalAccessException: class javafx.fxml.FXMLLoader$ValueE
                     <h4 id="sequence-diagrams-intermediate-2">Sequence Diagrams - Intermediate</h4>
                   </div>
                   <div id="main">
-                    <div></div>
+                    <div>
+                      <p>
+                        <panel type="seamless" src="/website\book\uml\sequenceDiagrams\objectDeletion\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Object Deletion"
+                          alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SD/Deletion" fragment="main"></panel>
+                        <panel type="seamless" src="/website\book\uml\sequenceDiagrams\selfInvocation\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Self-Invocation"
+                          alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SD/Self-Invocation" fragment="main"></panel>
+                        <panel type="seamless" src="/website\book\uml\sequenceDiagrams\alternativePaths\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Alternative Paths"
+                          alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SD/Alternative" fragment="main"></panel>
+                        <panel type="seamless" src="/website\book\uml\sequenceDiagrams\optionalPaths\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Optional Paths"
+                          alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SD/Optional" fragment="main"></panel>
+                      </p>
+                    </div>
                     <div>
                       <div>
                         <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
                           <div>
-                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> What’s going on here?">
-                              <question>
-                                <p>What’s going on here?</p>
-                                <img src="/website/book/modeling/modelingBehaviors/sequenceDiagramsIntermediate/images/exerciseDiagram.png" height="170">
-                                <p></p>
-                                <ul class="task-list">
-                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. <code>Logic</code> object is executing a parallel thread.</li>
-                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. <code>Logic</code> object is executing a loop.</li>
-                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. <code>Logic</code> object is creating another <code>Logic</code> instance.</li>
-                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. One of <code>Logic</code> object’s methods is calling another of its methods.</li>
-                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. <code>Minefield</code> object is calling a method of <code>Logic</code>.</li>
-                                </ul>
-                                <div slot="answer">
-                                  <p>(d)</p>
-                                </div>
-                              </question>
-                            </panel>
-                          </div>
-                          <div>
-                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Explain Sequence Diagram (ParserFactory)">
-                              <question>
-                                <p>Explain the interactions depicted in this sequence diagram.</p>
-                                <img src="/website/book/modeling/modelingBehaviors/sequenceDiagramsIntermediate/images/parserFactory.png" height="300">
-                                <p></p>
-                                <div slot="hint">
-                                  <p>First, the <code>createParser()</code> method of an existing <code>ParserFactory</code> object is called. Then, ...</p>
-                                </div>
-                              </question>
-                            </panel>
+                            <div>
+                              <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> What’s going on here?">
+                                <question>
+                                  <p>What’s going on here?</p>
+                                  <img src="/website/book/modeling/modelingBehaviors/sequenceDiagramsIntermediate/images/exerciseDiagram.png" height="170">
+                                  <p></p>
+                                  <ul class="task-list">
+                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. <code>Logic</code> object is executing a parallel thread.</li>
+                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. <code>Logic</code> object is executing a loop.</li>
+                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. <code>Logic</code> object is creating another <code>Logic</code> instance.</li>
+                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. One of <code>Logic</code> object’s methods is calling another of its methods.</li>
+                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. <code>Minefield</code> object is calling a method of <code>Logic</code>.</li>
+                                  </ul>
+                                  <div slot="answer">
+                                    <p>(d)</p>
+                                  </div>
+                                </question>
+                              </panel>
+                            </div>
+                            <div>
+                              <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Explain Sequence Diagram (ParserFactory)">
+                                <question>
+                                  <p>Explain the interactions depicted in this sequence diagram.</p>
+                                  <img src="/website/book/modeling/modelingBehaviors/sequenceDiagramsIntermediate/images/parserFactory.png" height="300">
+                                  <p></p>
+                                  <div slot="hint">
+                                    <p>First, the <code>createParser()</code> method of an existing <code>ParserFactory</code> object is called. Then, ...</p>
+                                  </div>
+                                </question>
+                              </panel>
+                            </div>
+                            <div>
+                              <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Draw Sequence Diagram for printing a quote">
+                                <question>
+                                  <p>Draw a sequence diagram to represent this code snippet.</p>
+                                  <pre><code class="hljs java"><span class="hljs-keyword">if</span> (isFirstPage) {
+    <span class="hljs-keyword">new</span> Quote().print();
+}
+</code></pre>
+                                  <p>The <code>Quote</code> class:</p>
+                                  <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Quote</span></span>{
+
+    String q;
+
+    Quote(){
+        q = generate();
+    }
+
+    <span class="hljs-function">String <span class="hljs-title">generate</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-comment">// ...</span>
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span></span>{
+        System.out.println(q);
+    }
+
+}
+</code></pre>
+                                  <div slot="hint">
+                                    <ul>
+                                      <li>Show <code>new Quote().print();</code> as two method calls.</li>
+                                      <li>As the created Quote object is not assigned to a variable, it can be considered as 'deleted' soon after its <code>print()</code> method is called.</li>
+                                    </ul>
+                                  </div>
+                                </question>
+                              </panel>
+                            </div>
                           </div>
                         </panel>
                       </div>
@@ -2888,13 +3006,9 @@ logger.log(Level.INFO, <span class="hljs-string">"end of processing"</span>);
                           <p><strong>Java disables assertions by default.</strong> This could create a situation where you think all assertions are being verified as <code>true</code> while in fact they are not being verified at all. Therefore, remember
                             to enable assertions when you run the program if you want them to be in effect.</p>
                         </tip-box>
-                        <tip-box>
-                          <p>💡 Enable assertions in Intellij (<a href="https://stackoverflow.com/questions/18168257/where-to-add-compiler-options-like-ea-in-intellij-idea">how?</a>) and get an assertion to fail temporarily (e.g. insert an <code>assert false</code>                            into the code temporarily) to confirm assertions are being verified.</p>
-                        </tip-box>
-                        <tip-box type="info">
-                          <p><strong>Java <code>assert</code> vs JUnit assertions</strong>: They are similar in purpose but JUnit assertions are more powerful and customized for testing. In addition, JUnit assertions are not disabled by default. We recommend
-                            you use JUnit assertions in test code and Java <code>assert</code> in functional code.</p>
-                        </tip-box>
+                        <p>💡 Enable assertions in Intellij (<a href="https://stackoverflow.com/questions/18168257/where-to-add-compiler-options-like-ea-in-intellij-idea">how?</a>) and get an assertion to fail temporarily (e.g. insert an <code>assert false</code>                          into the code temporarily) to confirm assertions are being verified.</p>
+                        <p><span class="fas fa-info-circle"></span> <strong>Java <code>assert</code> vs JUnit assertions: They are similar in purpose but JUnit assertions are more powerful and customized for testing.</strong> In addition, JUnit assertions
+                          are not disabled by default. We recommend you use JUnit assertions in test code and Java <code>assert</code> in functional code.</p>
                       </div>
                       <div>
                         <div>

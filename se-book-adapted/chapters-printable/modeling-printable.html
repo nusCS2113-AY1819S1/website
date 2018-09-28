@@ -317,8 +317,8 @@
               alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/Multiplicity" fragment="main"></panel>
             <panel type="seamless" src="/website\book\oop\associations\navigability\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Associations → Navigability"
               alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP/Navigability" fragment="main"></panel>
-            <panel type="seamless" src="/website\book\uml\classDiagrams\associations\navigability\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Class Diagrams → Associations → UML/Navigability"
-              alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Navigability" fragment="main"></panel>
+            <panel type="seamless" src="/website\book\uml\classDiagrams\associations\navigability\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Class Diagrams → Associations → Navigability"
+              alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/Navigability" fragment="main"></panel>
           </p>
           <tip-box>
             <p><span class="fas fa-cube"></span> Here is the same class diagram shown earlier but with some additional information included:</p>
@@ -404,13 +404,6 @@
                 fragment="main"></panel>
               <panel type="seamless" src="/website\book\uml\classDiagrams\interfaces\what\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML → Class Diagrams → Interfaces → What" alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/Interfaces"
                 fragment="main"></panel>
-            </p>
-            <h5 id="modeling-association-classes">Modeling association classes</h5>
-            <p>
-              <panel type="seamless" src="/website\book\oop\associations\associationClasses\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP → Associations → Association Classes"
-                alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP/AssociationClasses" fragment="main"></panel>
-              <panel type="seamless" src="/website\book\uml\classDiagrams\associationClasses\what\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML → Class Diagrams → Association Classes → What"
-                alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/AssociationsClasses" fragment="main"></panel>
             </p>
           </div>
         </div>
@@ -524,32 +517,24 @@
       </h4>
       <div class="indented-less">
         <div>
-          <p><strong>Sequence diagrams model interactions between entities for a given scenario.</strong></p>
-          <tip-box>
-            <p><span class="fas fa-cube"></span> Consider the code below.</p>
-            <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Machine</span> </span>{
-
-    <span class="hljs-function">Unit <span class="hljs-title">producePrototype</span><span class="hljs-params">()</span> </span>{
-        Unit prototype = <span class="hljs-keyword">new</span> Unit();
-        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">5</span>; i++) {
-            prototype.stressTest();
-        }
-        <span class="hljs-keyword">return</span> prototype;
-    }
-}
-
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Unit</span> </span>{
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">stressTest</span><span class="hljs-params">()</span> </span>{
-
-    }
-}
-
-</code></pre>
-            <p>Here is the sequence diagram to model the interactions for the method call <code>prouducePrototype()</code> on a <code>Machine</code> object.</p>
-            <img src="/website/book/modeling/modelingBehaviors/sequenceDiagramsBasic/images/Machine.png" width="450">
-            <p></p>
-          </tip-box>
+          <p>
+            <panel type="seamless" src="/website\book\uml\sequenceDiagrams\introduction\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Introduction"
+              alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SequenceDiagrams" fragment="main"></panel>
+          </p>
+          <p>
+            <panel type="seamless" src="/website\book\uml\sequenceDiagrams\basic\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Basic Notation"
+              alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SD/Basic" fragment="main"></panel>
+          </p>
+          <p>
+            <panel type="seamless" src="/website\book\uml\sequenceDiagrams\loops\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Loops"
+              alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SD/Loops" fragment="main"></panel>
+            <panel type="seamless" src="/website\book\uml\sequenceDiagrams\objectCreation\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Object Creation"
+              alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SD/Creation" fragment="main"></panel>
+          </p>
+          <p>
+            <panel type="seamless" src="/website\book\uml\sequenceDiagrams\minimalNotation\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Minimal Notation"
+              alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SD/Minimal" fragment="main"></panel>
+          </p>
         </div>
       </div>
     </div>
@@ -560,7 +545,18 @@
         </span>
       </h4>
       <div class="indented-less">
-        <div></div>
+        <div>
+          <p>
+            <panel type="seamless" src="/website\book\uml\sequenceDiagrams\objectDeletion\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Object Deletion"
+              alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SD/Deletion" fragment="main"></panel>
+            <panel type="seamless" src="/website\book\uml\sequenceDiagrams\selfInvocation\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Self-Invocation"
+              alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SD/Self-Invocation" fragment="main"></panel>
+            <panel type="seamless" src="/website\book\uml\sequenceDiagrams\alternativePaths\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Alternative Paths"
+              alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SD/Alternative" fragment="main"></panel>
+            <panel type="seamless" src="/website\book\uml\sequenceDiagrams\optionalPaths\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Optional Paths"
+              alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SD/Optional" fragment="main"></panel>
+          </p>
+        </div>
       </div>
     </div>
     <div class="indented-less">
@@ -691,7 +687,7 @@
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.10.1</a> at Thu, 20 Sep 2018 05:36:54 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.10.1</a> at Fri, 28 Sep 2018 09:05:03 GMT</small></div>
 </footer>
 </div>
 </body>

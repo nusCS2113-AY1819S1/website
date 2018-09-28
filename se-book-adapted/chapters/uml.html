@@ -386,14 +386,14 @@
                             <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Car</span></span>{
 
     Engine engine;
-    <span class="hljs-keyword">private</span> List&lt;Wheel&gt;[] wheels = <span class="hljs-keyword">null</span>;
+    <span class="hljs-keyword">private</span> List&lt;Wheel&gt; wheels = <span class="hljs-keyword">null</span>;
     <span class="hljs-keyword">public</span> String model;
 
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">drive</span><span class="hljs-params">(<span class="hljs-keyword">int</span> speed)</span></span>{
         move(speed);
     }
 
-    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-title">move</span><span class="hljs-params">(<span class="hljs-keyword">int</span> speed)</span></span>{
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">move</span><span class="hljs-params">(<span class="hljs-keyword">int</span> speed)</span></span>{
         ...
     }
 }
@@ -471,30 +471,18 @@
                     <p><span class="fas fa-cube"></span> <code>Logic</code> is aware of <code>Minefield</code>, but <code>Minefield</code> is not aware of <code>Logic</code></p>
                     <img src="/website/book/uml/classDiagrams/associations/navigability/images/logicMinefield.png" height="40">
                     <div>
-                      <table>
-                        <tr>
-                        
-                          <td>
-                            <p>Java <span class="fas fa-arrow-down"></span></p>
-                            <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span></span>{
+                      <div class="alt-java">
+                        <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span></span>{
     Minefield minefield;
 }
 
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Minefield</span></span>{
     ...
 }
-
-
-
 </code></pre>
-                            <p></p>
-                          </td>
-                        
-                          <td valign="bottom">  <br><br></td>
-                        
-                          <td valign="bottom">
-                            <p>Python <span class="fas fa-arrow-down"></span></p>
-                            <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span>:</span>
+                      </div>
+                      <div class="alt-python">
+                        <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span>:</span>
   
   <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, minefield)</span>:</span>
     self.minefield = minefield
@@ -505,10 +493,7 @@
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Minefield</span>:</span>
   <span class="hljs-comment"># ...</span>
 </code></pre>
-                            <p></p>
-                          </td>
-                        </tr>
-                      </table>
+                      </div>
                     </div>
                     <p><span class="fas fa-cube"></span> Here is an example of a bidirectional navigability; each class is aware of the other.
                       <p></p>
@@ -743,7 +728,6 @@
                 </span>
                 <p></p>
                 <div>
-                  <p>In a UML class diagram, a <strong>dependency is a weaker form of an association where there is an interactions between objects that do not result in a long-term relationship</strong> between the said objects.</p>
                   <p><strong>UML uses a dashed arrow to show dependencies.</strong></p>
                   <img src="/website/book/uml/classDiagrams/dependencies/what/images/notation.png" width="350">
                   <tip-box>
@@ -819,7 +803,21 @@
                     <p></p>
                   </tip-box>
                 </div>
-                <div></div>
+                <div>
+                  <div>
+                    <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                      <div>
+                        <div>
+                          <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Define WeekDay Enum">
+                            <question has-input="true">
+                              <p>Show (in UML notation) an enumeration called <code>WeekDay</code> to use when the value can only be <code>Monday</code> ... <code>Friday</code>.</p>
+                            </question>
+                          </panel>
+                        </div>
+                      </div>
+                    </panel>
+                  </div>
+                </div>
             </div>
           </panel>
         </panel>
@@ -1049,7 +1047,7 @@
                 </span>
                 <p></p>
                 <div>
-                  <p>We can use <em>italics</em> or <code>{abstract}</code> keyword to denote abstract classes/methods.</p>
+                  <p><strong>You can use <em>italics</em> or <code>{abstract}</code> (preferred) keyword to denote abstract classes/methods.</strong></p>
                   <img src="/website/book/uml/classDiagrams/abstractClasses/what/images/notation.png" height="110">
                   <p></p>
                   <tip-box>
@@ -1196,7 +1194,7 @@ item2.add_previous_box(box2);
                             <img src="/website/book/modeling/modelingStructures/classDiagramsBasic/images/typicalClasssStructure.png" width="400">
                             <p></p>
                             <p>Draw object diagrams to represent the object structures after each of these steps below. Assume that we are trying to minimize the number of total objects.</p>
-                            <p>i.e. apply step 1 → [diagram 1] → apply step 2 on diagarm 1 → [diagarm 2] and so on.</p>
+                            <p>i.e. apply step 1 → [diagram 1] → apply step 2 on diagram 1 → [diagram 2] and so on.</p>
                             <ol>
                               <li>
                                 <p>There are no persons.</p>
@@ -1245,10 +1243,28 @@ item2.add_previous_box(box2);
             <div>
               <p><strong>A UML sequence diagram <em>captures the interactions between multiple objects for a given scenario.</em></strong></p>
               <tip-box>
-                <p><span class="fas fa-cube"></span> Some exmaple sequence diagrams:</p>
-                <img src="/website/book/uml/sequenceDiagrams/introduction/images/textLogic.png" height="300">
-                <p></p>
-                <img src="/website/book/uml/sequenceDiagrams/introduction/images/logicMinefield.png" height="300">
+                <p><span class="fas fa-cube"></span> Consider the code below.</p>
+                <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Machine</span> </span>{
+
+    <span class="hljs-function">Unit <span class="hljs-title">producePrototype</span><span class="hljs-params">()</span> </span>{
+        Unit prototype = <span class="hljs-keyword">new</span> Unit();
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">5</span>; i++) {
+            prototype.stressTest();
+        }
+        <span class="hljs-keyword">return</span> prototype;
+    }
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Unit</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">stressTest</span><span class="hljs-params">()</span> </span>{
+
+    }
+}
+
+</code></pre>
+                <p>Here is the sequence diagram to model the interactions for the method call <code>producePrototype()</code> on a <code>Machine</code> object.</p>
+                <img src="/website/book/uml/sequenceDiagrams/introduction/images/Machine.png" width="450">
                 <p></p>
               </tip-box>
             </div>
@@ -1281,11 +1297,15 @@ item2.add_previous_box(box2);
               </tip-box>
               <p>The <code>:TextUi</code> in the above example denotes <em>an unnamed instance of the class TextUi</em>. If there were two instances of <code>TextUi</code> in the diagram, they can be distinguished by naming them e.g. <code>TextUi1:TextUi</code>                and <code>TextUi2:TextUi</code>.</p>
               <p><strong>Arrows representing method calls should be solid arrows while those representing method returns should be dashed arrows</strong>.</p>
-              <p>Note that unlike in Object Diagrams, the <strong>class/object name is not underlined in sequence diagrams</strong>.</p>
+              <p>Note that unlike in object diagrams, the <strong>class/object name is not underlined in sequence diagrams</strong>.</p>
               <tip-box>
-                <p>❌ <strong>[Common notation error] Activation bar too long:</strong> The activation bar of a method cannot start before the method call arrives and a method cannot remain active after the method had returned. <span class="dimmed"> In the two sequence diagrams below, the one on the left commits this error because the activation bar starts <em>before</em> the method <code>Foo#xyz()</code> is called and remains active <em>after</em> the method returns.</span></p>
+                <p><span style="color:red"><span class="fas fa-times"></span></span> <strong>[Common notation error] Activation bar too long:</strong> The activation bar of a method cannot start before the method call arrives and a method cannot remain active
+                  after the method had returned. <span class="dimmed"> In the two sequence diagrams below, the one on the left commits this error because the activation bar starts <em>before</em> the method <code>Foo#xyz()</code> is called and remains active <em>after</em> the method returns.</span></p>
                 <img src="/website/book/uml/sequenceDiagrams/basic/images/commonError-activationBarTooLong.png" height="120">
-                <p>❌ <strong>[Common notation error] Broken activation bar:</strong> The activation bar should remain unbroken from the point the method is called until the method returns. <span class="dimmed"> In the two sequence diagrams below, the one on the left commits this error because the activation bar for the method <code>Foo#abc()</code> is not contiguous, but appears as two pieces instead.</span></p>
+                <p><span style="color:red"><span class="fas fa-times"></span></span> <strong>[Common notation error] Broken activation bar:</strong> The activation bar should remain unbroken from the point the method is called until the method returns.
+                  <span
+                    class="dimmed"> In the two sequence diagrams below, the one on the left commits this error because the activation bar for the method <code>Foo#abc()</code> is not contiguous, but appears as two pieces instead.</span>
+                </p>
                 <img src="/website/book/uml/sequenceDiagrams/basic/images/commonError-brokenActivationBar.png" height="120"></tip-box>
             </div>
             <div></div>
@@ -2077,7 +2097,7 @@ my_car = Car(<span class="hljs-number">13.5</span>, <span class="hljs-number">20
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.10.1</a> at Thu, 20 Sep 2018 05:36:54 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.10.1</a> at Fri, 28 Sep 2018 09:05:03 GMT</small></div>
 </footer>
 </div>
 </body>

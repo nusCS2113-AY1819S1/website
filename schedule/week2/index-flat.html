@@ -1137,7 +1137,8 @@ java -jar Collate-TUI.jar collate from unused to collated/unused include java, f
                           <p><strong>It will help you to work simultaneously on, and manage the drift between, multiple versions of your project.</strong> Most of these reasons are equally valid, at least in theory, whether you're working on a project by
                             yourself, or with a hundred other people.</p>
                           <p>-- [adapted from
-                            <trigger for="pop:bryan-mercurial-guide">bryan-mercurial-guide</trigger>]</p>
+                            <trigger trigger="click" for="modal:rcsWhat-bryanMercurialGuide">bryan-mercurial-guide</trigger>
+                          </p>
                         </blockquote>
                         <hr>
                       </tab>
@@ -1146,13 +1147,12 @@ java -jar Collate-TUI.jar collate from unused to collated/unused include java, f
                         <hr>
                       </tab>
                     </tabs>
-                    <popover id="pop:bryan-mercurial-guide" title="bryan-mercurial-guide <span class='glyphicon glyphicon-eye-open' aria-hidden='true'></span>" placement="right">
-                      <div slot="content">
-                        <div>
-                          <p><a href="http://hgbook.red-bean.com/">Mercurial: The Definitive Guide</a> by Bryan O'Sullivan retrieved on 2012/07/11</p>
-                        </div>
+                    <modal large="" title="Reference » Mercurial: The Definitive Guide" id="modal:rcsWhat-bryanMercurialGuide">
+                    
+                      <div>
+                        <p><a href="http://hgbook.red-bean.com/">Mercurial: The Definitive Guide</a> by Bryan O'Sullivan retrieved on 2012/07/11</p>
                       </div>
-                    </popover>
+                    </modal>
                   </div>
                   <div>
                     <div>
@@ -3467,8 +3467,8 @@ Enter command: exit
                         alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/Multiplicity" fragment="main"></panel>
                       <panel type="seamless" src="/website\book\oop\associations\navigability\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Associations → Navigability"
                         alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP/Navigability" fragment="main"></panel>
-                      <panel type="seamless" src="/website\book\uml\classDiagrams\associations\navigability\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Class Diagrams → Associations → UML/Navigability"
-                        alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Navigability" fragment="main"></panel>
+                      <panel type="seamless" src="/website\book\uml\classDiagrams\associations\navigability\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Class Diagrams → Associations → Navigability"
+                        alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/Navigability" fragment="main"></panel>
                     </p>
                     <tip-box>
                       <p><span class="fas fa-cube"></span> Here is the same class diagram shown earlier but with some additional information included:</p>
@@ -3480,32 +3480,60 @@ Enter command: exit
                     <div>
                       <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
                         <div>
-                          <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Which association notations are shown?">
-                            <question>
-                              <p>Which association notatations are shown in this diagram?</p>
-                              <img src="/website/book/modeling/modelingStructures/classDiagramsIntermediate/images/professorStudent.png" height="100">
-                              <p></p>
-                              <ul class="task-list">
-                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. association labels</li>
-                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. association roles</li>
-                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. association multiplicity</li>
-                                <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. class names</li>
-                              </ul>
-                              <div slot="answer">
-                                <p>(a) (b) (c) (d)</p>
-                                <p>Explanation: '1’ is a <em>multiplicity</em>, ‘mentored by’ is a <em>label</em>, and ‘mentor’ is a <em>role</em>.</p>
-                              </div>
-                            </question>
-                          </panel>
-                        </div>
-                        <div>
-                          <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Explain Class Diagram">
-                            <question>
-                              <p>Explain the associations, navigabilities, and multiplicities in the class diagram below:</p>
-                              <img src="/website/book/modeling/modelingStructures/classDiagramsBasic/images/typicalClasssStructure.png" width="400">
-                              <p></p>
-                            </question>
-                          </panel>
+                          <div>
+                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Which association notations are shown?">
+                              <question>
+                                <p>Which association notatations are shown in this diagram?</p>
+                                <img src="/website/book/modeling/modelingStructures/classDiagramsIntermediate/images/professorStudent.png" height="100">
+                                <p></p>
+                                <ul class="task-list">
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. association labels</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. association roles</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. association multiplicity</li>
+                                  <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. class names</li>
+                                </ul>
+                                <div slot="answer">
+                                  <p>(a) (b) (c) (d)</p>
+                                  <p>Explanation: '1’ is a <em>multiplicity</em>, ‘mentored by’ is a <em>label</em>, and ‘mentor’ is a <em>role</em>.</p>
+                                </div>
+                              </question>
+                            </panel>
+                          </div>
+                          <div>
+                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Explain Class Diagram">
+                              <question>
+                                <p>Explain the associations, navigabilities, and multiplicities in the class diagram below:</p>
+                                <img src="/website/book/modeling/modelingStructures/classDiagramsBasic/images/typicalClasssStructure.png" width="400">
+                                <p></p>
+                              </question>
+                            </panel>
+                          </div>
+                          <div>
+                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Draw Class Diagram for Box etc.">
+                              <question>
+                                <p>Draw a class diagram for the code below. Show the attributes, methods, associations, navigabilities, and multiplicities in the class diagram below:</p>
+                                <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Box</span> </span>{
+    <span class="hljs-keyword">private</span> Item[] parts = <span class="hljs-keyword">new</span> Item[<span class="hljs-number">10</span>];
+    <span class="hljs-keyword">private</span> Item spareItem;
+    <span class="hljs-keyword">private</span> Lid lid; <span class="hljs-comment">// lid of this box</span>
+    <span class="hljs-keyword">private</span> Box outerBox;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">open</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-comment">//...</span>
+    }
+}
+</code></pre>
+                                <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Item</span> </span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> totalItems;
+}
+</code></pre>
+                                <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Lid</span> </span>{
+    Box box; <span class="hljs-comment">// the box for which this is the lid</span>
+}
+</code></pre>
+                              </question>
+                            </panel>
+                          </div>
                         </div>
                       </panel>
                     </div>
@@ -3634,7 +3662,7 @@ Enter command: exit
               <img src="/website/book/modeling/modelingStructures/classDiagramsBasic/images/typicalClasssStructure.png" width="400">
               <p></p>
               <p>Draw object diagrams to represent the object structures after each of these steps below. Assume that we are trying to minimize the number of total objects.</p>
-              <p>i.e. apply step 1 → [diagram 1] → apply step 2 on diagarm 1 → [diagarm 2] and so on.</p>
+              <p>i.e. apply step 1 → [diagram 1] → apply step 2 on diagram 1 → [diagram 2] and so on.</p>
               <ol>
                 <li>
                   <p>There are no persons.</p>
@@ -3933,7 +3961,8 @@ Enter command: exit
                                 <p><strong>It will help you to work simultaneously on, and manage the drift between, multiple versions of your project.</strong> Most of these reasons are equally valid, at least in theory, whether you're working on a project
                                   by yourself, or with a hundred other people.</p>
                                 <p>-- [adapted from
-                                  <trigger for="pop:bryan-mercurial-guide">bryan-mercurial-guide</trigger>]</p>
+                                  <trigger trigger="click" for="modal:rcsWhat-bryanMercurialGuide">bryan-mercurial-guide</trigger>
+                                </p>
                               </blockquote>
                               <hr>
                             </tab>
@@ -3942,13 +3971,12 @@ Enter command: exit
                               <hr>
                             </tab>
                           </tabs>
-                          <popover id="pop:bryan-mercurial-guide" title="bryan-mercurial-guide <span class='glyphicon glyphicon-eye-open' aria-hidden='true'></span>" placement="right">
-                            <div slot="content">
-                              <div>
-                                <p><a href="http://hgbook.red-bean.com/">Mercurial: The Definitive Guide</a> by Bryan O'Sullivan retrieved on 2012/07/11</p>
-                              </div>
+                          <modal large="" title="Reference » Mercurial: The Definitive Guide" id="modal:rcsWhat-bryanMercurialGuide">
+                          
+                            <div>
+                              <p><a href="http://hgbook.red-bean.com/">Mercurial: The Definitive Guide</a> by Bryan O'Sullivan retrieved on 2012/07/11</p>
                             </div>
-                          </popover>
+                          </modal>
                         </div>
                         <div>
                           <div>
@@ -5730,8 +5758,8 @@ Enter command: exit
                             alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/Multiplicity" fragment="main"></panel>
                           <panel type="seamless" src="/website\book\oop\associations\navigability\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Associations → Navigability"
                             alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP/Navigability" fragment="main"></panel>
-                          <panel type="seamless" src="/website\book\uml\classDiagrams\associations\navigability\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Class Diagrams → Associations → UML/Navigability"
-                            alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Navigability" fragment="main"></panel>
+                          <panel type="seamless" src="/website\book\uml\classDiagrams\associations\navigability\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Class Diagrams → Associations → Navigability"
+                            alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/Navigability" fragment="main"></panel>
                         </p>
                         <tip-box>
                           <p><span class="fas fa-cube"></span> Here is the same class diagram shown earlier but with some additional information included:</p>
@@ -5743,32 +5771,60 @@ Enter command: exit
                         <div>
                           <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
                             <div>
-                              <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Which association notations are shown?">
-                                <question>
-                                  <p>Which association notatations are shown in this diagram?</p>
-                                  <img src="/website/book/modeling/modelingStructures/classDiagramsIntermediate/images/professorStudent.png" height="100">
-                                  <p></p>
-                                  <ul class="task-list">
-                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. association labels</li>
-                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. association roles</li>
-                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. association multiplicity</li>
-                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. class names</li>
-                                  </ul>
-                                  <div slot="answer">
-                                    <p>(a) (b) (c) (d)</p>
-                                    <p>Explanation: '1’ is a <em>multiplicity</em>, ‘mentored by’ is a <em>label</em>, and ‘mentor’ is a <em>role</em>.</p>
-                                  </div>
-                                </question>
-                              </panel>
-                            </div>
-                            <div>
-                              <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Explain Class Diagram">
-                                <question>
-                                  <p>Explain the associations, navigabilities, and multiplicities in the class diagram below:</p>
-                                  <img src="/website/book/modeling/modelingStructures/classDiagramsBasic/images/typicalClasssStructure.png" width="400">
-                                  <p></p>
-                                </question>
-                              </panel>
+                              <div>
+                                <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Which association notations are shown?">
+                                  <question>
+                                    <p>Which association notatations are shown in this diagram?</p>
+                                    <img src="/website/book/modeling/modelingStructures/classDiagramsIntermediate/images/professorStudent.png" height="100">
+                                    <p></p>
+                                    <ul class="task-list">
+                                      <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. association labels</li>
+                                      <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. association roles</li>
+                                      <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. association multiplicity</li>
+                                      <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. class names</li>
+                                    </ul>
+                                    <div slot="answer">
+                                      <p>(a) (b) (c) (d)</p>
+                                      <p>Explanation: '1’ is a <em>multiplicity</em>, ‘mentored by’ is a <em>label</em>, and ‘mentor’ is a <em>role</em>.</p>
+                                    </div>
+                                  </question>
+                                </panel>
+                              </div>
+                              <div>
+                                <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Explain Class Diagram">
+                                  <question>
+                                    <p>Explain the associations, navigabilities, and multiplicities in the class diagram below:</p>
+                                    <img src="/website/book/modeling/modelingStructures/classDiagramsBasic/images/typicalClasssStructure.png" width="400">
+                                    <p></p>
+                                  </question>
+                                </panel>
+                              </div>
+                              <div>
+                                <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Draw Class Diagram for Box etc.">
+                                  <question>
+                                    <p>Draw a class diagram for the code below. Show the attributes, methods, associations, navigabilities, and multiplicities in the class diagram below:</p>
+                                    <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Box</span> </span>{
+    <span class="hljs-keyword">private</span> Item[] parts = <span class="hljs-keyword">new</span> Item[<span class="hljs-number">10</span>];
+    <span class="hljs-keyword">private</span> Item spareItem;
+    <span class="hljs-keyword">private</span> Lid lid; <span class="hljs-comment">// lid of this box</span>
+    <span class="hljs-keyword">private</span> Box outerBox;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">open</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-comment">//...</span>
+    }
+}
+</code></pre>
+                                    <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Item</span> </span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> totalItems;
+}
+</code></pre>
+                                    <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Lid</span> </span>{
+    Box box; <span class="hljs-comment">// the box for which this is the lid</span>
+}
+</code></pre>
+                                  </question>
+                                </panel>
+                              </div>
                             </div>
                           </panel>
                         </div>
@@ -5809,7 +5865,7 @@ Enter command: exit
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.10.1</a> at Thu, 20 Sep 2018 05:36:54 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.10.1</a> at Fri, 28 Sep 2018 09:05:03 GMT</small></div>
 </footer>
 </div>
 </body>

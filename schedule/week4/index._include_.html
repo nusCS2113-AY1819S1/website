@@ -2117,7 +2117,7 @@ Invalid command format: add
                               <li>OBS transfers the money and displays the new account balance.</li>
                               <li class="custom-bullet-point">Use case ends.</li>
                             </ol>
-                          </li>
+                          </li><br>
                           <li> Extensions:
                             <ol class="custom-bullet-list">
                               <li>3a. OBS detects an error in the entered data.
@@ -2125,22 +2125,19 @@ Invalid command format: add
                                   <li>3a1. OBS requests for the correct data.</li>
                                   <li>3a2. User enters new data.</li>
                                   <li>Steps 3a1-3a2 are repeated until the data entered are correct.</li>
-                                  <li>Use case resumes from step 4.</li>
-                                </ol>
+                                  <li>Use case resumes from step 4.</li><br></ol>
                               </li>
                               <li>3b. User requests to effect the transfer in a future date.
                                 <ol class="custom-bullet-list">
                                   <li>3b1. OBS requests for confirmation.</li>
                                   <li>3b2. User confirms future transfer.</li>
-                                  <li>Use case ends.</li>
-                                </ol>
+                                  <li>Use case ends.</li><br></ol>
                               </li>
                               <li>*a. At any time, User chooses to cancel the transfer.
                                 <ol class="custom-bullet-list">
                                   <li>*a1. OBS requests to confirm the cancellation.</li>
                                   <li>*a2. User confirms the cancellation.</li>
-                                  <li>Use case ends.</li>
-                                </ol>
+                                  <li>Use case ends.</li><br></ol>
                               </li>
                               <li>*b. At any time, 120 seconds lapse without any input from the User.
                                 <ol class="custom-bullet-list">
@@ -3045,23 +3042,58 @@ Invalid command format: add
                 </div>
                 <div id="main">
                   <div>
-                    <p>Given below is an extract from the <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small>, with slight adaptations.</p>
-                    <blockquote>
-                      <p>In a nutshell, generics enable types (classes and interfaces) to be parameters when defining classes, interfaces and methods. Much like the more familiar formal parameters used in method declarations, type parameters provide a way
-                        for you to re-use the same code with different inputs. The difference is that the inputs to formal parameters are values, while the inputs to type parameters are types.</p>
-                      <p>A generic type is a generic class or interface that is parameterized over types. Consider the following <code>Box</code> class.</p>
-                      <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Box</span> </span>{
-    <span class="hljs-keyword">private</span> Object object;
+                    <p>Given below is an extract from the <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small>, with some adaptations.</p>
+                    <div class="indented">
+                      <p><strong>You can use polymorphism to write code that can work with multiple types, but that approach has some shortcomings.</strong></p>
+                      <box>
+                        <p><span class="fas fa-cube"></span> Consider the following <code>Box</code> class. It can be used only for storing <code>Integer</code> objects.</p>
+                        <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">BoxForIntegers</span> </span>{
+    <span class="hljs-keyword">private</span> Integer x;
 
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">set</span><span class="hljs-params">(Object object)</span> </span>{ <span class="hljs-keyword">this</span>.object = object; }
-    <span class="hljs-function"><span class="hljs-keyword">public</span> Object <span class="hljs-title">get</span><span class="hljs-params">()</span> </span>{ <span class="hljs-keyword">return</span> object; }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">set</span><span class="hljs-params">(Integer x)</span> </span>{
+        <span class="hljs-keyword">this</span>.x = x;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> Integer <span class="hljs-title">get</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> x;
+    }
 }
 </code></pre>
-                      <p>Since its methods accept or return an <code>Object</code>, you are free to pass in whatever you want, provided that it is not one of the primitive types. There is no way to verify, at compile time, how the class is used. One part
-                        of the code may place an <code>Integer</code> in the box and expect to get <code>Integers</code> out of it, while another part of the code may mistakenly pass in a <code>String</code>, resulting in a runtime error.</p>
-                      <p>A <em>generic</em> <code>Box</code> class allows you to define what type of elements will be put in the <code>Box</code>. For example, you can instantiate a <code>Box</code> object to keep <code>Integer</code> elements so that any
-                        attempt to put a non-<code>Integer</code> object in that <code>Box</code> object will result in a compile error.</p>
-                    </blockquote>
+                        <p>To store <code>String</code> objects, another similar class is needed, resulting in the duplication of the entire class. As you can see, if you need to store many different types of objects, you could end up writing many similar
+                          classes.</p>
+                        <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">BoxForString</span> </span>{
+    <span class="hljs-keyword">private</span> String x;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">set</span><span class="hljs-params">(String x)</span> </span>{
+        <span class="hljs-keyword">this</span>.x = x;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">get</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> x;
+    }
+}
+</code></pre>
+                        <p>One solution for this problem is to use <em>polymorphism</em> i.e., write the <code>Box</code> class to store <code>Object</code> objects.</p>
+                        <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Box</span> </span>{
+    <span class="hljs-keyword">private</span> Object x;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">set</span><span class="hljs-params">(Object x)</span> </span>{
+        <span class="hljs-keyword">this</span>.x = x;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> Object <span class="hljs-title">get</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> x;
+    }
+}
+</code></pre>
+                        <p>The problem with this solution is, since its methods accept or return an <code>Object</code>, you are free to pass in whatever you want, provided that it is not one of the primitive types. There is no way to verify, at compile
+                          time, how the class is used. One part of the code may place an <code>Integer</code> in the box and expect to get <code>Integers</code> out of it, while another part of the code may mistakenly pass in a <code>String</code>, resulting
+                          in a runtime error.
+                        </p>
+                      </box>
+                      <p><strong>Generics enable types (classes and interfaces) to be parameters when defining classes, interfaces and methods.</strong> Much like the more familiar formal parameters used in method declarations, type parameters provide a
+                        way for you to re-use the same code with different inputs. The difference is that the inputs to formal parameters are values, while the inputs to type parameters are types.</p>
+                      <box>
+                        <p><span class="fas fa-cube"></span> A <em>generic</em> <code>Box</code> class allows you to define what type of elements will be put in the <code>Box</code>. For example, you can instantiate a <code>Box</code> object to keep <code>Integer</code>                          elements so that any attempt to put a non-<code>Integer</code> object in that <code>Box</code> object will result in a compile error.</p>
+                      </box>
+                    </div>
                   </div>
                   <div></div>
                 </div>
@@ -3087,49 +3119,74 @@ Invalid command format: add
                 </div>
                 <div id="main">
                   <div>
-                    <p>Given below is an extract from the <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small>, with slight adaptations.</p>
-                    <blockquote>
-                      <p>A generic class is defined with the following format:</p>
-                      <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">name</span>&lt;<span class="hljs-title">T1</span>, <span class="hljs-title">T2</span>, ..., <span class="hljs-title">Tn</span>&gt; </span>{ <span class="hljs-comment">/* ... */</span> }
+                    <p>This section includes extract from the <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small>, with some adaptations.</p>
+                    <p><strong>The definition of a generic class includes a <em>type parameter section</em>, delimited by angle brackets (<code>&lt;&gt;</code>).</strong> It specifies the <em>type parameters</em> (also called <em>type variables</em>) <code>T1</code>,
+                      <code>T2</code>, ..., and <code>Tn</code>. A generic class is defined with the following format:</p>
+                    <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">name</span>&lt;<span class="hljs-title">T1</span>, <span class="hljs-title">T2</span>, ..., <span class="hljs-title">Tn</span>&gt; </span>{ <span class="hljs-comment">/* ... */</span> }
 </code></pre>
-                      <p>The type parameter section, delimited by angle brackets (<code>&lt;&gt;</code>), follows the class name. It specifies the type parameters (also called type variables) <code>T1</code>, <code>T2</code>, ..., and <code>Tn</code>. To
-                        update the <code>Box</code> class to use generics, you create a generic type declaration by changing the code <code>public class Box</code> to <code>public class Box&lt;T&gt;</code>. This introduces the type variable, <code>T</code>,
-                        that can be used anywhere inside the class. With this change, the Box class becomes:</p>
-                      <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Box</span>&lt;<span class="hljs-title">T</span>&gt; </span>{
-    <span class="hljs-comment">// T stands for "Type"</span>
-    <span class="hljs-keyword">private</span> T t;
+                    <box>
+                      <p><span class="fas fa-cube"></span> Here is a generic <code>Box</code> class. The class declaration <code>Box&lt;T&gt;</code> introduces the type variable, <code>T</code>, which is also used inside the class to refer to the same type.</p>
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <p>Using <code>Object</code> as the type:</p>
+                          <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Box</span> </span>{
+    <span class="hljs-keyword">private</span> Object x;
 
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">set</span><span class="hljs-params">(T t)</span> </span>{
-        <span class="hljs-keyword">this</span>.t = t;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">set</span><span class="hljs-params">(Object x)</span> </span>{
+        <span class="hljs-keyword">this</span>.x = x;
     }
 
-    <span class="hljs-function"><span class="hljs-keyword">public</span> T <span class="hljs-title">get</span><span class="hljs-params">()</span> </span>{
-        <span class="hljs-keyword">return</span> t;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> Object <span class="hljs-title">get</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> x;
     }
 }
 </code></pre>
-                      <p>As you can see, all occurrences of Object are replaced by <code>T</code>. A type variable can be any non-primitive type you specify: any class type, any interface type, any array type, or even another type variable. This same technique
-                        can be applied to create generic interfaces.</p>
-                      <p>By convention, type parameter names are single, uppercase letters. This stands in sharp contrast to the variable naming conventions that you already know about, and with good reason: Without this convention, it would be difficult
-                        to tell the difference between a type variable and an ordinary class or interface name. The most commonly used type parameter names are:</p>
-                      <ul>
-                        <li><code>E</code> - Element (used extensively by the Java Collections Framework)</li>
-                        <li><code>K</code> - Key</li>
-                        <li><code>N</code> - Number</li>
-                        <li><code>T</code> - Type</li>
-                        <li><code>V</code> - Value S,U,V etc. - 2nd, 3rd, 4th types</li>
-                      </ul>
-                      <p>To reference the generic Box class from within your code, you must perform a generic type invocation, which replaces <code>T</code> with some concrete value, such as <code>Integer</code>:</p>
-                      <pre><code class="hljs java">Box&lt;Integer&gt; integerBox;
-</code></pre>
-                      <p>You can think of a generic type invocation as being similar to an ordinary method invocation, but instead of passing an argument to a method, you are passing a type argument — Integer in this case — to the Box class itself.</p>
-                      <p>Like any other variable declaration, this code does not actually create a new Box object. It simply declares that integerBox will hold a reference to a &quot;Box of Integer&quot;, which is how <code>Box&lt;Integer&gt;</code> is read.</p>
-                      <p>To instantiate this class, use the new keyword, as usual, but place <code>&lt;&gt;</code> (an empty pair of angle brackets, also called the <em>diamond operator</em>) between the class name and the parenthesis:</p>
-                      <pre><code class="hljs java">integerBox = <span class="hljs-keyword">new</span> Box&lt;&gt;();
+                        </div>
+                        <div class="col-sm-6">
+                          <p>A generic <code>Box</code> using type parameter <code>T</code>:</p>
+                          <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Box</span>&lt;<span class="hljs-title">T</span>&gt; </span>{
+    <span class="hljs-keyword">private</span> T x;
 
-Box&lt;String&gt; stringBox = <span class="hljs-keyword">new</span> Box&lt;&gt;();
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">set</span><span class="hljs-params">(T x)</span> </span>{
+        <span class="hljs-keyword">this</span>.x = x;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> T <span class="hljs-title">get</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> x;
+    }
+}
 </code></pre>
-                      <p>As mentioned previously, a generic class can have multiple type parameters. For example, the generic OrderedPair class, which implements the generic Pair interface:</p>
+                        </div>
+                      </div>
+                      <p>As you can see, all occurrences of <code>Object</code> are replaced by <code>T</code>.
+                      </p>
+                    </box>
+                    <p><strong>To reference the generic <code>Box</code> class from within your code, you must perform a generic type invocation, which replaces <code>T</code> with some concrete value</strong>, such as <code>Integer</code>. It is similar
+                      to an ordinary method invocation, but instead of passing an argument to a method, you are passing a type argument enclosed within angle brackets — e.g., <code>&lt;Integer&gt;</code> or <code>&lt;String, Integer&gt;</code> — to the
+                      generic class itself. Note that in some cases you can omit the type parameter i.e., <code>&lt;&gt;</code> if the type parameter can be inferred from the context.</p>
+                    <box>
+                      <p><span class="fas fa-cube"></span> Using the generic <code>Box</code> class to store <code>Integer</code> objects:</p>
+                      <pre><code class="hljs java">Box&lt;Integer&gt; integerBox;
+integerBox = <span class="hljs-keyword">new</span> Box&lt;&gt;(); <span class="hljs-comment">// type parameter omitted as it can be inferred</span>
+integerBox.set(Integer.valueOf(<span class="hljs-number">4</span>));
+Integer i = integerBox.get(); <span class="hljs-comment">// returns an Integer</span>
+</code></pre>
+                      <ul>
+                        <li><code>Box&lt;Integer&gt; integerBox;</code> simply declares that <code>integerBox</code> will hold a reference to a &quot;Box of Integer&quot;, which is how <code>Box&lt;Integer&gt;</code> is read.</li>
+                        <li><code>integerBox = new Box&lt;&gt;();</code> instantiates a <code>Box&lt;Integer&gt;</code> class. Note the <code>&lt;&gt;</code> (an empty pair of angle brackets, also called the <em>diamond operator</em>) between the class name
+                          and the parenthesis.</li>
+                      </ul>
+                    </box>
+                    <p><strong>The compiler is able to check for type errors when using generic code.</strong></p>
+                    <box>
+                      <p><span class="fas fa-cube"></span> The code below will fail because it creates a <code>Box&lt;String&gt;</code> and then tries to pass <code>Double</code> objects into it.</p>
+                      <pre><code class="hljs java">Box&lt;String&gt; stringBox = <span class="hljs-keyword">new</span> Box&lt;&gt;();
+stringBox.set(Double.valueOf(<span class="hljs-number">5.0</span>)); <span class="hljs-comment">//compile error!</span>
+</code></pre>
+                    </box>
+                    <p><strong>A generic class can have multiple type parameters.</strong></p>
+                    <box>
+                      <p><span class="fas fa-cube"></span> The generic <code>OrderedPair</code> class, which implements the generic Pair interface:</p>
                       <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Pair</span>&lt;<span class="hljs-title">K</span>, <span class="hljs-title">V</span>&gt; </span>{
     <span class="hljs-function"><span class="hljs-keyword">public</span> K <span class="hljs-title">getKey</span><span class="hljs-params">()</span></span>;
     <span class="hljs-function"><span class="hljs-keyword">public</span> V <span class="hljs-title">getValue</span><span class="hljs-params">()</span></span>;
@@ -3141,20 +3198,32 @@ Box&lt;String&gt; stringBox = <span class="hljs-keyword">new</span> Box&lt;&gt;(
     <span class="hljs-keyword">private</span> V value;
 
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">OrderedPair</span><span class="hljs-params">(K key, V value)</span> </span>{
-	<span class="hljs-keyword">this</span>.key = key;
-	<span class="hljs-keyword">this</span>.value = value;
+        <span class="hljs-keyword">this</span>.key = key;
+        <span class="hljs-keyword">this</span>.value = value;
     }
 
     <span class="hljs-function"><span class="hljs-keyword">public</span> K <span class="hljs-title">getKey</span><span class="hljs-params">()</span>	</span>{ <span class="hljs-keyword">return</span> key; }
     <span class="hljs-function"><span class="hljs-keyword">public</span> V <span class="hljs-title">getValue</span><span class="hljs-params">()</span> </span>{ <span class="hljs-keyword">return</span> value; }
 }
 </code></pre>
-                      <p>The following statements create two instantiations of the OrderedPair class:</p>
+                      <p>The following statements create two instantiations of the <code>OrderedPair</code> class:</p>
                       <pre><code class="hljs java">Pair&lt;String, Integer&gt; p1 = <span class="hljs-keyword">new</span> OrderedPair&lt;&gt;(<span class="hljs-string">"Even"</span>, <span class="hljs-number">8</span>);
 Pair&lt;String, String&gt;  p2 = <span class="hljs-keyword">new</span> OrderedPair&lt;&gt;(<span class="hljs-string">"hello"</span>, <span class="hljs-string">"world"</span>);
 </code></pre>
-                      <p>The code, <code>new OrderedPair&lt;String, Integer&gt;</code>, instantiates <code>K</code> as a <code>String</code> and <code>V</code> as an <code>Integer</code>. Therefore, the parameter types of OrderedPair's constructor are <code>String</code>                        and Integer, respectively.</p>
-                    </blockquote>
+                      <p>The code, <code>new OrderedPair&lt;String, Integer&gt;</code>, instantiates <code>K</code> as a <code>String</code> and <code>V</code> as an <code>Integer</code>. Therefore, the parameter types of <code>OrderedPair</code>'s constructor
+                        are <code>String</code> and <code>Integer</code>, respectively.
+                      </p>
+                    </box>
+                    <p><strong>A type variable can be any non-primitive type you specify</strong>: any class type, any interface type, any array type, or even another type variable.</p>
+                    <p><strong>By convention, type parameter names are single, uppercase letters.</strong> The most commonly used type parameter names are:</p>
+                    <ul>
+                      <li><code>E</code> - Element (used extensively by the Java Collections Framework)</li>
+                      <li><code>K</code> - Key</li>
+                      <li><code>N</code> - Number</li>
+                      <li><code>T</code> - Type</li>
+                      <li><code>V</code> - Value</li>
+                      <li><code>S</code>, <code>U</code>, <code>V</code> etc. - 2nd, 3rd, 4th types</li>
+                    </ul>
                   </div>
                   <div></div>
                 </div>
@@ -3191,47 +3260,60 @@ Pair&lt;String, String&gt;  p2 = <span class="hljs-keyword">new</span> OrderedPa
                   </div>
                   <div id="main">
                     <div>
-                      <p>Given below is an extract from the <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small>, with slight adaptations.</p>
-                      <blockquote>
-                        <p><strong>A <em>collection</em> — sometimes called a <em>container</em> — is simply an object that groups multiple elements into a single unit.</strong> Collections are used to store, retrieve, manipulate, and communicate aggregate
-                          data. Typically, they represent data items that form a natural group, such as a poker hand (a collection of cards), a mail folder (a collection of letters), or a telephone directory (a mapping of names to phone numbers). If you
-                          have used the Java programming language — or just about any other programming language — you are already familiar with collections.</p>
-                        <p><strong>A collections framework is a unified architecture for representing and manipulating collections.</strong> All collections frameworks contain the following:</p>
-                        <ul>
-                          <li><strong>Interfaces</strong>: These are abstract data types that represent collections. Interfaces allow collections to be manipulated independently of the details of their representation. In object-oriented languages, interfaces
-                            generally form a hierarchy.</li>
-                          <li><strong>Implementations</strong>: These are the concrete implementations of the collection interfaces. In essence, they are reusable data structures.</li>
-                          <li><strong>Algorithms</strong>: These are the methods that perform useful computations, such as searching and sorting, on objects that implement collection interfaces. The algorithms are said to be polymorphic: that is, the same
-                            method can be used on many different implementations of the appropriate collection interface. In essence, algorithms are reusable functionality.</li>
-                        </ul>
-                        <p>Apart from the Java Collections Framework, <strong>the best-known examples of collections frameworks are the C++ Standard Template Library (STL)</strong> and Smalltalk's collection hierarchy.</p>
-                        <p>The following list describes the core collection interfaces:</p>
-                        <ul>
-                          <li>
-                            <p><code>Collection</code> — the root of the collection hierarchy. A collection represents a group of objects known as its elements. The Collection interface is the least common denominator that all collections implement and is
-                              used to pass collections around and to manipulate them when maximum generality is desired. Some types of collections allow duplicate elements, and others do not. Some are ordered and others are unordered. The Java platform
-                              doesn't provide any direct implementations of this interface but provides implementations of more specific subinterfaces, such as Set and List. Also see The Collection Interface section.</p>
-                          </li>
-                          <li>
-                            <p><code>Set</code> — a collection that cannot contain duplicate elements. This interface models the mathematical set abstraction and is used to represent sets, such as the cards comprising a poker hand, the courses making up
-                              a student's schedule, or the processes running on a machine. See also The Set Interface section.</p>
-                          </li>
-                          <li>
-                            <p><code>List</code> — an ordered collection (sometimes called a sequence). Lists can contain duplicate elements. The user of a List generally has precise control over where in the list each element is inserted and can access
-                              elements by their integer index (position). If you've used Vector, you're familiar with the general flavor of List. Also see The List Interface section.</p>
-                          </li>
-                          <li>
-                            <p><code>Queue</code> — a collection used to hold multiple elements prior to processing. Besides basic Collection operations, a Queue provides additional insertion, extraction, and inspection operations.</p>
-                          </li>
-                          <li>
-                            <p><code>Map</code> — an object that maps keys to values. A Map cannot contain duplicate keys; each key can map to at most one value. If you've used Hashtable, you're already familiar with the basics of Map. Also see The Map Interface
-                              section.</p>
-                          </li>
-                          <li>
-                            <p>Others: <code>Deque</code>, <code>SortedSet</code>, <code>SortedMap</code></p>
-                          </li>
-                        </ul>
-                      </blockquote>
+                      <p>This section uses extracts from the <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small>, with some adaptations.</p>
+                      <p><strong>A <em>collection</em> — sometimes called a <em>container</em> — is simply an object that groups multiple elements into a single unit.</strong> Collections are used to store, retrieve, manipulate, and communicate aggregate
+                        data.</p>
+                      <box>
+                        <p><span class="fas fa-cube"></span> Typically, collections represent data items that form a natural group, such as a poker hand (a collection of cards), a mail folder (a collection of letters), or a telephone directory (a mapping
+                          of names to phone numbers).</p>
+                      </box>
+                      <p><strong>The collections framework is a unified architecture for representing and manipulating collections.</strong> It contains the following:</p>
+                      <ul>
+                        <li>
+                          <p><strong>Interfaces</strong>: These are abstract data types that represent collections. Interfaces allow collections to be manipulated independently of the details of their representation.<br>
+                            <span class="dimmed"><span class="fas fa-cube"></span> Example: the <code>List&lt;E&gt;</code> interface can be used to manipulate list-like collections which may be implemented in different ways such as <code>ArrayList&lt;E&gt;</code>                            or <code>LinkedList&lt;E&gt;</code>.</span><br></p>
+                        </li>
+                        <li>
+                          <p><strong>Implementations</strong>: These are the concrete implementations of the collection interfaces. In essence, they are reusable data structures.<br>
+                            <span class="dimmed"><span class="fas fa-cube"></span> Example: the <code>ArrayList&lt;E&gt;</code> class implements the <code>List&lt;E&gt;</code> interface while the <code>HashMap&lt;K, V&gt;</code> class implements the <code>Map&lt;K, V&gt;</code>                            interface.</span><br></p>
+                        </li>
+                        <li>
+                          <p><strong>Algorithms</strong>: These are the methods that perform useful computations, such as <em>searching</em> and <em>sorting</em>, on objects that implement collection interfaces. The algorithms are said to be polymorphic:
+                            that is, the same method can be used on many different implementations of the appropriate collection interface.<br>
+                            <span class="dimmed"><span class="fas fa-cube"></span> Example: the <code>sort(List&lt;E&gt;)</code> method can sort a collection that implements the <code>List&lt;E&gt;</code> interface.</span>
+                          </p>
+                        </li>
+                      </ul>
+                      <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span class="fas fa-equals"></span></span>
+                        </span> <strong>A well-known example of collections frameworks is the C++ <em>Standard Template Library (STL)</em></strong>. <span style="opacity: 0.5"> <span class="badge badge-pill badge-danger"><span class="fas fa-not-equal"></span></span>
+                        </span>
+                        Although both are collections frameworks and the syntax look similar, note that there are important philosophical and implementation differences between the two.</p>
+                      <p>The following list describes the core collection interfaces:</p>
+                      <ul>
+                        <li>
+                          <p><strong><code>Collection</code></strong> — the root of the collection hierarchy. A collection represents a group of objects known as its elements. The Collection interface is the least common denominator that all collections
+                            implement and is used to pass collections around and to manipulate them when maximum generality is desired. Some types of collections allow duplicate elements, and others do not. Some are ordered and others are unordered. The
+                            Java platform doesn't provide any direct implementations of this interface but provides implementations of more specific subinterfaces, such as <code>Set</code> and <code>List</code>. <span class="dimmed">Also see the <a href="https://docs.oracle.com/javase/9/docs/api/java/util/Collection.html"><code>Collection</code> API</a>.</span></p>
+                        </li>
+                        <li>
+                          <p><strong><code>Set</code></strong> — a collection that cannot contain duplicate elements. This interface models the mathematical set abstraction and is used to represent sets, such as the cards comprising a poker hand, the courses
+                            making up a student's schedule, or the processes running on a machine. <span class="dimmed">Also see the <a href="https://docs.oracle.com/javase/9/docs/api/java/util/Set.html"><code>Set</code> API</a>.</span></p>
+                        </li>
+                        <li>
+                          <p><strong><code>List</code></strong> — an ordered collection (sometimes called a <em>sequence</em>). <code>List</code>s can contain duplicate elements. The user of a <code>List</code> generally has precise control over where in
+                            the list each element is inserted and can access elements by their integer index (position). <span class="dimmed">Also see the <a href="https://docs.oracle.com/javase/9/docs/api/java/util/List.html"><code>List</code> API</a>.</span></p>
+                        </li>
+                        <li>
+                          <p><strong><code>Queue</code></strong> — a collection used to hold multiple elements prior to processing. Besides basic <code>Collection</code> operations, a <code>Queue</code> provides additional insertion, extraction, and inspection
+                            operations. <span class="dimmed">Also see the <a href="https://docs.oracle.com/javase/9/docs/api/java/util/Queue.html"><code>Queue</code> API</a>.</span></p>
+                        </li>
+                        <li>
+                          <p><strong><code>Map</code></strong> — an object that maps keys to values. A <code>Map</code> cannot contain duplicate keys; each key can map to at most one value. <span class="dimmed">Also see the <a href="https://docs.oracle.com/javase/9/docs/api/java/util/Map.html"><code>Map</code> API</a>.</span></p>
+                        </li>
+                        <li>
+                          <p>Others: <code>Deque</code>, <code>SortedSet</code>, <code>SortedMap</code></p>
+                        </li>
+                      </ul>
                     </div>
                     <div></div>
                   </div>
@@ -3339,6 +3421,527 @@ After clearing: []
                           </div>
                         </panel>
                       </div>
+                      <div>
+                        <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                          <div>
+                            <div>
+                              <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Numbers list">
+                                <question>
+                                  <p>Add the missing methods to the class given below so that it produces the output given.</p>
+                                  <p>💡 Use an <code>ArrayList</code> to store the numbers.</p>
+                                  <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+
+    <span class="hljs-comment">//<span class="hljs-doctag">TODO:</span> add your methods here</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        System.out.println(<span class="hljs-string">"Adding numbers to the list"</span>);
+        addNumber(<span class="hljs-number">3</span>);
+        addNumber(<span class="hljs-number">8</span>);
+        addNumber(<span class="hljs-number">24</span>);
+        System.out.println(<span class="hljs-string">"The total is: "</span> + getTotal());
+        System.out.println(<span class="hljs-string">"8 in the list : "</span> + isFound(<span class="hljs-number">8</span>) );
+        System.out.println(<span class="hljs-string">"5 in the list : "</span> + isFound(<span class="hljs-number">5</span>) );
+        removeNumber(<span class="hljs-number">8</span>);
+        System.out.println(<span class="hljs-string">"The total is: "</span> + getTotal());
+    }
+
+}
+</code></pre>
+                                  <p><span class="fas fa-arrow-down"></span></p>
+                                  <pre class="hljs"><code>Adding numbers to the list
+[3]
+[3, 8]
+[3, 8, 24]
+The total is: 35
+8 in the list : true
+5 in the list : false
+[3, 24]
+The total is: 27
+</code></pre>
+                                  <div slot="hint">
+                                    <p>Partial solution:</p>
+                                    <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.ArrayList;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> ArrayList&lt;Integer&gt; numbers = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addNumber</span><span class="hljs-params">(<span class="hljs-keyword">int</span> i)</span> </span>{
+        numbers.add(Integer.valueOf(i));
+        System.out.println(numbers);
+    }
+
+    <span class="hljs-comment">// ...</span>
+
+}
+</code></pre>
+                                  </div>
+                                </question>
+                              </panel>
+                            </div>
+                            <div>
+                              <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> TaskManager Level 4">
+                                <question>
+                                  <div id="body">
+                                    <panel header="%%<span class='glyphicon glyphicon-education' aria-hidden='true'></span> TaskManager Level3 (for reference)%%">
+                                      <div>
+                                        <panel header="%%<span class='glyphicon glyphicon-education' aria-hidden='true'></span> TaskManager Level2 (for reference)%%">
+                                          <div>
+                                            <panel header="%%<span class='glyphicon glyphicon-education' aria-hidden='true'></span> TaskManager Level1 (for reference)%%">
+                                              <div>
+                                                <question>
+                                                  <p>This is a good time to put together some of the topics you have learned so far to create something useful. In this exercise you will write a small <code>TaskManager</code> program that can store a list
+                                                    of tasks.</p>
+                                                  <ul>
+                                                    <li>It is a
+                                                      <tooltip content="Command Line Interface i.e., no Graphical User Interface">CLI</tooltip> program.</li>
+                                                    <li>In this version, the task list is not saved to the disk <span class="dimmed">i.e., the task list does not persist between multiple runs of the program</span></li>
+                                                  </ul>
+                                                  <p>Here is an example output: <span class="fas fa-arrow-down"></span></p>
+                                                  <pre class="hljs"><code>Welcome to TaskManager-Level1!
+Your task? add submit report
+Tasks in the list: 1
+Your task? add return library book
+Tasks in the list: 2
+Your task? add remind boss about meeting
+Tasks in the list: 3
+Your task? xyz
+Unknown command! please try again
+Your task? print
+[1] submit report
+[2] return library book
+[3] remind boss about meeting
+Your task? add set up meeting with boss
+Tasks in the list: 4
+Your task? print
+[1] submit report
+[2] return library book
+[3] remind boss about meeting
+[4] set up meeting with boss
+Your task? exit
+Bye!
+</code></pre>
+                                                  <p>Summary of behavior:</p>
+                                                  <ul>
+                                                    <li>Task Manager prompts for user input with the message <code>Your task?</code></li>
+                                                    <li><strong><code>add</code></strong> <code>task description</code>: adds the <code>task description</code> to the task list</li>
+                                                    <li><strong><code>print</code></strong>: prints the tasks added so far</li>
+                                                    <li><strong><code>exit</code></strong> or empty input: terminates the program</li>
+                                                  </ul>
+                                                  <p>If you are new to programming, we recommend you to build the program in small steps, as follows:</p>
+                                                  <ol>
+                                                    <li>Write a program that reads any user input, prints it back to the user, and exits.</li>
+                                                    <li>Update the program to do the above in a loop until user types <code>exit</code>.</li>
+                                                    <li>Add greetings printed at the start and the end.</li>
+                                                    <li>If the first word is not <code>add</code> or <code>exit</code>, print an error message. Suggestion: use a <code>switch</code> statement to choose between multiple actions.</li>
+                                                    <li>Create a <code>Task</code> class to represent tasks and add an <code>Task[]</code> to store tasks.</li>
+                                                    <li>If the first word of the user input is <code>add</code>, add the whole line (no need to omit the first word) to the task list.</li>
+                                                    <li>Update the code in the previous step to omit the word <code>add</code> from the task description.</li>
+                                                    <li>Add support for the <code>print</code> command.</li>
+                                                    <li>Add support for terminating if the user input is empty</li>
+                                                    <li>and so on ...</li>
+                                                  </ol>
+                                                  <div slot="hint">
+                                                    <panel type="seamless" header="Partial solution">
+                                                      <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Scanner;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+    <span class="hljs-keyword">static</span> Scanner in = <span class="hljs-keyword">new</span> Scanner(System.in);
+    <span class="hljs-keyword">static</span> Task[] tasks = <span class="hljs-keyword">new</span> Task[<span class="hljs-number">100</span>];
+    <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> count = <span class="hljs-number">0</span>;  <span class="hljs-comment">// to keep track of number of tasks in the list</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        printWelcome();
+        String line;
+        <span class="hljs-keyword">boolean</span> isExit = <span class="hljs-keyword">false</span>;
+        <span class="hljs-keyword">while</span> (!isExit) {
+            line = getInput();
+            String command = line.split(<span class="hljs-string">" "</span>)[<span class="hljs-number">0</span>]; <span class="hljs-comment">//extract the first word of the user input</span>
+            <span class="hljs-keyword">switch</span> (command) {
+                <span class="hljs-keyword">case</span> <span class="hljs-string">"exit"</span>:
+                <span class="hljs-keyword">case</span> <span class="hljs-string">""</span>: <span class="hljs-comment">// exit if user input is empty</span>
+                    isExit = <span class="hljs-keyword">true</span>;
+                    <span class="hljs-keyword">break</span>;
+                <span class="hljs-keyword">case</span> <span class="hljs-string">"add"</span>:
+                    <span class="hljs-comment">// todo: add code here</span>
+                <span class="hljs-keyword">default</span>:
+                    printError();
+            }
+        }
+        exit();
+
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printWelcome</span><span class="hljs-params">()</span> </span>{
+        System.out.println(<span class="hljs-string">"Welcome to TaskManager-Level1!"</span>);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printTasks</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; count; i++) {
+            System.out.println(<span class="hljs-string">"["</span> + (i + <span class="hljs-number">1</span>) + <span class="hljs-string">"] "</span> + tasks[i].getDescription());
+        }
+    }
+
+    <span class="hljs-comment">// todo: add missing methods</span>
+}
+
+</code></pre>
+                                                    </panel>
+                                                  </div>
+                                                </question>
+                                              </div>
+                                            </panel>
+                                            <p>This exercise continues from the <code>TaskManager Level1</code> exercise quoted above.</p>
+                                            <p>Enhance your TaskManager program in the following ways.</p>
+                                            <p><strong>A. Add support for two types of tasks:</strong></p>
+                                            <ul>
+                                              <li>ToDo : a task to do someday</li>
+                                              <li>Deadline: a task to be done by a specific deadline</li>
+                                            </ul>
+                                            <p>Both types keeps an internal flag to indicate if the task is done. The flag is initially set to <code>false</code>.</p>
+                                            <p>Here is an example output: <span class="fas fa-arrow-down"></span></p>
+                                            <box>
+                                              <div class="text-monospace">
+                                                <p>Welcome to TaskManager-Level2!
+                                                  <br>Your task? <code>todo submit report</code>
+                                                  <br>Tasks in the list: 1
+                                                  <br>Your task? <code>deadline write report /by this Friday 4pm</code>
+                                                  <br>Tasks in the list: 2
+                                                  <br>Your task? <code>todo read textbook</code>
+                                                  <br>Tasks in the list: 3
+                                                  <br>Your task? <code>deadline return textbook /by Sunday</code>
+                                                  <br>Tasks in the list: 4
+                                                  <br>Your task? <code>print</code>
+                                                  <br>Tasks:
+                                                  <br>[1] description: submit report
+                                                  <br>    is done? No
+                                                  <br>[2] description: write report
+                                                  <br>    is done? No
+                                                  <br>do by: this Friday 4pm
+                                                  <br>[3] description: read textbook
+                                                  <br>    is done? No
+                                                  <br>[4] description: return textbook
+                                                  <br>    is done? No
+                                                  <br>    do by: Sunday
+                                                  <br>Your task? <code>exit</code>
+                                                  <br>Bye!</p>
+                                              </div>
+                                            </box>
+                                            <p>Changes to the behavior:</p>
+                                            <ul>
+                                              <li><s><strong><code>add</code></strong> <code>task description</code>: adds the <code>task description</code> to the task list</s></li>
+                                              <li><strong><code>todo</code></strong> <code>task description</code>: adds to the task list a todo task with the given <code>task description</code></li>
+                                              <li><strong><code>deadline</code></strong> <code>task description /by deadline description</code>: adds to the task list a deadline task with the given <code>task description</code> and with the <code>deadline description</code></li>
+                                            </ul>
+                                            <p>Suggestion:</p>
+                                            <ul>
+                                              <li>Make the <code>Todo</code> class inherit from <code>Task</code> class, and make <code>Deadline</code> task inherit from <code>Todo</code> class.</li>
+                                              <li>Use polymorphism to store both types of tasks in an array of <code>Task</code> type and use one loop to print both types of tasks.</li>
+                                            </ul>
+                                            <p><strong>B. Add support for <trigger trigger="click" for="modal:taskManagerLevel2-testingClis">semi-automated regression testing using input/output redirection</trigger></strong>.</p>
+                                            <modal large="" title="Textbook »" id="modal:taskManagerLevel2-testingClis">
+                                            
+                                              <div>
+                                                <div></div>
+                                                <p></p>
+                                                <p><span class="dimmed"><strong><span>Quality Assurance → Testing → Test Automation →
+</span></strong>
+                                                  </span>
+                                                </p>
+                                                <div id="title-and-body">
+                                                  <div>
+                                                    <h4 id="automated-testing-of-cli-apps-2">Automated Testing of CLI Apps</h4>
+                                                  </div>
+                                                  <div id="main">
+                                                    <div>
+                                                      <p><strong>A simple way to semi-automate testing of a CLI(Command Line Interface) app is by using input/output re-direction.</strong></p>
+                                                      <ul>
+                                                        <li>First, we feed the app with a sequence of test inputs that is stored in a file while redirecting the output to another file.</li>
+                                                        <li>Next, we compare the actual output file with another file containing the expected output.</li>
+                                                      </ul>
+                                                      <p>Let us assume we are testing a CLI app called <code>AddressBook</code>. Here are the detailed steps:</p>
+                                                      <ol>
+                                                        <li>
+                                                          <p>Store the test input in the text file <code>input.txt</code>.</p>
+                                                          <panel header="%%<span class='fas fa-cube'></span> Example `input.txt`%%" type="seamless">
+                                                            <pre class="hljs"><code>add Valid Name p/12345 valid@email.butNoPrefix
+add Valid Name 12345 e/valid@email.butPhonePrefixMissing
+</code></pre>
+                                                          </panel>
+                                                        </li>
+                                                        <li>
+                                                          <p>Store the output we expect from the SUT in another text file <code>expected.txt</code>.</p>
+                                                          <panel header="%%<span class='fas fa-cube'></span> Example `expected.txt`%%" type="seamless">
+                                                            <pre class="hljs"><code>Command: || [add Valid Name p/12345 valid@email.butNoPrefix]
+Invalid command format: add 
+
+Command: || [add Valid Name 12345 e/valid@email.butPhonePrefixMissing]
+Invalid command format: add 
+</code></pre>
+                                                          </panel>
+                                                        </li>
+                                                        <li>
+                                                          <p>Run the program as given below, which will redirect the text in <code>input.txt</code> as the input to <code>AddressBook</code> and similarly, will redirect the output of AddressBook to a text
+                                                            file <code>output.txt</code>. <span class="dimmed">Note that this does not require any code changes to <code>AddressBook</code>.</span></p>
+                                                          <pre><code class="hljs sh">java AddressBook &lt; input.txt &gt; output.txt
+</code></pre>
+                                                          <ul>
+                                                            <li>
+                                                              <p>💡 The way to run a CLI program differs based on the language.<br> e.g., In Python, assuming the code is in <code>AddressBook.py</code> file, use the command<br>
+                                                                <code>python AddressBook.py &lt; input.txt &gt; output.txt</code></p>
+                                                            </li>
+                                                            <li>
+                                                              <p>💡 If you are using Windows, use a normal command window to run the app, not a Power Shell window.</p>
+                                                            </li>
+                                                          </ul>
+                                                          <panel header="" minimized="">
+                                                            <span slot="header" class="card-title"><span>More on the <code>&gt;</code> operator and the <code>&lt;</code> operator. <span class="badge badge-pill badge-secondary">tangential</span></span>
+                                                            </span>
+                                                            <p>A CLI program takes input from the keyboard and outputs to the console. That is because those two are default input and output streams, respectively. But you can change that behavior using <code>&lt;</code>                                                              and <code>&gt;</code> operators. For example, if you run <code>AddressBook</code> in a command window, the output will be shown in the console, but if you run it like this,</p>
+                                                            <pre><code class="hljs sh">java AddressBook &gt; output.txt 
+</code></pre>
+                                                            <p>the Operating System then creates a file <code>output.txt</code> and stores the output in that file instead of displaying it in the console. No file I/O coding is required. Similarly, adding
+                                                              <code>&lt; input.txt</code> (or any other filename) makes the OS redirect the contents of the file as input to the program, as if the user typed the content of the file one line at a time.</p>
+                                                            <tip-box>
+                                                              <p><span class="fas fa-paperclip"></span> Resources:</p>
+                                                              <ul>
+                                                                <li><a href="http://technet.microsoft.com/en-us/library/bb490982.aspx">Using command redirection operators in Windows</a></li>
+                                                              </ul>
+                                                            </tip-box>
+                                                            <p></p>
+                                                          </panel>
+                                                          <p></p>
+                                                        </li>
+                                                        <li>
+                                                          <p>Next, we compare <code>output.txt</code> with the <code>expected.txt</code>. This can be done using a utility such as Windows <code>FC</code> (i.e. File Compare) command, Unix <code>diff</code>                                                            command, or a GUI tool such as <em>WinMerge</em>.</p>
+                                                          <pre class="hljs"><code>FC output.txt expected.txt
+</code></pre>
+                                                        </li>
+                                                      </ol>
+                                                      <p>Note that the above technique is only suitable when testing CLI apps, and only if the exact output can be predetermined. <span class="dimmed">If the output varies from one run to the other (e.g. it contains a time stamp), this technique will not work. In those cases we need more sophisticated ways of automating tests.</span></p>
+                                                      <div>
+                                                        <popover id="pop:cli" placement="top">
+                                                          <div slot="content">
+                                                            <div>
+                                                              <p><strong>CLI App</strong>: An application that has a <em>Command Line Interface</em>. i.e. user interacts with the app by typing in commands.</p>
+                                                            </div>
+                                                          </div>
+                                                        </popover>
+                                                      </div>
+                                                    </div>
+                                                    <div></div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </modal>
+                                            <panel type="seamless" header="Partial solution">
+                                              <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Scanner;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+    <span class="hljs-keyword">static</span> Scanner in = <span class="hljs-keyword">new</span> Scanner(System.in);
+    <span class="hljs-keyword">static</span> Task[] tasks = <span class="hljs-keyword">new</span> Task[<span class="hljs-number">100</span>];
+    <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> taskCount = <span class="hljs-number">0</span>;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        printWelcome();
+        String line;
+
+        <span class="hljs-keyword">boolean</span> isExit = <span class="hljs-keyword">false</span>;
+        <span class="hljs-keyword">while</span> (!isExit) {
+            line = getInput();
+            String command = line.split(<span class="hljs-string">" "</span>)[<span class="hljs-number">0</span>];
+            <span class="hljs-keyword">switch</span> (command) {
+                <span class="hljs-keyword">case</span> <span class="hljs-string">"exit"</span>:
+                <span class="hljs-keyword">case</span> <span class="hljs-string">""</span>:
+                    isExit = <span class="hljs-keyword">true</span>;
+                    <span class="hljs-keyword">break</span>;
+                <span class="hljs-keyword">case</span> <span class="hljs-string">"todo"</span>:
+                    addTodo(line);
+                    <span class="hljs-keyword">break</span>;
+                <span class="hljs-keyword">case</span> <span class="hljs-string">"deadline"</span>:
+                    addDeadline(line);
+                    <span class="hljs-keyword">break</span>;
+                <span class="hljs-keyword">case</span> <span class="hljs-string">"print"</span>:
+                    printTasks();
+                    <span class="hljs-keyword">break</span>;
+                <span class="hljs-keyword">default</span>:
+                    printError();
+            }
+        }
+        exit();
+
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addTodo</span><span class="hljs-params">(String line)</span> </span>{
+        tasks[taskCount] = <span class="hljs-keyword">new</span> Todo(line.substring(<span class="hljs-string">"todo"</span>.length()).trim());
+        taskCount++;
+        System.out.println(<span class="hljs-string">"Tasks in the list: "</span> + taskCount);
+    }
+
+  <span class="hljs-comment">// ...</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printTasks</span><span class="hljs-params">()</span> </span>{
+        System.out.println(<span class="hljs-string">"Tasks:"</span>);
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; taskCount; i++) {
+            System.out.println(<span class="hljs-string">"["</span> + (i + <span class="hljs-number">1</span>) + <span class="hljs-string">"] "</span> + tasks[i]);
+        }
+    }
+}
+</code></pre>
+                                            </panel>
+                                          </div>
+                                        </panel>
+                                        <p>This exercise continues from the <code>TaskManager Level2</code> exercise quoted above.</p>
+                                        <p>Enhance the TaskManager to print an error message if a command is missing parts. Use exceptions so that error detection and printing of error message happen at different places of code and the error information
+                                          is passed between the two places using an Exception object.</p>
+                                        <p>Here is an example output: <span class="fas fa-arrow-down"></span></p>
+                                        <box>
+                                          <div class="text-monospace">
+                                            <p>Welcome to TaskManager-Level3!
+                                              <br>Your task? todo
+                                              <br><mark>Error: Empty description for TODO</mark>
+                                              <br>Your task? todo read book
+                                              <br>Tasks in the list: 1
+                                              <br>Your task? print
+                                              <br>Tasks:
+                                              <br>[1] description: read book
+                                              <br> is done? No
+                                              <br>Your task?</p>
+                                          </div>
+                                        </box>
+                                        <p>Suggested approach:</p>
+                                        <ul>
+                                          <li>Create a <code>TaskManagerException</code> class that inherits the <code>Exception</code> class. Override the constructor that takes a <code>String</code> parameter so that you can specify the error information
+                                            when you create a <code>TaskManagerException</code> object.</li>
+                                          <li>Throw a new <code>TaskManagerException</code> object when you detect some necessary information is missing in the command.</li>
+                                          <li>Catch that exception somewhere else and print the message inside the exception object.</li>
+                                        </ul>
+                                        <panel type="seamless" header="Partial solution">
+                                          <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TaskManagerException</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Exception</span></span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">TaskManagerException</span><span class="hljs-params">(String message)</span> </span>{
+        <span class="hljs-keyword">super</span>(message);
+    }
+}
+</code></pre>
+                                          <pre><code class="hljs java">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        <span class="hljs-comment">// ...</span>
+        <span class="hljs-keyword">while</span> (!isExit) {
+            <span class="hljs-keyword">try</span> {
+                line = getInput();
+                String command = line.split(<span class="hljs-string">" "</span>)[<span class="hljs-number">0</span>];
+                <span class="hljs-keyword">switch</span> (command) {
+                    <span class="hljs-keyword">case</span> <span class="hljs-string">"todo"</span>:
+                        addTodo(line);
+                        <span class="hljs-keyword">break</span>;
+                    <span class="hljs-comment">// ...</span>
+                }
+            } <span class="hljs-keyword">catch</span> (TaskManagerException e) {
+                printError(e.getMessage());
+            }
+        }
+        <span class="hljs-comment">// ...</span>
+
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addTodo</span><span class="hljs-params">(String line)</span> <span class="hljs-keyword">throws</span> TaskManagerException </span>{
+        String description = line.substring(<span class="hljs-string">"todo"</span>.length()).trim();
+        <span class="hljs-keyword">if</span> (description.isEmpty()){
+            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> TaskManagerException(<span class="hljs-string">"Empty description for TODO"</span>);
+        }
+        <span class="hljs-comment">// ...</span>
+    }
+</code></pre>
+                                        </panel>
+                                      </div>
+                                    </panel>
+                                    <p>This exercise continues from the <code>TaskManager Level3</code> exercise quoted above.</p>
+                                    <p>Enhance the TaskManager in the following ways:</p>
+                                    <ol>
+                                      <li>Use a suitable Collection class to store tasks, instead of using an array.</li>
+                                      <li>Introduce a <code>done n</code> command to mark the task at index <code>n</code> as done.</li>
+                                    </ol>
+                                    <p>Here is an example output: <span class="fas fa-arrow-down"></span></p>
+                                    <box>
+                                      <div class="text-monospace">
+                                        <p>Welcome to TaskManager-Level4!
+                                          <br>Your task? todo read book
+                                          <br>Tasks in the list: 1
+                                          <br>Your task? deadline return book /by Friday
+                                          <br>Tasks in the list: 2
+                                          <br>Your task? print
+                                          <br>Tasks:
+                                          <br>[1] description: read book
+                                          <br> is done? No
+                                          <br>[2] description: return book
+                                          <br> is done? No
+                                          <br> do by: Friday
+                                          <br>Your task? <mark>done 1</mark>
+                                          <br>Tasks in the list: 2
+                                          <br>Your task? print
+                                          <br>Tasks:
+                                          <br>[1] description: read book
+                                          <br> is done? <mark>Yes</mark>
+                                          <br>[2] description: return book
+                                          <br> is done? No
+                                          <br> do by: Friday
+                                          <br>Your task?</p>
+                                      </div>
+                                    </box>
+                                    <p>Suggestions:</p>
+                                    <ul>
+                                      <li>Move the <code>isDone</code> variable to the <code>Task</code> class and provide a <code>setDone(boolean)</code> method.</li>
+                                    </ul>
+                                    <panel type="seamless" header="Partial solution">
+                                      <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Task</span> </span>{
+    <span class="hljs-keyword">protected</span> String description;
+    <span class="hljs-keyword">protected</span> <span class="hljs-keyword">boolean</span> isDone;
+
+    <span class="hljs-comment">// ...</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setDone</span><span class="hljs-params">(<span class="hljs-keyword">boolean</span> isDone)</span></span>{
+        <span class="hljs-keyword">this</span>.isDone = isDone;
+    }
+}
+</code></pre>
+                                      <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.ArrayList;
+<span class="hljs-keyword">import</span> java.util.List;
+<span class="hljs-keyword">import</span> java.util.Scanner;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+    <span class="hljs-keyword">static</span> Scanner in = <span class="hljs-keyword">new</span> Scanner(System.in);
+    <span class="hljs-keyword">static</span> List&lt;Task&gt; tasks = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        <span class="hljs-comment">// ...</span>
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addTodo</span><span class="hljs-params">(String line)</span> <span class="hljs-keyword">throws</span> TaskManagerException </span>{
+        <span class="hljs-comment">//...</span>
+        tasks.add(<span class="hljs-keyword">new</span> Todo(description));
+        <span class="hljs-comment">//...</span>
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">markAsDone</span><span class="hljs-params">(String line)</span> </span>{
+        <span class="hljs-keyword">int</span> index = Integer.parseInt(line.substring(<span class="hljs-string">"done"</span>.length()).trim());
+        tasks.get(index - <span class="hljs-number">1</span>).setDone(<span class="hljs-keyword">true</span>);
+        System.out.println(<span class="hljs-string">"Tasks in the list: "</span> + tasks.size());
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printTasks</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">// ...</span>
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; tasks.size(); i++) {
+            System.out.println(<span class="hljs-string">"["</span> + (i + <span class="hljs-number">1</span>) + <span class="hljs-string">"] "</span> + tasks.get(i));
+        }
+    }
+}
+</code></pre>
+                                    </panel>
+                                  </div>
+                                </question>
+                              </panel>
+                            </div>
+                          </div>
+                        </panel>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -3428,6 +4031,62 @@ Number of keys after clearing: 0
                     </div>
                     <div>
                       <div>
+                        <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                          <div>
+                            <div>
+                              <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Weekly roster">
+                                <question>
+                                  <p>The class given below keeps track of how many people signup to attend an event on each day of the week. Add the missing methods so that it produces the output given.</p>
+                                  <p>💡 Use an <code>HashMap</code> to store the number of entries for each day.</p>
+                                  <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> HashMap&lt;String, Integer&gt; roster = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();
+
+    <span class="hljs-comment">//<span class="hljs-doctag">TODO:</span> add your methods here</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        addToRoster(<span class="hljs-string">"Monday"</span>); <span class="hljs-comment">// i.e., one person signed up for Monday</span>
+        addToRoster(<span class="hljs-string">"Wednesday"</span>); <span class="hljs-comment">// i.e., one person signed up for Wednesday</span>
+        addToRoster(<span class="hljs-string">"Wednesday"</span>); <span class="hljs-comment">// i.e., another person signed up for Wednesday</span>
+        addToRoster(<span class="hljs-string">"Friday"</span>);
+        addToRoster(<span class="hljs-string">"Monday"</span>);
+        printRoster();
+    }
+
+}
+</code></pre>
+                                  <p><span class="fas fa-arrow-down"></span></p>
+                                  <pre class="hljs"><code>Monday =&gt; 2
+Friday =&gt; 1
+Wednesday =&gt; 2
+</code></pre>
+                                  <div slot="hint">
+                                    <p>Partial solution:</p>
+                                    <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.HashMap;
+<span class="hljs-keyword">import</span> java.util.Map;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> HashMap&lt;String, Integer&gt; roster = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addToRoster</span><span class="hljs-params">(String day)</span> </span>{
+        <span class="hljs-keyword">if</span> (roster.containsKey(day)){
+            Integer newValue = Integer.valueOf(roster.get(day).intValue() + <span class="hljs-number">1</span>);
+            roster.put(day, newValue);
+        } <span class="hljs-keyword">else</span> {
+            roster.put(day, Integer.valueOf(<span class="hljs-number">1</span>));
+        }
+    }
+
+    <span class="hljs-comment">// ...</span>
+}
+</code></pre>
+                                  </div>
+                                </question>
+                              </panel>
+                            </div>
+                          </div>
+                        </panel>
+                      </div>
+                      <div>
                         <panel header="<span class='fas fa-paperclip'></span> Resources" expanded="">
                           <div>
                             <ul>
@@ -3468,27 +4127,17 @@ Number of keys after clearing: 0
                 </div>
                 <div id="main">
                   <div>
-                    <p><strong>An <em>Enumeration</em> is a fixed set of values that can be considered as a data type.</strong></p>
-                    <p>An enumeration is often useful when using a regular data type such as <code>int</code> or <code>String</code> would allow invalid values to be assigned to a variable. <span class="dimmed">e.g. if a variable can only take values <code>0</code> and <code>1</code>, declaring it as an <code>int</code> would allow invalid values such as <code>2</code> to be assigned to it. But if you define an enumeration called <code>Binary</code> that has values <code>0</code> and <code>1</code> only, a variable of type <code>Binary</code> will never be assigned an invalid value such as <code>2</code> because the compiler is able to catch the error.</span></p>
-                    <tip-box>
-                      <p><span class="fas fa-cube"></span> <code>Priority</code> can be considered an enumeration because it has only three values.</p>
+                    <p><strong>An <em>Enumeration</em> is a fixed set of values that can be considered as a data type.</strong> An enumeration is often useful when using a regular data type such as <code>int</code> or <code>String</code> would allow invalid
+                      values to be assigned to a variable. <strong>You are recommended to enumeration types any time you need to represent a fixed set of constants.</strong></p>
+                    <box>
+                      <p><span class="fas fa-cube"></span> Suppose you want a variable to store the priority of something. There are only three priority levels: high, medium, and low. You can declare the variable as of type <code>int</code> and use only
+                        values <code>2</code>, <code>1</code>, and <code>0</code> to indication the three priority levels. However, this opens the possibility of an invalid values such as <code>9</code> to be assigned to it. But if you define an enumeration
+                        type called <code>Priority</code> that has three values <code>HIGH</code>, <code>MEDIUM</code>, <code>LOW</code> only, a variable of type <code>Priority</code> will never be assigned an invalid value because the compiler is able
+                        to catch such an error.</p>
                       <p><code>Priority</code>: <code>HIGH</code>, <code>MEDIUM</code>, <code>LOW</code></p>
-                    </tip-box>
+                    </box>
                   </div>
-                  <div>
-                    <div>
-                      <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
-                      
-                        <div>
-                          <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Define WeekDay Enum">
-                            <question has-input="true">
-                              <p>Show (in UML notation) an enumeration called <code>WeekDay</code> to use when the value can only be <code>Monday</code> ... <code>Friday</code>.</p>
-                            </question>
-                          </panel>
-                        </div>
-                      </panel>
-                    </div>
-                  </div>
+                  <div></div>
                 </div>
               </div>
             </div>
@@ -3521,23 +4170,80 @@ Number of keys after clearing: 0
               </div>
               <div id="main">
                 <div>
-                  <blockquote>
-                    <p>An enum type is a special data type that enables for a variable to be a set of predefined constants. The variable must be equal to one of the values that have been predefined for it. Common examples include compass directions (values
-                      of <code>NORTH</code>, <code>SOUTH</code>, <code>EAST</code>, and <code>WEST</code>) and the days of the week.</p>
-                    <p>Because they are constants, the names of an enum type's fields are in uppercase letters. In the Java programming language, you define an enum type by using the <code>enum</code> keyword. For example, you would specify a days-of-the-week
-                      enum type as:</p>
+                  <p><strong>You can define an enum type by using the <code>enum</code> keyword.</strong> Because they are constants, the names of an enum type's fields are in uppercase letters e.g., <code>FLAG_SUCCESS</code>.</p>
+                  <box>
+                    <p><span class="fas fa-cube"></span> Defining an enumeration to represent days of a week (code to be put in the <code>Day.java</code> file):</p>
                     <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">enum</span> Day {
-   SUNDAY, MONDAY, TUESDAY, WEDNESDAY,
-   THURSDAY, FRIDAY, SATURDAY
+    SUNDAY, MONDAY, TUESDAY, WEDNESDAY,
+    THURSDAY, FRIDAY, SATURDAY
 }
 </code></pre>
-                    <p>You should use enum types any time you need to represent a fixed set of constants. That includes natural enum types such as the planets in our solar system and data sets where you know all possible values at compile time—for example,
-                      the choices on a menu, command line flags, and so on.
-                      <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small></p>
-                  </blockquote>
-                  <p>Note that while enumerations are usually a simple set of fixed values, Java enumerations can have behaviors too. To learn how to implement enumerations, read <a href="https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html">this tutorial (from Oracle)</a></p>
+                    <p>Some examples of using the <code>Day</code> enumeration defined above:</p>
+                    <pre><code class="hljs java">Day today = Day.MONDAY;
+Day[] holidays = <span class="hljs-keyword">new</span> Day[]{Day.SATURDAY, Day.SUNDAY};
+
+<span class="hljs-keyword">switch</span> (today) {
+<span class="hljs-keyword">case</span> SATURDAY:
+<span class="hljs-keyword">case</span> SUNDAY:
+    System.out.println(<span class="hljs-string">"It's the weekend"</span>);
+    <span class="hljs-keyword">break</span>;
+<span class="hljs-keyword">default</span>:
+    System.out.println(<span class="hljs-string">"It's a week day"</span>);
+}
+</code></pre>
+                  </box>
+                  <p>Note that while enumerations are usually a simple set of fixed values, <strong>Java enumerations can have behaviors too</strong>, as explained in <a href="https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html">this tutorial from <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small></a></p>
                 </div>
-                <div></div>
+                <div>
+                  <div>
+                    <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                      <div>
+                        <div>
+                          <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> show priority color">
+                            <question>
+                              <p>Define an enumeration named <code>Priority</code>. Add the missing <code>describe</code> method to the code below so that it produces the output given.</p>
+                              <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+
+    <span class="hljs-comment">// Add your method here</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        describe(<span class="hljs-string">"Red"</span>, Priority.HIGH);
+        describe(<span class="hljs-string">"Orange"</span>, Priority.MEDIUM);
+        describe(<span class="hljs-string">"Blue"</span>, Priority.MEDIUM);
+        describe(<span class="hljs-string">"Green"</span>, Priority.LOW);
+    }
+}
+</code></pre>
+                              <p><span class="fas fa-arrow-down"></span></p>
+                              <pre class="hljs"><code>Red indicates high priority
+Orange indicates medium priority
+Blue indicates medium priority
+Green indicates low priority
+</code></pre>
+                              <div slot="hint">
+                                <p>Use a <code>switch</code> statement to select between possible values for <code>Priority</code>.</p>
+                                <pre><code class="hljs java">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">describe</span><span class="hljs-params">(String color, Priority p)</span> </span>{
+        <span class="hljs-keyword">switch</span> (p) {
+            <span class="hljs-keyword">case</span> LOW:
+                System.out.println(color + <span class="hljs-string">" indicates low priority"</span>);
+                <span class="hljs-keyword">break</span>;
+            <span class="hljs-comment">// ...</span>
+        }
+    }
+</code></pre>
+                                <p>Code for the enumeration is given below:</p>
+                                <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">enum</span> Priority {
+    HIGH, MEDIUM, LOW
+}
+</code></pre>
+                              </div>
+                            </question>
+                          </panel>
+                        </div>
+                      </div>
+                    </panel>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -4149,7 +4855,7 @@ This repo can be used to practice creating PRs.
                   </p>
                   <div id="title-and-body">
                     <div>
-                      <h4 id="automated-testing-of-cli-apps-2">Automated Testing of CLI Apps</h4>
+                      <h4 id="automated-testing-of-cli-apps-3">Automated Testing of CLI Apps</h4>
                     </div>
                     <div id="main">
                       <div>
@@ -4651,7 +5357,7 @@ Invalid command format: add
                                 <li>OBS transfers the money and displays the new account balance.</li>
                                 <li class="custom-bullet-point">Use case ends.</li>
                               </ol>
-                            </li>
+                            </li><br>
                             <li> Extensions:
                               <ol class="custom-bullet-list">
                                 <li>3a. OBS detects an error in the entered data.
@@ -4659,22 +5365,19 @@ Invalid command format: add
                                     <li>3a1. OBS requests for the correct data.</li>
                                     <li>3a2. User enters new data.</li>
                                     <li>Steps 3a1-3a2 are repeated until the data entered are correct.</li>
-                                    <li>Use case resumes from step 4.</li>
-                                  </ol>
+                                    <li>Use case resumes from step 4.</li><br></ol>
                                 </li>
                                 <li>3b. User requests to effect the transfer in a future date.
                                   <ol class="custom-bullet-list">
                                     <li>3b1. OBS requests for confirmation.</li>
                                     <li>3b2. User confirms future transfer.</li>
-                                    <li>Use case ends.</li>
-                                  </ol>
+                                    <li>Use case ends.</li><br></ol>
                                 </li>
                                 <li>*a. At any time, User chooses to cancel the transfer.
                                   <ol class="custom-bullet-list">
                                     <li>*a1. OBS requests to confirm the cancellation.</li>
                                     <li>*a2. User confirms the cancellation.</li>
-                                    <li>Use case ends.</li>
-                                  </ol>
+                                    <li>Use case ends.</li><br></ol>
                                 </li>
                                 <li>*b. At any time, 120 seconds lapse without any input from the User.
                                   <ol class="custom-bullet-list">
@@ -5090,47 +5793,60 @@ Invalid command format: add
                   </div>
                   <div id="main">
                     <div>
-                      <p>Given below is an extract from the <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small>, with slight adaptations.</p>
-                      <blockquote>
-                        <p><strong>A <em>collection</em> — sometimes called a <em>container</em> — is simply an object that groups multiple elements into a single unit.</strong> Collections are used to store, retrieve, manipulate, and communicate aggregate
-                          data. Typically, they represent data items that form a natural group, such as a poker hand (a collection of cards), a mail folder (a collection of letters), or a telephone directory (a mapping of names to phone numbers). If you
-                          have used the Java programming language — or just about any other programming language — you are already familiar with collections.</p>
-                        <p><strong>A collections framework is a unified architecture for representing and manipulating collections.</strong> All collections frameworks contain the following:</p>
-                        <ul>
-                          <li><strong>Interfaces</strong>: These are abstract data types that represent collections. Interfaces allow collections to be manipulated independently of the details of their representation. In object-oriented languages, interfaces
-                            generally form a hierarchy.</li>
-                          <li><strong>Implementations</strong>: These are the concrete implementations of the collection interfaces. In essence, they are reusable data structures.</li>
-                          <li><strong>Algorithms</strong>: These are the methods that perform useful computations, such as searching and sorting, on objects that implement collection interfaces. The algorithms are said to be polymorphic: that is, the same
-                            method can be used on many different implementations of the appropriate collection interface. In essence, algorithms are reusable functionality.</li>
-                        </ul>
-                        <p>Apart from the Java Collections Framework, <strong>the best-known examples of collections frameworks are the C++ Standard Template Library (STL)</strong> and Smalltalk's collection hierarchy.</p>
-                        <p>The following list describes the core collection interfaces:</p>
-                        <ul>
-                          <li>
-                            <p><code>Collection</code> — the root of the collection hierarchy. A collection represents a group of objects known as its elements. The Collection interface is the least common denominator that all collections implement and is
-                              used to pass collections around and to manipulate them when maximum generality is desired. Some types of collections allow duplicate elements, and others do not. Some are ordered and others are unordered. The Java platform
-                              doesn't provide any direct implementations of this interface but provides implementations of more specific subinterfaces, such as Set and List. Also see The Collection Interface section.</p>
-                          </li>
-                          <li>
-                            <p><code>Set</code> — a collection that cannot contain duplicate elements. This interface models the mathematical set abstraction and is used to represent sets, such as the cards comprising a poker hand, the courses making up
-                              a student's schedule, or the processes running on a machine. See also The Set Interface section.</p>
-                          </li>
-                          <li>
-                            <p><code>List</code> — an ordered collection (sometimes called a sequence). Lists can contain duplicate elements. The user of a List generally has precise control over where in the list each element is inserted and can access
-                              elements by their integer index (position). If you've used Vector, you're familiar with the general flavor of List. Also see The List Interface section.</p>
-                          </li>
-                          <li>
-                            <p><code>Queue</code> — a collection used to hold multiple elements prior to processing. Besides basic Collection operations, a Queue provides additional insertion, extraction, and inspection operations.</p>
-                          </li>
-                          <li>
-                            <p><code>Map</code> — an object that maps keys to values. A Map cannot contain duplicate keys; each key can map to at most one value. If you've used Hashtable, you're already familiar with the basics of Map. Also see The Map Interface
-                              section.</p>
-                          </li>
-                          <li>
-                            <p>Others: <code>Deque</code>, <code>SortedSet</code>, <code>SortedMap</code></p>
-                          </li>
-                        </ul>
-                      </blockquote>
+                      <p>This section uses extracts from the <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small>, with some adaptations.</p>
+                      <p><strong>A <em>collection</em> — sometimes called a <em>container</em> — is simply an object that groups multiple elements into a single unit.</strong> Collections are used to store, retrieve, manipulate, and communicate aggregate
+                        data.</p>
+                      <box>
+                        <p><span class="fas fa-cube"></span> Typically, collections represent data items that form a natural group, such as a poker hand (a collection of cards), a mail folder (a collection of letters), or a telephone directory (a mapping
+                          of names to phone numbers).</p>
+                      </box>
+                      <p><strong>The collections framework is a unified architecture for representing and manipulating collections.</strong> It contains the following:</p>
+                      <ul>
+                        <li>
+                          <p><strong>Interfaces</strong>: These are abstract data types that represent collections. Interfaces allow collections to be manipulated independently of the details of their representation.<br>
+                            <span class="dimmed"><span class="fas fa-cube"></span> Example: the <code>List&lt;E&gt;</code> interface can be used to manipulate list-like collections which may be implemented in different ways such as <code>ArrayList&lt;E&gt;</code>                            or <code>LinkedList&lt;E&gt;</code>.</span><br></p>
+                        </li>
+                        <li>
+                          <p><strong>Implementations</strong>: These are the concrete implementations of the collection interfaces. In essence, they are reusable data structures.<br>
+                            <span class="dimmed"><span class="fas fa-cube"></span> Example: the <code>ArrayList&lt;E&gt;</code> class implements the <code>List&lt;E&gt;</code> interface while the <code>HashMap&lt;K, V&gt;</code> class implements the <code>Map&lt;K, V&gt;</code>                            interface.</span><br></p>
+                        </li>
+                        <li>
+                          <p><strong>Algorithms</strong>: These are the methods that perform useful computations, such as <em>searching</em> and <em>sorting</em>, on objects that implement collection interfaces. The algorithms are said to be polymorphic:
+                            that is, the same method can be used on many different implementations of the appropriate collection interface.<br>
+                            <span class="dimmed"><span class="fas fa-cube"></span> Example: the <code>sort(List&lt;E&gt;)</code> method can sort a collection that implements the <code>List&lt;E&gt;</code> interface.</span>
+                          </p>
+                        </li>
+                      </ul>
+                      <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span class="fas fa-equals"></span></span>
+                        </span> <strong>A well-known example of collections frameworks is the C++ <em>Standard Template Library (STL)</em></strong>. <span style="opacity: 0.5"> <span class="badge badge-pill badge-danger"><span class="fas fa-not-equal"></span></span>
+                        </span>
+                        Although both are collections frameworks and the syntax look similar, note that there are important philosophical and implementation differences between the two.</p>
+                      <p>The following list describes the core collection interfaces:</p>
+                      <ul>
+                        <li>
+                          <p><strong><code>Collection</code></strong> — the root of the collection hierarchy. A collection represents a group of objects known as its elements. The Collection interface is the least common denominator that all collections
+                            implement and is used to pass collections around and to manipulate them when maximum generality is desired. Some types of collections allow duplicate elements, and others do not. Some are ordered and others are unordered. The
+                            Java platform doesn't provide any direct implementations of this interface but provides implementations of more specific subinterfaces, such as <code>Set</code> and <code>List</code>. <span class="dimmed">Also see the <a href="https://docs.oracle.com/javase/9/docs/api/java/util/Collection.html"><code>Collection</code> API</a>.</span></p>
+                        </li>
+                        <li>
+                          <p><strong><code>Set</code></strong> — a collection that cannot contain duplicate elements. This interface models the mathematical set abstraction and is used to represent sets, such as the cards comprising a poker hand, the courses
+                            making up a student's schedule, or the processes running on a machine. <span class="dimmed">Also see the <a href="https://docs.oracle.com/javase/9/docs/api/java/util/Set.html"><code>Set</code> API</a>.</span></p>
+                        </li>
+                        <li>
+                          <p><strong><code>List</code></strong> — an ordered collection (sometimes called a <em>sequence</em>). <code>List</code>s can contain duplicate elements. The user of a <code>List</code> generally has precise control over where in
+                            the list each element is inserted and can access elements by their integer index (position). <span class="dimmed">Also see the <a href="https://docs.oracle.com/javase/9/docs/api/java/util/List.html"><code>List</code> API</a>.</span></p>
+                        </li>
+                        <li>
+                          <p><strong><code>Queue</code></strong> — a collection used to hold multiple elements prior to processing. Besides basic <code>Collection</code> operations, a <code>Queue</code> provides additional insertion, extraction, and inspection
+                            operations. <span class="dimmed">Also see the <a href="https://docs.oracle.com/javase/9/docs/api/java/util/Queue.html"><code>Queue</code> API</a>.</span></p>
+                        </li>
+                        <li>
+                          <p><strong><code>Map</code></strong> — an object that maps keys to values. A <code>Map</code> cannot contain duplicate keys; each key can map to at most one value. <span class="dimmed">Also see the <a href="https://docs.oracle.com/javase/9/docs/api/java/util/Map.html"><code>Map</code> API</a>.</span></p>
+                        </li>
+                        <li>
+                          <p>Others: <code>Deque</code>, <code>SortedSet</code>, <code>SortedMap</code></p>
+                        </li>
+                      </ul>
                     </div>
                     <div></div>
                   </div>
@@ -5170,27 +5886,17 @@ Invalid command format: add
                   </div>
                   <div id="main">
                     <div>
-                      <p><strong>An <em>Enumeration</em> is a fixed set of values that can be considered as a data type.</strong></p>
-                      <p>An enumeration is often useful when using a regular data type such as <code>int</code> or <code>String</code> would allow invalid values to be assigned to a variable. <span class="dimmed">e.g. if a variable can only take values <code>0</code> and <code>1</code>, declaring it as an <code>int</code> would allow invalid values such as <code>2</code> to be assigned to it. But if you define an enumeration called <code>Binary</code> that has values <code>0</code> and <code>1</code> only, a variable of type <code>Binary</code> will never be assigned an invalid value such as <code>2</code> because the compiler is able to catch the error.</span></p>
-                      <tip-box>
-                        <p><span class="fas fa-cube"></span> <code>Priority</code> can be considered an enumeration because it has only three values.</p>
+                      <p><strong>An <em>Enumeration</em> is a fixed set of values that can be considered as a data type.</strong> An enumeration is often useful when using a regular data type such as <code>int</code> or <code>String</code> would allow invalid
+                        values to be assigned to a variable. <strong>You are recommended to enumeration types any time you need to represent a fixed set of constants.</strong></p>
+                      <box>
+                        <p><span class="fas fa-cube"></span> Suppose you want a variable to store the priority of something. There are only three priority levels: high, medium, and low. You can declare the variable as of type <code>int</code> and use only
+                          values <code>2</code>, <code>1</code>, and <code>0</code> to indication the three priority levels. However, this opens the possibility of an invalid values such as <code>9</code> to be assigned to it. But if you define an enumeration
+                          type called <code>Priority</code> that has three values <code>HIGH</code>, <code>MEDIUM</code>, <code>LOW</code> only, a variable of type <code>Priority</code> will never be assigned an invalid value because the compiler is able
+                          to catch such an error.</p>
                         <p><code>Priority</code>: <code>HIGH</code>, <code>MEDIUM</code>, <code>LOW</code></p>
-                      </tip-box>
+                      </box>
                     </div>
-                    <div>
-                      <div>
-                        <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
-                        
-                          <div>
-                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Define WeekDay Enum">
-                              <question has-input="true">
-                                <p>Show (in UML notation) an enumeration called <code>WeekDay</code> to use when the value can only be <code>Monday</code> ... <code>Friday</code>.</p>
-                              </question>
-                            </panel>
-                          </div>
-                        </panel>
-                      </div>
-                    </div>
+                    <div></div>
                   </div>
                 </div>
               </div>
@@ -5230,23 +5936,80 @@ Invalid command format: add
                   </div>
                   <div id="main">
                     <div>
-                      <blockquote>
-                        <p>An enum type is a special data type that enables for a variable to be a set of predefined constants. The variable must be equal to one of the values that have been predefined for it. Common examples include compass directions (values
-                          of <code>NORTH</code>, <code>SOUTH</code>, <code>EAST</code>, and <code>WEST</code>) and the days of the week.</p>
-                        <p>Because they are constants, the names of an enum type's fields are in uppercase letters. In the Java programming language, you define an enum type by using the <code>enum</code> keyword. For example, you would specify a days-of-the-week
-                          enum type as:</p>
+                      <p><strong>You can define an enum type by using the <code>enum</code> keyword.</strong> Because they are constants, the names of an enum type's fields are in uppercase letters e.g., <code>FLAG_SUCCESS</code>.</p>
+                      <box>
+                        <p><span class="fas fa-cube"></span> Defining an enumeration to represent days of a week (code to be put in the <code>Day.java</code> file):</p>
                         <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">enum</span> Day {
-   SUNDAY, MONDAY, TUESDAY, WEDNESDAY,
-   THURSDAY, FRIDAY, SATURDAY
+    SUNDAY, MONDAY, TUESDAY, WEDNESDAY,
+    THURSDAY, FRIDAY, SATURDAY
 }
 </code></pre>
-                        <p>You should use enum types any time you need to represent a fixed set of constants. That includes natural enum types such as the planets in our solar system and data sets where you know all possible values at compile time—for example,
-                          the choices on a menu, command line flags, and so on.
-                          <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small></p>
-                      </blockquote>
-                      <p>Note that while enumerations are usually a simple set of fixed values, Java enumerations can have behaviors too. To learn how to implement enumerations, read <a href="https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html">this tutorial (from Oracle)</a></p>
+                        <p>Some examples of using the <code>Day</code> enumeration defined above:</p>
+                        <pre><code class="hljs java">Day today = Day.MONDAY;
+Day[] holidays = <span class="hljs-keyword">new</span> Day[]{Day.SATURDAY, Day.SUNDAY};
+
+<span class="hljs-keyword">switch</span> (today) {
+<span class="hljs-keyword">case</span> SATURDAY:
+<span class="hljs-keyword">case</span> SUNDAY:
+    System.out.println(<span class="hljs-string">"It's the weekend"</span>);
+    <span class="hljs-keyword">break</span>;
+<span class="hljs-keyword">default</span>:
+    System.out.println(<span class="hljs-string">"It's a week day"</span>);
+}
+</code></pre>
+                      </box>
+                      <p>Note that while enumerations are usually a simple set of fixed values, <strong>Java enumerations can have behaviors too</strong>, as explained in <a href="https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html">this tutorial from <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small></a></p>
                     </div>
-                    <div></div>
+                    <div>
+                      <div>
+                        <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                          <div>
+                            <div>
+                              <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> show priority color">
+                                <question>
+                                  <p>Define an enumeration named <code>Priority</code>. Add the missing <code>describe</code> method to the code below so that it produces the output given.</p>
+                                  <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+
+    <span class="hljs-comment">// Add your method here</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        describe(<span class="hljs-string">"Red"</span>, Priority.HIGH);
+        describe(<span class="hljs-string">"Orange"</span>, Priority.MEDIUM);
+        describe(<span class="hljs-string">"Blue"</span>, Priority.MEDIUM);
+        describe(<span class="hljs-string">"Green"</span>, Priority.LOW);
+    }
+}
+</code></pre>
+                                  <p><span class="fas fa-arrow-down"></span></p>
+                                  <pre class="hljs"><code>Red indicates high priority
+Orange indicates medium priority
+Blue indicates medium priority
+Green indicates low priority
+</code></pre>
+                                  <div slot="hint">
+                                    <p>Use a <code>switch</code> statement to select between possible values for <code>Priority</code>.</p>
+                                    <pre><code class="hljs java">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">describe</span><span class="hljs-params">(String color, Priority p)</span> </span>{
+        <span class="hljs-keyword">switch</span> (p) {
+            <span class="hljs-keyword">case</span> LOW:
+                System.out.println(color + <span class="hljs-string">" indicates low priority"</span>);
+                <span class="hljs-keyword">break</span>;
+            <span class="hljs-comment">// ...</span>
+        }
+    }
+</code></pre>
+                                    <p>Code for the enumeration is given below:</p>
+                                    <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">enum</span> Priority {
+    HIGH, MEDIUM, LOW
+}
+</code></pre>
+                                  </div>
+                                </question>
+                              </panel>
+                            </div>
+                          </div>
+                        </panel>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

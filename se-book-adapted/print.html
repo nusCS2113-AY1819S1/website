@@ -479,12 +479,13 @@
       </h4>
       <div class="indented-less">
         <div>
-          <p><strong>An <em>Enumeration</em> is a fixed set of values that can be considered as a data type.</strong></p>
-          <p>An enumeration is often useful when using a regular data type such as <code>int</code> or <code>String</code> would allow invalid values to be assigned to a variable. <span class="dimmed">e.g. if a variable can only take values <code>0</code> and <code>1</code>, declaring it as an <code>int</code> would allow invalid values such as <code>2</code> to be assigned to it. But if you define an enumeration called <code>Binary</code> that has values <code>0</code> and <code>1</code> only, a variable of type <code>Binary</code> will never be assigned an invalid value such as <code>2</code> because the compiler is able to catch the error.</span></p>
-          <tip-box>
-            <p><span class="fas fa-cube"></span> <code>Priority</code> can be considered an enumeration because it has only three values.</p>
+          <p><strong>An <em>Enumeration</em> is a fixed set of values that can be considered as a data type.</strong> An enumeration is often useful when using a regular data type such as <code>int</code> or <code>String</code> would allow invalid values
+            to be assigned to a variable. <strong>You are recommended to enumeration types any time you need to represent a fixed set of constants.</strong></p>
+          <box>
+            <p><span class="fas fa-cube"></span> Suppose you want a variable to store the priority of something. There are only three priority levels: high, medium, and low. You can declare the variable as of type <code>int</code> and use only values <code>2</code>,
+              <code>1</code>, and <code>0</code> to indication the three priority levels. However, this opens the possibility of an invalid values such as <code>9</code> to be assigned to it. But if you define an enumeration type called <code>Priority</code>              that has three values <code>HIGH</code>, <code>MEDIUM</code>, <code>LOW</code> only, a variable of type <code>Priority</code> will never be assigned an invalid value because the compiler is able to catch such an error.</p>
             <p><code>Priority</code>: <code>HIGH</code>, <code>MEDIUM</code>, <code>LOW</code></p>
-          </tip-box>
+          </box>
         </div>
       </div>
     </div>
@@ -548,30 +549,18 @@
           <tip-box>
             <p><span class="fas fa-cube"></span> In the code below, the <code>Logic</code> class has a variable that can hold <code>0..1</code> <span class="dimmed">i.e., zero or one</span> <code>Minefield</code> objects.</p>
             <div>
-              <table>
-                <tr>
-                
-                  <td>
-                    <p>Java <span class="fas fa-arrow-down"></span></p>
-                    <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span></span>{
+              <div class="alt-java">
+                <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span></span>{
     Minefield minefield;
 }
 
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Minefield</span></span>{
     ...
 }
-
-
-
 </code></pre>
-                    <p></p>
-                  </td>
-                
-                  <td valign="bottom">  <br><br></td>
-                
-                  <td valign="bottom">
-                    <p>Python <span class="fas fa-arrow-down"></span></p>
-                    <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span>:</span>
+              </div>
+              <div class="alt-python">
+                <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span>:</span>
   
   <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, minefield)</span>:</span>
     self.minefield = minefield
@@ -582,10 +571,7 @@
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Minefield</span>:</span>
   <span class="hljs-comment"># ...</span>
 </code></pre>
-                    <p></p>
-                  </td>
-                </tr>
-              </table>
+              </div>
             </div>
           </tip-box>
           <p><strong>A variable can be used to implement a <code>1</code> multiplicity too</strong> (also called <em>compulsory associations</em>).</p>
@@ -609,16 +595,11 @@
           <p><strong>Bi-directional associations require matching variables in both classes.</strong></p>
           <tip-box>
             <p><span class="fas fa-cube"></span> In the code below, the <code>Foo</code> class has a variable to hold a <code>Bar</code> object and vice versa <span class="dimmed">i.e., each object can have an association with an object of the other type</span>.</p>
-            <table>
-              <tr>
-              
-                <td>
-                  <p>Java <span class="fas fa-arrow-down"></span></p>
-                  <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span> </span>{
+            <div class="alt-java">
+              <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span> </span>{
     Bar bar;
     <span class="hljs-comment">//...</span>
 }
-
 
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bar</span> </span>{
     Foo foo;
@@ -626,14 +607,9 @@
 }
 
 </code></pre>
-                  <p></p>
-                </td>
-              
-                <td valign="bottom">  <br><br></td>
-              
-                <td valign="bottom">
-                  <p>Python <span class="fas fa-arrow-down"></span></p>
-                  <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span>:</span>
+            </div>
+            <div class="alt-python">
+              <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span>:</span>
   
   <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, bar)</span>:</span>
     self.bar = bar;
@@ -645,39 +621,24 @@
     self.foo = foo;
     
 </code></pre>
-                  <p></p>
-                </td>
-              </tr>
-            </table>
+            </div>
           </tip-box>
           <p><strong>To implement other multiplicities, choose a suitable data structure</strong> such as Arrays, ArrayLists, HashMaps, Sets, etc.</p>
           <tip-box>
-            <table>
-              <tr>
-              
-                <td>
-                  <p>Java <span class="fas fa-arrow-down"></span></p>
-                  <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Minefield</span> </span>{
+            <div class="alt-java">
+              <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Minefield</span> </span>{
     Cell[][] cell;
     ...
 }
 </code></pre>
-                  <p></p>
-                </td>
-              
-                <td valign="bottom">  <br><br></td>
-              
-                <td valign="bottom">
-                  <p>Python <span class="fas fa-arrow-down"></span></p>
-                  <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Minefield</span>:</span>
+            </div>
+            <div class="alt-python">
+              <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Minefield</span>:</span>
   
   <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
     self.cells = {<span class="hljs-number">1</span>:[], <span class="hljs-number">2</span>:[], <span class="hljs-number">3</span>:[]}
 </code></pre>
-                  <p></p>
-                </td>
-              </tr>
-            </table>
+            </div>
           </tip-box>
         </div>
       </div>
@@ -690,21 +651,17 @@
       </h4>
       <div class="indented-less">
         <div>
-          <p>Dependencies are objects that are not directly linked in the object network can still interact with each other. These are a weaker form of associations we call <em>dependencies</em>.</p>
+          <p>In the context of OOP associations, <strong>a <em>dependency</em> is a need for one class to depend on another without having a direction association with it.</strong> One cause of dependencies is interactions between objects that do not have
+            a long-term link between them.</p>
           <tip-box>
             <p><span class="fas fa-cube"></span> A <code>Course</code> object can have a dependency on a <code>Registrar</code> object to obtain the maximum number of students it can support.</p>
           </tip-box>
           <h5 id="implementing-dependencies">Implementing dependencies</h5>
-          <p>Dependencies result from interactions between objects that do not result in a long-term link between the said objects.</p>
           <tip-box>
             <p><span class="fas fa-cube"></span> In the code below, <code>Foo</code> has a dependency on <code>Bar</code> but it is not an association because it is only a
               <tooltip content="temporary">transient</tooltip> interaction and there is no long term relationship between a <code>Foo</code> object and a <code>Bar</code> object. <span class="dimmed">i.e. the <code>Foo</code> object does not keep the <code>Bar</code> object it receives as a parameter</span>.</p>
-            <table>
-              <tr>
-              
-                <td>
-                  <p>Java <span class="fas fa-arrow-down"></span></p>
-                  <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span></span>{
+            <div class="alt-java">
+              <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span></span>{
     
     <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">calculate</span><span class="hljs-params">(Bar bar)</span></span>{
         <span class="hljs-keyword">return</span> bar.getValue();
@@ -719,14 +676,9 @@
     }
 }
 </code></pre>
-                  <p></p>
-                </td>
-              
-                <td>  <br><br></td>
-              
-                <td valign="top">
-                  <p>Python <span class="fas fa-arrow-down"></span></p>
-                  <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span>:</span>
+            </div>
+            <div class="alt-python">
+              <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span>:</span>
     
     <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate</span><span class="hljs-params">(self, bar)</span>:</span>
         <span class="hljs-keyword">return</span> bar.value;
@@ -736,11 +688,7 @@
     <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, value)</span>:</span>
       self.value = value
 </code></pre>
-                  <p></p>
-                </td>
-              </tr>
-            </table>
-            <p>The code above results in a dependency from <code>Foo</code> class to the <code>Bar</code> class.</p>
+            </div>
           </tip-box>
         </div>
       </div>
@@ -763,36 +711,24 @@
               <code>bar</code>, <code>bar</code> cannot be a sub-folder of <code>foo</code>.</p>
           </tip-box>
           <h5 id="implementing-composition">Implementing composition</h5>
-          <p><strong>Composition too is implemented using a normal variable.</strong> If correctly implemented, the ‘part’ object will be deleted when the ‘whole’ object is deleted. Ideally, the ‘part’ object may not even be visible to clients of the ‘whole’
+          <p><strong>Composition is implemented using a normal variable.</strong> If correctly implemented, the ‘part’ object will be deleted when the ‘whole’ object is deleted. Ideally, the ‘part’ object may not even be visible to clients of the ‘whole’
             object.</p>
           <tip-box>
             <p><span class="fas fa-cube"></span> In the code below, the <code>Email</code> has a composition type relationship with the <code>Subject</code> class, in the sense that the subject is part of the email.</p>
-            <table>
-              <tr>
-              
-                <td valign="top">
-                  <p>Java <span class="fas fa-arrow-down"></span></p>
-                  <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Email</span> </span>{
+            <div class="alt-java">
+              <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Email</span> </span>{
     <span class="hljs-keyword">private</span> Subject subject;
   ...
 }
 </code></pre>
-                  <p></p>
-                </td>
-              
-                <td>  <br><br></td>
-              
-                <td valign="top">
-                  <p>Python <span class="fas fa-arrow-down"></span></p>
-                  <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Email</span>:</span>
+            </div>
+            <div class="alt-python">
+              <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Email</span>:</span>
   
   <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
     self.__subject = Subject()
 </code></pre>
-                  <p></p>
-                </td>
-              </tr>
-            </table>
+            </div>
           </tip-box>
         </div>
       </div>
@@ -819,11 +755,12 @@
             <li>Other names for Base class: <em>Parent</em> class, <em>Super</em> class</li>
             <li>Other names for Derived class: <em>Child</em> class, <em>Sub</em> class, <em>Extended</em> class</li>
           </ul>
-          <p><strong>A super class is said to be <em>more general</em> than the sub class.</strong> Conversely, a sub class is said to be more <em>specialized</em> than the super class.</p>
+          <p><strong>A superclass is said to be <em>more general</em> than the subclass.</strong> Conversely, a subclass is said to be more <em>specialized</em> than the superclass.</p>
           <p><strong>Applying inheritance on a group of similar classes can result in the common parts among classes being extracted into more general classes.</strong></p>
           <tip-box>
             <p><span class="fas fa-cube"></span> <code>Man</code> and <code>Woman</code> behaves the same way for certain things. However, the two classes cannot be simply replaced with a more general class <code>Person</code> because of the need to distinguish
-              between <code>Man</code> and <code>Woman</code> for certain other things. A solution is to add the <code>Person</code> class as a super class (to contain the code common to men and woment) and let <code>Man</code> and <code>Woman</code>              inherit from <code>Person</code> class.</p>
+              between <code>Man</code> and <code>Woman</code> for certain other things. A solution is to add the <code>Person</code> class as a superclass (to contain the code common to men and woment) and let <code>Man</code> and <code>Woman</code> inherit
+              from <code>Person</code> class.</p>
           </tip-box>
           <p><strong>Inheritance implies the derived class can be considered as a <em>sub-type</em> of the base class (and the base class is a <em>super-type</em> of the derived class), resulting in an <em>is a</em> relationship.</strong></p>
           <p><span class="dimmed"><span class="fas fa-info-circle"></span> Inheritance does not necessarily mean a sub-type relationship exists. However, the two often go hand-in-hand. For simplicity, at this point let us assume inheritance implies a sub-type
@@ -1268,7 +1205,7 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
     }
 }
 </code></pre>
-            <p>However, at runtime s can receive an object of any sub class of <code>Staff</code>. That means the <code>adjustSalary(int)</code> operation of the actual subclass object will be called. If the subclass does not override that operation, the
+            <p>However, at runtime s can receive an object of any subclass of <code>Staff</code>. That means the <code>adjustSalary(int)</code> operation of the actual subclass object will be called. If the subclass does not override that operation, the
               operation defined in the superclass (in this case, <code>Staff</code> class) will be called.</p>
           </tip-box>
           <tip-box type="definition">
@@ -1416,7 +1353,7 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
           <p><strong>Three concepts combine to achieve polymorphism: <em>substitutability, operation overriding, and dynamic binding</em>.</strong></p>
           <ul>
             <li><strong>Substitutability:</strong> Because of substitutability, you can write code that expects object of a parent class and yet use that code with objects of child classes. That is how polymorphism is able to <em>treat objects of different types as one type</em>.</li>
-            <li><strong>Overriding:</strong> To get polymorphic behavior from an operation, the operation in the superclass needs to be overridden in each of the subclasses. That is how overriding allows objects of different sub classes to <em>display different behaviors in response to the same method call</em>.</li>
+            <li><strong>Overriding:</strong> To get polymorphic behavior from an operation, the operation in the superclass needs to be overridden in each of the subclasses. That is how overriding allows objects of different subclasses to <em>display different behaviors in response to the same method call</em>.</li>
             <li><strong>Dynamic binding</strong>: Calls to overridden methods are bound to the implementation of the actual object's class dynamically during the runtime. That is how the polymorphic code can call the method of the parent class and yet execute
               the implementation of the child class.</li>
           </ul>
@@ -2280,7 +2217,7 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
                     <li>OBS transfers the money and displays the new account balance.</li>
                     <li class="custom-bullet-point">Use case ends.</li>
                   </ol>
-                </li>
+                </li><br>
                 <li> Extensions:
                   <ol class="custom-bullet-list">
                     <li>3a. OBS detects an error in the entered data.
@@ -2288,22 +2225,19 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
                         <li>3a1. OBS requests for the correct data.</li>
                         <li>3a2. User enters new data.</li>
                         <li>Steps 3a1-3a2 are repeated until the data entered are correct.</li>
-                        <li>Use case resumes from step 4.</li>
-                      </ol>
+                        <li>Use case resumes from step 4.</li><br></ol>
                     </li>
                     <li>3b. User requests to effect the transfer in a future date.
                       <ol class="custom-bullet-list">
                         <li>3b1. OBS requests for confirmation.</li>
                         <li>3b2. User confirms future transfer.</li>
-                        <li>Use case ends.</li>
-                      </ol>
+                        <li>Use case ends.</li><br></ol>
                     </li>
                     <li>*a. At any time, User chooses to cancel the transfer.
                       <ol class="custom-bullet-list">
                         <li>*a1. OBS requests to confirm the cancellation.</li>
                         <li>*a2. User confirms the cancellation.</li>
-                        <li>Use case ends.</li>
-                      </ol>
+                        <li>Use case ends.</li><br></ol>
                     </li>
                     <li>*b. At any time, 120 seconds lapse without any input from the User.
                       <ol class="custom-bullet-list">
@@ -3028,8 +2962,8 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
               alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/Multiplicity" fragment="main"></panel>
             <panel type="seamless" src="/website\book\oop\associations\navigability\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Associations → Navigability"
               alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP/Navigability" fragment="main"></panel>
-            <panel type="seamless" src="/website\book\uml\classDiagrams\associations\navigability\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Class Diagrams → Associations → UML/Navigability"
-              alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Navigability" fragment="main"></panel>
+            <panel type="seamless" src="/website\book\uml\classDiagrams\associations\navigability\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Class Diagrams → Associations → Navigability"
+              alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/Navigability" fragment="main"></panel>
           </p>
           <tip-box>
             <p><span class="fas fa-cube"></span> Here is the same class diagram shown earlier but with some additional information included:</p>
@@ -3115,13 +3049,6 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
                 fragment="main"></panel>
               <panel type="seamless" src="/website\book\uml\classDiagrams\interfaces\what\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML → Class Diagrams → Interfaces → What" alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/Interfaces"
                 fragment="main"></panel>
-            </p>
-            <h5 id="modeling-association-classes">Modeling association classes</h5>
-            <p>
-              <panel type="seamless" src="/website\book\oop\associations\associationClasses\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP → Associations → Association Classes"
-                alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP/AssociationClasses" fragment="main"></panel>
-              <panel type="seamless" src="/website\book\uml\classDiagrams\associationClasses\what\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML → Class Diagrams → Association Classes → What"
-                alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/AssociationsClasses" fragment="main"></panel>
             </p>
           </div>
         </div>
@@ -3235,32 +3162,24 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
       </h4>
       <div class="indented-less">
         <div>
-          <p><strong>Sequence diagrams model interactions between entities for a given scenario.</strong></p>
-          <tip-box>
-            <p><span class="fas fa-cube"></span> Consider the code below.</p>
-            <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Machine</span> </span>{
-
-    <span class="hljs-function">Unit <span class="hljs-title">producePrototype</span><span class="hljs-params">()</span> </span>{
-        Unit prototype = <span class="hljs-keyword">new</span> Unit();
-        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">5</span>; i++) {
-            prototype.stressTest();
-        }
-        <span class="hljs-keyword">return</span> prototype;
-    }
-}
-
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Unit</span> </span>{
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">stressTest</span><span class="hljs-params">()</span> </span>{
-
-    }
-}
-
-</code></pre>
-            <p>Here is the sequence diagram to model the interactions for the method call <code>prouducePrototype()</code> on a <code>Machine</code> object.</p>
-            <img src="/website/book/modeling/modelingBehaviors/sequenceDiagramsBasic/images/Machine.png" width="450">
-            <p></p>
-          </tip-box>
+          <p>
+            <panel type="seamless" src="/website\book\uml\sequenceDiagrams\introduction\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Introduction"
+              alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SequenceDiagrams" fragment="main"></panel>
+          </p>
+          <p>
+            <panel type="seamless" src="/website\book\uml\sequenceDiagrams\basic\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Basic Notation"
+              alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SD/Basic" fragment="main"></panel>
+          </p>
+          <p>
+            <panel type="seamless" src="/website\book\uml\sequenceDiagrams\loops\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Loops"
+              alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SD/Loops" fragment="main"></panel>
+            <panel type="seamless" src="/website\book\uml\sequenceDiagrams\objectCreation\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Object Creation"
+              alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SD/Creation" fragment="main"></panel>
+          </p>
+          <p>
+            <panel type="seamless" src="/website\book\uml\sequenceDiagrams\minimalNotation\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Minimal Notation"
+              alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SD/Minimal" fragment="main"></panel>
+          </p>
         </div>
       </div>
     </div>
@@ -3271,7 +3190,18 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
         </span>
       </h4>
       <div class="indented-less">
-        <div></div>
+        <div>
+          <p>
+            <panel type="seamless" src="/website\book\uml\sequenceDiagrams\objectDeletion\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Object Deletion"
+              alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SD/Deletion" fragment="main"></panel>
+            <panel type="seamless" src="/website\book\uml\sequenceDiagrams\selfInvocation\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Self-Invocation"
+              alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SD/Self-Invocation" fragment="main"></panel>
+            <panel type="seamless" src="/website\book\uml\sequenceDiagrams\alternativePaths\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Alternative Paths"
+              alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SD/Alternative" fragment="main"></panel>
+            <panel type="seamless" src="/website\book\uml\sequenceDiagrams\optionalPaths\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Optional Paths"
+              alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SD/Optional" fragment="main"></panel>
+          </p>
+        </div>
       </div>
     </div>
     <div class="indented-less">
@@ -3555,8 +3485,8 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
           <tip-box>
             <p><span class="fas fa-cube"></span> n-tier style, client-server style, event-driven style, transaction processing style, service-oriented style, pipes-and-filters style, message-driven style, broker style, ...</p>
           </tip-box>
-          <modal title="" id="modal:archiStyles-buildingArchitectures">
-            <p><img src="https://inspectapedia.com/exterior/ArchitectureStyles.jpg"><br>
+          <modal large="" title="Building Architecture Styles" id="modal:archiStyles-buildingArchitectures">
+            <p><img src="https://inspectapedia.com/exterior/ArchitectureStyles.jpg" width="600"><br>
               <sub>source: <a href="https://inspectapedia.com">https://inspectapedia.com</a></sub></p>
           </modal>
         </div>
@@ -3670,11 +3600,11 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
       <div class="indented-less">
         <div>
           <p><strong><em>Event-driven</em> style controls the flow of the application by detecting <tooltip content="An event is a notable occurrence that happens inside or outside the software, such as the user clicking a button, a timer running out, minimizing a window, etc.">events</tooltip> from event <em>emitters</em> and communicating those events to interested event <em>consumers</em> .</strong>            This architectural style is often used in GUIs.</p>
-          <img src="/website/book/architecture/architecturalStyles/eventDriven/what/images/eventDriven.png" height="120">
+          <img src="/website/book/architecture/architecturalStyles/eventDriven/what/images/eventDriven.png" width="450">
           <tip-box>
             <p><span class="fas fa-cube"></span> When the ‘button clicked’ event occurs in a GUI, that event can be transmitted to components that are interested in reacting to that event. Similarly, events detected at a Printer port can be transmitted to
               components related to operating the Printer. The same event can be sent to multiple consumers too.</p>
-            <img src="/website/book/architecture/architecturalStyles/eventDriven/what/images/eventDrivenExamples.png" height="150"></tip-box>
+            <img src="/website/book/architecture/architecturalStyles/eventDriven/what/images/eventDrivenExamples.png" width="450"></tip-box>
         </div>
       </div>
     </div>
@@ -5829,7 +5759,7 @@ send()
           <tip-box>
             <div class="alt-java">
               <ul>
-                <li><span class="fas fa-cube"></span> Example of API Documentation: <a href="http://download.oracle.com/javase/8/docs/api/">String API</a>.</li>
+                <li><span class="fas fa-cube"></span> Example of API Documentation: <a href="https://docs.oracle.com/javase/9/docs/api/java/lang/String.html">String API</a>.</li>
                 <li><span class="fas fa-cube"></span> Example of tutorial-style documentation: <a href="https://docs.oracle.com/javase/tutorial/i18n/index.html">Java Intenatioanalization Tutorial</a></li>
               </ul>
             </div>
@@ -6248,14 +6178,10 @@ send()
             <p><strong>Java disables assertions by default.</strong> This could create a situation where you think all assertions are being verified as <code>true</code> while in fact they are not being verified at all. Therefore, remember to enable assertions
               when you run the program if you want them to be in effect.</p>
           </tip-box>
-          <tip-box>
-            <p>💡 Enable assertions in Intellij (<a href="https://stackoverflow.com/questions/18168257/where-to-add-compiler-options-like-ea-in-intellij-idea">how?</a>) and get an assertion to fail temporarily (e.g. insert an <code>assert false</code> into
-              the code temporarily) to confirm assertions are being verified.</p>
-          </tip-box>
-          <tip-box type="info">
-            <p><strong>Java <code>assert</code> vs JUnit assertions</strong>: They are similar in purpose but JUnit assertions are more powerful and customized for testing. In addition, JUnit assertions are not disabled by default. We recommend you use JUnit
-              assertions in test code and Java <code>assert</code> in functional code.</p>
-          </tip-box>
+          <p>💡 Enable assertions in Intellij (<a href="https://stackoverflow.com/questions/18168257/where-to-add-compiler-options-like-ea-in-intellij-idea">how?</a>) and get an assertion to fail temporarily (e.g. insert an <code>assert false</code> into
+            the code temporarily) to confirm assertions are being verified.</p>
+          <p><span class="fas fa-info-circle"></span> <strong>Java <code>assert</code> vs JUnit assertions: They are similar in purpose but JUnit assertions are more powerful and customized for testing.</strong> In addition, JUnit assertions are not disabled
+            by default. We recommend you use JUnit assertions in test code and Java <code>assert</code> in functional code.</p>
         </div>
       </div>
     </div>
@@ -6657,7 +6583,7 @@ a.setGuarantor(<span class="hljs-keyword">null</span>);
         <div>
           <p><strong>An <em>Application Programming Interface (API)</em> specifies the interface through which other programs can interact with a software component.</strong> It is a contract between the component and its clients.</p>
           <tip-box>
-            <p><span class="fas fa-cube"></span> A class has an API (e.g., <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html">API of the Java <code>String</code> class</a>, <a href="https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str">API of the Python <code>str</code> class</a>)
+            <p><span class="fas fa-cube"></span> A class has an API (e.g., <a href="https://docs.oracle.com/javase/9/docs/api/java/lang/String.html">API of the Java <code>String</code> class</a>, <a href="https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str">API of the Python <code>str</code> class</a>)
               which is a collection of public methods that you can invoke to make use of the class.</p>
             <p><span class="fas fa-cube"></span> The <a href="https://developer.github.com/v3/">GitHub API</a> is a collection of Web request formats GitHub server accepts and the corresponding responses. We can write a program that interacts with GitHub
               through that API.</p>
@@ -9677,7 +9603,8 @@ String name = logic.getName(<span class="hljs-number">23</span>);
                 <p><strong>It will help you to work simultaneously on, and manage the drift between, multiple versions of your project.</strong> Most of these reasons are equally valid, at least in theory, whether you're working on a project by yourself,
                   or with a hundred other people.</p>
                 <p>-- [adapted from
-                  <trigger for="pop:bryan-mercurial-guide">bryan-mercurial-guide</trigger>]</p>
+                  <trigger trigger="click" for="modal:rcsWhat-bryanMercurialGuide">bryan-mercurial-guide</trigger>
+                </p>
               </blockquote>
               <hr>
             </tab>
@@ -9686,13 +9613,12 @@ String name = logic.getName(<span class="hljs-number">23</span>);
               <hr>
             </tab>
           </tabs>
-          <popover id="pop:bryan-mercurial-guide" title="bryan-mercurial-guide <span class='glyphicon glyphicon-eye-open' aria-hidden='true'></span>" placement="right">
-            <div slot="content">
-              <div>
-                <p><a href="http://hgbook.red-bean.com/">Mercurial: The Definitive Guide</a> by Bryan O'Sullivan retrieved on 2012/07/11</p>
-              </div>
+          <modal large="" title="Reference » Mercurial: The Definitive Guide" id="modal:rcsWhat-bryanMercurialGuide">
+          
+            <div>
+              <p><a href="http://hgbook.red-bean.com/">Mercurial: The Definitive Guide</a> by Bryan O'Sullivan retrieved on 2012/07/11</p>
             </div>
-          </popover>
+          </modal>
         </div>
       </div>
     </div>
@@ -10559,30 +10485,18 @@ String name = logic.getName(<span class="hljs-number">23</span>);
             <p><span class="fas fa-cube"></span> <code>Logic</code> is aware of <code>Minefield</code>, but <code>Minefield</code> is not aware of <code>Logic</code></p>
             <img src="/website/book/uml/classDiagrams/associations/navigability/images/logicMinefield.png" height="40">
             <div>
-              <table>
-                <tr>
-                
-                  <td>
-                    <p>Java <span class="fas fa-arrow-down"></span></p>
-                    <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span></span>{
+              <div class="alt-java">
+                <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span></span>{
     Minefield minefield;
 }
 
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Minefield</span></span>{
     ...
 }
-
-
-
 </code></pre>
-                    <p></p>
-                  </td>
-                
-                  <td valign="bottom">  <br><br></td>
-                
-                  <td valign="bottom">
-                    <p>Python <span class="fas fa-arrow-down"></span></p>
-                    <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span>:</span>
+              </div>
+              <div class="alt-python">
+                <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span>:</span>
   
   <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, minefield)</span>:</span>
     self.minefield = minefield
@@ -10593,10 +10507,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Minefield</span>:</span>
   <span class="hljs-comment"># ...</span>
 </code></pre>
-                    <p></p>
-                  </td>
-                </tr>
-              </table>
+              </div>
             </div>
             <p><span class="fas fa-cube"></span> Here is an example of a bidirectional navigability; each class is aware of the other.
               <p></p>
@@ -10756,7 +10667,6 @@ String name = logic.getName(<span class="hljs-number">23</span>);
       </h4>
       <div class="indented-less">
         <div>
-          <p>In a UML class diagram, a <strong>dependency is a weaker form of an association where there is an interactions between objects that do not result in a long-term relationship</strong> between the said objects.</p>
           <p><strong>UML uses a dashed arrow to show dependencies.</strong></p>
           <img src="/website/book/uml/classDiagrams/dependencies/what/images/notation.png" width="350">
           <tip-box>
@@ -10912,7 +10822,7 @@ String name = logic.getName(<span class="hljs-number">23</span>);
       </h4>
       <div class="indented-less">
         <div>
-          <p>We can use <em>italics</em> or <code>{abstract}</code> keyword to denote abstract classes/methods.</p>
+          <p><strong>You can use <em>italics</em> or <code>{abstract}</code> (preferred) keyword to denote abstract classes/methods.</strong></p>
           <img src="/website/book/uml/classDiagrams/abstractClasses/what/images/notation.png" height="110">
           <p></p>
           <tip-box>
@@ -10953,10 +10863,28 @@ String name = logic.getName(<span class="hljs-number">23</span>);
         <div>
           <p><strong>A UML sequence diagram <em>captures the interactions between multiple objects for a given scenario.</em></strong></p>
           <tip-box>
-            <p><span class="fas fa-cube"></span> Some exmaple sequence diagrams:</p>
-            <img src="/website/book/uml/sequenceDiagrams/introduction/images/textLogic.png" height="300">
-            <p></p>
-            <img src="/website/book/uml/sequenceDiagrams/introduction/images/logicMinefield.png" height="300">
+            <p><span class="fas fa-cube"></span> Consider the code below.</p>
+            <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Machine</span> </span>{
+
+    <span class="hljs-function">Unit <span class="hljs-title">producePrototype</span><span class="hljs-params">()</span> </span>{
+        Unit prototype = <span class="hljs-keyword">new</span> Unit();
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">5</span>; i++) {
+            prototype.stressTest();
+        }
+        <span class="hljs-keyword">return</span> prototype;
+    }
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Unit</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">stressTest</span><span class="hljs-params">()</span> </span>{
+
+    }
+}
+
+</code></pre>
+            <p>Here is the sequence diagram to model the interactions for the method call <code>producePrototype()</code> on a <code>Machine</code> object.</p>
+            <img src="/website/book/uml/sequenceDiagrams/introduction/images/Machine.png" width="450">
             <p></p>
           </tip-box>
         </div>
@@ -10982,11 +10910,15 @@ String name = logic.getName(<span class="hljs-number">23</span>);
           </tip-box>
           <p>The <code>:TextUi</code> in the above example denotes <em>an unnamed instance of the class TextUi</em>. If there were two instances of <code>TextUi</code> in the diagram, they can be distinguished by naming them e.g. <code>TextUi1:TextUi</code>            and <code>TextUi2:TextUi</code>.</p>
           <p><strong>Arrows representing method calls should be solid arrows while those representing method returns should be dashed arrows</strong>.</p>
-          <p>Note that unlike in Object Diagrams, the <strong>class/object name is not underlined in sequence diagrams</strong>.</p>
+          <p>Note that unlike in object diagrams, the <strong>class/object name is not underlined in sequence diagrams</strong>.</p>
           <tip-box>
-            <p>❌ <strong>[Common notation error] Activation bar too long:</strong> The activation bar of a method cannot start before the method call arrives and a method cannot remain active after the method had returned. <span class="dimmed"> In the two sequence diagrams below, the one on the left commits this error because the activation bar starts <em>before</em> the method <code>Foo#xyz()</code> is called and remains active <em>after</em> the method returns.</span></p>
+            <p><span style="color:red"><span class="fas fa-times"></span></span> <strong>[Common notation error] Activation bar too long:</strong> The activation bar of a method cannot start before the method call arrives and a method cannot remain active
+              after the method had returned. <span class="dimmed"> In the two sequence diagrams below, the one on the left commits this error because the activation bar starts <em>before</em> the method <code>Foo#xyz()</code> is called and remains active <em>after</em> the method returns.</span></p>
             <img src="/website/book/uml/sequenceDiagrams/basic/images/commonError-activationBarTooLong.png" height="120">
-            <p>❌ <strong>[Common notation error] Broken activation bar:</strong> The activation bar should remain unbroken from the point the method is called until the method returns. <span class="dimmed"> In the two sequence diagrams below, the one on the left commits this error because the activation bar for the method <code>Foo#abc()</code> is not contiguous, but appears as two pieces instead.</span></p>
+            <p><span style="color:red"><span class="fas fa-times"></span></span> <strong>[Common notation error] Broken activation bar:</strong> The activation bar should remain unbroken from the point the method is called until the method returns.
+              <span
+                class="dimmed"> In the two sequence diagrams below, the one on the left commits this error because the activation bar for the method <code>Foo#abc()</code> is not contiguous, but appears as two pieces instead.</span>
+            </p>
             <img src="/website/book/uml/sequenceDiagrams/basic/images/commonError-brokenActivationBar.png" height="120"></tip-box>
         </div>
       </div>
@@ -12533,21 +12465,29 @@ git pull origin master
       </h4>
       <div class="indented-less">
         <div>
-          <blockquote>
-            <p>An enum type is a special data type that enables for a variable to be a set of predefined constants. The variable must be equal to one of the values that have been predefined for it. Common examples include compass directions (values of <code>NORTH</code>,
-              <code>SOUTH</code>, <code>EAST</code>, and <code>WEST</code>) and the days of the week.</p>
-            <p>Because they are constants, the names of an enum type's fields are in uppercase letters. In the Java programming language, you define an enum type by using the <code>enum</code> keyword. For example, you would specify a days-of-the-week enum
-              type as:</p>
+          <p><strong>You can define an enum type by using the <code>enum</code> keyword.</strong> Because they are constants, the names of an enum type's fields are in uppercase letters e.g., <code>FLAG_SUCCESS</code>.</p>
+          <box>
+            <p><span class="fas fa-cube"></span> Defining an enumeration to represent days of a week (code to be put in the <code>Day.java</code> file):</p>
             <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">enum</span> Day {
-   SUNDAY, MONDAY, TUESDAY, WEDNESDAY,
-   THURSDAY, FRIDAY, SATURDAY
+    SUNDAY, MONDAY, TUESDAY, WEDNESDAY,
+    THURSDAY, FRIDAY, SATURDAY
 }
 </code></pre>
-            <p>You should use enum types any time you need to represent a fixed set of constants. That includes natural enum types such as the planets in our solar system and data sets where you know all possible values at compile time—for example, the choices
-              on a menu, command line flags, and so on.
-              <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small></p>
-          </blockquote>
-          <p>Note that while enumerations are usually a simple set of fixed values, Java enumerations can have behaviors too. To learn how to implement enumerations, read <a href="https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html">this tutorial (from Oracle)</a></p>
+            <p>Some examples of using the <code>Day</code> enumeration defined above:</p>
+            <pre><code class="hljs java">Day today = Day.MONDAY;
+Day[] holidays = <span class="hljs-keyword">new</span> Day[]{Day.SATURDAY, Day.SUNDAY};
+
+<span class="hljs-keyword">switch</span> (today) {
+<span class="hljs-keyword">case</span> SATURDAY:
+<span class="hljs-keyword">case</span> SUNDAY:
+    System.out.println(<span class="hljs-string">"It's the weekend"</span>);
+    <span class="hljs-keyword">break</span>;
+<span class="hljs-keyword">default</span>:
+    System.out.println(<span class="hljs-string">"It's a week day"</span>);
+}
+</code></pre>
+          </box>
+          <p>Note that while enumerations are usually a simple set of fixed values, <strong>Java enumerations can have behaviors too</strong>, as explained in <a href="https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html">this tutorial from <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small></a></p>
         </div>
       </div>
     </div>
@@ -13004,7 +12944,7 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.10.1</a> at Thu, 20 Sep 2018 05:36:54 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.10.1</a> at Fri, 28 Sep 2018 09:05:03 GMT</small></div>
 </footer>
 </div>
 </body>

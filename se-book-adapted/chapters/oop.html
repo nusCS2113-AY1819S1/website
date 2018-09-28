@@ -900,27 +900,17 @@ Enter command: exit
               </span>
               <p></p>
               <div>
-                <p><strong>An <em>Enumeration</em> is a fixed set of values that can be considered as a data type.</strong></p>
-                <p>An enumeration is often useful when using a regular data type such as <code>int</code> or <code>String</code> would allow invalid values to be assigned to a variable. <span class="dimmed">e.g. if a variable can only take values <code>0</code> and <code>1</code>, declaring it as an <code>int</code> would allow invalid values such as <code>2</code> to be assigned to it. But if you define an enumeration called <code>Binary</code> that has values <code>0</code> and <code>1</code> only, a variable of type <code>Binary</code> will never be assigned an invalid value such as <code>2</code> because the compiler is able to catch the error.</span></p>
-                <tip-box>
-                  <p><span class="fas fa-cube"></span> <code>Priority</code> can be considered an enumeration because it has only three values.</p>
+                <p><strong>An <em>Enumeration</em> is a fixed set of values that can be considered as a data type.</strong> An enumeration is often useful when using a regular data type such as <code>int</code> or <code>String</code> would allow invalid
+                  values to be assigned to a variable. <strong>You are recommended to enumeration types any time you need to represent a fixed set of constants.</strong></p>
+                <box>
+                  <p><span class="fas fa-cube"></span> Suppose you want a variable to store the priority of something. There are only three priority levels: high, medium, and low. You can declare the variable as of type <code>int</code> and use only values
+                    <code>2</code>, <code>1</code>, and <code>0</code> to indication the three priority levels. However, this opens the possibility of an invalid values such as <code>9</code> to be assigned to it. But if you define an enumeration type
+                    called <code>Priority</code> that has three values <code>HIGH</code>, <code>MEDIUM</code>, <code>LOW</code> only, a variable of type <code>Priority</code> will never be assigned an invalid value because the compiler is able to catch
+                    such an error.</p>
                   <p><code>Priority</code>: <code>HIGH</code>, <code>MEDIUM</code>, <code>LOW</code></p>
-                </tip-box>
+                </box>
               </div>
-              <div>
-                <div>
-                  <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
-                  
-                    <div>
-                      <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Define WeekDay Enum">
-                        <question has-input="true">
-                          <p>Show (in UML notation) an enumeration called <code>WeekDay</code> to use when the value can only be <code>Monday</code> ... <code>Friday</code>.</p>
-                        </question>
-                      </panel>
-                    </div>
-                  </panel>
-                </div>
-              </div>
+              <div></div>
           </div>
         </panel>
       </panel>
@@ -1002,30 +992,18 @@ Enter command: exit
                 <tip-box>
                   <p><span class="fas fa-cube"></span> In the code below, the <code>Logic</code> class has a variable that can hold <code>0..1</code> <span class="dimmed">i.e., zero or one</span> <code>Minefield</code> objects.</p>
                   <div>
-                    <table>
-                      <tr>
-                      
-                        <td>
-                          <p>Java <span class="fas fa-arrow-down"></span></p>
-                          <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span></span>{
+                    <div class="alt-java">
+                      <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span></span>{
     Minefield minefield;
 }
 
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Minefield</span></span>{
     ...
 }
-
-
-
 </code></pre>
-                          <p></p>
-                        </td>
-                      
-                        <td valign="bottom">  <br><br></td>
-                      
-                        <td valign="bottom">
-                          <p>Python <span class="fas fa-arrow-down"></span></p>
-                          <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span>:</span>
+                    </div>
+                    <div class="alt-python">
+                      <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span>:</span>
   
   <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, minefield)</span>:</span>
     self.minefield = minefield
@@ -1036,10 +1014,7 @@ Enter command: exit
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Minefield</span>:</span>
   <span class="hljs-comment"># ...</span>
 </code></pre>
-                          <p></p>
-                        </td>
-                      </tr>
-                    </table>
+                    </div>
                   </div>
                 </tip-box>
                 <p><strong>A variable can be used to implement a <code>1</code> multiplicity too</strong> (also called <em>compulsory associations</em>).</p>
@@ -1063,16 +1038,11 @@ Enter command: exit
                 <p><strong>Bi-directional associations require matching variables in both classes.</strong></p>
                 <tip-box>
                   <p><span class="fas fa-cube"></span> In the code below, the <code>Foo</code> class has a variable to hold a <code>Bar</code> object and vice versa <span class="dimmed">i.e., each object can have an association with an object of the other type</span>.</p>
-                  <table>
-                    <tr>
-                    
-                      <td>
-                        <p>Java <span class="fas fa-arrow-down"></span></p>
-                        <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span> </span>{
+                  <div class="alt-java">
+                    <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span> </span>{
     Bar bar;
     <span class="hljs-comment">//...</span>
 }
-
 
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bar</span> </span>{
     Foo foo;
@@ -1080,14 +1050,9 @@ Enter command: exit
 }
 
 </code></pre>
-                        <p></p>
-                      </td>
-                    
-                      <td valign="bottom">  <br><br></td>
-                    
-                      <td valign="bottom">
-                        <p>Python <span class="fas fa-arrow-down"></span></p>
-                        <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span>:</span>
+                  </div>
+                  <div class="alt-python">
+                    <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span>:</span>
   
   <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, bar)</span>:</span>
     self.bar = bar;
@@ -1099,39 +1064,24 @@ Enter command: exit
     self.foo = foo;
     
 </code></pre>
-                        <p></p>
-                      </td>
-                    </tr>
-                  </table>
+                  </div>
                 </tip-box>
                 <p><strong>To implement other multiplicities, choose a suitable data structure</strong> such as Arrays, ArrayLists, HashMaps, Sets, etc.</p>
                 <tip-box>
-                  <table>
-                    <tr>
-                    
-                      <td>
-                        <p>Java <span class="fas fa-arrow-down"></span></p>
-                        <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Minefield</span> </span>{
+                  <div class="alt-java">
+                    <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Minefield</span> </span>{
     Cell[][] cell;
     ...
 }
 </code></pre>
-                        <p></p>
-                      </td>
-                    
-                      <td valign="bottom">  <br><br></td>
-                    
-                      <td valign="bottom">
-                        <p>Python <span class="fas fa-arrow-down"></span></p>
-                        <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Minefield</span>:</span>
+                  </div>
+                  <div class="alt-python">
+                    <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Minefield</span>:</span>
   
   <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
     self.cells = {<span class="hljs-number">1</span>:[], <span class="hljs-number">2</span>:[], <span class="hljs-number">3</span>:[]}
 </code></pre>
-                        <p></p>
-                      </td>
-                    </tr>
-                  </table>
+                  </div>
                 </tip-box>
               </div>
               <div></div>
@@ -1152,21 +1102,17 @@ Enter command: exit
               </span>
               <p></p>
               <div>
-                <p>Dependencies are objects that are not directly linked in the object network can still interact with each other. These are a weaker form of associations we call <em>dependencies</em>.</p>
+                <p>In the context of OOP associations, <strong>a <em>dependency</em> is a need for one class to depend on another without having a direction association with it.</strong> One cause of dependencies is interactions between objects that do not
+                  have a long-term link between them.</p>
                 <tip-box>
                   <p><span class="fas fa-cube"></span> A <code>Course</code> object can have a dependency on a <code>Registrar</code> object to obtain the maximum number of students it can support.</p>
                 </tip-box>
                 <h5 id="implementing-dependencies">Implementing dependencies</h5>
-                <p>Dependencies result from interactions between objects that do not result in a long-term link between the said objects.</p>
                 <tip-box>
                   <p><span class="fas fa-cube"></span> In the code below, <code>Foo</code> has a dependency on <code>Bar</code> but it is not an association because it is only a
                     <tooltip content="temporary">transient</tooltip> interaction and there is no long term relationship between a <code>Foo</code> object and a <code>Bar</code> object. <span class="dimmed">i.e. the <code>Foo</code> object does not keep the <code>Bar</code> object it receives as a parameter</span>.</p>
-                  <table>
-                    <tr>
-                    
-                      <td>
-                        <p>Java <span class="fas fa-arrow-down"></span></p>
-                        <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span></span>{
+                  <div class="alt-java">
+                    <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span></span>{
     
     <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">calculate</span><span class="hljs-params">(Bar bar)</span></span>{
         <span class="hljs-keyword">return</span> bar.getValue();
@@ -1181,14 +1127,9 @@ Enter command: exit
     }
 }
 </code></pre>
-                        <p></p>
-                      </td>
-                    
-                      <td>  <br><br></td>
-                    
-                      <td valign="top">
-                        <p>Python <span class="fas fa-arrow-down"></span></p>
-                        <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span>:</span>
+                  </div>
+                  <div class="alt-python">
+                    <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span>:</span>
     
     <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate</span><span class="hljs-params">(self, bar)</span>:</span>
         <span class="hljs-keyword">return</span> bar.value;
@@ -1198,11 +1139,7 @@ Enter command: exit
     <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, value)</span>:</span>
       self.value = value
 </code></pre>
-                        <p></p>
-                      </td>
-                    </tr>
-                  </table>
-                  <p>The code above results in a dependency from <code>Foo</code> class to the <code>Bar</code> class.</p>
+                  </div>
                 </tip-box>
               </div>
               <div></div>
@@ -1232,36 +1169,24 @@ Enter command: exit
                   <p><span class="fas fa-cube"></span> The ‘sub-folder’ association between <code>Folder</code> objects is a composition type association. That means if the <code>Folder</code> object <code>foo</code> is a sub folder of <code>Folder</code>                    object <code>bar</code>, <code>bar</code> cannot be a sub-folder of <code>foo</code>.</p>
                 </tip-box>
                 <h5 id="implementing-composition">Implementing composition</h5>
-                <p><strong>Composition too is implemented using a normal variable.</strong> If correctly implemented, the ‘part’ object will be deleted when the ‘whole’ object is deleted. Ideally, the ‘part’ object may not even be visible to clients of the
-                  ‘whole’ object.</p>
+                <p><strong>Composition is implemented using a normal variable.</strong> If correctly implemented, the ‘part’ object will be deleted when the ‘whole’ object is deleted. Ideally, the ‘part’ object may not even be visible to clients of the ‘whole’
+                  object.</p>
                 <tip-box>
                   <p><span class="fas fa-cube"></span> In the code below, the <code>Email</code> has a composition type relationship with the <code>Subject</code> class, in the sense that the subject is part of the email.</p>
-                  <table>
-                    <tr>
-                    
-                      <td valign="top">
-                        <p>Java <span class="fas fa-arrow-down"></span></p>
-                        <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Email</span> </span>{
+                  <div class="alt-java">
+                    <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Email</span> </span>{
     <span class="hljs-keyword">private</span> Subject subject;
   ...
 }
 </code></pre>
-                        <p></p>
-                      </td>
-                    
-                      <td>  <br><br></td>
-                    
-                      <td valign="top">
-                        <p>Python <span class="fas fa-arrow-down"></span></p>
-                        <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Email</span>:</span>
+                  </div>
+                  <div class="alt-python">
+                    <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Email</span>:</span>
   
   <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
     self.__subject = Subject()
 </code></pre>
-                        <p></p>
-                      </td>
-                    </tr>
-                  </table>
+                  </div>
                 </tip-box>
               </div>
               <div></div>
@@ -1285,45 +1210,33 @@ Enter command: exit
               <div>
                 <p><strong><em>Aggregation</em> represents a <em>container-contained</em> relationship.</strong> It is a weaker relationship than composition.</p>
                 <tip-box>
-                  <p><span class="fas fa-cube"></span> <code>SportsClub</code> acts as a <em>container</em> for <code>Person</code> objects. <code>Person</code> objects can survive without a <code>SportsClub</code> object.</p>
+                  <p><span class="fas fa-cube"></span> <code>SportsClub</code> can act as a <em>container</em> for <code>Person</code> objects who are members of the club. <code>Person</code> objects can survive without a <code>SportsClub</code> object.</p>
                 </tip-box>
                 <h5 id="implementing-aggregation">Implementing aggregation</h5>
                 <p>Implementation is similar to that of composition except the <em>containee</em> object can exist even after the <em>container</em> object is deleted.</p>
                 <tip-box>
                   <p><span class="fas fa-cube"></span> In the code below, there is an aggregation association between the <code>Team</code> class and the <code>Person</code> in that a <code>Team</code> contains <code>Person</code> a object who is the leader
                     of the team.</p>
-                  <table>
-                    <tr>
-                    
-                      <td valign="top">
-                        <p>Java <span class="fas fa-arrow-down"></span></p>
-                        <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Team</span> </span>{
+                  <div class="alt-java">
+                    <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Team</span> </span>{
     Person leader;
     ...
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">drive</span><span class="hljs-params">(Person p)</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setLeader</span><span class="hljs-params">(Person p)</span> </span>{
         leader = p;
     }
 }
 </code></pre>
-                        <p></p>
-                      </td>
-                    
-                      <td>  <br><br></td>
-                    
-                      <td valign="top">
-                        <p>Python <span class="fas fa-arrow-down"></span></p>
-                        <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Team</span>:</span>
+                  </div>
+                  <div class="alt-python">
+                    <pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Team</span>:</span>
   
   <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
     self.__leader = <span class="hljs-keyword">None</span>
     
-  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">drive</span><span class="hljs-params">(self, person)</span>:</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">set_leader</span><span class="hljs-params">(self, person)</span>:</span>
     self.__leader = person
 </code></pre>
-                        <p></p>
-                      </td>
-                    </tr>
-                  </table>
+                  </div>
                 </tip-box>
               </div>
               <div></div>
@@ -1423,11 +1336,11 @@ Enter command: exit
                 <li>Other names for Base class: <em>Parent</em> class, <em>Super</em> class</li>
                 <li>Other names for Derived class: <em>Child</em> class, <em>Sub</em> class, <em>Extended</em> class</li>
               </ul>
-              <p><strong>A super class is said to be <em>more general</em> than the sub class.</strong> Conversely, a sub class is said to be more <em>specialized</em> than the super class.</p>
+              <p><strong>A superclass is said to be <em>more general</em> than the subclass.</strong> Conversely, a subclass is said to be more <em>specialized</em> than the superclass.</p>
               <p><strong>Applying inheritance on a group of similar classes can result in the common parts among classes being extracted into more general classes.</strong></p>
               <tip-box>
                 <p><span class="fas fa-cube"></span> <code>Man</code> and <code>Woman</code> behaves the same way for certain things. However, the two classes cannot be simply replaced with a more general class <code>Person</code> because of the need to
-                  distinguish between <code>Man</code> and <code>Woman</code> for certain other things. A solution is to add the <code>Person</code> class as a super class (to contain the code common to men and woment) and let <code>Man</code> and <code>Woman</code>                  inherit from <code>Person</code> class.</p>
+                  distinguish between <code>Man</code> and <code>Woman</code> for certain other things. A solution is to add the <code>Person</code> class as a superclass (to contain the code common to men and woment) and let <code>Man</code> and <code>Woman</code>                  inherit from <code>Person</code> class.</p>
               </tip-box>
               <p><strong>Inheritance implies the derived class can be considered as a <em>sub-type</em> of the base class (and the base class is a <em>super-type</em> of the derived class), resulting in an <em>is a</em> relationship.</strong></p>
               <p><span class="dimmed"><span class="fas fa-info-circle"></span> Inheritance does not necessarily mean a sub-type relationship exists. However, the two often go hand-in-hand. For simplicity, at this point let us assume inheritance implies a
@@ -1462,15 +1375,15 @@ Enter command: exit
                       <question>
                         <p>Which of these are correct?</p>
                         <ul class="task-list">
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. Super class is more general than the sub class.</li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. Superclass is more general than the subclass.</li>
                           <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. Child class is more specialized than the parent class.</li>
                           <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. A class can inherit behavior from its ancestor classes (ancestor classes = classes above it in the inheritance hierarchy).</li>
                           <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. Code reuse can be one benefit of inheritance.</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. A change to the super class will not affect its sub classes.</li>
+                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. A change to the superclass will not affect its subclasses.</li>
                         </ul>
                         <div slot="answer">
                           <p>(a) (b) (c) (d)</p>
-                          <p>Explanation: (e) is incorrect. Because sub classes inherit behavior from the super class, any changes to the super class could affect sub classes.</p>
+                          <p>Explanation: (e) is incorrect. Because subclasses inherit behavior from the superclass, any changes to the superclass could affect subclasses.</p>
                         </div>
                       </question>
                     </panel>
@@ -1971,7 +1884,7 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
     }
 }
 </code></pre>
-                  <p>However, at runtime s can receive an object of any sub class of <code>Staff</code>. That means the <code>adjustSalary(int)</code> operation of the actual subclass object will be called. If the subclass does not override that operation,
+                  <p>However, at runtime s can receive an object of any subclass of <code>Staff</code>. That means the <code>adjustSalary(int)</code> operation of the actual subclass object will be called. If the subclass does not override that operation,
                     the operation defined in the superclass (in this case, <code>Staff</code> class) will be called.</p>
                 </tip-box>
                 <tip-box type="definition">
@@ -2131,7 +2044,7 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
                 <p><strong>Three concepts combine to achieve polymorphism: <em>substitutability, operation overriding, and dynamic binding</em>.</strong></p>
                 <ul>
                   <li><strong>Substitutability:</strong> Because of substitutability, you can write code that expects object of a parent class and yet use that code with objects of child classes. That is how polymorphism is able to <em>treat objects of different types as one type</em>.</li>
-                  <li><strong>Overriding:</strong> To get polymorphic behavior from an operation, the operation in the superclass needs to be overridden in each of the subclasses. That is how overriding allows objects of different sub classes to <em>display different behaviors in response to the same method call</em>.</li>
+                  <li><strong>Overriding:</strong> To get polymorphic behavior from an operation, the operation in the superclass needs to be overridden in each of the subclasses. That is how overriding allows objects of different subclasses to <em>display different behaviors in response to the same method call</em>.</li>
                   <li><strong>Dynamic binding</strong>: Calls to overridden methods are bound to the implementation of the actual object's class dynamically during the runtime. That is how the polymorphic code can call the method of the parent class and yet
                     execute the implementation of the child class.</li>
                 </ul>
@@ -2278,7 +2191,7 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.10.1</a> at Thu, 20 Sep 2018 05:36:54 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.10.1</a> at Fri, 28 Sep 2018 09:05:03 GMT</small></div>
 </footer>
 </div>
 </body>

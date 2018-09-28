@@ -552,8 +552,8 @@
                   alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/Multiplicity" fragment="main"></panel>
                 <panel type="seamless" src="/website\book\oop\associations\navigability\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Associations → Navigability"
                   alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP/Navigability" fragment="main"></panel>
-                <panel type="seamless" src="/website\book\uml\classDiagrams\associations\navigability\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Class Diagrams → Associations → UML/Navigability"
-                  alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> Navigability" fragment="main"></panel>
+                <panel type="seamless" src="/website\book\uml\classDiagrams\associations\navigability\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Class Diagrams → Associations → Navigability"
+                  alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/Navigability" fragment="main"></panel>
               </p>
               <tip-box>
                 <p><span class="fas fa-cube"></span> Here is the same class diagram shown earlier but with some additional information included:</p>
@@ -565,32 +565,60 @@
               <div>
                 <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
                   <div>
-                    <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Which association notations are shown?">
-                      <question>
-                        <p>Which association notatations are shown in this diagram?</p>
-                        <img src="/website/book/modeling/modelingStructures/classDiagramsIntermediate/images/professorStudent.png" height="100">
-                        <p></p>
-                        <ul class="task-list">
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. association labels</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. association roles</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. association multiplicity</li>
-                          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. class names</li>
-                        </ul>
-                        <div slot="answer">
-                          <p>(a) (b) (c) (d)</p>
-                          <p>Explanation: '1’ is a <em>multiplicity</em>, ‘mentored by’ is a <em>label</em>, and ‘mentor’ is a <em>role</em>.</p>
-                        </div>
-                      </question>
-                    </panel>
-                  </div>
-                  <div>
-                    <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Explain Class Diagram">
-                      <question>
-                        <p>Explain the associations, navigabilities, and multiplicities in the class diagram below:</p>
-                        <img src="/website/book/modeling/modelingStructures/classDiagramsBasic/images/typicalClasssStructure.png" width="400">
-                        <p></p>
-                      </question>
-                    </panel>
+                    <div>
+                      <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Which association notations are shown?">
+                        <question>
+                          <p>Which association notatations are shown in this diagram?</p>
+                          <img src="/website/book/modeling/modelingStructures/classDiagramsIntermediate/images/professorStudent.png" height="100">
+                          <p></p>
+                          <ul class="task-list">
+                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. association labels</li>
+                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. association roles</li>
+                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. association multiplicity</li>
+                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. class names</li>
+                          </ul>
+                          <div slot="answer">
+                            <p>(a) (b) (c) (d)</p>
+                            <p>Explanation: '1’ is a <em>multiplicity</em>, ‘mentored by’ is a <em>label</em>, and ‘mentor’ is a <em>role</em>.</p>
+                          </div>
+                        </question>
+                      </panel>
+                    </div>
+                    <div>
+                      <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Explain Class Diagram">
+                        <question>
+                          <p>Explain the associations, navigabilities, and multiplicities in the class diagram below:</p>
+                          <img src="/website/book/modeling/modelingStructures/classDiagramsBasic/images/typicalClasssStructure.png" width="400">
+                          <p></p>
+                        </question>
+                      </panel>
+                    </div>
+                    <div>
+                      <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Draw Class Diagram for Box etc.">
+                        <question>
+                          <p>Draw a class diagram for the code below. Show the attributes, methods, associations, navigabilities, and multiplicities in the class diagram below:</p>
+                          <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Box</span> </span>{
+    <span class="hljs-keyword">private</span> Item[] parts = <span class="hljs-keyword">new</span> Item[<span class="hljs-number">10</span>];
+    <span class="hljs-keyword">private</span> Item spareItem;
+    <span class="hljs-keyword">private</span> Lid lid; <span class="hljs-comment">// lid of this box</span>
+    <span class="hljs-keyword">private</span> Box outerBox;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">open</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-comment">//...</span>
+    }
+}
+</code></pre>
+                          <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Item</span> </span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> totalItems;
+}
+</code></pre>
+                          <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Lid</span> </span>{
+    Box box; <span class="hljs-comment">// the box for which this is the lid</span>
+}
+</code></pre>
+                        </question>
+                      </panel>
+                    </div>
                   </div>
                 </panel>
               </div>
@@ -689,16 +717,121 @@
                     <panel type="seamless" src="/website\book\uml\classDiagrams\interfaces\what\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML → Class Diagrams → Interfaces → What" alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/Interfaces"
                       fragment="main"></panel>
                   </p>
-                  <h5 id="modeling-association-classes">Modeling association classes</h5>
-                  <p>
-                    <panel type="seamless" src="/website\book\oop\associations\associationClasses\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP → Associations → Association Classes"
-                      alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> OOP/AssociationClasses" fragment="main"></panel>
-                    <panel type="seamless" src="/website\book\uml\classDiagrams\associationClasses\what\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML → Class Diagrams → Association Classes → What"
-                      alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/AssociationsClasses" fragment="main"></panel>
-                  </p>
                 </div>
               </div>
-              <div></div>
+              <div>
+                <div>
+                  <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                    <div>
+                      <div>
+                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Statements about class diagram.">
+                          <question>
+                            <p>Which of these statements match the class diagram?</p>
+                            <img src="/website/book/modeling/modelingStructures/classDiagramsIntermediate/images/mismatch.png" height="290">
+                            <p></p>
+                            <ul class="task-list">
+                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. A <code>Snake</code> must belong to at least one <code>Board</code>.</li>
+                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. A <code>SnakeHeadSquare</code> can contain only one <code>Snake</code> head.</li>
+                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. A <code>Square</code> can contain a <code>Snake</code> head.</li>
+                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. A <code>Snake</code> head can be in more than one <code>SnakeHeadSquare</code></li>
+                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. The <code>Board</code> has exactly 5 <code>Snake</code>s.</li>
+                            </ul>
+                            <div slot="answer">
+                              <p><s>(a)</s>(b)(c)(d)(e)</p>
+                              <p>Explanation:</p>
+                              <p>(a) does not match because a <code>Snake</code> may or may not belong to a <code>Board</code> (multiplicity is <code>0..1</code>)<br> (b) matches the diagram because the multiplicity given in <code>1</code><br> (c) matches
+                                the diagram because <code>SnakeHeadSquare</code> is a <code>Square</code> (due to inheritance)<br> (d) matches the diagram because the multiplicity given is <code>*</code><br> (e) matches the diagram because the multiplicity
+                                given in <code>5</code><br></p>
+                            </div>
+                          </question>
+                        </panel>
+                      </div>
+                      <div>
+                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Explain notations in the class diagram">
+                          <question>
+                            <p>Explain the meaning of various class diagram notations in the following class diagram:</p>
+                            <img src="/website/book/uml/classDiagrams/introduction/what/images/classDiagramExample1.png" width="750"></question>
+                        </panel>
+                      </div>
+                      <div>
+                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Draw a Class Diagram for Item etc.">
+                          <question>
+                            <p>Consider the code below:</p>
+                            <div class="row">
+                              <div class="col-sm-6">
+                                <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Billable</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">bill</span><span class="hljs-params">()</span></span>;
+}
+</code></pre>
+                                <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Item</span>
+         <span class="hljs-keyword">implements</span> <span class="hljs-title">Billable</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span></span>;
+}
+</code></pre>
+                                <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">StockItem</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Item</span> </span>{
+    <span class="hljs-keyword">private</span> Review review;
+    <span class="hljs-keyword">private</span> String name;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">StockItem</span><span class="hljs-params">(
+        String name, Rating rating)</span></span>{
+
+        <span class="hljs-keyword">this</span>.name = name;
+        <span class="hljs-keyword">this</span>.review = <span class="hljs-keyword">new</span> Review(rating);
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">//...</span>
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">bill</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">//...</span>
+    }
+}
+</code></pre>
+                              </div>
+                              <div class="col-sm-6">
+                                <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">enum</span> Rating {
+    GOOD, OK, POOR
+}
+</code></pre>
+                                <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Review</span> </span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> Rating rating;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Review</span><span class="hljs-params">(Rating rating)</span> </span>{
+        <span class="hljs-keyword">this</span>.rating = rating;
+    }
+}
+</code></pre>
+                                <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.List;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Inventory</span> </span>{
+    <span class="hljs-keyword">private</span> List&lt;Item&gt; items;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getItemCount</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-keyword">return</span> items.size();
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">generateBill</span><span class="hljs-params">(Billable b)</span></span>{
+        <span class="hljs-comment">// ...</span>
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">add</span><span class="hljs-params">(Item s)</span> </span>{
+        items.add(s);
+    }
+}
+</code></pre>
+                              </div>
+                            </div>
+                            <p>(a) Draw a class diagram to represent the code<br> (b) Draw an object diagram to represent the situation where the inventory has one item with a name <code>spanner</code> and a review of <code>POOR</code> rating.</p>
+                          </question>
+                        </panel>
+                      </div>
+                    </div>
+                  </panel>
+                </div>
+              </div>
           </div>
         </panel>
         <panel type="seamless" header="#### Object Diagrams" expanded="">
@@ -708,7 +841,7 @@
               aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></span>
             </span>
             </span>
-            <span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can explain object diagrams</span>
+            <span class="badge badge-light"><span><span class="dimmed"><span><span class="fas fa-trophy"></span> Can use basic object diagrams</span>
             </span>
             </span>
             </span>
@@ -726,7 +859,48 @@
                   fragment="main"></panel>
               </p>
             </div>
-            <div></div>
+            <div>
+              <div>
+                <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                  <div>
+                    <div>
+                      <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Draw Class Diagram for Box etc.">
+                        <question>
+                          <p>This question is based on the following question from another topic:</p>
+                          <div>
+                            <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Draw Class Diagram for Box etc.">
+                              <question>
+                                <p>Draw a class diagram for the code below. Show the attributes, methods, associations, navigabilities, and multiplicities in the class diagram below:</p>
+                                <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Box</span> </span>{
+    <span class="hljs-keyword">private</span> Item[] parts = <span class="hljs-keyword">new</span> Item[<span class="hljs-number">10</span>];
+    <span class="hljs-keyword">private</span> Item spareItem;
+    <span class="hljs-keyword">private</span> Lid lid; <span class="hljs-comment">// lid of this box</span>
+    <span class="hljs-keyword">private</span> Box outerBox;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">open</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-comment">//...</span>
+    }
+}
+</code></pre>
+                                <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Item</span> </span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> totalItems;
+}
+</code></pre>
+                                <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Lid</span> </span>{
+    Box box; <span class="hljs-comment">// the box for which this is the lid</span>
+}
+</code></pre>
+                              </question>
+                            </panel>
+                          </div>
+                          <p>Draw an object diagram to match the code. Include objects of all three classes in your object diagram.</p>
+                        </question>
+                      </panel>
+                    </div>
+                  </div>
+                </panel>
+              </div>
+            </div>
           </div>
         </panel>
         <panel type="seamless" header="#### Object Oriented Domain Models" expanded="">
@@ -1009,42 +1183,44 @@
               </span>
               <p></p>
               <div>
-                <p><strong>Sequence diagrams model interactions between entities for a given scenario.</strong></p>
-                <tip-box>
-                  <p><span class="fas fa-cube"></span> Consider the code below.</p>
-                  <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Machine</span> </span>{
-
-    <span class="hljs-function">Unit <span class="hljs-title">producePrototype</span><span class="hljs-params">()</span> </span>{
-        Unit prototype = <span class="hljs-keyword">new</span> Unit();
-        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">5</span>; i++) {
-            prototype.stressTest();
-        }
-        <span class="hljs-keyword">return</span> prototype;
-    }
-}
-
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Unit</span> </span>{
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">stressTest</span><span class="hljs-params">()</span> </span>{
-
-    }
-}
-
-</code></pre>
-                  <p>Here is the sequence diagram to model the interactions for the method call <code>prouducePrototype()</code> on a <code>Machine</code> object.</p>
-                  <img src="/website/book/modeling/modelingBehaviors/sequenceDiagramsBasic/images/Machine.png" width="450">
-                  <p></p>
-                </tip-box>
+                <p>
+                  <panel type="seamless" src="/website\book\uml\sequenceDiagrams\introduction\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Introduction"
+                    alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SequenceDiagrams" fragment="main"></panel>
+                </p>
+                <p>
+                  <panel type="seamless" src="/website\book\uml\sequenceDiagrams\basic\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Basic Notation"
+                    alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SD/Basic" fragment="main"></panel>
+                </p>
+                <p>
+                  <panel type="seamless" src="/website\book\uml\sequenceDiagrams\loops\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Loops"
+                    alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SD/Loops" fragment="main"></panel>
+                  <panel type="seamless" src="/website\book\uml\sequenceDiagrams\objectCreation\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Object Creation"
+                    alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SD/Creation" fragment="main"></panel>
+                </p>
+                <p>
+                  <panel type="seamless" src="/website\book\uml\sequenceDiagrams\minimalNotation\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Minimal Notation"
+                    alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SD/Minimal" fragment="main"></panel>
+                </p>
               </div>
               <div>
                 <div>
                   <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
                     <div>
-                      <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Draw a Sequence Diagram for code snippet">
-                        <question>
-                          <div>
+                      <div>
+                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Explain Sequence Diagram about Machine">
+                          <question>
+                            <p>Explain in your own words the interactions illustrated by this Sequence Diagram:</p>
+                            <img src="/website/book/uml/sequenceDiagrams/introduction/images/Machine.png" width="500"></question>
+                        </panel>
+                      </div>
+                      <div>
+                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Draw a Sequence Diagram for code snippet">
+                          <question>
                             <p>Consider the code below:</p>
-                            <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span></span>{
+                            <div class="row">
+                            
+                              <div class="col-sm-7">
+                                <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span></span>{
     Tag tag;
     String name;
 
@@ -1053,8 +1229,12 @@
         tag = <span class="hljs-keyword">new</span> Tag(tagName);
     }
 }
-
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Tag</span></span>{
+</code></pre>
+                                <p></p>
+                              </div>
+                            
+                              <div class="col-sm-5">
+                                <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Tag</span></span>{
     Tag(String value){
         <span class="hljs-comment">//...</span>
     }
@@ -1066,6 +1246,9 @@
     }
 }
 </code></pre>
+                                <p></p>
+                              </div>
+                            </div>
                             <p>Draw a sequence diagram to illustrate the object interactions that happen in the code snippet below:</p>
                             <pre><code class="hljs java">PersonList personList = <span class="hljs-keyword">new</span> PersonList();
 <span class="hljs-keyword">while</span> (hasRoom){
@@ -1073,16 +1256,16 @@
     personList.addPerson(p);
 }
 </code></pre>
-                          </div>
-                        </question>
-                      </panel>
-                    </div>
-                    <div>
-                      <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Find notation errors in sequence diagram">
-                        <question>
-                          <p>Find notation mistakes in the sequence diagram below:</p>
-                          <img src="/website/book/modeling/modelingBehaviors/sequenceDiagramsBasic/images/notationMistakes.png" width="700"></question>
-                      </panel>
+                          </question>
+                        </panel>
+                      </div>
+                      <div>
+                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Find notation errors in sequence diagram">
+                          <question>
+                            <p>Find notation mistakes in the sequence diagram below:</p>
+                            <img src="/website/book/modeling/modelingBehaviors/sequenceDiagramsBasic/images/notationMistakes.png" width="500"></question>
+                        </panel>
+                      </div>
                     </div>
                   </panel>
                 </div>
@@ -1103,40 +1286,89 @@
               </span>
               </span>
               <p></p>
-              <div></div>
+              <div>
+                <p>
+                  <panel type="seamless" src="/website\book\uml\sequenceDiagrams\objectDeletion\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Object Deletion"
+                    alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SD/Deletion" fragment="main"></panel>
+                  <panel type="seamless" src="/website\book\uml\sequenceDiagrams\selfInvocation\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Self-Invocation"
+                    alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SD/Self-Invocation" fragment="main"></panel>
+                  <panel type="seamless" src="/website\book\uml\sequenceDiagrams\alternativePaths\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Alternative Paths"
+                    alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SD/Alternative" fragment="main"></panel>
+                  <panel type="seamless" src="/website\book\uml\sequenceDiagrams\optionalPaths\unit-inElsewhere-asFlat._include_.html#main" header="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Sequence Diagrams → Optional Paths"
+                    alt="<span class='glyphicon glyphicon-education' aria-hidden='true'></span> UML/SD/Optional" fragment="main"></panel>
+                </p>
+              </div>
               <div>
                 <div>
                   <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
                     <div>
-                      <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> What’s going on here?">
-                        <question>
-                          <p>What’s going on here?</p>
-                          <img src="/website/book/modeling/modelingBehaviors/sequenceDiagramsIntermediate/images/exerciseDiagram.png" height="170">
-                          <p></p>
-                          <ul class="task-list">
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. <code>Logic</code> object is executing a parallel thread.</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. <code>Logic</code> object is executing a loop.</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. <code>Logic</code> object is creating another <code>Logic</code> instance.</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. One of <code>Logic</code> object’s methods is calling another of its methods.</li>
-                            <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. <code>Minefield</code> object is calling a method of <code>Logic</code>.</li>
-                          </ul>
-                          <div slot="answer">
-                            <p>(d)</p>
-                          </div>
-                        </question>
-                      </panel>
-                    </div>
-                    <div>
-                      <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Explain Sequence Diagram (ParserFactory)">
-                        <question>
-                          <p>Explain the interactions depicted in this sequence diagram.</p>
-                          <img src="/website/book/modeling/modelingBehaviors/sequenceDiagramsIntermediate/images/parserFactory.png" height="300">
-                          <p></p>
-                          <div slot="hint">
-                            <p>First, the <code>createParser()</code> method of an existing <code>ParserFactory</code> object is called. Then, ...</p>
-                          </div>
-                        </question>
-                      </panel>
+                      <div>
+                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> What’s going on here?">
+                          <question>
+                            <p>What’s going on here?</p>
+                            <img src="/website/book/modeling/modelingBehaviors/sequenceDiagramsIntermediate/images/exerciseDiagram.png" height="170">
+                            <p></p>
+                            <ul class="task-list">
+                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a. <code>Logic</code> object is executing a parallel thread.</li>
+                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b. <code>Logic</code> object is executing a loop.</li>
+                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c. <code>Logic</code> object is creating another <code>Logic</code> instance.</li>
+                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d. One of <code>Logic</code> object’s methods is calling another of its methods.</li>
+                              <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> e. <code>Minefield</code> object is calling a method of <code>Logic</code>.</li>
+                            </ul>
+                            <div slot="answer">
+                              <p>(d)</p>
+                            </div>
+                          </question>
+                        </panel>
+                      </div>
+                      <div>
+                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Explain Sequence Diagram (ParserFactory)">
+                          <question>
+                            <p>Explain the interactions depicted in this sequence diagram.</p>
+                            <img src="/website/book/modeling/modelingBehaviors/sequenceDiagramsIntermediate/images/parserFactory.png" height="300">
+                            <p></p>
+                            <div slot="hint">
+                              <p>First, the <code>createParser()</code> method of an existing <code>ParserFactory</code> object is called. Then, ...</p>
+                            </div>
+                          </question>
+                        </panel>
+                      </div>
+                      <div>
+                        <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span> Draw Sequence Diagram for printing a quote">
+                          <question>
+                            <p>Draw a sequence diagram to represent this code snippet.</p>
+                            <pre><code class="hljs java"><span class="hljs-keyword">if</span> (isFirstPage) {
+    <span class="hljs-keyword">new</span> Quote().print();
+}
+</code></pre>
+                            <p>The <code>Quote</code> class:</p>
+                            <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Quote</span></span>{
+
+    String q;
+
+    Quote(){
+        q = generate();
+    }
+
+    <span class="hljs-function">String <span class="hljs-title">generate</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-comment">// ...</span>
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span></span>{
+        System.out.println(q);
+    }
+
+}
+</code></pre>
+                            <div slot="hint">
+                              <ul>
+                                <li>Show <code>new Quote().print();</code> as two method calls.</li>
+                                <li>As the created Quote object is not assigned to a variable, it can be considered as 'deleted' soon after its <code>print()</code> method is called.</li>
+                              </ul>
+                            </div>
+                          </question>
+                        </panel>
+                      </div>
                     </div>
                   </panel>
                 </div>
@@ -1602,7 +1834,7 @@
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.10.1</a> at Thu, 20 Sep 2018 05:36:54 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.10.1</a> at Fri, 28 Sep 2018 09:05:03 GMT</small></div>
 </footer>
 </div>
 </body>
