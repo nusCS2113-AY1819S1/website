@@ -1050,20 +1050,18 @@ java -jar Collate-TUI.jar collate from unused to collated/unused include java, f
               </div>
               <div id="main">
                 <div>
-                  <p><strong><em>Revision Control Software (RCS)</em> are the software tools that automate the process of <em>Revision Control</em> i.e. managing revisions of software artifacts.</strong></p>
-                  <p>Revision control is also known as <em>Version Control Software (VCS)</em>, and a few other names. Here, we use the terms <em>revision</em> and <em>version</em> interchangeably.</p>
                   <tabs>
                     <tab header="<span class='far fa-file-alt'></span>">
                       <blockquote>
-                        <p><em>Revision control</em> is the process of managing multiple versions of a piece of information. In its simplest form, this is something that many people do by hand: every time you modify a file, save it under a new name that
-                          contains a number, each one higher than the number of the preceding version.</p>
+                        <p><strong><em>Revision control</em> is the process of managing multiple versions of a piece of information.</strong> In its simplest form, this is something that many people do by hand: every time you modify a file, save it under
+                          a new name that contains a number, each one higher than the number of the preceding version.</p>
                         <p>Manually managing multiple versions of even a single file is an error-prone task, though, so software tools to help automate this process have long been available. The earliest automated revision control tools were intended to
                           help a single user to manage revisions of a single file. Over the past few decades, the scope of revision control tools has expanded greatly; they now manage multiple files, and help multiple people to work together. The best
                           modern revision control tools have no problem coping with thousands of people working together on projects that consist of hundreds of thousands of files.</p>
-                        <p>There are a number of reasons why you or your team might want to use an automated revision control tool for a project. It will track the history and evolution of your project, so you don't have to. For every change, you'll have
-                          a log of who made it; why they made it; when they made it; and what the change was.</p>
-                        <p>When you're working with other people, <strong>revision control software makes it easier for you to collaborate</strong>. For example, when people more or less simultaneously make potentially incompatible changes, the software
-                          will help you to identify and resolve those conflicts.</p>
+                        <p><strong>Revision control software will track the history and evolution of your project</strong>, so you don't have to. For every change, you'll have a log of who made it; why they made it; when they made it; and what the change
+                          was.</p>
+                        <p><strong>Revision control software makes it easier for you to collaborate</strong> when you're working with other people. For example, when people more or less simultaneously make potentially incompatible changes, the software will
+                          help you to identify and resolve those conflicts.</p>
                         <p><strong>It can help you to recover from mistakes</strong>. If you make a change that later turns out to be an error, you can revert to an earlier version of one or more files. In fact, a really good revision control tool will even
                           help you to efficiently figure out exactly when a problem was introduced.</p>
                         <p><strong>It will help you to work simultaneously on, and manage the drift between, multiple versions of your project.</strong> Most of these reasons are equally valid, at least in theory, whether you're working on a project by yourself,
@@ -1085,6 +1083,18 @@ java -jar Collate-TUI.jar collate from unused to collated/unused include java, f
                       <p><a href="http://hgbook.red-bean.com/">Mercurial: The Definitive Guide</a> by Bryan O'Sullivan retrieved on 2012/07/11</p>
                     </div>
                   </modal>
+                  <tip-box type="definition">
+                    <div>
+                      <p><strong>RCS</strong> : <strong>Revision Control Software</strong> are the software tools that automate the process of <em>Revision Control</em> i.e. managing revisions of software artifacts.</p>
+                    </div>
+                  </tip-box>
+                  <tip-box type="definition">
+                    <div>
+                      <p><strong>Revision</strong>: A <em>revision</em> (some seem to use it interchangeably with <em>version</em> while others seem to distinguish the two -- here, let us treat them as the same, for simplicity) is a state of a piece of information
+                        at a specific time that is a result of some changes to it <span class="dimmed">e.g., if you modify the code and save the file, you have a new revision (or a version) of that file</span>.</p>
+                    </div>
+                  </tip-box>
+                  <p>Revision control is also known as <em>Version Control Software (VCS)</em>, and a few other names.</p>
                 </div>
                 <div>
                   <div>
@@ -1103,7 +1113,8 @@ java -jar Collate-TUI.jar collate from unused to collated/unused include java, f
                           <question has-input="true">
                             <p>In the context of RCS, what is a <em>Revision</em>? Give an example.</p>
                             <div slot="answer">
-                              <p>Versions of a piece of information. For example, take a file containing program code. If you modify the code and save the file, you have a new version of that file.</p>
+                              <p>A <em>revision</em> (some seem to use it interchangeably with <em>version</em> while others seem to distinguish the two -- here, let us treat them as the same, for simplicity) is a state of a piece of information at a specific
+                                time that is a result of some changes to it. For example, take a file containing program code. If you modify the code and save the file, you have a new revision (or a version) of that file.</p>
                             </div>
                           </question>
                         </panel>
@@ -1175,9 +1186,10 @@ java -jar Collate-TUI.jar collate from unused to collated/unused include java, f
                   </tip-box>
                   <tabs>
                     <tab header="<span class='far fa-file-alt'></span>">
-                      <p>Suppose you want to apply revision control on files in a directory called <code>ProjectFoo</code>. In that case you need to set up a <em>repo</em> (short for repository) in <code>ProjectFoo</code> directory, which is referred to
-                        as the <em>working directory</em> of the repo. The repository is the database where the meta-data about the revision history are stored. For example, Git uses a hidden folder named <code>.git</code> inside the working directory.</p>
-                      <p>You can have multiple repos in your computer, each repo revision-controlling files of a different working directly, for examples, files of different projects.</p>
+                      <p><strong>The <em>repository</em> is the database where the meta-data about the revision history are stored.</strong> Suppose you want to apply revision control on files in a directory called <code>ProjectFoo</code>. In that case you
+                        need to set up a <em>repo</em> (short for repository) in <code>ProjectFoo</code> directory, which is referred to as the <em>working directory</em> of the repo. For example, Git uses a hidden folder named <code>.git</code> inside
+                        the working directory.</p>
+                      <p><strong>You can have multiple repos in your computer</strong>, each repo revision-controlling files of a different working directly, for examples, files of different projects.</p>
                       <hr>
                     </tab>
                     <tab header="<span class='glyphicon glyphicon-facetime-video' aria-hidden='true'></span>">
@@ -1242,8 +1254,8 @@ java -jar Collate-TUI.jar collate from unused to collated/unused include java, f
                     <p></p>
                   </panel>
                   <p></p>
-                  <p>Install <a href="https://www.sourcetreeapp.com/">SourceTree</a> which is Git + a GUI for Git.</p>
-                  <p>Suppose you want to create a repository in an empty directory <code>things</code></p>
+                  <p>Install <a href="https://www.sourcetreeapp.com/">SourceTree</a> which is Git + a GUI for Git. If you prefer to use Git via the command line (i.e., without a GUI), you can <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">install Git</a>                    instead.</p>
+                  <p>Suppose you want to create a repository in an empty directory <code>things</code>. Here are the steps:</p>
                   <tabs>
                     <tab header="SourceTree">
                       <div>
@@ -1422,7 +1434,7 @@ nothing added to commit but untracked files present (use <span class="hljs-strin
                         <p>Select the <code>fruits.txt</code> and click on the <code>Stage Selected</code> button</p>
                         <img src="/website/book/gitAndGithub/commit/images/sourcetree_2.png" height="100">
                         <p></p>
-                        <p><code>fruits.txt</code> should appear in the <code>Staged files</code> panel now.’</p>
+                        <p><code>fruits.txt</code> should appear in the <code>Staged files</code> panel now.</p>
                         <img src="/website/book/gitAndGithub/commit/images/sourcetree_3.png" height="180">
                         <p></p>
                       </div>
@@ -1449,7 +1461,7 @@ git status
                       <hr>
                     </tab>
                   </tabs>
-                  <p>Next, we can commit the staged version of <code>fruits.txt</code></p>
+                  <p>Now, you can commit the staged version of <code>fruits.txt</code></p>
                   <tabs>
                     <tab header="SourceTree">
                       <div>
@@ -1480,7 +1492,7 @@ Date:   Wed Jul 5 16:06:28 2017 +0800
                   </tabs>
                   <p>Note the existence of something called the <code>master</code> branch. Git allows you to have multiple branches (i.e. it is a way to evolve the content in parallel) and Git creates a default branch named <code>master</code> on which
                     the commits go on by default.</p>
-                  <p>Do some changes to <code>fruits.txt</code> (e.g. add some text and delete some text). Stage the changes, and commit the changes using the same steps we followed before. You should end up with something like this.</p>
+                  <p>Do some changes to <code>fruits.txt</code> (e.g. add some text and delete some text). Stage the changes, and commit the changes using the same steps you followed before. You should end up with something like this.</p>
                   <img src="/website/book/gitAndGithub/commit/images/sourcetree_6.png" height="180">
                   <p></p>
                   <p>Next, add two more files <code>colors.txt</code> and <code>shapes.txt</code> to the same working directory. Add a third commit to record the current state of the working directory.</p>
@@ -1891,7 +1903,7 @@ Date:   Wed Jul 5 16:06:28 2017 +0800
                         <popover id="pop:rcs" placement="top">
                           <div slot="content">
                             <div>
-                              <p><strong>RCS</strong> : Revision Control Software.</p>
+                              <p><strong>RCS</strong> : <strong>Revision Control Software</strong> are the software tools that automate the process of <em>Revision Control</em> i.e. managing revisions of software artifacts.</p>
                             </div>
                           </div>
                         </popover>
@@ -3875,19 +3887,17 @@ Enter command: exit
                     </div>
                     <div id="main">
                       <div>
-                        <p><strong><em>Revision Control Software (RCS)</em> are the software tools that automate the process of <em>Revision Control</em> i.e. managing revisions of software artifacts.</strong></p>
-                        <p>Revision control is also known as <em>Version Control Software (VCS)</em>, and a few other names. Here, we use the terms <em>revision</em> and <em>version</em> interchangeably.</p>
                         <tabs>
                           <tab header="<span class='far fa-file-alt'></span>">
                             <blockquote>
-                              <p><em>Revision control</em> is the process of managing multiple versions of a piece of information. In its simplest form, this is something that many people do by hand: every time you modify a file, save it under a new name
-                                that contains a number, each one higher than the number of the preceding version.</p>
+                              <p><strong><em>Revision control</em> is the process of managing multiple versions of a piece of information.</strong> In its simplest form, this is something that many people do by hand: every time you modify a file, save it
+                                under a new name that contains a number, each one higher than the number of the preceding version.</p>
                               <p>Manually managing multiple versions of even a single file is an error-prone task, though, so software tools to help automate this process have long been available. The earliest automated revision control tools were intended
                                 to help a single user to manage revisions of a single file. Over the past few decades, the scope of revision control tools has expanded greatly; they now manage multiple files, and help multiple people to work together.
                                 The best modern revision control tools have no problem coping with thousands of people working together on projects that consist of hundreds of thousands of files.</p>
-                              <p>There are a number of reasons why you or your team might want to use an automated revision control tool for a project. It will track the history and evolution of your project, so you don't have to. For every change, you'll
-                                have a log of who made it; why they made it; when they made it; and what the change was.</p>
-                              <p>When you're working with other people, <strong>revision control software makes it easier for you to collaborate</strong>. For example, when people more or less simultaneously make potentially incompatible changes, the software
+                              <p><strong>Revision control software will track the history and evolution of your project</strong>, so you don't have to. For every change, you'll have a log of who made it; why they made it; when they made it; and what the
+                                change was.</p>
+                              <p><strong>Revision control software makes it easier for you to collaborate</strong> when you're working with other people. For example, when people more or less simultaneously make potentially incompatible changes, the software
                                 will help you to identify and resolve those conflicts.</p>
                               <p><strong>It can help you to recover from mistakes</strong>. If you make a change that later turns out to be an error, you can revert to an earlier version of one or more files. In fact, a really good revision control tool
                                 will even help you to efficiently figure out exactly when a problem was introduced.</p>
@@ -3910,6 +3920,18 @@ Enter command: exit
                             <p><a href="http://hgbook.red-bean.com/">Mercurial: The Definitive Guide</a> by Bryan O'Sullivan retrieved on 2012/07/11</p>
                           </div>
                         </modal>
+                        <tip-box type="definition">
+                          <div>
+                            <p><strong>RCS</strong> : <strong>Revision Control Software</strong> are the software tools that automate the process of <em>Revision Control</em> i.e. managing revisions of software artifacts.</p>
+                          </div>
+                        </tip-box>
+                        <tip-box type="definition">
+                          <div>
+                            <p><strong>Revision</strong>: A <em>revision</em> (some seem to use it interchangeably with <em>version</em> while others seem to distinguish the two -- here, let us treat them as the same, for simplicity) is a state of a piece
+                              of information at a specific time that is a result of some changes to it <span class="dimmed">e.g., if you modify the code and save the file, you have a new revision (or a version) of that file</span>.</p>
+                          </div>
+                        </tip-box>
+                        <p>Revision control is also known as <em>Version Control Software (VCS)</em>, and a few other names.</p>
                       </div>
                       <div>
                         <div>
@@ -3928,7 +3950,8 @@ Enter command: exit
                                 <question has-input="true">
                                   <p>In the context of RCS, what is a <em>Revision</em>? Give an example.</p>
                                   <div slot="answer">
-                                    <p>Versions of a piece of information. For example, take a file containing program code. If you modify the code and save the file, you have a new version of that file.</p>
+                                    <p>A <em>revision</em> (some seem to use it interchangeably with <em>version</em> while others seem to distinguish the two -- here, let us treat them as the same, for simplicity) is a state of a piece of information at
+                                      a specific time that is a result of some changes to it. For example, take a file containing program code. If you modify the code and save the file, you have a new revision (or a version) of that file.</p>
                                   </div>
                                 </question>
                               </panel>
@@ -4007,9 +4030,9 @@ Enter command: exit
                       </tip-box>
                       <tabs>
                         <tab header="<span class='far fa-file-alt'></span>">
-                          <p>Suppose you want to apply revision control on files in a directory called <code>ProjectFoo</code>. In that case you need to set up a <em>repo</em> (short for repository) in <code>ProjectFoo</code> directory, which is referred
-                            to as the <em>working directory</em> of the repo. The repository is the database where the meta-data about the revision history are stored. For example, Git uses a hidden folder named <code>.git</code> inside the working directory.</p>
-                          <p>You can have multiple repos in your computer, each repo revision-controlling files of a different working directly, for examples, files of different projects.</p>
+                          <p><strong>The <em>repository</em> is the database where the meta-data about the revision history are stored.</strong> Suppose you want to apply revision control on files in a directory called <code>ProjectFoo</code>. In that case
+                            you need to set up a <em>repo</em> (short for repository) in <code>ProjectFoo</code> directory, which is referred to as the <em>working directory</em> of the repo. For example, Git uses a hidden folder named <code>.git</code>                            inside the working directory.</p>
+                          <p><strong>You can have multiple repos in your computer</strong>, each repo revision-controlling files of a different working directly, for examples, files of different projects.</p>
                           <hr>
                         </tab>
                         <tab header="<span class='glyphicon glyphicon-facetime-video' aria-hidden='true'></span>">
@@ -4081,8 +4104,8 @@ Enter command: exit
                         <p></p>
                       </panel>
                       <p></p>
-                      <p>Install <a href="https://www.sourcetreeapp.com/">SourceTree</a> which is Git + a GUI for Git.</p>
-                      <p>Suppose you want to create a repository in an empty directory <code>things</code></p>
+                      <p>Install <a href="https://www.sourcetreeapp.com/">SourceTree</a> which is Git + a GUI for Git. If you prefer to use Git via the command line (i.e., without a GUI), you can <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">install Git</a>                        instead.</p>
+                      <p>Suppose you want to create a repository in an empty directory <code>things</code>. Here are the steps:</p>
                       <tabs>
                         <tab header="SourceTree">
                           <div>
