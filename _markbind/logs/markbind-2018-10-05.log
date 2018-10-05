@@ -1,0 +1,20 @@
+2018-10-05T02:25:35.674Z - info: Pages built
+2018-10-05T02:25:35.780Z - info: Site data built
+2018-10-05T02:25:35.786Z - info: Generate Site durationMs=73996
+2018-10-05T02:25:36.013Z - info: Serving "E:\Teaching\aug2018\website\_site" at http://127.0.0.1:8080
+2018-10-05T02:25:36.013Z - info: Press CTRL+C to stop ...
+2018-10-05T02:25:54.758Z - info: Reload for file change: E:\Teaching\aug2018\website\schedule\index.md
+2018-10-05T02:25:55.761Z - verbose: Rebuild affected paths: E:\Teaching\aug2018\website\schedule\index.md
+2018-10-05T02:25:55.762Z - info: Rebuilding 2 pages
+2018-10-05T02:26:12.056Z - info: Pages rebuilt
+2018-10-05T02:26:12.070Z - info: Site data built
+2018-10-05T02:27:41.758Z - info: Reload for file change: E:\Teaching\aug2018\website\schedule\evidence\junit.md
+2018-10-05T02:27:42.760Z - verbose: Rebuild affected paths: E:\Teaching\aug2018\website\schedule\evidence\junit.md
+2018-10-05T02:27:42.764Z - info: Rebuilding 6 pages
+2018-10-05T02:28:01.983Z - info: Pages rebuilt
+2018-10-05T02:28:01.992Z - info: Site data built
+2018-10-05T02:32:08.757Z - info: Reload for file change: E:\Teaching\aug2018\website\schedule\evidence\junit.md
+2018-10-05T02:32:09.759Z - verbose: Rebuild affected paths: E:\Teaching\aug2018\website\schedule\evidence\junit.md
+2018-10-05T02:32:09.760Z - info: Rebuilding 6 pages
+2018-10-05T02:32:30.988Z - info: Pages rebuilt
+2018-10-05T02:32:30.999Z - info: Site data built
