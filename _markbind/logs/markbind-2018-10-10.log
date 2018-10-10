@@ -1,0 +1,24 @@
+2018-10-10T03:49:29.607Z - info: Pages built
+2018-10-10T03:49:29.714Z - info: Site data built
+2018-10-10T03:49:29.714Z - info: Build success!
+2018-10-10T03:49:29.714Z - info: Generate Site durationMs=73188
+2018-10-10T06:04:22.979Z - info: Deployed!
+2018-10-10T08:50:54.334Z - info: Pages built
+2018-10-10T08:50:54.440Z - info: Site data built
+2018-10-10T08:50:54.449Z - info: Generate Site durationMs=72041
+2018-10-10T08:50:54.667Z - info: Serving "E:\Teaching\aug2018\website\_site" at http://127.0.0.1:8080
+2018-10-10T08:50:54.668Z - info: Press CTRL+C to stop ...
+2018-10-10T09:07:55.744Z - info: Reload for file change: E:\Teaching\aug2018\website\admin\projectList.md
+2018-10-10T09:07:56.748Z - verbose: Rebuild affected paths: E:\Teaching\aug2018\website\admin\projectList.md
+2018-10-10T09:07:56.751Z - info: Rebuilding 1 pages
+2018-10-10T09:07:56.931Z - info: Pages rebuilt
+2018-10-10T09:07:56.937Z - info: Site data built
+2018-10-10T09:17:51.942Z - info: Reload for file change: E:\Teaching\aug2018\website\admin\projectList.md
+2018-10-10T09:17:52.944Z - verbose: Rebuild affected paths: E:\Teaching\aug2018\website\admin\projectList.md
+2018-10-10T09:17:52.945Z - info: Rebuilding 1 pages
+2018-10-10T09:17:53.087Z - info: Pages rebuilt
+2018-10-10T09:17:53.094Z - info: Site data built
+2018-10-10T09:43:23.900Z - info: Pages built
+2018-10-10T09:43:24.004Z - info: Site data built
+2018-10-10T09:43:24.005Z - info: Build success!
+2018-10-10T09:43:24.005Z - info: Generate Site durationMs=76704
