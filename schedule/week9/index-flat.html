@@ -1544,14 +1544,14 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
       <p><span class="activity-desc">Implementation</span></p>
       <div class="indented">
         <panel no-close="" expanded="" no-switch="" expandable="false">
-          <span slot="header" class="card-title"><span><code>W9.3</code> <strong>Can implement association classes</strong> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star"
-            aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+          <span slot="header" class="card-title"><span><code>W9.3</code> <strong>Can implement association classes</strong> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star"
+            aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
           </span>
           </span>
-          <panel type="success" expanded="" no-close="" no-switch="" epxandable="false">
-            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W9.3a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain the meaning of association classes</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <panel type="info" expanded="" no-close="" no-switch="" epxandable="false">
+            <span slot="header" class="card-title"><span><big><span class="badge badge-pill badge-light"><code>W9.3a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain the meaning of association classes</span> <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             <span
-              class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+              class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
               </span>
               </span>
               <div>
@@ -3953,40 +3953,37 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
           </panel>
           <panel type="seamless" expanded="">
             <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W9.3a</code></span></big> <span><span class="fas fa-trophy"></span> Can explain the meaning of association classes</span>
-            <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-            <span
-              class="glyphicon glyphicon-star" aria-hidden="true"></span>
-              </span>
-              </span>
-              </span>
-              <div class="indented">
-                <panel minimized="">
-                  <span slot="header" class="card-title">Details of the LO</span>
-                  <div>
-                    <div></div>
-                    <p></p>
-                    <p><span class="dimmed"><strong><span>Paradigms → Object Oriented Programming → Associations →
+            <span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+            </span>
+            </span>
+            <div class="indented">
+              <panel minimized="">
+                <span slot="header" class="card-title">Details of the LO</span>
+                <div>
+                  <div></div>
+                  <p></p>
+                  <p><span class="dimmed"><strong><span>Paradigms → Object Oriented Programming → Associations →
 </span></strong>
-                      </span>
-                    </p>
-                    <div id="title-and-body">
+                    </span>
+                  </p>
+                  <div id="title-and-body">
+                    <div>
+                      <h4 id="association-classes-2">Association Classes</h4>
+                    </div>
+                    <div id="main">
                       <div>
-                        <h4 id="association-classes-2">Association Classes</h4>
-                      </div>
-                      <div id="main">
-                        <div>
-                          <p><strong>An <em>association class</em> represents additional information about an association.</strong> It is a normal class but plays a special role from a design point of view.</p>
-                          <tip-box>
-                            <p><span class="fas fa-cube"></span> A <code>Man</code> class and a <code>Woman</code> class is linked with a ‘married to’ association and there is a need to store the date of marriage. However, that data is related to the association
-                              rather than specifically owned by either the <code>Man</code> object or the <code>Woman</code> object. In such situations, an additional association class can be introduced, e.g. a <code>Marriage</code> class, to store such
-                              information.</p>
-                          </tip-box>
-                          <h5 id="implementing-association-classes-2">Implementing association classes</h5>
-                          <p>There is no special way to implement an association class. It can be implemented as a normal class that has variables to represent the endpoint of the association it represents.</p>
-                          <tip-box>
-                            <p><span class="fas fa-cube"></span> In the code below, the <code>Transaction</code> class is an association class that represent a transaction between a <code>Person</code> who is the seller and another <code>Person</code> who
-                              is the buyer.</p>
-                            <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Transaction</span></span>{
+                        <p><strong>An <em>association class</em> represents additional information about an association.</strong> It is a normal class but plays a special role from a design point of view.</p>
+                        <tip-box>
+                          <p><span class="fas fa-cube"></span> A <code>Man</code> class and a <code>Woman</code> class is linked with a ‘married to’ association and there is a need to store the date of marriage. However, that data is related to the association
+                            rather than specifically owned by either the <code>Man</code> object or the <code>Woman</code> object. In such situations, an additional association class can be introduced, e.g. a <code>Marriage</code> class, to store such
+                            information.</p>
+                        </tip-box>
+                        <h5 id="implementing-association-classes-2">Implementing association classes</h5>
+                        <p>There is no special way to implement an association class. It can be implemented as a normal class that has variables to represent the endpoint of the association it represents.</p>
+                        <tip-box>
+                          <p><span class="fas fa-cube"></span> In the code below, the <code>Transaction</code> class is an association class that represent a transaction between a <code>Person</code> who is the seller and another <code>Person</code> who
+                            is the buyer.</p>
+                          <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Transaction</span></span>{
     
     <span class="hljs-comment">//all fields are compulsory</span>
     Person seller;
@@ -3999,46 +3996,46 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
     }
 }
 </code></pre>
-                          </tip-box>
-                        </div>
+                        </tip-box>
+                      </div>
+                      <div>
                         <div>
-                          <div>
-                            <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
-                              <div>
-                                <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Which are suitable as an Association Class?">
-                                  <question>
-                                    <p>Which one of these is the suitable as an Association Class?</p>
-                                    <img src="/website/book/oop/associations/associationClasses/images/exerciseDiagram.png" width="500">
-                                    <p></p>
-                                    <ul class="task-list">
-                                      <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a</li>
-                                      <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b</li>
-                                      <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c</li>
-                                      <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d</li>
-                                    </ul>
-                                    <div slot="answer">
-                                      <p>(a)(b)<s>(c)</s>(d)</p>
-                                      <p>Explanation: Mileage is a property of the car, and not specifically about the association between the Driver and the Car. If Mileage was defined as the total number of miles that car was driven by that driver, then
-                                        it would be suitable as an association class.</p>
-                                    </div>
-                                  </question>
-                                </panel>
-                              </div>
-                            </panel>
-                          </div>
+                          <panel header="<span class='fas fa-dumbbell'></span> Exercises" expandable="">
+                            <div>
+                              <panel header="<span class='glyphicon glyphicon-question-sign' aria-hidden='true'></span><span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span> Which are suitable as an Association Class?">
+                                <question>
+                                  <p>Which one of these is the suitable as an Association Class?</p>
+                                  <img src="/website/book/oop/associations/associationClasses/images/exerciseDiagram.png" width="500">
+                                  <p></p>
+                                  <ul class="task-list">
+                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> a</li>
+                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> b</li>
+                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> c</li>
+                                    <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> d</li>
+                                  </ul>
+                                  <div slot="answer">
+                                    <p>(a)(b)<s>(c)</s>(d)</p>
+                                    <p>Explanation: Mileage is a property of the car, and not specifically about the association between the Driver and the Car. If Mileage was defined as the total number of miles that car was driven by that driver, then
+                                      it would be suitable as an association class.</p>
+                                  </div>
+                                </question>
+                              </panel>
+                            </div>
+                          </panel>
                         </div>
                       </div>
                     </div>
                   </div>
-                </panel><br><br>
-                <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span>
-                </p>
-                <div class="indented">
-                  <div>
-                    <p>Give more examples of association classes, preferably related to your project.</p>
-                  </div>
+                </div>
+              </panel><br><br>
+              <p><span class="dimmed"><span class="fas fa-briefcase"></span> Evidence:</span>
+              </p>
+              <div class="indented">
+                <div>
+                  <p>Give more examples of association classes, preferably related to your project.</p>
                 </div>
               </div>
+            </div>
           </panel>
           <panel type="seamless" expanded="">
             <span slot="header" class="card-title"><span><span class="dimmed">For</span> <big><span class="badge badge-pill badge-light"><code>W9.5b</code></span></big> <span><span class="fas fa-trophy"></span> Can explain test coverage</span> <span class="badge badge-pill badge-warning"><span style="color:white"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
@@ -4726,7 +4723,7 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.10.1</a> at Wed, 10 Oct 2018 09:43:56 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.10.1</a> at Wed, 10 Oct 2018 10:13:49 GMT</small></div>
 </footer>
 </div>
 </body>
