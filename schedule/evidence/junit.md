@@ -1,10 +1,10 @@
 <div id="basic">
 
-**Acceptable**: Evidence of having written JUnit tests your projects.
+**Suggested**: Evidence of having written JUnit tests your projects.
 
-**Suggested Refresher**: Do the exercise in [[Addressbook-Level2: LO-JUnit]({{module_org}}/addressbook-level2/blob/master/docs/LearningOutcomes.adoc#use-junit-to-implement-unit-tests-code-lo-junit-code)]
+**Refresher**: Do the exercise in [[Addressbook-Level2: LO-JUnit]({{module_org}}/addressbook-level2/blob/master/docs/LearningOutcomes.adoc#use-junit-to-implement-unit-tests-code-lo-junit-code)]
 
-<include src="project.md#PR_to_AB2" />
+**Submission**: Show the JUnit tests you wrote to your tutor.   
 
 </div>
 
