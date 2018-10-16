@@ -9493,6 +9493,51 @@ r1.setPlayer(p2);
                 </ul>
               </li>
             </ul>
+            <h3 id="questions-to-be-discussed-during-tutorial">Questions to be discussed during tutorial</h3>
+            <ol>
+              <li>Does this code fragment compile? Why or why not?</li>
+            </ol>
+            <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">A</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">foo</span><span class="hljs-params">()</span> </span>{
+        System.out.println(<span class="hljs-string">"Foo from A"</span>);
+    }
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">B</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">A</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">foo</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> IOException </span>{
+        System.out.println(<span class="hljs-string">"Foo from B"</span>);
+    }
+}
+</code></pre>
+            <ol start="2">
+              <li>Which method is statically bound which method is dynamically bound?</li>
+            </ol>
+            <pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Animal</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">eat</span><span class="hljs-params">()</span> </span>{ 
+        System.out.println(<span class="hljs-string">"Eat food"</span>);
+    }
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dog</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">eat</span><span class="hljs-params">()</span> </span>{
+        System.out.println(<span class="hljs-string">"Eat dog food"</span>);
+    }
+    
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">eat</span><span class="hljs-params">(String b)</span> </span>{
+        System.out.println(<span class="hljs-string">"Eat biscuit: "</span> + b);
+    }
+}
+</code></pre>
+            <ol start="3">
+              <li>Consider the diagram:<br>
+                <img src="/website/book/architecture/architectureDiagrams/drawing/images/tip.png" height="190"><br> Which is a better design?</li>
+              <li>In the above diagram, what is the problem with the architecture diagram on the right?</li>
+              <li>IVLE quizzes allow a quiz to be attempted multiple times. For each attempt, it records the time taken. Model this scenario as a class diagram.</li>
+              <li>Draw another diagram to describe how you would implement the above it in code.</li>
+              <li>Give an example of defensive programming from AB4</li>
+              <li>What is the purpose of <code>@Before</code> and <code>@After</code> in JUnit?</li>
+              <li>What is the difference between decision and branch coverage?</li>
+            </ol>
             <br>
             <panel type="seamless" header="##### Evidence for weekly LOs %%(for reference)%%">
               <panel type="seamless" expanded="">
@@ -10826,7 +10871,7 @@ AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.10.1</a> at Fri, 12 Oct 2018 11:08:16 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.10.1</a> at Tue, 16 Oct 2018 08:44:42 GMT</small></div>
 </footer>
 </div>
 </body>
