@@ -409,6 +409,7 @@
     },
     {
       "headings": {
+        "ensuring-your-code-is-reposense-compatible": "Ensuring your code is RepoSense-Compatible",
         "project-mid-v13-week-10": "Project: mid-v1.3 [week 10] \n            \n            \n          "
       },
       "title": "Admin: Project: mid-v1.3 [week 10]",
@@ -503,6 +504,61 @@
       },
       "title": "Project List",
       "src": "admin/projectList.md"
+    },
+    {
+      "headings": {
+        "adding-author-tags-indicate-authorship": "Adding @@author tags indicate authorship",
+        "what-to-and-what-not-to-annotate": "What to and what not to annotate"
+      },
+      "src": "admin/reposenseAuthorAnnotation.md",
+      "title": ""
+    },
+    {
+      "headings": {
+        "ensuring-your-code-is-reposense-compatible": "Ensuring your code is RepoSense-Compatible"
+      },
+      "src": "admin/reposenseCompatibility.md",
+      "title": ""
+    },
+    {
+      "headings": {
+        "configjson-file-templates-for-reposense": "config.json File Templates for RepoSense",
+        "w12-1": "W12-1",
+        "w12-2": "W12-2",
+        "w12-3": "W12-3",
+        "w12-4": "W12-4",
+        "w13-1": "W13-1",
+        "w13-2": "W13-2",
+        "w13-3": "W13-3",
+        "w13-4": "W13-4",
+        "t09-1": "T09-1",
+        "t09-2": "T09-2",
+        "t09-3": "T09-3",
+        "t09-4": "T09-4",
+        "t12-1": "T12-1",
+        "t12-2": "T12-2",
+        "t12-3": "T12-3",
+        "t13-1": "T13-1",
+        "t13-2": "T13-2",
+        "t13-3": "T13-3",
+        "t13-4": "T13-4",
+        "t13-5": "T13-5",
+        "t16-1": "T16-1",
+        "t16-2": "T16-2",
+        "t16-3": "T16-3",
+        "t16-4": "T16-4",
+        "f09-1": "F09-1",
+        "f09-2": "F09-2",
+        "f09-3": "F09-3",
+        "f09-4": "F09-4",
+        "f10-1": "F10-1",
+        "f10-2": "F10-2",
+        "f10-3": "F10-3"
+      },
+      "title": "config.json File Templates for RepoSense",
+      "footer": "footer.md",
+      "head": "scheduleHead.md",
+      "src": "admin/reposenseConfigTemplates.md"
     },
     {
       "headings": {

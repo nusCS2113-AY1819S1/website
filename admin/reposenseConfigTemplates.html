@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-122519234-1');
+</script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CS2113/T Website - config.json File Templates for RepoSense</title>
+    <link rel="stylesheet" href="..\markbind\css\bootstrap.min.css">
+    <link rel="stylesheet" href="..\markbind\css\bootstrap-vue.min.css">
+    <link rel="stylesheet" href="..\markbind\css\font-awesome.min.css" >
+    <link rel="stylesheet" href="..\markbind\css\bootstrap-glyphicons.min.css" >
+    <link rel="stylesheet" href="..\markbind\css\github.min.css">
+    <link rel="stylesheet" href="..\markbind\css\markbind.css">
+    
+    <link rel="stylesheet" href="/website/css/main.css">
+<link rel="stylesheet" href="/website/css/schedule.css">
+    <link rel="icon" href="/website/favicon.ico">
+</head>
+<body>
+<div id="app" class="container-fluid">
+    <div>
+  <navbar placement="top" type="default">
+    <a slot="brand" href="/website/index.html" title="Home" class="navbar-brand">CS2113/T <small>AY1819S1</small></a>
+    <dropdown text="Nested" class="nav-link">
+      <li><a href="/website/index.html" class="dropdown-item"> <span class="fas fa-check"></span> Nested (current format)</a></li>
+      <li><a href="/website/index-flat.html" class="dropdown-item">&nbsp;&nbsp;&nbsp;&nbsp;Flat</a></li>
+    </dropdown>
+    <li><a href="/website/index.html" class="nav-link"><span><strong>Schedule</strong></span></a></li>
+    <li><a href="/website/se-book-adapted/index.html" class="nav-link"><span><strong>Textbook</strong></span></a></li>
+    <li><a href="/website/admin/index.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
+    <dropdown text="Links" class="nav-link">
+      <li><a href="https://github.com/nusCS2113-AY1819S1/website/issues" target="_blank" class="dropdown-item"> <span class="fas fa-bug"></span> Report Bugs</a></li>
+      <li><a href="https://nuscs2113-ay1819s1.slack.com" target="_blank" class="dropdown-item"><span class="fab fa-slack-hash"></span> Slack</a></li>
+      <li><a href="https://github.com/nusCS2113-AY1819S1/forum/issues" target="_blank" class="dropdown-item"><span class="fas fa-comment"></span> Forum</a></li>
+      <li><a href="/website/admin/instructors.html" class="dropdown-item"><span class="fas fa-user-tie"></span> Instructors</a></li>
+      <li><a href="https://ivle.nus.edu.sg/v1/Announcement/default.aspx?CourseID=e3ecf866-dbc2-4b26-8873-82d371aa9b17" target="_blank" class="dropdown-item"><span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span> IVLE Announcements</a></li>
+      <li><a href="https://ivle.nus.edu.sg/v1/File/Student/default.aspx?CourseID=e3ecf866-dbc2-4b26-8873-82d371aa9b17&WorkbinID=208b1acf-7a65-45bf-a7a9-58c54556a0d3&FolderID=4a621f93-0732-42c6-9c25-bb39d3a94225" target="_blank" class="dropdown-item"><span class="fas fa-file-upload"></span> IVLE File Submissions</a></li>
+      <li><a href="/website/admin/tutorials.html" target="_blank" class="dropdown-item"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Tutorial Schedule</a></li>
+
+      <li><a href="https://oss-generic.github.io/process/codingStandards/CodingStandard-Java.html" target="_blank" class="dropdown-item"><span class="fas fa-code"></span> Java Coding Standard</a></li>
+      <li><a href="https://github.com/nusCS2113-AY1819S1/samplerepo-things" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> samplerepo-things</a></li>
+      <li><a href="https://github.com/nusCS2113-AY1819S1/addressbook-level1" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> Addressbook-level1</a></li>
+      <li><a href="https://github.com/nusCS2113-AY1819S1/addressbook-level2" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> Addressbook-level2</a></li>
+      <li><a href="https://github.com/nusCS2113-AY1819S1/addressbook-level3" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> Addressbook-level3</a></li>
+      <li><a href="https://github.com/nusCS2113-AY1819S1/addressbook-level4" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> Addressbook-level4</a></li>
+      <li><a href="/website/admin/projectList.html" target="_blank" class="dropdown-item"><span class="fas fa-th-list"></span> Projects List</a></li>
+      <li><a href="https://nuscs2113-ay1819s1.github.io/dashboard/" target="_bank" class="dropdown-item"><span class="fas fa-chart-area"></span> Code Dashboard (BETA)</a></li>
+    </dropdown>
+    <li slot="right" class="nav-link">
+      <form class="navbar-form">
+        <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right=""></searchbar>
+      </form>
+    </li>
+  </navbar>
+</div>
+<h1 id="configjson-file-templates-for-reposense"><code>config.json</code> File Templates for RepoSense</h1>
+<p><strong>If you need to create a <code>_reposense/config.json</code> file for your team repo</strong>, use the json code given below (pick the one that matches your team) as the starting point of that file's content. <span class="dimmed">Reason: the template code has the exact abbreviated name we use to identify you.</span></p>
+<h4 id="w12-1">W12-1</h4>
+<pre><code class="hljs json">{
+  <span class="hljs-attr">"authors"</span>:
+  [
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"linnnruoo"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"BAO...RUO"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"linnnruoo"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"driedmelon"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"CHU...WEI"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"driedmelon"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"elstonayx"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"ELS...UAN"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"elstonayx"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"jitwei98"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"LIM...WEI"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"jitwei98"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"junweiljw"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"LOW...WEI"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"junweiljw"</span>]
+    }
+  ]
+}
+</code></pre>
+<hr>
+<h4 id="w12-2">W12-2</h4>
+<pre><code class="hljs json">{
+  <span class="hljs-attr">"authors"</span>:
+  [
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"BearPerson1"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"HU ...ING"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"BearPerson1"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"leegengyu"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"LEE... YU"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"leegengyu"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"E0201942"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"LIM...DEN"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"E0201942"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"auskure"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"LOH...CAR"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"auskure"</span>]
+    }
+  ]
+}
+</code></pre>
+<hr>
+<h4 id="w12-3">W12-3</h4>
+<pre><code class="hljs json">{
+  <span class="hljs-attr">"authors"</span>:
+  [
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"lekoook"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"LEE...ENG"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"lekoook"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"lws803"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"LER...ENG"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"lws803"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"Limminghong"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"LIM...ONG"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"Limminghong"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"peiying98"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"LIM...ING"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"peiying98"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"LowGinWee"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"LOW...WEE"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"LowGinWee"</span>]
+    }
+  ]
+}
+</code></pre>
+<hr>
+<h4 id="w12-4">W12-4</h4>
+<pre><code class="hljs json">{
+  <span class="hljs-attr">"authors"</span>:
+  [
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"bluein-green"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"JIN...JIA"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"bluein-green"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"scottljw"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"LI ...WEI"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"scottljw"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"Lunastryke"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"LIM...HAO"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"Lunastryke"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"liu-tianhang"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"LIU...ANG"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"liu-tianhang"</span>]
+    }
+  ]
+}
+</code></pre>
+<hr>
+<h4 id="w13-1">W13-1</h4>
+<pre><code class="hljs json">{
+  <span class="hljs-attr">"authors"</span>:
+  [
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"bennchong"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"BEN... YI"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"bennchong"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"cjinting-nus"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"CHE...ING"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"cjinting-nus"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"alexiscatnip"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"KHO...HUI"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"alexiscatnip"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"nianfei97"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"TEH...FEI"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"nianfei97"</span>]
+    }
+  ]
+}
+</code></pre>
+<hr>
+<h4 id="w13-2">W13-2</h4>
+<pre><code class="hljs json">{
+  <span class="hljs-attr">"authors"</span>:
+  [
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"shuanang"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"ANG...UAN"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"shuanang"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"arjo129"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"ARJ...RTY"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"arjo129"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"cjunxiang"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"CHE...ANG"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"cjunxiang"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"tttaus"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"TAN...NCE"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"tttaus"</span>]
+    }
+  ]
+}
+</code></pre>
+<hr>
+<h4 id="w13-3">W13-3</h4>
+<pre><code class="hljs json">{
+  <span class="hljs-attr">"authors"</span>:
+  [
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"Jeremyinelysium"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"AW ...HEN"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"Jeremyinelysium"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"emobeany"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"BEH...SIM"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"emobeany"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"ChanChunCheong"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"CHA...ONG"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"ChanChunCheong"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"chelseyong"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"CHE...HEE"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"chelseyong"</span>]
+    }
+  ]
+}
+</code></pre>
+<hr>
+<h4 id="w13-4">W13-4</h4>
+<pre><code class="hljs json">{
+  <span class="hljs-attr">"authors"</span>:
+  [
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"kennethcsj"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"KEN...JYE"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"kennethcsj"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"kohjunkiat"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"KOH...IAT"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"kohjunkiat"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"guiyong96"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"LEE...ONG"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"guiyong96"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"iashcole"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"TEO...LEY"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"iashcole"</span>]
+    }
+  ]
+}
+</code></pre>
+<hr>
+<h4 id="t09-1">T09-1</h4>
+<pre><code class="hljs json">{
+  <span class="hljs-attr">"authors"</span>:
+  [
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"Ftywan"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"FU ...UAN"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"Ftywan"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"Psyf"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"SAI...MUD"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"Psyf"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"trufflepirate"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"SEA...ANG"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"trufflepirate"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"teojunjie"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"TEO...JIE"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"teojunjie"</span>]
+    }
+  ]
+}
+</code></pre>
+<hr>
+<h4 id="t09-2">T09-2</h4>
+<pre><code class="hljs json">{
+  <span class="hljs-attr">"authors"</span>:
+  [
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"arty9"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"TAY...IAN"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"arty9"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"SHININGGGG"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"WAN...ING"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"SHININGGGG"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"XiaoYunhan"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"XIA...HAN"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"XiaoYunhan"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"feijunzi"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"XIN...NZI"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"feijunzi"</span>]
+    }
+  ]
+}
+</code></pre>
+<hr>
+<h4 id="t09-3">T09-3</h4>
+<pre><code class="hljs json">{
+  <span class="hljs-attr">"authors"</span>:
+  [
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"darylnigel"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"DAR...WEI"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"darylnigel"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"Hyukiejun"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"PAR...YUK"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"Hyukiejun"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"AllenZB"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"ZHA... BO"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"AllenZB"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"Za-yn"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"ZHU...UAN"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"Za-yn"</span>]
+    }
+  ]
+}
+</code></pre>
+<hr>
+<h4 id="t09-4">T09-4</h4>
+<pre><code class="hljs json">{
+  <span class="hljs-attr">"authors"</span>:
+  [
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"nguyenngoclinhchi"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"NGU...CHI"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"nguyenngoclinhchi"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"tztzt"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"TEH...HON"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"tztzt"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"Tenvinc"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"VIN...ONG"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"Tenvinc"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"oscarzeng"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"ZEN...HAO"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"oscarzeng"</span>]
+    }
+  ]
+}
+</code></pre>
+<hr>
+<h4 id="t12-1">T12-1</h4>
+<pre><code class="hljs json">{
+  <span class="hljs-attr">"authors"</span>:
+  [
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"chiaxr"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"CHI...ONG"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"chiaxr"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"cqinkai"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"CHU...KAI"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"cqinkai"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"Geraldcdx"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"GER...ANG"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"Geraldcdx"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"Tertium3"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"HO ...ONG"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"Tertium3"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"jamesyaputra"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"JAM...TRA"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"jamesyaputra"</span>]
+    }
+  ]
+}
+</code></pre>
+<hr>
+<h4 id="t12-2">T12-2</h4>
+<pre><code class="hljs json">{
+  <span class="hljs-attr">"authors"</span>:
+  [
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"xhxh96"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"CHE...HAO"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"xhxh96"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"brandonccm1996"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"CHE...DON"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"brandonccm1996"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"chewkahmeng"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"CHE...ENG"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"chewkahmeng"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"chokxy"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"CHO...YAN"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"chokxy"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"xShaivan"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"HOV...HAO"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"xShaivan"</span>]
+    }
+  ]
+}
+</code></pre>
+<hr>
+<h4 id="t12-3">T12-3</h4>
+<pre><code class="hljs json">{
+  <span class="hljs-attr">"authors"</span>:
+  [
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"ChewKinWhye"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"CHE...HYE"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"ChewKinWhye"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"Davindran"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"DAV...RAN"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"Davindran"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"gaoqikai"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"GAO...KAI"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"gaoqikai"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"HeHaowei"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"HE ...WEI"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"HeHaowei"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"kelvintankaiboon"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"KEL...OON"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"kelvintankaiboon"</span>]
+    }
+  ]
+}
+</code></pre>
+<hr>
+<h4 id="t13-1">T13-1</h4>
+<pre><code class="hljs json">{
+  <span class="hljs-attr">"authors"</span>:
+  [
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"QzSG"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"ADR...HUA"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"QzSG"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"ChenSongJian"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"CHE...IAN"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"ChenSongJian"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"T0roloco"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"GON...AVO"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"T0roloco"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"ian-tjahjono"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"IAN...ONO"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"ian-tjahjono"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"luhan02"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"LU ...HAN"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"luhan02"</span>]
+    }
+  ]
+}
+</code></pre>
+<hr>
+<h4 id="t13-2">T13-2</h4>
+<pre><code class="hljs json">{
+  <span class="hljs-attr">"authors"</span>:
+  [
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"xllx1"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"CAI...LIN"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"xllx1"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"E0191729"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"DIN...RAI"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"E0191729"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"hanskoh"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"XU ...HUI"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"hanskoh"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"Meowzz95"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"ZHA...GDA"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"Meowzz95"</span>]
+    }
+  ]
+}
+</code></pre>
+<hr>
+<h4 id="t13-3">T13-3</h4>
+<pre><code class="hljs json">{
+  <span class="hljs-attr">"authors"</span>:
+  [
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"ParasK26"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"BHA...HNA"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"ParasK26"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"amirulmaricar"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"MOH...OFF"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"amirulmaricar"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"garagaristahir"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"TAH...ARA"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"garagaristahir"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"dyeosy98"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"YEO...ISE"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"dyeosy98"</span>]
+    }
+  ]
+}
+</code></pre>
+<hr>
+<h4 id="t13-4">T13-4</h4>
+<pre><code class="hljs json">{
+  <span class="hljs-attr">"authors"</span>:
+  [
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"novin997"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"NOV...ANG"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"novin997"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"rajdeepsh"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"RAJ...DAL"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"rajdeepsh"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"E0176882"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"TAN...OEL"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"E0176882"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"Tsuweiquan"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"TSU...UAN"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"Tsuweiquan"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"clara1234566"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"YAN...ANG"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"clara1234566"</span>]
+    }
+  ]
+}
+</code></pre>
+<hr>
+<h4 id="t13-5">T13-5</h4>
+<pre><code class="hljs json">{
+  <span class="hljs-attr">"authors"</span>:
+  [
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"SiJieg"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"GOH...JIE"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"SiJieg"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"garyheng"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"GAR...HEN"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"garyheng"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"DarylTew"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"TEW...RYL"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"DarylTew"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"shouteck"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"TIN...ECK"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"shouteck"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"yicheng12"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"YAN...ENG"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"yicheng12"</span>]
+    }
+  ]
+}
+</code></pre>
+<hr>
+<h4 id="t16-1">T16-1</h4>
+<pre><code class="hljs json">{
+  <span class="hljs-attr">"authors"</span>:
+  [
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"jomcruz93"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"CRU...STA"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"jomcruz93"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"zhicaizack"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"GIA...CAI"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"zhicaizack"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"m-aslam-mj2"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"MOH...HAN"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"m-aslam-mj2"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"tristyxxnana"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"NUR...LAN"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"tristyxxnana"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"harriuscai"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"TAN...CAI"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"harriuscai"</span>]
+    }
+  ]
+}
+</code></pre>
+<hr>
+<h4 id="t16-2">T16-2</h4>
+<pre><code class="hljs json">{
+  <span class="hljs-attr">"authors"</span>:
+  [
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"jieliangang"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"ANG...ANG"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"jieliangang"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"fr3ddy4"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"FAR...LAN"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"fr3ddy4"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"Jeevz10"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"JEE...HAR"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"Jeevz10"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"IcedCoffeeBoy"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"LEE...ANG"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"IcedCoffeeBoy"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"perrythewang"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"PER...ING"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"perrythewang"</span>]
+    }
+  ]
+}
+</code></pre>
+<hr>
+<h4 id="t16-3">T16-3</h4>
+<pre><code class="hljs json">{
+  <span class="hljs-attr">"authors"</span>:
+  [
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"speezy37"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"CHU... YU"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"speezy37"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"jylee-git"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"LEE...YAO"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"jylee-git"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"pinjuen"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"LIM...UEN"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"pinjuen"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"Woonhian"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"LIM...IAN"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"Woonhian"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"Hafizuddin-NUS"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"NUR...DIN"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"Hafizuddin-NUS"</span>]
+    }
+  ]
+}
+</code></pre>
+<hr>
+<h4 id="t16-4">T16-4</h4>
+<pre><code class="hljs json">{
+  <span class="hljs-attr">"authors"</span>:
+  [
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"ryanchen2018"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"CHE...ING"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"ryanchen2018"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"ChuaZhenWei"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"CHU...WEI"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"ChuaZhenWei"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"LimYiSheng"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"LIM...ENG"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"LimYiSheng"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"XiiaoPanda"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"VER...ONG"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"XiiaoPanda"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"zhihong8888"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"WIL...ONG"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"zhihong8888"</span>]
+    }
+  ]
+}
+</code></pre>
+<hr>
+<h4 id="f09-1">F09-1</h4>
+<pre><code class="hljs json">{
+  <span class="hljs-attr">"authors"</span>:
+  [
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"derpyplops"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"JON...ONG"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"derpyplops"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"sanjukta99"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"SAN...AHA"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"sanjukta99"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"ladderinc"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"SOH...JUN"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"ladderinc"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"Chocological"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"TAN...VIN"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"Chocological"</span>]
+    }
+  ]
+}
+</code></pre>
+<hr>
+<h4 id="f09-2">F09-2</h4>
+<pre><code class="hljs json">{
+  <span class="hljs-attr">"authors"</span>:
+  [
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"AngWM"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"ANG...ING"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"AngWM"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"kianhong95"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"LIM...ONG"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"kianhong95"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"px1099"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"PHA...INH"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"px1099"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"SalsabilTasnia"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"SAL... MD"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"SalsabilTasnia"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"kangmingtay"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"TAY...ING"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"kangmingtay"</span>]
+    }
+  ]
+}
+</code></pre>
+<hr>
+<h4 id="f09-3">F09-3</h4>
+<pre><code class="hljs json">{
+  <span class="hljs-attr">"authors"</span>:
+  [
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"SandhyaGopakumar"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"SAN...MAR"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"SandhyaGopakumar"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"SarahTaaherBonna"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"SAR...NNA"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"SarahTaaherBonna"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"aaryamNUS"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"SRI...YAM"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"aaryamNUS"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"kronicler"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"TAN...ANG"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"kronicler"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"wm28"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"TAN...ING"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"wm28"</span>]
+    }
+  ]
+}
+</code></pre>
+<hr>
+<h4 id="f09-4">F09-4</h4>
+<pre><code class="hljs json">{
+  <span class="hljs-attr">"authors"</span>:
+  [
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"andrewome"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"AND... EN"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"andrewome"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"leerachel"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"RAC...ING"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"leerachel"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"MingXunSeah"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"SEA...XUN"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"MingXunSeah"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"sxqnicholas96"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"SEA...LAS"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"sxqnicholas96"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"kianmengtan"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"TAN...ENG"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"kianmengtan"</span>]
+    }
+  ]
+}
+</code></pre>
+<hr>
+<h4 id="f10-1">F10-1</h4>
+<pre><code class="hljs json">{
+  <span class="hljs-attr">"authors"</span>:
+  [
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"lucdx"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"LUC...HAO"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"lucdx"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"Meg1456"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"MEG...NAN"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"Meg1456"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"micklwl"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"MIC...LIN"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"micklwl"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"meisbokai"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"NEO...KAI"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"meisbokai"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"0WN463"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"NG ... IN"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"0WN463"</span>]
+    }
+  ]
+}
+</code></pre>
+<hr>
+<h4 id="f10-2">F10-2</h4>
+<pre><code class="hljs json">{
+  <span class="hljs-attr">"authors"</span>:
+  [
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"NichPang1"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"NIC...ERN"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"NichPang1"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"ongjiajian"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"ONG...IAN"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"ongjiajian"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"C-E-OOI"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"OOI... YI"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"C-E-OOI"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"keithtqs"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"TAN...ITH"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"keithtqs"</span>]
+    }
+  ]
+}
+</code></pre>
+<hr>
+<h4 id="f10-3">F10-3</h4>
+<pre><code class="hljs json">{
+  <span class="hljs-attr">"authors"</span>:
+  [
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"andyrobert3"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"MAT...DER"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"andyrobert3"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"muhdharun"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"MUH...HID"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"muhdharun"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"ongweekeong"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"ONG...ONG"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"ongweekeong"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"iamputradanish"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"PUT...FEE"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"iamputradanish"</span>]
+    },
+    {
+      <span class="hljs-attr">"githubId"</span>: <span class="hljs-string">"ShreyasKp"</span>,
+      <span class="hljs-attr">"displayName"</span>: <span class="hljs-string">"SHR...ASH"</span>,
+      <span class="hljs-attr">"authorNames"</span>: [<span class="hljs-string">"ShreyasKp"</span>]
+    }
+  ]
+}
+</code></pre>
+<hr>
+<div id="flex-div"></div>
+<footer>
+  <div class="text-center">
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.10.1</a> at Thu, 18 Oct 2018 11:15:08 GMT</small></div>
+</footer>
+</div>
+</body>
+<script src="..\markbind\js\vue.min.js"></script>
+<script src="..\markbind\js\vue-strap.min.js"></script>
+<script src="..\markbind\js\polyfill.min.js"></script>
+<script src="..\markbind\js\bootstrap-vue.min.js"></script>
+<script>
+    const baseUrl = '/website'
+</script>
+<script src="..\markbind\js\setup.js"></script>
+</html>

@@ -90,7 +90,7 @@
                       </li>
                       <li>If you copy-pasted a non-trivial code block (possibly with minor modifications <span class="dimmed"> renaming, layout changes, changes to comments, etc.</span>), also mark the code block as reused code (using
                         <trigger trigger="click"
-                          for="modal:reusePolicy-collateSyntax">Collate Tool Syntax</trigger>)<br> Format:
+                          for="modal:reusePolicy-authorTags"><code>@@author</code> tags</trigger>)<br> Format:
                         <pre><code class="hljs java"><span class="hljs-comment">//@@author {yourGithubUsername}-reused</span>
 <span class="hljs-comment">//{Info about the source...}</span>
 
@@ -114,19 +114,12 @@ Collections.sort(persons, <span class="hljs-keyword">new</span> Comparator&lt;Cu
                       </li>
                     </ul>
                   </tip-box>
-                  <modal large="" title="Admin <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Project mid-v1.3 → Collate Tool" id="modal:reusePolicy-collateSyntax">
-                  
-                    <div>Collate is a tool for collating code written by different developers.
-                      <p>Steps to use Collate:</p>
-                      <ol>
-                        <li>Download <code>Collate-TUI.jar</code> from the <a href="https://github.com/se-edu/collate/releases">Collate Tool project</a></li>
-                        <li>Annotate your code to indicate who wrote which part of the code (instructions given below)</li>
-                        <li>Run the Collate tool to collate code written by each person into separate files (instructions given below)</li>
-                      </ol>
-                      <h4 id="annotating-code-to-indicate-authorship">Annotating code to indicate authorship</h4>
+                  <modal large="" title="Admin <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Project mid-v1.3 (extract) →" id="modal:reusePolicy-authorTags">
+                    <div>
+                      <h4 id="adding-author-tags-indicate-authorship">Adding <code>@@author</code> tags indicate authorship</h4>
                       <ul>
                         <li>
-                          <p>Mark your code with a <code>//@@author {yourGithubUsername}</code>. Note the double <code>@</code>.<br> The <code>//@@author</code> tag should appear only at the beginning of the code you wrote. The code up to the next <code>//@@author</code>                            tag or the end of the file (whichever comes first) will be considered as was written by that author. Here is a sample code file:</p>
+                          <p>Mark your code with a <code>//@@author {yourGithubUsername}</code>. Note the double <code>@</code>.<br> The <code>//@@author</code> tag should indicates the beginning of the code you wrote. The code up to the next <code>//@@author</code>                            tag or the end of the file (whichever comes first) will be considered as was written by that author. Here is a sample code file:</p>
                           <pre class="hljs"><code>//@@author johndoe
 method 1 ...
 method 2 ...
@@ -159,7 +152,7 @@ method 4 ...
 </code></pre>
                         </li>
                         <li>
-                          <p><strong>Do not put the <code>//@@author</code> inside java header comments</strong> as only the content below that tag will be collated.<br> 👎
+                          <p><strong>Do not put the <code>//@@author</code> inside java header comments</strong>.<br> 👎
                             <span class="fas fa-arrow-down"></span></p>
                           <pre class="hljs"><code>/**
   * Returns true if ...
@@ -177,22 +170,21 @@ method 4 ...
                       <h4 id="what-to-and-what-not-to-annotate">What to and what not to annotate</h4>
                       <ul>
                         <li>
-                          <p><strong>Annotate both functional and test code but not documentation files.</strong></p>
+                          <p><strong>Annotate both functional and test code</strong> There is no need to annotate documentation files.</p>
                         </li>
                         <li>
-                          <p><strong>Annotate only significant size code blocks that can be reviewed on its own</strong> <span class="dimmed"> e.g., a class, a sequence of methods, a  method.</span> <br>
-                            <strong>Claiming credit for code blocks smaller than a method is discouraged</strong> but allowed. If you do, do it sparingly and only claim meaningful blocks of code <span class="dimmed">such as a block of statements, a loop, or an if-else statement</span>.</p>
+                          <p><strong>Annotate only significant size code blocks that can be reviewed on its own</strong> <span class="dimmed"> e.g., a class, a sequence of methods, a  method.</span> <br> <strong>Claiming credit for code blocks smaller than a method is discouraged</strong>                            but allowed. If you do, do it sparingly and only claim meaningful blocks of code such as a block of statements, a loop, or an if-else statement.</p>
                           <ul>
-                            <li>If an enhancement required you to do tiny changes in many places, there is no need to collate all those tiny changes; you can describe those changes in the Project Portfolio page instead.</li>
+                            <li>If an enhancement required you to do tiny changes in many places, there is no need to annotate all those tiny changes; you can describe those changes in the Project Portfolio page instead.</li>
                             <li>If a code block was touched by more than one person, either let the person who wrote most of it (e.g. more than 80%) take credit for the entire block, or leave it as 'unclaimed' (i.e., no author tags).</li>
                             <li>Related to the above point, <mark>if you claim a code block as your own, more than 80% of the code in that block should have been written by yourself</mark>. For example, no more than 20% of it can be code you reused from somewhere.</li>
                             <li>💡 GitHub has a <a href="https://help.github.com/articles/tracing-changes-in-a-file/"><em>blame</em> feature and a <em>history</em></a> feature that can help you determine who wrote a piece of code.</li>
                           </ul>
                         </li>
                         <li>
-                          <p><strong>Do not try to boost the length of your collated files using dubious means</strong> such as duplicating the same code in multiple places. In particular, do not copy-paste test cases to create redundant tests. Even repetitive
-                            code blocks within test methods should be extracted out as utility methods to reduce code duplication.<br> Individual members are responsible for making sure their own collated files contain the correct content.<br> If you
-                            notice a team member claiming credit for code that he/she did not write or use other questionable tactics, you can email us (after the final submission) to let us know.</p>
+                          <p><strong>Do not try to boost the quantity of your contribution using unethical means</strong> such as duplicating the same code in multiple places. In particular, do not copy-paste test cases to create redundant tests. Even repetitive
+                            code blocks within test methods should be extracted out as utility methods to reduce code duplication. Individual members are responsible for making sure code attributed to them are correct. If you notice a team member claiming
+                            credit for code that he/she did not write or use other questionable tactics, you can email us (after the final submission) to let us know.</p>
                         </li>
                         <li>
                           <p><strong>If you wrote a significant amount of code that was not used in the final product</strong>,</p>
@@ -217,66 +209,16 @@ method 2 ...
 </code></pre>
                         </li>
                         <li>
-                          <p><strong>For code generated by the IDE/framework,</strong> it should not be annotated as your own.</p>
-                        </li>
-                        <li>
-                          <p><strong>Code you modified in minor ways</strong> e.g. adding a parameter. These can be left out of collated code but can be mentioned in the Project Portfolio page if you want to claim credit for them.</p>
-                        </li>
-                      </ul>
-                      <h4 id="collating-the-annotated-code">Collating the annotated code</h4>
-                      <p>You need to put the collated code in the following folders</p>
-                      <div class="table-responsive">
-                        <table class="markbind-table table table-bordered table-striped">
-                          <thead>
-                            <tr>
-                              <th>Code Type</th>
-                              <th>Folder</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td>functional code</td>
-                              <td><code>collated/functional</code></td>
-                            </tr>
-                            <tr>
-                              <td>test code</td>
-                              <td><code>collated/test</code></td>
-                            </tr>
-                            <tr>
-                              <td>unused code</td>
-                              <td><code>collated/unused</code></td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <p>Refer to <a href="https://github.com/se-edu/collate/blob/master/docs/User-Guide.md">Collate Tool's user guide</a> to find how to run the tool over the annotated code.</p>
-                      <p>Given below are DOS sample commands you can put in a batch file and run it to collate the code.</p>
-                      <pre class="hljs"><code>java -jar Collate-TUI.jar collate from src/main to collated/functional include java, fxml, css
-
-java -jar Collate-TUI.jar collate from src/test to collated/test include java
-
-java -jar Collate-TUI.jar collate from unused to collated/unused include java, fxml, css
-</code></pre>
-                      <p>The output should be something like the structure given below.</p>
-                      <pre class="hljs"><code>collated/
-    functional/
-        johndoe.md
-        sarahkhoo.md
-        ravikumar.md
-        ravikumar-reused.md
-    test/
-        johndoe.md
-        sarahkhoo.md
-        ravikumar.md
-    unused/
-        johndoe.md
-</code></pre>
-                      <ul>
-                        <li>
-                          <p>After running the collate tool, you are recommended to look through the generated <strong>.md</strong> files to ensure all your code has been extracted correctly.</p>
-                        </li>
-                        <li>
-                          <p><mark>Push the *.md files created to a folder called /collated</mark> to your repo <mark>master branch</mark>.</p>
+                          <p><strong>You can use empty <code>@@author</code> tags to mark code as not yours when RepoSense attribute the to you incorrectly.</strong></p>
+                          <ul>
+                            <li>
+                              <p><strong>Code generated by the IDE/framework,</strong> should not be annotated as your own.</p>
+                            </li>
+                            <li>
+                              <p><strong>Code you modified in minor ways</strong> e.g. adding a parameter. These should not be claimed as yours but you can mention these additional contributions in the Project Portfolio page if you want to claim credit for
+                                them.</p>
+                            </li>
+                          </ul>
                         </li>
                       </ul>
                     </div>
@@ -303,7 +245,6 @@ java -jar Collate-TUI.jar collate from unused to collated/unused include java, f
                           <ul>
                             <li>Main things to include:
                               <ul>
-                                <li>links to collated code</li>
                                 <li>features you implemented <span class="dimmed"> (include relevant extracts from the user guide and the developer guide)</span></li>
                                 <li>features you propose to implement in future <span class="dimmed"> (include relevant extracts from the user guide and the developer guide if applicable)</span><br> Note: the purpose of allowing you to include <em>proposed</em>                                  features is to provide you more flexibility to show your documentation skills. <span class="dimmed"> e.g. you can bring in a proposed feature just to give you an opportunity to use a UML diagram type not used by the actual features.</span></li>
                                 <li>other significant contributions to the project <span class="dimmed"> e.g. tweaks to existing features, setting up project tools</span></li>
