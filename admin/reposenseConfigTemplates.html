@@ -12,59 +12,211 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CS2113/T Website - config.json File Templates for RepoSense</title>
+    <title>CS2113/T Website - Admin: Tools</title>
     <link rel="stylesheet" href="..\markbind\css\bootstrap.min.css">
     <link rel="stylesheet" href="..\markbind\css\bootstrap-vue.min.css">
     <link rel="stylesheet" href="..\markbind\css\font-awesome.min.css" >
     <link rel="stylesheet" href="..\markbind\css\bootstrap-glyphicons.min.css" >
     <link rel="stylesheet" href="..\markbind\css\github.min.css">
     <link rel="stylesheet" href="..\markbind\css\markbind.css">
-    
+    <link rel="stylesheet" href="..\markbind\css\site-nav.css">
     <link rel="stylesheet" href="/website/css/main.css">
-<link rel="stylesheet" href="/website/css/schedule.css">
+<link rel="stylesheet" href="/website/css/admin.css">
     <link rel="icon" href="/website/favicon.ico">
 </head>
 <body>
 <div id="app" class="container-fluid">
+    <div id="flex-body">
+  <div id="site-nav">
+    <ul style="list-style-type: none; margin-left:-1em">
+      <li style="margin-top: 10px"><a href="moduleOverview.html">CS2113/T Software Engineering & Object-Oriented Programming</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-success">4<span class="fas fa-star"></span></span>
+        </span>
+      </li>
+      <li style="margin-top: 10px"><a href="usingThisWebsite.html"><mark>Using this Website</mark></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-danger">1<span class="fas fa-star"></span></span>
+        </span>
+      </li>
+      <li style="margin-top: 10px"><a href="moduleExpectations.html">Module Expectations</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span class="fas fa-star"></span></span>
+        </span>
+      </li>
+      <li style="margin-top: 10px"><button class="dropdown-btn dropdown-btn-open">Module Structure 
+ <i class="dropdown-btn-icon rotate-icon">
+<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></button>
+        <div class="dropdown-container dropdown-container-open">
+          <ul style="list-style-type: none; margin-left:-1em">
+            <li style="margin-top: 10px"><small><a href="weeklySchedule.html">Weekly Schedule</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span class="fas fa-star"></span></span></span></small></li>
+            <li style="margin-top: 10px"><small><a href="learningOutcomes.html">Learning Outcomes</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span class="fas fa-star"></span></span></span></small></li>
+            <li style="margin-top: 10px"><small><a href="lectures.html">Lectures</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span class="fas fa-star"></span></span></span></small></li>
+            <li style="margin-top: 10px"><small><a href="tutorials.html">Tutorials</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span class="fas fa-star"></span></span></span></small></li>
+          </ul>
+        </div>
+      </li>
+      <li style="margin-top: 10px"><a href="instructors.html">Instructors</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-success">4<span class="fas fa-star"></span></span>
+        </span>
+      </li>
+      <li style="margin-top: 10px"><a href="textbooks.html">Textbooks</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span class="fas fa-star"></span></span>
+        </span>
+      </li>
+      <li style="margin-top: 10px"><a href="programmingLanguages.html">Programming Language</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span class="fas fa-star"></span></span>
+        </span>
+      </li>
+      <li style="margin-top: 10px"><button class="dropdown-btn dropdown-btn-open">Project 
+ <i class="dropdown-btn-icon rotate-icon">
+<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></button>
+        <div class="dropdown-container dropdown-container-open">
+          <ul style="list-style-type: none; margin-left:-1em">
+            <li style="margin-top: 10px"><small><a href="project-overview.html">Project: Overview</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span class="fas fa-star"></span></span></span></small></li>
+            <li style="margin-top: 10px"><small><a href="project-product.html">Project: The product</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span class="fas fa-star"></span></span></span></small></li>
+            <li style="margin-top: 10px"><small><a href="project-scope.html">Project: Scope</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span class="fas fa-star"></span></span></span></small></li>
+            <li style="margin-top: 10px"><small><a href="project-constraints.html">Project: Constraints</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span class="fas fa-star"></span></span></span></small></li>
+            <li style="margin-top: 10px"><small><a href="project-teams.html">Forming Teams</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span class="fas fa-star"></span></span></span></small></li>
+            <li style="margin-top: 10px"><small><a href="project-timeline.html">Project: Timeline</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span class="fas fa-star"></span></span></span></small></li>
+            <li style="margin-top: 10px"><small><a href="project-w03-inception.html">Project: inception [week 3]</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span class="fas fa-star"></span></span></span></small></li>
+            <li style="margin-top: 10px"><small><a href="project-w04-mid-v10.html">Project: mid-v1.0 [week 4]</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span class="fas fa-star"></span></span></span></small></li>
+            <li style="margin-top: 10px"><small><a href="project-w05-v10.html">Project: v1.0 [week 5]</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span class="fas fa-star"></span></span></span></small></li>
+            <li style="margin-top: 10px"><small><a href="project-w06-mid-v11.html">Project: mid-v1.1 [week 6]</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span class="fas fa-star"></span></span></span></small></li>
+            <li style="margin-top: 10px"><small><a href="project-w07-v11.html">Project: v1.1 [week 7]</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span class="fas fa-star"></span></span></span></small></li>
+            <li style="margin-top: 10px"><small><a href="project-w08-mid-v12.html">Project: mid-v1.2 [week 8]</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span class="fas fa-star"></span></span></span></small></li>
+            <li style="margin-top: 10px"><small><a href="project-w09-v12.html">Project: v1.2 [week 9]</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span class="fas fa-star"></span></span></span></small></li>
+            <li style="margin-top: 10px"><small><a href="project-w10-mid-v13.html">Project: mid-v1.3 [week 10]</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span class="fas fa-star"></span></span></span></small></li>
+            <li style="margin-top: 10px"><small><a href="project-w11-v13.html">Project: v1.3 [week 11]</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span class="fas fa-star"></span></span></span></small></li>
+            <li style="margin-top: 10px"><small><a href="project-w12-mid-v14.html">Project: mid-v1.4 [week 12]</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span class="fas fa-star"></span></span></span></small></li>
+            <li style="margin-top: 10px"><small><a href="project-w13-v14.html">Project: v1.4 [week 13]</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span class="fas fa-star"></span></span></span></small></li>
+            <li style="margin-top: 10px"><small><a href="project-deliverables.html">Project: Deliverables</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span class="fas fa-star"></span></span></span></small></li>
+            <li style="margin-top: 10px"><small><a href="project-assessment.html">Project: Assessment</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span class="fas fa-star"></span></span></span></small></li>
+            <li style="margin-top: 10px"><small><a href="project-supervision.html">Project: Supervision</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span class="fas fa-star"></span></span></span></small></li>
+          </ul>
+        </div>
+      </li>
+      <li style="margin-top: 10px"><a href="peerEvaluations.html">Peer Evaluations</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span class="fas fa-star"></span></span>
+        </span>
+      </li>
+      <li style="margin-top: 10px"><a href="tools.html">Tools</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span class="fas fa-star"></span></span>
+        </span>
+      </li>
+      <li style="margin-top: 10px"><a href="gradeBreakdown.html">Grade Breakdown</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span class="fas fa-star"></span></span>
+        </span>
+      </li>
+      <li style="margin-top: 10px"><a href="exams.html">Exams</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span class="fas fa-star"></span></span>
+        </span>
+      </li>
+      <li style="margin-top: 10px"><a href="participation.html">Participation Marks</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span class="fas fa-star"></span></span>
+        </span>
+      </li>
+      <li style="margin-top: 10px"><button class="dropdown-btn dropdown-btn-open">Appendices 
+ <i class="dropdown-btn-icon rotate-icon">
+<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></button>
+        <div class="dropdown-container dropdown-container-open">
+          <ul style="list-style-type: none; margin-left:-1em">
+            <li style="margin-top: 10px"><small><a href="appendixA-principles.html">A: Module Principles</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-success">4<span class="fas fa-star"></span></span></span></small></li>
+            <li style="margin-top: 10px"><small><a href="appendixB-policies.html">B: Module Policies</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-danger">1<span class="fas fa-star"></span></span></span></small></li>
+            <li style="margin-top: 10px"><small><a href="appendixC-faq.html">C: Frequently Asked Questions</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-danger">1<span class="fas fa-star"></span></span></span></small></li>
+            <li style="margin-top: 10px"><small><a href="appendixD-help.html">D: Getting help in this module</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span class="fas fa-star"></span></span></span></small></li>
+            <li style="margin-top: 10px"><small><a href="appendixE-gitHub.html">E: Using GitHub</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-danger">1<span class="fas fa-star"></span></span></span></small></li>
+            <li style="margin-top: 10px"><small><a href="appendixF-teamworkIssues.html">F: Handling teamwork issues</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-success">4<span class="fas fa-star"></span></span></span></small></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="site-nav-btn-wrap">
+    <div id="site-nav-btn">
+      <div class="menu-top-bar"></div>
+      <div class="menu-middle-bar"></div>
+      <div class="menu-bottom-bar"></div>
+    </div>
+  </div>
+  <div id="page-content">
     <div>
-  <navbar placement="top" type="default">
-    <a slot="brand" href="/website/index.html" title="Home" class="navbar-brand">CS2113/T <small>AY1819S1</small></a>
-    <dropdown text="Nested" class="nav-link">
-      <li><a href="/website/index.html" class="dropdown-item"> <span class="fas fa-check"></span> Nested (current format)</a></li>
-      <li><a href="/website/index-flat.html" class="dropdown-item">&nbsp;&nbsp;&nbsp;&nbsp;Flat</a></li>
-    </dropdown>
-    <li><a href="/website/index.html" class="nav-link"><span><strong>Schedule</strong></span></a></li>
-    <li><a href="/website/se-book-adapted/index.html" class="nav-link"><span><strong>Textbook</strong></span></a></li>
-    <li><a href="/website/admin/index.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
-    <dropdown text="Links" class="nav-link">
-      <li><a href="https://github.com/nusCS2113-AY1819S1/website/issues" target="_blank" class="dropdown-item"> <span class="fas fa-bug"></span> Report Bugs</a></li>
-      <li><a href="https://nuscs2113-ay1819s1.slack.com" target="_blank" class="dropdown-item"><span class="fab fa-slack-hash"></span> Slack</a></li>
-      <li><a href="https://github.com/nusCS2113-AY1819S1/forum/issues" target="_blank" class="dropdown-item"><span class="fas fa-comment"></span> Forum</a></li>
-      <li><a href="/website/admin/instructors.html" class="dropdown-item"><span class="fas fa-user-tie"></span> Instructors</a></li>
-      <li><a href="https://ivle.nus.edu.sg/v1/Announcement/default.aspx?CourseID=e3ecf866-dbc2-4b26-8873-82d371aa9b17" target="_blank" class="dropdown-item"><span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span> IVLE Announcements</a></li>
-      <li><a href="https://ivle.nus.edu.sg/v1/File/Student/default.aspx?CourseID=e3ecf866-dbc2-4b26-8873-82d371aa9b17&WorkbinID=208b1acf-7a65-45bf-a7a9-58c54556a0d3&FolderID=4a621f93-0732-42c6-9c25-bb39d3a94225" target="_blank" class="dropdown-item"><span class="fas fa-file-upload"></span> IVLE File Submissions</a></li>
-      <li><a href="/website/admin/tutorials.html" target="_blank" class="dropdown-item"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Tutorial Schedule</a></li>
+      <navbar placement="top" type="default">
+        <a slot="brand" href="/website/index.html" title="Home" class="navbar-brand">CS2113/T <small>AY1819S1</small></a>
+        <dropdown text="Nested" class="nav-link">
+          <li><a href="/website/index.html" class="dropdown-item"> <span class="fas fa-check"></span> Nested (current format)</a></li>
+          <li><a href="/website/index-flat.html" class="dropdown-item">&nbsp;&nbsp;&nbsp;&nbsp;Flat</a></li>
+        </dropdown>
+        <li><a href="/website/index.html" class="nav-link"><span><strong>Schedule</strong></span></a></li>
+        <li><a href="/website/se-book-adapted/index.html" class="nav-link"><span><strong>Textbook</strong></span></a></li>
+        <li><a href="/website/admin/index.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
+        <dropdown text="Links" class="nav-link">
+          <li><a href="https://github.com/nusCS2113-AY1819S1/website/issues" target="_blank" class="dropdown-item"> <span class="fas fa-bug"></span> Report Bugs</a></li>
+          <li><a href="https://nuscs2113-ay1819s1.slack.com" target="_blank" class="dropdown-item"><span class="fab fa-slack-hash"></span> Slack</a></li>
+          <li><a href="https://github.com/nusCS2113-AY1819S1/forum/issues" target="_blank" class="dropdown-item"><span class="fas fa-comment"></span> Forum</a></li>
+          <li><a href="/website/admin/instructors.html" class="dropdown-item"><span class="fas fa-user-tie"></span> Instructors</a></li>
+          <li><a href="https://ivle.nus.edu.sg/v1/Announcement/default.aspx?CourseID=e3ecf866-dbc2-4b26-8873-82d371aa9b17" target="_blank" class="dropdown-item"><span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span> IVLE Announcements</a></li>
+          <li><a href="https://ivle.nus.edu.sg/v1/File/Student/default.aspx?CourseID=e3ecf866-dbc2-4b26-8873-82d371aa9b17&WorkbinID=208b1acf-7a65-45bf-a7a9-58c54556a0d3&FolderID=4a621f93-0732-42c6-9c25-bb39d3a94225" target="_blank" class="dropdown-item"><span class="fas fa-file-upload"></span> IVLE File Submissions</a></li>
+          <li><a href="/website/admin/tutorials.html" target="_blank" class="dropdown-item"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Tutorial Schedule</a></li>
 
-      <li><a href="https://oss-generic.github.io/process/codingStandards/CodingStandard-Java.html" target="_blank" class="dropdown-item"><span class="fas fa-code"></span> Java Coding Standard</a></li>
-      <li><a href="https://github.com/nusCS2113-AY1819S1/samplerepo-things" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> samplerepo-things</a></li>
-      <li><a href="https://github.com/nusCS2113-AY1819S1/addressbook-level1" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> Addressbook-level1</a></li>
-      <li><a href="https://github.com/nusCS2113-AY1819S1/addressbook-level2" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> Addressbook-level2</a></li>
-      <li><a href="https://github.com/nusCS2113-AY1819S1/addressbook-level3" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> Addressbook-level3</a></li>
-      <li><a href="https://github.com/nusCS2113-AY1819S1/addressbook-level4" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> Addressbook-level4</a></li>
-      <li><a href="/website/admin/projectList.html" target="_blank" class="dropdown-item"><span class="fas fa-th-list"></span> Projects List</a></li>
-      <li><a href="https://nuscs2113-ay1819s1.github.io/dashboard/" target="_bank" class="dropdown-item"><span class="fas fa-chart-area"></span> Code Dashboard (BETA)</a></li>
-    </dropdown>
-    <li slot="right" class="nav-link">
-      <form class="navbar-form">
-        <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right=""></searchbar>
-      </form>
-    </li>
-  </navbar>
-</div>
-<h1 id="configjson-file-templates-for-reposense"><code>config.json</code> File Templates for RepoSense</h1>
-<p><strong>If you need to create a <code>_reposense/config.json</code> file for your team repo</strong>, use the json code given below (pick the one that matches your team) as the starting point of that file's content. <span class="dimmed">Reason: the template code has the exact abbreviated name we use to identify you.</span></p>
-<h4 id="w12-1">W12-1</h4>
-<pre><code class="hljs json">{
+          <li><a href="https://oss-generic.github.io/process/codingStandards/CodingStandard-Java.html" target="_blank" class="dropdown-item"><span class="fas fa-code"></span> Java Coding Standard</a></li>
+          <li><a href="https://github.com/nusCS2113-AY1819S1/samplerepo-things" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> samplerepo-things</a></li>
+          <li><a href="https://github.com/nusCS2113-AY1819S1/addressbook-level1" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> Addressbook-level1</a></li>
+          <li><a href="https://github.com/nusCS2113-AY1819S1/addressbook-level2" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> Addressbook-level2</a></li>
+          <li><a href="https://github.com/nusCS2113-AY1819S1/addressbook-level3" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> Addressbook-level3</a></li>
+          <li><a href="https://github.com/nusCS2113-AY1819S1/addressbook-level4" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> Addressbook-level4</a></li>
+          <li><a href="/website/admin/projectList.html" target="_blank" class="dropdown-item"><span class="fas fa-th-list"></span> Projects List</a></li>
+          <li><a href="https://nuscs2113-ay1819s1.github.io/dashboard/" target="_bank" class="dropdown-item"><span class="fas fa-chart-area"></span> Code Dashboard (BETA)</a></li>
+        </dropdown>
+        <li slot="right" class="nav-link">
+          <form class="navbar-form">
+            <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right=""></searchbar>
+          </form>
+        </li>
+      </navbar>
+    </div>
+    <div class="website-content">
+      <p><span style="float:left"><span><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> <a href="peerEvaluations.html">Peer Evaluations</a></span>
+        </span><span style="float:right"><span><a href="gradeBreakdown.html">Grade Breakdown <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+        </span>
+        </span>
+      </p>
+      <br>
+      <p>
+        <div>
+          <h1 id="tools">Tools <span style="font-size:15px" class="text-muted text-light"><span class="badge badge-pill badge-info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span
+              class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              </span>
+              </span>
+          </h1>
+        </div>
+      </p>
+      <div>
+        <navbar placement="top" type="default">
+          <a slot="brand" href="/website/index.html" title="Home" class="navbar-brand">CS2113/T <small>AY1819S1</small></a>
+          <dropdown text="Nested" class="nav-link">
+            <li><a href="/website/index.html" class="dropdown-item"> <span class="fas fa-check"></span> Nested (current format)</a></li>
+            <li><a href="/website/index-flat.html" class="dropdown-item">&nbsp;&nbsp;&nbsp;&nbsp;Flat</a></li>
+          </dropdown>
+          <li><a href="/website/index.html" class="nav-link"><span><strong>Schedule</strong></span></a></li>
+          <li><a href="/website/se-book-adapted/index.html" class="nav-link"><span><strong>Textbook</strong></span></a></li>
+          <li><a href="/website/admin/index.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
+          <dropdown text="Links" class="nav-link">
+            <li><a href="https://github.com/nusCS2113-AY1819S1/website/issues" target="_blank" class="dropdown-item"> <span class="fas fa-bug"></span> Report Bugs</a></li>
+            <li><a href="https://nuscs2113-ay1819s1.slack.com" target="_blank" class="dropdown-item"><span class="fab fa-slack-hash"></span> Slack</a></li>
+            <li><a href="https://github.com/nusCS2113-AY1819S1/forum/issues" target="_blank" class="dropdown-item"><span class="fas fa-comment"></span> Forum</a></li>
+            <li><a href="/website/admin/instructors.html" class="dropdown-item"><span class="fas fa-user-tie"></span> Instructors</a></li>
+            <li><a href="https://ivle.nus.edu.sg/v1/Announcement/default.aspx?CourseID=e3ecf866-dbc2-4b26-8873-82d371aa9b17" target="_blank" class="dropdown-item"><span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span> IVLE Announcements</a></li>
+            <li><a href="https://ivle.nus.edu.sg/v1/File/Student/default.aspx?CourseID=e3ecf866-dbc2-4b26-8873-82d371aa9b17&WorkbinID=208b1acf-7a65-45bf-a7a9-58c54556a0d3&FolderID=4a621f93-0732-42c6-9c25-bb39d3a94225" target="_blank" class="dropdown-item"><span class="fas fa-file-upload"></span> IVLE File Submissions</a></li>
+            <li><a href="/website/admin/tutorials.html" target="_blank" class="dropdown-item"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Tutorial Schedule</a></li>
+
+            <li><a href="https://oss-generic.github.io/process/codingStandards/CodingStandard-Java.html" target="_blank" class="dropdown-item"><span class="fas fa-code"></span> Java Coding Standard</a></li>
+            <li><a href="https://github.com/nusCS2113-AY1819S1/samplerepo-things" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> samplerepo-things</a></li>
+            <li><a href="https://github.com/nusCS2113-AY1819S1/addressbook-level1" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> Addressbook-level1</a></li>
+            <li><a href="https://github.com/nusCS2113-AY1819S1/addressbook-level2" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> Addressbook-level2</a></li>
+            <li><a href="https://github.com/nusCS2113-AY1819S1/addressbook-level3" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> Addressbook-level3</a></li>
+            <li><a href="https://github.com/nusCS2113-AY1819S1/addressbook-level4" target="_blank" class="dropdown-item"><span class="fas fa-code-branch"></span> Addressbook-level4</a></li>
+            <li><a href="/website/admin/projectList.html" target="_blank" class="dropdown-item"><span class="fas fa-th-list"></span> Projects List</a></li>
+            <li><a href="https://nuscs2113-ay1819s1.github.io/dashboard/" target="_bank" class="dropdown-item"><span class="fas fa-chart-area"></span> Code Dashboard (BETA)</a></li>
+          </dropdown>
+          <li slot="right" class="nav-link">
+            <form class="navbar-form">
+              <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right=""></searchbar>
+            </form>
+          </li>
+        </navbar>
+      </div>
+      <h1 id="configjson-file-templates-for-reposense"><code>config.json</code> File Templates for RepoSense</h1>
+      <p><strong>If you need to create a <code>_reposense/config.json</code> file for your team repo</strong>, use the json code given below (pick the one that matches your team) as the starting point of that file's content. <span class="dimmed">Reason: the template code has the exact abbreviated name we use to identify you.</span></p>
+      <h4 id="w12-1">W12-1</h4>
+      <pre><code class="hljs json">{
   <span class="hljs-attr">"authors"</span>:
   [
     {
@@ -95,9 +247,9 @@
   ]
 }
 </code></pre>
-<hr>
-<h4 id="w12-2">W12-2</h4>
-<pre><code class="hljs json">{
+      <hr>
+      <h4 id="w12-2">W12-2</h4>
+      <pre><code class="hljs json">{
   <span class="hljs-attr">"authors"</span>:
   [
     {
@@ -123,9 +275,9 @@
   ]
 }
 </code></pre>
-<hr>
-<h4 id="w12-3">W12-3</h4>
-<pre><code class="hljs json">{
+      <hr>
+      <h4 id="w12-3">W12-3</h4>
+      <pre><code class="hljs json">{
   <span class="hljs-attr">"authors"</span>:
   [
     {
@@ -156,9 +308,9 @@
   ]
 }
 </code></pre>
-<hr>
-<h4 id="w12-4">W12-4</h4>
-<pre><code class="hljs json">{
+      <hr>
+      <h4 id="w12-4">W12-4</h4>
+      <pre><code class="hljs json">{
   <span class="hljs-attr">"authors"</span>:
   [
     {
@@ -184,9 +336,9 @@
   ]
 }
 </code></pre>
-<hr>
-<h4 id="w13-1">W13-1</h4>
-<pre><code class="hljs json">{
+      <hr>
+      <h4 id="w13-1">W13-1</h4>
+      <pre><code class="hljs json">{
   <span class="hljs-attr">"authors"</span>:
   [
     {
@@ -212,9 +364,9 @@
   ]
 }
 </code></pre>
-<hr>
-<h4 id="w13-2">W13-2</h4>
-<pre><code class="hljs json">{
+      <hr>
+      <h4 id="w13-2">W13-2</h4>
+      <pre><code class="hljs json">{
   <span class="hljs-attr">"authors"</span>:
   [
     {
@@ -240,9 +392,9 @@
   ]
 }
 </code></pre>
-<hr>
-<h4 id="w13-3">W13-3</h4>
-<pre><code class="hljs json">{
+      <hr>
+      <h4 id="w13-3">W13-3</h4>
+      <pre><code class="hljs json">{
   <span class="hljs-attr">"authors"</span>:
   [
     {
@@ -268,9 +420,9 @@
   ]
 }
 </code></pre>
-<hr>
-<h4 id="w13-4">W13-4</h4>
-<pre><code class="hljs json">{
+      <hr>
+      <h4 id="w13-4">W13-4</h4>
+      <pre><code class="hljs json">{
   <span class="hljs-attr">"authors"</span>:
   [
     {
@@ -296,9 +448,9 @@
   ]
 }
 </code></pre>
-<hr>
-<h4 id="t09-1">T09-1</h4>
-<pre><code class="hljs json">{
+      <hr>
+      <h4 id="t09-1">T09-1</h4>
+      <pre><code class="hljs json">{
   <span class="hljs-attr">"authors"</span>:
   [
     {
@@ -324,9 +476,9 @@
   ]
 }
 </code></pre>
-<hr>
-<h4 id="t09-2">T09-2</h4>
-<pre><code class="hljs json">{
+      <hr>
+      <h4 id="t09-2">T09-2</h4>
+      <pre><code class="hljs json">{
   <span class="hljs-attr">"authors"</span>:
   [
     {
@@ -352,9 +504,9 @@
   ]
 }
 </code></pre>
-<hr>
-<h4 id="t09-3">T09-3</h4>
-<pre><code class="hljs json">{
+      <hr>
+      <h4 id="t09-3">T09-3</h4>
+      <pre><code class="hljs json">{
   <span class="hljs-attr">"authors"</span>:
   [
     {
@@ -380,9 +532,9 @@
   ]
 }
 </code></pre>
-<hr>
-<h4 id="t09-4">T09-4</h4>
-<pre><code class="hljs json">{
+      <hr>
+      <h4 id="t09-4">T09-4</h4>
+      <pre><code class="hljs json">{
   <span class="hljs-attr">"authors"</span>:
   [
     {
@@ -408,9 +560,9 @@
   ]
 }
 </code></pre>
-<hr>
-<h4 id="t12-1">T12-1</h4>
-<pre><code class="hljs json">{
+      <hr>
+      <h4 id="t12-1">T12-1</h4>
+      <pre><code class="hljs json">{
   <span class="hljs-attr">"authors"</span>:
   [
     {
@@ -441,9 +593,9 @@
   ]
 }
 </code></pre>
-<hr>
-<h4 id="t12-2">T12-2</h4>
-<pre><code class="hljs json">{
+      <hr>
+      <h4 id="t12-2">T12-2</h4>
+      <pre><code class="hljs json">{
   <span class="hljs-attr">"authors"</span>:
   [
     {
@@ -474,9 +626,9 @@
   ]
 }
 </code></pre>
-<hr>
-<h4 id="t12-3">T12-3</h4>
-<pre><code class="hljs json">{
+      <hr>
+      <h4 id="t12-3">T12-3</h4>
+      <pre><code class="hljs json">{
   <span class="hljs-attr">"authors"</span>:
   [
     {
@@ -507,9 +659,9 @@
   ]
 }
 </code></pre>
-<hr>
-<h4 id="t13-1">T13-1</h4>
-<pre><code class="hljs json">{
+      <hr>
+      <h4 id="t13-1">T13-1</h4>
+      <pre><code class="hljs json">{
   <span class="hljs-attr">"authors"</span>:
   [
     {
@@ -540,9 +692,9 @@
   ]
 }
 </code></pre>
-<hr>
-<h4 id="t13-2">T13-2</h4>
-<pre><code class="hljs json">{
+      <hr>
+      <h4 id="t13-2">T13-2</h4>
+      <pre><code class="hljs json">{
   <span class="hljs-attr">"authors"</span>:
   [
     {
@@ -568,9 +720,9 @@
   ]
 }
 </code></pre>
-<hr>
-<h4 id="t13-3">T13-3</h4>
-<pre><code class="hljs json">{
+      <hr>
+      <h4 id="t13-3">T13-3</h4>
+      <pre><code class="hljs json">{
   <span class="hljs-attr">"authors"</span>:
   [
     {
@@ -596,9 +748,9 @@
   ]
 }
 </code></pre>
-<hr>
-<h4 id="t13-4">T13-4</h4>
-<pre><code class="hljs json">{
+      <hr>
+      <h4 id="t13-4">T13-4</h4>
+      <pre><code class="hljs json">{
   <span class="hljs-attr">"authors"</span>:
   [
     {
@@ -629,9 +781,9 @@
   ]
 }
 </code></pre>
-<hr>
-<h4 id="t13-5">T13-5</h4>
-<pre><code class="hljs json">{
+      <hr>
+      <h4 id="t13-5">T13-5</h4>
+      <pre><code class="hljs json">{
   <span class="hljs-attr">"authors"</span>:
   [
     {
@@ -662,9 +814,9 @@
   ]
 }
 </code></pre>
-<hr>
-<h4 id="t16-1">T16-1</h4>
-<pre><code class="hljs json">{
+      <hr>
+      <h4 id="t16-1">T16-1</h4>
+      <pre><code class="hljs json">{
   <span class="hljs-attr">"authors"</span>:
   [
     {
@@ -695,9 +847,9 @@
   ]
 }
 </code></pre>
-<hr>
-<h4 id="t16-2">T16-2</h4>
-<pre><code class="hljs json">{
+      <hr>
+      <h4 id="t16-2">T16-2</h4>
+      <pre><code class="hljs json">{
   <span class="hljs-attr">"authors"</span>:
   [
     {
@@ -728,9 +880,9 @@
   ]
 }
 </code></pre>
-<hr>
-<h4 id="t16-3">T16-3</h4>
-<pre><code class="hljs json">{
+      <hr>
+      <h4 id="t16-3">T16-3</h4>
+      <pre><code class="hljs json">{
   <span class="hljs-attr">"authors"</span>:
   [
     {
@@ -761,9 +913,9 @@
   ]
 }
 </code></pre>
-<hr>
-<h4 id="t16-4">T16-4</h4>
-<pre><code class="hljs json">{
+      <hr>
+      <h4 id="t16-4">T16-4</h4>
+      <pre><code class="hljs json">{
   <span class="hljs-attr">"authors"</span>:
   [
     {
@@ -794,9 +946,9 @@
   ]
 }
 </code></pre>
-<hr>
-<h4 id="f09-1">F09-1</h4>
-<pre><code class="hljs json">{
+      <hr>
+      <h4 id="f09-1">F09-1</h4>
+      <pre><code class="hljs json">{
   <span class="hljs-attr">"authors"</span>:
   [
     {
@@ -822,9 +974,9 @@
   ]
 }
 </code></pre>
-<hr>
-<h4 id="f09-2">F09-2</h4>
-<pre><code class="hljs json">{
+      <hr>
+      <h4 id="f09-2">F09-2</h4>
+      <pre><code class="hljs json">{
   <span class="hljs-attr">"authors"</span>:
   [
     {
@@ -855,9 +1007,9 @@
   ]
 }
 </code></pre>
-<hr>
-<h4 id="f09-3">F09-3</h4>
-<pre><code class="hljs json">{
+      <hr>
+      <h4 id="f09-3">F09-3</h4>
+      <pre><code class="hljs json">{
   <span class="hljs-attr">"authors"</span>:
   [
     {
@@ -888,9 +1040,9 @@
   ]
 }
 </code></pre>
-<hr>
-<h4 id="f09-4">F09-4</h4>
-<pre><code class="hljs json">{
+      <hr>
+      <h4 id="f09-4">F09-4</h4>
+      <pre><code class="hljs json">{
   <span class="hljs-attr">"authors"</span>:
   [
     {
@@ -921,9 +1073,9 @@
   ]
 }
 </code></pre>
-<hr>
-<h4 id="f10-1">F10-1</h4>
-<pre><code class="hljs json">{
+      <hr>
+      <h4 id="f10-1">F10-1</h4>
+      <pre><code class="hljs json">{
   <span class="hljs-attr">"authors"</span>:
   [
     {
@@ -954,9 +1106,9 @@
   ]
 }
 </code></pre>
-<hr>
-<h4 id="f10-2">F10-2</h4>
-<pre><code class="hljs json">{
+      <hr>
+      <h4 id="f10-2">F10-2</h4>
+      <pre><code class="hljs json">{
   <span class="hljs-attr">"authors"</span>:
   [
     {
@@ -982,9 +1134,9 @@
   ]
 }
 </code></pre>
-<hr>
-<h4 id="f10-3">F10-3</h4>
-<pre><code class="hljs json">{
+      <hr>
+      <h4 id="f10-3">F10-3</h4>
+      <pre><code class="hljs json">{
   <span class="hljs-attr">"authors"</span>:
   [
     {
@@ -1015,11 +1167,20 @@
   ]
 }
 </code></pre>
-<hr>
+      <hr>
+      <br>
+      <p><span style="float:left"><span><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> <a href="peerEvaluations.html">Peer Evaluations</a></span>
+        </span><span style="float:right"><span><a href="gradeBreakdown.html">Grade Breakdown <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+        </span>
+        </span>
+      </p>
+    </div>
+  </div>
+</div>
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.10.1</a> at Thu, 18 Oct 2018 11:15:08 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.10.1</a> at Fri, 19 Oct 2018 02:37:55 GMT</small></div>
 </footer>
 </div>
 </body>

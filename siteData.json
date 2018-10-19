@@ -522,6 +522,7 @@
     },
     {
       "headings": {
+        "tools": "Tools \n            \n              \n              \n          ",
         "configjson-file-templates-for-reposense": "config.json File Templates for RepoSense",
         "w12-1": "W12-1",
         "w12-2": "W12-2",
@@ -555,9 +556,10 @@
         "f10-2": "F10-2",
         "f10-3": "F10-3"
       },
-      "title": "config.json File Templates for RepoSense",
+      "title": "Admin: Tools",
       "footer": "footer.md",
-      "head": "scheduleHead.md",
+      "siteNav": "adminSiteNav.md",
+      "head": "adminHead.md",
       "src": "admin/reposenseConfigTemplates.md"
     },
     {
