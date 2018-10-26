@@ -111,7 +111,8 @@
       "headings": {
         "exams": "Exams \n            \n            \n          ",
         "final-exam-part-1-mcq": "Final Exam: Part 1 (MCQ)",
-        "final-exam-part-2-essay": "Final Exam: Part 2 (Essay)"
+        "final-exam-part-2-essay": "Final Exam: Part 2 (Essay)",
+        "resources": "Resources"
       },
       "title": "Admin: Exams",
       "footer": "footer.md",
