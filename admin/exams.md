@@ -26,7 +26,9 @@ Unless stated otherwise, the meaning of answer options are<br>
 **A.** `True`<br>
 **B.** `False` <br>
 
-The exam paper has 50 questions.  
+The exam paper has 50 questions. All questions carry equal marks.
+
+==The weightage of the Part 1 of the final exam is 25 marks out of the total score of 100.==
 
 Note that you have **slightly more than ½ minute for each question**, which means you need to go through the questions fairly quickly.
 
@@ -51,10 +53,13 @@ However, given the fast pace required by Part 1, you will not have time left to 
 
 Unlike in part 1, **you can ask invigilators for clarifications** if you found a question to be unclear in part 2.
 
-Yes, **you may use pencils** when answering part 2. 
+Yes, **you may use pencils** when answering part 2.
 
-[[Sample paper](http://www.comp.nus.edu.sg/~{{ module | lower }}/AY1819S1/Practice%20Exam%20Paper%20-%20Part%202.pdf)]
-[[Answers to the sample paper](http://www.comp.nus.edu.sg/~{{ module | lower }}/AY1819S1/Practice%20Exam%20Paper%20-%20Part%202%20(answers).pdf)]
+==The weightage of the Part 2 of the final exam is 15 marks out of the total score of 100.==
+
+## Resources
+
+Past exam papers uploaded on IVLE
 
 </div>
 
