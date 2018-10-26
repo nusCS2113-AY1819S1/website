@@ -23,6 +23,7 @@
     <li><a href="{{module_org}}/addressbook-level3" target="_blank" class="dropdown-item">{{ icon_repo }} Addressbook-level3</a></li>
     <li><a href="{{module_org}}/addressbook-level4" target="_blank" class="dropdown-item">{{ icon_repo }} Addressbook-level4</a></li>
     <li><a href="{{baseUrl}}/admin/projectList.html" target="_blank" class="dropdown-item">{{ fas_th_list }} Projects List</a></li>
+    <li><a href="https://nuscs2113-ay1819s1.github.io/dashboard/" target="_bank" class="dropdown-item">{{ fas_chart_area  }} Code Dashboard (BETA)</a></li>
   </dropdown>
   <li slot="right" class="nav-link">
     <form class="navbar-form">
