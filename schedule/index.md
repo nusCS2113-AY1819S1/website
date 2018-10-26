@@ -23,7 +23,7 @@ head: scheduleHead.md
 ] %}
 
 
-{% set current_weeks = ["8","9"] %}
+{% set current_weeks = ["11"] %}
 
 
 {% set all_outcomes = [
@@ -493,17 +493,6 @@ head: scheduleHead.md
   {name: "Requirements"},
     {heading: "Can explain object oriented domain models"},
       {location: ["modeling", "modelingStructures", "objectOrientedDomainModels"], omit_evidence: true},
-  {name: "Design"},
-    {heading: "Can apply some more design patterns"},
-      {location: ["designPatterns", "modelViewController", "what"]},
-      {location: ["designPatterns", "observer", "what"]},
-      {location: ["designPatterns", "abstractionOccurrence", "what"]},
-      {location: ["designPatterns", "more", "otherDesignPatterns"]},
-    {heading: "Can optimize the use of design patterns"},
-      {location: ["designPatterns", "more", "combiningDesignPatterns"]},
-      {location: ["designPatterns", "more", "usingDesignPatterns"]},
-      {location: ["designPatterns", "more", "vsPrinciples"], omit_evidence: true},
-      {location: ["designPatterns", "more", "otherTypesOfPatterns"]},
   {name: "Quality Assurance"},
     {heading: "Can apply heuristics to combine multiple test inputs"},
       {location: ["testCaseDesign", "combiningTestInputs", "why"], omit_evidence: true},
@@ -527,6 +516,16 @@ head: scheduleHead.md
     {heading: "Can release a product incrementally", priority: "1", file: "project.md#v13"},
 {week: "12"},
   {name: "Design"},
+      {heading: "Can apply some more design patterns"},
+        {location: ["designPatterns", "modelViewController", "what"]},
+        {location: ["designPatterns", "observer", "what"]},
+        {location: ["designPatterns", "abstractionOccurrence", "what"]},
+        {location: ["designPatterns", "more", "otherDesignPatterns"]},
+      {heading: "Can optimize the use of design patterns"},
+        {location: ["designPatterns", "more", "combiningDesignPatterns"]},
+        {location: ["designPatterns", "more", "usingDesignPatterns"]},
+        {location: ["designPatterns", "more", "vsPrinciples"], omit_evidence: true},
+        {location: ["designPatterns", "more", "otherTypesOfPatterns"]},
     {heading: "Can explain some UML models"},
       {location: ["modeling", "modelingStructures", "deploymentDiagrams"], omit_evidence: true},
       {location: ["modeling", "modelingStructures", "componentDiagrams"], omit_evidence: true},
