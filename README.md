@@ -1,4 +1,4 @@
-### CS2103 Website
+### CS2113 Website
 
 [Live Website (redirected)](http://www.comp.nus.edu.sg/~cs2113)
 
