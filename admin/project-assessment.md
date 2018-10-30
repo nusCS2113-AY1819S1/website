@@ -23,7 +23,7 @@ Evaluates:
 
 How good your implementation is, in terms of the quality and the quantity of the code you have written yourself.
 
-Based on: an inspection of the collated code (submitted in your `/collated/*.md` files).
+Based on: an inspection of the collated code (obtained from Reposense).
 
 <panel header=":bulb: Tips: how to score high for code quality" no-close>
 
@@ -61,9 +61,13 @@ Based on: an inspection of the collated code (submitted in your `/collated/*.md`
 
 Evaluates: How good is your Quality Assurance? 
 
-Based on: 1. your test code 2. our own manual testing 3. your performance in the v1.4 [Practical Exam]({{baseUrl}}/admin/index-flat.html#deliverable-practical-exam), 4. bugs found during PE.
+Based on: 1. your test code 2. our own manual testing 3. your performance in the two Practical Exams (PE), 4. bugs found during PE.
 
-{{ embed_topic("project-deliverables.md#project-deliverables-practicalexam", "Admin " + icon_embedding + " Deliverables → Practical Exam", "projectAssessment-Pe", "3") }}
+{{ embed_topic("project-deliverables.md#project-deliverables-practicalexam-dry-run", "Admin " + icon_embedding + " Project Deliverables → **Practical Exam - Round 1**", "v13-peDryRun", "1") }}
+
+
+{{ embed_topic("project-deliverables.md#project-deliverables-practicalexam", "Admin " + icon_embedding + " Project Deliverables → **Practical Exam - Round 2**", "projectAssessment-Pe", "1") }}
+
 <panel type="seamless" header="Expectations for writing automated tests:" expanded>
   <include src="project-testing.fr#expectations"/>
 </panel>
