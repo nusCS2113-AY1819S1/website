@@ -2699,6 +2699,57 @@
             <li>Demo your product for v1.3 using the jar file from GitHub.</li>
             <li>Two or three members do the demo of the entire product.</li>
           </ul>
+          <p><strong>Questions to discuss during tutorial</strong></p>
+          <ul>
+            <li>What does OODM model?</li>
+            <li>What is gray box testing?</li>
+            <li>Explain: Equivalence Partitioning improves E&amp;E of testing</li>
+            <li>What are the EP for <code>day</code> parameter?</li>
+          </ul>
+          <pre><code class="hljs java"><span class="hljs-comment">/** 
+ * Returns true if the three values represent a valid day
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">boolean</span> <span class="hljs-title">isValidDay</span><span class="hljs-params">(<span class="hljs-keyword">int</span> year, <span class="hljs-keyword">int</span> month, <span class="hljs-keyword">int</span> day)</span> </span>{ … }
+</code></pre>
+          <ul>
+            <li>Explain: Boundary Value Analysis improves E&amp;E of testing</li>
+            <li>What are boundary values for the parameter <code>day</code>?</li>
+            <li>Apply heuristics for combining multiple test inputs to improve the E&amp;E of the following test cases, assuming all 6 values in the table need to be tested. Italics indicate invalid values. Point out where the heuristics are contradicted
+              and how to improve the test cases. <br> SUT: <code>consume(food, drink)</code></li>
+          </ul>
+          <div class="table-responsive">
+            <table class="markbind-table table table-bordered table-striped">
+              <thead>
+                <tr>
+                  <th>Test Case</th>
+                  <th>Food</th>
+                  <th>Drink</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>TC1</td>
+                  <td>Rice</td>
+                  <td>Soda</td>
+                </tr>
+                <tr>
+                  <td>TC2</td>
+                  <td>Ice cream</td>
+                  <td><em>Poison</em></td>
+                </tr>
+                <tr>
+                  <td>TC3</td>
+                  <td><em>Stone</em></td>
+                  <td><em>Acid</em></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ul>
+            <li>Which process do we use in the project?</li>
+            <li>Distinguish between breadth-first and depth-first iterative processes using your project as an example.</li>
+            <li>Relate agile process to the project</li>
+          </ul>
           <br>
           <panel type="seamless" header="##### Evidence for weekly LOs %%(for reference)%%">
             <panel type="seamless" expanded="">
@@ -3608,7 +3659,7 @@
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.10.1</a> at Tue, 30 Oct 2018 05:32:21 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.10.1</a> at Tue, 30 Oct 2018 08:55:06 GMT</small></div>
 </footer>
 </div>
 </body>
