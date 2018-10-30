@@ -189,7 +189,7 @@
           <p>Evaluates:</p>
           <p><strong>A. Code quality/quantity:</strong></p>
           <p>How good your implementation is, in terms of the quality and the quantity of the code you have written yourself.</p>
-          <p>Based on: an inspection of the collated code (submitted in your <code>/collated/*.md</code> files).</p>
+          <p>Based on: an inspection of the collated code (obtained from Reposense).</p>
           <panel header=":bulb: Tips: how to score high for code quality" no-close="">
             <span id="code-quality-tips">
 <ul>
@@ -2027,16 +2027,551 @@ compact(input);
         </panel>
         <panel header="3. **QA** %%[<span class='fas fa-user'></span> 10 marks]%%" expanded="">
           <p>Evaluates: How good is your Quality Assurance?</p>
-          <p>Based on: 1. your test code 2. our own manual testing 3. your performance in the v1.4 <a href="/website/admin/index-flat.html#deliverable-practical-exam">Practical Exam</a>, 4. bugs found during PE.</p>
+          <p>Based on: 1. your test code 2. our own manual testing 3. your performance in the two Practical Exams (PE), 4. bugs found during PE.</p>
           <div class="flat">
             <div>
-              <p><span class="dimmed">Relevant: [<trigger trigger="click" for="modal:projectAssessment-Pe">Admin <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Deliverables → Practical Exam</trigger> <span class="glyphicon glyphicon-star"
-                  aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>]</span>
+              <p><span class="dimmed">Relevant: [<trigger trigger="click" for="modal:v13-peDryRun">Admin <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Project Deliverables → <strong>Practical Exam - Round 1</strong></trigger>
+                <span
+                  class="glyphicon glyphicon-star" aria-hidden="true"></span>]</span>
               </p>
             </div>
           </div>
-          <modal large="" title="Admin <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Deliverables → Practical Exam  <span class='glyphicon glyphicon-star' aria-hidden='true'></span><span class='glyphicon glyphicon-star' aria-hidden='true'></span><span class='glyphicon glyphicon-star' aria-hidden='true'></span>"
-            id="modal:projectAssessment-Pe">
+          <modal large="" title="Admin <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Project Deliverables → **Practical Exam - Round 1**  <span class='glyphicon glyphicon-star' aria-hidden='true'></span>" id="modal:v13-peDryRun">
+          
+            <div>
+              <p><strong>What</strong>: The v1.3 is subjected to a round of peer <em>acceptance/system testing</em>, also called the <em>Practical Exam Round 1 (PE-1)</em>. This round of testing will be graded similar to the
+                <trigger trigger="click" for="modal:projectDeliverablesPeDryRun-pe">Practical Exam (Round 2) that will be done at v1.4</trigger>.</p>
+              <p><strong>When, where</strong>: 45 minute slot at the end of week 11 lecture, in the Lecture venue</p>
+              <modal large="" title="Admin <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Project → Deliverables → Practical Exam" id="modal:projectDeliverablesPeDryRun-pe">
+              
+                <div>
+                  <p><strong>Objectives:</strong></p>
+                  <ul>
+                    <li>Evaluate your,
+                      <ul>
+                        <li>manual testing skills</li>
+                        <li>product evaluation skills</li>
+                        <li>effort estimation skills</li>
+                      </ul>
+                    </li>
+                    <li>Peer-evaluate your
+                      <ul>
+                        <li>product design <span class="fas fa-users"></span></li>
+                        <li>implementation effort <span class="fas fa-user"></span></li>
+                        <li>documentation quality <span class="fas fa-user"></span></li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <tip-box>
+                    <p><strong>When, where</strong>: Week 13 lecture</p>
+                    <p>
+                      <font color="red"><big><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span></big></font> <strong>Grading</strong>:</p>
+                    <ul>
+                      <li>Your performance in the practical exam will be considered for your final grade (under the <em>QA</em> category and under <em>Implementation</em> category, about 10 marks in total).</li>
+                      <li>You will be graded based on your effectiveness as a tester (e.g., the percentage of the bugs you found, the nature of the bugs you found) and how far off your evaluation/estimates are from the evaluator consensus. <span class="dimmed"> Explanation: we understand that you have limited expertise in this area; hence, we penalize only if your inputs don't seem to be based on a sincere effort to test/evaluate.</span></li>
+                      <li>The bugs found in your product by others <mark>will affect your v1.4 marks</mark>. You will be given a chance to reject false-positive bug reports.</li>
+                    </ul>
+                  </tip-box>
+                  <div>
+                    <p><strong>Preparation</strong>:</p>
+                    <ul>
+                      <li>
+                        <p>Ensure that <strong>you can access the relevant issue tracker</strong> given below:<br> -- for PE-1: <a href="https://github.com/nusCS2113-AY1819S1/pe-1/issues">nusCS2113-AY1819S1/<strong>pe-1</strong></a><br> -- for PE-2: <a href="https://github.com/nusCS2113-AY1819S1/pe-2/issues">nusCS2113-AY1819S1/<strong>pe-2</strong></a></p>
+                        <ul>
+                          <li>If you cannot access it, you may not have accepted the invitation to join the GitHub org used by the module. Go to <a href="https://github.com/orgs/nusCS2113-AY1819S1/invitation">https://github.com/orgs/nusCS2113-AY1819S1/invitation</a>                            to accept the invitation.</li>
+                          <li>If you cannot find the invitation, post in our <a href="https://github.com/nusCS2113-AY1819S1/forum/issues">forum</a>.</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <p>Ensure you have access to a <strong>computer that is able to run module projects</strong> <span class="dimmed"> e.g. has the right Java version</span>.</p>
+                      </li>
+                      <li>
+                        <p><strong>Have a good screen grab tool</strong> with annotation features so that you can quickly take a screenshot of a bug, annotate it, and post in the issue tracker.</p>
+                        <ul>
+                          <li>💡 You can use <kbd>Ctrl</kbd>+<kbd>V</kbd> to paste a picture from the clipboard into a text box in GitHub issue tracker.</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <p><strong>Charge your computer</strong> before coming to the PE session. The testing venue may not have enough charging points.</p>
+                      </li>
+                    </ul>
+                  </div>
+                  <p><strong>During:</strong></p>
+                  <ol>
+                    <li><strong>Take note of your team to test</strong>. It will be given to you by the teaching team (distributed via IVLE gradebook).</li>
+                    <li><strong>Download from IVLE all files</strong> submitted by the team <span class="dimmed">(i.e. jar file, User Guide, Developer Guide, and Project Portfolio Pages)</span> <mark>into an empty folder</mark>.</li>
+                    <li><strong>[~45 minutes] Test the product and report bugs</strong> as described below:</li>
+                  </ol>
+                  <div class="indented-level2">
+                    <div>
+                      <box>
+                        <h5 id="testing-instructions-for-pe-1-and-pe-2">Testing instructions for PE-1 and PE-2</h5>
+                        <ul>
+                          <li>
+                            <p><strong>What to test</strong>:</p>
+                            <ul>
+                              <li>PE-1 (at v1.3):
+                                <ul>
+                                  <li>Test the product <mark>based on the User Guide</mark> (the UG is most likely accessible using the <code>help</code> command).</li>
+                                  <li>Do <mark><em>system</em> testing first</mark> <span class="dimmed">i.e., does the product work as specified by the documentation?</span>. If there is time left, you can <mark>do <em>acceptance</em> testing as well</mark>                                    <span class="dimmed">i.e., does the product solve the problem it claims to solve?</span>.</li>
+                                </ul>
+                              </li>
+                              <li>PE-2 (at v1.4):
+                                <ul>
+                                  <li>Test the product <mark>based on the Developer Guide</mark> (Appendix named <em>Instructions for Manual Testing</em>) <mark>and the User Guide</mark>. The testing instructions in the Developer Guide can provide you some
+                                    guidance but if you follow those instructions strictly, you are unlikely to find many bugs. You can deviate from the instructions to probe areas that are more likely to have bugs.</li>
+                                  <li>Do <mark><em>system testing only</em></mark>. No need to do <em>acceptance testing</em>.</li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <p><strong>What not to test</strong>:</p>
+                            <ul>
+                              <li>Omit features that are driven by GUI inputs (e.g. buttons, menus, etc.) <span class="dimmed"> Reason: Only CLI-driven features can earn credit, as per given project constraints.</span> Some features might have both a GUI-driven
+                                and CLI-driven ways to invoke them, in which case test only the CLI-driven way of invoking it.</li>
+                              <li>Omit feature that existed in AB-4.</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <p><strong>These are considered <em>bugs</em></strong>:</p>
+                            <ul>
+                              <li>Behavior differs from the User Guide (or Developer Guide)</li>
+                              <li>A legitimate user behavior is not handled <span class="dimmed">e.g. incorrect commands, extra parameters</span></li>
+                              <li>Behavior is not specified and differs from normal expectations <span class="dimmed">e.g. error message does not match the error</span></li>
+                              <li>Problems in the User Guide e.g., missing/incorrect info</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <p><strong>Where to report bugs</strong>: Post bug in the following issue trackers (<mark>not in the team's repo</mark>):</p>
+                            <ul>
+                              <li>PE-1 (at v1.3): <a href="https://github.com/nusCS2113-AY1819S1/pe-1/issues">nusCS2113-AY1819S1/<strong>pe-1</strong></a>.</li>
+                              <li>PE-2 (at v1.4): <a href="https://github.com/nusCS2113-AY1819S1/pe-2/issues">nusCS2113-AY1819S1/<strong>pe-2</strong></a>.</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <p><strong>Bug report format</strong>:</p>
+                            <ul>
+                              <li><mark>Do not use team ID in bug reports</mark>. <span class="dimmed">Reason: to prevent others copying your bug reports</span></li>
+                              <li>Each bug should be a separate issue.</li>
+                              <li>Write good quality bug reports; <mark>poor quality or incorrect bug reports will not earn credit</mark>.</li>
+                              <li>Use a descriptive title.</li>
+                              <li>Give a good description of the bug with steps to reproduce and screenshots.</li>
+                              <li>Use the template(s) in the issue tracker as much as possible.</li>
+                              <li>Assign a severity to the bug report:</li>
+                            </ul>
+                          </li>
+                        </ul>
+                        <div class="indented-level4">
+                          <div>
+                            <tip-box>
+                              <p>Bug Severity labels:</p>
+                              <ul>
+                                <li><code>severity.Low</code> : A flaw that is unlikely to affect normal operations of the product. Appears only in very rare situations and causes a minor inconvenience only.</li>
+                                <li><code>severity.Medium</code> : A flaw that causes occasional inconvenience to some users but they can continue to use the product.</li>
+                                <li><code>severity.High</code> : A flaw that affects most users and causes major problems for users. i.e., makes the product almost unusable for most users.</li>
+                              </ul>
+                            </tip-box>
+                          </div>
+                        </div>
+                        <ul>
+                          <li><strong>About posting <em>suggestions</em>:</strong>
+                            <ul>
+                              <li>PE-1 (at v1.3): You can also post suggestions on how to improve the product. 💡 Be diplomatic when reporting bugs or suggesting improvements. For example, instead of criticising the current behavior, simply suggest alternatives
+                                to consider.</li>
+                              <li>PE-2 (at v1.4): Do not post suggestions.</li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </box>
+                    </div>
+                  </div>
+                  <ol>
+                    <li>
+                      <p><strong>[~40 minutes] Evaluate the following aspects.</strong> Note down your evaluation in a hard copy (as a backup). Submit via TEAMMATES.</p>
+                      <ul>
+                        <li>
+                          <p><strong>A. Cohesiveness of product features</strong> [<span class="fas fa-users"></span>]: Do the features fit together and match the stated target user and the value proposition?</p>
+                          <ul>
+                            <li><code>low</code>: One of these
+                              <ul>
+                                <li>target user is too general <span class="dimmed"> i.e. wider than AB4</span></li>
+                                <li>target user and value proposition is not clear from the user guide</li>
+                                <li>features don't seem to fit together for the most part</li>
+                              </ul>
+                            </li>
+                            <li><code>medium</code>: Some features fit together but some don't.</li>
+                            <li><code>high</code>: All features fit together but the features are not very high value to the target user.</li>
+                            <li><code>excellent</code>: The target user is clearly defined (not too general) and almost all new features are of high-value to the target user. i.e. the product is very attractive to the target user.</li>
+                            <li><code>unable to judge</code>: You are unable to judge this aspect for some reason.</li>
+                          </ul>
+                        </li>
+                        <li>
+                          <p><strong>B. Quality of user docs</strong> [<span class="fas fa-user"></span>]: Evaluate based on the parts of the user guide written by the person, as reproduced in the project portfolio. <mark>Evaluate from an end-user perspective.</mark></p>
+                          <ul>
+                            <li><code>low</code>: Hard to understand, often inaccurate or missing important information.</li>
+                            <li><code>medium</code>: Needs some effort to understand; some information is missing.</li>
+                            <li><code>high</code>: Mostly easy to follow. Only a few areas for improvements.</li>
+                            <li><code>excellent</code>: Easy to follow and accurate. Just enough information, visuals, examples etc. (not too much either).</li>
+                            <li><code>unable to judge</code>: Less than 1 page worth of UG content written by the student.</li>
+                          </ul>
+                        </li>
+                        <li>
+                          <p><strong>C. Amount of work</strong> [<span class="fas fa-user"></span>]: Evaluate the amount of work on a scale of 0 to 30</p>
+                          <ul>
+                            <li>Consider <a href="https://github.com/se-edu/addressbook-level4/pull/440/files">this PR (<code>history</code> command)</a> as 5 units of effort which means <a href="https://github.com/se-edu/addressbook-level4/pull/610/files">this PR (<code>undo/redo</code> command)</a>                              is about 15 points of effort. Given that 30 points matches an effort twice as that needed for the <code>undo/redo</code> feature (which was given as an example of an <code>A</code> grade project), we expect most students
+                              to be have efforts lower than 20.</li>
+                            <li>Count all implementation/testing/documentation work as mentioned in that person's portfolio page.</li>
+                            <li>
+                              <font color="red"><big><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span></big></font> Do not give a high value just <em>to be nice</em>. If your estimate is wildly inaccurate, it means you are unable to estimate
+                              the effort required to implement a feature in a project that you are supposed to know well at this point. <mark>You will lose marks if that is the case.</mark></li>
+                            <li>When estimating effort, ignore features that are driven by GUI inputs.</li>
+                          </ul>
+                        </li>
+                        <li>
+                          <p><strong>D. Depth of feature</strong> [<span class="fas fa-user"></span>]: Evaluate the feature done by the student for difficulty, depth, and completeness. Note: examples given below assumes AB4 did not have the commands <code>edit</code>,
+                            <code>undo</code>, and <code>redo</code>.</p>
+                          <ul>
+                            <li><code>low</code> : An easy feature <span class="dimmed"> e.g. make the existing <em>find</em> command case insensitive</span>.</li>
+                            <li><code>medium</code> : Moderately difficult feature, barely acceptable implementation <span class="dimmed"> e.g. an <em>edit</em> command that requires the user to type <em>all</em> fields, even the ones that are not being edited</span>.</li>
+                            <li><code>high</code>: One of the below
+                              <ul>
+                                <li>A moderately difficult feature but fully implemented <span class="dimmed"> e.g. an <em>edit</em> command that allows editing any field</span>.</li>
+                                <li>A difficult feature with a reasonable implementation but some aspects are not covered <span class="dimmed"> undo/redo command that only allows a single undo/redo</span>.</li>
+                              </ul>
+                            </li>
+                            <li><code>excellent</code>: A difficult feature, all reasonable aspects are fully implemented <span class="dimmed"> undo/redo command that allows multiple undo/redo</span>.</li>
+                            <li><code>outstanding</code>: A difficult feature, implemented as good as it can be under the circumstances. <span class="dimmed"> undo/redo command that even allows undoing non-mutating commands such as <em>select</em>, allows selectively undo specific commands in the history, etc.</span></li>
+                            <li><code>unable to judge</code>: You are unable to judge this aspect for some reason.</li>
+                          </ul>
+                        </li>
+                        <li>
+                          <p><strong>E. Quality of developer docs</strong> [<span class="fas fa-user"></span>]: Evaluate based on the developer docs cited/reproduced in the respective project portfolio page. <mark>Evaluate from the perspective of a new developer trying to understand how the features are implemented.</mark></p>
+                          <ul>
+                            <li><code>low</code>: One of these
+                              <ul>
+                                <li>Very small amount of content (i.e., 0.5 - 1 page).</li>
+                                <li>Hardly any use to the reader (i.e., content doesn't make much sense or redundant).</li>
+                                <li>Uses ad-hoc diagrams where UML diagrams could have been used instead.</li>
+                                <li>Multiple notation errors in UML diagrams.</li>
+                              </ul>
+                            </li>
+                            <li><code>medium</code>: <em>Some</em> diagrams, <em>some</em> descriptions, but does not help the reader that much <span class="dimmed"> e.g. overly complicated diagrams</span>.</li>
+                            <li><code>high</code>: Enough diagrams (at lest two kinds of UML diagrams used) and enough descriptions (about 2 pages worth) but explanations are not always easy to follow.</li>
+                            <li><code>excellent</code>: Easy to follow. Just enough information (not too much). Minimum repetition of content/diagrams. Good use of diagrams to complement text descriptions. Easy to understand diagrams with just enough details
+                              rather than very complicated diagrams that are hard to understand.</li>
+                            <li><code>unable to judge</code>: One of these
+                              <ul>
+                                <li>no content at all.</li>
+                                <li>less than 0.5 pages worth of content.</li>
+                                <li>other problems in the document <span class="dimmed"> e.g. looks like included wrong content</span>.</li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ol>
+                  <p><strong>Bug Review Period</strong>:</p>
+                  <p>There will be a review period for you to respond to the <a href="https://github.com/nusCS2113-AY1819S1/pe-results/issues">bug reports</a> you received.</p>
+                  <p>Duration: The review period will start around 1 day after the PE (exact time to be announced) and will last until the following <strong>Wednesday midnight</strong>.</p>
+                  <p>Bug reviewing is recommended to be done as a team as some of the decisions need team consensus.</p>
+                  <tip-box>
+                    <p><strong>Instructions for Reviewing Bug Reports</strong></p>
+                    <ul>
+                      <li>
+                        <p><strong>First, don't freak out if there are lot of bug reports.</strong> Many can be duplicates and some can be <em>false positives</em>. In any case, we anticipate that all of these products will have some bugs and our penalty
+                          for bugs is not harsh. Furthermore, it depends on the severity of the bug. Some bug may not even be penalized.</p>
+                      </li>
+                      <li>
+                        <p><strong>Do not edit the subject or the description. Do not close bug reports.</strong> Your response (if any) should be added as a comment.</p>
+                      </li>
+                      <li>
+                        <p><strong>If the bug is reported multiple times</strong>, mark all copies EXCEPT one as duplicates using the <code>duplicate</code> tag. In addition, use <a href="https://help.github.com/articles/about-duplicate-issues-and-pull-requests/">this technique</a>                          to indicate which issue they are duplicates of. Duplicates can be omitted from processing steps given below.</p>
+                      </li>
+                      <li>
+                        <p><strong>If a bug seems to be for a different product</strong> (i.e. wrongly assigned to your team), let us know (email prof).</p>
+                      </li>
+                      <li>
+                        <p><strong>Decide if it is a real bug and apply ONLY one of these labels</strong>.</p>
+                      </li>
+                    </ul>
+                    <tip-box>
+                      <p>Response Labels:</p>
+                      <ul>
+                        <li><code>response.Accepted</code> : You accept it as a bug.</li>
+                        <li><code>response.Rejected</code> : What tester thought as a bug is in fact expected behavior. ❗️ The penalty for rejecting a bug using an unjustifiable explanation is higher than the penalty if the same bug was accepted. You can
+                          also reject bugs that you inherited from AB4.</li>
+                        <li><code>response.CannotReproduce</code> : You are unable to reproduce the behavior reported in the bug after multiple tries.</li>
+                        <li><code>response.IssueUnclear</code> : The issue description is not clear.</li>
+                      </ul>
+                    </tip-box>
+                    <ul>
+                      <li>If applicable, <strong>decide the type of bug</strong>:</li>
+                    </ul>
+                    <tip-box>
+                      <p>Bug Type Labels:</p>
+                      <ul>
+                        <li><code>type-FunctionalityBug</code> : the bug is a flaw in how the product works.</li>
+                        <li><code>type-DocumentationBug</code> : the bug is in the documentation.</li>
+                      </ul>
+                    </tip-box>
+                    <ul>
+                      <li><strong>Suggest a severity for the bug</strong>:</li>
+                    </ul>
+                    <div>
+                      <tip-box>
+                        <p>Bug Severity labels:</p>
+                        <ul>
+                          <li><code>severity.Low</code> : A flaw that is unlikely to affect normal operations of the product. Appears only in very rare situations and causes a minor inconvenience only.</li>
+                          <li><code>severity.Medium</code> : A flaw that causes occasional inconvenience to some users but they can continue to use the product.</li>
+                          <li><code>severity.High</code> : A flaw that affects most users and causes major problems for users. i.e., makes the product almost unusable for most users.</li>
+                        </ul>
+                      </tip-box>
+                    </div>
+                    <ul>
+                      <li>
+                        <p><strong>Decide who should fix the bug</strong>. Use the <code>Assignees</code> field to assign the issue to that person(s). There is no need to actually fix the bug though. It's simply an indication/acceptance of responsibility.
+                          <strong>If there is no assignee and we are unable to determine a suitable assignee ourselves, we'll have no choice but to distribute the penalty for that bug (if any) among all team members.</strong></p>
+                      </li>
+                      <li>
+                        <p><strong>Add an explanatory comment</strong> explaining your choice of labels and assignees.</p>
+                      </li>
+                    </ul>
+                  </tip-box>
+                </div>
+              </modal>
+              <p>
+                <font color="red"><big><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span></big></font> <strong>Grading</strong>: Taking part in the PE-1 is strongly encouraged as it <mark>can affect your grade in the following ways</mark>.</p>
+              <ul>
+                <li>We will consider your performance in both PE-1 as well as PE-2 when grading.</li>
+                <li>You will be graded based on your effectiveness as a tester (e.g., the percentage of the bugs you found, the nature of the bugs you found) and how far off your evaluation/estimates are from the evaluator consensus. <span class="dimmed"> Explanation: we understand that you have limited expertise in this area; hence, we penalize only if your inputs don't seem to be based on a sincere effort to test/evaluate.</span></li>
+                <li>There is <mark>no penalty for bugs reported</mark> in your product. Every bug you find is a win-win for you and the team whose product you are testing.</li>
+              </ul>
+              <p><strong>Objectives</strong>:</p>
+              <ul>
+                <li><strong>To train you</strong> to do manual testing, bug reporting, bug
+                  <tooltip content="assigning of priority order">triaging,</tooltip> bug fixing, communicating with users/testers/developers, evaluating products etc.</li>
+                <li><strong>To help you improve your product</strong> before the final submission.</li>
+              </ul>
+              <div>
+                <p><strong>Preparation</strong>:</p>
+                <ul>
+                  <li>
+                    <p>Ensure that <strong>you can access the relevant issue tracker</strong> given below:<br> -- for PE-1: <a href="https://github.com/nusCS2113-AY1819S1/pe-1/issues">nusCS2113-AY1819S1/<strong>pe-1</strong></a><br> -- for PE-2: <a href="https://github.com/nusCS2113-AY1819S1/pe-2/issues">nusCS2113-AY1819S1/<strong>pe-2</strong></a></p>
+                    <ul>
+                      <li>If you cannot access it, you may not have accepted the invitation to join the GitHub org used by the module. Go to <a href="https://github.com/orgs/nusCS2113-AY1819S1/invitation">https://github.com/orgs/nusCS2113-AY1819S1/invitation</a>                        to accept the invitation.</li>
+                      <li>If you cannot find the invitation, post in our <a href="https://github.com/nusCS2113-AY1819S1/forum/issues">forum</a>.</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <p>Ensure you have access to a <strong>computer that is able to run module projects</strong> <span class="dimmed"> e.g. has the right Java version</span>.</p>
+                  </li>
+                  <li>
+                    <p><strong>Have a good screen grab tool</strong> with annotation features so that you can quickly take a screenshot of a bug, annotate it, and post in the issue tracker.</p>
+                    <ul>
+                      <li>💡 You can use <kbd>Ctrl</kbd>+<kbd>V</kbd> to paste a picture from the clipboard into a text box in GitHub issue tracker.</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <p><strong>Charge your computer</strong> before coming to the PE session. The testing venue may not have enough charging points.</p>
+                  </li>
+                </ul>
+              </div>
+              <p><strong>During the session</strong>:</p>
+              <ol>
+                <li><strong>Take note of your team to test and your <em>Tester ID</em></strong>. Distributed via IVLE gradebook.</li>
+                <li>Download the latest jar file from the team's GitHub page. <mark>Copy it to an empty folder</mark>.</li>
+              </ol>
+              <div id="project-deliverables-pe-testing-intructions">
+                <box>
+                  <h5 id="testing-instructions-for-pe-1-and-pe-2-2">Testing instructions for PE-1 and PE-2</h5>
+                  <ul>
+                    <li>
+                      <p><strong>What to test</strong>:</p>
+                      <ul>
+                        <li>PE-1 (at v1.3):
+                          <ul>
+                            <li>Test the product <mark>based on the User Guide</mark> (the UG is most likely accessible using the <code>help</code> command).</li>
+                            <li>Do <mark><em>system</em> testing first</mark> <span class="dimmed">i.e., does the product work as specified by the documentation?</span>. If there is time left, you can <mark>do <em>acceptance</em> testing as well</mark>
+                              <span
+                                class="dimmed">i.e., does the product solve the problem it claims to solve?</span>.</li>
+                          </ul>
+                        </li>
+                        <li>PE-2 (at v1.4):
+                          <ul>
+                            <li>Test the product <mark>based on the Developer Guide</mark> (Appendix named <em>Instructions for Manual Testing</em>) <mark>and the User Guide</mark>. The testing instructions in the Developer Guide can provide you some guidance
+                              but if you follow those instructions strictly, you are unlikely to find many bugs. You can deviate from the instructions to probe areas that are more likely to have bugs.</li>
+                            <li>Do <mark><em>system testing only</em></mark>. No need to do <em>acceptance testing</em>.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p><strong>What not to test</strong>:</p>
+                      <ul>
+                        <li>Omit features that are driven by GUI inputs (e.g. buttons, menus, etc.) <span class="dimmed"> Reason: Only CLI-driven features can earn credit, as per given project constraints.</span> Some features might have both a GUI-driven
+                          and CLI-driven ways to invoke them, in which case test only the CLI-driven way of invoking it.</li>
+                        <li>Omit feature that existed in AB-4.</li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p><strong>These are considered <em>bugs</em></strong>:</p>
+                      <ul>
+                        <li>Behavior differs from the User Guide (or Developer Guide)</li>
+                        <li>A legitimate user behavior is not handled <span class="dimmed">e.g. incorrect commands, extra parameters</span></li>
+                        <li>Behavior is not specified and differs from normal expectations <span class="dimmed">e.g. error message does not match the error</span></li>
+                        <li>Problems in the User Guide e.g., missing/incorrect info</li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p><strong>Where to report bugs</strong>: Post bug in the following issue trackers (<mark>not in the team's repo</mark>):</p>
+                      <ul>
+                        <li>PE-1 (at v1.3): <a href="https://github.com/nusCS2113-AY1819S1/pe-1/issues">nusCS2113-AY1819S1/<strong>pe-1</strong></a>.</li>
+                        <li>PE-2 (at v1.4): <a href="https://github.com/nusCS2113-AY1819S1/pe-2/issues">nusCS2113-AY1819S1/<strong>pe-2</strong></a>.</li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p><strong>Bug report format</strong>:</p>
+                      <ul>
+                        <li><mark>Do not use team ID in bug reports</mark>. <span class="dimmed">Reason: to prevent others copying your bug reports</span></li>
+                        <li>Each bug should be a separate issue.</li>
+                        <li>Write good quality bug reports; <mark>poor quality or incorrect bug reports will not earn credit</mark>.</li>
+                        <li>Use a descriptive title.</li>
+                        <li>Give a good description of the bug with steps to reproduce and screenshots.</li>
+                        <li>Use the template(s) in the issue tracker as much as possible.</li>
+                        <li>Assign a severity to the bug report:</li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <div class="indented-level4">
+                    <div>
+                      <tip-box>
+                        <p>Bug Severity labels:</p>
+                        <ul>
+                          <li><code>severity.Low</code> : A flaw that is unlikely to affect normal operations of the product. Appears only in very rare situations and causes a minor inconvenience only.</li>
+                          <li><code>severity.Medium</code> : A flaw that causes occasional inconvenience to some users but they can continue to use the product.</li>
+                          <li><code>severity.High</code> : A flaw that affects most users and causes major problems for users. i.e., makes the product almost unusable for most users.</li>
+                        </ul>
+                      </tip-box>
+                    </div>
+                  </div>
+                  <ul>
+                    <li><strong>About posting <em>suggestions</em>:</strong>
+                      <ul>
+                        <li>PE-1 (at v1.3): You can also post suggestions on how to improve the product. 💡 Be diplomatic when reporting bugs or suggesting improvements. For example, instead of criticising the current behavior, simply suggest alternatives
+                          to consider.</li>
+                        <li>PE-2 (at v1.4): Do not post suggestions.</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </box>
+              </div>
+              <modal large="" title="Admin <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Project →" id="modal:v1.3-ppp">
+              
+                <div>
+                  <p>At the end of the project each student is required to submit a <em>Project Portfolio Page</em>.</p>
+                  <ul>
+                    <li>
+                      <p><strong>Objective:</strong></p>
+                      <ul>
+                        <li>For you to use <span class="dimmed"> (e.g. in your resume)</span> as a well-documented data point of your SE experience</li>
+                        <li>For us to use as a data point to evaluate your,
+                          <ul>
+                            <li>contributions to the project</li>
+                            <li>your documentation skills</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p><strong>What to include:</strong></p>
+                      <ul>
+                        <li>Main things to include:
+                          <ul>
+                            <li>features you implemented <span class="dimmed"> (include relevant extracts from the user guide and the developer guide)</span></li>
+                            <li>features you propose to implement in future <span class="dimmed"> (include relevant extracts from the user guide and the developer guide if applicable)</span><br> Note: the purpose of allowing you to include <em>proposed</em>                              features is to provide you more flexibility to show your documentation skills. <span class="dimmed"> e.g. you can bring in a proposed feature just to give you an opportunity to use a UML diagram type not used by the actual features.</span></li>
+                            <li>other significant contributions to the project <span class="dimmed"> e.g. tweaks to existing features, setting up project tools</span></li>
+                          </ul>
+                        </li>
+                        <li>Other things you can include:
+                          <ul>
+                            <li>Evidence of helping others <span class="dimmed"> e.g. responses you posted in our forum, bugs you reported in other team's products</span>,</li>
+                            <li>Evidence of technical leadership <span class="dimmed"> e.g. offering features for others to reuse, evidence of those features being reused by others</span></li>
+                          </ul>
+                        </li>
+                        <li>If you plan to use the PPP in your Resume, you can also include your SE work outside of the module (will not be graded)</li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p><strong>Format</strong>:</p>
+                      <ul>
+                        <li>Page limit: If you have more content than the limit given below, shorten (or omit some content) so that you do not exceed the page limit. Having too much content in the PPP will be viewed unfavorably during grading. Note: the <mark>page limits given below are <em>after</em> converting to PDF format</mark>.
+                          The actual amount of content you require is actually less than what these numbers suggest because the HTML → PDF conversion adds a lot of spacing around content.
+                          <div class="table-responsive">
+                            <table class="markbind-table table table-bordered table-striped">
+                              <thead>
+                                <tr>
+                                  <th>Content</th>
+                                  <th>Limit</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>Description in point form</td>
+                                  <td>0.5-1</td>
+                                </tr>
+                                <tr>
+                                  <td>Extracts from the User Guide</td>
+                                  <td>1-3</td>
+                                </tr>
+                                <tr>
+                                  <td>Extracts from the Developer Guide</td>
+                                  <td>3-6</td>
+                                </tr>
+                                <tr>
+                                  <td>Total</td>
+                                  <td>5-10</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </li>
+                        <li><span class="fas fa-cube"></span> Follow the <a href="https://nusCS2113-AY1819S1.github.io/addressbook-level4/team/johndoe.html">example in the AddressBook-Level4</a>.</li>
+                        <li>💡 You can use the <a href="http://asciidoctor.org/docs/asciidoc-syntax-quick-reference/#include-files">Asciidoc's <code>include</code> feature</a> to include sections from the developer guide or the user guide in your PPP. Follow
+                          the example in the <a href="https://nus-cs2113-ay1819s1.github.io/addressbook-level4/team/johndoe.html">sample</a>.</li>
+                        <li><mark>❗️ It is assumed that all contents in the PPP were written primarily by you.</mark> If any section is written by someone else <span class="dimmed"> e.g. someone else wrote described the feature in the User Guide but you implemented the feature</span>,
+                          clearly state that the section was written by someone else <span class="dimmed"> (e.g. <code>Start of Extract [from: User Guide] written by Jane Doe</code>)</span>. <span class="dimmed"> Reason: Your writing skills will be evaluated based on the PPP</span></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </modal>
+              <p><strong>After the session</strong>:</p>
+              <ul>
+                <li>We'll transfer the relevant bug reports to your repo over the weekend. Once you have received the bug reports for your product, it is up to you to decide whether you will act on reported issues before the final submission v1.4. For some
+                  issues, the correct decision could be to reject or postpone to a version beyond v1.4.</li>
+                <li>You can post in the issue thread to communicate with the tester <span class="dimmed">e.g. to ask for more info</span>, etc. However, the tester is not obliged to respond.
+                  <ul>
+                    <li>💡 Do not argue with the issue reporter to try to convince that person that your way is correct/better. If at all, you can gently explain the rationale for the current behavior but do not waste time getting involved in long arguments.
+                      If you think the suggestion/bug is unreasonable, just thank the reporter for their view and close the issue.</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </modal>
+          <p>
+            <panel src="/website\admin\project-deliverables._include_.html#project-deliverables-practicalexam-dry-run" header="Admin <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Project Deliverables → **Practical Exam - Round 1**  <span class='glyphicon glyphicon-star' aria-hidden='true'></span>"
+              class="embedding" minimized="" fragment="project-deliverables-practicalexam-dry-run"></panel>
+          </p>
+          <div class="flat">
+            <div>
+              <p><span class="dimmed">Relevant: [<trigger trigger="click" for="modal:projectAssessment-Pe">Admin <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Project Deliverables → <strong>Practical Exam - Round 2</strong></trigger>
+                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>]</span>
+              </p>
+            </div>
+          </div>
+          <modal large="" title="Admin <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Project Deliverables → **Practical Exam - Round 2**  <span class='glyphicon glyphicon-star' aria-hidden='true'></span>" id="modal:projectAssessment-Pe">
           
             <div>
               <p><strong>Objectives:</strong></p>
@@ -2057,67 +2592,128 @@ compact(input);
                 </li>
               </ul>
               <tip-box>
+                <p><strong>When, where</strong>: Week 13 lecture</p>
+                <p>
+                  <font color="red"><big><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span></big></font> <strong>Grading</strong>:</p>
                 <ul>
                   <li>Your performance in the practical exam will be considered for your final grade (under the <em>QA</em> category and under <em>Implementation</em> category, about 10 marks in total).</li>
                   <li>You will be graded based on your effectiveness as a tester (e.g., the percentage of the bugs you found, the nature of the bugs you found) and how far off your evaluation/estimates are from the evaluator consensus. <span class="dimmed"> Explanation: we understand that you have limited expertise in this area; hence, we penalize only if your inputs don't seem to be based on a sincere effort to test/evaluate.</span></li>
-                  <li>The bugs found in your product by others will affect your v1.4 marks. You will be given a chance to reject false-positive bug reports.</li>
+                  <li>The bugs found in your product by others <mark>will affect your v1.4 marks</mark>. You will be given a chance to reject false-positive bug reports.</li>
                 </ul>
               </tip-box>
               <div>
                 <p><strong>Preparation</strong>:</p>
                 <ul>
-                  <li>Ensure you have access to a <strong>computer that is able to run module projects</strong> <span class="dimmed"> e.g. has the right Java version</span>.</li>
-                  <li><strong>Have a good screen grab tool</strong> with annotation features so that you can quickly take a screenshot of a bug, annotate it, and post in the issue tracker.</li>
-                  <li>💡 You can use <kbd>Ctrl</kbd>+<kbd>V</kbd> to paste a picture from the clipboard into a text box in GitHub issue tracker.</li>
+                  <li>
+                    <p>Ensure that <strong>you can access the relevant issue tracker</strong> given below:<br> -- for PE-1: <a href="https://github.com/nusCS2113-AY1819S1/pe-1/issues">nusCS2113-AY1819S1/<strong>pe-1</strong></a><br> -- for PE-2: <a href="https://github.com/nusCS2113-AY1819S1/pe-2/issues">nusCS2113-AY1819S1/<strong>pe-2</strong></a></p>
+                    <ul>
+                      <li>If you cannot access it, you may not have accepted the invitation to join the GitHub org used by the module. Go to <a href="https://github.com/orgs/nusCS2113-AY1819S1/invitation">https://github.com/orgs/nusCS2113-AY1819S1/invitation</a>                        to accept the invitation.</li>
+                      <li>If you cannot find the invitation, post in our <a href="https://github.com/nusCS2113-AY1819S1/forum/issues">forum</a>.</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <p>Ensure you have access to a <strong>computer that is able to run module projects</strong> <span class="dimmed"> e.g. has the right Java version</span>.</p>
+                  </li>
+                  <li>
+                    <p><strong>Have a good screen grab tool</strong> with annotation features so that you can quickly take a screenshot of a bug, annotate it, and post in the issue tracker.</p>
+                    <ul>
+                      <li>💡 You can use <kbd>Ctrl</kbd>+<kbd>V</kbd> to paste a picture from the clipboard into a text box in GitHub issue tracker.</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <p><strong>Charge your computer</strong> before coming to the PE session. The testing venue may not have enough charging points.</p>
+                  </li>
                 </ul>
               </div>
               <p><strong>During:</strong></p>
               <ol>
-                <li><strong>Take note of your team to test and your <em>Tester ID</em></strong>. Both will be given to you by the teaching team (distributed via IVLE gradebook).</li>
-                <li><strong>Download from IVLE all files</strong> submitted by the team <span class="dimmed"> (i.e. jar file, User Guide, Developer Guide, and Project Portfolio Pages)</span> <mark>into an empty folder</mark>.</li>
-                <li><strong>[~40 minutes] Test the product and report bugs</strong>
-                  <ul>
-                    <li>Launch the jar file. Test it.</li>
-                    <li>You can use Developer Guide (Appendix named <em>Instructions for Manual Testing</em>) and the User Guide in your testing.</li>
-                    <li>No need to test features that are driven by GUI inputs (e.g. buttons, menus, etc.) <span class="dimmed"> Reason: Only CLI-driven features can earn credit, as per given project constraints.</span> Some features might have both a GUI-driven
-                      and CLI-driven ways to invoke them, in which case test only the CLI-driven way of invoking it.</li>
-                    <li>The testing instructions in the Developer Guide can provide you some guidance but if you follow those instructions strictly, you are unlikely to find many bugs. You can deviate from the instructions to probe areas that are more likely
-                      to have bugs.</li>
-                    <li>You can do <em>acceptance</em> testing as well as <em>system</em> testing.</li>
-                    <li>Omit feature that existed in AB4. Instead, test features added by the team.</li>
-                    <li>Report bugs in the <a href="https://github.com/nusCS2113-AY1819S1/pe/issues">practical exam issue tracker</a>, <mark>not in the team's repo</mark>.
-                      <ul>
-                        <li>Issue title format: <code>[Tester ID] Issue description</code> <span class="dimmed"> e.g. <code>[26] Empty name crashes app</code></span></li>
-                        <li>Do not use team ID in bug reports <span class="dimmed"> Reason: to prevent others copying your bug reports</span></li>
-                      </ul>
-                    </li>
-                    <li>Report bugs only. Do not post suggestions. These are considered bugs:
-                      <ul>
-                        <li>Behavior differs from the User Guide (or Developer Guide)</li>
-                        <li>A legitimate user behavior is not handled <span class="dimmed"> e.g. incorrect commands, extra parameters</span></li>
-                        <li>Behavior is not specified and differs from normal expectations <span class="dimmed"> e.g. error message does not match the error</span></li>
-                      </ul>
-                    </li>
-                    <li>Write good quality bug reports; ❗️ <strong>poor quality or incorrect bug reports will not earn credit</strong>.
-                      <ul>
-                        <li>Use a descriptive title</li>
-                        <li>Give a good description of the bug with steps to reproduce and screenshots</li>
-                        <li><span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span> Note that we will <strong>anonymize bug reports</strong> before revealing it to the receiving team.</li>
-                      </ul>
-                    </li>
-                    <li>Assign a severity to the bug report:</li>
-                  </ul>
-                </li>
+                <li><strong>Take note of your team to test</strong>. It will be given to you by the teaching team (distributed via IVLE gradebook).</li>
+                <li><strong>Download from IVLE all files</strong> submitted by the team <span class="dimmed">(i.e. jar file, User Guide, Developer Guide, and Project Portfolio Pages)</span> <mark>into an empty folder</mark>.</li>
+                <li><strong>[~45 minutes] Test the product and report bugs</strong> as described below:</li>
               </ol>
-              <div>
-                <tip-box>
-                  <p>Bug Severity labels:</p>
-                  <ul>
-                    <li><code>severity.Low</code> : A flaw that is unlikely to affect normal operations of the product. Appears only in very rare situations and causes a minor inconvenience only.</li>
-                    <li><code>severity.Medium</code> : A flaw that causes occasional inconvenience to some users but they can continue to use the product.</li>
-                    <li><code>severity.High</code> : A flaw that affects most users and causes major problems for users. i.e., makes the product almost unusable for most users.</li>
-                  </ul>
-                </tip-box>
+              <div class="indented-level2">
+                <div>
+                  <box>
+                    <h5 id="testing-instructions-for-pe-1-and-pe-2-3">Testing instructions for PE-1 and PE-2</h5>
+                    <ul>
+                      <li>
+                        <p><strong>What to test</strong>:</p>
+                        <ul>
+                          <li>PE-1 (at v1.3):
+                            <ul>
+                              <li>Test the product <mark>based on the User Guide</mark> (the UG is most likely accessible using the <code>help</code> command).</li>
+                              <li>Do <mark><em>system</em> testing first</mark> <span class="dimmed">i.e., does the product work as specified by the documentation?</span>. If there is time left, you can <mark>do <em>acceptance</em> testing as well</mark>                                <span class="dimmed">i.e., does the product solve the problem it claims to solve?</span>.</li>
+                            </ul>
+                          </li>
+                          <li>PE-2 (at v1.4):
+                            <ul>
+                              <li>Test the product <mark>based on the Developer Guide</mark> (Appendix named <em>Instructions for Manual Testing</em>) <mark>and the User Guide</mark>. The testing instructions in the Developer Guide can provide you some guidance
+                                but if you follow those instructions strictly, you are unlikely to find many bugs. You can deviate from the instructions to probe areas that are more likely to have bugs.</li>
+                              <li>Do <mark><em>system testing only</em></mark>. No need to do <em>acceptance testing</em>.</li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <p><strong>What not to test</strong>:</p>
+                        <ul>
+                          <li>Omit features that are driven by GUI inputs (e.g. buttons, menus, etc.) <span class="dimmed"> Reason: Only CLI-driven features can earn credit, as per given project constraints.</span> Some features might have both a GUI-driven
+                            and CLI-driven ways to invoke them, in which case test only the CLI-driven way of invoking it.</li>
+                          <li>Omit feature that existed in AB-4.</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <p><strong>These are considered <em>bugs</em></strong>:</p>
+                        <ul>
+                          <li>Behavior differs from the User Guide (or Developer Guide)</li>
+                          <li>A legitimate user behavior is not handled <span class="dimmed">e.g. incorrect commands, extra parameters</span></li>
+                          <li>Behavior is not specified and differs from normal expectations <span class="dimmed">e.g. error message does not match the error</span></li>
+                          <li>Problems in the User Guide e.g., missing/incorrect info</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <p><strong>Where to report bugs</strong>: Post bug in the following issue trackers (<mark>not in the team's repo</mark>):</p>
+                        <ul>
+                          <li>PE-1 (at v1.3): <a href="https://github.com/nusCS2113-AY1819S1/pe-1/issues">nusCS2113-AY1819S1/<strong>pe-1</strong></a>.</li>
+                          <li>PE-2 (at v1.4): <a href="https://github.com/nusCS2113-AY1819S1/pe-2/issues">nusCS2113-AY1819S1/<strong>pe-2</strong></a>.</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <p><strong>Bug report format</strong>:</p>
+                        <ul>
+                          <li><mark>Do not use team ID in bug reports</mark>. <span class="dimmed">Reason: to prevent others copying your bug reports</span></li>
+                          <li>Each bug should be a separate issue.</li>
+                          <li>Write good quality bug reports; <mark>poor quality or incorrect bug reports will not earn credit</mark>.</li>
+                          <li>Use a descriptive title.</li>
+                          <li>Give a good description of the bug with steps to reproduce and screenshots.</li>
+                          <li>Use the template(s) in the issue tracker as much as possible.</li>
+                          <li>Assign a severity to the bug report:</li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <div class="indented-level4">
+                      <div>
+                        <tip-box>
+                          <p>Bug Severity labels:</p>
+                          <ul>
+                            <li><code>severity.Low</code> : A flaw that is unlikely to affect normal operations of the product. Appears only in very rare situations and causes a minor inconvenience only.</li>
+                            <li><code>severity.Medium</code> : A flaw that causes occasional inconvenience to some users but they can continue to use the product.</li>
+                            <li><code>severity.High</code> : A flaw that affects most users and causes major problems for users. i.e., makes the product almost unusable for most users.</li>
+                          </ul>
+                        </tip-box>
+                      </div>
+                    </div>
+                    <ul>
+                      <li><strong>About posting <em>suggestions</em>:</strong>
+                        <ul>
+                          <li>PE-1 (at v1.3): You can also post suggestions on how to improve the product. 💡 Be diplomatic when reporting bugs or suggesting improvements. For example, instead of criticising the current behavior, simply suggest alternatives
+                            to consider.</li>
+                          <li>PE-2 (at v1.4): Do not post suggestions.</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </box>
+                </div>
               </div>
               <ol>
                 <li>
@@ -2128,13 +2724,13 @@ compact(input);
                       <ul>
                         <li><code>low</code>: One of these
                           <ul>
-                            <li>target user is too general <span class="dimmed"> i.e. not narrower than AB4</span></li>
-                            <li>target user and value proposition is not clear from the user guide OR</li>
-                            <li>features don't seem to match for the most part.</li>
+                            <li>target user is too general <span class="dimmed"> i.e. wider than AB4</span></li>
+                            <li>target user and value proposition is not clear from the user guide</li>
+                            <li>features don't seem to fit together for the most part</li>
                           </ul>
                         </li>
-                        <li><code>medium</code>: Some features match but some don't.</li>
-                        <li><code>high</code>: All features match but the features are not very high value to the target user.</li>
+                        <li><code>medium</code>: Some features fit together but some don't.</li>
+                        <li><code>high</code>: All features fit together but the features are not very high value to the target user.</li>
                         <li><code>excellent</code>: The target user is clearly defined (not too general) and almost all new features are of high-value to the target user. i.e. the product is very attractive to the target user.</li>
                         <li><code>unable to judge</code>: You are unable to judge this aspect for some reason.</li>
                       </ul>
@@ -2155,14 +2751,15 @@ compact(input);
                         <li>Consider <a href="https://github.com/se-edu/addressbook-level4/pull/440/files">this PR (<code>history</code> command)</a> as 5 units of effort which means <a href="https://github.com/se-edu/addressbook-level4/pull/610/files">this PR (<code>undo/redo</code> command)</a>                          is about 15 points of effort. Given that 30 points matches an effort twice as that needed for the <code>undo/redo</code> feature (which was given as an example of an <code>A</code> grade project), we expect most students to be
                           have efforts lower than 20.</li>
                         <li>Count all implementation/testing/documentation work as mentioned in that person's portfolio page.</li>
-                        <li>❗️ Do not give a high value just <em>to be nice</em>. If your estimate is wildly inaccurate, it means you are unable to estimate the effort required to implement a feature in a project that you are supposed to know well at this
-                          point. <mark>You will lose marks if that is the case.</mark></li>
+                        <li>
+                          <font color="red"><big><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span></big></font> Do not give a high value just <em>to be nice</em>. If your estimate is wildly inaccurate, it means you are unable to estimate the
+                          effort required to implement a feature in a project that you are supposed to know well at this point. <mark>You will lose marks if that is the case.</mark></li>
                         <li>When estimating effort, ignore features that are driven by GUI inputs.</li>
                       </ul>
                     </li>
                     <li>
-                      <p><strong>D. Depth of feature (major feature)</strong> [<span class="fas fa-user"></span>]: Evaluate <mark>the major feature</mark> done by the student for difficulty, depth, and completeness. Note: examples given below assumes AB4
-                        did not have the commands <code>edit</code>, <code>undo</code>, and <code>redo</code>.</p>
+                      <p><strong>D. Depth of feature</strong> [<span class="fas fa-user"></span>]: Evaluate the feature done by the student for difficulty, depth, and completeness. Note: examples given below assumes AB4 did not have the commands <code>edit</code>,
+                        <code>undo</code>, and <code>redo</code>.</p>
                       <ul>
                         <li><code>low</code> : An easy feature <span class="dimmed"> e.g. make the existing <em>find</em> command case insensitive</span>.</li>
                         <li><code>medium</code> : Moderately difficult feature, barely acceptable implementation <span class="dimmed"> e.g. an <em>edit</em> command that requires the user to type <em>all</em> fields, even the ones that are not being edited</span>.</li>
@@ -2273,7 +2870,7 @@ compact(input);
             </div>
           </modal>
           <p>
-            <panel src="/website\admin\project-deliverables._include_.html#project-deliverables-practicalexam" header="Admin <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Deliverables → Practical Exam  <span class='glyphicon glyphicon-star' aria-hidden='true'></span><span class='glyphicon glyphicon-star' aria-hidden='true'></span><span class='glyphicon glyphicon-star' aria-hidden='true'></span>"
+            <panel src="/website\admin\project-deliverables._include_.html#project-deliverables-practicalexam" header="Admin <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span> Project Deliverables → **Practical Exam - Round 2**  <span class='glyphicon glyphicon-star' aria-hidden='true'></span>"
               class="embedding" minimized="" fragment="project-deliverables-practicalexam"></panel>
           </p>
           <panel type="seamless" header="Expectations for writing automated tests:" expanded="">
@@ -2365,7 +2962,7 @@ compact(input);
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.10.1</a> at Fri, 26 Oct 2018 12:02:56 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.10.1</a> at Tue, 30 Oct 2018 05:32:21 GMT</small></div>
 </footer>
 </div>
 </body>

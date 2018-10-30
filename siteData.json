@@ -259,7 +259,10 @@
         "deliverable-product-website": "Deliverable: Product Website",
         "deliverable-project-portfolio-page-ppp": "Deliverable: Project Portfolio Page (PPP)",
         "deliverable-demo": "Deliverable: Demo",
-        "deliverable-practical-exam": "Deliverable: Practical Exam",
+        "deliverable-practical-exam-round-1": "Deliverable: Practical Exam (Round 1)",
+        "testing-instructions-for-pe-1-and-pe-2-2": "Testing instructions for PE-1 and PE-2",
+        "deliverable-practical-exam-round-2": "Deliverable: Practical Exam (Round 2)",
+        "testing-instructions-for-pe-1-and-pe-2-3": "Testing instructions for PE-1 and PE-2",
         "notes-for-those-using-ab-2-or-ab-3-for-the-project": "Notes for Those Using AB-2 or AB-3 for the Project"
       },
       "title": "Admin: Project: Deliverables",
@@ -425,7 +428,7 @@
         "v13-product": "v1.3 Product",
         "v13-documentation": "v1.3 Documentation",
         "v13-demo": "v1.3 Demo",
-        "v13-testing": "v1.3 Testing"
+        "v13-testing-pe-1": "v1.3 Testing (PE-1)"
       },
       "title": "Admin: Project: v1.3 [week 11]",
       "footer": "footer.md",
