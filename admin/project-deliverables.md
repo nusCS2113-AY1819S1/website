@@ -3,15 +3,15 @@
 
 Here is a list of main deliverables of the project; their details are given in the subsequent sections.
 * Product
-  * [Executable](#deliverable-executable)
-  * [Source code](#deliverable-source-code)
+  * [Executable](#project-deliverables-executable)
+  * [Source code](#project-deliverables-sourcecode)
 * Documentation
-  * [User Guide](#deliverable-user-guide-ug)
+  * [User Guide](#project-deliverables-ug)
   * [Developer Guide](#deliverable-developer-guide-dg)
   * [Product Website](#deliverable-product-website)
   * [Project Portfolio Page](#deliverable-project-portfolio-page-ppp)
 * [Product Demo](#deliverable-demo)
-* [Practical Exam](#deliverable-practical-exam)
+* [Practical Exam](#project-deliverables-practicalexam)
   * Peer testing results
   * Peer evaluation
 
@@ -59,7 +59,7 @@ Here is a list of main deliverables of the project; their details are given in t
   * Use a suitable profile photo
 <div id="profile-photo" class="indented-level2">
 
-* The purpose of the profile photo is for the teaching team to identify you. Therefore, you should choose a recent individual photo showing your face clearly. Some examples can be seen in the 'Teaching team' page. Given below are some examples of good and bad profile photos.<br>
+* The purpose of the profile photo is for the teaching team to identify you. Therefore, you should choose a recent individual photo showing your face clearly -- somewhat similar to a passport photo. Some examples can be seen in the 'Teaching team' page. Given below are some examples of good and bad profile photos.<br>
   <img src="{{baseUrl}}/admin/images/profilephotos.png" style="width: 365.33px">
 
 * If you are uncomfortable posting your photo due to security reasons, you can post a lower resolution image so that it is hard for someone to misuse that image for fraudulent purposes. If you are concerned about privacy, you can request permission to omit your photo from the page by writing to prof.
@@ -111,7 +111,7 @@ At the end of the project each student is required to submit a _Project Portfoli
 ### Deliverable: Demo
 <span id="project-deliverables-demo">
 
-* **Duration:** Strictly `(teamSize x 3) + 1` minutes %%&nbsp;e.g. 17 minutes for a 5-person team.%% Exceeding this limit will be penalized. The extra minute is for the first speaker to give an overview of the product.
+* **Duration:** Strictly `(teamSize x 3.5) + 1` minutes %%&nbsp;e.g. 19 minutes for a 5-person team.%% Exceeding this limit will be penalized. The extra minute is for the first speaker to give an overview of the product.
 
 * **Target audience**: Assume you are giving a demo to a higher-level manager of your company, to brief him/her on the current capabilities of the product. This is the first time they are seeing the new product you developed but they are familiar with the AddressBook-level4 (AB4) product.
 
@@ -142,8 +142,92 @@ At the end of the project each student is required to submit a _Project Portfoli
 
 </span>
 
+### Deliverable: Practical Exam (Round 1)
 
-### Deliverable: Practical Exam
+<span id="project-deliverables-practicalexam-dry-run">
+
+**What**: The v1.3 is subjected to a round of peer _acceptance/system testing_, also called the _Practical Exam Round 1 (PE-1)_. This round of testing will be graded similar to the <trigger trigger="click" for="modal:projectDeliverablesPeDryRun-pe">Practical Exam (Round 2) that will be done at v1.4</trigger>.
+
+**When, where**: 45 minute slot at the end of week 11 lecture, in the Lecture venue
+
+<modal large title="Admin {{ icon_embedding }} Project → Deliverables → Practical Exam" id="modal:projectDeliverablesPeDryRun-pe">
+  <include src="project-deliverables.md#project-deliverables-practicalexam"/>
+</modal>
+
+{{ icon_important_big_red }} **Grading**: Taking part in the PE-1 is strongly encouraged as it ==can affect your grade in the following ways==.
+* We will consider your performance in both PE-1 as well as PE-2 when grading.
+* You will be graded based on your effectiveness as a tester (e.g., the percentage of the bugs you found, the nature of the bugs you found) and how far off your evaluation/estimates are from the evaluator consensus. %%&nbsp;Explanation: we understand that you have limited expertise in this area; hence, we penalize only if your inputs don't seem to be based on a sincere effort to test/evaluate.%%
+* There is ==no penalty for bugs reported== in your product. Every bug you find is a win-win for you and the team whose product you are testing.
+
+**Objectives**:
+* **To train you** to do manual testing, bug reporting, bug <tooltip content="assigning of priority order">triaging,</tooltip> bug fixing, communicating with users/testers/developers, evaluating products etc.
+* **To help you improve your product** before the final submission.
+
+<include src="project-testing.fr#testingPreparations" />
+
+**During the session**:
+1. **Take note of your team to test and your _Tester ID_**. Distributed via IVLE gradebook.
+1. Download the latest jar file from the team's GitHub page. ==Copy it to an empty folder==.
+
+<div id="project-deliverables-pe-testing-intructions">
+<box>
+
+##### Testing instructions for PE-1 and PE-2
+
+* **What to test**:
+  * PE-1 (at v1.3):
+    * Test the product ==based on the User Guide== (the UG is most likely accessible using the `help` command).
+    * Do ==_system_ testing first== %%i.e., does the product work as specified by the documentation?%%. If there is time left, you can ==do _acceptance_ testing as well== %%i.e., does the product solve the problem it claims to solve?%%.
+  * PE-2 (at v1.4): 
+    * Test the product ==based on the Developer Guide== (Appendix named _Instructions for Manual Testing_) ==and the User Guide==. The testing instructions in the Developer Guide can provide you some guidance but if you follow those instructions strictly, you are unlikely to find many bugs. You can deviate from the instructions to probe areas that are more likely to have bugs.
+    * Do ==_system testing only_==. No need to do _acceptance testing_.
+
+* **What not to test**:
+  * Omit features that are driven by GUI inputs (e.g. buttons, menus, etc.) %%&nbsp;Reason: Only CLI-driven features can earn credit, as per given project constraints.%% Some features might have both a GUI-driven and CLI-driven ways to invoke them, in which case test only the CLI-driven way of invoking it.
+  * Omit feature that existed in AB-4.
+
+* **These are considered _bugs_**:
+  * Behavior differs from the User Guide (or Developer Guide)
+  * A legitimate user behavior is not handled %%e.g. incorrect commands, extra parameters%%
+  * Behavior is not specified and differs from normal expectations %%e.g. error message does not match the error%%
+  * Problems in the User Guide e.g., missing/incorrect info
+
+* **Where to report bugs**: Post bug in the following issue trackers (==not in the team's repo==):
+  * PE-1 (at v1.3): [nus{{ module }}-{{ semester }}/**pe-1**]({{module_org}}/pe-1/issues).
+  * PE-2 (at v1.4): [nus{{ module }}-{{ semester }}/**pe-2**]({{module_org}}/pe-2/issues).
+
+* **Bug report format**:
+  * ==Do not use team ID in bug reports==. %%Reason: to prevent others copying your bug reports%%
+  * Each bug should be a separate issue.
+  * Write good quality bug reports; ==poor quality or incorrect bug reports will not earn credit==.
+  * Use a descriptive title.
+  * Give a good description of the bug with steps to reproduce and screenshots.
+  * Use the template(s) in the issue tracker as much as possible.
+  * Assign a severity to the bug report:
+
+<div class="indented-level4">
+<include src="appendixE-gitHub.md#bug-severity" />
+</div>
+
+* **About posting _suggestions_:**
+  * PE-1 (at v1.3): You can also post suggestions on how to improve the product. :bulb: Be diplomatic when reporting bugs or suggesting improvements. For example, instead of criticising the current behavior, simply suggest alternatives to consider.
+  * PE-2 (at v1.4): Do not post suggestions.
+
+</box>
+</div>
+
+<modal large title="Admin {{ icon_embedding }} Project →" id="modal:v1.3-ppp">
+  <include src="project-deliverables.md#project-deliverables-ppp"/>
+</modal>
+
+**After the session**:
+* We'll transfer the relevant bug reports to your repo over the weekend. Once you have received the bug reports for your product, it is up to you to decide whether you will act on reported issues before the final submission v1.4. For some issues, the correct decision could be to reject or postpone to a version beyond v1.4.
+* You can post in the issue thread to communicate with the tester %%e.g. to ask for more info%%, etc. However, the tester is not obliged to respond.
+  * :bulb: Do not argue with the issue reporter to try to convince that person that your way is correct/better. If at all, you can gently explain the rationale for the current behavior but do not waste time getting involved in long arguments. If you think the suggestion/bug is unreasonable, just thank the reporter for their view and close the issue.
+
+</span>
+
+### Deliverable: Practical Exam (Round 2)
 
 <span id="project-deliverables-practicalexam">
 
@@ -159,9 +243,12 @@ At the end of the project each student is required to submit a _Project Portfoli
   
 <tip-box> 
 
-* Your performance in the practical exam will be considered for your final grade (under the _QA_ category and under _Implementation_ category, about 10 marks in total). 
+**When, where**: Week 13 lecture
+
+{{ icon_important_big_red }} **Grading**:
+* Your performance in the practical exam will be considered for your final grade (under the _QA_ category and under _Implementation_ category, about 10 marks in total).
 * You will be graded based on your effectiveness as a tester (e.g., the percentage of the bugs you found, the nature of the bugs you found) and how far off your evaluation/estimates are from the evaluator consensus. %%&nbsp;Explanation: we understand that you have limited expertise in this area; hence, we penalize only if your inputs don't seem to be based on a sincere effort to test/evaluate.%%
-* The bugs found in your product by others will affect your v1.4 marks. You will be given a chance to reject false-positive bug reports.
+* The bugs found in your product by others ==will affect your v1.4 marks==. You will be given a chance to reject false-positive bug reports.
 
 </tip-box>
 
@@ -170,41 +257,24 @@ At the end of the project each student is required to submit a _Project Portfoli
 
 **During:** 
 
-1. **Take note of your team to test and your _Tester ID_**. Both will be given to you by the teaching team (distributed via IVLE gradebook). 
-1. **Download from IVLE all files** submitted by the team %%&nbsp;(i.e. jar file, User Guide, Developer Guide, and Project Portfolio Pages)%% ==into an empty folder==.
-1. **[~40 minutes] Test the product and report bugs** 
-   * Launch the jar file. Test it. 
-   * You can use Developer Guide (Appendix named _Instructions for Manual Testing_) and the User Guide in your testing. 
-   * No need to test features that are driven by GUI inputs (e.g. buttons, menus, etc.) %%&nbsp;Reason: Only CLI-driven features can earn credit, as per given project constraints.%% Some features might have both a GUI-driven and CLI-driven ways to invoke them, in which case test only the CLI-driven way of invoking it.
-   * The testing instructions in the Developer Guide can provide you some guidance but if you follow those instructions strictly, you are unlikely to find many bugs. You can deviate from the instructions to probe areas that are more likely to have bugs.
-   * You can do _acceptance_ testing as well as _system_ testing.
-   * Omit feature that existed in AB4. Instead, test features added by the team. 
-   * Report bugs in the [practical exam issue tracker]({{module_org}}/pe/issues), ==not in the team's repo==. 
-     * Issue title format: `[Tester ID] Issue description` %%&nbsp;e.g. `[26] Empty name crashes app`%%
-     * Do not use team ID in bug reports %%&nbsp;Reason: to prevent others copying your bug reports%%
-   * Report bugs only. Do not post suggestions. These are considered bugs:
-     * Behavior differs from the User Guide (or Developer Guide)
-     * A legitimate user behavior is not handled %%&nbsp;e.g. incorrect commands, extra parameters%%
-     * Behavior is not specified and differs from normal expectations %%&nbsp;e.g. error message does not match the error%%
-   * Write good quality bug reports; :exclamation: **poor quality or incorrect bug reports will not earn credit**.
-     * Use a descriptive title
-     * Give a good description of the bug with steps to reproduce and screenshots
-     * {{glyphicon_eye_close}} Note that we will **anonymize bug reports** before revealing it to the receiving team. 
-   * Assign a severity to the bug report:
+1. **Take note of your team to test**. It will be given to you by the teaching team (distributed via IVLE gradebook).
+1. **Download from IVLE all files** submitted by the team %%(i.e. jar file, User Guide, Developer Guide, and Project Portfolio Pages)%% ==into an empty folder==.
+1. **[~45 minutes] Test the product and report bugs** as described below:
 
-<include src="appendixE-gitHub.md#bug-severity" />
-
+<div class="indented-level2">
+  <include src="project-deliverables.md#project-deliverables-pe-testing-intructions" />
+</div>
 
 1. **[~40 minutes] Evaluate the following aspects.** Note down your evaluation in a hard copy (as a backup). Submit via TEAMMATES.  
   
    * **A. Cohesiveness of product features** [{{ icon_team }}]: Do the features fit together and match the stated target user and the value proposition?
      * `low`: One of these
-       * target user is too general %%&nbsp;i.e. not narrower than AB4%%
-       * target user and value proposition is not clear from the user guide OR
-       * features don't seem to match for the most part.
-     * `medium`: Some features match but some don't.
-     * `high`: All features match but the features are not very high value to the target user. 
-     * `excellent`:  The target user is clearly defined (not too general) and almost all new features are of high-value to the target user. i.e. the product is very attractive to the target user. 
+       * target user is too general %%&nbsp;i.e. wider than AB4%%
+       * target user and value proposition is not clear from the user guide
+       * features don't seem to fit together for the most part
+     * `medium`: Some features fit together but some don't.
+     * `high`: All features fit together but the features are not very high value to the target user.
+     * `excellent`: The target user is clearly defined (not too general) and almost all new features are of high-value to the target user. i.e. the product is very attractive to the target user.
      * `unable to judge`: You are unable to judge this aspect for some reason.
   
    * **B. Quality of user docs** [{{ icon_individual }}]: Evaluate based on the parts of the user guide written by the person, as reproduced in the project portfolio.  ==Evaluate from an end-user perspective.== 
@@ -217,12 +287,12 @@ At the end of the project each student is required to submit a _Project Portfoli
    * **C. Amount of work** [{{ icon_individual }}]:  Evaluate the amount of work on a scale of 0 to 30
      * Consider [this PR (`history` command)](https://github.com/se-edu/addressbook-level4/pull/440/files) as 5 units of effort which means [this PR (`undo/redo` command)](https://github.com/se-edu/addressbook-level4/pull/610/files) is about 15 points of effort. Given that 30 points matches an effort twice as that needed for the `undo/redo` feature (which was given as an example of an `A` grade project), we expect most students to be have efforts lower than 20.
      * Count all implementation/testing/documentation work as mentioned in that person's portfolio page.
-     * :exclamation: Do not give a high value just _to be nice_. If your estimate is wildly inaccurate, it means you are unable to estimate the effort required to implement a feature in a project that you are supposed to know well at this point. ==You will lose marks if that is the case.==
+     * {{ icon_important_big_red }} Do not give a high value just _to be nice_. If your estimate is wildly inaccurate, it means you are unable to estimate the effort required to implement a feature in a project that you are supposed to know well at this point. ==You will lose marks if that is the case.==
      * When estimating effort, ignore features that are driven by GUI inputs.
   
-   * **D. Depth of feature (major feature)** [{{ icon_individual }}]: Evaluate ==the major feature== done by the student for difficulty, depth, and completeness. Note: examples given below assumes AB4 did not have the commands `edit`, `undo`, and `redo`. 
+   * **D. Depth of feature** [{{ icon_individual }}]: Evaluate the feature done by the student for difficulty, depth, and completeness. Note: examples given below assumes AB4 did not have the commands `edit`, `undo`, and `redo`.
      * `low` : An easy feature %%&nbsp;e.g. make the existing _find_ command case insensitive%%. 
-     * `medium` : Moderately difficult feature, barely acceptable implementation %%&nbsp;e.g. an _edit_ command that requires the user to type _all_ fields, even the ones that are not being edited%%. 
+     * `medium` : Moderately difficult feature, barely acceptable implementation %%&nbsp;e.g. an _edit_ command that requires the user to type _all_ fields, even the ones that are not being edited%%.
      * `high`: One of the below
        * A moderately difficult feature but fully implemented %%&nbsp;e.g. an _edit_ command that allows editing any field%%.
        * A difficult feature with a reasonable implementation but some aspects are not covered %%&nbsp;undo/redo command that only allows a single undo/redo%%.
@@ -320,5 +390,6 @@ If you have opted to use AB-2 or AB-3 instead of AB-4 as the basis of your produ
 </div>
 {% endmacro %}
 
+{% from "common/macros.njk" import embed_topic with context %}
 {% from "common/admin.njk" import show_admin_page with context %}
 {{ show_admin_page("project-deliverables", show_main_text) }}
