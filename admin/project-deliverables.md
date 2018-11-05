@@ -246,7 +246,7 @@ At the end of the project each student is required to submit a _Project Portfoli
 **When, where**: Week 13 lecture
 
 {{ icon_important_big_red }} **Grading**:
-* Your performance in the practical exam will be considered for your final grade (under the _QA_ category and under _Implementation_ category, about 10 marks in total).
+* Your performance in the practical exams will be considered for your final grade (under the _QA_ category and under _Implementation_ category, about 10 marks in total).
 * You will be graded based on your effectiveness as a tester (e.g., the percentage of the bugs you found, the nature of the bugs you found) and how far off your evaluation/estimates are from the evaluator consensus. %%&nbsp;Explanation: we understand that you have limited expertise in this area; hence, we penalize only if your inputs don't seem to be based on a sincere effort to test/evaluate.%%
 * The bugs found in your product by others ==will affect your v1.4 marks==. You will be given a chance to reject false-positive bug reports.
 
@@ -316,9 +316,9 @@ At the end of the project each student is required to submit a _Project Portfoli
 
 **Bug Review Period**:
 
-There will be a review period for you to respond to the [bug reports]({{module_org}}/pe-results/issues) you received.
+There will be a review period for you to respond to the [bug reports]({{module_org}}/pe2-results/issues) you received.
 
-Duration: The review period will start around 1 day after the PE (exact time to be announced) and will last until the following **Wednesday midnight**. 
+Duration: The review period will start around 1 day after the PE (exact time to be announced) and will last until the following **Tuesday midnight**. 
 
 Bug reviewing is recommended to be done as a team as some of the decisions need team consensus.
 
