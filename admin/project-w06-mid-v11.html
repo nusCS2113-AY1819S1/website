@@ -181,7 +181,7 @@
         <div id="title"></div>
         <div id="body">
           <tip-box>
-            <p>Overview: <span>set up project repo, start moving UG and DG to the repo, attempt to do local-impact changes to the code base</span></p>
+            <p>Overview: <span>Set up project repo, start moving UG and DG to the repo, attempt to do local-impact changes to the code base.</span></p>
           </tip-box>
           <div id="product">
             <p><strong><big>Project Management:</big></strong></p>
@@ -604,30 +604,67 @@ method 2 ...
                             </ul>
                           </li>
                           <li>
-                            <p><strong>What to include:</strong></p>
+                            <p><strong>Sections to include:</strong></p>
                             <ul>
-                              <li>Main things to include:
+                              <li>
+                                <p><strong>Overview</strong>: A short overview of your product to provide some context to the reader.</p>
+                              </li>
+                              <li>
+                                <p><strong>Summary of Contributions</strong>:</p>
                                 <ul>
-                                  <li>features you implemented <span class="dimmed"> (include relevant extracts from the user guide and the developer guide)</span></li>
-                                  <li>features you propose to implement in future <span class="dimmed"> (include relevant extracts from the user guide and the developer guide if applicable)</span><br> Note: the purpose of allowing you to include <em>proposed</em>                                    features is to provide you more flexibility to show your documentation skills. <span class="dimmed"> e.g. you can bring in a proposed feature just to give you an opportunity to use a UML diagram type not used by the actual features.</span></li>
-                                  <li>other significant contributions to the project <span class="dimmed"> e.g. tweaks to existing features, setting up project tools</span></li>
+                                  <li><strong>Code contributed</strong>: Give a link to your code on <a href="https://nuscs2113-ay1819s1.github.io/dashboard">Project Code Dashboard</a>, which should be <code>https://nuscs2113-ay1819s1.github.io/dashboard/#=undefined&amp;search=githbub_username_in_lower_case</code>                                    (<mark>replace <code>githbub_username_in_lower_case</code> with your actual username</mark> in lower case e.g., <code>johndoe</code>). This link is also available in the <a href="/website/admin/projectList.html">Project List Page</a>                                    -- linked to the <span class="fas fa-code"></span> icon under your photo.</li>
+                                  <li><strong>Main feature implemented:</strong> A summary of the main feature you implemented</li>
+                                  <li><strong>Other contributions:</strong>
+                                    <ul>
+                                      <li>Other <em>minor</em> enhancements you did which are not related to your <em>main</em> feature</li>
+                                      <li>Contributions to project management <span class="dimmed">e.g., setting up project tools, managing releases, managing issue tracker etc.</span></li>
+                                      <li>Evidence of helping others <span class="dimmed">e.g. responses you posted in our forum, bugs you reported in other team's products</span>,</li>
+                                      <li>Evidence of technical leadership <span class="dimmed">e.g. sharing useful information in the forum</span></li>
+                                    </ul>
+                                  </li>
                                 </ul>
                               </li>
-                              <li>Other things you can include:
-                                <ul>
-                                  <li>Evidence of helping others <span class="dimmed"> e.g. responses you posted in our forum, bugs you reported in other team's products</span>,</li>
-                                  <li>Evidence of technical leadership <span class="dimmed"> e.g. offering features for others to reuse, evidence of those features being reused by others</span></li>
-                                </ul>
+                              <li>
+                                <p><strong>Contributions to the User Guide</strong>: Reproduce the parts in the User Guide that you wrote. This can include features you implemented as well as features you propose to implement.<br>
+                                  <span class="dimmed">The purpose of allowing you to include <em>proposed</em> features is to provide you more flexibility to show your documentation skills. e.g. you can bring in a proposed feature just to give you an opportunity to use a UML diagram type not used by the actual features.</span></p>
                               </li>
-                              <li>If you plan to use the PPP in your Resume, you can also include your SE work outside of the module (will not be graded)</li>
+                              <li>
+                                <p><strong>Contributions to the Developer Guide</strong>: Reproduce the parts in the Developer Guide that you wrote. Ensure there is enough content to evaluate your technical documentation skills and UML modelling skills.
+                                  You can include descriptions of your design/implementations, possible alternatives, pros and cons of alternatives, etc.</p>
+                              </li>
+                              <li>
+                                <p>If you plan to use the PPP in your Resume, you can also include your SE work outside of the module (will not be graded)</p>
+                              </li>
                             </ul>
                           </li>
                           <li>
                             <p><strong>Format</strong>:</p>
                             <ul>
-                              <li>Page limit: If you have more content than the limit given below, shorten (or omit some content) so that you do not exceed the page limit. Having too much content in the PPP will be viewed unfavorably during grading. Note:
-                                the <mark>page limits given below are <em>after</em> converting to PDF format</mark>. The actual amount of content you require is actually less than what these numbers suggest because the HTML → PDF conversion adds a lot
-                                of spacing around content.
+                              <li>
+                                <p>File name: <code>docs/team/githbub_username_in_lower_case.adoc</code> e.g., <code>docs/team/johndoe.adoc</code></p>
+                              </li>
+                              <li>
+                                <p><span class="fas fa-cube"></span> Follow the <a href="https://nuscs2113-ay1819s1.github.io/addressbook-level4/team/johndoe.html">example in the AddressBook-Level4</a>, but ignore the following two lines in it.<br></p>
+                                <blockquote>
+                                  <ul>
+                                    <li><strong>Minor enhancement:</strong> added a history command that allows the user to navigate to previous commands using up/down keys.</li>
+                                    <li><strong>Code contributed:</strong> [<a href="">Functional code</a>] [<a href="">Test code</a>] <em>{give links to collated code files}</em></li>
+                                  </ul>
+                                </blockquote>
+                              </li>
+                              <li>
+                                <p>💡 You can use the <a href="http://asciidoctor.org/docs/asciidoc-syntax-quick-reference/#include-files">Asciidoc's <code>include</code> feature</a> to include sections from the developer guide or the user guide in your
+                                  PPP. Follow the example in the <a href="https://nuscs2113-ay1819s1.github.io/addressbook-level4/team/johndoe.html">sample</a>.</p>
+                              </li>
+                              <li>
+                                <p><mark><font color="red"><big><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span></big></font> It is assumed that all contents in the PPP were written primarily by you.</mark> If any section is
+                                  written by someone else <span class="dimmed"> e.g. someone else wrote described the feature in the User Guide but you implemented the feature</span>, clearly state that the section was written by someone else <span class="dimmed"> (e.g. <code>Start of Extract [from: User Guide] written by Jane Doe</code>)</span>.
+                                  <span class="dimmed"> Reason: Your writing skills will be evaluated based on the PPP</span></p>
+                              </li>
+                              <li>
+                                <p>Page limit: If you have more content than the limit given below, shorten (or omit some content) so that you do not exceed the page limit. Having too much content in the PPP will be viewed unfavorably during grading. Note:
+                                  the <mark>page limits given below are <em>after</em> converting to PDF format</mark>. The actual amount of content you require is actually less than what these numbers suggest because the HTML → PDF conversion adds a
+                                  lot of spacing around content.</p>
                                 <div class="table-responsive">
                                   <table class="markbind-table table table-bordered table-striped">
                                     <thead>
@@ -638,15 +675,15 @@ method 2 ...
                                     </thead>
                                     <tbody>
                                       <tr>
-                                        <td>Description in point form</td>
+                                        <td>Overview + Summary of contributions</td>
                                         <td>0.5-1</td>
                                       </tr>
                                       <tr>
-                                        <td>Extracts from the User Guide</td>
+                                        <td>Contributions to the User Guide</td>
                                         <td>1-3</td>
                                       </tr>
                                       <tr>
-                                        <td>Extracts from the Developer Guide</td>
+                                        <td>Contributions to the Developer Guide</td>
                                         <td>3-6</td>
                                       </tr>
                                       <tr>
@@ -657,11 +694,6 @@ method 2 ...
                                   </table>
                                 </div>
                               </li>
-                              <li><span class="fas fa-cube"></span> Follow the <a href="https://nusCS2113-AY1819S1.github.io/addressbook-level4/team/johndoe.html">example in the AddressBook-Level4</a>.</li>
-                              <li>💡 You can use the <a href="http://asciidoctor.org/docs/asciidoc-syntax-quick-reference/#include-files">Asciidoc's <code>include</code> feature</a> to include sections from the developer guide or the user guide in your PPP.
-                                Follow the example in the <a href="https://nus-cs2113-ay1819s1.github.io/addressbook-level4/team/johndoe.html">sample</a>.</li>
-                              <li><mark>❗️ It is assumed that all contents in the PPP were written primarily by you.</mark> If any section is written by someone else <span class="dimmed"> e.g. someone else wrote described the feature in the User Guide but you implemented the feature</span>,
-                                clearly state that the section was written by someone else <span class="dimmed"> (e.g. <code>Start of Extract [from: User Guide] written by Jane Doe</code>)</span>. <span class="dimmed"> Reason: Your writing skills will be evaluated based on the PPP</span></li>
                             </ul>
                           </li>
                         </ul>
@@ -686,7 +718,7 @@ method 2 ...
 <div id="flex-div"></div>
 <footer>
   <div class="text-center">
-    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.10.1</a> at Thu, 01 Nov 2018 06:54:03 GMT</small></div>
+    <small>This site was built with <a href="https://markbind.github.io/markbind/">MarkBind 1.10.1</a> at Mon, 05 Nov 2018 08:14:49 GMT</small></div>
 </footer>
 </div>
 </body>

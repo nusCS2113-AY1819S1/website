@@ -13,7 +13,7 @@
 * Ensure that **you can access the relevant issue tracker** given below:<br>
   -- for PE-1: [nus{{ module }}-{{ semester }}/**pe-1**]({{module_org}}/pe-1/issues)<br>
   -- for PE-2: [nus{{ module }}-{{ semester }}/**pe-2**]({{module_org}}/pe-2/issues)
-  * If you cannot access it, you may not have accepted the invitation to join the GitHub org used by the module. Go to [https://github.com/orgs/nus{{ module }}-{{ semester }}/invitation](https://github.com/orgs/nus{{ module }}-{{ semester }}/invitation) to accept the invitation.
+  * ==These are private repos!==. If you cannot access the relevant repo, you may not have accepted the invitation to join the GitHub org used by the module. Go to [https://github.com/orgs/nus{{ module }}-{{ semester }}/invitation](https://github.com/orgs/nus{{ module }}-{{ semester }}/invitation) to accept the invitation.
   * If you cannot find the invitation, post in our [forum]({{ forum_link }}).
 
 * Ensure you have access to a **computer that is able to run module projects** %%&nbsp;e.g. has the right Java version%%.
