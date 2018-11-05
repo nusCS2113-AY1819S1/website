@@ -62,7 +62,9 @@ Milestone | Minimum acceptable performance to consider as 'reached'
 
 ### v1.3 Demo
 
-* Optional. If you want feedback on your features, you can demo the feature and get feedback from the tutor.
+* We will have a timed-demo. You will get 15 minutes to demo your product (not just your features, but the entire product). 
+* Two/three of you can do the demo this week, and the remaining will get a chance next week.
+* Your tutor will provide feedback on the product based on the demo.
 
 
 ### v1.3 Testing (PE-1)
